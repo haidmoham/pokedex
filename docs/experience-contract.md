@@ -1,0 +1,79 @@
+# card gallery experience contract
+
+## experience
+
+- Lead with a Pokédex that lets a visitor choose a species. Opening a species
+  moves into a quieter, image-led card museum while preserving that species.
+- The entry Pokédex uses species artwork. It does not assign a TCG illustrator
+  credit to that artwork.
+- Each museum slide pairs one Pokémon card edition with its artist plaque.
+  The image, exact card title, set, number, language, and artist come from one
+  checked record and change together.
+- Artist names are actions. Selecting one opens a looping gallery of checked
+  card editions by that illustrator across Pokémon. Do not invent related work.
+- Dragapult (#887) is the reference journey. Coverage grows only when evidence
+  passes the admission rule below. Fewer than three cards is an honest result.
+
+## navigation and presentation
+
+- Show the artwork large and uncropped. Keep the artist name prominent and the
+  source links secondary in the credit area.
+- Read the image's pixel dimensions and record its SHA-256. Keep the full card
+  composition and link to the original asset. Reject blur, destructive crops,
+  stretched scans, and duplicate reprints. The audit checks the PNG signature,
+  IHDR dimensions, and full-file hash. A 600px-wide scan stays at or below
+  300 CSS px when claiming 2× crispness; a larger inspect view must not claim
+  extra detail.
+- Loop the finite verified set. Support previous and next buttons, arrow keys,
+  thumbnail selection, horizontal drag/swipe, and wheel or trackpad movement.
+- Keep these inputs on one selected record. A wrapped transition updates the
+  image and every credit field from the same record.
+- Preserve keyboard focus, visible focus rings, useful mobile targets, and
+  reduced-motion settings.
+- Use verified card editions as the only carousel content. No duplicate art
+  from reprints. Rarity can help find candidates; it does not rank artists or
+  prove artistic merit.
+
+## evidence admission
+
+Each displayed card must have a local manifest record containing:
+
+- exact Pokémon dex ID and name;
+- exact card title, set, collector number, and language;
+- literal illustrator spelling from TCGdex;
+- exact TCGdex card API and human-readable card URLs;
+- exact card image URL, provider, SHA-256, pixel dimensions, and check date;
+- an exact publisher card page with observed matching credit, or an inspected
+  printed-card scan whose credit matches TCGdex;
+- evidence method, URL, observed credit text, and check date.
+
+The artist spelling and exact card identity must agree across TCGdex and the
+publisher page or printed scan. Unknown, conflicting, malformed, or uninspected
+credits stay out of the manifest and API. Publisher pages that cannot be read
+directly must be labeled with the actual method used to review their indexed
+text. A second community API can find candidates but does not satisfy the
+publisher-or-scan check.
+
+The audit command re-fetches TCGdex card records, validates manifest identity
+and evidence fields, and checks image hashes and PNG IHDR dimensions. Publisher and
+printed-scan observations remain explicit review records; the audit does not
+pretend to crawl a bot-blocked publisher page or infer its contents.
+
+## failure behavior
+
+- The API reads from the local checked manifest; no live artist lookup can
+  change the displayed credit.
+- A slow or failed metadata request shows a loading or error state without
+  keeping a previous species' card attached to a new species.
+- A failed image shows a same-record unavailable state. It must not replace the
+  card image while keeping a mismatched title or credit.
+- Discovery and metadata work without API access after the app is built. Card
+  image delivery uses the recorded remote host and needs a network connection.
+
+## current evidence boundary
+
+The checked set currently covers all 19 catalog species with 23 editions.
+Dragapult has four editions. Several other species have one checked edition;
+their shorter carousel count is visible. Butterfree and Jigglypuff use scans
+with smaller illustration windows. Two illustrator paths cross Pokémon:
+Dragapult to Jerky to Pidgey, and Dragapult to 5ban Graphics to Gengar.

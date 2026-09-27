@@ -3,8 +3,12 @@ import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { catalog } from "./catalog.js";
+import { validateCardManifest } from "./card-manifest.js";
+import cards from "../content/cards.json" with { type: "json" };
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
+validateCardManifest(cards, catalog);
 
 export function createApp({
   dataFile = resolve(root, "data/favorites.json"),
@@ -46,6 +50,19 @@ export function createApp({
           (!type || pokemon.types.includes(type)),
       ),
     );
+  });
+
+  app.get("/api/cards", (request, response) => {
+    const pokemonId = request.query.pokemonId;
+    const artist = String(request.query.artist ?? "")
+      .trim()
+      .toLocaleLowerCase();
+    const filtered = cards.filter(
+      (card) =>
+        (!pokemonId || card.pokemonId === Number(pokemonId)) &&
+        (!artist || card.artist.toLocaleLowerCase() === artist),
+    );
+    response.json(filtered);
   });
 
   app.get("/api/favorites", async (_request, response, next) => {
