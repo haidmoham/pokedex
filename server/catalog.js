@@ -1,0 +1,21 @@
+// A small, local starter catalog keeps search usable without an API key or network call.
+export const catalog = [
+  { id: 1, name: 'Bulbasaur', types: ['grass', 'poison'], height: 0.7, weight: 6.9 },
+  { id: 2, name: 'Ivysaur', types: ['grass', 'poison'], height: 1, weight: 13 },
+  { id: 3, name: 'Venusaur', types: ['grass', 'poison'], height: 2, weight: 100 },
+  { id: 4, name: 'Charmander', types: ['fire'], height: 0.6, weight: 8.5 },
+  { id: 5, name: 'Charmeleon', types: ['fire'], height: 1.1, weight: 19 },
+  { id: 6, name: 'Charizard', types: ['fire', 'flying'], height: 1.7, weight: 90.5 },
+  { id: 7, name: 'Squirtle', types: ['water'], height: 0.5, weight: 9 },
+  { id: 8, name: 'Wartortle', types: ['water'], height: 1, weight: 22.5 },
+  { id: 9, name: 'Blastoise', types: ['water'], height: 1.6, weight: 85.5 },
+  { id: 10, name: 'Caterpie', types: ['bug'], height: 0.3, weight: 2.9 },
+  { id: 12, name: 'Butterfree', types: ['bug', 'flying'], height: 1.1, weight: 32 },
+  { id: 16, name: 'Pidgey', types: ['normal', 'flying'], height: 0.3, weight: 1.8 },
+  { id: 25, name: 'Pikachu', types: ['electric'], height: 0.4, weight: 6 },
+  { id: 37, name: 'Vulpix', types: ['fire'], height: 0.6, weight: 9.9 },
+  { id: 39, name: 'Jigglypuff', types: ['normal', 'fairy'], height: 0.5, weight: 5.5 },
+  { id: 52, name: 'Meowth', types: ['normal'], height: 0.4, weight: 4.2 },
+  { id: 94, name: 'Gengar', types: ['ghost', 'poison'], height: 1.5, weight: 40.5 },
+  { id: 133, name: 'Eevee', types: ['normal'], height: 0.3, weight: 6.5 },
+];
