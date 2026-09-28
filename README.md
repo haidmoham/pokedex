@@ -35,3 +35,9 @@ The current snapshot has 23 card editions across all 19 Pokédex species. Dragap
 The species index is the Pokédex entry. Selecting a species opens an image-led card museum. Each card keeps its artist plaque, exact edition details, and citations together. Selecting an artist opens the checked cards by that illustrator across species.
 
 Multi-card galleries loop through the audited editions with arrow buttons and keys, horizontal drag or swipe, wheel or trackpad movement, and thumbnail selection. Single-card collections show their count without idle arrow buttons. Species sprites are labeled separately and do not receive card-illustrator credits. See [`docs/experience-contract.md`](docs/experience-contract.md) for the display and evidence gates.
+
+## deployment
+
+railway builds `haidmoham/pokedex` from `main` using [`railway.json`](railway.json). one express service serves the frontend and API. production uses `PORT=3001`, `NODE_ENV=production`, and `DATA_FILE=/data/favorites.json`, with a persistent volume mounted at `/data`.
+
+the intended public address is <https://pokedex.shin86.dev>. favorites are a shared collection in this prototype, with no user accounts. artist metadata is committed with the app; card images remain hosted by their recorded source.
