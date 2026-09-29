@@ -1398,3 +1398,37 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Only the card surface owns both gesture axes; surrounding text still scrolls. */
+.page-museum .museum-stage { touch-action: pinch-zoom; }
+.species-feed-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  color: #345154;
+  font-size: 12px;
+}
+.species-feed-nav button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #91a6a0;
+  background: #f4f6ef;
+  color: #28494e;
+}
+@media (max-width: 720px) {
+  .species-feed-nav { flex-wrap: wrap; gap: 6px; }
+  .species-feed-nav span { order: -1; width: 100%; text-align: center; }
+  .museum-heading { padding-top: 20px; gap: 12px; }
+  .museum-stage { grid-template-columns: 44px minmax(0, 1fr) 44px; }
+  .gallery-arrow { width: 44px; height: 44px; }
+  .card-image-mat { height: auto; aspect-ratio: 600 / 825; }
+  .card-art { max-height: 100%; }
+  .text-button, .save-species { min-height: 44px; }
+}
+
+.museum-stage:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}

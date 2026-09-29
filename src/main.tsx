@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
+import { PointerGesture, WheelGesture, wrapIndex } from "./navigation";
 
 type Pokemon = {
   id: number;
@@ -31,7 +32,6 @@ type CardEdition = {
   artistObservedText: string;
 };
 type Page = "index" | "museum" | "artist";
-type CardLoad = { key: string; cards: CardEdition[] };
 
 const artwork = (id: number) =>
   `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
@@ -47,14 +47,14 @@ function App() {
   const [query, setQuery] = useState("");
   const [type, setType] = useState("all");
   const [favoritesOnly, setFavoritesOnly] = useState(false);
-  const [cardLoad, setCardLoad] = useState<CardLoad>({ key: "", cards: [] });
-  const [slideIndex, setSlideIndex] = useState(0);
+  const [cardPositions, setCardPositions] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [brokenImages, setBrokenImages] = useState<string[]>([]);
   const [savingId, setSavingId] = useState<number | null>(null);
-  const dragStart = useRef<{ x: number; y: number } | null>(null);
-  const lastWheelMove = useRef(0);
+  const pointerGesture = useRef(new PointerGesture());
+  const wheelGesture = useRef(new WheelGesture());
+  const stageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let current = true;
@@ -112,38 +112,41 @@ function App() {
   const activePokemon = pokemon.find((item) => item.id === activePokemonId);
   const cardKey =
     page === "artist" ? `artist:${activeArtist}` : `pokemon:${activePokemonId}`;
-  const cards = cardLoad.key === cardKey ? cardLoad.cards : [];
+  const cards = allCards.filter((card) =>
+    page === "artist" ? card.artist === activeArtist : card.pokemonId === activePokemonId,
+  );
+  const slideIndex = wrapIndex(cardPositions[cardKey] ?? 0, 0, cards.length);
+  const feed = useMemo(() => {
+    const featured = [887, 94];
+    return [...pokemon].sort((a, b) => {
+      const rank = (id: number) => featured.includes(id) ? featured.indexOf(id) : featured.length + id;
+      return rank(a.id) - rank(b.id);
+    });
+  }, [pokemon]);
+  const speciesIndex = feed.findIndex((item) => item.id === activePokemonId);
+
+  function selectCard(index: number) {
+    setCardPositions((positions) => ({ ...positions, [cardKey]: index }));
+  }
+
+  function moveSpecies(direction: number) {
+    if (page !== "museum" || feed.length < 2) return;
+    setActivePokemonId((id) => {
+      const index = feed.findIndex((item) => item.id === id);
+      return feed[wrapIndex(index, direction, feed.length)].id;
+    });
+    setError("");
+  }
 
   useEffect(() => {
-    if (page === "index") return;
-    const url =
-      page === "artist"
-        ? `/api/cards?artist=${encodeURIComponent(activeArtist)}`
-        : `/api/cards?pokemonId=${activePokemonId}`;
-    let current = true;
-    setCardLoad({ key: "", cards: [] });
-    setSlideIndex(0);
-    setBrokenImages([]);
-    fetch(url)
-      .then(async (response) => {
-        if (!response.ok) throw new Error("card editions unavailable");
-        return (await response.json()) as CardEdition[];
-      })
-      .then((items) => {
-        if (current) setCardLoad({ key: cardKey, cards: items });
-      })
-      .catch(() => {
-        if (current) {
-          setCardLoad({ key: cardKey, cards: [] });
-          setError(
-            "these card editions could not load. return to the pokédex and try again.",
-          );
-        }
-      });
-    return () => {
-      current = false;
-    };
-  }, [page, activeArtist, activePokemonId, cardKey]);
+    pointerGesture.current.cancel();
+    wheelGesture.current.reset();
+    stageRef.current?.focus({ preventScroll: true });
+  }, [page, loading]);
+
+  useEffect(() => {
+    pointerGesture.current.cancel();
+  }, [cardKey]);
 
   const selectedCard = cards.length
     ? cards[slideIndex % cards.length]
@@ -157,7 +160,10 @@ function App() {
 
   function move(direction: number) {
     if (cards.length < 2) return;
-    setSlideIndex((index) => (index + direction + cards.length) % cards.length);
+    setCardPositions((positions) => ({
+      ...positions,
+      [cardKey]: wrapIndex(positions[cardKey] ?? 0, direction, cards.length),
+    }));
   }
 
   useEffect(() => {
@@ -165,12 +171,23 @@ function App() {
       const target = event.target;
       if (
         page === "index" ||
+        event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
         target instanceof HTMLInputElement ||
         target instanceof HTMLSelectElement ||
         target instanceof HTMLTextAreaElement ||
         (target instanceof HTMLElement && target.isContentEditable)
       )
         return;
+      if (event.key === "Escape") {
+        setPage("index");
+        return;
+      }
+      if (!(target instanceof Element) || !target.closest(".museum-stage, .card-rail, .species-feed-nav")) return;
+      if (page === "artist" && (event.key === "ArrowUp" || event.key === "ArrowDown")) return;
+      if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key) &&
+          target instanceof Element && target.closest(".museum-stage, .card-rail")) {
+        stageRef.current?.focus({ preventScroll: true });
+      }
       if (event.key === "ArrowLeft") {
         event.preventDefault();
         move(-1);
@@ -179,7 +196,10 @@ function App() {
         event.preventDefault();
         move(1);
       }
-      if (event.key === "Escape") setPage("index");
+      if (page === "museum" && (event.key === "ArrowUp" || event.key === "ArrowDown")) {
+        event.preventDefault();
+        moveSpecies(event.key === "ArrowDown" ? 1 : -1);
+      }
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -221,42 +241,39 @@ function App() {
   }
 
   function handlePointerDown(event: React.PointerEvent<HTMLElement>) {
-    if (
-      event.target instanceof HTMLElement &&
-      event.target.closest("button, a, input, select")
-    )
+    if (!event.isPrimary) {
+      pointerGesture.current.cancel();
       return;
-    dragStart.current = { x: event.clientX, y: event.clientY };
+    }
+    if (event.button !== 0) return;
+    if (event.target instanceof Element && event.target.closest("button, a, input, select")) return;
+    pointerGesture.current.start(event.pointerId, event.clientX, event.clientY);
     event.currentTarget.setPointerCapture(event.pointerId);
   }
 
   function handlePointerUp(event: React.PointerEvent<HTMLElement>) {
-    const start = dragStart.current;
-    dragStart.current = null;
-    if (!start) return;
-    const distanceX = event.clientX - start.x;
-    const distanceY = event.clientY - start.y;
-    if (
-      Math.abs(distanceX) > 45 &&
-      Math.abs(distanceX) > Math.abs(distanceY) * 1.25
-    ) {
-      move(distanceX < 0 ? 1 : -1);
-    }
+    const navigation = pointerGesture.current.end(event.pointerId, event.clientX, event.clientY);
+    if (navigation?.axis === "x") move(navigation.direction);
+    if (navigation?.axis === "y") moveSpecies(navigation.direction);
   }
 
-  function handleWheel(event: React.WheelEvent<HTMLElement>) {
-    if (cards.length < 2) return;
-    const distance =
-      Math.abs(event.deltaX) > Math.abs(event.deltaY)
-        ? event.deltaX
-        : event.deltaY;
-    if (Math.abs(distance) < 24) return;
-    event.preventDefault();
-    const now = Date.now();
-    if (now - lastWheelMove.current < 420) return;
-    lastWheelMove.current = now;
-    move(distance > 0 ? 1 : -1);
-  }
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage) return;
+    function onWheel(event: WheelEvent) {
+      // Preserve browser zoom and native vertical scrolling in artist galleries.
+      if (event.ctrlKey) return;
+      const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? stage!.clientHeight : 1;
+      const { navigation, preventDefault } = wheelGesture.current.handle(
+        event.deltaX * unit, event.deltaY * unit, event.timeStamp, page === "museum",
+      );
+      if (preventDefault) event.preventDefault();
+      if (navigation?.axis === "x") move(navigation.direction);
+      if (navigation?.axis === "y") moveSpecies(navigation.direction);
+    }
+    stage.addEventListener("wheel", onWheel, { passive: false });
+    return () => stage.removeEventListener("wheel", onWheel);
+  });
 
   const collectionCount = pokemon.length;
 
@@ -509,7 +526,15 @@ function App() {
             </div>
           </div>
 
-          {loading || (cardLoad.key !== cardKey && !error) ? (
+              {page === "museum" && feed.length > 1 && (
+                <nav className="species-feed-nav" aria-label="species feed">
+                  <button onClick={() => moveSpecies(-1)} aria-label="previous species">↑ previous species</button>
+                  <span aria-live="polite">{speciesIndex + 1} / {feed.length} species · {activePokemon?.name}</span>
+                  <button onClick={() => moveSpecies(1)} aria-label="next species">next: {feed[wrapIndex(speciesIndex, 1, feed.length)]?.name} ↓</button>
+                </nav>
+              )}
+
+          {loading ? (
             <div className="museum-empty" aria-live="polite">
               <span className="loading-mark">✳</span>
               <p>opening the card drawers…</p>
@@ -534,15 +559,17 @@ function App() {
           ) : selectedCard ? (
             <>
               <div
+                ref={stageRef}
+                tabIndex={0}
                 className="museum-stage"
                 role="region"
-                aria-label="looping card gallery; drag, swipe, scroll, or use arrow keys"
+                aria-label={page === "museum" ? "card feed: swipe or use up and down for species, left and right for card editions" : "artist gallery: swipe left and right for card editions"}
                 onPointerDown={handlePointerDown}
                 onPointerUp={handlePointerUp}
                 onPointerCancel={() => {
-                  dragStart.current = null;
+                  pointerGesture.current.cancel();
                 }}
-                onWheel={handleWheel}
+                onLostPointerCapture={() => { pointerGesture.current.cancel(); }}
                 onDragStart={(event) => event.preventDefault()}
               >
                 <span className="stage-index index-left" aria-hidden="true">
@@ -565,6 +592,7 @@ function App() {
                   </button>
                 )}
                 <CardFrame
+                  key={selectedCard.cardId}
                   card={selectedCard}
                   onArtist={() => openArtist(selectedCard.artist)}
                   broken={brokenImages.includes(selectedCard.cardId)}
@@ -600,7 +628,7 @@ function App() {
                   <button
                     className={`rail-item ${index === slideIndex ? "selected" : ""}`}
                     key={card.cardId}
-                    onClick={() => setSlideIndex(index)}
+                    onClick={() => selectCard(index)}
                     aria-current={index === slideIndex ? "true" : undefined}
                     aria-label={`${card.title}, ${card.set}, illustrated by ${card.artist}`}
                   >
@@ -613,9 +641,10 @@ function App() {
                 </span>
               </nav>
               <p className="navigation-hint">
+                {page === "museum" && <>↑ ↓ species <span>·</span> ← → card art <span>·</span> swipe on the card<br /></>}
                 {cards.length > 1 ? (
                   <>
-                    drag or swipe <span>·</span> scroll / trackpad{" "}
+                    horizontal swipe <span>·</span> horizontal trackpad{" "}
                     <span>·</span> use ← → <span>·</span> looping archive
                   </>
                 ) : (
