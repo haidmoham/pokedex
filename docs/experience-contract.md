@@ -24,8 +24,15 @@
   IHDR dimensions, and full-file hash. A 600px-wide scan stays at or below
   300 CSS px when claiming 2× crispness; a larger inspect view must not claim
   extra detail.
-- Loop the finite verified set. Support previous and next buttons, arrow keys,
-  thumbnail selection, horizontal drag/swipe, and wheel or trackpad movement.
+- Loop the finite verified set. The species feed starts with Dragapult and Gengar,
+  followed by all remaining catalog species in dex order. On the card surface,
+  vertical swipe/wheel and up/down keys change species; horizontal swipe/wheel
+  and left/right keys change card editions. Buttons expose both axes.
+- Keep page scrolling outside the card surface and preserve pinch zoom. Artist
+  galleries use horizontal navigation only; vertical gestures scroll the page.
+- Reject ambiguous diagonal gestures, cancel interrupted pointers, and consume
+  a wheel momentum stream only once. Remember each gallery's card selection.
+- Support thumbnail selection and keep controls available without gestures.
 - Keep these inputs on one selected record. A wrapped transition updates the
   image and every credit field from the same record.
 - Preserve keyboard focus, visible focus rings, useful mobile targets, and
@@ -63,8 +70,10 @@ pretend to crawl a bot-blocked publisher page or infer its contents.
 
 - The API reads from the local checked manifest; no live artist lookup can
   change the displayed credit.
-- A slow or failed metadata request shows a loading or error state without
-  keeping a previous species' card attached to a new species.
+- Load the checked manifest once with the initial catalog. Derive species and
+  artist galleries from that same snapshot synchronously, so rapid navigation
+  cannot attach an older request's card to a newer species. A failed initial
+  metadata request shows a loading or error state.
 - A failed image shows a same-record unavailable state. It must not replace the
   card image while keeping a mismatched title or credit.
 - Discovery and metadata work without API access after the app is built. Card
