@@ -4,11 +4,11 @@ import { readFile } from 'node:fs/promises';
 import ts from 'typescript';
 const source = await readFile(new URL('../src/artist-portfolio.ts', import.meta.url), 'utf8');
 const { outputText } = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } });
-const { ArtistPortfolio, portfolioCoverage, portfolioCards, portfolioTarget } = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
+const { ArtistPortfolio, portfolioCoverage, portfolioCards, portfolioTarget, portfolioResponseError } = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 const settle = () => new Promise(resolve => setImmediate(resolve));
 const card = (id, artist = 'Artist') => ({ cardId:id, artist, pokemonId:1, pokemonIds:[1], sourceType:'catalog' });
 const page = (artist='Artist', offset=0, options={}) => ({ artist, offset, cards:[card(`new-${offset}`,artist)], nextOffset:offset+12<24 ? offset+12 : null, total:24, scanned:12, failed:[], skipped:[], sourceUrl:`https://api.tcgdex.net/v2/en/illustrators/${encodeURIComponent(artist)}`, fetchedAt:'2026-09-30', ...options });
-const response = value => ({ ok:true, json:async()=>value });
+const response = value => ({ ok:true, status:200, headers:new Headers({'content-type':'application/json'}), json:async()=>value });
 const deferred = () => { let resolve; const promise=new Promise(done=>resolve=done); return {promise,resolve}; };
 
 // No speculative hydration: only opening and explicit pagination create calls.
@@ -51,9 +51,9 @@ test('retry replaces a failed page without duplicate tiles, coverage inflation o
 });
 
 test('an unavailable page retries its original offset and leaves loaded cards usable',async()=>{
- let calls=0;const store=new ArtistPortfolio(()=>{},()=>{},async()=>++calls===2 ? {ok:false} : response(page('Artist',calls===1 ? 0 : 12)));
+ let calls=0;const store=new ArtistPortfolio(()=>{},()=>{},async()=>++calls===2 ? {ok:false,status:502,headers:new Headers({'content-type':'application/json'}),json:async()=>({code:'ARTIST_SOURCE_UNAVAILABLE'})} : response(page('Artist',calls===1 ? 0 : 12)));
  store.open('Artist',[]);await settle();await store.loadMore();
- assert.equal(store.get('Artist').failedOffset,12);assert.match(store.get('Artist').error,/unavailable/);
+ assert.equal(store.get('Artist').failedOffset,12);assert.match(store.get('Artist').error,/ARTIST_SOURCE_UNAVAILABLE/);
  assert.equal(portfolioCoverage(store.get('Artist')).nextOffset,12);
  await store.retryFailed();assert.equal(portfolioCoverage(store.get('Artist')).nextOffset,null);assert.equal(store.get('Artist').error,null);store.close();
 });
@@ -104,7 +104,7 @@ test('artist membership is literal, shared cards appear once and cross-species s
 
 test('unexpected response artist cannot populate another identity',async()=>{
  const merged=[];const store=new ArtistPortfolio(()=>{},cards=>merged.push(...cards),async()=>response(page('Wrong')));
- store.open('Artist',[]);await settle();assert.equal(merged.length,0);assert.equal(store.get('Artist').failedOffset,0);assert.match(store.get('Artist').error,/unavailable/);store.close();
+ store.open('Artist',[]);await settle();assert.equal(merged.length,0);assert.equal(store.get('Artist').failedOffset,0);assert.match(store.get('Artist').error,/did not match/);store.close();
 });
 
 test('UI retains independent drawer scrolling, edition pinning and price-source caveat',async()=>{
@@ -114,4 +114,19 @@ test('UI retains independent drawer scrolling, edition pinning and price-source 
  assert.match(app,/portfolio.saveScroll\(activeArtist, event.currentTarget.scrollTop\)/);
  assert.match(app,/Provider matching can confuse card variants or marketplace IDs/);
  assert.match(app,/highest|Highest available.*provider value/);
+});
+
+
+test('safe HTTP diagnostics distinguish validation metadata without displaying query values',async()=>{
+ assert.equal(portfolioResponseError(400,{code:'ARTIST_REQUEST_INVALID',reason:'unexpected_query',unexpectedKeys:['artist','path'],secret:'never-show-this'}),'Portfolio request failed (HTTP 400 · ARTIST_REQUEST_INVALID · unexpected_query · keys: artist, path). Your loaded artwork is still here.');
+ assert.doesNotMatch(portfolioResponseError(500,{code:'<script>',reason:'<script>',unexpectedKeys:['password=value']}),/script|password|value/);
+ const store=new ArtistPortfolio(()=>{},()=>{},async()=>({ok:false,status:400,headers:new Headers({'content-type':'application/json'}),json:async()=>({code:'ARTIST_REQUEST_INVALID',reason:'unexpected_query',unexpectedKeys:['artist']})}));
+ store.open('Artist',[]);await settle();assert.match(store.get('Artist').error,/HTTP 400.*ARTIST_REQUEST_INVALID.*keys: artist/);store.close();
+});
+
+test('non-JSON hosting pages and network failures remain distinct diagnostics',async()=>{
+ const html=new ArtistPortfolio(()=>{},()=>{},async()=>({ok:true,status:200,headers:new Headers({'content-type':'text/html'}),json:async()=>{throw Error('must not parse HTML');}}));
+ html.open('Artist',[]);await settle();assert.match(html.get('Artist').error,/web page instead of data/);html.close();
+ const network=new ArtistPortfolio(()=>{},()=>{},async()=>{throw new TypeError('fetch failed');});
+ network.open('Artist',[]);await settle();assert.match(network.get('Artist').error,/network error/);network.close();
 });

@@ -74,7 +74,7 @@ test('malformed artist URL encoding returns a non-cacheable client error', async
     const response = await fetch(`${base}/api/artists/%E0%A4%A`);
     assert.equal(response.status, 400);
     assert.equal(response.headers.get('cache-control'), 'no-store');
-    assert.match((await response.json()).error, /invalid request encoding/);
+    assert.deepEqual(await response.json(), { error: 'invalid request encoding', code: 'REQUEST_ENCODING_INVALID' });
   });
 });
 
@@ -90,4 +90,56 @@ test('Vercel rewrite path metadata does not invalidate a valid artist page', asy
     assert.equal(malformed.status,400);
     assert.equal(calls.length,1);
   });
+});
+
+test('artist validation diagnostics identify the failed boundary and reveal query keys only', async () => {
+  let calls = 0;
+  await withServer(async () => { calls++; return { failed: [] }; }, async base => {
+    const cases = [
+      ['%20Artist?offset=0', 'artist', []],
+      ['Artist?offset=-1', 'offset', []],
+      ['Artist?offset=1&offset=2', 'offset', []],
+      ['Artist?offset[value]=private-offset-value&path=ignored-private-path', 'unexpected_query', ['offset[value]']],
+      ['Artist?zeta=private-zeta-value&alpha=private-alpha-value&offset=0&path=ignored-private-path', 'unexpected_query', ['alpha', 'zeta']],
+      ['%20Artist?offset=-1&unknown=private-value', 'artist', ['unknown']],
+    ];
+    for (const [path, reason, unexpectedKeys] of cases) {
+      const response = await fetch(`${base}/api/artists/${path}`);
+      assert.equal(response.status, 400);
+      assert.equal(response.headers.get('cache-control'), 'no-store');
+      assert.deepEqual(await response.json(), {
+        error: 'invalid artist or page', code: 'ARTIST_REQUEST_INVALID', reason, unexpectedKeys,
+      });
+    }
+    assert.equal(calls, 0);
+  });
+});
+
+test('artist upstream diagnostics distinguish source statuses, timeout, index shape and unavailable failures', async () => {
+  const cases = [
+    [new Error('source request timed out'), 'ARTIST_SOURCE_TIMEOUT'],
+    [new DOMException('private-timeout-detail', 'TimeoutError'), 'ARTIST_SOURCE_TIMEOUT'],
+    [new DOMException('private-abort-detail', 'AbortError'), 'ARTIST_SOURCE_TIMEOUT'],
+    [new TypeError('fetch failed', { cause: { code: 'UND_ERR_CONNECT_TIMEOUT' } }), 'ARTIST_SOURCE_TIMEOUT'],
+    [new Error('invalid source artist index'), 'ARTIST_SOURCE_INDEX_INVALID'],
+    [new SyntaxError('private malformed JSON body'), 'ARTIST_SOURCE_INDEX_INVALID'],
+    [new Error('source returned 404'), 'ARTIST_SOURCE_NOT_FOUND'],
+    [new Error('source returned 401'), 'ARTIST_SOURCE_UNAUTHORIZED'],
+    [new Error('source returned 403'), 'ARTIST_SOURCE_FORBIDDEN'],
+    [new Error('source returned 429'), 'ARTIST_SOURCE_RATE_LIMITED'],
+    [new Error('source returned 503'), 'ARTIST_SOURCE_UNAVAILABLE'],
+    [new Error('private request URL https://example.test/?token=private-value'), 'ARTIST_SOURCE_UNAVAILABLE'],
+    [new Error('toString'), 'ARTIST_SOURCE_UNAVAILABLE'],
+    [null, 'ARTIST_SOURCE_UNAVAILABLE'],
+  ];
+  for (const [error, code] of cases) {
+    await withServer(async () => { throw error; }, async base => {
+      const response = await fetch(`${base}/api/artists/Artist`);
+      assert.equal(response.status, 502);
+      assert.equal(response.headers.get('cache-control'), 'no-store');
+      assert.deepEqual(await response.json(), {
+        error: 'artist card source unavailable; loaded artwork remains available', code,
+      });
+    });
+  }
 });

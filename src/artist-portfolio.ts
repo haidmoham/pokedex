@@ -42,6 +42,16 @@ export function portfolioTarget(card: Pick<CardEdition, 'pokemonId' | 'pokemonId
   return ids.includes(currentSpecies) ? currentSpecies : ids[0];
 }
 
+class PortfolioResponseError extends Error {}
+export function portfolioResponseError(status: number, body?: unknown) {
+  const detail = body && typeof body === 'object' ? body as Record<string, unknown> : {};
+  const code = typeof detail.code === 'string' && /^[A-Z_]{1,60}$/.test(detail.code) ? detail.code : null;
+  const reason = typeof detail.reason === 'string' && /^[a-z_]{1,40}$/.test(detail.reason) ? detail.reason : null;
+  const keys = Array.isArray(detail.unexpectedKeys) ? detail.unexpectedKeys.filter((key): key is string => typeof key === 'string' && /^[a-zA-Z0-9_[\].-]{1,40}$/.test(key)).slice(0, 6) : [];
+  const diagnostic = [`HTTP ${status}`, code, reason, keys.length ? `keys: ${keys.join(', ')}` : null].filter(Boolean).join(' · ');
+  return `Portfolio request failed (${diagnostic}). Your loaded artwork is still here.`;
+}
+
 // A session cache with one explicitly requested page at a time. Closing the
 // drawer cancels transport and invalidates response ownership, even if a source
 // ignores AbortSignal. Previously loaded pages and scroll position survive.
@@ -113,21 +123,33 @@ export class ArtistPortfolio {
     state.loading = true; state.error = null; this.changed();
     try {
       const response = await this.fetcher(`/api/artists/${encodeURIComponent(artist)}?offset=${offset}`, { signal: controller.signal });
-      if (!response.ok) throw new Error('source unavailable');
-      const page: PortfolioPage = await response.json();
+      const contentType = response.headers?.get('content-type');
+      if (!response.ok) {
+        let detail: unknown;
+        if (contentType?.includes('application/json')) {
+          try { detail = await response.json(); } catch { /* keep the HTTP status */ }
+        }
+        throw new PortfolioResponseError(portfolioResponseError(response.status, detail));
+      }
+      if (contentType && !contentType.includes('application/json')) {
+        throw new PortfolioResponseError(`Portfolio endpoint returned a web page instead of data (HTTP ${response.status}). Your loaded artwork is still here.`);
+      }
+      let page: PortfolioPage;
+      try { page = await response.json(); }
+      catch { throw new PortfolioResponseError(`Portfolio endpoint returned unreadable data (HTTP ${response.status}). Your loaded artwork is still here.`); }
       if (!current()) return false;
       if (controller.signal.aborted) throw new Error('request timed out');
-      if (page.artist !== artist || page.offset !== offset || !Array.isArray(page.cards) || !Array.isArray(page.failed) || !Array.isArray(page.skipped) ||
+      if (!page || typeof page !== 'object' || page.artist !== artist || page.offset !== offset || !Array.isArray(page.cards) || !Array.isArray(page.failed) || !Array.isArray(page.skipped) ||
         !Number.isInteger(page.total) || page.total < 0 || !Number.isInteger(page.scanned) || page.scanned < 0 || page.scanned > 12 ||
-        (page.nextOffset !== null && (!Number.isInteger(page.nextOffset) || page.nextOffset <= offset))) throw new Error('invalid portfolio response');
+        (page.nextOffset !== null && (!Number.isInteger(page.nextOffset) || page.nextOffset <= offset))) throw new PortfolioResponseError('Portfolio data did not match the requested artist or page (HTTP 200). Your loaded artwork is still here.');
       state.pages[offset] = page;
       state.order = [...new Set([...state.order, ...page.cards.map(card => card.cardId)])];
       state.failedOffset = null;
       this.mergeCards(page.cards);
       return true;
-    } catch {
+    } catch (error) {
       if (current()) {
-        state.error = timedOut ? 'The artist source took too long. Your loaded artwork is still here.' : 'The artist source is unavailable. Your loaded artwork is still here.';
+        state.error = timedOut ? 'The artist source took too long. Your loaded artwork is still here.' : error instanceof PortfolioResponseError ? error.message : 'Could not reach the portfolio endpoint (network error). Your loaded artwork is still here.';
         state.failedOffset = offset;
       }
       return false;

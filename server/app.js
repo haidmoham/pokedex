@@ -12,6 +12,27 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 validateCardManifest(cards, catalog);
 
+function artistSourceErrorCode(error) {
+  // Classify only known internal failure signals. Never return the upstream
+  // message, URL, response body or stack in a public diagnostic.
+  if (error?.message === 'source request timed out'
+    || ['AbortError', 'TimeoutError'].includes(error?.name)
+    || ['UND_ERR_CONNECT_TIMEOUT', 'UND_ERR_HEADERS_TIMEOUT', 'UND_ERR_BODY_TIMEOUT'].includes(error?.cause?.code)) {
+    return 'ARTIST_SOURCE_TIMEOUT';
+  }
+  if (error?.message === 'invalid source artist index' || error instanceof SyntaxError) {
+    return 'ARTIST_SOURCE_INDEX_INVALID';
+  }
+  const statusCodes = {
+    'source returned 404': 'ARTIST_SOURCE_NOT_FOUND',
+    'source returned 401': 'ARTIST_SOURCE_UNAUTHORIZED',
+    'source returned 403': 'ARTIST_SOURCE_FORBIDDEN',
+    'source returned 429': 'ARTIST_SOURCE_RATE_LIMITED',
+  };
+  return Object.hasOwn(statusCodes, error?.message)
+    ? statusCodes[error.message] : 'ARTIST_SOURCE_UNAVAILABLE';
+}
+
 export function createApp({
   dataFile = resolve(root, "data/favorites.json"),
   serveClient = true,
@@ -86,15 +107,22 @@ export function createApp({
     const offset = typeof rawOffset === 'string' && /^(0|[1-9]\d*)$/.test(rawOffset) ? Number(rawOffset) : NaN;
     // Vercel forwards the named /api/:path* rewrite capture as query metadata.
     // Ignore that routing key; it must not influence artist identity or paging.
-    const unexpectedQuery = Object.keys(request.query).some(key => key !== 'offset' && key !== 'path');
-    if (!isValidArtist(artist) || !isValidArtistOffset(offset) || unexpectedQuery) {
-      return response.status(400).set('Cache-Control', 'no-store').json({ error: 'invalid artist or page' });
+    const unexpectedKeys = Object.keys(request.query).filter(key => key !== 'offset' && key !== 'path').sort();
+    const reason = !isValidArtist(artist) ? 'artist'
+      : !isValidArtistOffset(offset) ? 'offset'
+      : unexpectedKeys.length ? 'unexpected_query' : null;
+    if (reason) {
+      return response.status(400).set('Cache-Control', 'no-store').json({
+        error: 'invalid artist or page', code: 'ARTIST_REQUEST_INVALID', reason, unexpectedKeys,
+      });
     }
     try {
       const data = await discoverArtist(artist, offset);
       return response.set('Cache-Control', data.failed.length ? 'no-store' : 'public, s-maxage=1800, stale-while-revalidate=3600').json(data);
-    } catch {
-      return response.status(502).set('Cache-Control', 'no-store').json({ error: 'artist card source unavailable; loaded artwork remains available' });
+    } catch (error) {
+      return response.status(502).set('Cache-Control', 'no-store').json({
+        error: 'artist card source unavailable; loaded artwork remains available', code: artistSourceErrorCode(error),
+      });
     }
   });
   app.use('/api/favorites', (request, response, next) => {
@@ -153,7 +181,7 @@ export function createApp({
 
   app.use((error, _request, response, _next) => {
     if (error instanceof URIError) {
-      return response.status(400).set('Cache-Control', 'no-store').json({ error: 'invalid request encoding' });
+      return response.status(400).set('Cache-Control', 'no-store').json({ error: 'invalid request encoding', code: 'REQUEST_ENCODING_INVALID' });
     }
     console.error(error);
     response.status(500).json({ error: "server error" });
