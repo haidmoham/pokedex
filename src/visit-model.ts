@@ -1,4 +1,5 @@
 import { CardEdition, officialEdition, Pokemon, rankedCards } from './feed-model';
+import { modelEdition } from './model-policy';
 
 // A visit is view state. Network responses may enrich its library, but they
 // cannot pick a new lead or reorder anything the visitor has already seen.
@@ -17,7 +18,8 @@ export function prepareVisits(visits: Record<number, Visit>, species: Pokemon[],
 export function createVisit(species: Pokemon, available: CardEdition[], currency: string, targetId?: string, context?: string): Visit {
   const eligible = available.filter(card => card.cardId !== `official-${species.id}` &&
     [card.pokemonId, ...(card.pokemonIds ?? [])].includes(species.id));
-  const ids = [...new Set([...rankedCards(eligible, currency).map(card => card.cardId), officialEdition(species).cardId])];
+  const model = modelEdition(species);
+  const ids = [...new Set([...(model ? [model.cardId] : []), officialEdition(species).cardId, ...rankedCards(eligible, currency).map(card => card.cardId)])];
   // An explicit portfolio tile is always the viewed card, even when a newer
   // market value would have led an ordinary visit.
   if (targetId && !ids.includes(targetId)) ids.push(targetId);

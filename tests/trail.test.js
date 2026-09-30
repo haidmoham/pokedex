@@ -80,3 +80,20 @@ test('Vercel rewrite path query metadata is ignored by the trail adapter', async
     assert.equal(invalid.status, 400);
   } finally { await new Promise(resolve => server.close(resolve)); }
 });
+
+test('an unavailable empty page keeps the exact cursor retryable and never claims exhaustion', async () => {
+  let failed = true;
+  const next = createTrailDiscovery({
+    discoverArtist: async () => failed ? { ...page([]), failed: ['unavailable'] } : page([card('recovered', 2)]),
+    discover: async () => { throw new Error('failed page must not be skipped'); },
+  });
+  const outage = await next(start);
+  assert.equal(outage.card, null);
+  assert.equal(outage.exhausted, false);
+  assert.equal(outage.partial, true);
+  assert.deepEqual(outage.cursor, { artist: start.artist, speciesId: 1, phase: 'artist', offset: 0, position: 0 });
+  failed = false;
+  const recovery = await next({ ...outage.cursor, seen: start.seen });
+  assert.equal(recovery.card.cardId, 'recovered');
+  assert.equal(recovery.partial, false);
+});

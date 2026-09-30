@@ -1,14 +1,14 @@
-# Artwork feed experience contract
+# A pokédex you can doomscroll — experience contract
 
 ## Primary experience
 
 - Open on Bulbasaur (#001), immediately. The complete 1,025-species catalog is bundled with the client, so API failure cannot block navigation.
 - One full-height species per viewport, in strict national-dex order. Swipe up or scroll down to advance; reverse to return. #001 and #1025 are endpoints, with no featured reorder or species wrap.
 - Let the browser handle vertical scrolling and snapping. Render artwork only for the current and adjacent species; do not load thousands of images.
-- Swipe left/right to loop through editions within that species. Keep button and keyboard alternatives. Ambiguous diagonals must not trigger a horizontal change; cancellation and multi-touch must not leave a pending gesture. Browser pinch zoom stays enabled.
+- Swipe left/right through stable views within that species, then deliberately continue into related artwork. Both finite endpoints remain predictable. Keep button and keyboard alternatives. Ambiguous diagonals must not trigger a horizontal change; cancellation and multi-touch must not leave a pending gesture. Browser pinch zoom stays enabled.
 - Lead with a large, uncropped image, species name, a short artist/source credit and minimal controls. Pricing, edition metadata, source evidence and coverage belong behind the info button.
 - Artist names open the exact credited illustrator's paginated TCGdex portfolio, showing loaded cards immediately. Search is a jump tool; type/saved filters affect search results only, never the feed's national-dex order.
-- Preserve each deliberately selected card ID through discovery, price updates and currency changes. Until a selection, the highest fresh comparable loaded price may improve the lead.
+- Preserve each deliberately selected card ID through discovery, price updates and currency changes. A visit selects once on entry: admitted 3D, otherwise official art; the highest fresh comparable loaded card follows official art. Later responses append and never replace the visible view.
 
 ## Navigation and accessibility
 
@@ -66,3 +66,18 @@ Official species artwork is a separate slide sourced to PokéAPI sprites. It exp
 ## Verification boundary
 
 Automated model/server tests cover sequence, endpoints, fallback metadata, ranking, stable selection, membership/provenance and gesture invariants. TypeScript and production bundling must pass after final edits. Deployed browser and physical-device checks remain separate evidence and must be reported honestly.
+
+## Continuous, user-steered discovery
+
+- Prepare one candidate near the gallery edge; do not auto-follow its cursor or select it. The source request checks at most two bounded pages.
+- Keep related-work context visible, and preserve exact card IDs and branch origin through forward/back traversal. Vertical navigation remains national-dex order.
+- Source failure preserves the same cursor for explicit retry. No failed page becomes a cached empty result or an exhaustion claim. The client aborts a stalled continuation after 15 seconds.
+- No unseen card in checked sources is a finite outcome. Buttons and vertical navigation remain usable. No timer or animation may navigate.
+
+## Admitted model view
+
+- Admission and source availability are distinct. Initial transfer cap 750 KB; visual quality, decoded texture/memory and animation budgets require separate evidence.
+- Only the active model mounts; no neighboring GLB prefetch. Verify bytes and Git blob identity before allocating a decoder. Cancel obsolete requests and ignore their results. A 12-second load deadline or renderer failure selects official art.
+- Lazy viewer, zero retained model cache, scene teardown on removal, no automatic rotation/playback; reduced motion remains still. Missing entries have no dead model slide.
+- Ordinary swipe navigates. Inspect deliberately locks feed position and enables model rotation. Accessible rotate buttons supplement dragging; Escape/Done restores Inspect focus and the exact visit/history.
+- Preserve source uploader attribution, license claims and gaps. The software license does not clear underlying Pokémon IP.

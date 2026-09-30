@@ -44,6 +44,9 @@ export function createTrailDiscovery({ discoverArtist, discover }) {
         });
       const chosenIndex = candidates.findIndex((card, index) => index >= position && !seen.has(card.cardId));
       const card = chosenIndex < 0 ? null : candidates[chosenIndex];
+      // Do not advance past an unavailable page and falsely report exhaustion.
+      // An explicit retry receives the exact failed cursor.
+      if (!card && page.failed.length) return { card: null, cursor: { artist, speciesId, phase, offset, position }, exhausted: false, partial: true, coverage: { scanned: page.scanned, total: page.total } };
       const remainingIndex = candidates.findIndex((candidate, index) => index > chosenIndex && !seen.has(candidate.cardId));
       const next = phase === 'related'
         ? (offset + 1 < catalog.length - 1 ? { artist, speciesId, phase: 'related', offset: offset + 1, position: 0 } : null)

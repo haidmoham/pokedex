@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "variant": null,
+    "bytes": 541608,
+    "blobSha": "7646ad947277d3d79f5219f24391a671ebce27c2",
+    "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1.glb",
+    "admitted": false,
+    "credit": "Source uploader not mapped",
+    "license": "Not specified in sampled asset",
+    "source": "https://github.com/Pokemon-3D-api/assets"
+  },
+  {
+    "id": 25,
+    "variant": null,
+    "bytes": 146152,
+    "blobSha": "1ea79bd6f401bcbd924e6aabc4c7fc75069cbb9b",
+    "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/25.glb",
+    "admitted": false,
+    "credit": "Source uploader not mapped",
+    "license": "Not specified in sampled asset",
+    "source": "https://github.com/Pokemon-3D-api/assets"
+  },
+  {
+    "id": 1025,
+    "variant": null,
+    "bytes": 83888,
+    "blobSha": "0201100e39540d7cd9579b1de5113a3ec0346bba",
+    "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1025.glb",
+    "admitted": false,
+    "credit": "Squirmy Worm",
+    "license": "CC-BY-4.0 (embedded uploader claim)",
+    "source": "https://sketchfab.com/3d-models/pecharunt-8107b1f76c7f4ae89dbd24a8433944e2"
+  }
+]

@@ -1,10 +1,12 @@
 # pokédex
 
-An artwork-first, full-height Pokédex feed. Swipe up from Bulbasaur through all 1,025 species, and swipe sideways through each Pokémon's card art. Artist credit stays visible; details live one tap away.
+A pokédex you can doomscroll. Move vertically through the national dex, sideways through distinct views and into related artwork. Every move is yours; loading never advances the feed. Each visit keeps its identity and a discovery trail reverses exactly.
+
+Mobile comes first: 320px layouts, native vertical scrolling, ordinary swipes for navigation and explicit Inspect for rotating an admitted 3D view. View order is viable 3D, official art, fresh highest-priced available card, then the remaining gallery and related discovery. Model gaps or failures lead directly to official art. No claim of infinite unique artwork or complete model coverage.
 
 ## Run locally
 
-Requires Node.js 20.19+ or 22.12+.
+Use Node.js 24. Tests use JSON import attributes.
 
 ```sh
 npm install
@@ -84,3 +86,11 @@ Browser QA checklist:
 8. Check widths 320, 390 and 1280, short landscape viewports, increased text size, reduced motion, touch pinch zoom and real-device swipes. Main artwork must remain uncropped; source drawers must scroll without moving the feed.
 
 Automated checks do not claim physical-device or screenshot verification. The parent task verifies the deployed preview in its browser before delivery.
+
+## Bounded discovery and 3D
+
+The next discovery candidate prepares near the gallery edge. It never selects itself. At most one request and one candidate image prepare at a time; cancellation ignores stale responses, a 15-second deadline exposes Retry, and unavailable source pages retain their cursor. Exhaustion means the checked finite sources, not every Pokémon artwork in existence.
+
+3D admission is explicit in `content/models/admitted.json`, separate from the source availability manifest. The initial transfer cap is 750 KB. It does not establish a GPU-memory or visual-quality budget. Only the active admitted model fetches/decodes; neighbor preparation uses ordinary posters. Source bytes must match their recorded size and Git blob identity before decoder allocation. A 12-second deadline, bad bytes or renderer failure select official art. The runtime is lazy, cached models are disabled and unmounted scenes are disposed by the viewer. Inspect enables rotation; Done restores focus and feed position, without creating a history entry.
+
+See [model source provenance](docs/pokemon-model-sources.md). Availability is 971/1,025 species, not rights clearance or phone performance evidence. Embedded attribution claims and missing mappings remain explicit. The repository MIT license does not clear underlying Pokémon IP. Models stay unadmitted until representative browser rendering and source assessment pass.
