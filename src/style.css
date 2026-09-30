@@ -47,6 +47,7 @@ svg { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
 .image-unavailable { display: grid; justify-items: center; gap: 16px; color: #fff9; font-size: 14px; }
 .image-unavailable svg { width: 40px; height: 40px; opacity: .5; }
 .image-unavailable small { opacity: .6; }
+.image-retry { pointer-events: auto; min-height: 44px; padding: 10px 18px; border: 1px solid #ffffff40; border-radius: 22px; background: #ffffff10; color: #fff; }
 .feed-overlay { position: absolute; inset: auto 0 0; padding: 0 var(--edge) calc(24px + env(safe-area-inset-bottom)); pointer-events: none; background: linear-gradient(transparent, #08100d28 28%, #08100d6b); }
 .feed-overlay button { pointer-events: auto; }
 .feed-caption { padding-right: 64px; margin-bottom: 23px; animation: caption-in .2s ease-out; }

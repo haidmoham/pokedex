@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import speciesSnapshot from '../content/species.json';
 import { PointerGesture, WheelGesture, wrapIndex } from './navigation';
 import { belongsToSpecies, cardSpeciesIds, mergeCardLibrary } from './card-library';
-import { adjacentIndex, artwork, dexNumber, nationalDex, officialEdition, rankedCards, recentPrice, selectedCard as resolveCard } from './feed-model';
+import { adjacentIndex, artwork, dexNumber, FeedPosition, nationalDex, officialEdition, rankedCards, recentPrice, rememberFailedImage, retryFailedImages, selectedCard as resolveCard } from './feed-model';
 import type { CardEdition, Pokemon } from './feed-model';
 import './style.css';
 
@@ -61,9 +61,8 @@ function App() {
   const pointer = useRef(new PointerGesture());
   const wheel = useRef(new WheelGesture());
   const activeIndexRef = useRef(0);
+  const feedPosition = useRef(new FeedPosition());
   const drawerRef = useRef<Drawer>(null);
-  activeIndexRef.current = activeIndex;
-  drawerRef.current = drawer;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -73,6 +72,12 @@ function App() {
     }).then(cards => setAllCards(previous => mergeCardLibrary(cards, previous)))
       .catch(() => { if (!controller.signal.aborted) setManifestFailed(true); });
     return () => controller.abort();
+  }, []);
+
+  useEffect(() => {
+    const recoverImages = () => setBrokenImages(images => retryFailedImages(images));
+    window.addEventListener('online', recoverImages);
+    return () => window.removeEventListener('online', recoverImages);
   }, []);
 
   const galleries = useMemo(() => {
@@ -127,6 +132,7 @@ function App() {
 
   useEffect(() => {
     const dialog = dialogRef.current;
+    drawerRef.current = drawer;
     if (drawer && dialog && !dialog.open) dialog.showModal();
     if (!drawer && dialog?.open) dialog.close();
     pointer.current.cancel(); wheel.current.reset();
@@ -138,23 +144,27 @@ function App() {
     feed.focus({ preventScroll: true });
     let frame = 0;
     const syncIndex = () => {
-      const index = adjacentIndex(Math.round(feed.scrollTop / feed.clientHeight), 0, pokemon.length);
+      if (drawerRef.current || feedPosition.current.locked) return;
+      const index = feedPosition.current.sync(feed, pokemon.length);
       if (index !== activeIndexRef.current) { activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); pointer.current.cancel(); }
     };
     const onScroll = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(syncIndex); };
     feed.addEventListener('scroll', onScroll, { passive: true });
-    const resize = new ResizeObserver(() => { feed.scrollTop = activeIndexRef.current * feed.clientHeight; });
+    const resize = new ResizeObserver(() => { feedPosition.current.settle(feed); });
     resize.observe(feed);
     return () => { feed.removeEventListener('scroll', onScroll); cancelAnimationFrame(frame); resize.disconnect(); };
   }, []);
 
-  function jumpTo(index: number, smooth = true) {
+  function jumpTo(index: number) {
     const feed = feedRef.current;
     if (!feed) return;
-    const next = adjacentIndex(index, 0, pokemon.length);
-    feed.scrollTo({ top: next * feed.clientHeight, behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant' });
+    const next = feedPosition.current.jump(feed, index, pokemon.length);
+    if (next !== activeIndexRef.current) setHasScrolled(true);
+    activeIndexRef.current = next;
+    setActiveIndex(next);
+    pointer.current.cancel();
   }
-  function moveSpecies(direction: number) { jumpTo(adjacentIndex(activeIndex, direction, pokemon.length)); }
+  function moveSpecies(direction: number) { jumpTo(adjacentIndex(activeIndexRef.current, direction, pokemon.length)); }
   function moveArt(direction: number) {
     setSelectedIds(ids => {
       const current = resolveCard(cards, ids[activePokemon.id])!;
@@ -165,12 +175,25 @@ function App() {
   function openDrawer(next: Drawer) {
     // Inspecting a card is a deliberate selection, so incoming prices cannot swap it.
     if (next === 'details' || next === 'artist') setSelectedIds(ids => ({ ...ids, [activePokemon.id]: card.cardId }));
+    drawerRef.current = next;
+    if (next && feedRef.current) {
+      activeIndexRef.current = activeIndex;
+      feedPosition.current.lock(feedRef.current, activeIndex);
+    }
+    pointer.current.cancel(); wheel.current.reset();
     setDrawer(next);
   }
-  function closeDrawer() { setDrawer(null); }
+  function closeDrawer() {
+    if (feedRef.current) {
+      const index = feedPosition.current.unlock(feedRef.current);
+      if (index !== null) { activeIndexRef.current = index; setActiveIndex(index); }
+    }
+    drawerRef.current = null;
+    setDrawer(null);
+  }
   function openPokemon(item: Pokemon, selectedId?: string) {
     if (selectedId) setSelectedIds(ids => ({ ...ids, [item.id]: selectedId }));
-    setDrawer(null); jumpTo(pokemon.findIndex(entry => entry.id === item.id), false);
+    closeDrawer(); jumpTo(pokemon.findIndex(entry => entry.id === item.id));
     feedRef.current?.focus({ preventScroll: true });
   }
   function toggleFavorite() {
@@ -232,8 +255,8 @@ function App() {
           {edition && <>
             <span className="ghost-number" aria-hidden="true">{dexNumber(item.id)}</span>
             <div className={`art-stage ${edition.sourceType === 'official' ? 'is-official' : 'is-card'}`}>
-              {brokenImages.includes(edition.image) ? <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{edition.sourceType === 'official' ? item.name : edition.title}</small></div> :
-                <img key={edition.image} className="hero-art" src={edition.image} alt={edition.sourceType === 'official' ? `${item.name}, official species artwork` : `${edition.title} Pokémon TCG card, illustrated by ${edition.artist}`} draggable={false} fetchPriority={index === activeIndex ? 'high' : 'low'} onError={() => setBrokenImages(old => [...old, edition.image])} />}
+              {brokenImages.includes(edition.image) ? <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{edition.sourceType === 'official' ? item.name : edition.title}</small><button className="image-retry" tabIndex={index === activeIndex ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, edition.image))}>Retry image</button></div> :
+                <img key={edition.image} className="hero-art" src={edition.image} alt={edition.sourceType === 'official' ? `${item.name}, official species artwork` : `${edition.title} Pokémon TCG card, illustrated by ${edition.artist}`} draggable={false} fetchPriority={index === activeIndex ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, edition.image))} />}
             </div>
           </>}
         </section>;
@@ -267,7 +290,7 @@ function App() {
     <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} Artwork {cardIndex + 1} of {cards.length}.</span>
     {error && <button className="toast" role="alert" onClick={() => setError('')}>{error} ×</button>}
 
-    <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={closeDrawer} onClose={() => setDrawer(null)} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
+    <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={closeDrawer} onClose={() => { if (!dialogRef.current?.open) closeDrawer(); }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
       <div className="drawer-surface">
         <header className="drawer-header"><div><span className="drawer-eyebrow">{drawer === 'search' ? 'Find your next favorite' : drawer === 'artist' ? 'Follow the illustrator' : `#${dexNumber(activePokemon.id)} · ${activePokemon.name}`}</span><h2 id="drawer-title">{drawer === 'search' ? 'Jump in.' : drawer === 'artist' ? activeArtist : 'Behind the art.'}</h2></div><button className="icon-button" onClick={closeDrawer} aria-label="Close panel"><Icon name="close" /></button></header>
         <div className="drawer-scroll">

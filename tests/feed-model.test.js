@@ -5,7 +5,7 @@ import ts from 'typescript';
 
 const source = await readFile(new URL('../src/feed-model.ts', import.meta.url), 'utf8');
 const { outputText } = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } });
-const { nationalDex, adjacentIndex, officialEdition, recentPrice, rankedCards, selectedCard } = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
+const { nationalDex, adjacentIndex, FeedPosition, officialEdition, recentPrice, rankedCards, rememberFailedImage, retryFailedImages, selectedCard } = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 const species = JSON.parse(await readFile(new URL('../content/species.json', import.meta.url), 'utf8'));
 const now = Date.parse('2026-09-30T00:00:00Z');
 const price = (amount, currency = 'USD', updatedAt = '2026-09-29T00:00:00Z') => ({ amount, currency, updatedAt });
@@ -30,6 +30,63 @@ test('species movement never wraps #1 to #1025 and visits every entry in both di
     index = adjacentIndex(index, -1, 1025);
     assert.equal(index, expected);
   }
+});
+
+function fakeViewport() {
+  return {
+    clientHeight: 800, scrollTop: 0, style: { overflowY: 'auto' }, requests: [],
+    scrollTo(options) { this.requests.push(options); this.scrollTop = options.top; },
+  };
+}
+
+test('rapid explicit species commands advance synchronously without waiting for scroll events', () => {
+  const feed = fakeViewport();
+  const position = new FeedPosition();
+  for (let i = 0; i < 8; i++) position.jump(feed, position.index + 1, 1025);
+  assert.equal(position.index, 8);
+  assert.equal(feed.scrollTop, 8 * feed.clientHeight);
+  for (let i = 0; i < 12; i++) position.jump(feed, position.index - 1, 1025);
+  assert.equal(position.index, 0);
+  position.jump(feed, 9999, 1025);
+  assert.equal(position.index, 1024);
+  assert.ok(feed.requests.every(request => request.behavior === 'instant'));
+});
+
+test('drawer inspection settles momentum and rejects late scroll or navigation changes', () => {
+  const feed = fakeViewport();
+  const position = new FeedPosition();
+  position.jump(feed, 24, 1025);
+  feed.scrollTop += 450;
+  position.lock(feed, 24);
+  assert.equal(position.locked, true);
+  assert.equal(feed.style.overflowY, 'hidden');
+  assert.equal(feed.scrollTop, 24 * 800);
+  // A late native scroll event must not replace the inspected species.
+  feed.scrollTop = 40 * 800;
+  assert.equal(position.sync(feed, 1025), 24);
+  assert.equal(position.jump(feed, 80, 1025), 24);
+  // Resizing for a mobile keyboard keeps the same species, not the old pixels.
+  feed.clientHeight = 500;
+  position.settle(feed);
+  assert.equal(feed.scrollTop, 24 * 500);
+  assert.equal(position.unlock(feed), 24);
+  assert.equal(feed.style.overflowY, 'auto');
+  assert.equal(position.locked, false);
+  assert.equal(position.unlock(feed), null);
+  feed.scrollTop = 25 * 500;
+  assert.equal(position.sync(feed, 1025), 25);
+});
+
+test('failed artwork retries only on explicit retry or connectivity recovery', () => {
+  const failed = rememberFailedImage([], 'failed-a');
+  assert.equal(rememberFailedImage(failed, 'failed-a'), failed);
+  const twoFailures = rememberFailedImage(failed, 'failed-b');
+  assert.deepEqual(retryFailedImages(twoFailures, 'failed-a'), ['failed-b']);
+  // If the deliberate retry fails, it returns to the blocked state rather than looping.
+  const failedAgain = rememberFailedImage(retryFailedImages(twoFailures, 'failed-a'), 'failed-a');
+  assert.deepEqual(failedAgain, ['failed-b', 'failed-a']);
+  assert.equal(rememberFailedImage(failedAgain, 'failed-a'), failedAgain);
+  assert.deepEqual(retryFailedImages(failedAgain), []);
 });
 
 test('all species have an API-independent official slide with explicitly separate provenance', () => {
@@ -81,6 +138,9 @@ test('the feed uses native vertical scrolling while modal drawers and pinch zoom
   assert.match(app, /dialog\.showModal\(\)/);
   assert.match(app, /onCancel=\{closeDrawer\}/);
   assert.match(app, /if \(event\.ctrlKey \|\| drawerRef\.current\) return/);
+  assert.match(app, /if \(drawerRef\.current \|\| feedPosition\.current\.locked\) return/);
+  assert.match(app, /feedPosition\.current\.lock\(feedRef\.current, activeIndex\)/);
+  assert.match(app, /window\.addEventListener\('online', recoverImages\)/);
   assert.doesNotMatch(app, /setPointerCapture|navigation\?\.axis === 'y'/);
   assert.match(css, /scroll-snap-type: y mandatory/);
   assert.match(css, /scroll-snap-stop: always/);

@@ -18,6 +18,60 @@ export function nationalDex<T extends { id: number }>(species: T[]): T[] {
 export function adjacentIndex(index: number, direction: number, length: number) {
   return Math.max(0, Math.min(Math.max(0, length - 1), index + direction));
 }
+
+type FeedViewport = Pick<HTMLElement, 'clientHeight' | 'scrollTop' | 'scrollTo'> & { style: { overflowY: string } };
+
+// Native swipes update position; explicit navigation is immediate and modal
+// inspection freezes one position until the drawer is dismissed.
+export class FeedPosition {
+  index = 0;
+  locked = false;
+  private overflowY = '';
+
+  sync(viewport: FeedViewport, length: number) {
+    if (!this.locked && viewport.clientHeight > 0) this.index = adjacentIndex(Math.round(viewport.scrollTop / viewport.clientHeight), 0, length);
+    return this.index;
+  }
+
+  settle(viewport: FeedViewport) {
+    viewport.scrollTo({ top: this.index * viewport.clientHeight, behavior: 'instant' });
+  }
+
+  jump(viewport: FeedViewport, index: number, length: number) {
+    if (!this.locked) {
+      this.index = adjacentIndex(index, 0, length);
+      this.settle(viewport);
+    }
+    return this.index;
+  }
+
+  lock(viewport: FeedViewport, index: number) {
+    if (this.locked) return;
+    this.index = index;
+    this.overflowY = viewport.style.overflowY;
+    this.locked = true;
+    viewport.style.overflowY = 'hidden';
+    this.settle(viewport);
+  }
+
+  unlock(viewport: FeedViewport): number | null {
+    if (!this.locked) return null;
+    viewport.style.overflowY = this.overflowY;
+    this.settle(viewport);
+    this.locked = false;
+    return this.index;
+  }
+}
+
+export function rememberFailedImage(images: string[], image: string) {
+  return images.includes(image) ? images : [...images, image];
+}
+
+// Only a deliberate retry or a new online event clears a failed URL. Repeated
+// image errors cannot start a render/request loop.
+export function retryFailedImages(images: string[], image?: string) {
+  return image === undefined ? [] : images.filter(failed => failed !== image);
+}
 export function recentPrice(card: Pick<CardEdition, 'prices'>, currency: string, now = Date.now()) {
   return card.prices?.filter(price => {
     const updated = Date.parse(price.updatedAt);
