@@ -86,3 +86,11 @@ Dragapult has four editions. Several other species have one checked edition;
 their shorter carousel count is visible. Butterfree and Jigglypuff use scans
 with smaller illustration windows. Two illustrator paths cross Pokémon:
 Dragapult to Jerky to Pidgey, and Dragapult to 5ban Graphics to Gengar.
+
+## 2026-09-30 expanded discovery preview
+
+The requested broader preview adds a separate provenance tier alongside the original 23 reviewed editions. The reviewed manifest and its admission checks remain unchanged. Live TCGdex catalog editions carry exact dex IDs and literal provider credits, but are explicitly labeled as metadata not independently reviewed. They must never inherit a printed-scan or publisher-review claim. Official species artwork is a distinct slide with no invented individual artist.
+
+The national dex snapshot covers 1,025 default species. Discovery paginates English TCGdex editions in bounded batches, preserves identity/credit atomically, and retains the selected card ID while new results arrive. The highest fresh comparable market value in the loaded set leads: USD TCGplayer market prices and EUR Cardmarket trend prices are separate choices. No currency conversion, graded auction values, invented missing prices, or globally complete maximum is claimed. Coverage remains partial until every batch finishes; missing sources remain visible and retryable.
+
+Favorites in this preview are device-local. The Vercel API is stateless and rejects shared favorite writes. DeviantArt and Pixiv are currently outbound discovery links, not imported galleries. They remain unfinished source integrations rather than fake local coverage.

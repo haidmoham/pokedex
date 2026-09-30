@@ -22,7 +22,7 @@ test("catalog search and saved favorites work across requests", async () => {
     const search = await fetch(`${base}/api/pokemon?q=char&type=fire`);
     assert.deepEqual(
       (await search.json()).map(({ id }) => id),
-      [4, 5, 6],
+      [4, 5, 6, 390, 935],
     );
 
     const add = await fetch(`${base}/api/favorites/4`, { method: "POST" });
@@ -30,7 +30,7 @@ test("catalog search and saved favorites work across requests", async () => {
     await fetch(`${base}/api/favorites/4`, { method: "POST" });
     assert.deepEqual(await (await fetch(`${base}/api/favorites`)).json(), [4]);
 
-    const invalid = await fetch(`${base}/api/favorites/999`, {
+    const invalid = await fetch(`${base}/api/favorites/9999`, {
       method: "POST",
     });
     assert.equal(invalid.status, 404);

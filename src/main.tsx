@@ -10,7 +10,10 @@ type Pokemon = {
   height: number;
   weight: number;
 };
+type Price = { amount:number; currency:string; variant:string; updatedAt:string; provider:string; metric:string; url:string };
 type CardEdition = {
+  prices?: Price[];
+  sourceType?: string;
   pokemonId: number;
   pokemonName: string;
   cardId: string;
@@ -23,7 +26,7 @@ type CardEdition = {
   image: string;
   imageProvider: string;
   imageSha256: string;
-  imageDimensions: { width: number; height: number };
+  imageDimensions?: { width: number; height: number };
   tcgdexUrl: string;
   publisherUrl?: string;
   publisherCheck: string;
@@ -41,17 +44,22 @@ function App() {
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [allCards, setAllCards] = useState<CardEdition[]>([]);
   const [favorites, setFavorites] = useState<number[]>([]);
-  const [page, setPage] = useState<Page>("index");
+  const [page, setPage] = useState<Page>("museum");
   const [activePokemonId, setActivePokemonId] = useState(887);
   const [activeArtist, setActiveArtist] = useState("");
   const [query, setQuery] = useState("");
+  const [visibleLimit, setVisibleLimit] = useState(60);
   const [type, setType] = useState("all");
   const [favoritesOnly, setFavoritesOnly] = useState(false);
-  const [cardPositions, setCardPositions] = useState<Record<string, number>>({});
+  const [selectedIds, setSelectedIds] = useState<Record<string, string>>({});
+  const [currency, setCurrency] = useState("USD");
+  const [discovery, setDiscovery] = useState<Record<number,{scanned:number;total:number;done:boolean;failed:number;error?:string}>>({});
+  const completedDiscovery = useRef(new Set<number>());
+  const [discoveryRetry,setDiscoveryRetry]=useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [brokenImages, setBrokenImages] = useState<string[]>([]);
-  const [savingId, setSavingId] = useState<number | null>(null);
+  const savingId: number | null = null;
   const pointerGesture = useRef(new PointerGesture());
   const wheelGesture = useRef(new WheelGesture());
   const stageRef = useRef<HTMLDivElement>(null);
@@ -63,9 +71,9 @@ function App() {
         if (!response.ok) throw new Error("catalog unavailable");
         return (await response.json()) as Pokemon[];
       }),
-      fetch("/api/favorites").then(async (response) => {
-        if (!response.ok) throw new Error("favorites unavailable");
-        return (await response.json()) as number[];
+      Promise.resolve().then(() => {
+        try { const saved=JSON.parse(localStorage.getItem('pokedex.favorites.v1') || '[]'); return Array.isArray(saved) ? saved.filter((id:unknown)=>Number.isInteger(id)) as number[] : []; }
+        catch { return [] as number[]; }
       }),
       fetch("/api/cards").then(async (response) => {
         if (!response.ok) throw new Error("card manifest unavailable");
@@ -75,7 +83,7 @@ function App() {
       .then(([items, saved, cards]) => {
         if (!current) return;
         setPokemon(items);
-        setFavorites(saved);
+        setFavorites(saved.filter(id=>items.some(item=>item.id===id)));
         setAllCards(cards);
         setLoading(false);
       })
@@ -112,10 +120,12 @@ function App() {
   const activePokemon = pokemon.find((item) => item.id === activePokemonId);
   const cardKey =
     page === "artist" ? `artist:${activeArtist}` : `pokemon:${activePokemonId}`;
+  const bestPrice = (card: CardEdition) => card.prices?.filter(p=>p.currency===currency).sort((a,b)=>b.amount-a.amount)[0];
   const cards = allCards.filter((card) =>
     page === "artist" ? card.artist === activeArtist : card.pokemonId === activePokemonId,
-  );
-  const slideIndex = wrapIndex(cardPositions[cardKey] ?? 0, 0, cards.length);
+  ).sort((a,b)=>(bestPrice(b)?.amount ?? -1)-(bestPrice(a)?.amount ?? -1) || a.cardId.localeCompare(b.cardId));
+  if(page === 'museum' && activePokemon) cards.push({pokemonId:activePokemon.id,pokemonName:activePokemon.name,cardId:`official-${activePokemon.id}`,title:activePokemon.name,set:'official species artwork',number:number(activePokemon.id),language:'',rarity:'',artist:'individual artist not specified',image:artwork(activePokemon.id),imageProvider:'PokéAPI sprites',imageSha256:'',imageDimensions:{width:475,height:475},tcgdexUrl:'https://github.com/PokeAPI/sprites',publisherCheck:'',artistEvidenceMethod:'official species artwork; individual artist not specified',artistEvidenceUrl:'https://github.com/PokeAPI/sprites',artistObservedText:'',sourceType:'official'});
+  const slideIndex = Math.max(0,cards.findIndex(card=>card.cardId===selectedIds[cardKey]));
   const feed = useMemo(() => {
     const featured = [887, 94];
     return [...pokemon].sort((a, b) => {
@@ -126,7 +136,7 @@ function App() {
   const speciesIndex = feed.findIndex((item) => item.id === activePokemonId);
 
   function selectCard(index: number) {
-    setCardPositions((positions) => ({ ...positions, [cardKey]: index }));
+    if(cards[index]) setSelectedIds(ids=>({...ids,[cardKey]:cards[index].cardId}));
   }
 
   function moveSpecies(direction: number) {
@@ -160,10 +170,10 @@ function App() {
 
   function move(direction: number) {
     if (cards.length < 2) return;
-    setCardPositions((positions) => ({
-      ...positions,
-      [cardKey]: wrapIndex(positions[cardKey] ?? 0, direction, cards.length),
-    }));
+    setSelectedIds(ids=>{
+      const index=Math.max(0,cards.findIndex(c=>c.cardId===ids[cardKey]));
+      return {...ids,[cardKey]:cards[wrapIndex(index,direction,cards.length)].cardId};
+    });
   }
 
   useEffect(() => {
@@ -206,26 +216,43 @@ function App() {
   });
 
   async function toggleFavorite(item: Pokemon) {
-    if (savingId !== null) return;
-    const isFavorite = favorites.includes(item.id);
-    setSavingId(item.id);
-    setError("");
-    try {
-      const response = await fetch(`/api/favorites/${item.id}`, {
-        method: isFavorite ? "DELETE" : "POST",
-      });
-      if (!response.ok) throw new Error("save failed");
-      setFavorites((current) =>
-        isFavorite
-          ? current.filter((id) => id !== item.id)
-          : [...current, item.id],
-      );
-    } catch {
-      setError("could not save that favorite. try again.");
-    } finally {
-      setSavingId(null);
-    }
+    const next = favorites.includes(item.id) ? favorites.filter(id=>id!==item.id) : [...favorites,item.id];
+    try { localStorage.setItem('pokedex.favorites.v1',JSON.stringify(next)); setFavorites(next); }
+    catch { setError('this browser could not save favorites. enable local storage or keep browsing without saving.'); }
   }
+
+  useEffect(() => {
+    if (loading || page !== 'museum' || completedDiscovery.current.has(activePokemonId)) return;
+    const id=activePokemonId; const controller=new AbortController(); let live=true;
+    async function discover() {
+      let offset:number|null=0, scanned=0, failed=0;
+      while(offset !== null && live) {
+        try {
+          const response: Response=await fetch(`/api/discovery/${id}?offset=${offset}`,{signal:controller.signal});
+          if(!response.ok) throw new Error('unavailable');
+          const data: {cards:CardEdition[];scanned:number;failed:string[];total:number;nextOffset:number|null}=await response.json();
+          if(!live) return;
+          scanned+=data.scanned; failed+=data.failed.length;
+          setAllCards(previous=>{
+            const byId=new Map(previous.map(c=>[c.cardId,c]));
+            for(const card of data.cards as CardEdition[]) {
+              const checked=byId.get(card.cardId);
+              byId.set(card.cardId,checked && !checked.sourceType ? {...checked,prices:card.prices} : card);
+            }
+            return [...byId.values()];
+          });
+          offset=data.nextOffset;
+          setDiscovery(old=>({...old,[id]:{scanned,total:data.total,failed,done:offset===null}}));
+        } catch {
+          if(live)setDiscovery(old=>({...old,[id]:{scanned,total:old[id]?.total??0,failed,done:false,error:'card source unavailable; showing the saved collection'}}));
+          return;
+        }
+      }
+      if(live)completedDiscovery.current.add(id);
+    }
+    discover();
+    return ()=>{live=false;controller.abort();};
+  },[activePokemonId,page,loading,discoveryRetry]);
 
   function openPokemon(item: Pokemon) {
     setActivePokemonId(item.id);
@@ -293,7 +320,7 @@ function App() {
           <span>pocket field guide</span>
         </button>
         <div className="topbar-right">
-          <span className="edition">collection no. 001—019</span>
+          <span className="edition">{pokemon.length || "…"} species / artist discovery</span>
           {page !== "index" && (
             <button className="text-button" onClick={() => setPage("index")}>
               ← pokédex
@@ -325,7 +352,7 @@ function App() {
               </p>
               <div className="hero-meta">
                 <span>
-                  {collectionCount || "—"} species / {allCards.length} checked
+                  {collectionCount || "—"} species / {allCards.length} sourced
                   card editions
                 </span>
                 <span className="hero-rule" />
@@ -405,7 +432,7 @@ function App() {
               </div>
             ) : visible.length ? (
               <div className="species-grid">
-                {visible.map((item, index) => (
+                {visible.slice(0,visibleLimit).map((item, index) => (
                   <article
                     className={`species-card type-${item.types[0]}`}
                     key={item.id}
@@ -418,7 +445,7 @@ function App() {
                     >
                       <span className="species-number">{number(item.id)}</span>
                       <span className="species-halo" aria-hidden="true" />
-                      <img src={artwork(item.id)} alt="" loading="lazy" />
+                      <img src={allCards.filter(c=>c.pokemonId===item.id).sort((a,b)=>(bestPrice(b)?.amount??-1)-(bestPrice(a)?.amount??-1))[0]?.image ?? artwork(item.id)} alt="" loading="lazy" />
                       <span className="species-name">{item.name}</span>
                       <span className="species-type">
                         {item.types.join(" / ")}
@@ -446,6 +473,7 @@ function App() {
                 <p>change the search or filter.</p>
               </div>
             )}
+            {visible.length > visibleLimit && <button className="load-more" onClick={()=>setVisibleLimit(limit=>limit+60)}>show 60 more species ({visibleLimit} / {visible.length})</button>}
           </section>
           <footer className="footer">
             <span>
@@ -493,7 +521,7 @@ function App() {
               </h1>
               <p className="museum-subtitle">
                 {page === "artist"
-                  ? `checked artworks across ${new Set(cards.map((card) => card.pokemonId)).size || "…"} Pokémon`
+                  ? `loaded artworks across ${new Set(cards.map((card) => card.pokemonId)).size || "…"} Pokémon`
                   : `${activePokemon ? number(activePokemon.id) : ""} · ${activePokemon?.types.join(" / ") ?? ""} · follow the illustrator`}
               </p>
             </div>
@@ -520,12 +548,19 @@ function App() {
                 </button>
               )}
               <span className="source-count">
-                {cards.length || (loading ? "…" : "0")} checked{" "}
+                {cards.length || (loading ? "…" : "0")} sourced{" "}
                 {cards.length === 1 ? "edition" : "editions"}
               </span>
             </div>
           </div>
 
+          {page === 'museum' && activePokemon && <section className="discovery-panel" aria-label="price and artist discovery">
+            <div className="price-controls"><label>price source <select value={currency} onChange={event=>{setCurrency(event.target.value);setSelectedIds(ids=>{const next={...ids};delete next[cardKey];return next;});}}><option value="USD">TCGplayer · USD</option><option value="EUR">Cardmarket · EUR</option></select></label>
+            <span role="status">{discovery[activePokemonId]?.error ?? (discovery[activePokemonId]?.done ? `${discovery[activePokemonId].scanned} source editions checked${discovery[activePokemonId].failed ? ` · ${discovery[activePokemonId].failed} unavailable` : ''}` : `finding card editions & prices… ${discovery[activePokemonId]?.scanned ?? 0} / ${discovery[activePokemonId]?.total || '…'}`)}</span></div>
+            {(discovery[activePokemonId]?.error || discovery[activePokemonId]?.failed > 0) && <button className="text-button" onClick={()=>{completedDiscovery.current.delete(activePokemonId);setDiscoveryRetry(n=>n+1);}}>retry missing card sources ↻</button>}
+            <p>{selectedCard && bestPrice(selectedCard) ? `${new Intl.NumberFormat('en-US',{style:'currency',currency}).format(bestPrice(selectedCard)!.amount)} · ${bestPrice(selectedCard)!.variant} · ${bestPrice(selectedCard)!.metric} · updated ${new Date(bestPrice(selectedCard)!.updatedAt).toLocaleDateString()}` : 'no recent comparable price for this edition'}<br/><small>highest available {currency} value leads the loaded collection · english ungraded editions only · partial until discovery finishes</small>{selectedCard && bestPrice(selectedCard) && <> · <a href={bestPrice(selectedCard)!.url} target="_blank" rel="noreferrer">price source ↗</a></>}</p>
+            <details><summary>discover more art of {activePokemon.name}</summary><p>these open the original communities. fan art is not scraped or rehosted here; artist attribution and access controls remain at the source.</p><div className="discovery-links"><a href={`https://www.deviantart.com/search?q=${encodeURIComponent(activePokemon.name+' pokemon')}`} target="_blank" rel="noreferrer">DeviantArt ↗</a><a href={`https://www.pixiv.net/en/tags/${encodeURIComponent(activePokemon.name)}/artworks`} target="_blank" rel="noreferrer">Pixiv ↗</a><a href={artwork(activePokemon.id)} target="_blank" rel="noreferrer">official species artwork ↗</a></div></details>
+          </section>}
               {page === "museum" && feed.length > 1 && (
                 <nav className="species-feed-nav" aria-label="species feed">
                   <button onClick={() => moveSpecies(-1)} aria-label="previous species">↑ previous species</button>
@@ -545,13 +580,15 @@ function App() {
               <h2>
                 {error
                   ? "the archive is asleep"
-                  : "no checked card editions yet"}
+                  : "no card editions loaded yet"}
               </h2>
               <p>
                 {error
                   ? "the previous species and artist credit are cleared. try again from the pokédex."
-                  : "this species has no reviewed card credits in the local archive yet."}
+                  : "live card discovery is loading or has no usable results. official species artwork is available below."}
               </p>
+              {activePokemon && <img className="official-fallback" src={artwork(activePokemon.id)} alt={`${activePokemon.name} official species artwork via PokéAPI`} />}
+              <p>official species artwork via PokéAPI · individual artist not specified</p>
               <button className="text-button" onClick={() => setPage("index")}>
                 return to the pokédex ↗
               </button>
@@ -648,7 +685,7 @@ function App() {
                     <span>·</span> use ← → <span>·</span> looping archive
                   </>
                 ) : (
-                  "one checked card edition · more appear here when their credits clear review"
+                  "one sourced card edition · source credits remain attached"
                 )}
               </p>
             </>
@@ -744,7 +781,7 @@ function CardFrame({
           <img
             className="card-art"
             src={card.image}
-            alt={`${card.title} Pokémon TCG card artwork`}
+            alt={card.sourceType === "official" ? `${card.title} official species artwork` : `${card.title} Pokémon TCG card artwork`}
             onError={onImageError}
             draggable={false}
           />
@@ -752,11 +789,12 @@ function CardFrame({
       </div>
       <div className="credit-plaque">
         <div className="credit-copy">
-          <span className="credit-label">illustrated by</span>
+          <span className="credit-label">{card.sourceType === "official" ? "official species artwork" : "illustrated by"}</span>
           <button
             className="artist-link"
+            disabled={card.sourceType === "official"}
             onClick={onArtist}
-            aria-label={`explore other verified artworks by ${card.artist}`}
+            aria-label={`explore loaded artworks by ${card.artist}`}
           >
             {card.artist}
             <span aria-hidden="true"> ↗</span>
@@ -771,8 +809,8 @@ function CardFrame({
       </div>
       <div className="source-line">
         <span>
-          image: {card.imageProvider} · credit checked on{" "}
-          {card.artistEvidenceMethod.includes("publisher")
+          image: {card.imageProvider} · credit source:{" "}
+          {card.sourceType === 'official' ? 'PokéAPI sprites; individual artist unspecified' : card.sourceType === 'catalog' ? 'TCGdex metadata (not independently reviewed)' : card.artistEvidenceMethod.includes("publisher")
             ? "publisher card page"
             : "printed scan"}
         </span>
@@ -783,7 +821,7 @@ function CardFrame({
             </a>
           )}
           <a href={card.tcgdexUrl} target="_blank" rel="noreferrer">
-            TCGdex ↗
+            {card.sourceType === "official" ? "PokéAPI source ↗" : "TCGdex ↗"}
           </a>
           <a href={card.image} target="_blank" rel="noreferrer">
             open image ↗

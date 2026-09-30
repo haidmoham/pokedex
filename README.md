@@ -61,3 +61,11 @@ For a browser check, run `npm run dev` and open the local URL:
 7. Check widths 320, 390 and 1280, increased text size, reduced motion, touch pinch zoom and a real mobile device. Swipe only on the card surface; surrounding text must still scroll.
 
 Browser and real-device QA are required before calling this slice production-ready.
+
+## expanded Vercel preview
+
+This branch includes the 1,025-species PokéAPI snapshot, read-only paginated TCGdex discovery, fresh comparable-price ordering, official-art slides, and private browser-local favorites. `/api/discovery/:id?offset=0` returns twelve source candidates per page, with at most three upstream requests concurrently and explicit coverage/failure counts. No API key is needed. The original 23 independently reviewed card records remain a separate provenance tier; live provider metadata is labeled accordingly.
+
+`vercel.json` builds the Vite client and routes read-only API requests through `api/index.js`. The filesystem-backed Railway favorites route is not used by the preview. Public pricing source: https://tcgdex.dev/markets-prices . Values older than seven days are excluded from ranking; ranking never mixes USD and EUR. English ungraded cards are the scope, not every historical auction or graded specimen.
+
+Pixiv/DeviantArt image ingestion is not complete; the visible links lead to those communities. Run `npm test` and `npm run build` before deployment. No claims of physical mobile verification are made until the user tests on their device.
