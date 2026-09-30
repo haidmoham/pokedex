@@ -26,10 +26,10 @@ export function createVisit(species: Pokemon, available: CardEdition[], currency
   return { speciesId: species.id, ids, selectedId: targetId ?? ids[0], context };
 }
 
-export function appendVisit(visit: Visit, available: CardEdition[]): Visit {
+export function appendVisit(visit: Visit, available: CardEdition[], currency = 'USD'): Visit {
   const seen = new Set(visit.ids);
-  const added = available.filter(card => [card.pokemonId, ...(card.pokemonIds ?? [])].includes(visit.speciesId) && !seen.has(card.cardId))
-    .map(card => card.cardId).sort();
+  const added = rankedCards(available.filter(card => [card.pokemonId, ...(card.pokemonIds ?? [])].includes(visit.speciesId) && !seen.has(card.cardId)), currency)
+    .map(card => card.cardId);
   return added.length ? { ...visit, ids: [...visit.ids, ...new Set(added)] } : visit;
 }
 

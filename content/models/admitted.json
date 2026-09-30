@@ -31,5 +31,18 @@
     "credit": "Squirmy Worm",
     "license": "CC-BY-4.0 (embedded uploader claim)",
     "source": "https://sketchfab.com/3d-models/pecharunt-8107b1f76c7f4ae89dbd24a8433944e2"
+  },
+  {
+    "id": 150,
+    "variant": null,
+    "bytes": 141384,
+    "blobSha": "",
+    "sha256": "07904dd6bb221b6096c269ee57dfca3f3ad4a32d64b3a69c70bb09b4b2875075",
+    "url": "/models/mewtwo-idle-mobile.glb",
+    "admitted": true,
+    "credit": "Mariokart07",
+    "license": "CC-BY-4.0 (embedded uploader claim)",
+    "source": "https://sketchfab.com/3d-models/mewtwo-official-d8aebb93c39243b3a62022591202a97a",
+    "animation": "pm0150_00_00_00000_defaultwait01_loop"
   }
 ]

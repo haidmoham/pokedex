@@ -52,3 +52,9 @@ https://www.models-resource.com/nintendo_switch/pokemonscarletviolet/model/65546
 ## Remaining checks
 
 Per-model rights and attribution, material correctness, animation suitability, actual iOS/Android render/gesture behavior, failure recovery, and controlled deployment hosting remain implementation/release checks. No application code was edited by this research.
+
+## Admitted release model
+
+Mewtwo is the sole admitted 3D entry. Source 7,600,268 bytes → 141,384 bytes, retaining geometry with one default-wait animation, gltfpack compression/quantization at 24 Hz. SHA-256 `07904dd6bb221b6096c269ee57dfca3f3ad4a32d64b3a69c70bb09b4b2875075`. The asset retains embedded Mariokart07 attribution, source title, source URL and CC-BY-4.0 uploader claim. The software license does not clear underlying Pokémon IP. See [uploader source](https://sketchfab.com/3d-models/mewtwo-official-d8aebb93c39243b3a62022591202a97a) and [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Reviewed three 360×420 comparison frames, then actual Chrome rendering, explicit rotation/idle playback, exact Inspect exit and official-art transition at 320 CSS pixels. These are representative browser checks, not sustained low-end phone FPS/battery measurements. Admission remains bounded to this model. Gholdengo remains rejected for source-level visual defects.

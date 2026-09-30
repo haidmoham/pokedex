@@ -47,3 +47,11 @@ test('incoming slides prepare their card identity before activation and retain i
   assert.equal(prepareVisits(prepared, [incoming], enriched, 'USD'), prepared);
   assert.equal(appendVisit(prepared[2], enriched).selectedId, 'official-2');
 });
+
+test('the first discovered card batch follows official art with the freshest comparable price lead', () => {
+  const initial = createVisit(species, [], 'USD');
+  const loaded = appendVisit(initial, [priced('cheap', 10), priced('high', 100), priced('stale', 900, '2020-01-01T00:00:00Z')]);
+  assert.deepEqual(loaded.ids, ['official-1', 'high', 'cheap', 'stale']);
+  assert.equal(loaded.selectedId, 'official-1');
+  assert.equal(stepVisit(loaded, 1).selectedId, 'high');
+});

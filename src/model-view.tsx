@@ -11,6 +11,7 @@ export function ModelView({ asset, name, onFallback, onInspect }: { asset: Model
   const [loaded, setLoaded] = useState(false);
   const [inspecting, setInspecting] = useState(false);
   const [angle, setAngle] = useState(0);
+  const [playing, setPlaying] = useState(false);
   const fallback = useRef(onFallback);
   fallback.current = onFallback;
   const wasInspecting = useRef(false);
@@ -33,6 +34,7 @@ export function ModelView({ asset, name, onFallback, onInspect }: { asset: Model
     Promise.all([import('@google/model-viewer'), fetchModel(asset, controller.signal).then(async blob => { await validateModelTextures(blob, controller.signal); return blob; })]).then(([runtime, blob]) => {
       if (controller.signal.aborted || !host.current) return;
       runtime.ModelViewerElement.modelCacheSize = 0;
+      runtime.ModelViewerElement.meshoptDecoderLocation = '/model-runtime/meshopt-decoder.js';
       source = URL.createObjectURL(blob);
       element = document.createElement('model-viewer');
       viewer.current = element;
@@ -42,6 +44,7 @@ export function ModelView({ asset, name, onFallback, onInspect }: { asset: Model
       element.setAttribute('touch-action', 'pan-y');
       element.setAttribute('camera-orbit', '0deg 75deg auto');
       element.setAttribute('shadow-intensity', '0');
+      element.animationCrossfadeDuration = 0;
       element.setAttribute('loading', 'eager');
       element.style.pointerEvents = 'none';
       element.tabIndex = -1;
@@ -49,6 +52,7 @@ export function ModelView({ asset, name, onFallback, onInspect }: { asset: Model
       element.addEventListener('load', () => {
         if (controller.signal.aborted) return;
         window.clearTimeout(timeout);
+        if (asset.animation) { element!.animationName = asset.animation; element!.play(); element!.currentTime = 0; element!.pause(); }
         setLoaded(true);
         // Remain still in browsing. Inspect does not auto-rotate or auto-play.
       }, { once: true });
@@ -70,8 +74,9 @@ export function ModelView({ asset, name, onFallback, onInspect }: { asset: Model
     element.style.pointerEvents = inspecting ? 'auto' : 'none';
     element.setAttribute('camera-orbit', `${angle}deg 75deg auto`);
     element.tabIndex = inspecting ? 0 : -1;
-  }, [loaded, inspecting, angle]);
-  const exit = () => setInspecting(false);
+  if (playing && inspecting && !document.hidden && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) element.play(); else element.pause();
+  }, [loaded, inspecting, angle, playing]);
+  const exit = () => { setPlaying(false); setInspecting(false); };
   return <div className={`model-stage ${inspecting ? 'is-inspecting' : ''}`} data-inspecting={inspecting || undefined}
     onPointerDown={event => { if (inspecting) event.stopPropagation(); }} onPointerUp={event => { if (inspecting) event.stopPropagation(); }}
     onWheel={event => { if (inspecting) event.stopPropagation(); }} onKeyDown={event => { if (!inspecting) return; event.stopPropagation(); if (event.key === 'Escape') exit(); }}>
@@ -81,6 +86,7 @@ export function ModelView({ asset, name, onFallback, onInspect }: { asset: Model
       {inspecting && <button onClick={() => setAngle(value => value - 30)} aria-label="Rotate model left">↶</button>}
       {loaded ? <button ref={inspectButton} onClick={() => inspecting ? exit() : setInspecting(true)}>{inspecting ? 'Done inspecting' : 'Inspect 3D'}</button> : <span role="status">Preparing 3D…</span>}
       {inspecting && <button onClick={() => setAngle(value => value + 30)} aria-label="Rotate model right">↷</button>}
+      {inspecting && asset.animation && <button onClick={() => setPlaying(value => !value)}>{playing ? 'Pause motion' : 'Play idle'}</button>}
       <button onClick={() => fallback.current()}>Use official art</button>
     </div>
   </div>;

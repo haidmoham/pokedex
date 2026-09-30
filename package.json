@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "start": "node server/index.js",
     "test": "node --test server/index.test.js tests/*.test.js",
-    "audit:cards": "node scripts/audit-cards.js"
+    "audit:cards": "node scripts/audit-cards.js",
+    "prebuild": "node scripts/prepare-model-runtime.js"
   },
   "dependencies": {
     "@google/model-viewer": "^4.3.1",

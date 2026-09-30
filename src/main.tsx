@@ -215,13 +215,13 @@ function App() {
 
   useEffect(() => {
     setVisits(old => {
-      const next = Object.fromEntries(Object.entries(old).map(([id, visit]) => [id, appendVisit(visit, allCards)]));
+      const next = Object.fromEntries(Object.entries(old).map(([id, visit]) => [id, appendVisit(visit, allCards, currency)]));
       return Object.keys(old).some(id => next[id] !== old[Number(id)]) ? next : old;
     });
     const stack = routesRef.current;
     const branchIndex = stack.findIndex(route => route.kind === 'branch');
     if (branchIndex >= 0 && stack[branchIndex].visit) {
-      const updated = appendVisit(stack[branchIndex].visit!, allCards);
+      const updated = appendVisit(stack[branchIndex].visit!, allCards, currency);
       if (updated !== stack[branchIndex].visit) {
         const route = stack[branchIndex];
         replaceRoute(branchIndex, { ...route, visit: updated, trail: route.trail?.map((step, index) => index === route.trailIndex ? { ...step, visit: updated } : step) });
@@ -562,7 +562,7 @@ function App() {
       </div>
     </div>
     <div className="dex-progress" aria-hidden="true"><span style={{ width: `${((activeIndex + 1) / pokemon.length) * 100}%` }} /></div>
-    <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} {trail ? trail[trailIndex]?.context : ''}</span>
+    <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'model' ? `Community 3D model credited to ${card.artist}.` : card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} {trail ? trail[trailIndex]?.context : ''}</span>
     {error && <button className="toast" role="alert" onClick={() => setError('')}>{error} ×</button>}
 
     <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={event => { event.preventDefault(); closeDrawer(); }} onClose={() => { pendingFocus.current?.focus({ preventScroll: true }); pendingFocus.current = null; }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
@@ -580,7 +580,7 @@ function App() {
           {drawer === 'details' && <>
             <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
             <button className={`save-pokemon ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)}><Icon name="heart" /> {favorites.includes(activePokemon.id) ? 'Saved Pokémon' : 'Save Pokémon'}</button>
-            <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length} loaded</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => changeVisit(visit => selectVisit(visit, edition.cardId))} aria-label={`${edition.title}, ${edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
+            <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length} loaded</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => changeVisit(visit => selectVisit(visit, edition.cardId))} aria-label={`${edition.title}, ${edition.sourceType === 'model' ? 'interactive 3D model' : edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
             <section className="detail-section"><div className="detail-heading"><h3>Market price</h3><select aria-label="Price currency and provider" value={currency} onChange={event => setCurrency(event.target.value)}><option value="USD">USD · TCGplayer</option><option value="EUR">EUR · Cardmarket</option></select></div>
               <p className="price-value">{formatPrice(card, currency) ?? 'No recent price'}</p>
               {price && <p className="detail-copy">{price.variant} · {price.metric} · updated {new Date(price.updatedAt).toLocaleDateString()}<br /><a href={price.url} target="_blank" rel="noreferrer">{price.provider} ↗</a></p>}
@@ -590,7 +590,7 @@ function App() {
               {(status?.error || (status?.failed ?? 0) > 0) && <button className="inline-link" onClick={() => { completedDiscovery.current.delete(activePokemon.id); setDiscoveryRetry(count => count + 1); }}>Retry card sources ↻</button>}
               {manifestFailed && <p className="quiet-note">Saved card collection unavailable. Live discovery and official species artwork remain available.</p>}
             </section>
-            <section className="detail-section"><h3>Credit & source</h3><p className="detail-copy">{card.sourceType === 'model' ? `Community 3D asset. ${card.artist}. ${card.artistEvidenceMethod}. Underlying Pokémon IP belongs to its owners; source licensing is not blanket rights clearance.` : card.sourceType === 'official' ? 'Official species artwork via PokéAPI sprites. No individual artist is specified by this source.' : card.sourceType === 'catalog' ? 'Artist credit from TCGdex metadata. This edition has not been independently reviewed.' : `Reviewed edition. Artist evidence: ${card.artistEvidenceMethod}.`}</p><div className="source-links"><a href={card.image} target="_blank" rel="noreferrer">Original image ↗</a><a href={card.tcgdexUrl} target="_blank" rel="noreferrer">{card.sourceType === 'official' ? 'PokéAPI source' : 'TCGdex record'} ↗</a>{card.publisherUrl && <a href={card.publisherUrl} target="_blank" rel="noreferrer">Publisher page ↗</a>}{card.sourceType !== 'official' && <a href={card.artistEvidenceUrl} target="_blank" rel="noreferrer">{card.sourceType === 'catalog' ? 'Credit metadata' : 'Credit evidence'} ↗</a>}</div></section>
+            <section className="detail-section"><h3>Credit & source</h3><p className="detail-copy">{card.sourceType === 'model' ? `Community 3D asset. ${card.artist}. ${card.artistEvidenceMethod}. Underlying Pokémon IP belongs to its owners; source licensing is not blanket rights clearance.` : card.sourceType === 'official' ? 'Official species artwork via PokéAPI sprites. No individual artist is specified by this source.' : card.sourceType === 'catalog' ? 'Artist credit from TCGdex metadata. This edition has not been independently reviewed.' : `Reviewed edition. Artist evidence: ${card.artistEvidenceMethod}.`}</p><div className="source-links"><a href={card.image} target="_blank" rel="noreferrer">Original image ↗</a><a href={card.tcgdexUrl} target="_blank" rel="noreferrer">{card.sourceType === 'model' ? 'Model source' : card.sourceType === 'official' ? 'PokéAPI source' : 'TCGdex record'} ↗</a>{card.publisherUrl && <a href={card.publisherUrl} target="_blank" rel="noreferrer">Publisher page ↗</a>}{card.sourceType !== 'official' && <a href={card.artistEvidenceUrl} target="_blank" rel="noreferrer">{card.sourceType === 'catalog' ? 'Credit metadata' : 'Credit evidence'} ↗</a>}</div></section>
             <section className="detail-section"><h3>Keep exploring</h3><div className="source-links"><a href={`https://www.deviantart.com/search?q=${encodeURIComponent(activePokemon.name + ' pokemon')}`} target="_blank" rel="noreferrer">DeviantArt ↗</a><a href={`https://www.pixiv.net/en/tags/${encodeURIComponent(activePokemon.name)}/artworks`} target="_blank" rel="noreferrer">Pixiv ↗</a></div><p className="quiet-note">Opens the original communities. These are discovery links, not imported fan-art galleries.</p></section>
           </>}
           {drawer === 'artist' && <>

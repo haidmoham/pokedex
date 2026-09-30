@@ -5,3 +5,6 @@ data/
 .env
 .env.*
 !.env.example
+
+# Rebuilt from the locked official runtime dependency.
+public/model-runtime/
