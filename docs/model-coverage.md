@@ -48,3 +48,13 @@ All 522 candidates were processed: 521 admitted species, comprising 486 original
 This leaves 504 species without an admitted model, including unavailable, provenance-incomplete, unsuitable-license, over-budget and known-broken sources. Admission uses automated evidence plus representative browser review; it does not assert universal visual review, phone performance or underlying character rights clearance. Browser review of the rollout is pending at this code checkpoint.
 
 API references: [glTF Transform Draco decoding](https://gltf-transform.dev/modules/extensions/classes/KHRDracoMeshCompression), [texture compression](https://gltf-transform.dev/modules/functions/functions/textureCompress), and [Meshopt](https://gltf-transform.dev/modules/extensions/classes/EXTMeshoptCompression).
+
+## Bounded follow-up: 2026-09-30
+
+This pass checked the sole decoder-admission failure, #855 Polteageist, rather than enabling another source. Its original seven 1024×1024 textures total 39,146,842 decoded bytes including mipmaps (37.3 MiB), exceeding the unchanged 32 MiB cap. A geometry-preserving derivative reduces those seven textures to 512×512 and 9,786,714 bytes (9.3 MiB). Transfer is 233,992 bytes; decoded geometry remains 152,160 bytes, all finite, with two meshes and one scene. Geometry, topology, attributes and morph targets match the decoder roundtrip. No idle animation was invented.
+
+The original SHA256 is `f26a12291ebf406208b62b4ec39eea67f51c7e7e798c8d737b1884c4f6b0bdcf`; the derivative is `854a53337a9b307122b4cf513b136d2416d501576b6fe8a89609623cbe592e6b`. Embedded BlenderLager attribution, source and CC-BY-4.0 claim are retained. Underlying character rights remain unknown.
+
+Reproduce only this repair with `npm ci --prefix scripts/model-pipeline`, then `node scripts/model-pipeline/optimize.mjs --ids 855`. Explicit ID batches accept at most 24 audited, non-rejected species and write a separate ignored `data/model-optimization/report-855.json`; they do not overwrite the full optimization report. The existing locked worker performs decoding, geometry identity, texture and runtime-budget checks. See the committed [pass evidence](../content/models/coverage-pass-2026-09-30.json).
+
+**Additional admitted species: 0. Runtime coverage stays 521/1,025.** The repaired candidate remains local and unadmitted because this cloud browser has WebGL disabled. Original-versus-derivative material/framing review and physical iOS/Android performance remain outstanding. #855 therefore keeps its official-art fallback. No production GLB, admission manifest, source policy or runtime budget changed.
