@@ -28,7 +28,7 @@ npm start
 - Native vertical scroll snapping handles touch, mouse wheels and trackpads. Only the current and adjacent artworks mount, so scrolling does not preload thousands of images.
 - Left/right swipes, horizontal trackpad gestures and arrow buttons change artwork. Card editions loop; species do not.
 - Up/down arrows, Page Up/Down, Home/End and species buttons offer keyboard/button alternatives. Search jumps to any name or number without filtering or reordering the feed.
-- A concise credit appears with the species name. The info drawer contains exact edition identity, thumbnails, source evidence, market prices and discovery coverage. Artist names open a gallery of the illustrator's already-loaded cards.
+- A concise credit appears with the species name. The info drawer contains exact edition identity, thumbnails, source evidence, market prices and discovery coverage. Artist names open real, paginated TCGdex portfolios, with already-loaded artwork shown immediately.
 - Native modal dialogs preserve focus, Escape dismissal, independent scrolling and browser pinch zoom. The feed accounts for mobile safe areas and reduced-motion settings.
 - Favorites are private browser-local data, with no account or shared server writes.
 
@@ -42,7 +42,19 @@ Read-only live TCGdex discovery expands that collection with a distinct provenan
 
 `/api/discovery/:id?offset=0` checks twelve source candidates per page, with at most three upstream detail requests concurrently. The upstream query uses strict `dexId=eq:<id>` matching, so the coverage total counts exact species candidates rather than IDs containing the same digits. The active species loads incrementally; moving to another aborts obsolete work. Failed and partial coverage is visible in the details drawer and retryable.
 
-The highest recent available value leads each unselected gallery. USD TCGplayer market prices and EUR Cardmarket trend prices remain separate; values older than seven days are excluded by both server and client. The scope is English ungraded editions, not historical auctions or graded specimens. Swiping, selecting or inspecting an edition pins its card ID, so later discovery or price reordering cannot switch the inspected artwork. Prices are read-only and are not purchase offers. See [TCGdex pricing documentation](https://tcgdex.dev/markets-prices).
+The highest recent available value leads each unselected gallery. USD TCGplayer market prices and EUR Cardmarket trend prices remain separate; values older than seven days are excluded by both server and client. The scope is English ungraded editions, not historical auctions or graded specimens. Swiping, selecting or inspecting an edition pins its card ID, so later discovery or price reordering cannot switch the inspected artwork. Prices are read-only and are not purchase offers. TCGdex warns that variant matching and marketplace IDs can be incorrect; the details drawer links this caveat rather than presenting provider values as verified valuations. See [TCGdex pricing documentation](https://tcgdex.dev/markets-prices).
+
+## Illustrator portfolios
+
+`/api/artists/:artist?offset=0` reads the provider's illustrator index, deduplicates and sorts its card IDs, then checks twelve candidate details per requested page. At most three detail requests run concurrently. The provider's normalized index label is never used as the artist identity: every admitted card must carry the exact literal illustrator credit the viewer opened, a valid source image, and at least one dex membership from 1–1025.
+
+The portfolio shows loaded artwork immediately and only requests its first page automatically. Load more requests the next page; it never hydrates a large illustrator's entire catalog in the background. Coverage distinguishes checked candidates, unavailable requests and excluded cards, with reasons. Retry replaces failed pages at the original offsets, preventing skipped pages and double-counted coverage. Cached source responses and in-flight deduplication avoid repeated upstream work.
+
+Selecting an artwork opens that exact edition in the feed, preferring the current species for shared cards and otherwise choosing its lowest valid dex membership. Closing without selecting leaves the original feed/card intact. Reopening retains portfolio pages, tile order and scroll position. Closing or changing artist aborts the pending client request and ignores late responses. A provider outage leaves loaded artwork usable.
+
+Run `node scripts/check-live-artist.js` for an explicit two-page read-only integration check, or append a deployed base URL. It verifies exact credits, valid memberships, page coverage, unique cards and artwork absent from the saved manifest.
+
+The metadata-only evidence tier, reviewed provenance and original-host image policy remain unchanged. These portfolios are TCG card credits, not inferred artist social identities or imported fan-art galleries.
 
 Official species art has no invented individual artist credit. DeviantArt and Pixiv are outbound discovery links, not imported or rehosted galleries. Card-art rights are separate from the source code. No scan files are committed.
 
@@ -56,7 +68,7 @@ The existing Railway configuration builds `haidmoham/pokedex` from `main` using 
 
 ## Verification
 
-`npm test` covers the complete 1–1025 sequence and endpoints, API-independent official slides, recent same-currency price ranking, pinned card identity, shared-card membership and reviewed provenance, gesture cancellation/momentum, source pagination, stateless API behavior and server validation. `npm run build` runs TypeScript validation and creates production assets.
+`npm test` covers the complete 1–1025 sequence and endpoints, API-independent official slides, recent same-currency price ranking, pinned card identity, shared-card membership and reviewed provenance, gesture cancellation/momentum, source pagination, artist credit/membership admission, portfolio cancellation/retry/scroll state, stateless API behavior and server validation. `npm run build` runs TypeScript validation and creates production assets.
 
 For an explicit live, read-only discovery check, run `node scripts/check-live-discovery.js` against TCGdex, or add a deployed base URL to verify that deployment. It checks the exact species denominator and a usable first page for Bulbasaur, Pikachu and Dragapult. This network check is separate from deterministic `npm test`.
 
@@ -66,7 +78,7 @@ Browser QA checklist:
 2. Swipe left/right on a species with multiple editions. Confirm artwork and credit change together; later discovery must not replace a manually chosen edition.
 3. Search for #1025, open Pecharunt, and verify the last-species control is disabled. Search back to #001 without changing feed order.
 4. Try all arrow keys, Page Up/Down, Home/End and visible buttons. Focus should remain visible. Horizontal momentum changes at most one edition per gesture.
-5. Open details, scroll its complete content, change currency, select a thumbnail, and close using the button, Escape and backdrop. Feed position should stay put. Follow an artist and open a specific card; its identity must be retained.
+5. Open details, scroll its complete content, change currency, select a thumbnail, and close using the button, Escape and backdrop. Feed position should stay put. Follow an artist, load another page, and open a card absent from the initial session; its exact identity must be retained. Return through its artist credit and verify the portfolio scroll position. Close mid-request and change artists; stale results must not appear in the wrong gallery.
 6. Filter search by type and saved species. Save/reload/unsave and verify local persistence. No favorite API writes should occur.
 7. Block API calls and reload. All species must remain scrollable with correctly labeled official artwork. Break an image URL: retain its identity and show an unavailable state rather than attaching a different image to its credit.
 8. Check widths 320, 390 and 1280, short landscape viewports, increased text size, reduced motion, touch pinch zoom and real-device swipes. Main artwork must remain uncropped; source drawers must scroll without moving the feed.

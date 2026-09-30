@@ -172,3 +172,18 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+.artist-intro { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.artist-intro .artist-summary { margin: 0; }
+.artist-intro > a { color: var(--accent); font-size: 11px; white-space: nowrap; }
+.portfolio-status { display: flex; flex-wrap: wrap; gap: 7px 14px; color: #bcccb5; font-family: var(--mono); font-size: 10px; line-height: 1.8; margin: 24px 0 0; }
+.portfolio-loading { color: var(--accent); }
+.portfolio-error { font-size: 12px; line-height: 1.7; color: #e9c9a4; margin: 12px 0 0; }
+.portfolio-actions { display: grid; gap: 10px; margin-top: 16px; }
+.portfolio-actions .load-more { margin: 0; }
+.portfolio-actions .primary { background: #d4ebbc; border-color: #d4ebbc; color: #152113; font-weight: 600; }
+.portfolio-exclusions { border-top: 1px solid #ffffff15; margin-top: 22px; padding-top: 18px; color: #c2cfc0a8; font-size: 11px; line-height: 1.7; }
+.portfolio-exclusions summary { cursor: pointer; color: #d2dec9; }
+.portfolio-exclusions p { margin: 12px 0; }
+.portfolio-exclusions ul { padding-left: 18px; }
+.portfolio-back { margin-top: 20px; padding: 8px 0; }

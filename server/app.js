@@ -1,5 +1,6 @@
 import express from "express";
 import { discoverCards } from "./discovery.js";
+import { discoverArtistCards, isValidArtist, isValidArtistOffset } from "./artist-discovery.js";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -16,6 +17,7 @@ export function createApp({
   serveClient = true,
   stateless = false,
   discover = discoverCards,
+  discoverArtist = discoverArtistCards,
 } = {}) {
   const app = express();
   app.use(express.json());
@@ -78,6 +80,20 @@ export function createApp({
       response.set('Cache-Control',data.failed.length ? 'no-store' : 'public, s-maxage=1800, stale-while-revalidate=3600').json(data);
     } catch { response.status(502).json({error:'card source unavailable; saved cards and official artwork remain available'}); }
   });
+  app.get('/api/artists/:artist', async (request, response) => {
+    const artist = request.params.artist;
+    const rawOffset = request.query.offset ?? '0';
+    const offset = typeof rawOffset === 'string' && /^(0|[1-9]\d*)$/.test(rawOffset) ? Number(rawOffset) : NaN;
+    if (!isValidArtist(artist) || !isValidArtistOffset(offset) || Object.keys(request.query).some(key => key !== 'offset')) {
+      return response.status(400).set('Cache-Control', 'no-store').json({ error: 'invalid artist or page' });
+    }
+    try {
+      const data = await discoverArtist(artist, offset);
+      return response.set('Cache-Control', data.failed.length ? 'no-store' : 'public, s-maxage=1800, stale-while-revalidate=3600').json(data);
+    } catch {
+      return response.status(502).set('Cache-Control', 'no-store').json({ error: 'artist card source unavailable; loaded artwork remains available' });
+    }
+  });
   app.use('/api/favorites', (request, response, next) => {
     if (stateless) return response.status(410).json({error:'favorites are saved privately on this device'});
     next();
@@ -133,6 +149,9 @@ export function createApp({
   }
 
   app.use((error, _request, response, _next) => {
+    if (error instanceof URIError) {
+      return response.status(400).set('Cache-Control', 'no-store').json({ error: 'invalid request encoding' });
+    }
     console.error(error);
     response.status(500).json({ error: "server error" });
   });
