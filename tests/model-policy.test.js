@@ -50,3 +50,18 @@ test('texture inspection closes every bitmap and rejects oversized decoded memor
   await assert.rejects(validateModelTextures(new Blob([bytes]), new AbortController().signal, async () => ({ width: 4096, height: 4096, close: () => closed++ })), /texture exceeds budget/);
   assert.equal(closed, 2);
 });
+
+test('compressed models cannot declare oversized decoder allocations', () => {
+  const validate = data => {
+    const bytes = glb({ asset: { version: '2.0' }, ...data });
+    return validateModelStructure(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength));
+  };
+  const meshopt = (count, byteStride) => ({ extensions: { EXT_meshopt_compression: { count, byteStride } } });
+  validate({ buffers: [{ byteLength: 1024 }], bufferViews: [meshopt(64, 16)] });
+  for (const buffers of [[{ byteLength: 33554433 }], [{ byteLength: 20000000 }, { byteLength: 20000000 }], [{ byteLength: -1 }], [{ byteLength: 1.5 }]]) {
+    assert.throws(() => validate({ buffers }), /decoded buffer|geometry exceeds budget/);
+  }
+  for (const bufferViews of [[meshopt(3000000, 16)], [meshopt(1500000, 16), meshopt(1500000, 16)], [meshopt(-1, 16)], [meshopt(1, 0)], [meshopt(1, 257)]]) {
+    assert.throws(() => validate({ bufferViews }), /meshopt allocation|geometry exceeds budget/);
+  }
+});

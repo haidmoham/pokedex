@@ -3,6 +3,7 @@ import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
 export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string };
 export const MODEL_TRANSFER_LIMIT = 750_000;
+export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
 export function admittedModel(id: number, entries: ModelAsset[] = admission): ModelAsset | undefined {
   return entries.find(asset => asset.id === id && asset.admitted && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
     (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) || /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
@@ -24,6 +25,24 @@ export function validateModelStructure(bytes: ArrayBuffer) {
   const gltf = JSON.parse(new TextDecoder().decode(bytes.slice(20, 20 + jsonSize)));
   if (!gltf.asset || gltf.asset.version !== '2.0' || (gltf.buffers ?? []).some((buffer: { uri?: string }) => buffer.uri) ||
     (gltf.images ?? []).some((image: { uri?: string }) => image.uri)) throw new Error('external model dependencies rejected');
+  let decodedGeometryBytes = 0;
+  for (const buffer of gltf.buffers ?? []) {
+    if (!Number.isSafeInteger(buffer.byteLength) || buffer.byteLength < 0) throw new Error('invalid decoded buffer');
+    decodedGeometryBytes += buffer.byteLength;
+    if (decodedGeometryBytes > MODEL_GEOMETRY_LIMIT) throw new Error('decoded geometry exceeds budget');
+  }
+  // Meshopt allocates count * byteStride before it decodes the compressed bytes.
+  let decodedMeshoptBytes = 0;
+  for (const view of gltf.bufferViews ?? []) {
+    const compression = view.extensions?.EXT_meshopt_compression;
+    if (!compression) continue;
+    if (!Number.isSafeInteger(compression.count) || compression.count < 0 ||
+      !Number.isSafeInteger(compression.byteStride) || compression.byteStride <= 0 || compression.byteStride > 256) {
+      throw new Error('invalid meshopt allocation');
+    }
+    decodedMeshoptBytes += compression.count * compression.byteStride;
+    if (!Number.isSafeInteger(decodedMeshoptBytes) || decodedMeshoptBytes > MODEL_GEOMETRY_LIMIT) throw new Error('decoded geometry exceeds budget');
+  }
   if ((gltf.images ?? []).length > 8 || (gltf.textures ?? []).length > 8 || (gltf.meshes ?? []).length > 32 || (gltf.animations ?? []).length > 12 ||
     (gltf.accessors ?? []).some((accessor: { count: number }) => !Number.isSafeInteger(accessor.count) || accessor.count < 0) ||
     (gltf.accessors ?? []).reduce((total: number, accessor: { count: number }) => total + accessor.count, 0) > 500_000) throw new Error('decoded model complexity exceeds budget');
