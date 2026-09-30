@@ -7,7 +7,7 @@
 - Let the browser handle vertical scrolling and snapping. Render artwork only for the current and adjacent species; do not load thousands of images.
 - Swipe left/right to loop through editions within that species. Keep button and keyboard alternatives. Ambiguous diagonals must not trigger a horizontal change; cancellation and multi-touch must not leave a pending gesture. Browser pinch zoom stays enabled.
 - Lead with a large, uncropped image, species name, a short artist/source credit and minimal controls. Pricing, edition metadata, source evidence and coverage belong behind the info button.
-- Artist names open the illustrator's already-loaded card gallery. Search is a jump tool; type/saved filters affect search results only, never the feed's national-dex order.
+- Artist names open the exact credited illustrator's paginated TCGdex portfolio, showing loaded cards immediately. Search is a jump tool; type/saved filters affect search results only, never the feed's national-dex order.
 - Preserve each deliberately selected card ID through discovery, price updates and currency changes. Until a selection, the highest fresh comparable loaded price may improve the lead.
 
 ## Navigation and accessibility
@@ -40,7 +40,20 @@ Official species artwork is a separate slide sourced to PokéAPI sprites. It exp
 - Keep selected identities stable as new results arrive. No auction/graded-card maximum, invented value, conversion or global completeness is claimed.
 - Show checked/total counts, partial coverage and missing sources in details. Provide a retry for unavailable sources.
 - The 23 reviewed editions cover 19 species. The national dex covers 1,025 default species. These are distinct coverage claims.
+- TCGdex warns that variant-to-marketplace matching and IDs can be incorrect. Link that source caveat in price details; say highest available provider value rather than verified most valuable edition.
 - DeviantArt/Pixiv are clearly disclosed outbound discovery links, not local galleries.
+
+## Illustrator portfolios
+
+- Cache the provider summary index, deduplicate source card IDs and sort deterministically before local pages of twelve. Hydrate at most three card details concurrently; opening requests only the first page, and further pages require Load more.
+- Never infer literal illustrator identity, species or credit from the normalized index label or a summary. Require an exact literal card-illustrator match, source-host image, safe card ID and valid dex membership in 1–1025.
+- Keep shared-card memberships and one tile per card. Choosing a tile prefers the current species when it belongs; otherwise choose the lowest valid membership and pin the exact edition.
+- Each checked candidate is admitted, failed or excluded. Show compact checked/total, failed and excluded coverage with honest exclusion reasons. Trainers/no species, unavailable images, mismatched credits and invalid data must not become fake artwork.
+- Retry the original failed page offsets; replace page coverage rather than adding it again. Do not skip failed pages or duplicate loaded tiles. Preserve successful cached data and reviewed provenance.
+- Opening shows known artwork immediately, source outages leave it usable, and cache/in-flight deduplication plus bounded timeouts/backoff limit source load.
+- Cancel and ignore stale requests on drawer close or artist changes. Preserve loaded pages, stable tile order and portfolio scroll position on reopen.
+- Closing without selecting restores the same feed species/card/position. A selected card intentionally navigates the feed; tapping its credit returns to the preserved portfolio position.
+- This slice does not infer artist social identities, merge aliases or import DeviantArt/Pixiv galleries.
 
 ## Failure and persistence
 

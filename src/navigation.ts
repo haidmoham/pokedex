@@ -15,6 +15,7 @@ export class WheelGesture {
   totalX = 0;
   totalY = 0;
   consumed = false;
+  axis: 'x' | 'y' | null = null;
 
   read(x: number, y: number, time: number): Navigation | null {
     if (time - this.lastEvent > 180) this.reset();
@@ -23,16 +24,17 @@ export class WheelGesture {
     this.totalX += x;
     this.totalY += y;
     const navigation = classifyGesture(this.totalX, this.totalY, 40);
-    if (navigation) this.consumed = true;
+    if (navigation) { this.consumed = true; this.axis = navigation.axis; }
     return navigation;
   }
 
   handle(x: number, y: number, time: number, verticalNavigation: boolean) {
     const navigation = this.read(x, y, time);
-    const nativeScroll = !verticalNavigation && Math.abs(y) >= Math.abs(x);
     return {
-      preventDefault: !nativeScroll,
-      navigation: nativeScroll || (!verticalNavigation && navigation?.axis === "y") ? null : navigation,
+      // The entire stream retains its first owned axis. In particular, a
+      // horizontal swipe's trailing vertical momentum cannot scroll the dex.
+      preventDefault: this.axis === 'x' || (verticalNavigation && this.axis === 'y'),
+      navigation: !verticalNavigation && navigation?.axis === 'y' ? null : navigation,
     };
   }
 
@@ -41,6 +43,7 @@ export class WheelGesture {
     this.totalX = 0;
     this.totalY = 0;
     this.consumed = false;
+    this.axis = null;
   }
 }
 
