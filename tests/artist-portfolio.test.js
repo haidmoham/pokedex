@@ -110,7 +110,7 @@ test('unexpected response artist cannot populate another identity',async()=>{
 test('UI retains independent drawer scrolling, edition pinning and price-source caveat',async()=>{
  const app=await readFile(new URL('../src/main.tsx',import.meta.url),'utf8');
  assert.match(app,/portfolioTarget\(edition, activePokemon.id, validSpecies\)/);
- assert.match(app,/openPokemon\(item, edition.cardId\)/);
+ assert.match(app,/openPokemon\(item, edition.cardId, event.currentTarget\)/);
  assert.match(app,/portfolio.saveScroll\(activeArtist, event.currentTarget.scrollTop\)/);
  assert.match(app,/Provider matching can confuse card variants or marketplace IDs/);
  assert.match(app,/highest|Highest available.*provider value/);

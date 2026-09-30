@@ -79,6 +79,7 @@ function App() {
   const feedRef = useRef<HTMLDivElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const drawerScrollRef = useRef<HTMLDivElement>(null);
+  const pendingFocus = useRef<HTMLElement | null>(null);
   const libraryRef = useRef(allCards);
   libraryRef.current = allCards;
   const pointer = useRef(new PointerGesture());
@@ -174,7 +175,7 @@ function App() {
     if (!top || top.kind === 'branch') return;
     const focus = document.activeElement as HTMLElement | null;
     const focusId = focus?.dataset?.focusId;
-    replaceTop({ ...top, scrollTop: drawerScrollRef.current?.scrollTop ?? top.scrollTop, focusId });
+    replaceTop({ ...top, scrollTop: drawerScrollRef.current?.scrollTop ?? top.scrollTop, focusId: focusId ?? top.focusId });
   }
   function pushRoute(route: Omit<Route, 'key' | 'scrollTop'>) {
     savePanel();
@@ -204,7 +205,7 @@ function App() {
     history.replaceState({ pokedexDepth: 0 }, '');
     const onPop = (event: PopStateEvent) => {
       const depth = event.state?.pokedexDepth;
-      if (Number.isInteger(depth) && timeline.current[depth]) applyStack(timeline.current[depth]);
+      if (Number.isInteger(depth) && timeline.current[depth]) { savePanel(); applyStack(timeline.current[depth]); }
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -219,14 +220,18 @@ function App() {
     const top = routes.at(-1);
     drawerRef.current = drawer;
     if (drawer && dialog && !dialog.open) dialog.showModal();
-    if (!drawer && dialog?.open) dialog.close();
+    if (!drawer && dialog?.open) {
+      const invoker = routes.length ? null : timeline.current[1]?.[0]?.invoker;
+      pendingFocus.current = invoker?.isConnected ? invoker : feedRef.current;
+      dialog.close();
+    }
     pointer.current.cancel(); wheel.current.reset();
     if (drawer && dialog?.open) {
       if (drawerScrollRef.current) drawerScrollRef.current.scrollTop = top?.scrollTop ?? 0;
       const target = (top?.focusId ? dialog.querySelector<HTMLElement>(`[data-focus-id="${CSS.escape(top.focusId)}"]`) : null)
         ?? (drawer === 'search' ? dialog.querySelector<HTMLElement>('.search-field input') : dialog.querySelector<HTMLElement>('#drawer-title'));
       target?.focus({ preventScroll: true });
-    } else if (!drawer) {
+    } else if (!drawer && !dialog?.open && !pendingFocus.current) {
       const invoker = routes.length ? null : timeline.current[1]?.[0]?.invoker;
       if (invoker?.isConnected) invoker.focus({ preventScroll: true });
       else feedRef.current?.focus({ preventScroll: true });
@@ -293,13 +298,15 @@ function App() {
   }
   function openDrawer(next: Exclude<Drawer, null>, artist?: string, invoker?: HTMLElement | null) {
     if (!routesRef.current.length) baseIndex.current = activeIndexRef.current;
+    if (routesRef.current.length && invoker?.dataset.focusId) replaceTop({ ...routesRef.current.at(-1)!, focusId: invoker.dataset.focusId });
     drawerRef.current = next;
     if (feedRef.current) feedPosition.current.lock(feedRef.current, activeIndexRef.current);
     pointer.current.cancel(); wheel.current.reset();
     pushRoute({ kind: next, artist, invoker: invoker ?? (document.activeElement as HTMLElement), originIndex: baseIndex.current });
   }
   function closeDrawer() { goBack(); }
-  function openPokemon(item: Pokemon, selectedId?: string) {
+  function openPokemon(item: Pokemon, selectedId?: string, invoker?: HTMLElement | null) {
+    if (routesRef.current.length && invoker?.dataset.focusId) replaceTop({ ...routesRef.current.at(-1)!, focusId: invoker.dataset.focusId });
     const target = createVisit(item, libraryRef.current, currency, selectedId, routesRef.current.at(-1)?.artist);
     pushRoute({ kind: 'branch', visit: target, originIndex: baseIndex.current });
     const feed = feedRef.current;
@@ -404,20 +411,20 @@ function App() {
     <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} Artwork {cardIndex + 1} of {cards.length}.</span>
     {error && <button className="toast" role="alert" onClick={() => setError('')}>{error} ×</button>}
 
-    <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={event => { event.preventDefault(); closeDrawer(); }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
+    <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={event => { event.preventDefault(); closeDrawer(); }} onClose={() => { pendingFocus.current?.focus({ preventScroll: true }); pendingFocus.current = null; }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
       <div className="drawer-surface">
         <header className="drawer-header"><div><span className="drawer-eyebrow">{drawer === 'search' ? 'Find your next favorite' : drawer === 'artist' ? 'Follow the illustrator' : `#${dexNumber(activePokemon.id)} · ${activePokemon.name}`}</span><h2 id="drawer-title" tabIndex={-1}>{drawer === 'search' ? 'Jump in.' : drawer === 'artist' ? activeArtist : 'Behind the art.'}</h2></div><button className="icon-button" onClick={closeDrawer} aria-label={routes.length > 1 ? 'Back to previous view' : 'Close panel'}><Icon name={routes.length > 1 ? 'left' : 'close'} /></button></header>
         <div ref={drawerScrollRef} className="drawer-scroll" onScroll={event => { if (drawer === 'artist') portfolio.saveScroll(activeArtist, event.currentTarget.scrollTop); }}>
           {drawer === 'search' && <>
             <label className="search-field"><Icon name="search" /><input autoFocus value={query} onChange={event => { setQuery(event.target.value); setVisibleLimit(60); }} placeholder="Name or number" aria-label="Search by name or Pokédex number" /></label>
             <div className="search-filters"><label className="sr-only" htmlFor="type-filter">Pokémon type</label><select id="type-filter" value={type} onChange={event => { setType(event.target.value); setVisibleLimit(60); }}><option value="all">All types</option>{types.map(name => <option key={name} value={name}>{name}</option>)}</select><button className={`filter-chip ${favoritesOnly ? 'active' : ''}`} aria-pressed={favoritesOnly} onClick={() => { setFavoritesOnly(value => !value); setVisibleLimit(60); }}><Icon name="heart" />Saved Pokémon {favorites.length}</button><span>{filtered.length.toLocaleString('en-US')}</span></div>
-            <div className="species-grid">{filtered.slice(0, visibleLimit).map(item => <button className={`species-tile type-${item.types[0]}`} key={item.id} onClick={() => openPokemon(item)}><span>#{dexNumber(item.id)}</span><img src={artwork(item.id)} alt="" loading="lazy" /><strong>{item.name}</strong>{favorites.includes(item.id) && <span className="tile-saved" aria-label="Saved">♥</span>}</button>)}</div>
+            <div className="species-grid">{filtered.slice(0, visibleLimit).map(item => <button className={`species-tile type-${item.types[0]}`} key={item.id} data-focus-id={`species-${item.id}`} onClick={event => openPokemon(item, undefined, event.currentTarget)}><span>#{dexNumber(item.id)}</span><img src={artwork(item.id)} alt="" loading="lazy" /><strong>{item.name}</strong>{favorites.includes(item.id) && <span className="tile-saved" aria-label="Saved">♥</span>}</button>)}</div>
             {!filtered.length && <p className="empty-state">{favoritesOnly && !favorites.length ? 'No saved Pokémon yet. Browse the dex and use Save Pokémon in artwork details.' : 'No Pokémon match these filters.'} <button className="inline-link" onClick={() => { setQuery(''); setType('all'); setFavoritesOnly(false); }}>Clear filters</button></p>}
             {filtered.length > visibleLimit && <button className="load-more" onClick={() => setVisibleLimit(count => count + 60)}>Show more</button>}
             <p className="quiet-note">Saved on this browser. Search jumps to a species; the feed always stays in Pokédex order.</p>
           </>}
           {drawer === 'details' && <>
-            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
+            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
             <button className={`save-pokemon ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)}><Icon name="heart" /> {favorites.includes(activePokemon.id) ? 'Saved Pokémon' : 'Save Pokémon'}</button>
             <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length} loaded</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => changeVisit(visit => selectVisit(visit, edition.cardId))} aria-label={`${edition.title}, ${edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
             <section className="detail-section"><div className="detail-heading"><h3>Market price</h3><select aria-label="Price currency and provider" value={currency} onChange={event => setCurrency(event.target.value)}><option value="USD">USD · TCGplayer</option><option value="EUR">EUR · Cardmarket</option></select></div>
@@ -434,7 +441,7 @@ function App() {
           </>}
           {drawer === 'artist' && <>
             <div className="artist-intro"><p className="artist-summary">{artistCards.length} loaded artworks · {new Set(artistCards.flatMap(cardSpeciesIds)).size} Pokémon</p><a href={artistCoverage.sourceUrl ?? `https://api.tcgdex.net/v2/en/illustrators/${encodeURIComponent(activeArtist)}`} target="_blank" rel="noreferrer">TCGdex ↗</a></div>
-            <div className="artist-grid">{artistCards.map(edition => <button key={edition.cardId} data-focus-id={`artist-${edition.cardId}`} onClick={event => { replaceTop({ ...routesRef.current.at(-1)!, focusId: event.currentTarget.dataset.focusId, scrollTop: drawerScrollRef.current?.scrollTop ?? 0 }); const target = portfolioTarget(edition, activePokemon.id, validSpecies); const item = pokemon.find(entry => entry.id === target); if (item) openPokemon(item, edition.cardId); }} aria-label={`Open ${edition.title}, ${edition.set}, artwork by ${edition.artist}`}><img src={edition.image} alt={`${edition.title}, ${edition.set}`} loading="lazy" /><strong>{edition.title}</strong><span>{edition.set} · {edition.number}</span></button>)}</div>
+            <div className="artist-grid">{artistCards.map(edition => <button key={edition.cardId} data-focus-id={`artist-${edition.cardId}`} onClick={event => { const target = portfolioTarget(edition, activePokemon.id, validSpecies); const item = pokemon.find(entry => entry.id === target); if (item) openPokemon(item, edition.cardId, event.currentTarget); }} aria-label={`Open ${edition.title}, ${edition.set}, artwork by ${edition.artist}`}><img src={edition.image} alt={`${edition.title}, ${edition.set}`} loading="lazy" /><strong>{edition.title}</strong><span>{edition.set} · {edition.number}</span></button>)}</div>
             {!artistCards.length && <p className="empty-state">{artistState.loading ? 'Finding their artwork…' : 'No usable Pokémon artwork loaded yet.'}</p>}
             <div className="portfolio-status" role="status" aria-live="polite" tabIndex={-1}><span>{artistCoverage.scanned} / {artistCoverage.total ?? '…'} editions checked</span>{artistCoverage.failed.length > 0 && <span>{artistCoverage.failed.length} unavailable</span>}{artistCoverage.skipped.length > 0 && <span>{artistCoverage.skipped.length} excluded</span>}{artistState.loading && <span className="portfolio-loading">Loading artwork…</span>}</div>
             {artistState.error && <p className="portfolio-error" role="alert">{artistState.error}</p>}
