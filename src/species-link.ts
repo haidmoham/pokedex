@@ -11,3 +11,10 @@ export function speciesLink(origin: string, id: number): string {
   url.searchParams.set('pokemon', String(id));
   return url.href;
 }
+
+export function speciesAddress(href: string, id: number): string {
+  speciesLink(href, id); // Apply the same national-number validation.
+  const url = new URL(href);
+  url.searchParams.set('pokemon', String(id));
+  return url.href;
+}

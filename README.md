@@ -32,7 +32,7 @@ npm start
 
 - Opens immediately on Bulbasaur (#001). Every species stays in strict national-dex order through Pecharunt (#1025), with real endpoints rather than a #1-to-#1025 wrap.
 - Native vertical scroll snapping handles touch, mouse wheels and trackpads. Only the current and adjacent artworks mount, so scrolling does not preload thousands of images.
-- Left/right swipes, horizontal trackpad gestures and arrow buttons change artwork. Card editions loop; species do not.
+- Left/right swipes and horizontal trackpad movement reveal artwork continuously through a native snap gallery. Visible arrows and keyboard controls select editions directly. Both artwork and species stop at finite endpoints.
 - Up/down arrows, Page Up/Down, Home/End and species buttons offer keyboard/button alternatives. Search jumps to any name or number without filtering or reordering the feed.
 - A concise credit appears with the species name. The info drawer contains exact edition identity, thumbnails, source evidence, market prices and discovery coverage. Artist names open real, paginated TCGdex portfolios, with already-loaded artwork shown immediately.
 - Native modal dialogs preserve focus, Escape dismissal, independent scrolling and browser pinch zoom. The feed accounts for mobile safe areas and reduced-motion settings.
@@ -83,7 +83,7 @@ Browser QA checklist:
 1. Load a fresh session: #001 Bulbasaur appears. Swipe/scroll up to #002 Ivysaur and #003 Venusaur; reverse back to #001. Scrolling above #001 stays there.
 2. Swipe left/right on a species with multiple editions. Confirm artwork and credit change together; later discovery must not replace a manually chosen edition.
 3. Search for #1025, open Pecharunt, and verify the last-species control is disabled. Search back to #001 without changing feed order.
-4. Try all arrow keys, Page Up/Down, Home/End and visible buttons. Focus should remain visible. Horizontal momentum changes at most one edition per gesture.
+4. Try all arrow keys, Page Up/Down, Home/End and visible buttons. Focus should remain visible. Verify intermediate horizontal displacement, partial release, native snapping and immediate reversal; settled artwork and credit must match. Do not assume hardware momentum is one page per gesture.
 5. Open details, scroll its complete content, change currency, select a thumbnail, and close using the button, Escape and backdrop. Feed position should stay put. Follow an artist, load another page, and open a card absent from the initial session; its exact identity must be retained. Return through its artist credit and verify the portfolio scroll position. Close mid-request and change artists; stale results must not appear in the wrong gallery.
 6. Filter search by type and saved species. Save/reload/unsave and verify local persistence. No favorite API writes should occur.
 7. Block API calls and reload. All species must remain scrollable with correctly labeled official artwork. Break an image URL: retain its identity and show an unavailable state rather than attaching a different image to its credit.

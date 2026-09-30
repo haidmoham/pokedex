@@ -7,7 +7,7 @@
     "dev": "concurrently -k \"node --watch server/index.js\" \"vite --host 127.0.0.1\"",
     "build": "tsc --noEmit && vite build",
     "start": "node server/index.js",
-    "test": "node --test server/index.test.js tests/*.test.js",
+    "test": "node --test --test-concurrency=1 server/index.test.js tests/*.test.js",
     "audit:cards": "node scripts/audit-cards.js",
     "prebuild": "node scripts/prepare-model-runtime.js"
   },

@@ -137,14 +137,15 @@ test('the feed uses native vertical scrolling while modal drawers and pinch zoom
   assert.match(app, /<dialog\b/);
   assert.match(app, /dialog\.showModal\(\)/);
   assert.match(app, /onCancel=\{event => \{ event\.preventDefault\(\); closeDrawer\(\); \}\}/);
-  assert.match(app, /if \(event\.ctrlKey \|\| drawerRef\.current\) return/);
+  assert.match(app, /<ArtGallery\b/);
+  assert.doesNotMatch(app, /wheel\.current\.handle/);
   assert.match(app, /if \(drawerRef\.current \|\| feedPosition\.current\.locked\) return/);
   assert.match(app, /feedPosition\.current\.lock\(feedRef\.current, activeIndexRef\.current\)/);
   assert.match(app, /window\.addEventListener\('online', recoverImages\)/);
   assert.doesNotMatch(app, /setPointerCapture|navigation\?\.axis === 'y'/);
   assert.match(css, /scroll-snap-type: y mandatory/);
   assert.match(css, /scroll-snap-stop: always/);
-  assert.match(css, /touch-action: pan-y pinch-zoom/);
+  assert.match(css, /touch-action: pan-x pan-y pinch-zoom/);
   assert.match(css, /\.drawer-scroll \{ overflow-y: auto/);
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(css, /env\(safe-area-inset-bottom\)/);

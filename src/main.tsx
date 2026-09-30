@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 're
 import { createRoot } from 'react-dom/client';
 import speciesSnapshot from '../content/species.json';
 import cardsSnapshot from '../content/cards.json';
-import { PointerGesture, WheelGesture } from './navigation';
+import { ArtGallery } from './art-gallery';
 import { cardSpeciesIds, mergeCardLibrary } from './card-library';
 import { adjacentIndex, artwork, dexNumber, FeedPosition, nationalDex, officialEdition, recentPrice, rememberFailedImage, retryFailedImages } from './feed-model';
 import type { CardEdition, Pokemon } from './feed-model';
@@ -13,7 +13,7 @@ import type { TrailCursor, TrailStep } from './trail-model';
 import { admittedModel, modelEdition } from './model-policy';
 import { ModelView } from './model-view';
 import { searchSpecies, rememberSearchPick, validRecentPicks } from './search-model';
-import { linkedSpecies, speciesLink } from './species-link';
+import { linkedSpecies, speciesLink, speciesAddress } from './species-link';
 import './style.css';
 
 const pokemon = nationalDex(speciesSnapshot as Pokemon[]);
@@ -86,6 +86,7 @@ function App() {
   const [discoveryRetry, setDiscoveryRetry] = useState(0);
   const [manifestFailed, setManifestFailed] = useState(false);
   const [error, setError] = useState('');
+  const [artMoving, setArtMoving] = useState(false);
   const [shareStatus, setShareStatus] = useState('');
   const [manualShare, setManualShare] = useState('');
   const [candidate, setCandidate] = useState<Candidate | null>(null);
@@ -101,9 +102,6 @@ function App() {
   const pendingFocus = useRef<HTMLElement | null>(null);
   const libraryRef = useRef(allCards);
   libraryRef.current = allCards;
-  const pointer = useRef(new PointerGesture());
-  const wheel = useRef(new WheelGesture());
-  const wheelNavigation = useRef<(direction: number) => void>(() => {});
   const activeIndexRef = useRef(initialIndex);
   const feedPosition = useRef(new FeedPosition());
   const drawerRef = useRef<Drawer>(null);
@@ -113,7 +111,11 @@ function App() {
     if (feedRef.current) feedPosition.current.jump(feedRef.current, initialIndex, pokemon.length);
   }, []);
 
-  useEffect(() => { setShareStatus(''); setManualShare(''); }, [activePokemon.id]);
+  useEffect(() => {
+    setShareStatus(''); setManualShare('');
+    // Update the address without adding history entries or losing drawer depth.
+    history.replaceState(history.state, '', speciesAddress(location.href, activePokemon.id));
+  }, [activePokemon.id]);
 
   async function shareSpecies(invoker: HTMLElement) {
     const url = speciesLink(location.origin, activePokemon.id);
@@ -372,7 +374,7 @@ function App() {
       pendingFocus.current = invoker?.isConnected ? invoker : feedRef.current;
       dialog.close();
     }
-    pointer.current.cancel(); wheel.current.reset();
+
     if (drawer && dialog?.open) {
       if (drawerScrollRef.current) drawerScrollRef.current.scrollTop = top?.scrollTop ?? 0;
       const target = (top?.focusId ? dialog.querySelector<HTMLElement>(`[data-focus-id="${CSS.escape(top.focusId)}"]`) : null)
@@ -405,7 +407,7 @@ function App() {
     const syncIndex = () => {
       if (drawerRef.current || feedPosition.current.locked) return;
       const index = feedPosition.current.sync(feed, pokemon.length);
-      if (index !== activeIndexRef.current) { activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); pointer.current.cancel(); enterSpecies(index); }
+      if (index !== activeIndexRef.current) { activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true);  enterSpecies(index); }
     };
     const onScroll = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(syncIndex); };
     feed.addEventListener('scroll', onScroll, { passive: true });
@@ -423,7 +425,7 @@ function App() {
     activeIndexRef.current = next;
     setActiveIndex(next);
     enterSpecies(next);
-    pointer.current.cancel();
+
   }
   function positionFeed(index: number) {
     const feed = feedRef.current;
@@ -432,7 +434,7 @@ function App() {
     const next = feedPosition.current.jump(feed, index, pokemon.length);
     activeIndexRef.current = next;
     setActiveIndex(next);
-    pointer.current.cancel(); wheel.current.reset();
+
   }
   function moveSpecies(direction: number) { jumpTo(adjacentIndex(activeIndexRef.current, direction, pokemon.length)); }
   function enterSpecies(index: number) {
@@ -469,6 +471,17 @@ function App() {
     if (next >= 0 && next < cards.length) changeVisit(visit => stepVisit(visit, direction));
     else if (direction > 0) acceptCandidate();
   }
+  function selectArtwork(index: number) {
+    if (trail) {
+      const step = trail[index];
+      if (!step || index === trailIndex) return;
+      replaceRoute(routesRef.current.findIndex(route => route.kind === 'branch'), { ...branch!, trailIndex: index, visit: step.visit });
+      positionFeed(step.visit.speciesId - 1);
+    } else if (cards[index]) {
+      const id = cards[index].cardId;
+      changeVisit(visit => selectVisit(visit, id));
+    }
+  }
   function acceptCandidate() {
     if (candidate?.key !== continuationKey) return;
     if (candidate.state === 'search' || candidate.state === 'error') {
@@ -497,7 +510,7 @@ function App() {
     if (routesRef.current.length && invoker?.dataset.focusId) replaceTop({ ...routesRef.current.at(-1)!, focusId: invoker.dataset.focusId });
     drawerRef.current = next;
     if (feedRef.current) feedPosition.current.lock(feedRef.current, activeIndexRef.current);
-    pointer.current.cancel(); wheel.current.reset();
+
     pushRoute({ kind: next, artist, invoker: invoker ?? (document.activeElement as HTMLElement), originIndex: baseIndex.current });
   }
   function closeDrawer() { goBack(); }
@@ -520,32 +533,6 @@ function App() {
     catch { setError('This browser could not save favorites.'); }
   }
 
-  function handlePointerDown(event: React.PointerEvent) {
-    if (!event.isPrimary) { pointer.current.cancel(); return; }
-    if (event.button !== 0 || (event.target instanceof Element && event.target.closest('button, a, input, select, [data-inspecting]'))) return;
-    pointer.current.start(event.pointerId, event.clientX, event.clientY);
-    // Do not capture or prevent default: the browser owns vertical swipes and pinch zoom.
-  }
-  function handlePointerUp(event: React.PointerEvent) {
-    const navigation = pointer.current.end(event.pointerId, event.clientX, event.clientY);
-    if (navigation?.axis === 'x') moveArt(navigation.direction);
-  }
-  useLayoutEffect(() => { wheelNavigation.current = moveArt; });
-  useEffect(() => {
-    const feed = feedRef.current;
-    if (!feed) return;
-    const onWheel = (event: WheelEvent) => {
-      if (event.ctrlKey || drawerRef.current) return;
-      if (event.target instanceof Element && event.target.closest('[data-inspecting]')) return;
-      const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? feed.clientHeight : 1;
-      const result = wheel.current.handle(event.deltaX * unit, event.deltaY * unit, event.timeStamp, false);
-      if (result.preventDefault) event.preventDefault();
-      if (result.navigation?.axis === 'x') wheelNavigation.current(result.navigation.direction);
-    };
-    feed.addEventListener('wheel', onWheel, { passive: false });
-    return () => feed.removeEventListener('wheel', onWheel);
-  }, []);
-
   function onFeedKey(event: React.KeyboardEvent) {
     if (drawer || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
       (event.target instanceof Element && event.target.closest('input, select, textarea, [contenteditable]'))) return;
@@ -566,7 +553,7 @@ function App() {
     </header>
 
     <div ref={feedRef} className="species-feed" tabIndex={0} role="region" aria-label="Pokédex feed. Scroll vertically for species. Swipe horizontally or use left and right arrow keys for artwork."
-      onPointerDown={handlePointerDown} onPointerUp={handlePointerUp} onPointerCancel={() => pointer.current.cancel()} onLostPointerCapture={() => pointer.current.cancel()} onDragStart={event => event.preventDefault()}>
+      onDragStart={event => event.preventDefault()}>
       {pokemon.map((item, index) => {
         const nearby = Math.abs(index - activeIndex) <= 1;
         const visit = index === activeIndex ? activeVisit : visits[item.id];
@@ -575,10 +562,20 @@ function App() {
         return <section className={`species-slide type-${item.types[0]}`} key={item.id} aria-label={`Number ${item.id}, ${item.name}`} aria-hidden={index !== activeIndex}>
           {edition && <>
             <span className="ghost-number" aria-hidden="true">{dexNumber(item.id)}</span>
-            <div className={`art-stage ${['official', 'model'].includes(edition.sourceType ?? '') ? 'is-official' : 'is-card'}`}>
-              {edition.sourceType === 'model' && index === activeIndex && admittedModel(item.id) ? <ModelView key={edition.cardId} asset={admittedModel(item.id)!} name={item.name} suspended={Boolean(drawer)} onInspect={inspecting => { const feed = feedRef.current; if (!feed) return; if (inspecting) { pointer.current.cancel(); wheel.current.reset(); feedPosition.current.lock(feed, activeIndexRef.current); } else if (!drawerRef.current) feedPosition.current.unlock(feed); }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${item.id}`))} /> : brokenImages.includes(edition.image) ? <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{edition.sourceType === 'official' ? item.name : edition.title}</small><button className="image-retry" tabIndex={index === activeIndex ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, edition.image))}>Retry image</button></div> :
-                <img key={edition.image} className="hero-art" src={edition.image} alt={edition.sourceType === 'official' ? `${item.name}, official species artwork` : `${edition.title} Pokémon TCG card, illustrated by ${edition.artist}`} draggable={false} fetchPriority={index === activeIndex ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, edition.image))} />}
-            </div>
+            {index === activeIndex ? <ArtGallery key={item.id} editions={trail ? trail.map(step => {
+              const species = pokemon[step.visit.speciesId - 1];
+              return allCards.find(entry => entry.cardId === step.visit.selectedId) ?? (step.visit.selectedId === `model-${species.id}` ? modelEdition(species) : undefined) ?? officialEdition(species);
+            }) : cards} selected={trail ? trailIndex : cardIndex} suspended={Boolean(drawer)} onMotion={setArtMoving} onSelect={selectArtwork}
+              render={(frame, selected, moving, inspectGallery) => {
+                const species = pokemon[frame.pokemonId - 1] ?? item;
+                return frame.sourceType === 'model' && selected && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} suspended={Boolean(drawer) || moving} onInspect={inspecting => {
+                  inspectGallery(inspecting);
+                  const feed = feedRef.current; if (!feed) return;
+                  if (inspecting) feedPosition.current.lock(feed, activeIndexRef.current); else if (!drawerRef.current) feedPosition.current.unlock(feed);
+                }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${species.id}`))} /> : brokenImages.includes(frame.image) ?
+                <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{frame.title}</small><button className="image-retry" tabIndex={selected ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, frame.image))}>Retry image</button></div> :
+                <img key={frame.image} className="hero-art" src={frame.image} alt={frame.sourceType === 'official' || frame.sourceType === 'model' ? `${species.name}, official species artwork${frame.sourceType === 'model' ? ' while 3D is inactive' : ''}` : `${frame.title} Pokémon TCG card, illustrated by ${frame.artist}`} draggable={false} fetchPriority={selected ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, frame.image))} />;
+              }} /> : <div className={`art-stage ${['official','model'].includes(edition.sourceType ?? '') ? 'is-official' : 'is-card'}`}><img className="hero-art" src={edition.image} alt="" draggable={false} fetchPriority="low" /></div>}
           </>}
         </section>;
       })}
@@ -586,7 +583,7 @@ function App() {
 
     <div ref={overlayRef} className="feed-overlay">
       {branch && <button className="branch-back" onClick={goBack} aria-label={`Back to ${branch.originLabel ?? 'previous view'}`}><Icon name="left" /> Back to {branch.originLabel ?? 'previous view'}</button>}
-      <div className="feed-caption" key={activePokemon.id}>
+      <div className={`feed-caption ${artMoving ? 'caption-in-motion' : ''}`} key={activePokemon.id} inert={artMoving}>
         <span className="species-types">{trail ? trail[trailIndex]?.context : activeVisit.context ?? activePokemon.types.join(' · ')}</span>
         <div className="species-heading"><h1>{activePokemon.name}</h1><button className="icon-button share-species" aria-label={`Share ${activePokemon.name}`} onClick={event => shareSpecies(event.currentTarget)}><Icon name="share" /></button></div>
         {card.sourceType === 'model' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>3D · {card.artist} <span>›</span></button> : card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :

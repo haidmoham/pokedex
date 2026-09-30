@@ -73,7 +73,15 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
     if (!element) return;
     element.toggleAttribute('camera-controls', inspecting);
     element.style.pointerEvents = inspecting ? 'auto' : 'none';
-    element.setAttribute('camera-orbit', `${angle}deg 85deg auto`);
+    // Side-on tail extent needs more orbit clearance than the front view.
+    element.setAttribute('camera-orbit', `${angle}deg 85deg ${inspecting ? '160%' : '110%'}`);
+    if (inspecting) {
+      element.setAttribute('min-camera-orbit', 'auto 35deg 160%');
+      element.setAttribute('max-camera-orbit', 'auto 145deg 240%');
+    } else {
+      element.removeAttribute('min-camera-orbit');
+      element.removeAttribute('max-camera-orbit');
+    }
     element.tabIndex = inspecting ? 0 : -1;
   }, [loaded, inspecting, angle]);
   useEffect(() => {
