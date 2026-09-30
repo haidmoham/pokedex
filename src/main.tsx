@@ -24,6 +24,10 @@ type TrailResult = { card: CardEdition | null; context?: string; cursor: TrailCu
 type Candidate = { key: string; state: 'loading' | 'ready' | 'search' | 'exhausted' | 'error'; card?: CardEdition; context?: string; cursor?: TrailCursor | null; error?: string; partial?: boolean };
 type Route = { key: number; kind: Exclude<Drawer, null> | 'branch'; artist?: string; visit?: Visit; trail?: TrailStep[]; trailIndex?: number; cursor?: TrailCursor | null; scrollTop: number; focusId?: string; invoker?: HTMLElement | null; originIndex?: number; originLabel?: string };
 type Discovery = { scanned: number; total: number; done: boolean; failed: number; error?: string };
+function activeBranchIndex(stack: Route[]) {
+  for (let index = stack.length - 1; index >= 0; index--) if (stack[index].kind === 'branch') return index;
+  return -1;
+}
 const types = [...new Set(pokemon.flatMap(item => item.types))].sort();
 const validSpecies = new Set(pokemon.map(item => item.id));
 const exclusionLabels: Record<string, string> = {
@@ -276,7 +280,7 @@ function App() {
       return Object.keys(old).some(id => next[id] !== old[Number(id)]) ? next : old;
     });
     const stack = routesRef.current;
-    const branchIndex = stack.findIndex(route => route.kind === 'branch');
+    const branchIndex = activeBranchIndex(stack);
     if (branchIndex >= 0 && stack[branchIndex].visit) {
       const updated = appendVisit(stack[branchIndex].visit!, allCards, currency);
       if (updated !== stack[branchIndex].visit) {
@@ -449,7 +453,7 @@ function App() {
   }
   function changeVisit(change: (visit: Visit) => Visit) {
     const stack = routesRef.current;
-    const branchIndex = stack.findIndex(route => route.kind === 'branch');
+    const branchIndex = activeBranchIndex(stack);
     if (branchIndex >= 0 && stack[branchIndex].visit) {
       const current = stack[branchIndex];
       const visit = change(current.visit!);
@@ -464,7 +468,7 @@ function App() {
       const next = traverseTrail({ steps: trail, index: trailIndex, cursor: branch?.cursor ?? null }, direction);
       if (next.index !== trailIndex) {
         const step = next.steps[next.index];
-        replaceRoute(routesRef.current.findIndex(route => route.kind === 'branch'), { ...branch!, trailIndex: next.index, visit: step.visit });
+        replaceRoute(activeBranchIndex(routesRef.current), { ...branch!, trailIndex: next.index, visit: step.visit });
         positionFeed(pokemon.findIndex(item => item.id === step.visit.speciesId));
       } else if (direction > 0) acceptCandidate();
       return;
@@ -477,7 +481,7 @@ function App() {
     if (trail) {
       const step = trail[index];
       if (!step || index === trailIndex) return;
-      replaceRoute(routesRef.current.findIndex(route => route.kind === 'branch'), { ...branch!, trailIndex: index, visit: step.visit });
+      replaceRoute(activeBranchIndex(routesRef.current), { ...branch!, trailIndex: index, visit: step.visit });
       positionFeed(step.visit.speciesId - 1);
     } else if (cards[index]) {
       const id = cards[index].cardId;
@@ -500,7 +504,7 @@ function App() {
     const nextPath = extendTrail(trail ? { steps: trail, index: trailIndex, cursor: branch?.cursor ?? null } : null,
       { visit: activeVisit, context: branch?.visit?.context ?? `Pokédex #${dexNumber(activePokemon.id)}` },
       { visit, context: candidate.context ?? 'Related artwork' }, candidate.cursor ?? null);
-    if (branch) replaceRoute(routesRef.current.findIndex(route => route.kind === 'branch'), { ...branch, visit, trail: nextPath.steps, trailIndex: nextPath.index, cursor: nextPath.cursor });
+    if (branch) replaceRoute(activeBranchIndex(routesRef.current), { ...branch, visit, trail: nextPath.steps, trailIndex: nextPath.index, cursor: nextPath.cursor });
     else {
       baseIndex.current = activeIndexRef.current;
       pushRoute({ kind: 'branch', visit, trail: nextPath.steps, trailIndex: nextPath.index, cursor: nextPath.cursor, originIndex: baseIndex.current, originLabel: activePokemon.name });
