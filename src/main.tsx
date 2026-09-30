@@ -7,7 +7,7 @@ import { cardSpeciesIds, mergeCardLibrary } from './card-library';
 import { adjacentIndex, artwork, dexNumber, FeedPosition, nationalDex, officialEdition, recentPrice, rememberFailedImage, retryFailedImages } from './feed-model';
 import type { CardEdition, Pokemon } from './feed-model';
 import { ArtistPortfolio, portfolioCards, portfolioCoverage, portfolioTarget } from './artist-portfolio';
-import { appendVisit, createVisit, selectVisit, stepVisit, Visit } from './visit-model';
+import { appendVisit, createVisit, prepareVisits, selectVisit, stepVisit, Visit } from './visit-model';
 import { extendTrail, traverseTrail } from './trail-model';
 import type { TrailCursor, TrailStep } from './trail-model';
 import './style.css';
@@ -52,7 +52,7 @@ function App() {
   const [allCards, setAllCards] = useState<CardEdition[]>(cardsSnapshot as CardEdition[]);
   const [, redrawPortfolio] = useState(0);
   const [portfolio] = useState(() => new ArtistPortfolio(() => redrawPortfolio(version => version + 1), incoming => setAllCards(previous => mergeCardLibrary(previous, incoming))));
-  const [visits, setVisits] = useState<Record<number, Visit>>(() => ({ 1: createVisit(pokemon[0], cardsSnapshot as CardEdition[], 'USD') }));
+  const [visits, setVisits] = useState<Record<number, Visit>>(() => prepareVisits({}, pokemon.slice(0, 2), cardsSnapshot as CardEdition[], 'USD'));
   const visitsRef = useRef(visits);
   visitsRef.current = visits;
   const [currency, setCurrency] = useState('USD');
@@ -91,10 +91,17 @@ function App() {
   libraryRef.current = allCards;
   const pointer = useRef(new PointerGesture());
   const wheel = useRef(new WheelGesture());
+  const wheelNavigation = useRef<(direction: number) => void>(() => {});
   const activeIndexRef = useRef(0);
   const feedPosition = useRef(new FeedPosition());
   const drawerRef = useRef<Drawer>(null);
   const baseIndex = useRef(0);
+
+  // Prepare the same edition that will be selected when the incoming slide
+  // becomes active. It must not replace a visible official image mid-swipe.
+  useLayoutEffect(() => {
+    setVisits(old => prepareVisits(old, pokemon.slice(Math.max(0, activeIndex - 1), activeIndex + 2), libraryRef.current, currency));
+  }, [activeIndex, currency]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -447,6 +454,7 @@ function App() {
     const navigation = pointer.current.end(event.pointerId, event.clientX, event.clientY);
     if (navigation?.axis === 'x') moveArt(navigation.direction);
   }
+  useLayoutEffect(() => { wheelNavigation.current = moveArt; });
   useEffect(() => {
     const feed = feedRef.current;
     if (!feed) return;
@@ -455,11 +463,11 @@ function App() {
       const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? feed.clientHeight : 1;
       const result = wheel.current.handle(event.deltaX * unit, event.deltaY * unit, event.timeStamp, false);
       if (result.preventDefault) event.preventDefault();
-      if (result.navigation?.axis === 'x') moveArt(result.navigation.direction);
+      if (result.navigation?.axis === 'x') wheelNavigation.current(result.navigation.direction);
     };
     feed.addEventListener('wheel', onWheel, { passive: false });
     return () => feed.removeEventListener('wheel', onWheel);
-  });
+  }, []);
 
   function onFeedKey(event: React.KeyboardEvent) {
     if (drawer || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
@@ -474,7 +482,6 @@ function App() {
   }
 
   return <main className={`app-shell type-${activePokemon.types[0]} ${continuationKey ? 'has-continuation' : ''}`} onKeyDown={onFeedKey}>
-    <div className="feed-backdrop" style={{ backgroundImage: `url("${card.image}")` }} aria-hidden="true" />
     <header className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" />pokédex<span className="brand-dot">.</span></button>
       <span className="dex-position" aria-label={`Pokédex number ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></span>

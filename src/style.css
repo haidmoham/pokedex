@@ -21,7 +21,6 @@ svg { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
 .type-normal, .type-flying, .type-steel, .type-dark { --tint: 115 140 144; --accent: #c9dee0; }
 .app-shell { position: relative; isolation: isolate; height: 100svh; height: 100dvh; overflow: hidden; background: #0b1212; --edge: clamp(22px, 5vw, 64px); }
 .app-shell::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 48% 37%, rgb(var(--tint) / .3), transparent 66%); z-index: -2; }
-.feed-backdrop { position: absolute; inset: -18%; background-position: center; background-size: cover; filter: blur(80px) saturate(.7); opacity: .22; z-index: -1; pointer-events: none; }
 .topbar { position: absolute; z-index: 3; inset: 0 0 auto; padding: calc(18px + env(safe-area-inset-top)) var(--edge) 15px; display: flex; align-items: center; justify-content: space-between; gap: 16px; pointer-events: none; }
 .topbar > * { pointer-events: auto; }
 .brand { display: flex; align-items: center; gap: 9px; font-size: 22px; font-weight: 800; letter-spacing: -1px; min-height: 44px; padding: 5px 0; }

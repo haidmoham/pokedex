@@ -96,3 +96,21 @@ test('museum vertical wheel has its own axis while artist vertical wheel scrolls
     navigation: null, preventDefault: false,
   });
 });
+
+test('sideways micro-deltas own horizontal input before an edition changes', () => {
+  const wheel = new WheelGesture();
+  assert.deepEqual(wheel.handle(12, 2, 0, false), { navigation: null, preventDefault: true });
+  assert.deepEqual(wheel.handle(12, 2, 16, false), { navigation: null, preventDefault: true });
+  assert.deepEqual(wheel.handle(12, 2, 32, false), { navigation: null, preventDefault: true });
+  assert.deepEqual(wheel.handle(12, 2, 48, false), { navigation: { axis: 'x', direction: 1 }, preventDefault: true });
+});
+
+test('deliberate reverse swipe works during inertia while small opposite tails do not', () => {
+  const wheel = new WheelGesture();
+  wheel.handle(50, 0, 0, false);
+  assert.equal(wheel.handle(-3, 0, 16, false).navigation, null);
+  assert.equal(wheel.handle(5, 0, 32, false).navigation, null);
+  assert.equal(wheel.handle(-20, 1, 48, false).navigation, null);
+  assert.deepEqual(wheel.handle(-22, 1, 64, false), { navigation: { axis: 'x', direction: -1 }, preventDefault: true });
+  assert.equal(wheel.handle(-80, 0, 80, false).navigation, null);
+});

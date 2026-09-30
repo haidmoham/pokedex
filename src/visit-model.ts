@@ -9,6 +9,11 @@ export type Visit = {
   context?: string;
 };
 
+export function prepareVisits(visits: Record<number, Visit>, species: Pokemon[], available: CardEdition[], currency: string): Record<number, Visit> {
+  const missing = species.filter(item => !visits[item.id]);
+  return missing.length ? { ...visits, ...Object.fromEntries(missing.map(item => [item.id, createVisit(item, available, currency)])) } : visits;
+}
+
 export function createVisit(species: Pokemon, available: CardEdition[], currency: string, targetId?: string, context?: string): Visit {
   const eligible = available.filter(card => card.cardId !== `official-${species.id}` &&
     [card.pokemonId, ...(card.pokemonIds ?? [])].includes(species.id));

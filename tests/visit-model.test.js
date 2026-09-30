@@ -7,7 +7,7 @@ const compile = source => ts.transpileModule(source, { compilerOptions: { target
 const feed = compile(await readFile(new URL('../src/feed-model.ts', import.meta.url), 'utf8'));
 const feedURL = `data:text/javascript;base64,${Buffer.from(feed).toString('base64')}`;
 const visit = compile(await readFile(new URL('../src/visit-model.ts', import.meta.url), 'utf8')).replace("from './feed-model'", `from '${feedURL}'`);
-const { createVisit, appendVisit, selectVisit, stepVisit } = await import(`data:text/javascript;base64,${Buffer.from(visit).toString('base64')}`);
+const { createVisit, prepareVisits, appendVisit, selectVisit, stepVisit } = await import(`data:text/javascript;base64,${Buffer.from(visit).toString('base64')}`);
 const species = JSON.parse(await readFile(new URL('../content/species.json', import.meta.url), 'utf8'))[0];
 const priced = (cardId, amount, updatedAt = new Date().toISOString()) => ({ cardId, pokemonId: 1, prices: [{ amount, currency: 'USD', updatedAt }] });
 
@@ -36,4 +36,14 @@ test('ordinary horizontal steps stop at boundaries and reverse exactly', () => {
   assert.equal(visit.selectedId, 'official-1');
   for (let i = 0; i < 10; i++) visit = stepVisit(visit, -1);
   assert.equal(visit.selectedId, positions[0]);
+});
+
+test('incoming slides prepare their card identity before activation and retain it through enrichment', () => {
+  const incoming = { ...species, id: 2 };
+  const edition = { ...priced('incoming', 10), pokemonId: 2 };
+  const prepared = prepareVisits({}, [species, incoming], [edition], 'USD');
+  assert.equal(prepared[2].selectedId, 'incoming');
+  const enriched = [edition, { ...edition, cardId: 'later', prices: [{ amount: 999, currency: 'USD', updatedAt: new Date().toISOString() }] }];
+  assert.equal(prepareVisits(prepared, [incoming], enriched, 'USD'), prepared);
+  assert.equal(appendVisit(prepared[2], enriched).selectedId, 'incoming');
 });

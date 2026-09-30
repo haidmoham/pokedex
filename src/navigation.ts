@@ -16,15 +16,33 @@ export class WheelGesture {
   totalY = 0;
   consumed = false;
   axis: 'x' | 'y' | null = null;
+  direction = 0;
+  reverseX = 0;
 
   read(x: number, y: number, time: number): Navigation | null {
     if (time - this.lastEvent > 180) this.reset();
     this.lastEvent = time;
-    if (this.consumed) return null;
+    if (this.consumed) {
+      // A deliberate reverse swipe can start before the previous momentum
+      // stream goes quiet. Tiny opposite tails must not turn another page.
+      if (this.axis === 'x') {
+        this.reverseX = Math.sign(x) === -this.direction ? this.reverseX + Math.abs(x) : 0;
+        if (this.reverseX >= 40) {
+          this.direction *= -1;
+          this.reverseX = 0;
+          return { axis: 'x', direction: this.direction };
+        }
+      }
+      return null;
+    }
     this.totalX += x;
     this.totalY += y;
-    const navigation = classifyGesture(this.totalX, this.totalY, 40);
-    if (navigation) { this.consumed = true; this.axis = navigation.axis; }
+    // Own the dominant axis before the page threshold, so a sideways swipe's
+    // small vertical deltas cannot start a native species snap underneath it.
+    this.axis ??= classifyGesture(this.totalX, this.totalY, 4)?.axis ?? null;
+    const distance = this.axis === 'x' ? this.totalX : this.totalY;
+    const navigation = this.axis && Math.abs(distance) >= 40 ? { axis: this.axis, direction: Math.sign(distance) } : null;
+    if (navigation) { this.consumed = true; this.direction = navigation.direction; }
     return navigation;
   }
 
@@ -44,6 +62,8 @@ export class WheelGesture {
     this.totalY = 0;
     this.consumed = false;
     this.axis = null;
+    this.direction = 0;
+    this.reverseX = 0;
   }
 }
 
