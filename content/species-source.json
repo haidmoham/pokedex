@@ -1,0 +1,6 @@
+{
+  "source": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+  "retrievedAt": "2026-09-30T03:51:09.830183+00:00",
+  "speciesCount": 1025,
+  "scope": "default national-dex species, without alternate forms"
+}

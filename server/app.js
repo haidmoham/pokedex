@@ -1,4 +1,5 @@
 import express from "express";
+import { discoverCards } from "./discovery.js";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,6 +14,8 @@ validateCardManifest(cards, catalog);
 export function createApp({
   dataFile = resolve(root, "data/favorites.json"),
   serveClient = true,
+  stateless = false,
+  discover = discoverCards,
 } = {}) {
   const app = express();
   app.use(express.json());
@@ -63,6 +66,21 @@ export function createApp({
         (!artist || card.artist.toLocaleLowerCase() === artist),
     );
     response.json(filtered);
+  });
+
+  app.get('/api/discovery/:id', async (request, response) => {
+    const pokemon = catalog.find(p => p.id === Number(request.params.id));
+    const offset = Number(request.query.offset ?? 0);
+    if (!pokemon || !Number.isInteger(offset) || offset < 0 || offset > 5000) return response.status(400).json({error:'invalid species or page'});
+    try {
+      const data = await discover(pokemon,offset);
+      // A transiently failed page must be retried upstream, not frozen by CDN caching.
+      response.set('Cache-Control',data.failed.length ? 'no-store' : 'public, s-maxage=1800, stale-while-revalidate=3600').json(data);
+    } catch { response.status(502).json({error:'card source unavailable; saved cards and official artwork remain available'}); }
+  });
+  app.use('/api/favorites', (request, response, next) => {
+    if (stateless) return response.status(410).json({error:'favorites are saved privately on this device'});
+    next();
   });
 
   app.get("/api/favorites", async (_request, response, next) => {
