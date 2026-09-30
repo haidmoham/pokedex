@@ -40,7 +40,7 @@ The 1,025-species PokéAPI snapshot is bundled in the client. Every species has 
 
 Read-only live TCGdex discovery expands that collection with a distinct provenance tier: exact species membership and provider artist metadata, explicitly labeled as not independently reviewed. Shared TAG TEAM cards belong to all recorded species without duplicate artist-gallery entries; refreshing prices never replaces reviewed provenance.
 
-`/api/discovery/:id?offset=0` checks twelve source candidates per page, with at most three upstream detail requests concurrently. The active species loads incrementally; moving to another aborts obsolete work. Failed and partial coverage is visible in the details drawer and retryable.
+`/api/discovery/:id?offset=0` checks twelve source candidates per page, with at most three upstream detail requests concurrently. The upstream query uses strict `dexId=eq:<id>` matching, so the coverage total counts exact species candidates rather than IDs containing the same digits. The active species loads incrementally; moving to another aborts obsolete work. Failed and partial coverage is visible in the details drawer and retryable.
 
 The highest recent available value leads each unselected gallery. USD TCGplayer market prices and EUR Cardmarket trend prices remain separate; values older than seven days are excluded by both server and client. The scope is English ungraded editions, not historical auctions or graded specimens. Swiping, selecting or inspecting an edition pins its card ID, so later discovery or price reordering cannot switch the inspected artwork. Prices are read-only and are not purchase offers. See [TCGdex pricing documentation](https://tcgdex.dev/markets-prices).
 
@@ -57,6 +57,8 @@ The existing Railway configuration builds `haidmoham/pokedex` from `main` using 
 ## Verification
 
 `npm test` covers the complete 1–1025 sequence and endpoints, API-independent official slides, recent same-currency price ranking, pinned card identity, shared-card membership and reviewed provenance, gesture cancellation/momentum, source pagination, stateless API behavior and server validation. `npm run build` runs TypeScript validation and creates production assets.
+
+For an explicit live, read-only discovery check, run `node scripts/check-live-discovery.js` against TCGdex, or add a deployed base URL to verify that deployment. It checks the exact species denominator and a usable first page for Bulbasaur, Pikachu and Dragapult. This network check is separate from deterministic `npm test`.
 
 Browser QA checklist:
 
