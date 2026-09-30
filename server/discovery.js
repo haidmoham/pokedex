@@ -46,7 +46,10 @@ export function normalizeCard(card, pokemon) {
   };
 }
 export async function discoverCards(pokemon, offset = 0, fetcher = fetch) {
-  const list = await cachedJson(`${ROOT}?dexId=${pokemon.id}`, fetcher);
+  // TCGdex's default filter is substring matching: dexId=1 also finds 10,
+  // 125, etc. Strict equality matches exact membership in the dexId array,
+  // including shared TAG TEAM cards, and keeps coverage species-scoped.
+  const list = await cachedJson(`${ROOT}?dexId=eq:${pokemon.id}`, fetcher);
   if (!Array.isArray(list)) throw new Error('invalid source list');
   const eligible = list.filter(c => typeof c.id === 'string' && /^[-\w.]+$/.test(c.id)).sort((a,b)=>a.id.localeCompare(b.id));
   const batch = eligible.slice(offset,offset+12);

@@ -30,3 +30,35 @@ test('discovery returns bounded batches and explicit missing-source coverage',as
  const result=await discoverCards({id:9999,name:'Test'},0,fake);
  assert.equal(result.scanned,12);assert.equal(result.nextOffset,12);assert.equal(result.total,14);assert.equal(result.failed.length,1);assert.ok(max<=3);assert.equal(calls,13);
 });
+
+for (const pokemon of [{ id:1, name:'Bulbasaur', count:13 }, { id:25, name:'Pikachu', count:26 }, { id:887, name:'Dragapult', count:17 }]) {
+ test(`discovery uses exact dex membership and species-scoped page totals for #${pokemon.id}`,async()=>{
+  const exact=Array.from({length:pokemon.count},(_,index)=>({id:`exact-${pokemon.id}-${String(index).padStart(2,'0')}`}));
+  const requested=[];
+  const fake=async url=>{
+   requested.push(url);
+   if(url.includes('?')) {
+    // The live API defaults to lax substring matching. This is the regression:
+    // #1 includes #10/#125 and #25 includes #125 without the eq: prefix.
+    assert.equal(new URL(url).searchParams.get('dexId'),`eq:${pokemon.id}`);
+    return {ok:true,json:async()=>exact};
+   }
+   return {ok:true,json:async()=>({id:url.split('/').at(-1),name:pokemon.name,
+    dexId:pokemon.id===25 ? [25,644] : [pokemon.id],illustrator:'Artist',
+    image:'https://assets.tcgdex.net/en/test/1'})};
+  };
+  let offset=0,scanned=0;const found=[];
+  do {
+   const page=await discoverCards(pokemon,offset,fake);
+   assert.equal(page.total,pokemon.count);
+   assert.ok(page.scanned<=12);
+   assert.equal(page.offset,offset);
+   assert.equal(page.nextOffset,offset+page.scanned<pokemon.count ? offset+page.scanned : null);
+   scanned+=page.scanned;found.push(...page.cards);offset=page.nextOffset;
+  } while(offset!==null);
+  assert.equal(scanned,pokemon.count);assert.equal(found.length,pokemon.count);
+  assert.equal(requested.filter(url=>url.includes('?')).length,1);
+  assert.ok(found.every(card=>card.pokemonIds.includes(pokemon.id)));
+  if(pokemon.id===25)assert.deepEqual(found[0].pokemonIds,[25,644]);
+ });
+}
