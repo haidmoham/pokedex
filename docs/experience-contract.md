@@ -78,6 +78,8 @@ Automated model/server tests cover sequence, endpoints, fallback metadata, ranki
 
 - Admission and source availability are distinct. Initial transfer cap 750 KB; visual quality, decoded texture/memory and animation budgets require separate evidence.
 - Only the active model mounts; no neighboring GLB prefetch. Verify bytes and Git blob identity before allocating a decoder. Cancel obsolete requests and ignore their results. A 12-second load deadline or renderer failure selects official art.
-- Lazy viewer, zero retained model cache, scene teardown on removal, no automatic rotation/playback; reduced motion remains still. Missing entries have no dead model slide.
+- Lazy viewer, zero retained model cache and scene teardown on removal. An admitted idle plays slowly only on the active visible model; open panels pause it. Browsing never rotates the camera automatically. Reduced motion samples a still idle pose. Missing entries have no dead model slide.
 - Ordinary swipe navigates. Inspect deliberately locks feed position and enables model rotation. Accessible rotate buttons supplement dragging; Escape/Done restores Inspect focus and the exact visit/history.
+- Pause idle is available without entering Inspect. Model controls have their own reserved space at phone widths; the model stays uncropped.
+- Share opens the native share sheet, or copies a species link on desktop. A manual copy field handles clipboard failures. Links use the current origin and `?pokemon=1–1025`; a fresh visit opens that species in national order, not a reconstructed private discovery history. Creator credit links to `mhaider.dev` in details.
 - Preserve source uploader attribution, license claims and gaps. The software license does not clear underlying Pokémon IP.

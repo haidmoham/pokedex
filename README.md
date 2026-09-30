@@ -4,6 +4,10 @@ A pokédex you can doomscroll. Move vertically through the national dex, sideway
 
 Mobile comes first: 320px layouts, native vertical scrolling, ordinary swipes for navigation and explicit Inspect for rotating an admitted 3D view. View order is viable 3D, official art, fresh highest-priced available card, then the remaining gallery and related discovery. Model gaps or failures lead directly to official art. No claim of infinite unique artwork or complete model coverage.
 
+Share any species using the share button beside its name. Native sharing falls back to clipboard or a manual copy field. `?pokemon=150` opens Mewtwo directly, retaining national order and the current preview/mirror origin. Links identify the species; private artwork history is not serialized. A discreet creator credit in details leads to [mhaider.dev](https://mhaider.dev).
+
+The active admitted model plays its idle at a gentle pace, with an explicit Pause idle control. Hidden tabs and open panels pause playback; reduced motion keeps a sampled idle pose still. Rotation remains behind Inspect. Only the active model loads, with unchanged byte/decoded-memory admission and teardown guards.
+
 ## Run locally
 
 Use Node.js 24. Tests use JSON import attributes.

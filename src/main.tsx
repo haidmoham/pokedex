@@ -13,9 +13,11 @@ import type { TrailCursor, TrailStep } from './trail-model';
 import { admittedModel, modelEdition } from './model-policy';
 import { ModelView } from './model-view';
 import { searchSpecies, rememberSearchPick, validRecentPicks } from './search-model';
+import { linkedSpecies, speciesLink } from './species-link';
 import './style.css';
 
 const pokemon = nationalDex(speciesSnapshot as Pokemon[]);
+const initialIndex = (linkedSpecies(location.search) ?? 1) - 1;
 type Drawer = 'search' | 'details' | 'artist' | null;
 type TrailResult = { card: CardEdition | null; context?: string; cursor: TrailCursor | null; exhausted: boolean; partial: boolean };
 type Candidate = { key: string; state: 'loading' | 'ready' | 'search' | 'exhausted' | 'error'; card?: CardEdition; context?: string; cursor?: TrailCursor | null; error?: string; partial?: boolean };
@@ -34,7 +36,7 @@ const formatPrice = (card: CardEdition, currency: string) => {
   return price ? new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price.amount) : null;
 };
 
-function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' | 'right' | 'up' | 'down' | 'grid' }) {
+function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' | 'right' | 'up' | 'down' | 'grid' | 'share' }) {
   const paths = {
     search: <><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></>,
     heart: <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />,
@@ -45,17 +47,18 @@ function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' |
     up: <path d="m5 14 7-7 7 7" />,
     down: <path d="m5 10 7 7 7-7" />,
     grid: <><rect x="4" y="4" width="6" height="6" rx="1" /><rect x="14" y="4" width="6" height="6" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><rect x="14" y="14" width="6" height="6" rx="1" /></>,
+    share: <><path d="M12 16V3m-4 4 4-4 4 4M7 11H4v10h16V11h-3" /></>,
   };
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
 
 function App() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
   const activePokemon = pokemon[activeIndex];
   const [allCards, setAllCards] = useState<CardEdition[]>(cardsSnapshot as CardEdition[]);
   const [, redrawPortfolio] = useState(0);
   const [portfolio] = useState(() => new ArtistPortfolio(() => redrawPortfolio(version => version + 1), incoming => setAllCards(previous => mergeCardLibrary(previous, incoming))));
-  const [visits, setVisits] = useState<Record<number, Visit>>(() => prepareVisits({}, pokemon.slice(0, 2), cardsSnapshot as CardEdition[], 'USD'));
+  const [visits, setVisits] = useState<Record<number, Visit>>(() => prepareVisits({}, pokemon.slice(Math.max(0, initialIndex - 1), initialIndex + 2), cardsSnapshot as CardEdition[], 'USD'));
   const visitsRef = useRef(visits);
   visitsRef.current = visits;
   const [currency, setCurrency] = useState('USD');
@@ -83,6 +86,8 @@ function App() {
   const [discoveryRetry, setDiscoveryRetry] = useState(0);
   const [manifestFailed, setManifestFailed] = useState(false);
   const [error, setError] = useState('');
+  const [shareStatus, setShareStatus] = useState('');
+  const [manualShare, setManualShare] = useState('');
   const [candidate, setCandidate] = useState<Candidate | null>(null);
   const candidateRequest = useRef(0);
   const candidateAbort = useRef<AbortController | null>(null);
@@ -99,10 +104,34 @@ function App() {
   const pointer = useRef(new PointerGesture());
   const wheel = useRef(new WheelGesture());
   const wheelNavigation = useRef<(direction: number) => void>(() => {});
-  const activeIndexRef = useRef(0);
+  const activeIndexRef = useRef(initialIndex);
   const feedPosition = useRef(new FeedPosition());
   const drawerRef = useRef<Drawer>(null);
-  const baseIndex = useRef(0);
+  const baseIndex = useRef(initialIndex);
+
+  useLayoutEffect(() => {
+    if (feedRef.current) feedPosition.current.jump(feedRef.current, initialIndex, pokemon.length);
+  }, []);
+
+  useEffect(() => { setShareStatus(''); setManualShare(''); }, [activePokemon.id]);
+
+  async function shareSpecies(invoker: HTMLElement) {
+    const url = speciesLink(location.origin, activePokemon.id);
+    setShareStatus('');
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: `${activePokemon.name} · pokédex`, text: 'a pokédex you can doomscroll', url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        setShareStatus('Species link copied');
+      }
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return;
+      setManualShare(url);
+      openDrawer('details', undefined, invoker);
+      setShareStatus('Copy the species link below');
+    }
+  }
 
   // Prepare the same edition that will be selected when the incoming slide
   // becomes active. It must not replace a visible official image mid-swipe.
@@ -547,7 +576,7 @@ function App() {
           {edition && <>
             <span className="ghost-number" aria-hidden="true">{dexNumber(item.id)}</span>
             <div className={`art-stage ${['official', 'model'].includes(edition.sourceType ?? '') ? 'is-official' : 'is-card'}`}>
-              {edition.sourceType === 'model' && index === activeIndex && admittedModel(item.id) ? <ModelView key={edition.cardId} asset={admittedModel(item.id)!} name={item.name} onInspect={inspecting => { const feed = feedRef.current; if (!feed) return; if (inspecting) { pointer.current.cancel(); wheel.current.reset(); feedPosition.current.lock(feed, activeIndexRef.current); } else if (!drawerRef.current) feedPosition.current.unlock(feed); }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${item.id}`))} /> : brokenImages.includes(edition.image) ? <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{edition.sourceType === 'official' ? item.name : edition.title}</small><button className="image-retry" tabIndex={index === activeIndex ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, edition.image))}>Retry image</button></div> :
+              {edition.sourceType === 'model' && index === activeIndex && admittedModel(item.id) ? <ModelView key={edition.cardId} asset={admittedModel(item.id)!} name={item.name} suspended={Boolean(drawer)} onInspect={inspecting => { const feed = feedRef.current; if (!feed) return; if (inspecting) { pointer.current.cancel(); wheel.current.reset(); feedPosition.current.lock(feed, activeIndexRef.current); } else if (!drawerRef.current) feedPosition.current.unlock(feed); }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${item.id}`))} /> : brokenImages.includes(edition.image) ? <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{edition.sourceType === 'official' ? item.name : edition.title}</small><button className="image-retry" tabIndex={index === activeIndex ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, edition.image))}>Retry image</button></div> :
                 <img key={edition.image} className="hero-art" src={edition.image} alt={edition.sourceType === 'official' ? `${item.name}, official species artwork` : `${edition.title} Pokémon TCG card, illustrated by ${edition.artist}`} draggable={false} fetchPriority={index === activeIndex ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, edition.image))} />}
             </div>
           </>}
@@ -559,7 +588,7 @@ function App() {
       {branch && <button className="branch-back" onClick={goBack} aria-label={`Back to ${branch.originLabel ?? 'previous view'}`}><Icon name="left" /> Back to {branch.originLabel ?? 'previous view'}</button>}
       <div className="feed-caption" key={activePokemon.id}>
         <span className="species-types">{trail ? trail[trailIndex]?.context : activeVisit.context ?? activePokemon.types.join(' · ')}</span>
-        <h1>{activePokemon.name}</h1>
+        <div className="species-heading"><h1>{activePokemon.name}</h1><button className="icon-button share-species" aria-label={`Share ${activePokemon.name}`} onClick={event => shareSpecies(event.currentTarget)}><Icon name="share" /></button></div>
         {card.sourceType === 'model' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>3D · {card.artist} <span>›</span></button> : card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :
           <button className="credit-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} <span>›</span></button>}
       </div>
@@ -579,6 +608,7 @@ function App() {
         </nav>
       </div>
     </div>
+    <span className="share-status" role="status">{shareStatus}</span>
     <div className="dex-progress" aria-hidden="true"><span style={{ width: `${((activeIndex + 1) / pokemon.length) * 100}%` }} /></div>
     <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'model' ? `Community 3D model credited to ${card.artist}.` : card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} {trail ? trail[trailIndex]?.context : ''}</span>
     {error && <button className="toast" role="alert" onClick={() => setError('')}>{error} ×</button>}
@@ -599,6 +629,8 @@ function App() {
             <p className="quiet-note">Names, 150 or #001. Search jumps to a species; the feed stays in Pokédex order.</p>
           </div>}
           {drawer === 'details' && <>
+            {manualShare && <label className="manual-share">Species link<input readOnly value={manualShare} onFocus={event => event.currentTarget.select()} aria-label="Species link to copy" /></label>}
+            <p className="creator-credit">made by <a href="https://mhaider.dev" target="_blank" rel="noreferrer">haider ↗</a> · a pokédex you can doomscroll</p>
             <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
             <button className={`save-pokemon ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)}><Icon name="heart" /> {favorites.includes(activePokemon.id) ? 'Saved Pokémon' : 'Save Pokémon'}</button>
             <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length} loaded</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => changeVisit(visit => selectVisit(visit, edition.cardId))} aria-label={`${edition.title}, ${edition.sourceType === 'model' ? 'interactive 3D model' : edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
