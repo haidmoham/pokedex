@@ -39,7 +39,7 @@ svg { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
 .species-slide { flex: 0 0 100%; position: relative; height: 100%; width: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; }
 .ghost-number { position: absolute; top: 13%; left: 50%; transform: translateX(-50%); font-weight: 800; font-size: clamp(140px, 38vw, 460px); letter-spacing: -.07em; line-height: 1; color: rgb(var(--tint) / .12); user-select: none; pointer-events: none; }
 .art-stage { position: absolute; inset: calc(85px + env(safe-area-inset-top)) 16px var(--art-bottom, calc(184px + env(safe-area-inset-bottom))); display: flex; align-items: center; justify-content: center; pointer-events: none; }
-.has-branch .art-stage { top: calc(128px + env(safe-area-inset-top)); }
+.has-branch .art-stage { top: calc(188px + env(safe-area-inset-top)); }
 .hero-art { display: block; width: 100%; height: 100%; object-fit: contain; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; }
 .is-card .hero-art { width: auto; max-width: min(86vw, 560px); max-height: 100%; border-radius: 12px; filter: drop-shadow(0 20px 32px #0008); }
 .is-official { inset: calc(62px + env(safe-area-inset-top)) 0 var(--art-bottom, calc(155px + env(safe-area-inset-bottom))); }
@@ -76,7 +76,7 @@ h1 { font-size: clamp(36px, 7.8vw, 64px); line-height: 1.04; margin: 7px 0 10px;
 .edition-count .edition-word { font-family: 'DM Sans', sans-serif; margin-left: 3px; }
 .species-controls { display: flex; align-items: center; gap: 4px; }
 .next-species { display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 8px 0 8px 8px; font-size: 12px; color: #ffffffa8; }
-.branch-back { position: fixed; top: calc(76px + env(safe-area-inset-top)); left: var(--edge); display: flex; align-items: center; gap: 8px; min-height: 44px; max-width: calc(100vw - 2 * var(--edge)); padding: 8px 12px; border-radius: 22px; background: #14221dca; font-size: 12px; z-index: 4; }
+.branch-back { position: fixed; top: calc(136px + env(safe-area-inset-top)); left: var(--edge); display: flex; align-items: center; gap: 8px; min-height: 44px; max-width: calc(100vw - 2 * var(--edge)); padding: 8px 12px; border-radius: 22px; background: #14221dca; font-size: 12px; z-index: 4; }
 .branch-back svg { width: 16px; height: 16px; }
 .save-pokemon { display: flex; align-items: center; gap: 9px; min-height: 44px; padding: 8px 12px; border: 1px solid #ffffff30; border-radius: 22px; font-size: 12px; }
 .save-pokemon svg { width: 16px; height: 16px; }
@@ -252,3 +252,15 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .recent-picks img { width: 48px; height: 48px; object-fit: contain; }
 .recent-picks span { font-family: var(--mono); font-size: 10px; color: #ffffff80; }
 .recent-picks strong { display: block; font-family: var(--sans); font-size: 12px; color: white; font-weight: 500; }
+
+/* A quiet second action beneath the existing candy-like dex-number control. */
+.dex-navigation { position: absolute; left: 50%; top: calc(18px + env(safe-area-inset-top)); transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.dex-navigation .dex-position { position: relative; left: auto; transform: none; }
+.dex-navigation .dex-jump:active { transform: translateY(3px); }
+.random-pokemon { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 0 14px; border-radius: 22px; background: #101918d9; border: 1px solid #ffffff24; font-size: 12px; font-weight: 600; color: #ffffffc9; }
+.random-pokemon svg { width: 16px; height: 16px; }
+.random-pokemon:hover { background: #29312fea; color: #fff; }
+.random-pokemon:active { transform: translateY(1px); }
+@media (min-width: 768px) { .dex-navigation { top: 28px; } }
+@media (max-width: 480px) { .dex-navigation { top: calc(14px + env(safe-area-inset-top)); } }
+@media (max-height: 600px) { .dex-navigation { top: calc(10px + env(safe-area-inset-top)); } }

@@ -41,7 +41,7 @@ const formatPrice = (card: CardEdition, currency: string) => {
   return price ? new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price.amount) : null;
 };
 
-function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' | 'right' | 'up' | 'down' | 'grid' | 'share' }) {
+function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' | 'right' | 'up' | 'down' | 'grid' | 'share' | 'shuffle' }) {
   const paths = {
     search: <><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></>,
     heart: <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />,
@@ -52,6 +52,7 @@ function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' |
     up: <path d="m5 14 7-7 7 7" />,
     down: <path d="m5 10 7 7 7-7" />,
     grid: <><rect x="4" y="4" width="6" height="6" rx="1" /><rect x="14" y="4" width="6" height="6" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><rect x="14" y="14" width="6" height="6" rx="1" /></>,
+    shuffle: <><path d="M3 6h3c4 0 8 12 12 12h3m-4-4 4 4-4 4M3 18h3c1.5 0 3-1.6 4.5-4M14 8c1.5-1.4 2.6-2 4-2h3m-4-4 4 4-4 4" /></>,
     share: <><path d="M12 16V3m-4 4 4-4 4 4M7 11H4v10h16V11h-3" /></>,
   };
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
@@ -432,6 +433,15 @@ function App() {
     enterSpecies(next);
 
   }
+  function randomPokemon() {
+    if (drawerRef.current || pokemon.length < 2) return;
+    // Draw once from every other national-dex entry, including both endpoints.
+    // Keep the same route/URL behavior as deliberate species navigation.
+    const current = activeIndexRef.current;
+    const draw = Math.floor(Math.random() * (pokemon.length - 1));
+    setInspectingModel(false);
+    jumpTo(draw >= current ? draw + 1 : draw);
+  }
   function positionFeed(index: number) {
     const feed = feedRef.current;
     if (!feed) return;
@@ -554,7 +564,10 @@ function App() {
   return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
     <header className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" /><span className="brand-name">pokédex<span className="brand-dot">.</span></span></button>
-      <button className="dex-position dex-jump" onClick={event => { setQuery(''); openDrawer('search', undefined, event.currentTarget); }} aria-label={`Jump to Pokédex number. Current ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></button>
+      <div className="dex-navigation">
+        <button className="dex-position dex-jump" onClick={event => { setQuery(''); openDrawer('search', undefined, event.currentTarget); }} aria-label={`Jump to Pokédex number. Current ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></button>
+        <button className="random-pokemon" onClick={randomPokemon} aria-label="Random Pokémon"><Icon name="shuffle" /><span>Random</span></button>
+      </div>
       <button className="icon-button search-button" onClick={() => openDrawer('search')} aria-label="Search Pokédex"><Icon name="search" /></button>
     </header>
 
