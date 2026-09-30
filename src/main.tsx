@@ -84,6 +84,7 @@ function App() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const completedDiscovery = useRef(new Set<number>());
   const feedRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const drawerScrollRef = useRef<HTMLDivElement>(null);
   const pendingFocus = useRef<HTMLElement | null>(null);
@@ -102,6 +103,17 @@ function App() {
   useLayoutEffect(() => {
     setVisits(old => prepareVisits(old, pokemon.slice(Math.max(0, activeIndex - 1), activeIndex + 2), libraryRef.current, currency));
   }, [activeIndex, currency]);
+
+  useLayoutEffect(() => {
+    const overlay = overlayRef.current;
+    const feed = feedRef.current;
+    if (!overlay || !feed) return;
+    const reserveCaption = () => feed.style.setProperty('--art-bottom', `${overlay.getBoundingClientRect().height + 12}px`);
+    reserveCaption();
+    const resize = new ResizeObserver(reserveCaption);
+    resize.observe(overlay);
+    return () => resize.disconnect();
+  }, []);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -481,7 +493,7 @@ function App() {
     if (event.key === 'End') jumpTo(pokemon.length - 1);
   }
 
-  return <main className={`app-shell type-${activePokemon.types[0]} ${continuationKey ? 'has-continuation' : ''}`} onKeyDown={onFeedKey}>
+  return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
     <header className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" />pokédex<span className="brand-dot">.</span></button>
       <span className="dex-position" aria-label={`Pokédex number ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></span>
@@ -507,7 +519,7 @@ function App() {
       })}
     </div>
 
-    <div className="feed-overlay">
+    <div ref={overlayRef} className="feed-overlay">
       {branch && <button className="branch-back" onClick={goBack} aria-label={`Back to ${branch.originLabel ?? 'previous view'}`}><Icon name="left" /> Back to {branch.originLabel ?? 'previous view'}</button>}
       <div className="feed-caption" key={activePokemon.id}>
         <span className="species-types">{activePokemon.types.join(' · ')}</span>

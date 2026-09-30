@@ -38,11 +38,11 @@ svg { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
 .species-feed::-webkit-scrollbar { display: none; }
 .species-slide { position: relative; height: 100%; width: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; }
 .ghost-number { position: absolute; top: 13%; left: 50%; transform: translateX(-50%); font-weight: 800; font-size: clamp(140px, 38vw, 460px); letter-spacing: -.07em; line-height: 1; color: rgb(var(--tint) / .12); user-select: none; pointer-events: none; }
-.art-stage { position: absolute; inset: calc(85px + env(safe-area-inset-top)) 16px calc(184px + env(safe-area-inset-bottom)); display: flex; align-items: center; justify-content: center; pointer-events: none; }
-.has-continuation .art-stage { bottom: calc(255px + env(safe-area-inset-bottom)); }
+.art-stage { position: absolute; inset: calc(85px + env(safe-area-inset-top)) 16px var(--art-bottom, calc(184px + env(safe-area-inset-bottom))); display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.has-branch .art-stage { top: calc(128px + env(safe-area-inset-top)); }
 .hero-art { display: block; width: 100%; height: 100%; object-fit: contain; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; }
 .is-card .hero-art { width: auto; max-width: min(86vw, 560px); max-height: 100%; border-radius: 12px; filter: drop-shadow(0 20px 32px #0008); }
-.is-official { inset: calc(62px + env(safe-area-inset-top)) 0 calc(155px + env(safe-area-inset-bottom)); }
+.is-official { inset: calc(62px + env(safe-area-inset-top)) 0 var(--art-bottom, calc(155px + env(safe-area-inset-bottom))); }
 .is-official .hero-art { max-width: 760px; padding: 0 4%; filter: drop-shadow(0 24px 26px #0005); }
 .image-unavailable { display: grid; justify-items: center; gap: 16px; color: #fff9; font-size: 14px; }
 .image-unavailable svg { width: 40px; height: 40px; opacity: .5; }
@@ -178,9 +178,8 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 }
 @media (max-height: 600px) {
   .topbar { padding-top: calc(10px + env(safe-area-inset-top)); }
-  .art-stage { inset: calc(65px + env(safe-area-inset-top)) 16px calc(150px + env(safe-area-inset-bottom)); }
-  .has-continuation .art-stage { bottom: calc(225px + env(safe-area-inset-bottom)); }
-  .is-official { inset: calc(45px + env(safe-area-inset-top)) 0 calc(122px + env(safe-area-inset-bottom)); }
+  .art-stage { inset: calc(65px + env(safe-area-inset-top)) 16px var(--art-bottom, calc(150px + env(safe-area-inset-bottom))); }
+  .is-official { inset: calc(45px + env(safe-area-inset-top)) 0 var(--art-bottom, calc(122px + env(safe-area-inset-bottom))); }
   .feed-caption { margin-bottom: 15px; }
   h1 { font-size: 32px; margin: 4px 0 6px; }
   .feed-overlay { padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
