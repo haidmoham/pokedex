@@ -135,3 +135,37 @@ test("manifest gate rejects mismatched credits, dex IDs, and duplicate cards", (
     /duplicate manifest ID/,
   );
 });
+
+test("partially failed discovery pages bypass CDN caching and recover on retry", async () => {
+  let attempts = 0;
+  const server = createApp({ serveClient:false, stateless:true, discover:async () => {
+    attempts++;
+    return { cards:[], failed:attempts === 1 ? ['temporary-failure'] : [], scanned:1, total:1, nextOffset:null };
+  } }).listen(0);
+  const base = `http://127.0.0.1:${server.address().port}`;
+  try {
+    const first = await fetch(`${base}/api/discovery/887?offset=0`);
+    assert.equal(first.headers.get('cache-control'), 'no-store');
+    assert.deepEqual((await first.json()).failed, ['temporary-failure']);
+    const retry = await fetch(`${base}/api/discovery/887?offset=0`);
+    assert.match(retry.headers.get('cache-control'), /s-maxage=1800/);
+    assert.deepEqual((await retry.json()).failed, []);
+    assert.equal(attempts, 2);
+  } finally {
+    await new Promise(done => server.close(done));
+  }
+});
+
+test("stateless previews never read or mutate shared server favorites", async () => {
+  const server = createApp({ serveClient:false, stateless:true }).listen(0);
+  const base = `http://127.0.0.1:${server.address().port}`;
+  try {
+    for (const [path, method] of [['/api/favorites','GET'], ['/api/favorites/887','POST'], ['/api/favorites/887','DELETE']]) {
+      const response = await fetch(`${base}${path}`, { method });
+      assert.equal(response.status, 410);
+      assert.match((await response.json()).error, /privately on this device/);
+    }
+  } finally {
+    await new Promise(done => server.close(done));
+  }
+});

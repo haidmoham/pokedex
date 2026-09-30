@@ -17,6 +17,7 @@ test('catalog cards require exact species attribution and a recognized image sou
  assert.equal(normalizeCard({...raw,image:'https://unrelated.test/x'},{id:887,name:'Dragapult'}),null);
  const card=normalizeCard(raw,{id:887,name:'Dragapult'});
  assert.equal(card.artist,'Example'); assert.equal(card.sourceType,'catalog'); assert.equal(card.publisherCheck,'not independently reviewed');
+ assert.deepEqual(normalizeCard({...raw,dexId:[887,94]},{id:887,name:'Dragapult'}).pokemonIds,[887,94]);
 });
 test('discovery returns bounded batches and explicit missing-source coverage',async()=>{
  const list=Array.from({length:14},(_,i)=>({id:`test-${i}`}));let calls=0,active=0,max=0;

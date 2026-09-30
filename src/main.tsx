@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import { PointerGesture, WheelGesture, wrapIndex } from "./navigation";
+import { belongsToSpecies, cardSpeciesIds, mergeCardLibrary } from "./card-library";
 
 type Pokemon = {
   id: number;
@@ -15,6 +16,7 @@ type CardEdition = {
   prices?: Price[];
   sourceType?: string;
   pokemonId: number;
+  pokemonIds?: number[];
   pokemonName: string;
   cardId: string;
   title: string;
@@ -122,7 +124,7 @@ function App() {
     page === "artist" ? `artist:${activeArtist}` : `pokemon:${activePokemonId}`;
   const bestPrice = (card: CardEdition) => card.prices?.filter(p=>p.currency===currency).sort((a,b)=>b.amount-a.amount)[0];
   const cards = allCards.filter((card) =>
-    page === "artist" ? card.artist === activeArtist : card.pokemonId === activePokemonId,
+    page === "artist" ? card.artist === activeArtist : belongsToSpecies(card, activePokemonId),
   ).sort((a,b)=>(bestPrice(b)?.amount ?? -1)-(bestPrice(a)?.amount ?? -1) || a.cardId.localeCompare(b.cardId));
   if(page === 'museum' && activePokemon) cards.push({pokemonId:activePokemon.id,pokemonName:activePokemon.name,cardId:`official-${activePokemon.id}`,title:activePokemon.name,set:'official species artwork',number:number(activePokemon.id),language:'',rarity:'',artist:'individual artist not specified',image:artwork(activePokemon.id),imageProvider:'PokéAPI sprites',imageSha256:'',imageDimensions:{width:475,height:475},tcgdexUrl:'https://github.com/PokeAPI/sprites',publisherCheck:'',artistEvidenceMethod:'official species artwork; individual artist not specified',artistEvidenceUrl:'https://github.com/PokeAPI/sprites',artistObservedText:'',sourceType:'official'});
   const slideIndex = Math.max(0,cards.findIndex(card=>card.cardId===selectedIds[cardKey]));
@@ -233,14 +235,7 @@ function App() {
           const data: {cards:CardEdition[];scanned:number;failed:string[];total:number;nextOffset:number|null}=await response.json();
           if(!live) return;
           scanned+=data.scanned; failed+=data.failed.length;
-          setAllCards(previous=>{
-            const byId=new Map(previous.map(c=>[c.cardId,c]));
-            for(const card of data.cards as CardEdition[]) {
-              const checked=byId.get(card.cardId);
-              byId.set(card.cardId,checked && !checked.sourceType ? {...checked,prices:card.prices} : card);
-            }
-            return [...byId.values()];
-          });
+          setAllCards(previous=>mergeCardLibrary(previous, data.cards));
           offset=data.nextOffset;
           setDiscovery(old=>({...old,[id]:{scanned,total:data.total,failed,done:offset===null}}));
         } catch {
@@ -445,7 +440,7 @@ function App() {
                     >
                       <span className="species-number">{number(item.id)}</span>
                       <span className="species-halo" aria-hidden="true" />
-                      <img src={allCards.filter(c=>c.pokemonId===item.id).sort((a,b)=>(bestPrice(b)?.amount??-1)-(bestPrice(a)?.amount??-1))[0]?.image ?? artwork(item.id)} alt="" loading="lazy" />
+                      <img src={allCards.filter(c=>belongsToSpecies(c,item.id)).sort((a,b)=>(bestPrice(b)?.amount??-1)-(bestPrice(a)?.amount??-1))[0]?.image ?? artwork(item.id)} alt="" loading="lazy" />
                       <span className="species-name">{item.name}</span>
                       <span className="species-type">
                         {item.types.join(" / ")}
@@ -521,7 +516,7 @@ function App() {
               </h1>
               <p className="museum-subtitle">
                 {page === "artist"
-                  ? `loaded artworks across ${new Set(cards.map((card) => card.pokemonId)).size || "…"} Pokémon`
+                  ? `loaded artworks across ${new Set(cards.flatMap(cardSpeciesIds)).size || "…"} Pokémon`
                   : `${activePokemon ? number(activePokemon.id) : ""} · ${activePokemon?.types.join(" / ") ?? ""} · follow the illustrator`}
               </p>
             </div>
@@ -610,7 +605,7 @@ function App() {
                 onDragStart={(event) => event.preventDefault()}
               >
                 <span className="stage-index index-left" aria-hidden="true">
-                  {number(selectedCard.pokemonId)}
+                  {number(page === "museum" ? activePokemonId : selectedCard.pokemonId)}
                 </span>
                 {previousCard && (
                   <NeighborCard

@@ -15,6 +15,7 @@ export function createApp({
   dataFile = resolve(root, "data/favorites.json"),
   serveClient = true,
   stateless = false,
+  discover = discoverCards,
 } = {}) {
   const app = express();
   app.use(express.json());
@@ -72,8 +73,9 @@ export function createApp({
     const offset = Number(request.query.offset ?? 0);
     if (!pokemon || !Number.isInteger(offset) || offset < 0 || offset > 5000) return response.status(400).json({error:'invalid species or page'});
     try {
-      const data = await discoverCards(pokemon,offset);
-      response.set('Cache-Control','public, s-maxage=1800, stale-while-revalidate=3600').json(data);
+      const data = await discover(pokemon,offset);
+      // A transiently failed page must be retried upstream, not frozen by CDN caching.
+      response.set('Cache-Control',data.failed.length ? 'no-store' : 'public, s-maxage=1800, stale-while-revalidate=3600').json(data);
     } catch { response.status(502).json({error:'card source unavailable; saved cards and official artwork remain available'}); }
   });
   app.use('/api/favorites', (request, response, next) => {

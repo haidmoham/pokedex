@@ -34,7 +34,7 @@ export function extractPrices(pricing, now = Date.now()) {
 export function normalizeCard(card, pokemon) {
   if (!card || !Array.isArray(card.dexId) || !card.dexId.includes(pokemon.id) || !card.id || !card.illustrator || !/^https:\/\/assets\.tcgdex\.net\//.test(card.image ?? '')) return null;
   return {
-    pokemonId:pokemon.id, pokemonName:pokemon.name, cardId:card.id,
+    pokemonId:pokemon.id, pokemonIds:card.dexId.filter(id => Number.isInteger(id) && id > 0), pokemonName:pokemon.name, cardId:card.id,
     title:card.name, set:card.set?.name ?? 'set not provided', number:`${card.localId}/${card.set?.cardCount?.official ?? '?'}`,
     language:'en', rarity:card.rarity ?? 'not provided', artist:card.illustrator,
     image:`${card.image}/high.webp`, imageProvider:'TCGdex',
