@@ -22,6 +22,7 @@ test('model admission is explicit, size-bounded and source-host scoped', () => {
   assert.equal(admittedModel(1, [asset]), asset);
   for (const change of [{ admitted: false }, { bytes: 750001 }, { bytes: 0 }, { url: 'https://elsewhere.test/1.glb' }, { blobSha: 'unknown' }]) assert.equal(admittedModel(1, [{ ...asset, ...change }]), undefined);
   assert.equal(admittedModel(1025, [asset]), undefined);
+  assert.equal(admittedModel(1000, [{ ...asset, id: 1000 }]), undefined);
 });
 test('changed source identity, oversized streams and malformed GLBs are rejected before viewer allocation', async () => {
   const bytes = glb();
