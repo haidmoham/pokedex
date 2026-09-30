@@ -1,96 +1,55 @@
-# card gallery experience contract
+# Artwork feed experience contract
 
-## experience
+## Primary experience
 
-- Lead with a Pokédex that lets a visitor choose a species. Opening a species
-  moves into a quieter, image-led card museum while preserving that species.
-- The entry Pokédex uses species artwork. It does not assign a TCG illustrator
-  credit to that artwork.
-- Each museum slide pairs one Pokémon card edition with its artist plaque.
-  The image, exact card title, set, number, language, and artist come from one
-  checked record and change together.
-- Artist names are actions. Selecting one opens a looping gallery of checked
-  card editions by that illustrator across Pokémon. Do not invent related work.
-- Dragapult (#887) is the reference journey. Coverage grows only when evidence
-  passes the admission rule below. Fewer than three cards is an honest result.
+- Open on Bulbasaur (#001), immediately. The complete 1,025-species catalog is bundled with the client, so API failure cannot block navigation.
+- One full-height species per viewport, in strict national-dex order. Swipe up or scroll down to advance; reverse to return. #001 and #1025 are endpoints, with no featured reorder or species wrap.
+- Let the browser handle vertical scrolling and snapping. Render artwork only for the current and adjacent species; do not load thousands of images.
+- Swipe left/right to loop through editions within that species. Keep button and keyboard alternatives. Ambiguous diagonals must not trigger a horizontal change; cancellation and multi-touch must not leave a pending gesture. Browser pinch zoom stays enabled.
+- Lead with a large, uncropped image, species name, a short artist/source credit and minimal controls. Pricing, edition metadata, source evidence and coverage belong behind the info button.
+- Artist names open the illustrator's already-loaded card gallery. Search is a jump tool; type/saved filters affect search results only, never the feed's national-dex order.
+- Preserve each deliberately selected card ID through discovery, price updates and currency changes. Until a selection, the highest fresh comparable loaded price may improve the lead.
 
-## navigation and presentation
+## Navigation and accessibility
 
-- Show the artwork large and uncropped. Keep the artist name prominent and the
-  source links secondary in the credit area.
-- Read the image's pixel dimensions and record its SHA-256. Keep the full card
-  composition and link to the original asset. Reject blur, destructive crops,
-  stretched scans, and duplicate reprints. The audit checks the PNG signature,
-  IHDR dimensions, and full-file hash. A 600px-wide scan stays at or below
-  300 CSS px when claiming 2× crispness; a larger inspect view must not claim
-  extra detail.
-- Loop the finite verified set. The species feed starts with Dragapult and Gengar,
-  followed by all remaining catalog species in dex order. On the card surface,
-  vertical swipe/wheel and up/down keys change species; horizontal swipe/wheel
-  and left/right keys change card editions. Buttons expose both axes.
-- Keep page scrolling outside the card surface and preserve pinch zoom. Artist
-  galleries use horizontal navigation only; vertical gestures scroll the page.
-- Reject ambiguous diagonal gestures, cancel interrupted pointers, and consume
-  a wheel momentum stream only once. Remember each gallery's card selection.
-- Support thumbnail selection and keep controls available without gestures.
-- Keep these inputs on one selected record. A wrapped transition updates the
-  image and every credit field from the same record.
-- Preserve keyboard focus, visible focus rings, useful mobile targets, and
-  reduced-motion settings.
-- Use verified card editions as the only carousel content. No duplicate art
-  from reprints. Rarity can help find candidates; it does not rank artists or
-  prove artistic merit.
+- Up/down arrows and Page Up/Down change species; left/right arrows change editions. Home and End reach the first and last species. Both axes have visible buttons.
+- Native modal drawers use `showModal`, trap focus outside the feed, dismiss with Escape/Close/backdrop, and scroll independently. Drawer scrolling must not navigate species or editions.
+- Allow horizontal thumbnail scrolling in the drawer. Preserve pinch zoom and cancel interrupted pointer gestures without taking over vertical touch scrolling.
+- Keep visible focus rings, accessible names, useful mobile targets, safe-area padding, 320px layouts and reduced motion. Offscreen species are hidden from assistive technology; one concise live announcement describes the active artwork.
+- Do not claim extra resolution: display original assets uncropped with `object-fit: contain`; larger presentation cannot create image detail.
 
-## evidence admission
+## Evidence and identity
 
-Each displayed card must have a local manifest record containing:
+The independently reviewed manifest contains:
 
-- exact Pokémon dex ID and name;
-- exact card title, set, collector number, and language;
-- literal illustrator spelling from TCGdex;
-- exact TCGdex card API and human-readable card URLs;
-- exact card image URL, provider, SHA-256, pixel dimensions, and check date;
-- an exact publisher card page with observed matching credit, or an inspected
-  printed-card scan whose credit matches TCGdex;
-- evidence method, URL, observed credit text, and check date.
+- Exact dex membership, card title, set, collector number and language
+- Literal illustrator spelling from TCGdex
+- Exact TCGdex record, card image source, SHA-256, dimensions and check date
+- A matching publisher-page or inspected printed-scan artist credit, with the actual evidence method, URL, observed text and check date
 
-The artist spelling and exact card identity must agree across TCGdex and the
-publisher page or printed scan. Unknown, conflicting, malformed, or uninspected
-credits stay out of the manifest and API. Publisher pages that cannot be read
-directly must be labeled with the actual method used to review their indexed
-text. A second community API can find candidates but does not satisfy the
-publisher-or-scan check.
+The artist and edition identity must agree. Unknown, conflicting or malformed reviewed records stay out of the reviewed API. Indexed publisher observations must remain labeled as indexed observations; the audit must not pretend to fetch bot-blocked evidence.
 
-The audit command re-fetches TCGdex card records, validates manifest identity
-and evidence fields, and checks image hashes and PNG IHDR dimensions. Publisher and
-printed-scan observations remain explicit review records; the audit does not
-pretend to crawl a bot-blocked publisher page or infer its contents.
+The live discovery tier is separate. It admits exact TCGdex species membership and literal provider credits but remains labeled as metadata not independently reviewed. It never inherits publisher/printed-scan claims. Shared TAG TEAM cards retain all species memberships and a single artist-gallery identity. Updating prices must not overwrite existing reviewed provenance.
 
-## failure behavior
+Official species artwork is a separate slide sourced to PokéAPI sprites. It explicitly states that the individual artist is unspecified and never borrows a TCG illustrator's credit.
 
-- The API reads from the local checked manifest; no live artist lookup can
-  change the displayed credit.
-- Load the checked manifest once with the initial catalog. Derive species and
-  artist galleries from that same snapshot synchronously, so rapid navigation
-  cannot attach an older request's card to a newer species. A failed initial
-  metadata request shows a loading or error state.
-- A failed image shows a same-record unavailable state. It must not replace the
-  card image while keeping a mismatched title or credit.
-- Discovery and metadata work without API access after the app is built. Card
-  image delivery uses the recorded remote host and needs a network connection.
+## Prices and discovery
 
-## current evidence boundary
+- Twelve upstream source candidates per page; at most three detail requests concurrently. Discovery is read-only, incremental and scoped to the active species.
+- Rank only fresh positive finite prices in the selected currency. Exclude values older than seven days. USD TCGplayer market prices and EUR Cardmarket trend prices are separate comparisons.
+- Keep selected identities stable as new results arrive. No auction/graded-card maximum, invented value, conversion or global completeness is claimed.
+- Show checked/total counts, partial coverage and missing sources in details. Provide a retry for unavailable sources.
+- The 23 reviewed editions cover 19 species. The national dex covers 1,025 default species. These are distinct coverage claims.
+- DeviantArt/Pixiv are clearly disclosed outbound discovery links, not local galleries.
 
-The checked set currently covers all 19 catalog species with 23 editions.
-Dragapult has four editions. Several other species have one checked edition;
-their shorter carousel count is visible. Butterfree and Jigglypuff use scans
-with smaller illustration windows. Two illustrator paths cross Pokémon:
-Dragapult to Jerky to Pidgey, and Dragapult to 5ban Graphics to Gengar.
+## Failure and persistence
 
-## 2026-09-30 expanded discovery preview
+- Render the bundled catalog independently of `/api/cards` and live discovery. API failure leaves all official-art slides accessible.
+- Keep image/title/artist/source fields tied to a single edition record. A broken asset shows an unavailable state without replacing it under the same credit.
+- Abort obsolete discovery requests and ignore stale responses after navigation.
+- Store favorites in this browser only. The Vercel preview rejects shared favorite writes.
+- Image delivery requires a connection to each recorded original host; bundled metadata does not mean offline images.
 
-The requested broader preview adds a separate provenance tier alongside the original 23 reviewed editions. The reviewed manifest and its admission checks remain unchanged. Live TCGdex catalog editions carry exact dex IDs and literal provider credits, but are explicitly labeled as metadata not independently reviewed. They must never inherit a printed-scan or publisher-review claim. Official species artwork is a distinct slide with no invented individual artist.
+## Verification boundary
 
-The national dex snapshot covers 1,025 default species. Discovery paginates English TCGdex editions in bounded batches, preserves identity/credit atomically, and retains the selected card ID while new results arrive. The highest fresh comparable market value in the loaded set leads: USD TCGplayer market prices and EUR Cardmarket trend prices are separate choices. No currency conversion, graded auction values, invented missing prices, or globally complete maximum is claimed. Coverage remains partial until every batch finishes; missing sources remain visible and retryable.
-
-Favorites in this preview are device-local. The Vercel API is stateless and rejects shared favorite writes. DeviantArt and Pixiv are currently outbound discovery links, not imported galleries. They remain unfinished source integrations rather than fake local coverage.
+Automated model/server tests cover sequence, endpoints, fallback metadata, ranking, stable selection, membership/provenance and gesture invariants. TypeScript and production bundling must pass after final edits. Deployed browser and physical-device checks remain separate evidence and must be reported honestly.

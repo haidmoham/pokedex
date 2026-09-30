@@ -1,17 +1,17 @@
 # pokédex
 
-a small full stack pokédex with a card-art museum, search, type filters, and saved favorites.
+An artwork-first, full-height Pokédex feed. Swipe up from Bulbasaur through all 1,025 species, and swipe sideways through each Pokémon's card art. Artist credit stays visible; details live one tap away.
 
-## run locally
+## Run locally
 
-requires node.js 20.19+ or 22.12+.
+Requires Node.js 20.19+ or 22.12+.
 
 ```sh
 npm install
 npm run dev
 ```
 
-open <http://127.0.0.1:5173>. vite serves the react app and proxies `/api` to express on port 3001.
+Open <http://127.0.0.1:5173>. Vite serves the React app and proxies `/api` to Express on port 3001.
 
 ```sh
 npm test
@@ -20,52 +20,53 @@ npm run build
 npm start
 ```
 
-`npm start` serves the built app and api from port 3001. set `PORT` and `DATA_FILE` to change the server port and favorites file. the default favorites file is `data/favorites.json`, which is gitignored. the species catalog is in `server/catalog.js`.
+`npm start` serves the built app and API from port 3001. `PORT` changes that port. The legacy Railway favorites endpoint uses `DATA_FILE` (default `data/favorites.json`, gitignored); the current client never calls it and stores favorites privately in this browser.
 
-## card editions and artist credits
+## The feed
 
-The API reads from [`content/cards.json`](content/cards.json), a checked snapshot. It does not look up or guess artist credits at request time. Every shown card binds its Pokédex ID, exact card title, set, collector number, language, artist spelling, image source, and evidence to one manifest record.
+- Opens immediately on Bulbasaur (#001). Every species stays in strict national-dex order through Pecharunt (#1025), with real endpoints rather than a #1-to-#1025 wrap.
+- Native vertical scroll snapping handles touch, mouse wheels and trackpads. Only the current and adjacent artworks mount, so scrolling does not preload thousands of images.
+- Left/right swipes, horizontal trackpad gestures and arrow buttons change artwork. Card editions loop; species do not.
+- Up/down arrows, Page Up/Down, Home/End and species buttons offer keyboard/button alternatives. Search jumps to any name or number without filtering or reordering the feed.
+- A concise credit appears with the species name. The info drawer contains exact edition identity, thumbnails, source evidence, market prices and discovery coverage. Artist names open a gallery of the illustrator's already-loaded cards.
+- Native modal dialogs preserve focus, Escape dismissal, independent scrolling and browser pinch zoom. The feed accounts for mobile safe areas and reduced-motion settings.
+- Favorites are private browser-local data, with no account or shared server writes.
 
-Admission requires a TCGdex card record plus a matching artist credit on an exact Pokémon TCG card page or visibly printed on the card scan. Publisher pages reviewed through indexed text are labeled as such because direct fetches can be blocked. Other records cite the inspected printed scan. Unknown or mismatched credits stay out of the API. `npm run audit:cards` rechecks TCGdex identity and credit fields, image URLs, PNG dimensions, and the recorded SHA-256 hashes. It also prints the exact species coverage.
+The 1,025-species PokéAPI snapshot is bundled in the client. Every species has a separately labeled official-art slide even when card APIs fail. Images still require their original remote host; the offline catalog is not an offline image cache.
 
-The current snapshot has 23 card editions across all 19 Pokédex species. Dragapult has four, Gengar has two, and each of the other 17 species has one checked edition. The 600px TCGdex scans are displayed at no more than 300 CSS pixels where the layout allows. Card images load from the recorded remote host and need a network connection; the metadata and artist browsing come from the local snapshot. Card art rights are separate from the source code in this repository. No scan files are committed.
+## Card editions, credit and pricing
 
-## experience notes
+[`content/cards.json`](content/cards.json) contains 23 independently reviewed editions across 19 species. Each record binds the exact edition, literal artist spelling, image and supporting publisher-page or printed-scan evidence. The reviewed manifest's admission rules and `npm run audit:cards` remain intact.
 
-The species index is the Pokédex entry. Selecting a species opens an image-led card museum. Each card keeps its artist plaque, exact edition details, and citations together. Selecting an artist opens the checked cards by that illustrator across species.
+Read-only live TCGdex discovery expands that collection with a distinct provenance tier: exact species membership and provider artist metadata, explicitly labeled as not independently reviewed. Shared TAG TEAM cards belong to all recorded species without duplicate artist-gallery entries; refreshing prices never replaces reviewed provenance.
 
-The species feed starts with Dragapult and Gengar, then keeps all remaining catalog species available in dex order. On the card surface, swipe or scroll vertically (or use ↑ / ↓) to change species; swipe or scroll horizontally (or use ← / →) to change card editions. Both axes loop. Previous/next species buttons and card buttons provide alternatives. The last selected card is remembered for each species and artist during the session. Outside the card surface, normal page scrolling remains available; pinch zoom is preserved. Artist galleries keep vertical page scrolling and only use horizontal card navigation.
+`/api/discovery/:id?offset=0` checks twelve source candidates per page, with at most three upstream detail requests concurrently. The active species loads incrementally; moving to another aborts obsolete work. Failed and partial coverage is visible in the details drawer and retryable.
 
-Multi-card galleries also support thumbnail selection. Single-card collections show their count without idle arrow buttons. Species sprites are labeled separately and do not receive card-illustrator credits. See [`docs/experience-contract.md`](docs/experience-contract.md) for the display and evidence gates.
+The highest recent available value leads each unselected gallery. USD TCGplayer market prices and EUR Cardmarket trend prices remain separate; values older than seven days are excluded by both server and client. The scope is English ungraded editions, not historical auctions or graded specimens. Swiping, selecting or inspecting an edition pins its card ID, so later discovery or price reordering cannot switch the inspected artwork. Prices are read-only and are not purchase offers. See [TCGdex pricing documentation](https://tcgdex.dev/markets-prices).
 
-## deployment
+Official species art has no invented individual artist credit. DeviantArt and Pixiv are outbound discovery links, not imported or rehosted galleries. Card-art rights are separate from the source code. No scan files are committed.
 
-railway builds `haidmoham/pokedex` from `main` using [`railway.json`](railway.json). one express service serves the frontend and API. production uses `PORT=3001`, `NODE_ENV=production`, and `DATA_FILE=/data/favorites.json`, with a persistent volume mounted at `/data`.
+See [`docs/experience-contract.md`](docs/experience-contract.md) for the UX and evidence guarantees.
 
-the intended public address is <https://pokedex.shin86.dev>. favorites are a shared collection in this prototype, with no user accounts. artist metadata is committed with the app; card images remain hosted by their recorded source.
+## Deployment
 
-## navigation verification
+The Vercel preview uses [`vercel.json`](vercel.json) to build the Vite client and route read-only API calls through [`api/index.js`](api/index.js). Its stateless API rejects shared favorite writes.
 
-`npm test` includes axis classification, pointer cancellation, repeated and interrupted
-wheel gestures, momentum suppression, and wrapping regression tests. `npm run build`
-runs TypeScript validation and builds production assets.
+The existing Railway configuration builds `haidmoham/pokedex` from `main` using [`railway.json`](railway.json). One Express service serves the client and API. Its configured domain is <https://pokedex.shin86.dev>; this document does not assert the live deployment revision. The legacy server can retain its volume-backed favorites endpoint without exposing those writes from the new client.
 
-For a browser check, run `npm run dev` and open the local URL:
+## Verification
 
-1. Open Dragapult. Swipe left/right on the card; confirm the image, edition and artist change together.
-2. Swipe up to Gengar; swipe down to return. Confirm Dragapult's selected edition is retained.
-3. Try diagonal movement, a cancelled pointer gesture, and a long trackpad momentum tail. Each deliberate gesture should move at most one axis once.
-4. Use all four arrow keys, species/card buttons and thumbnails. Tab through the artist and evidence links; the focus ring must stay visible.
-5. Follow an artist and return. Vertical scrolling in the artist gallery must scroll the page rather than change a card.
-6. Return to the index, search/filter, and save a species. All 19 catalog species remain accessible. Favorites are shared in this prototype; use a disposable local `DATA_FILE` for testing.
-7. Check widths 320, 390 and 1280, increased text size, reduced motion, touch pinch zoom and a real mobile device. Swipe only on the card surface; surrounding text must still scroll.
+`npm test` covers the complete 1–1025 sequence and endpoints, API-independent official slides, recent same-currency price ranking, pinned card identity, shared-card membership and reviewed provenance, gesture cancellation/momentum, source pagination, stateless API behavior and server validation. `npm run build` runs TypeScript validation and creates production assets.
 
-Browser and real-device QA are required before calling this slice production-ready.
+Browser QA checklist:
 
-## expanded Vercel preview
+1. Load a fresh session: #001 Bulbasaur appears. Swipe/scroll up to #002 Ivysaur and #003 Venusaur; reverse back to #001. Scrolling above #001 stays there.
+2. Swipe left/right on a species with multiple editions. Confirm artwork and credit change together; later discovery must not replace a manually chosen edition.
+3. Search for #1025, open Pecharunt, and verify the last-species control is disabled. Search back to #001 without changing feed order.
+4. Try all arrow keys, Page Up/Down, Home/End and visible buttons. Focus should remain visible. Horizontal momentum changes at most one edition per gesture.
+5. Open details, scroll its complete content, change currency, select a thumbnail, and close using the button, Escape and backdrop. Feed position should stay put. Follow an artist and open a specific card; its identity must be retained.
+6. Filter search by type and saved species. Save/reload/unsave and verify local persistence. No favorite API writes should occur.
+7. Block API calls and reload. All species must remain scrollable with correctly labeled official artwork. Break an image URL: retain its identity and show an unavailable state rather than attaching a different image to its credit.
+8. Check widths 320, 390 and 1280, short landscape viewports, increased text size, reduced motion, touch pinch zoom and real-device swipes. Main artwork must remain uncropped; source drawers must scroll without moving the feed.
 
-This branch includes the 1,025-species PokéAPI snapshot, read-only paginated TCGdex discovery, fresh comparable-price ordering, official-art slides, and private browser-local favorites. `/api/discovery/:id?offset=0` returns twelve source candidates per page, with at most three upstream requests concurrently and explicit coverage/failure counts. No API key is needed. The original 23 independently reviewed card records remain a separate provenance tier; live provider metadata is labeled accordingly.
-
-`vercel.json` builds the Vite client and routes read-only API requests through `api/index.js`. The filesystem-backed Railway favorites route is not used by the preview. Public pricing source: https://tcgdex.dev/markets-prices . Values older than seven days are excluded from ranking; ranking never mixes USD and EUR. English ungraded cards are the scope, not every historical auction or graded specimen.
-
-Pixiv/DeviantArt image ingestion is not complete; the visible links lead to those communities. Run `npm test` and `npm run build` before deployment. No claims of physical mobile verification are made until the user tests on their device.
+Automated checks do not claim physical-device or screenshot verification. The parent task verifies the deployed preview in its browser before delivery.
