@@ -225,7 +225,7 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .art-frame { flex: 0 0 100%; min-height: 0; height: 100%; position: relative; scroll-snap-align: start; scroll-snap-stop: always; }
 .gallery-locked { overflow-y: hidden; }
 .gallery-fallback { overflow-y: hidden; touch-action: pan-x pinch-zoom; }
-.species-fallback { overflow-x: hidden; }
+.species-fallback { overflow-x: hidden; touch-action: pan-y pinch-zoom; }
 .species-preview-name { position: absolute; z-index: 2; top: calc(86px + env(safe-area-inset-top)); left: var(--edge); font-size: 18px; font-weight: 700; pointer-events: none; }
 .gallery-preview-credit { position: absolute; left: var(--edge); right: var(--edge); bottom: calc(var(--art-bottom, 184px) - 68px); font-size: 16px; font-weight: 600; line-height: 1.35; max-height: 64px; overflow: hidden; pointer-events: none; }
 .gallery-preview-credit span { display: block; font-size: 11px; color: #ffffffa0; margin-top: 4px; font-weight: 400; }

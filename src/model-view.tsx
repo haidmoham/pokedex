@@ -10,6 +10,7 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
   const viewer = useRef<ModelViewerElement | null>(null);
   const inspectButton = useRef<HTMLButtonElement>(null);
   const [loaded, setLoaded] = useState(false);
+  const [prepared, setPrepared] = useState(false);
   const [inspecting, setInspecting] = useState(false);
   const [angle, setAngle] = useState(-12);
   const [playing, setPlaying] = useState(true);
@@ -21,9 +22,12 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
   useEffect(() => {
     inspect.current(inspecting);
     if (!inspecting && wasInspecting.current) inspectButton.current?.focus({ preventScroll: true });
-    wasInspecting.current = inspecting;
+  wasInspecting.current = inspecting;
     return () => inspect.current(false);
   }, [inspecting]);
+  // Loading can finish during a swipe. Retain the displayed poster until the
+  // gesture settles rather than substituting a 3D frame during movement.
+  useEffect(() => { if (prepared && !suspended) setLoaded(true); }, [prepared, suspended]);
   useEffect(() => {
     const controller = new AbortController();
     let source: string | undefined;
@@ -55,7 +59,7 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
           if (asset.animation && !await prepareIdle(element!, asset.animation, controller.signal)) return;
           if (controller.signal.aborted) return;
           window.clearTimeout(timeout);
-          setLoaded(true);
+          setPrepared(true);
         } catch { fail(); }
       }, { once: true });
       host.current.append(element);

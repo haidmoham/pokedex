@@ -69,7 +69,8 @@ export function useSnapScroll({ axis, selected, length, suspended, onSelect, onM
     const element = scroller.current;
     if (!element) return;
     setNativeEnd('onscrollend' in element);
-    const settle = () => {
+    const settle = (event: Event) => {
+      if (event.target !== element) return;
       const revision = motion.current.revision, position = offset(element);
       cancelAnimationFrame(endFrame.current);
       // Give the next input/scroll frame a chance to invalidate a queued end.

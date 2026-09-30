@@ -28,7 +28,6 @@ export class GalleryMotion {
     if (revision !== this.revision || !this.completed(offset, width, length)) return null;
     const index = galleryIndex(offset, width, length);
     const allowed = !this.blocked && !this.programmed && index !== selected && index !== this.reported;
-    this.programmed = false;
     this.target = null;
     if (allowed) this.reported = index;
     return allowed ? index : null;
