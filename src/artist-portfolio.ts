@@ -122,7 +122,10 @@ export class ArtistPortfolio {
     const current = () => this.session === session && this.request === request && this.activeArtist === artist;
     state.loading = true; state.error = null; this.changed();
     try {
-      const response = await this.fetcher(`/api/artists/${encodeURIComponent(artist)}?offset=${offset}`, { signal: controller.signal });
+      // Native Window.fetch rejects a foreign receiver. Call the stored function
+      // unbound, rather than as this.fetcher(), so browsers can start the request.
+      const fetcher = this.fetcher;
+      const response = await fetcher(`/api/artists/${encodeURIComponent(artist)}?offset=${offset}`, { signal: controller.signal });
       const contentType = response.headers?.get('content-type');
       if (!response.ok) {
         let detail: unknown;

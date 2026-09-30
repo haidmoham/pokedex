@@ -130,3 +130,18 @@ test('non-JSON hosting pages and network failures remain distinct diagnostics',a
  const network=new ArtistPortfolio(()=>{},()=>{},async()=>{throw new TypeError('fetch failed');});
  network.open('Artist',[]);await settle();assert.match(network.get('Artist').error,/network error/);network.close();
 });
+
+test('native browser fetch is called without the portfolio instance as its receiver',async()=>{
+ const merged=[];
+ // Chromium brand-checks Window.fetch. Arrow mocks and Node's fetch tolerate
+ // a foreign receiver, so reproduce the browser requirement explicitly here.
+ async function browserFetch() {
+  if(this!==undefined && this!==globalThis)throw new TypeError("Failed to execute 'fetch' on 'Window': Illegal invocation");
+  return response(page());
+ }
+ const store=new ArtistPortfolio(()=>{},cards=>merged.push(...cards),browserFetch);
+ store.open('Artist',[]);await settle();
+ assert.equal(store.get('Artist').error,null);
+ assert.equal(merged.length,1);
+ store.close();
+});
