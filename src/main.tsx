@@ -1,15 +1,18 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import speciesSnapshot from '../content/species.json';
-import { PointerGesture, WheelGesture, wrapIndex } from './navigation';
+import cardsSnapshot from '../content/cards.json';
+import { PointerGesture, WheelGesture } from './navigation';
 import { cardSpeciesIds, mergeCardLibrary } from './card-library';
-import { adjacentIndex, artwork, dexNumber, FeedPosition, nationalDex, officialEdition, rankedCards, recentPrice, rememberFailedImage, retryFailedImages, selectedCard as resolveCard } from './feed-model';
+import { adjacentIndex, artwork, dexNumber, FeedPosition, nationalDex, officialEdition, recentPrice, rememberFailedImage, retryFailedImages } from './feed-model';
 import type { CardEdition, Pokemon } from './feed-model';
 import { ArtistPortfolio, portfolioCards, portfolioCoverage, portfolioTarget } from './artist-portfolio';
+import { appendVisit, createVisit, selectVisit, stepVisit, Visit } from './visit-model';
 import './style.css';
 
 const pokemon = nationalDex(speciesSnapshot as Pokemon[]);
 type Drawer = 'search' | 'details' | 'artist' | null;
+type Route = { key: number; kind: Exclude<Drawer, null> | 'branch'; artist?: string; visit?: Visit; scrollTop: number; focusId?: string; invoker?: HTMLElement | null; originIndex?: number };
 type Discovery = { scanned: number; total: number; done: boolean; failed: number; error?: string };
 const types = [...new Set(pokemon.flatMap(item => item.types))].sort();
 const validSpecies = new Set(pokemon.map(item => item.id));
@@ -42,10 +45,12 @@ function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' |
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const activePokemon = pokemon[activeIndex];
-  const [allCards, setAllCards] = useState<CardEdition[]>([]);
+  const [allCards, setAllCards] = useState<CardEdition[]>(cardsSnapshot as CardEdition[]);
   const [, redrawPortfolio] = useState(0);
   const [portfolio] = useState(() => new ArtistPortfolio(() => redrawPortfolio(version => version + 1), incoming => setAllCards(previous => mergeCardLibrary(previous, incoming))));
-  const [selectedIds, setSelectedIds] = useState<Record<number, string>>({});
+  const [visits, setVisits] = useState<Record<number, Visit>>(() => ({ 1: createVisit(pokemon[0], cardsSnapshot as CardEdition[], 'USD') }));
+  const visitsRef = useRef(visits);
+  visitsRef.current = visits;
   const [currency, setCurrency] = useState('USD');
   const [favorites, setFavorites] = useState<number[]>(() => {
     try {
@@ -53,8 +58,13 @@ function App() {
       return Array.isArray(saved) ? saved.filter((id): id is number => Number.isInteger(id) && pokemon.some(item => item.id === id)) : [];
     } catch { return []; }
   });
-  const [drawer, setDrawer] = useState<Drawer>(null);
-  const [activeArtist, setActiveArtist] = useState('');
+  const [routes, setRoutes] = useState<Route[]>([]);
+  const routesRef = useRef(routes);
+  routesRef.current = routes;
+  const routeKey = useRef(0);
+  const timeline = useRef<Route[][]>([[]]);
+  const drawer: Drawer = routes.at(-1)?.kind === 'branch' ? null : (routes.at(-1)?.kind as Drawer ?? null);
+  const activeArtist = routes.at(-1)?.artist ?? '';
   const [query, setQuery] = useState('');
   const [type, setType] = useState('all');
   const [favoritesOnly, setFavoritesOnly] = useState(false);
@@ -76,6 +86,7 @@ function App() {
   const activeIndexRef = useRef(0);
   const feedPosition = useRef(new FeedPosition());
   const drawerRef = useRef<Drawer>(null);
+  const baseIndex = useRef(0);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -93,18 +104,10 @@ function App() {
     return () => window.removeEventListener('online', recoverImages);
   }, []);
 
-  const galleries = useMemo(() => {
-    const bySpecies = new Map<number, CardEdition[]>();
-    for (const card of allCards) {
-      for (const id of cardSpeciesIds(card)) bySpecies.set(id, [...(bySpecies.get(id) ?? []), card]);
-    }
-    return bySpecies;
-  }, [allCards]);
-  function cardsFor(item: Pokemon) {
-    return [...rankedCards(galleries.get(item.id) ?? [], currency), officialEdition(item)];
-  }
-  const cards = cardsFor(activePokemon);
-  const card = resolveCard(cards, selectedIds[activePokemon.id])!;
+  const branch = [...routes].reverse().find(route => route.kind === 'branch');
+  const activeVisit = branch?.visit ?? visits[activePokemon.id] ?? createVisit(activePokemon, allCards, currency);
+  const cards = activeVisit.ids.map(id => allCards.find(item => item.cardId === id) ?? (id === `official-${activePokemon.id}` ? officialEdition(activePokemon) : undefined)).filter((item): item is CardEdition => !!item);
+  const card = cards.find(item => item.cardId === activeVisit.selectedId) ?? cards[0];
   const cardIndex = cards.findIndex(item => item.cardId === card.cardId);
   const price = recentPrice(card, currency);
   const status = discovery[activePokemon.id];
@@ -116,6 +119,19 @@ function App() {
     return (!search || item.name.toLowerCase().includes(search) || String(item.id) === search || dexNumber(item.id) === search) &&
       (type === 'all' || item.types.includes(type)) && (!favoritesOnly || favorites.includes(item.id));
   }), [query, type, favoritesOnly, favorites]);
+
+  useEffect(() => {
+    setVisits(old => {
+      const next = Object.fromEntries(Object.entries(old).map(([id, visit]) => [id, appendVisit(visit, allCards)]));
+      return Object.keys(old).some(id => next[id] !== old[Number(id)]) ? next : old;
+    });
+    const stack = routesRef.current;
+    const branchIndex = stack.findIndex(route => route.kind === 'branch');
+    if (branchIndex >= 0 && stack[branchIndex].visit) {
+      const updated = appendVisit(stack[branchIndex].visit!, allCards);
+      if (updated !== stack[branchIndex].visit) replaceRoute(branchIndex, { ...stack[branchIndex], visit: updated });
+    }
+  }, [allCards]);
 
   useEffect(() => {
     const id = activePokemon.id;
@@ -145,18 +161,87 @@ function App() {
     return () => { live = false; window.clearTimeout(timer); controller.abort(); };
   }, [activePokemon.id, discoveryRetry]);
 
+  function replaceRoute(index: number, route: Route) {
+    const stack = [...routesRef.current];
+    stack[index] = route;
+    routesRef.current = stack; timeline.current[stack.length] = stack;
+    setRoutes(stack);
+  }
+  function replaceTop(route: Route) { replaceRoute(routesRef.current.length - 1, route); }
+  function savePanel() {
+    const stack = routesRef.current;
+    const top = stack.at(-1);
+    if (!top || top.kind === 'branch') return;
+    const focus = document.activeElement as HTMLElement | null;
+    const focusId = focus?.dataset?.focusId;
+    replaceTop({ ...top, scrollTop: drawerScrollRef.current?.scrollTop ?? top.scrollTop, focusId });
+  }
+  function pushRoute(route: Omit<Route, 'key' | 'scrollTop'>) {
+    savePanel();
+    const next = [...routesRef.current, { ...route, key: ++routeKey.current, scrollTop: 0 }];
+    routesRef.current = next;
+    timeline.current = timeline.current.slice(0, next.length);
+    timeline.current[next.length] = next;
+    history.pushState({ pokedexDepth: next.length }, '');
+    setRoutes(next);
+  }
+  function applyStack(stack: Route[]) {
+    routesRef.current = stack;
+    setRoutes(stack);
+    const top = stack.at(-1);
+    const activeBranch = [...stack].reverse().find(route => route.kind === 'branch');
+    const index = activeBranch?.visit ? pokemon.findIndex(item => item.id === activeBranch.visit!.speciesId) : baseIndex.current;
+    const feed = feedRef.current;
+    if (feed) {
+      feedPosition.current.unlock(feed);
+      feedPosition.current.jump(feed, index, pokemon.length);
+      activeIndexRef.current = index;
+      setActiveIndex(index);
+      if (top && top.kind !== 'branch') feedPosition.current.lock(feed, index);
+    }
+  }
   useEffect(() => {
+    history.replaceState({ pokedexDepth: 0 }, '');
+    const onPop = (event: PopStateEvent) => {
+      const depth = event.state?.pokedexDepth;
+      if (Number.isInteger(depth) && timeline.current[depth]) applyStack(timeline.current[depth]);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+  function goBack() {
+    if (!routesRef.current.length) return;
+    savePanel();
+    history.back();
+  }
+  useLayoutEffect(() => {
     const dialog = dialogRef.current;
+    const top = routes.at(-1);
     drawerRef.current = drawer;
     if (drawer && dialog && !dialog.open) dialog.showModal();
     if (!drawer && dialog?.open) dialog.close();
     pointer.current.cancel(); wheel.current.reset();
-  }, [drawer]);
+    if (drawer && dialog?.open) {
+      if (drawerScrollRef.current) drawerScrollRef.current.scrollTop = top?.scrollTop ?? 0;
+      const target = (top?.focusId ? dialog.querySelector<HTMLElement>(`[data-focus-id="${CSS.escape(top.focusId)}"]`) : null)
+        ?? (drawer === 'search' ? dialog.querySelector<HTMLElement>('.search-field input') : dialog.querySelector<HTMLElement>('#drawer-title'));
+      target?.focus({ preventScroll: true });
+    } else if (!drawer) {
+      const invoker = routes.length ? null : timeline.current[1]?.[0]?.invoker;
+      if (invoker?.isConnected) invoker.focus({ preventScroll: true });
+      else feedRef.current?.focus({ preventScroll: true });
+    }
+  }, [routes.at(-1)?.key, drawer]);
+
+  useLayoutEffect(() => {
+    if (drawer === 'artist' && document.activeElement === document.body) {
+      dialogRef.current?.querySelector<HTMLElement>('.portfolio-status')?.focus({ preventScroll: true });
+    }
+  }, [drawer, artistState.loading, artistCoverage.scanned]);
 
   useEffect(() => {
     if (drawer !== 'artist' || !activeArtist) return;
     portfolio.open(activeArtist, libraryRef.current);
-    if (drawerScrollRef.current) drawerScrollRef.current.scrollTop = portfolio.get(activeArtist).scrollTop;
     return () => portfolio.close();
   }, [drawer, activeArtist, portfolio]);
 
@@ -168,7 +253,7 @@ function App() {
     const syncIndex = () => {
       if (drawerRef.current || feedPosition.current.locked) return;
       const index = feedPosition.current.sync(feed, pokemon.length);
-      if (index !== activeIndexRef.current) { activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); pointer.current.cancel(); }
+      if (index !== activeIndexRef.current) { activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); pointer.current.cancel(); enterSpecies(index); }
     };
     const onScroll = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(syncIndex); };
     feed.addEventListener('scroll', onScroll, { passive: true });
@@ -184,40 +269,47 @@ function App() {
     if (next !== activeIndexRef.current) setHasScrolled(true);
     activeIndexRef.current = next;
     setActiveIndex(next);
+    enterSpecies(next);
     pointer.current.cancel();
   }
   function moveSpecies(direction: number) { jumpTo(adjacentIndex(activeIndexRef.current, direction, pokemon.length)); }
+  function enterSpecies(index: number) {
+    const item = pokemon[index];
+    if (routesRef.current.at(-1)?.kind === 'branch') {
+      replaceTop({ ...routesRef.current.at(-1)!, visit: createVisit(item, libraryRef.current, currency, undefined, routesRef.current.at(-1)?.visit?.context) });
+    } else {
+      baseIndex.current = index;
+      setVisits(old => old[item.id] ? old : { ...old, [item.id]: createVisit(item, libraryRef.current, currency) });
+    }
+  }
+  function changeVisit(change: (visit: Visit) => Visit) {
+    const stack = routesRef.current;
+    const branchIndex = stack.findIndex(route => route.kind === 'branch');
+    if (branchIndex >= 0 && stack[branchIndex].visit) replaceRoute(branchIndex, { ...stack[branchIndex], visit: change(stack[branchIndex].visit!) });
+    else setVisits(old => ({ ...old, [activePokemon.id]: change(old[activePokemon.id] ?? createVisit(activePokemon, libraryRef.current, currency)) }));
+  }
   function moveArt(direction: number) {
-    setSelectedIds(ids => {
-      const current = resolveCard(cards, ids[activePokemon.id])!;
-      const index = cards.findIndex(item => item.cardId === current.cardId);
-      return { ...ids, [activePokemon.id]: cards[wrapIndex(index, direction, cards.length)].cardId };
-    });
+    changeVisit(visit => stepVisit(visit, direction));
   }
-  function openDrawer(next: Drawer) {
-    // Inspecting a card is a deliberate selection, so incoming prices cannot swap it.
-    if (next === 'details' || next === 'artist') setSelectedIds(ids => ({ ...ids, [activePokemon.id]: card.cardId }));
+  function openDrawer(next: Exclude<Drawer, null>, artist?: string, invoker?: HTMLElement | null) {
+    if (!routesRef.current.length) baseIndex.current = activeIndexRef.current;
     drawerRef.current = next;
-    if (next && feedRef.current) {
-      activeIndexRef.current = activeIndex;
-      feedPosition.current.lock(feedRef.current, activeIndex);
-    }
+    if (feedRef.current) feedPosition.current.lock(feedRef.current, activeIndexRef.current);
     pointer.current.cancel(); wheel.current.reset();
-    setDrawer(next);
+    pushRoute({ kind: next, artist, invoker: invoker ?? (document.activeElement as HTMLElement), originIndex: baseIndex.current });
   }
-  function closeDrawer() {
-    portfolio.close();
-    if (feedRef.current) {
-      const index = feedPosition.current.unlock(feedRef.current);
-      if (index !== null) { activeIndexRef.current = index; setActiveIndex(index); }
-    }
-    drawerRef.current = null;
-    setDrawer(null);
-  }
+  function closeDrawer() { goBack(); }
   function openPokemon(item: Pokemon, selectedId?: string) {
-    if (selectedId) setSelectedIds(ids => ({ ...ids, [item.id]: selectedId }));
-    closeDrawer(); jumpTo(pokemon.findIndex(entry => entry.id === item.id));
-    feedRef.current?.focus({ preventScroll: true });
+    const target = createVisit(item, libraryRef.current, currency, selectedId, routesRef.current.at(-1)?.artist);
+    pushRoute({ kind: 'branch', visit: target, originIndex: baseIndex.current });
+    const feed = feedRef.current;
+    if (feed) {
+      feedPosition.current.unlock(feed);
+      const index = pokemon.findIndex(entry => entry.id === item.id);
+      feedPosition.current.jump(feed, index, pokemon.length);
+      activeIndexRef.current = index;
+      setActiveIndex(index);
+    }
   }
   function toggleFavorite() {
     const next = favorites.includes(activePokemon.id) ? favorites.filter(id => id !== activePokemon.id) : [...favorites, activePokemon.id];
@@ -273,7 +365,9 @@ function App() {
       onPointerDown={handlePointerDown} onPointerUp={handlePointerUp} onPointerCancel={() => pointer.current.cancel()} onLostPointerCapture={() => pointer.current.cancel()} onDragStart={event => event.preventDefault()}>
       {pokemon.map((item, index) => {
         const nearby = Math.abs(index - activeIndex) <= 1;
-        const edition = nearby ? resolveCard(cardsFor(item), selectedIds[item.id])! : undefined;
+        const visit = index === activeIndex ? activeVisit : visits[item.id];
+        const chosenId = visit?.selectedId ?? `official-${item.id}`;
+        const edition = nearby ? (allCards.find(entry => entry.cardId === chosenId) ?? officialEdition(item)) : undefined;
         return <section className={`species-slide type-${item.types[0]}`} key={item.id} aria-label={`Number ${item.id}, ${item.name}`} aria-hidden={index !== activeIndex}>
           {edition && <>
             <span className="ghost-number" aria-hidden="true">{dexNumber(item.id)}</span>
@@ -287,21 +381,18 @@ function App() {
     </div>
 
     <div className="feed-overlay">
-      <nav className="side-actions" aria-label="Species actions">
-        <button className={`icon-button favorite-button ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)} aria-label={`${favorites.includes(activePokemon.id) ? 'Unsave' : 'Save'} ${activePokemon.name}`}><Icon name="heart" /></button>
-        <button className="icon-button" onClick={() => openDrawer('details')} aria-label="Artwork details, prices and sources"><Icon name="info" /></button>
-      </nav>
+      {branch && <button className="branch-back" onClick={goBack} aria-label={`Back to ${branch.visit?.context ?? 'previous view'}`}><Icon name="left" /> Back to {branch.visit?.context ?? 'previous view'}</button>}
       <div className="feed-caption" key={activePokemon.id}>
         <span className="species-types">{activePokemon.types.join(' · ')}</span>
         <h1>{activePokemon.name}</h1>
-        {card.sourceType === 'official' ? <button className="credit-link" onClick={() => openDrawer('details')}>Official art <span>· PokéAPI ↗</span></button> :
-          <button className="credit-link" onClick={() => { setActiveArtist(card.artist); openDrawer('artist'); }}>Art by {card.artist} <span>↗</span></button>}
+        {card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :
+          <button className="credit-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} <span>›</span></button>}
       </div>
       <div className="feed-bottom">
         <nav className="art-controls" aria-label="Artwork editions">
-          <button className="mini-button" onClick={() => moveArt(-1)} disabled={cards.length < 2} aria-label="Previous artwork"><Icon name="left" /></button>
-          <button className="edition-count" onClick={() => openDrawer('details')} aria-label={`Artwork ${cardIndex + 1} of ${cards.length}. Open details`}>{cardIndex + 1}<span> / {cards.length}</span><span className="edition-word"> art</span></button>
-          <button className="mini-button" onClick={() => moveArt(1)} disabled={cards.length < 2} aria-label="Next artwork"><Icon name="right" /></button>
+          <button className="mini-button" onClick={() => moveArt(-1)} disabled={cardIndex === 0} aria-label="Previous artwork"><Icon name="left" /></button>
+          <button className="edition-count" onClick={event => openDrawer('details', undefined, event.currentTarget)} aria-label={`Artwork ${cardIndex + 1} of ${cards.length} loaded. Open details`}>{cardIndex + 1}<span> / {cards.length} loaded</span></button>
+          <button className="mini-button" onClick={() => moveArt(1)} disabled={cardIndex === cards.length - 1} aria-label="Next artwork"><Icon name="right" /></button>
         </nav>
         <nav className="species-controls" aria-label="Species navigation">
           <button className="mini-button previous-species" onClick={() => moveSpecies(-1)} disabled={activeIndex === 0} aria-label="Previous species"><Icon name="up" /></button>
@@ -313,21 +404,22 @@ function App() {
     <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} Artwork {cardIndex + 1} of {cards.length}.</span>
     {error && <button className="toast" role="alert" onClick={() => setError('')}>{error} ×</button>}
 
-    <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={closeDrawer} onClose={() => { if (!dialogRef.current?.open) closeDrawer(); }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
+    <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={event => { event.preventDefault(); closeDrawer(); }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
       <div className="drawer-surface">
-        <header className="drawer-header"><div><span className="drawer-eyebrow">{drawer === 'search' ? 'Find your next favorite' : drawer === 'artist' ? 'Follow the illustrator' : `#${dexNumber(activePokemon.id)} · ${activePokemon.name}`}</span><h2 id="drawer-title">{drawer === 'search' ? 'Jump in.' : drawer === 'artist' ? activeArtist : 'Behind the art.'}</h2></div><button className="icon-button" onClick={closeDrawer} aria-label="Close panel"><Icon name="close" /></button></header>
+        <header className="drawer-header"><div><span className="drawer-eyebrow">{drawer === 'search' ? 'Find your next favorite' : drawer === 'artist' ? 'Follow the illustrator' : `#${dexNumber(activePokemon.id)} · ${activePokemon.name}`}</span><h2 id="drawer-title" tabIndex={-1}>{drawer === 'search' ? 'Jump in.' : drawer === 'artist' ? activeArtist : 'Behind the art.'}</h2></div><button className="icon-button" onClick={closeDrawer} aria-label={routes.length > 1 ? 'Back to previous view' : 'Close panel'}><Icon name={routes.length > 1 ? 'left' : 'close'} /></button></header>
         <div ref={drawerScrollRef} className="drawer-scroll" onScroll={event => { if (drawer === 'artist') portfolio.saveScroll(activeArtist, event.currentTarget.scrollTop); }}>
           {drawer === 'search' && <>
             <label className="search-field"><Icon name="search" /><input autoFocus value={query} onChange={event => { setQuery(event.target.value); setVisibleLimit(60); }} placeholder="Name or number" aria-label="Search by name or Pokédex number" /></label>
-            <div className="search-filters"><label className="sr-only" htmlFor="type-filter">Pokémon type</label><select id="type-filter" value={type} onChange={event => { setType(event.target.value); setVisibleLimit(60); }}><option value="all">All types</option>{types.map(name => <option key={name} value={name}>{name}</option>)}</select><button className={`filter-chip ${favoritesOnly ? 'active' : ''}`} aria-pressed={favoritesOnly} onClick={() => { setFavoritesOnly(value => !value); setVisibleLimit(60); }}><Icon name="heart" />Saved {favorites.length}</button><span>{filtered.length.toLocaleString('en-US')}</span></div>
+            <div className="search-filters"><label className="sr-only" htmlFor="type-filter">Pokémon type</label><select id="type-filter" value={type} onChange={event => { setType(event.target.value); setVisibleLimit(60); }}><option value="all">All types</option>{types.map(name => <option key={name} value={name}>{name}</option>)}</select><button className={`filter-chip ${favoritesOnly ? 'active' : ''}`} aria-pressed={favoritesOnly} onClick={() => { setFavoritesOnly(value => !value); setVisibleLimit(60); }}><Icon name="heart" />Saved Pokémon {favorites.length}</button><span>{filtered.length.toLocaleString('en-US')}</span></div>
             <div className="species-grid">{filtered.slice(0, visibleLimit).map(item => <button className={`species-tile type-${item.types[0]}`} key={item.id} onClick={() => openPokemon(item)}><span>#{dexNumber(item.id)}</span><img src={artwork(item.id)} alt="" loading="lazy" /><strong>{item.name}</strong>{favorites.includes(item.id) && <span className="tile-saved" aria-label="Saved">♥</span>}</button>)}</div>
-            {!filtered.length && <p className="empty-state">No matches. Try another name or number.</p>}
+            {!filtered.length && <p className="empty-state">{favoritesOnly && !favorites.length ? 'No saved Pokémon yet. Browse the dex and use Save Pokémon in artwork details.' : 'No Pokémon match these filters.'} <button className="inline-link" onClick={() => { setQuery(''); setType('all'); setFavoritesOnly(false); }}>Clear filters</button></p>}
             {filtered.length > visibleLimit && <button className="load-more" onClick={() => setVisibleLimit(count => count + 60)}>Show more</button>}
             <p className="quiet-note">Saved on this browser. Search jumps to a species; the feed always stays in Pokédex order.</p>
           </>}
           {drawer === 'details' && <>
-            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" onClick={() => { setActiveArtist(card.artist); setDrawer('artist'); }}>Art by {card.artist} ↗</button>}</div></div>
-            <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length}</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => setSelectedIds(ids => ({ ...ids, [activePokemon.id]: edition.cardId }))} aria-label={`${edition.title}, ${edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
+            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
+            <button className={`save-pokemon ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)}><Icon name="heart" /> {favorites.includes(activePokemon.id) ? 'Saved Pokémon' : 'Save Pokémon'}</button>
+            <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length} loaded</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => changeVisit(visit => selectVisit(visit, edition.cardId))} aria-label={`${edition.title}, ${edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
             <section className="detail-section"><div className="detail-heading"><h3>Market price</h3><select aria-label="Price currency and provider" value={currency} onChange={event => setCurrency(event.target.value)}><option value="USD">USD · TCGplayer</option><option value="EUR">EUR · Cardmarket</option></select></div>
               <p className="price-value">{formatPrice(card, currency) ?? 'No recent price'}</p>
               {price && <p className="detail-copy">{price.variant} · {price.metric} · updated {new Date(price.updatedAt).toLocaleDateString()}<br /><a href={price.url} target="_blank" rel="noreferrer">{price.provider} ↗</a></p>}
@@ -341,10 +433,10 @@ function App() {
             <section className="detail-section"><h3>Keep exploring</h3><div className="source-links"><a href={`https://www.deviantart.com/search?q=${encodeURIComponent(activePokemon.name + ' pokemon')}`} target="_blank" rel="noreferrer">DeviantArt ↗</a><a href={`https://www.pixiv.net/en/tags/${encodeURIComponent(activePokemon.name)}/artworks`} target="_blank" rel="noreferrer">Pixiv ↗</a></div><p className="quiet-note">Opens the original communities. These are discovery links, not imported fan-art galleries.</p></section>
           </>}
           {drawer === 'artist' && <>
-            <div className="artist-intro"><p className="artist-summary">{artistCards.length} artworks · {new Set(artistCards.flatMap(cardSpeciesIds)).size} Pokémon</p><a href={artistCoverage.sourceUrl ?? `https://api.tcgdex.net/v2/en/illustrators/${encodeURIComponent(activeArtist)}`} target="_blank" rel="noreferrer">TCGdex ↗</a></div>
-            <div className="artist-grid">{artistCards.map(edition => <button key={edition.cardId} onClick={() => { const target = portfolioTarget(edition, activePokemon.id, validSpecies); const item = pokemon.find(entry => entry.id === target); if (item) openPokemon(item, edition.cardId); }} aria-label={`Open ${edition.title}, ${edition.set}, artwork by ${edition.artist}`}><img src={edition.image} alt={`${edition.title}, ${edition.set}`} loading="lazy" /><strong>{edition.title}</strong><span>{edition.set} · {edition.number}</span></button>)}</div>
+            <div className="artist-intro"><p className="artist-summary">{artistCards.length} loaded artworks · {new Set(artistCards.flatMap(cardSpeciesIds)).size} Pokémon</p><a href={artistCoverage.sourceUrl ?? `https://api.tcgdex.net/v2/en/illustrators/${encodeURIComponent(activeArtist)}`} target="_blank" rel="noreferrer">TCGdex ↗</a></div>
+            <div className="artist-grid">{artistCards.map(edition => <button key={edition.cardId} data-focus-id={`artist-${edition.cardId}`} onClick={event => { replaceTop({ ...routesRef.current.at(-1)!, focusId: event.currentTarget.dataset.focusId, scrollTop: drawerScrollRef.current?.scrollTop ?? 0 }); const target = portfolioTarget(edition, activePokemon.id, validSpecies); const item = pokemon.find(entry => entry.id === target); if (item) openPokemon(item, edition.cardId); }} aria-label={`Open ${edition.title}, ${edition.set}, artwork by ${edition.artist}`}><img src={edition.image} alt={`${edition.title}, ${edition.set}`} loading="lazy" /><strong>{edition.title}</strong><span>{edition.set} · {edition.number}</span></button>)}</div>
             {!artistCards.length && <p className="empty-state">{artistState.loading ? 'Finding their artwork…' : 'No usable Pokémon artwork loaded yet.'}</p>}
-            <div className="portfolio-status" role="status" aria-live="polite"><span>{artistCoverage.scanned} / {artistCoverage.total ?? '…'} editions checked</span>{artistCoverage.failed.length > 0 && <span>{artistCoverage.failed.length} unavailable</span>}{artistCoverage.skipped.length > 0 && <span>{artistCoverage.skipped.length} excluded</span>}{artistState.loading && <span className="portfolio-loading">Loading artwork…</span>}</div>
+            <div className="portfolio-status" role="status" aria-live="polite" tabIndex={-1}><span>{artistCoverage.scanned} / {artistCoverage.total ?? '…'} editions checked</span>{artistCoverage.failed.length > 0 && <span>{artistCoverage.failed.length} unavailable</span>}{artistCoverage.skipped.length > 0 && <span>{artistCoverage.skipped.length} excluded</span>}{artistState.loading && <span className="portfolio-loading">Loading artwork…</span>}</div>
             {artistState.error && <p className="portfolio-error" role="alert">{artistState.error}</p>}
             <div className="portfolio-actions">
               {(artistState.error || artistCoverage.failed.length > 0) && <button className="load-more" disabled={artistState.loading} onClick={() => void portfolio.retryFailed()}>Retry unavailable sources</button>}
@@ -353,7 +445,6 @@ function App() {
             </div>
             {artistCoverage.skipped.length > 0 && <details className="portfolio-exclusions"><summary>Why some editions are excluded</summary><p>Only cards with exact illustrator credit, usable source art and a valid Pokémon species appear here.</p><ul>{Object.entries(artistCoverage.skipped.reduce<Record<string, number>>((counts, item) => ({ ...counts, [item.reason]: (counts[item.reason] ?? 0) + 1 }), {})).map(([reason, count]) => <li key={reason}>{exclusionLabels[reason] ?? reason.replaceAll('_', ' ')}: {count}</li>)}</ul></details>}
             <p className="quiet-note">Exact card credits from TCGdex. New source metadata is not independently reviewed. Tap an artwork to open its edition; your place in this portfolio is kept.</p>
-            <button className="inline-link portfolio-back" onClick={() => setDrawer('details')}>← Back to artwork details</button>
           </>}
         </div>
       </div>

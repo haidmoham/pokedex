@@ -64,16 +64,28 @@ test('card and species wrapping stays in range through repeated and reverse flow
 });
 
 
-test('artist vertical momentum updates timing without blocking native scroll', () => {
+test('horizontal ownership consumes trailing vertical momentum without a second navigation', () => {
   const wheel = new WheelGesture();
   assert.deepEqual(wheel.handle(50, 0, 0, false), {
     navigation: { axis: 'x', direction: 1 }, preventDefault: true,
   });
   for (let time = 16; time <= 208; time += 16) {
-    assert.deepEqual(wheel.handle(0, 50, time, false), { navigation: null, preventDefault: false });
+    assert.deepEqual(wheel.handle(0, 50, time, false), { navigation: null, preventDefault: true });
   }
   assert.deepEqual(wheel.handle(50, 0, 224, false), { navigation: null, preventDefault: true });
   assert.deepEqual(wheel.handle(50, 0, 500, false).navigation, { axis: 'x', direction: 1 });
+});
+
+test('vertical-first and ambiguous wheel input remain native; pinch can bypass ownership', () => {
+  const wheel = new WheelGesture();
+  assert.deepEqual(wheel.handle(2, 50, 0, false), { navigation: null, preventDefault: false });
+  assert.deepEqual(wheel.handle(50, 0, 16, false), { navigation: null, preventDefault: false });
+  wheel.reset();
+  assert.deepEqual(wheel.handle(20, 18, 200, false), { navigation: null, preventDefault: false });
+  assert.deepEqual(wheel.handle(18, 20, 216, false), { navigation: null, preventDefault: false });
+  assert.deepEqual(wheel.handle(48, 1, 500, false), { navigation: { axis: 'x', direction: 1 }, preventDefault: true });
+  assert.deepEqual(wheel.handle(18, 4, 516, false), { navigation: null, preventDefault: true });
+  assert.deepEqual(wheel.handle(3, 52, 532, false), { navigation: null, preventDefault: true });
 });
 
 test('museum vertical wheel has its own axis while artist vertical wheel scrolls', () => {
