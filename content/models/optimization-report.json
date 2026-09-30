@@ -1,0 +1,1559 @@
+{
+  "workers": 1,
+  "sources": 64,
+  "pipeline": {
+    "geometry": "exact decoded positions and topology; no simplification or quantization",
+    "textures": "WebP quality 90, at most 512x512",
+    "animation": "at most one recognized default-wait or idle; no automatic clip inference",
+    "toolchain": "scripts/model-pipeline/package-lock.json",
+    "perModelTimeoutSeconds": 120,
+    "sourceTransferCap": 16777216
+  },
+  "results": [
+    {
+      "id": 110,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ghost028 (https://sketchfab.com/ghost028)",
+        "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "ada0e6844d110c00dd5b8aac2230a1ea10ca5fe76136157e4588fc72f3cc61ef",
+      "originalBytes": 1523484,
+      "bytes": 5163576,
+      "sha256": "cdf0193c6b066e81c7436a3a93778ab9eac17ceb2fe745df26cbaff79e55ba54",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "ghost028 (https://sketchfab.com/ghost028)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+        "title": "Pokemon Weezing"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/110-candidate.glb"
+    },
+    {
+      "id": 149,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/dragonite-official-874c7fcdbd344c7bb9e8ed3e6a04dfac",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "becaa8098e26676837dd2f19589a16c774e46b433118b9d911cc7876abbe36b8",
+      "originalBytes": 5675848,
+      "bytes": 242472,
+      "sha256": "59d8eda57205c4693133025705a3b0eaba515d059407b8fc29fe02d6cfdc4357",
+      "geometryPreserved": true,
+      "animation": "pm0149_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/dragonite-official-874c7fcdbd344c7bb9e8ed3e6a04dfac",
+        "title": "Dragonite (Official)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/149-candidate.glb"
+    },
+    {
+      "id": 150,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/mewtwo-official-d8aebb93c39243b3a62022591202a97a",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "98ed03ce2dda7979f0ef0edf804671a3c3823a495dbe7fd230386122ebf77e69",
+      "originalBytes": 7600268,
+      "bytes": 299372,
+      "sha256": "b243c65d80930eec391d0ae32f5d5c94b37c025b3513d04395792a20bef68abe",
+      "geometryPreserved": true,
+      "animation": "pm0150_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/mewtwo-official-d8aebb93c39243b3a62022591202a97a",
+        "title": "Mewtwo (Official)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/150-candidate.glb"
+    },
+    {
+      "id": 160,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/feraligatr-za-3e754d81da1e49ee9fb8356be8bcb74c",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "3cfa8f0479fa141f873a55cd18040902dc6d27df2287b65adfb2aee28d486d47",
+      "originalBytes": 12732524,
+      "bytes": 269316,
+      "sha256": "db83fa53692f161d0fd1bfb35ede3630c7ef6f079f36d86cef028c08cc99bc23",
+      "geometryPreserved": true,
+      "animation": "pm0160_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/feraligatr-za-3e754d81da1e49ee9fb8356be8bcb74c",
+        "title": "Feraligatr (ZA)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/160-candidate.glb"
+    },
+    {
+      "id": 183,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 249,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/lugia-official-95fcd59551404286925dd9d05fd3b9d5",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "5bedc776bf589cb50d2cb6c4c8d548194a6414f0058113e0556ae86fecdf90c8",
+      "originalBytes": 15049208,
+      "bytes": 304920,
+      "sha256": "866b7b9a5de400a23a1fe3e95cd91ac453990de420f94c626f5b402e94bb9935",
+      "geometryPreserved": true,
+      "animation": "pm0249_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/lugia-official-95fcd59551404286925dd9d05fd3b9d5",
+        "title": "Lugia (Official)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/249-candidate.glb"
+    },
+    {
+      "id": 253,
+      "status": "terms-unresolved",
+      "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)"
+    },
+    {
+      "id": 297,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 330,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/flygonsv-973ade91b30c452b898f486959aa019a",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "b8a6bc5cc609f070eb91daf79374f7aef83913966a50b5a15d89c4dc93d56c20",
+      "originalBytes": 6421888,
+      "bytes": 286244,
+      "sha256": "e4ac6f87bbe16fe13ace09e3a229b52b926cdbb7f200b04d6629ab92d20f8e53",
+      "geometryPreserved": true,
+      "animation": "pm0330_00_00|pm0330_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/flygonsv-973ade91b30c452b898f486959aa019a",
+        "title": "Flygon(SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/330-candidate.glb"
+    },
+    {
+      "id": 341,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/corphish-sv-45a18da48b5b40ed9234afb7ff6e57ce",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "10a6b5285b9dbda6c4a6bfc27e7ef130c24aa23e529f9de023ae87b66a1d013d",
+      "originalBytes": 3069780,
+      "bytes": 140688,
+      "sha256": "ea9865cd0334f6a6b262f8e2a5a3e9431c68d4a35d110b6fe24f42e5ed4a608a",
+      "geometryPreserved": true,
+      "animation": "pm0341_00_00|pm0341_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/corphish-sv-45a18da48b5b40ed9234afb7ff6e57ce",
+        "title": "Corphish (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/341-candidate.glb"
+    },
+    {
+      "id": 358,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 462,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "31f29807bc109c72bb556ee6554ff1e18c34654794d3521a522acf3bab2303d2",
+      "originalBytes": 232492,
+      "bytes": 227864,
+      "sha256": "801e8fbbce4dfa72a508534bfce6f5afffa7d785fdf3977d80ee0306e9195654",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "decoded model complexity exceeds budget",
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+        "title": "Pokemon S&V Magnezone"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/462-candidate.glb"
+    },
+    {
+      "id": 478,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "66353086f5aff42db99e35fbc351c96e0298ca38d9bf2ead117a4f16bdc51efb",
+      "originalBytes": 89136,
+      "bytes": 166084,
+      "sha256": "1777f1abd06c9c83c469967bfca6fb0dffe00ea2557291567bf8d5e654692d93",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "decoded model complexity exceeds budget",
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+        "title": "Pokemon PokeDex 3DS Pro Froslass"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/478-candidate.glb"
+    },
+    {
+      "id": 645,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/landorus-incarnate-form-40fa148e38ea4af1a3f8b675b2936567",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "14a29238bea198788046b56480a7993e3f85f46f9bf1362c5bce1821672dfd62",
+      "originalBytes": 3970528,
+      "bytes": 241056,
+      "sha256": "4b4637886affc187fe87c807bce9a573787f2f997c41dd36949226126faa2830",
+      "geometryPreserved": true,
+      "animation": "pm0645_11_00_20000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/landorus-incarnate-form-40fa148e38ea4af1a3f8b675b2936567",
+        "title": "landorus (Incarnate Form)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/645-candidate.glb"
+    },
+    {
+      "id": 658,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/greninja-official-812359f8004644459ba50f309a6265ef",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "5367156594cf7d1fd0c970f5f78472e4b247c1d355a177707d993cd05f2ff294",
+      "originalBytes": 7047624,
+      "bytes": 256240,
+      "sha256": "c50cf03586d23c3d1653c384531e9b412b5a6a90d13176d7edf3db21acc022dd",
+      "geometryPreserved": true,
+      "animation": "pm0725_11_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/greninja-official-812359f8004644459ba50f309a6265ef",
+        "title": "Greninja (Official)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/658-candidate.glb"
+    },
+    {
+      "id": 674,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+        "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "4acb915b3be1363f5215b5b6b635a7bfc7c5d9c0bbca01035ddeee67d3db0eb9",
+      "originalBytes": 366688,
+      "bytes": 2005716,
+      "sha256": "19f55761bbc1eabd9c75906354f2f378cf1d8c3bab41a2a2742ab19ab8a4e1ea",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+        "title": "pancham"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/674-candidate.glb"
+    },
+    {
+      "id": 718,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/zygarde-core-dbecedac679c43fb83ef71067d8f88f4",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "8ec8af8291b1b6b793ce2341090b28e3b98ce5374bdacc85587803fb54162f86",
+      "originalBytes": 1687300,
+      "bytes": 160368,
+      "sha256": "20bca9e461e65c61473b73e40908ec728c9c0c6506eec0b5152c80b1453fdc03",
+      "geometryPreserved": true,
+      "animation": "pm0770_14_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/zygarde-core-dbecedac679c43fb83ef71067d8f88f4",
+        "title": "Zygarde Core"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/718-candidate.glb"
+    },
+    {
+      "id": 726,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/torracat-official-141746eeffe84d5392c0b7c7445cb3a3",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "6c0081e7b4fc934f297591046f8eeb184fdc39aa455a33af55c24cdceeddb535",
+      "originalBytes": 5014908,
+      "bytes": 371608,
+      "sha256": "1ca21a3842aca76c748a01917e5c7f72c63c9d496a5b5bd70f0e8311e7d6bdd9",
+      "geometryPreserved": true,
+      "animation": "pm0845_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/torracat-official-141746eeffe84d5392c0b7c7445cb3a3",
+        "title": "Torracat (Official)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/726-candidate.glb"
+    },
+    {
+      "id": 763,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+        "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "92226ba682991da3b3d4f1915f20511dea2c4b79342021b6616124d3a0e37c04",
+      "originalBytes": 343712,
+      "bytes": 1541856,
+      "sha256": "86a34dee2b4ea9ab23a6769315e5f5cbba6cb408c79495ebb57238c38f2f0397",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+        "title": "Tsareena"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/763-candidate.glb"
+    },
+    {
+      "id": 795,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Abe95 (https://sketchfab.com/Abe95)",
+        "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "02359e05b27ce6ecd8b11d21253464bf92e24fbeee0b4de00da1e78bf9b83ed9",
+      "originalBytes": 519944,
+      "bytes": 2140544,
+      "sha256": "cce3707ff9759ef6bf4d06bc98abce8669f5229d23273c15f2022d8c69ae106c",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "Abe95 (https://sketchfab.com/Abe95)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+        "title": "Pheromosa - Pokémon"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/795-candidate.glb"
+    },
+    {
+      "id": 796,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "korbenhall (https://sketchfab.com/korbenhall)",
+        "source": "https://sketchfab.com/3d-models/xurkitree-56e21cf3dcb049f29311e7428860c9da",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "a094ff373b69b743e00ff3aab86d509244e8b2eef3a9900db1adf13aedb64ed8",
+      "originalBytes": 1053060,
+      "bytes": 1385232,
+      "sha256": "4847f7d30055d3f76c05f339c6360ca059e59fa39083694e3d93df16ca55f876",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "korbenhall (https://sketchfab.com/korbenhall)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/xurkitree-56e21cf3dcb049f29311e7428860c9da",
+        "title": "Xurkitree"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/796-candidate.glb"
+    },
+    {
+      "id": 801,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-scarlet-violet-magearna-0c3abbd8f4794749bcf2c622c702621b",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "2d629b740fa7b28c10ba578c3991b50e19aa2476afe3e060e5164fc0da627225",
+      "originalBytes": 232068,
+      "bytes": 376000,
+      "sha256": "9cb93937f602f7f9dad378ee216b08254ffc2359cfe597f00d152dbd426189d1",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "decoded model complexity exceeds budget",
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-scarlet-violet-magearna-0c3abbd8f4794749bcf2c622c702621b",
+        "title": "Nintendo Switch Pokemon Scarlet Violet magearna"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/801-candidate.glb"
+    },
+    {
+      "id": 805,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Galanodel (https://sketchfab.com/Galanodel)",
+        "source": "https://sketchfab.com/3d-models/stakataka-bedrock-model-17e8af141e0247578844b81ff8031660",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "afd5b97c79f1d6894240bca300feadde366354571bc3f310f070406f3542069c",
+      "originalBytes": 118532,
+      "bytes": 104504,
+      "sha256": "5df1423325ef4998f4acb5e7c2a4baf8483e926ac10d931956e83bf93a63505f",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "decoded model complexity exceeds budget",
+      "sourceExtras": {
+        "author": "Galanodel (https://sketchfab.com/Galanodel)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/stakataka-bedrock-model-17e8af141e0247578844b81ff8031660",
+        "title": "Stakataka (Bedrock Model)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/805-candidate.glb"
+    },
+    {
+      "id": 811,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/thwackey-sv-3dd0fd2917ce4e2696b8d7c12bbc99fc",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "3f329d72cc9756221d8e922b15677d654d901b453577f30f89b267c61aa939c2",
+      "originalBytes": 6822088,
+      "bytes": 387816,
+      "sha256": "9a4661b0463d1cbdb11332152dbe934fef8a509b2cf28718ed00030bde30f30a",
+      "geometryPreserved": true,
+      "animation": "pm0949_00_00|pm0949_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/thwackey-sv-3dd0fd2917ce4e2696b8d7c12bbc99fc",
+        "title": "Thwackey (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/811-candidate.glb"
+    },
+    {
+      "id": 814,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/raboot-offical-5b6eb1c10cfd467e8bcfcca52d588d86",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "f92344e3746bdf7ccd137ac64bb3590a9f4bbdafbd9f2e7f3f86898edadab029",
+      "originalBytes": 4744320,
+      "bytes": 265332,
+      "sha256": "9d9e885df03ea039b4d3e04ae68b09f1b1d1b84aadfa722ba5daeac08d3e8dc4",
+      "geometryPreserved": true,
+      "animation": "pm0955_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/raboot-offical-5b6eb1c10cfd467e8bcfcca52d588d86",
+        "title": "Raboot (offical)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/814-candidate.glb"
+    },
+    {
+      "id": 839,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/coalossal-sv-66083cbac5394307ac711c787f605beb",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "3f65f48a6dc41f3f3b542e0d2017904c696f9340b9bd27bc4f5065e1b32040d0",
+      "originalBytes": 3197888,
+      "bytes": 272432,
+      "sha256": "90506033c1ac6bc3a82e7442a9e81293674bd27d66d507f1cb2a7c9aa595627b",
+      "geometryPreserved": true,
+      "animation": "pm0935_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/coalossal-sv-66083cbac5394307ac711c787f605beb",
+        "title": "Coalossal (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/839-candidate.glb"
+    },
+    {
+      "id": 844,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/sandaconda-9a9cee04cdb243388e9c62a4f4615cda",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "b146c5c0ea48a2b87c8101e7bf5e9da9809c9095420c7504e2601c79254dbd28",
+      "originalBytes": 2138444,
+      "bytes": 206904,
+      "sha256": "2109da4dfcfe9e21bea44a5ca7401294ca8f8c34ddb5830d1bd7c89dc687886c",
+      "geometryPreserved": true,
+      "animation": "pm0937_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/sandaconda-9a9cee04cdb243388e9c62a4f4615cda",
+        "title": "Sandaconda"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/844-candidate.glb"
+    },
+    {
+      "id": 846,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/arrokuda-sv-ec704272f647452198f9debe0118c04c",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "4386bbd8caf9568fc0d5aff3f8c375030d221c3d41442ff2d0b2d8ba4fdd5243",
+      "originalBytes": 1718304,
+      "bytes": 149436,
+      "sha256": "8d666e3d6d62129c87d3f30a4fe10fcf937ba094e49903940b5331b7f68e9637",
+      "geometryPreserved": true,
+      "animation": "pm0913_00_00|pm0913_00_00_10000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/arrokuda-sv-ec704272f647452198f9debe0118c04c",
+        "title": "Arrokuda (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/846-candidate.glb"
+    },
+    {
+      "id": 848,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/toxel-sv-f137ef29bae94f54ae0194dbd0d51ede",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "c55907e8270a2ac783ae953646fff5ce1268dd0229101a9ffb94d4e370043a26",
+      "originalBytes": 3790192,
+      "bytes": 211088,
+      "sha256": "22e0acb8fad124088f89c231be263257e8387a69fcaea73026da6137936fd6ab",
+      "geometryPreserved": true,
+      "animation": "pm0921_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/toxel-sv-f137ef29bae94f54ae0194dbd0d51ede",
+        "title": "Toxel (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/848-candidate.glb"
+    },
+    {
+      "id": 849,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "LunaEagle (https://sketchfab.com/LunaEagle)",
+        "source": "https://sketchfab.com/3d-models/toxtricity-5e310132cdb0488697e515a1b404260e",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "11682b41de47f2b022f066ab7c87a821a042da8614cabddef5a931e5a9d0175f",
+      "originalBytes": 768976,
+      "bytes": 373420,
+      "sha256": "7e3b55877ec5a8f8dad4079cb444e1b4c5da39f5c2f5e6293f614418559b4476",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "LunaEagle (https://sketchfab.com/LunaEagle)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/toxtricity-5e310132cdb0488697e515a1b404260e",
+        "title": "Toxtricity"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/849-candidate.glb"
+    },
+    {
+      "id": 858,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 867,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "korbenhall (https://sketchfab.com/korbenhall)",
+        "source": "https://sketchfab.com/3d-models/runerigus-491c7715893440f29afa86cb62549e67",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "7257011637ab1d40148fa9657ce1734c6c8517a18542749c17d768a29127d0b1",
+      "originalBytes": 398720,
+      "bytes": 328084,
+      "sha256": "c6cfc39e3309398aa363a7854d3c5b5420867f2accec6c3248c9960c8d32e521",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "decoded model complexity exceeds budget",
+      "sourceExtras": {
+        "author": "korbenhall (https://sketchfab.com/korbenhall)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/runerigus-491c7715893440f29afa86cb62549e67",
+        "title": "Runerigus"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/867-candidate.glb"
+    },
+    {
+      "id": 875,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/eiscue-regular-ice-face-form-5fbdf85be2c74f28b7c66228039ae9f5",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "a595407de3fa1405664a04281224dcd6150433aa6ce1e80c3ad2359fa53c8810",
+      "originalBytes": 5758704,
+      "bytes": 294468,
+      "sha256": "d7d3e6b7580f318267e32a6041b955c60410766095c840da7f0bc5229dd12b8a",
+      "geometryPreserved": true,
+      "animation": "pm0975_11_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/eiscue-regular-ice-face-form-5fbdf85be2c74f28b7c66228039ae9f5",
+        "title": "Eiscue (Regular, Ice Face form)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/875-candidate.glb"
+    },
+    {
+      "id": 889,
+      "assetUseTerms": {
+        "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+        "attribution": "User 37564 (https://sketchfab.com/rhl89ryo)",
+        "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": true,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "345a85742be87b21bc4bb0f91abc730083bb13f58ff097a41b1f2371913bdb9e",
+      "originalBytes": 445472,
+      "bytes": 1507084,
+      "sha256": "e8e64f02579591e6c95cb0d8844825211a05d6a883e1841086d90ef27282279a",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "User 37564 (https://sketchfab.com/rhl89ryo)",
+        "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+        "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+        "title": "Zamazenta (Armor) [Pokemon Shield]"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/889-candidate.glb"
+    },
+    {
+      "id": 907,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+        "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "500419d17134c12b6741d63c9ee0e5212dff6c539b740a993b4f26ef64302d99",
+      "originalBytes": 656560,
+      "bytes": 2866800,
+      "sha256": "b4e779cf79fe05c90b19fce995b0a52c35991c311608295f7fe5b73747b74ade",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "kishi (https://sketchfab.com/ash.takafumi)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+        "title": "Floragato"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/907-candidate.glb"
+    },
+    {
+      "id": 909,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/fuecoco-sv-a591ae67a0c54a8487a60debdf5c5ea7",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "4f444adb7b2b332ca3d0b31243ae3d9a8662957607371ea74abfeb3efbff172c",
+      "originalBytes": 5459300,
+      "bytes": 265436,
+      "sha256": "d4fbff8341a1e2a898adac5f7e132e0824a6070b6f379b194d8f96dcfe291818",
+      "geometryPreserved": true,
+      "animation": "pm1013_00_00|pm1013_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/fuecoco-sv-a591ae67a0c54a8487a60debdf5c5ea7",
+        "title": "Fuecoco (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/909-candidate.glb"
+    },
+    {
+      "id": 910,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/crocalor-sv-2bc29c577b7d4ab789a4ac11e6b387c4",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "6fc1a326d06894709515a0680deab346119756c16f180e2665580e7ff8582df3",
+      "originalBytes": 5987400,
+      "bytes": 288536,
+      "sha256": "dfdd70946cb5c68dac62e21e3493527970c74153925e107be0ef5f93918f41d8",
+      "geometryPreserved": true,
+      "animation": "pm1014_00_00|pm1014_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/crocalor-sv-2bc29c577b7d4ab789a4ac11e6b387c4",
+        "title": "Crocalor (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/910-candidate.glb"
+    },
+    {
+      "id": 911,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/skeledirge-sv-8c2963ccbffc47889752011f8a50ebd4",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "3277c09ea2789cbbf0659fce46dbd14b08cd8bb071c50f1475b7ae3860df38f9",
+      "originalBytes": 9988460,
+      "bytes": 619424,
+      "sha256": "d7295838a29567353a9508b04ecc479fb03640a51ee028df84687c7deeeb128d",
+      "geometryPreserved": true,
+      "animation": "pm1015_00_00|pm1015_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/skeledirge-sv-8c2963ccbffc47889752011f8a50ebd4",
+        "title": "Skeledirge (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/911-candidate.glb"
+    },
+    {
+      "id": 913,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+        "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "59993b31c5e8c26eb9c2fc6767cb20f920d8f06e63d5ff6a73c599a0d35a7506",
+      "originalBytes": 429868,
+      "bytes": 1923780,
+      "sha256": "67d59cc5ebb157d35699a78d86ccab6fccece539475968527bde9be81906df1b",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "transfer exceeds 750 KB",
+      "sourceExtras": {
+        "author": "kishi (https://sketchfab.com/ash.takafumi)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+        "title": "Quaxwell"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/913-candidate.glb"
+    },
+    {
+      "id": 925,
+      "status": "terms-unresolved",
+      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)"
+    },
+    {
+      "id": 932,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/nacl-8f4e1c295f764e2aa536364a9ef53b90",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "8168f1b37749ddbe97d38bd6ad0ddb0a5649cb3035ee349d7d194382f7ca0006",
+      "originalBytes": 284312,
+      "bytes": 59760,
+      "sha256": "87b377e79dec01446c8db29ab3dfda9f1f305bd2fb23e2c8be60c33e6b42ff7b",
+      "geometryPreserved": true,
+      "animation": "pm1067_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/nacl-8f4e1c295f764e2aa536364a9ef53b90",
+        "title": "Nacl"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/932-candidate.glb"
+    },
+    {
+      "id": 933,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/naclstack-sv-356d63d3cbf14620bbd3ec15ed1fefd2",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "4cfb98b62e15a0da918f67607e1c7dbca37cd0a43d3a84659b741988a0923277",
+      "originalBytes": 759884,
+      "bytes": 103232,
+      "sha256": "323b7c62259a3e4340443a193c42e7beff7abcfeb848a2bf057665752be2115e",
+      "geometryPreserved": true,
+      "animation": "pm1068_00_00|pm1068_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/naclstack-sv-356d63d3cbf14620bbd3ec15ed1fefd2",
+        "title": "Naclstack (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/933-candidate.glb"
+    },
+    {
+      "id": 934,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/garganacl-sv-b8d2b8bc554c4219b680763314e482f5",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "f71c6fffca0f141290142592f5b4df27f1715554a5e903dde4f4d399abfbe321",
+      "originalBytes": 2391792,
+      "bytes": 187420,
+      "sha256": "f7274b8bb1628e730ee263a40f4ea9acbf0a4a1d1bdeb0106185f86745bd93cd",
+      "geometryPreserved": true,
+      "animation": "pm1069_00_00|pm1069_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/garganacl-sv-b8d2b8bc554c4219b680763314e482f5",
+        "title": "Garganacl (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/934-candidate.glb"
+    },
+    {
+      "id": 941,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 946,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/bramblin-8b7eb58b5c3e43f79eb27ca7cdca8409",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "e99409df1256a92c7fe7d9074e9a00475e17225992d8087f7db5af8a42c72510",
+      "originalBytes": 3673376,
+      "bytes": 215012,
+      "sha256": "f25e841db913e3b53f602a801203dbe7ac481d8a9b49c40ab5df44c438df02c8",
+      "geometryPreserved": true,
+      "animation": "pm1078_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/bramblin-8b7eb58b5c3e43f79eb27ca7cdca8409",
+        "title": "Bramblin"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/946-candidate.glb"
+    },
+    {
+      "id": 947,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/brambleghast-8a9efe4370ba4e169ed7e81db951f3f3",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "0a3c82441ad2999fbe617509b40c5294a29285934fb9881ef2902b92547e2a62",
+      "originalBytes": 1932892,
+      "bytes": 216396,
+      "sha256": "1078b52bff29e71808a60199dcf066f49920fc85f4c1085bd0e533aae5980fdf",
+      "geometryPreserved": true,
+      "animation": "pm1079_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/brambleghast-8a9efe4370ba4e169ed7e81db951f3f3",
+        "title": "Brambleghast"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/947-candidate.glb"
+    },
+    {
+      "id": 979,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/annihilape-sv-d098e7261b554ee18b637de837c8ca86",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "ae85385aded8edb8188cb20d74408350ea3009c9719a962d2b55691ac6155c2b",
+      "originalBytes": 9615152,
+      "bytes": 495360,
+      "sha256": "6c45eaba8df26e87051bb305ca1a40df5c0a66da45629639f1600400d204a84d",
+      "geometryPreserved": true,
+      "animation": "pm1114_00_00|pm1114_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/annihilape-sv-d098e7261b554ee18b637de837c8ca86",
+        "title": "Annihilape (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/979-candidate.glb"
+    },
+    {
+      "id": 981,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/farigiraf-94b7339dfd8f4352be372f1e45da9c67",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "103ae537a01852987cdd557c3f8c2eb3708f789b46fde4526457c2e9d87e0302",
+      "originalBytes": 6107964,
+      "bytes": 387232,
+      "sha256": "cedc0edb6742202f59326bd5d92dc27654a3e22665f330c5257a40b9222ed694",
+      "geometryPreserved": true,
+      "animation": "pm1032_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/farigiraf-94b7339dfd8f4352be372f1e45da9c67",
+        "title": "Farigiraf"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/981-candidate.glb"
+    },
+    {
+      "id": 983,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/kingambit-sv-2a77f29e48c144cda86e49969d48ceec",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "1c5f552c7c0fd7ba219356bbe352ade54a21d1d8b20ca42edd3f51f2a84b6307",
+      "originalBytes": 4636780,
+      "bytes": 345556,
+      "sha256": "db834621d2d1815ec7f93900e7110e8b9c2133530392b68d1596ac05393a61fb",
+      "geometryPreserved": true,
+      "animation": "pm1112_00_00|pm1112_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/kingambit-sv-2a77f29e48c144cda86e49969d48ceec",
+        "title": "Kingambit (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/983-candidate.glb"
+    },
+    {
+      "id": 984,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 985,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "b7fb93e41e517dc15cdd6554b9c51c442415ba44c918e4ad9cd215ef8946ffca",
+      "originalBytes": 226804,
+      "bytes": 263808,
+      "sha256": "a66978023a2e55a5dede4c89942cfaadef116c361a229ada4d3943533a64f7a3",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "decoded model complexity exceeds budget",
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+        "title": "Pokemon Scarlet and Violet Scream tail"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "budget-rejected",
+      "artifact": "data/model-optimization/985-candidate.glb"
+    },
+    {
+      "id": 987,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 994,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/iron-moth-sv-7ad9b923ee3548db9006468a7adc13e5",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "5f846bb981313ec7c1b1926862026880aad67887a130001a191925f24c38cfd1",
+      "originalBytes": 1249352,
+      "bytes": 216124,
+      "sha256": "5601628083f7978889576d8b76a2da4ff6c40ea3ab8b729f6bb89c4dd8907285",
+      "geometryPreserved": true,
+      "animation": "pm1092_00_00|pm1092_00_00_20000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/iron-moth-sv-7ad9b923ee3548db9006468a7adc13e5",
+        "title": "Iron Moth (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/994-candidate.glb"
+    },
+    {
+      "id": 995,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 999,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/chest-gimmighoul-sv-68bbff72defd42808c713d914e46ad66",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "81c813cb07f2a144190fd167e25f674a3d057630dcc71e03c87dc45a52820223",
+      "originalBytes": 3386504,
+      "bytes": 252120,
+      "sha256": "d5757ad8a91cdf4652f4f03350470518ff65fa54692138d602f06b63f9a9213f",
+      "geometryPreserved": true,
+      "animation": "pm1080_11_00|pm1080_11_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/chest-gimmighoul-sv-68bbff72defd42808c713d914e46ad66",
+        "title": "Chest Gimmighoul (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/999-candidate.glb"
+    },
+    {
+      "id": 1001,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/wo-chien-sv-04a8ae2fb84a44a4aba0127585b74ee0",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "59c3397b98dbf8503183c426893f3adeb21412cf27bede816d2cf4268719926d",
+      "originalBytes": 8480264,
+      "bytes": 456956,
+      "sha256": "6b211520c00af19171e931f0bf58e917d345cb7c8cd6b753b202581895aac8ed",
+      "geometryPreserved": true,
+      "animation": "pm1100_00_00|pm1100_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/wo-chien-sv-04a8ae2fb84a44a4aba0127585b74ee0",
+        "title": "Wo Chien (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/1001-candidate.glb"
+    },
+    {
+      "id": 1002,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/chien-pao-official-d9a8060d5ad541ea99702f9e48bf11d7",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "7f2abadf2f9c65d91bf28c90101a59dbd0425beaf04bc7eaf0c6267cef3f9699",
+      "originalBytes": 5017356,
+      "bytes": 401808,
+      "sha256": "5d7018d92f3c39c29ecc55f69e24f73cec55924a865557cc5bf007731a6349a1",
+      "geometryPreserved": true,
+      "animation": "pm1099_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/chien-pao-official-d9a8060d5ad541ea99702f9e48bf11d7",
+        "title": "Chien Pao (Official)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/1002-candidate.glb"
+    },
+    {
+      "id": 1003,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/ting-lu-sv-83d555d9777e4fdeaf1a7add4361301c",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "12b5768191427f9844008aa1b3db0e121085a1eab0c11a8c9196df22d3637185",
+      "originalBytes": 2506416,
+      "bytes": 261656,
+      "sha256": "d09e2633ca8a5e024b845abcbbf6418ccc64a9d937b9dd2907e725b12f133f1b",
+      "geometryPreserved": true,
+      "animation": "pm1098_00_00|pm1098_00_00_00000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/ting-lu-sv-83d555d9777e4fdeaf1a7add4361301c",
+        "title": "Ting Lu (SV)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/1003-candidate.glb"
+    },
+    {
+      "id": 1004,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "source": "https://sketchfab.com/3d-models/chi-yu-1d6e40400a5b42859ad5a89adec8aade",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "dc0be0d67f4ef2be8c502c6514696f1a250ab3c48f1d5a96b9155c88545b25da",
+      "originalBytes": 6147404,
+      "bytes": 368972,
+      "sha256": "636ab8e2439f31d40d86681713f66c1c0a063104ac9bb493d553a2e9df738223",
+      "geometryPreserved": true,
+      "animation": "pm1101_00_00_20000_defaultwait01_loop",
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/chi-yu-1d6e40400a5b42859ad5a89adec8aade",
+        "title": "Chi-Yu"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/1004-candidate.glb"
+    },
+    {
+      "id": 1014,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 1015,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 1018,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 1020,
+      "status": "terms-unresolved",
+      "license": null
+    },
+    {
+      "id": 1023,
+      "status": "terms-unresolved",
+      "license": null
+    }
+  ]
+}

@@ -21,8 +21,22 @@ The audit chooses one ordinary model per species, with a deterministic variant o
 
 An embedded uploader, source URL and CC-BY claim are attribution evidence, not proof that the uploader can license underlying Pokemon IP. Missing embedded fields are concrete provenance gaps. The source repository's MIT software license does not resolve them. The audit leaves every new entry `admitted: false` and `redistributionApproved: false`; Mewtwo's prior reviewed admission is unchanged. Broad redistribution and production expansion remain blocked until the relevant permissions are established.
 
+Documented CC-BY/CC-BY-SA uploader terms permit attributed derivatives at the asset layer; unknown underlying character rights are recorded separately. They do not prevent a local, attributed optimization experiment. Noncommercial terms, no-derivatives terms and Sketchfab Standard are not automatically treated as unrestricted production permission. Sources without documented asset-use terms remain excluded. Source-term completeness is never treated as visual evidence.
+
 ## Verified batch result
 
 The committed `content/models/source-audit.json` checks one source for all 971 available species. Every selected file matched its manifest size and Git blob identity: 332,444,316 verified bytes. There are 906 machine candidates, 64 requiring optimization and one rejected model (Gholdengo), with no remaining source-fetch failures. This is machine evidence, not a visual or rights review.
 
 544 sources contain all three embedded author/license/source fields; 427 lack those fields. License strings include 534 CC-BY, four CC-BY-NC, three CC-BY-SA, one CC-BY-NC-SA, one CC-BY-NC-ND and one Sketchfab Standard claim. These distinctions must survive any derivative pipeline. No new model was admitted or redistributed during this batch. The existing Mewtwo is still the only active 3D entry.
+
+## Implemented derivative experiment
+
+Run `npm ci --prefix scripts/model-pipeline`, then `node scripts/model-pipeline/optimize.mjs`. The separate lockfile pins the toolchain and does not add optimization packages to the application bundle. Source bytes are verified against the audit SHA256, then reused locally on reruns. One worker with a 120-second processing deadline per model keeps CPU/decode allocation bounded. GLBs with external resources or over 128 MB of declared source buffers are rejected before offline decoding. Sharp uses one thread and a 16-megapixel input limit.
+
+The pipeline retains at most one explicitly recognized idle, disposes unused animation channels/samplers, compresses data with Meshopt, and resizes textures to at most 512x512 WebP quality 90. It does not simplify, weld, reorder or quantize geometry. It checks decoded position hashes and primitive modes/counts against a decoder roundtrip and preserves original embedded asset extras. Output texture bytes are actually decoded before applying the existing runtime texture budget. Texture reduction still requires visual comparison.
+
+Of 64 heavy sources, 49 have CC-BY/CC-BY-SA claims and were processed locally: 35 pass the current machine budgets, 14 fail (eight transfer size, six decoded complexity). Fifteen remain excluded: 13 without terms, one Sketchfab Standard and one noncommercial claim. All 49 preserve geometry; no source was auto-admitted. Results and provenance are recorded in `content/models/optimization-report.json`, with local binaries in ignored `data/model-optimization/`.
+
+`node scripts/prepare-model-candidates.js` produces a disabled proposal manifest: 487 original machine candidates with suitable asset-layer terms, plus 35 optimized candidates. `content/models/candidates.json` is not imported into the app. Each entry explicitly separates machine/texture checks from `visualReviewed: false` and `admitted: false`. Underlying rights remain unknown. Candidate publication and representative browser checks are pending; there is no all-model visual, phone-performance or rights-clearance claim. The runtime independently rejects known-broken Gholdengo even if a future manifest accidentally enables it.
+
+API references: [glTF Transform Draco decoding](https://gltf-transform.dev/modules/extensions/classes/KHRDracoMeshCompression), [texture compression](https://gltf-transform.dev/modules/functions/functions/textureCompress), and [Meshopt](https://gltf-transform.dev/modules/extensions/classes/EXTMeshoptCompression).
