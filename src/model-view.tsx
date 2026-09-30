@@ -88,7 +88,7 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
     const element = viewer.current;
     if (!element || !loaded) return;
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const sync = () => { if (idleMayPlay(playing, suspended, document.hidden, preference.matches)) element.play(); else element.pause(); };
+    const sync = () => { if (asset.animation && idleMayPlay(playing, suspended, document.hidden, preference.matches)) element.play(); else element.pause(); };
     sync();
     document.addEventListener('visibilitychange', sync);
     preference.addEventListener('change', sync);

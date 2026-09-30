@@ -8,3 +8,5 @@ data/
 
 # Rebuilt from the locked official runtime dependency.
 public/model-runtime/
+public/release.json
+public/models/attribution.json

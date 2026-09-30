@@ -34,8 +34,8 @@ test('species movement never wraps #1 to #1025 and visits every entry in both di
 
 function fakeViewport() {
   return {
-    clientHeight: 800, scrollTop: 0, style: { overflowY: 'auto' }, requests: [],
-    scrollTo(options) { this.requests.push(options); this.scrollTop = options.top; },
+    clientWidth: 800, scrollLeft: 0, style: { overflowX: 'auto' }, requests: [],
+    scrollTo(options) { this.requests.push(options); this.scrollLeft = options.left; },
   };
 }
 
@@ -44,7 +44,7 @@ test('rapid explicit species commands advance synchronously without waiting for 
   const position = new FeedPosition();
   for (let i = 0; i < 8; i++) position.jump(feed, position.index + 1, 1025);
   assert.equal(position.index, 8);
-  assert.equal(feed.scrollTop, 8 * feed.clientHeight);
+  assert.equal(feed.scrollLeft, 8 * feed.clientWidth);
   for (let i = 0; i < 12; i++) position.jump(feed, position.index - 1, 1025);
   assert.equal(position.index, 0);
   position.jump(feed, 9999, 1025);
@@ -56,24 +56,24 @@ test('drawer inspection settles momentum and rejects late scroll or navigation c
   const feed = fakeViewport();
   const position = new FeedPosition();
   position.jump(feed, 24, 1025);
-  feed.scrollTop += 450;
+  feed.scrollLeft += 450;
   position.lock(feed, 24);
   assert.equal(position.locked, true);
-  assert.equal(feed.style.overflowY, 'hidden');
-  assert.equal(feed.scrollTop, 24 * 800);
+  assert.equal(feed.style.overflowX, 'hidden');
+  assert.equal(feed.scrollLeft, 24 * 800);
   // A late native scroll event must not replace the inspected species.
-  feed.scrollTop = 40 * 800;
+  feed.scrollLeft = 40 * 800;
   assert.equal(position.sync(feed, 1025), 24);
   assert.equal(position.jump(feed, 80, 1025), 24);
   // Resizing for a mobile keyboard keeps the same species, not the old pixels.
-  feed.clientHeight = 500;
+  feed.clientWidth = 500;
   position.settle(feed);
-  assert.equal(feed.scrollTop, 24 * 500);
+  assert.equal(feed.scrollLeft, 24 * 500);
   assert.equal(position.unlock(feed), 24);
-  assert.equal(feed.style.overflowY, 'auto');
+  assert.equal(feed.style.overflowX, 'auto');
   assert.equal(position.locked, false);
   assert.equal(position.unlock(feed), null);
-  feed.scrollTop = 25 * 500;
+  feed.scrollLeft = 25 * 500;
   assert.equal(position.sync(feed, 1025), 25);
 });
 

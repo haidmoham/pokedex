@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import speciesSnapshot from '../content/species.json';
 import cardsSnapshot from '../content/cards.json';
 import { ArtGallery } from './art-gallery';
+import { useSnapScroll } from './use-snap-scroll';
 import { cardSpeciesIds, mergeCardLibrary } from './card-library';
 import { adjacentIndex, artwork, dexNumber, FeedPosition, nationalDex, officialEdition, recentPrice, rememberFailedImage, retryFailedImages } from './feed-model';
 import type { CardEdition, Pokemon } from './feed-model';
@@ -87,6 +88,7 @@ function App() {
   const [manifestFailed, setManifestFailed] = useState(false);
   const [error, setError] = useState('');
   const [artMoving, setArtMoving] = useState(false);
+  const [inspectingModel, setInspectingModel] = useState(false);
   const [shareStatus, setShareStatus] = useState('');
   const [manualShare, setManualShare] = useState('');
   const [candidate, setCandidate] = useState<Candidate | null>(null);
@@ -95,7 +97,13 @@ function App() {
   const [brokenImages, setBrokenImages] = useState<string[]>([]);
   const [hasScrolled, setHasScrolled] = useState(false);
   const completedDiscovery = useRef(new Set<number>());
-  const feedRef = useRef<HTMLDivElement>(null);
+  const speciesScroll = useSnapScroll({ axis: 'x', selected: activeIndex, length: pokemon.length, suspended: Boolean(drawer) || inspectingModel,
+    onMotion: () => {}, onSelect: index => {
+      if (drawerRef.current || feedPosition.current.locked) return;
+      feedPosition.current.index = index;
+      activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); enterSpecies(index);
+    } });
+  const feedRef = speciesScroll.scroller;
   const overlayRef = useRef<HTMLDivElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const drawerScrollRef = useRef<HTMLDivElement>(null);
@@ -354,7 +362,11 @@ function App() {
     history.replaceState({ pokedexDepth: 0 }, '');
     const onPop = (event: PopStateEvent) => {
       const depth = event.state?.pokedexDepth;
-      if (Number.isInteger(depth) && timeline.current[depth]) { savePanel(); applyStack(timeline.current[depth]); }
+      const stack = Number.isInteger(depth) && timeline.current[depth] ? timeline.current[depth] : [];
+      // History entries survive reload; the in-memory drawer timeline does not.
+      // Restore the address's species whenever there is no live excursion.
+      if (!stack.some(route => route.kind === 'branch')) baseIndex.current = (linkedSpecies(location.search) ?? 1) - 1;
+      savePanel(); applyStack(stack);
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -403,17 +415,6 @@ function App() {
     const feed = feedRef.current;
     if (!feed) return;
     feed.focus({ preventScroll: true });
-    let frame = 0;
-    const syncIndex = () => {
-      if (drawerRef.current || feedPosition.current.locked) return;
-      const index = feedPosition.current.sync(feed, pokemon.length);
-      if (index !== activeIndexRef.current) { activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true);  enterSpecies(index); }
-    };
-    const onScroll = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(syncIndex); };
-    feed.addEventListener('scroll', onScroll, { passive: true });
-    const resize = new ResizeObserver(() => { feedPosition.current.settle(feed); });
-    resize.observe(feed);
-    return () => { feed.removeEventListener('scroll', onScroll); cancelAnimationFrame(frame); resize.disconnect(); };
   }, []);
 
   function jumpTo(index: number) {
@@ -436,7 +437,7 @@ function App() {
     setActiveIndex(next);
 
   }
-  function moveSpecies(direction: number) { jumpTo(adjacentIndex(activeIndexRef.current, direction, pokemon.length)); }
+  function moveSpecies(direction: number) { if (!inspectingModel) jumpTo(adjacentIndex(activeIndexRef.current, direction, pokemon.length)); }
   function enterSpecies(index: number) {
     const item = pokemon[index];
     if (routesRef.current.at(-1)?.kind === 'branch') {
@@ -458,6 +459,7 @@ function App() {
     else setVisits(old => ({ ...old, [activePokemon.id]: change(old[activePokemon.id] ?? createVisit(activePokemon, libraryRef.current, currency)) }));
   }
   function moveArt(direction: number) {
+    if (inspectingModel) return;
     if (trail) {
       const next = traverseTrail({ steps: trail, index: trailIndex, cursor: branch?.cursor ?? null }, direction);
       if (next.index !== trailIndex) {
@@ -534,42 +536,44 @@ function App() {
   }
 
   function onFeedKey(event: React.KeyboardEvent) {
-    if (drawer || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+    if (drawer || inspectingModel || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
       (event.target instanceof Element && event.target.closest('input, select, textarea, [contenteditable]'))) return;
     if (['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'PageDown', 'PageUp', 'Home', 'End'].includes(event.key)) event.preventDefault();
-    if (event.key === 'ArrowDown' || event.key === 'PageDown') moveSpecies(1);
-    if (event.key === 'ArrowUp' || event.key === 'PageUp') moveSpecies(-1);
-    if (event.key === 'ArrowLeft') moveArt(-1);
-    if (event.key === 'ArrowRight') moveArt(1);
+    if (event.key === 'ArrowDown' || event.key === 'PageDown') moveArt(1);
+    if (event.key === 'ArrowUp' || event.key === 'PageUp') moveArt(-1);
+    if (event.key === 'ArrowLeft') moveSpecies(-1);
+    if (event.key === 'ArrowRight') moveSpecies(1);
     if (event.key === 'Home') jumpTo(0);
     if (event.key === 'End') jumpTo(pokemon.length - 1);
   }
 
   return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
     <header className="topbar">
-      <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" />pokédex<span className="brand-dot">.</span></button>
+      <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" /><span className="brand-name">pokédex<span className="brand-dot">.</span></span></button>
       <button className="dex-position dex-jump" onClick={event => { setQuery(''); openDrawer('search', undefined, event.currentTarget); }} aria-label={`Jump to Pokédex number. Current ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></button>
       <button className="icon-button search-button" onClick={() => openDrawer('search')} aria-label="Search Pokédex"><Icon name="search" /></button>
     </header>
 
-    <div ref={feedRef} className="species-feed" tabIndex={0} role="region" aria-label="Pokédex feed. Scroll vertically for species. Swipe horizontally or use left and right arrow keys for artwork."
+    <div ref={feedRef} className={`species-feed ${speciesScroll.nativeEnd ? '' : 'species-fallback'}`} {...speciesScroll.events} tabIndex={0} role="region" aria-label="Pokédex feed. Swipe horizontally or use left and right arrows for species. Scroll vertically or use up and down arrows to explore artwork."
       onDragStart={event => event.preventDefault()}>
       {pokemon.map((item, index) => {
-        const nearby = Math.abs(index - activeIndex) <= 1;
+        const nearby = Math.abs(index - speciesScroll.center) <= 1 || index === activeIndex;
         const visit = index === activeIndex ? activeVisit : visits[item.id];
         const chosenId = visit?.selectedId ?? `official-${item.id}`;
         const edition = nearby ? (allCards.find(entry => entry.cardId === chosenId) ?? (chosenId === `model-${item.id}` ? modelEdition(item) : undefined) ?? officialEdition(item)) : undefined;
         return <section className={`species-slide type-${item.types[0]}`} key={item.id} aria-label={`Number ${item.id}, ${item.name}`} aria-hidden={index !== activeIndex}>
           {edition && <>
             <span className="ghost-number" aria-hidden="true">{dexNumber(item.id)}</span>
+            {speciesScroll.moving && <div className="species-preview-name">#{dexNumber(item.id)} · {item.name}</div>}
             {index === activeIndex ? <ArtGallery key={item.id} editions={trail ? trail.map(step => {
               const species = pokemon[step.visit.speciesId - 1];
               return allCards.find(entry => entry.cardId === step.visit.selectedId) ?? (step.visit.selectedId === `model-${species.id}` ? modelEdition(species) : undefined) ?? officialEdition(species);
             }) : cards} selected={trail ? trailIndex : cardIndex} suspended={Boolean(drawer)} onMotion={setArtMoving} onSelect={selectArtwork}
               render={(frame, selected, moving, inspectGallery) => {
                 const species = pokemon[frame.pokemonId - 1] ?? item;
-                return frame.sourceType === 'model' && selected && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} suspended={Boolean(drawer) || moving} onInspect={inspecting => {
+                return frame.sourceType === 'model' && selected && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} suspended={Boolean(drawer) || moving || speciesScroll.moving} onInspect={inspecting => {
                   inspectGallery(inspecting);
+                  setInspectingModel(inspecting);
                   const feed = feedRef.current; if (!feed) return;
                   if (inspecting) feedPosition.current.lock(feed, activeIndexRef.current); else if (!drawerRef.current) feedPosition.current.unlock(feed);
                 }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${species.id}`))} /> : brokenImages.includes(frame.image) ?
@@ -590,18 +594,18 @@ function App() {
           <button className="credit-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} <span>›</span></button>}
       </div>
       {continuationKey && <button className={`continuation continuation-${candidate?.state ?? 'loading'}`} onClick={acceptCandidate} disabled={!candidate || candidate.state === 'loading' || candidate.state === 'exhausted'} aria-label={candidate?.state === 'ready' ? `Continue to ${candidate.card?.title} by ${candidate.card?.artist}. ${candidate.context}` : candidate?.state === 'search' ? 'Search next page for related artwork' : candidate?.state === 'error' ? 'Retry related artwork' : undefined}>
-        {candidate?.state === 'ready' && candidate.card ? <><img src={candidate.card.image} alt="" /><span><small>DISCOVER NEXT · {candidate.context}</small><strong>{candidate.card.title}</strong><em>Art by {candidate.card.artist}</em></span><Icon name="right" /></> :
+        {candidate?.state === 'ready' && candidate.card ? <><img src={candidate.card.image} alt="" /><span><small>DISCOVER NEXT · {candidate.context}</small><strong>{candidate.card.title}</strong><em>Art by {candidate.card.artist}</em></span><Icon name="down" /></> :
           <span><small>RELATED ARTWORK</small><strong>{candidate?.state === 'search' ? 'Search more source editions' : candidate?.state === 'exhausted' ? 'No unseen art in checked sources' : candidate?.state === 'error' ? 'Retry related artwork' : 'Looking for the next artwork…'}</strong>{candidate?.partial && <em>Some source editions were unavailable</em>}{candidate?.error && <em>{candidate.error}</em>}</span>}
       </button>}
       <div className="feed-bottom">
         <nav className="art-controls" aria-label="Artwork editions">
-          <button className="mini-button" onClick={() => moveArt(-1)} disabled={trail ? trailIndex === 0 : cardIndex === 0} aria-label={trail ? 'Previous discovery' : 'Previous artwork'}><Icon name="left" /></button>
+          <button className="mini-button" onClick={() => moveArt(-1)} disabled={trail ? trailIndex === 0 : cardIndex === 0} aria-label={trail ? 'Previous discovery' : 'Previous artwork'}><Icon name="up" /></button>
           <button className="edition-count" onClick={event => openDrawer('details', undefined, event.currentTarget)} aria-label={trail ? `Discovery ${trailIndex + 1} of ${trail.length}. Open details` : `Artwork ${cardIndex + 1} of ${cards.length} loaded. Open details`}>{trail ? trailIndex + 1 : cardIndex + 1}<span> / {trail ? `${trail.length} trail` : `${cards.length} loaded`}</span></button>
-          <button className="mini-button" onClick={() => moveArt(1)} disabled={trail ? trailIndex === trail.length - 1 && candidate?.state !== 'ready' : cardIndex === cards.length - 1 && candidate?.state !== 'ready'} aria-label={trail ? 'Next discovery' : 'Next artwork'}><Icon name="right" /></button>
+          <button className="mini-button" onClick={() => moveArt(1)} disabled={trail ? trailIndex === trail.length - 1 && candidate?.state !== 'ready' : cardIndex === cards.length - 1 && candidate?.state !== 'ready'} aria-label={trail ? 'Next discovery' : 'Next artwork'}><Icon name="down" /></button>
         </nav>
         <nav className="species-controls" aria-label="Species navigation">
-          <button className="mini-button previous-species" onClick={() => moveSpecies(-1)} disabled={activeIndex === 0} aria-label="Previous species"><Icon name="up" /></button>
-          <button className="next-species" onClick={() => moveSpecies(1)} disabled={activeIndex === pokemon.length - 1} aria-label="Next species"><span>{activeIndex === pokemon.length - 1 ? 'End of the dex' : !hasScrolled ? 'Swipe up' : pokemon[activeIndex + 1].name}</span><Icon name="down" /></button>
+          <button className="mini-button previous-species" onClick={() => moveSpecies(-1)} disabled={activeIndex === 0 || inspectingModel} aria-label="Previous species"><Icon name="left" /></button>
+          <button className="next-species" onClick={() => moveSpecies(1)} disabled={activeIndex === pokemon.length - 1 || inspectingModel} aria-label="Next species"><span>{activeIndex === pokemon.length - 1 ? 'End of the dex' : !hasScrolled ? 'Swipe left' : pokemon[activeIndex + 1].name}</span><Icon name="right" /></button>
         </nav>
       </div>
     </div>

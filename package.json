@@ -10,7 +10,7 @@
     "test": "node --test --test-concurrency=1 server/index.test.js tests/*.test.js",
     "audit:cards": "node scripts/audit-cards.js",
     "audit:models": "node scripts/audit-models.js",
-    "prebuild": "node scripts/prepare-model-runtime.js"
+    "prebuild": "node scripts/prepare-model-runtime.js && node scripts/prepare-release.js"
   },
   "dependencies": {
     "@google/model-viewer": "^4.3.1",

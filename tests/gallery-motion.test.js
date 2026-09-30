@@ -60,3 +60,37 @@ test('diagonal ownership and pointer cancellation do not manufacture horizontal 
   drag.start(3,100,100,320);drag.read(3,98,50);
   assert.equal(drag.read(3,0,50),null); // Vertical ownership remains vertical.
 });
+
+test('release replay commits only the real endpoint, including early releases and momentum tails', () => {
+  for (const width of [320,390,1470]) for (const fraction of [.01,.15,.49,.51,.85,.99]) {
+    const session = new GalleryMotion(); session.input();
+    const target = session.release(width * fraction,width,4);
+    for (const position of [fraction, fraction * .9, fraction * .5]) {
+      assert.equal(session.completed(width * position,width,4),false);
+      assert.equal(session.settle(width * position,width,4,0),null);
+    }
+    assert.equal(session.completed(width * target,width,4),true);
+    assert.equal(session.settle(width * target,width,4,0),target === 0 ? null : target);
+    assert.equal(session.settle(width * target,width,4,0),null);
+  }
+});
+test('new input and reversed snaps invalidate prior completion without a time cooldown', () => {
+  const session = new GalleryMotion(); session.input(); session.release(250,390,3);
+  const old = session.revision;
+  session.input(); session.release(80,390,3);
+  assert.equal(session.completed(390,390,3),false);
+  assert.equal(session.settle(0,390,3,1,old),null);
+  assert.equal(session.settle(0,390,3,1),0);
+  for (const interrupt of ['resize','search','Inspect','unmount']) {
+    session.input(); session.release(250,390,3); const pending = session.revision;
+    session.align();
+    assert.equal(session.settle(390,390,3,0,pending),null,interrupt);
+  }
+});
+test('vertical artwork drag uses the same displacement and settlement contract as horizontal species', () => {
+  const drag = new GalleryDrag('y'); drag.start(1,200,600,740);
+  assert.equal(drag.read(1,199,580),760); assert.equal(drag.owned,true);
+  assert.equal(drag.read(1,199,620),720);
+  drag.cancel(); drag.start(2,200,600,740);
+  assert.equal(drag.read(2,150,599),null); assert.equal(drag.owned,false);
+});

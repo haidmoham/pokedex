@@ -1,32 +1,30 @@
-# Gesture verification
+# Navigation and settle verification
 
-The horizontal threshold/momentum lock was replaced by a native CSS scroll-snap gallery. Native wheel/touch displacement, inertia and snapping stay with the browser. Selection follows `scrollend`, not a wheel threshold or navigation timeout. Mouse dragging follows displacement and delegates release snapping to the browser; cancellation restores the selected artwork. Older engines without `scrollend` retain pointer-release selection and direct buttons/keyboard; horizontal wheel scrolling is disabled there rather than leaving selection stale. Vertical native snap settings are unchanged; the ancestor now permits both native pan axes and pinch zoom.
+Horizontal movement advances national-dex species #001–1025, with finite endpoints. Vertical movement explores model (when admitted), official art, highest-priced available provider card, then art/discovery. Prices retain currency/provider and coverage caveats. Related selections are reversible excursions: the small Back affordance returns to saved artwork and panel position. Horizontal progression starts from the currently visible excursion species. No timer selects a species, artwork or related candidate.
 
-Only the selected model mounts. During movement it pauses, neighbors use posters, and intermediate frames carry their own credits while the selected caption is hidden. Index changes prepare at most the visual center and its two neighbors, plus the selected frame. No wheel-phase heuristic claims to identify hardware momentum. Model Inspect locks both axes of feed navigation while preserving model controls.
+Both axes share `useSnapScroll` and `GalleryMotion`. Native touch/wheel movement and momentum remain browser-owned. Mouse drag tracks raw displacement along its owned axis, including reversals. Release picks the nearest real endpoint and uses native smooth scrolling, keeping CSS snapping disabled until reaching that endpoint. Restoring CSS snapping while starting smooth scrolling previously created competing owners. The old handler also treated fractional/stale `scrollend` as completed and predicted completion on older browsers. Those paths are removed.
 
-Prior art: [W3C Scroll Snap](https://www.w3.org/TR/css-scroll-snap-1/#snap-concepts) leaves snap physics to the browser. [Chrome scrollend](https://developer.chrome.com/blog/scrollend-a-new-javascript-event) describes actual completed scrolling, including touch release and snapping, unlike a pause inferred from a timeout. [Pointer Events touch-action](https://www.w3.org/TR/pointerevents4/#the-touch-action-css-property) governs native pan ownership. Browser automation and synthetic input are separate from physical trackpad evidence.
+Stable-state invariants: selection matches actual aligned position; custom release has one target and animation owner; partial/stale completion never selects; newer input invalidates the prior revision; duplicate completion is idempotent; resize, search, Inspect and unmount cancel pending work; caption/model identity stays stable during transition. `scrollend` observes the next frame and checks revision and unchanged position, protecting against queued older events. A release RAF observer completes only at its real endpoint, including engines without `scrollend`; it never uses a navigation debounce. Reduced-motion release is immediate. Resize reacts only to the scrolling axis size.
 
-## Repeatable checks
+`npm test` replays partial positions across 320/390/1470 widths, release to either endpoint, momentum tails, superseded/reversed targets, duplicate endings, lifecycle interruption and displacement/axis ownership. Browser physics require independent supported Chrome observation. Only selected models mount; neighbors use posters. Inspect owns rotation and suspends feed navigation. The candy number badge opens search with a generous hit area and keyboard focus/press states.
 
-`npm test` replays gallery selection guards, offsets at 320/390/1470 widths, fractional boundaries and overscroll, programmatic restore/resize/panel interruptions, immediate repeated/reverse selection, progressive pointer displacement, dominant/ambiguous diagonals, wrong-pointer input and cancellation. It also checks species URL replacement, stable visits/trails, source failure/retry and model budgets. These pure tests do not exercise browser scroll physics.
+## Supported Chrome sweep
 
-Use supported Chrome CUA in a dedicated tab. Record exact preview SHA, viewport in CSS pixels, before/intermediate/settled artwork ID and credit, species ID, URL, focus and any console error. Do not disable animation for motion evidence. Current CUA may expose coarse scrolls/mouse drags rather than precise hardware wheel traces or touch injection; mark those cases unverified.
+Verify exact preview via `release.json` and deployment metadata. Use supported Chrome CUA only; no drivers/CDP or authentication automation. Keep normal animation for motion evidence.
 
-| Browser sweep | Acceptance |
+| Check | Required result |
 | --- | --- |
-| Slow horizontal drag, partial release, reverse before settle | Intermediate movement visible, adjacent frame credit correct, clean native snap; no cooldown |
-| Horizontal wheel, decreasing tail, immediate reverse/repeated scroll | Continuous native displacement; no app threshold jumps; selection matches settled frame |
-| Vertical scroll with X noise; 15/45/75-degree input; alternating axes | Vertical order intact; nested scroll ownership reviewed rather than inferred from pure tests |
-| Pixel/line/page/fractional wheel and pinch/modifiers | Native normalization and zoom; no app-generated navigation from pinch |
-| First/last artwork and source exhaustion | No wrap, invented art or automatic discovery; explicit continuation/retry remains available |
-| Pointer cancel/lost capture, second finger, mid-drag departure | No stale navigation/click; exact committed identity restored where cancellation belongs to custom drag |
-| Search/filter sheet edges, Escape, close/reopen and browser Back | Sheet scroll/focus independent; exact committed feed artwork preserved |
-| Inspect rotation, wheel, search overlay, exit and species departure | Model owns input; no gallery/species changes from rotation; exact focus/history restored |
-| Keyboard arrows/Home/End, focused search/select/textarea | Direct navigation works; editable controls retain their input |
-| Resize/reduced motion, failed art and recovery | Identity stable; reduced-motion release is immediate; unavailable art is retryable |
-| 320×740 Inspect side view; desktop tall card | Tail and controls fit; Share does not overlap art |
-| #150→#151, reload and Back | Address follows visible species using replacement, without per-scroll history entries |
+| Horizontal species drag: short, below/above midpoint, full, repeated/reversed | Intermediate movement follows input; early release settles; heading, number and URL match endpoint |
+| Vertical art drag/coarse scroll and reverse | Model → official → provider card order; exact art/credit after settle; loading cannot replace selection |
+| New gesture during settle, search/Inspect interruption, resize | Old completion never overrides newer input or committed identity |
+| Species #001/#1025 and source ends | No wrap or invented art; explicit discovery/retry; no timed advance |
+| Keyboard left/right, up/down, Page keys, Home/End | Species on X, art on Y; editables and Inspect retain input |
+| Number badge at 320/390/desktop | Tactile visible control, no overlap; click/keyboard opens search |
+| Search → species movement → reload → browser Back | URL, heading and number agree; saved excursions restore origin art/panel position |
+| Related branch, horizontal progression, Back and trail reverse | Visible species is horizontal origin; small Back restores prior art; no forced funnel |
+| Models across generations and small/large/static/idle/optimized classes | Coherent textures/framing, Inspect ownership, active-only GLBs, failure fallback |
+| 320x740/390x844 Inspect and desktop tall card | Tail/controls fit; Share/continuation clear of artwork |
 
-## Evidence status
+Physical trackpad inertia, phone touch, diagonal/noisy input, wheel units/pinch, sustained GPU disposal/performance and assistive technology are distinct limitations when unsupported by CUA. Do not claim them from synthetic mouse or coarse scroll.
 
-Independent Chrome QA of `d5fe9a0` confirmed a natural animated default idle, search/filter fit and basic synthetic reversal/Inspect behavior. Its reports found clipped side-view tail, desktop Share overlap and stale URL; this revision addresses them but needs fresh deployed browser checks. That earlier evidence does not validate this new native gallery. Physical trackpad inertia, real touch and sustained phone performance remain separate acceptance gates. No recording or GPU disposal measurement is claimed.
+Prior preview `149d136` passed supported synthetic movement, Inspect framing and Share checks, but failed Back after reload: URL #001 with visible #151. This revision restores the URL species when no live excursion timeline exists. The new axes and expanded models require a fresh preview sweep before release.

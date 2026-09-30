@@ -1,7 +1,7 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string };
+export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null };
 export const MODEL_TRANSFER_LIMIT = 750_000;
 export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
 export function admittedModel(id: number, entries: ModelAsset[] = admission): ModelAsset | undefined {

@@ -19,22 +19,22 @@ export function adjacentIndex(index: number, direction: number, length: number) 
   return Math.max(0, Math.min(Math.max(0, length - 1), index + direction));
 }
 
-type FeedViewport = Pick<HTMLElement, 'clientHeight' | 'scrollTop' | 'scrollTo'> & { style: { overflowY: string } };
+type FeedViewport = Pick<HTMLElement, 'clientWidth' | 'scrollLeft' | 'scrollTo'> & { style: { overflowX: string } };
 
 // Native swipes update position; explicit navigation is immediate and modal
 // inspection freezes one position until the drawer is dismissed.
 export class FeedPosition {
   index = 0;
   locked = false;
-  private overflowY = '';
+  private overflowX = '';
 
   sync(viewport: FeedViewport, length: number) {
-    if (!this.locked && viewport.clientHeight > 0) this.index = adjacentIndex(Math.round(viewport.scrollTop / viewport.clientHeight), 0, length);
+    if (!this.locked && viewport.clientWidth > 0) this.index = adjacentIndex(Math.round(viewport.scrollLeft / viewport.clientWidth), 0, length);
     return this.index;
   }
 
   settle(viewport: FeedViewport) {
-    viewport.scrollTo({ top: this.index * viewport.clientHeight, behavior: 'instant' });
+    viewport.scrollTo({ left: this.index * viewport.clientWidth, behavior: 'instant' });
   }
 
   jump(viewport: FeedViewport, index: number, length: number) {
@@ -48,15 +48,15 @@ export class FeedPosition {
   lock(viewport: FeedViewport, index: number) {
     if (this.locked) return;
     this.index = index;
-    this.overflowY = viewport.style.overflowY;
+    this.overflowX = viewport.style.overflowX;
     this.locked = true;
-    viewport.style.overflowY = 'hidden';
+    viewport.style.overflowX = 'hidden';
     this.settle(viewport);
   }
 
   unlock(viewport: FeedViewport): number | null {
     if (!this.locked) return null;
-    viewport.style.overflowY = this.overflowY;
+    viewport.style.overflowX = this.overflowX;
     this.settle(viewport);
     this.locked = false;
     return this.index;
