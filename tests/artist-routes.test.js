@@ -77,3 +77,17 @@ test('malformed artist URL encoding returns a non-cacheable client error', async
     assert.match((await response.json()).error, /invalid request encoding/);
   });
 });
+
+test('Vercel rewrite path metadata does not invalidate a valid artist page', async () => {
+  const calls=[];
+  await withServer(async (artist,offset)=>{calls.push([artist,offset]);return {artist,offset,cards:[],failed:[],skipped:[]};},async base=>{
+    // /api/:path* -> /api/index forwards its named capture in the query string.
+    // It is routing metadata, never a source query or artist identity.
+    const response=await fetch(`${base}/api/artists/Mitsuhiro%20Arita?offset=12&path=artists%2FMitsuhiro%20Arita`);
+    assert.equal(response.status,200);
+    assert.deepEqual(calls,[['Mitsuhiro Arita',12]]);
+    const malformed=await fetch(`${base}/api/artists/Mitsuhiro%20Arita?offset[value]=12&path=artists%2FMitsuhiro%20Arita`);
+    assert.equal(malformed.status,400);
+    assert.equal(calls.length,1);
+  });
+});

@@ -84,7 +84,10 @@ export function createApp({
     const artist = request.params.artist;
     const rawOffset = request.query.offset ?? '0';
     const offset = typeof rawOffset === 'string' && /^(0|[1-9]\d*)$/.test(rawOffset) ? Number(rawOffset) : NaN;
-    if (!isValidArtist(artist) || !isValidArtistOffset(offset) || Object.keys(request.query).some(key => key !== 'offset')) {
+    // Vercel forwards the named /api/:path* rewrite capture as query metadata.
+    // Ignore that routing key; it must not influence artist identity or paging.
+    const unexpectedQuery = Object.keys(request.query).some(key => key !== 'offset' && key !== 'path');
+    if (!isValidArtist(artist) || !isValidArtistOffset(offset) || unexpectedQuery) {
       return response.status(400).set('Cache-Control', 'no-store').json({ error: 'invalid artist or page' });
     }
     try {
