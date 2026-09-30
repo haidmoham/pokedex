@@ -12,6 +12,7 @@ import { extendTrail, traverseTrail } from './trail-model';
 import type { TrailCursor, TrailStep } from './trail-model';
 import { admittedModel, modelEdition } from './model-policy';
 import { ModelView } from './model-view';
+import { searchSpecies, rememberSearchPick, validRecentPicks } from './search-model';
 import './style.css';
 
 const pokemon = nationalDex(speciesSnapshot as Pokemon[]);
@@ -73,6 +74,9 @@ function App() {
   const activeArtist = routes.at(-1)?.artist ?? '';
   const [query, setQuery] = useState('');
   const [type, setType] = useState('all');
+  const [generation, setGeneration] = useState('all');
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [recentPicks, setRecentPicks] = useState<number[]>(() => { try { return validRecentPicks(JSON.parse(localStorage.getItem('pokedex.recent.v1') ?? '[]')); } catch { return []; } });
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [visibleLimit, setVisibleLimit] = useState(60);
   const [discovery, setDiscovery] = useState<Record<number, Discovery>>({});
@@ -154,11 +158,25 @@ function App() {
   const artistState = portfolio.get(activeArtist);
   const artistCards = portfolioCards(artistState, allCards, activeArtist);
   const artistCoverage = portfolioCoverage(artistState);
-  const filtered = useMemo(() => pokemon.filter(item => {
-    const search = query.trim().toLowerCase().replace(/^#0*/, '');
-    return (!search || item.name.toLowerCase().includes(search) || String(item.id) === search || dexNumber(item.id) === search) &&
-      (type === 'all' || item.types.includes(type)) && (!favoritesOnly || favorites.includes(item.id));
-  }), [query, type, favoritesOnly, favorites]);
+  const search = useMemo(() => searchSpecies(pokemon, query, type, generation, favorites, favoritesOnly), [query, type, generation, favorites, favoritesOnly]);
+  const filtered = search.results;
+  const filterCount = Number(type !== 'all') + Number(generation !== 'all') + Number(favoritesOnly);
+  function clearFilters() { setType('all'); setGeneration('all'); setFavoritesOnly(false); setVisibleLimit(60); }
+  function pickSearch(item: Pokemon, invoker: HTMLElement) {
+    const recent = rememberSearchPick(recentPicks, item.id);
+    setRecentPicks(recent);
+    try { localStorage.setItem('pokedex.recent.v1', JSON.stringify(recent)); } catch { /* Navigation works when private storage is unavailable. */ }
+    openPokemon(item, undefined, invoker);
+  }
+  function onSearchKey(event: React.KeyboardEvent) {
+    const target = event.target as HTMLElement;
+    const results = Array.from(dialogRef.current?.querySelectorAll<HTMLButtonElement>('[data-search-result]') ?? []);
+    if (target.tagName === 'INPUT' && !event.nativeEvent.isComposing && event.key === 'Enter' && results[0]) { event.preventDefault(); results[0].click(); return; }
+    if (!['ArrowDown', 'ArrowUp'].includes(event.key) || !results.length || (target.tagName !== 'INPUT' && !target.hasAttribute('data-search-result'))) return;
+    event.preventDefault();
+    const index = results.indexOf(target as HTMLButtonElement);
+    results[Math.max(0, Math.min(results.length - 1, index < 0 ? event.key === 'ArrowDown' ? 0 : results.length - 1 : index + (event.key === 'ArrowDown' ? 1 : -1)))].focus();
+  }
 
   function requestCandidate(cursor: TrailCursor, key: string) {
     const earlierPartial = candidate?.key === key && candidate.partial;
@@ -514,7 +532,7 @@ function App() {
   return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
     <header className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" />pokédex<span className="brand-dot">.</span></button>
-      <span className="dex-position" aria-label={`Pokédex number ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></span>
+      <button className="dex-position dex-jump" onClick={event => { setQuery(''); openDrawer('search', undefined, event.currentTarget); }} aria-label={`Jump to Pokédex number. Current ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></button>
       <button className="icon-button search-button" onClick={() => openDrawer('search')} aria-label="Search Pokédex"><Icon name="search" /></button>
     </header>
 
@@ -569,14 +587,17 @@ function App() {
       <div className="drawer-surface">
         <header className="drawer-header"><div><span className="drawer-eyebrow">{drawer === 'search' ? 'Find your next favorite' : drawer === 'artist' ? 'Follow the illustrator' : `#${dexNumber(activePokemon.id)} · ${activePokemon.name}`}</span><h2 id="drawer-title" tabIndex={-1}>{drawer === 'search' ? 'Jump in.' : drawer === 'artist' ? activeArtist : 'Behind the art.'}</h2></div><button className="icon-button" onClick={closeDrawer} aria-label={routes.length > 1 ? 'Back to previous view' : 'Close panel'}><Icon name={routes.length > 1 ? 'left' : 'close'} /></button></header>
         <div ref={drawerScrollRef} className="drawer-scroll" onScroll={event => { if (drawer === 'artist') portfolio.saveScroll(activeArtist, event.currentTarget.scrollTop); }}>
-          {drawer === 'search' && <>
-            <label className="search-field"><Icon name="search" /><input autoFocus value={query} onChange={event => { setQuery(event.target.value); setVisibleLimit(60); }} placeholder="Name or number" aria-label="Search by name or Pokédex number" /></label>
-            <div className="search-filters"><label className="sr-only" htmlFor="type-filter">Pokémon type</label><select id="type-filter" value={type} onChange={event => { setType(event.target.value); setVisibleLimit(60); }}><option value="all">All types</option>{types.map(name => <option key={name} value={name}>{name}</option>)}</select><button className={`filter-chip ${favoritesOnly ? 'active' : ''}`} aria-pressed={favoritesOnly} onClick={() => { setFavoritesOnly(value => !value); setVisibleLimit(60); }}><Icon name="heart" />Saved Pokémon {favorites.length}</button><span>{filtered.length.toLocaleString('en-US')}</span></div>
-            <div className="species-grid">{filtered.slice(0, visibleLimit).map(item => <button className={`species-tile type-${item.types[0]}`} key={item.id} data-focus-id={`species-${item.id}`} onClick={event => openPokemon(item, undefined, event.currentTarget)}><span>#{dexNumber(item.id)}</span><img src={artwork(item.id)} alt="" loading="lazy" /><strong>{item.name}</strong>{favorites.includes(item.id) && <span className="tile-saved" aria-label="Saved">♥</span>}</button>)}</div>
-            {!filtered.length && <p className="empty-state">{favoritesOnly && !favorites.length ? 'No saved Pokémon yet. Browse the dex and use Save Pokémon in artwork details.' : 'No Pokémon match these filters.'} <button className="inline-link" onClick={() => { setQuery(''); setType('all'); setFavoritesOnly(false); }}>Clear filters</button></p>}
-            {filtered.length > visibleLimit && <button className="load-more" onClick={() => setVisibleLimit(count => count + 60)}>Show more</button>}
-            <p className="quiet-note">Saved on this browser. Search jumps to a species; the feed always stays in Pokédex order.</p>
-          </>}
+          {drawer === 'search' && <div className="jump-search" onKeyDown={onSearchKey}>
+            <label className="search-field"><Icon name="search" /><input autoFocus type="search" enterKeyHint="go" autoComplete="off" spellCheck={false} value={query} onChange={event => { setQuery(event.target.value); setVisibleLimit(60); }} placeholder="Name or #001–1025" aria-label="Search by name or Pokédex number" /><button className="search-clear" onClick={() => { setQuery(''); dialogRef.current?.querySelector<HTMLInputElement>('.search-field input')?.focus(); }} aria-label="Clear search" hidden={!query}>×</button></label>
+            <div className="search-tools"><span role="status">{search.invalidNumber ? 'Use a number from 1 to 1025' : `${filtered.length.toLocaleString('en-US')} Pokémon`}</span><button className={`filter-chip ${filterCount ? 'active' : ''}`} aria-expanded={filtersOpen} aria-controls="search-filter-panel" onClick={() => setFiltersOpen(value => !value)}>Filters{filterCount ? ` · ${filterCount}` : ''}</button></div>
+            {filtersOpen && <div className="search-filter-panel" id="search-filter-panel"><label>Type<select aria-label="Pokémon type" value={type} onChange={event => { setType(event.target.value); setVisibleLimit(60); }}><option value="all">All types</option>{types.map(name => <option key={name} value={name}>{name}</option>)}</select></label><label>Generation<select aria-label="Pokémon generation" value={generation} onChange={event => { setGeneration(event.target.value); setVisibleLimit(60); }}><option value="all">All generations</option>{Array.from({ length: 9 }, (_, index) => <option key={index} value={index + 1}>Generation {index + 1}</option>)}</select></label><button className={`filter-chip ${favoritesOnly ? 'active' : ''}`} aria-pressed={favoritesOnly} onClick={() => { setFavoritesOnly(value => !value); setVisibleLimit(60); }}><Icon name="heart" />Saved · {favorites.length}</button></div>}
+            {!!filterCount && <div className="active-filters" aria-label="Active search filters">{type !== 'all' && <button onClick={() => setType('all')} aria-label={`Remove ${type} type filter`}>{type} ×</button>}{generation !== 'all' && <button onClick={() => setGeneration('all')} aria-label="Remove generation filter">Gen {generation} ×</button>}{favoritesOnly && <button onClick={() => setFavoritesOnly(false)} aria-label="Remove saved filter">Saved ×</button>}<button className="clear-filters" onClick={clearFilters}>Clear all</button></div>}
+            {!query.trim() && !filterCount && !!recentPicks.length && <section className="recent-picks" aria-label="Recent picks"><h3>Recently visited</h3><div>{recentPicks.map(id => { const item = pokemon[id - 1]; return <button key={id} data-focus-id={`recent-${id}`} onClick={event => pickSearch(item, event.currentTarget)} aria-label={`Recent #${dexNumber(id)} ${item.name}`}><img src={artwork(id)} alt="" loading="lazy" /><span>#{dexNumber(id)}<strong>{item.name}</strong></span></button>; })}</div></section>}
+            <div className="species-grid">{filtered.slice(0, visibleLimit).map(item => <button className={`species-tile type-${item.types[0]}`} key={item.id} data-search-result data-focus-id={`species-${item.id}`} aria-label={`#${dexNumber(item.id)} ${item.name}`} onClick={event => pickSearch(item, event.currentTarget)}><span>#{dexNumber(item.id)}</span><img src={artwork(item.id)} alt="" loading="lazy" /><strong>{item.name}</strong>{favorites.includes(item.id) && <span className="tile-heart" aria-label="Saved">♥</span>}</button>)}</div>
+            {!filtered.length && <div className="empty-state"><p>{search.invalidNumber ? 'Enter a national-dex number from 1 to 1025.' : query.trim() ? `No Pokémon match “${query.trim()}”${filterCount ? ' with these filters' : ''}.` : 'No Pokémon match these filters.'}</p>{!!filterCount && <button className="inline-link" onClick={clearFilters}>Clear filters</button>}</div>}
+            {filtered.length > visibleLimit && <button className="load-more" onClick={() => setVisibleLimit(limit => limit + 60)}>Show more</button>}
+            <p className="quiet-note">Names, 150 or #001. Search jumps to a species; the feed stays in Pokédex order.</p>
+          </div>}
           {drawer === 'details' && <>
             <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
             <button className={`save-pokemon ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)}><Icon name="heart" /> {favorites.includes(activePokemon.id) ? 'Saved Pokémon' : 'Save Pokémon'}</button>

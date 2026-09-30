@@ -212,3 +212,20 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .model-actions { position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
 .model-actions button, .model-actions span { min-height: 44px; padding: 10px 14px; border-radius: 24px; border: 1px solid var(--line); background: #141a25; color: #fff; font: inherit; font-size: 12px; }
 .model-stage.is-inspecting { touch-action: none; overscroll-behavior: contain; }
+.dex-jump { min-height: 44px; padding: 0 6px; border-radius: 8px; }
+.search-tools { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0; }
+.search-tools > span { font-size: 12px; color: #ffffff95; }
+.search-clear { width: 28px; height: 28px; flex-shrink: 0; font-size: 22px; }
+.search-filter-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 4px 0 14px; }
+.search-filter-panel label { display: flex; flex-direction: column; gap: 6px; font-size: 11px; color: #ffffffa5; }
+.search-filter-panel > button { grid-column: 1 / -1; justify-self: start; }
+.active-filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 14px; }
+.active-filters button { padding: 8px 12px; min-height: 44px; font-size: 12px; border-radius: 24px; background: #bfd8a91c; color: var(--accent); }
+.active-filters .clear-filters { background: none; color: #ffffff95; }
+.recent-picks { padding: 0 0 18px; }
+.recent-picks h3 { font-size: 12px; font-weight: 500; color: #ffffffa5; margin: 0 0 8px; }
+.recent-picks > div { display: flex; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; }
+.recent-picks button { display: flex; flex-shrink: 0; align-items: center; gap: 6px; min-height: 64px; padding: 6px 10px 6px 4px; border-radius: 12px; border: 1px solid #ffffff18; text-align: left; }
+.recent-picks img { width: 48px; height: 48px; object-fit: contain; }
+.recent-picks span { font-family: var(--mono); font-size: 10px; color: #ffffff80; }
+.recent-picks strong { display: block; font-family: var(--sans); font-size: 12px; color: white; font-weight: 500; }
