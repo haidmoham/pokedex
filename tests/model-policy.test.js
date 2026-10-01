@@ -7,8 +7,23 @@ const source = (await readFile(new URL('../src/model-policy.ts', import.meta.url
   .replace("import admission from '../content/models/admitted.json';", 'const admission = [];')
   .replace("import { officialEdition, Pokemon, CardEdition } from './feed-model';", '');
 const compiled = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
-const { admittedModel, fetchModel, validateModelStructure } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const { admittedModel, fetchModel, validateModelStructure, rejectedModelPose } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 const asset = { id: 1, bytes: 500, url: 'https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1.glb', blobSha: 'a'.repeat(40), admitted: true };
+test('observed broken poses are rejected by exact identity while other static or replacement models remain usable', async () => {
+  const rejected = JSON.parse(await readFile(new URL('../content/models/pose-rejections.json', import.meta.url)));
+  for (const entry of rejected) {
+    const broken = { ...asset, id: entry.id, sha256: entry.sha256 };
+    assert.ok(rejectedModelPose(broken));
+    assert.equal(admittedModel(entry.id, [broken]), undefined);
+    let fetched = false;
+    await assert.rejects(fetchModel(broken, new AbortController().signal, async () => { fetched = true; }), /pose rejected/);
+    assert.equal(fetched, false);
+    const replacement = { ...broken, sha256: 'b'.repeat(64), animation: null };
+    assert.equal(rejectedModelPose(replacement), undefined);
+    assert.equal(admittedModel(entry.id, [replacement]), replacement);
+  }
+  assert.equal(admittedModel(35, [{ ...asset, id: 35, animation: null }]).id, 35);
+});
 function glb(data = { asset: { version: '2.0' } }) {
   const json = Buffer.from(JSON.stringify(data));
   const padded = Buffer.alloc(Math.ceil(json.length / 4) * 4, 32);

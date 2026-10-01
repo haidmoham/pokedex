@@ -1,0 +1,6 @@
+[
+  { "id": 106, "sha256": "a11a7365af8ba1d899359c3d964618c98f6037af85c7a713c380a9016efa86ce", "reason": "Hitmonlee has outstretched rest-pose arms; no usable idle clip in source." },
+  { "id": 336, "sha256": "025429fa95bd72f41c713ee86fa3bb314acbedfabfbf1ee316bdcabd8b8cbec4", "reason": "Seviper is a straight vertical rest pose; no usable coil or idle clip in source." },
+  { "id": 563, "sha256": "272d8fb7ac581519b8a7d57870ff306813aa9df9f722fc7211e46dcf880bc46c", "reason": "Cofagrigus has straight outstretched rest-pose arms; no usable idle clip in source." },
+  { "id": 669, "sha256": "302453bc350c49ba852eb200a9b897771a4eb989a675c6e5076708add3602439", "reason": "Flabebe is separated from its flower in the source rest pose; no usable idle clip." }
+]
