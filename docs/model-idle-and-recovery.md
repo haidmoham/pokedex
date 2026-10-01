@@ -51,7 +51,11 @@ No credentials, restricted download bypass, paid APIs or production cutover were
 
 The original 115 tests plus two new requested pose checks pass (117 total), with TypeScript and production build. The new checks cover three distinct phase samples, pause behavior, invalid pose indices and invalid clip durations. Existing cancellation/visibility/reduced-motion and model-budget checks remain in place. No broad new frontend test suite was added.
 
-Browser interaction/recovery QA remains pending: this cloud browser rejected the local preview URL, and the connected Vercel scope returned HTTP 403. No account-permission workaround was attempted. Offline pose evidence is therefore reported separately from interactive viewer behavior, failure/retry navigation, phone-width layout and physical-device performance. The build retains the existing large-chunk warning.
+The authorized Vercel rough draft is [the review branch preview](https://pokedex-review-git-codex-model-idle-expansion-zarnab.vercel.app/?pokemon=150), with 527 admitted models. GitHub/Vercel reported success for `af7f9bbf3bb8712c114a8be91e7a775d04a2de60`; loaded JS/CSS asset names matched that tested tree. Direct `/release.json` navigation was blocked by the browser, so the marker response was not read. The Vercel account-scope API still returned 403; no permission workaround was attempted.
+
+Browser inspection found a real failure: model-viewer can emit `load` even when its WebGL renderer cannot start. The follow-up fix checks WebGL2 on a separate disposable canvas, releases only that probe, and never changes the viewer's shared context. The cloud browser has WebGL disabled. Manual verification now shows Mewtwo's official art with an unavailable-browser message, no futile Retry 3D button, and correct Mew/Mewtwo navigation and artwork-slot history. DOM inspection confirmed no hidden model-viewer/retry loop. Transient errors retain explicit retry; that network-failure branch was code-inspected rather than fault-injected in the browser.
+
+Successful live skeletal playback, sustained phone-width performance and physical-device behavior remain unverified here. Three-pose offline rendering is separate evidence. The build retains the existing large-chunk warning. New HOME/SCVI inventories supersede the old catalog's source-discovery limits but do not yet change its 527 runtime admissions; see the cross-generation sourcing report.
 
 ## Independent bounded provenance follow-up
 

@@ -1,0 +1,317 @@
+{
+  "id": 850,
+  "bytes": 293760,
+  "sha256": "bfc8c0999f12ae76e71d8d8cf73e04b7f890cc2164b0d1bb9e2e5e394e90f828",
+  "duration": 1.3333334,
+  "sampledFps": 24,
+  "channels": 183,
+  "matchedPaths": 183,
+  "textures": 4,
+  "geometrySimplified": false,
+  "sourceAnimation": "pm0850_00_00_ba10_waitA01",
+  "coordinateConversion": "UnityGLTF mirror X; quaternion x,-y,-z,w; source Euler order retained",
+  "approximations": [
+    {
+      "material": "pm0850_00_00-BodyAInc01",
+      "reason": "Unity layer1/lighting shader not reproduced; only exact base-color texture and UV bindings restored"
+    },
+    {
+      "material": "pm0850_00_00-BodyBInc",
+      "reason": "Unity layer1/lighting shader not reproduced; only exact base-color texture and UV bindings restored"
+    },
+    {
+      "material": "pm0850_00_00-LEye",
+      "reason": "Unity layer1/lighting shader not reproduced; only exact base-color texture and UV bindings restored"
+    },
+    {
+      "material": "pm0850_00_00-BodyAInc00",
+      "reason": "Unity layer1/lighting shader not reproduced; only exact base-color texture and UV bindings restored"
+    },
+    {
+      "material": "pm0850_00_00-Mouth",
+      "reason": "Unity layer1/lighting shader not reproduced; only exact base-color texture and UV bindings restored"
+    },
+    {
+      "material": "pm0850_00_00-REye",
+      "reason": "Unity layer1/lighting shader not reproduced; only exact base-color texture and UV bindings restored"
+    }
+  ],
+  "admitted": false,
+  "visualReviewed": true,
+  "distributionPermission": "unresolved; private local research candidate only",
+  "visualResult": "Research-only: recognizable moving silhouette; eye/iris and six layered materials incomplete. No runtime admission.",
+  "poses": [
+    {
+      "phase": 0.125,
+      "frame": 4.0000002,
+      "worldVertexSha256": "421a0bcebaca6fae5c12f0c6572a866d917b7573b6d69f179d978b7a621d98fd"
+    },
+    {
+      "phase": 0.375,
+      "frame": 12.0000006,
+      "worldVertexSha256": "ffbdd88119b0cf12a90f2a7f1f0b7ecec25dd5ed41d4565d19ba7c8caa4f732a"
+    },
+    {
+      "phase": 0.625,
+      "frame": 20.000000999999997,
+      "worldVertexSha256": "15451659f8345fa4c9383e2dd2d1fefed165d099c7b9d6607df14e993ce6973f"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-BodyA00.mat",
+      "bytes": 3479,
+      "blobSha": "189790ede1925d8e904e634b0bcaed0880db938c",
+      "sha256": "82532efd150651fe711ef03a65c5456b56e583f4aee8fd3a7911f84854df1982",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-BodyA00.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-BodyA01.mat",
+      "bytes": 3369,
+      "blobSha": "6082ef6fda9a857dccd4817dd87046f7e032329e",
+      "sha256": "2f26c0ecce5fe06c3d66416ba86334b9fedc875b23b00eb5f6a7b1abcae6bd42",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-BodyA01.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-BodyAInc00.mat",
+      "bytes": 3520,
+      "blobSha": "df088501a7f01018a6661cc3be306b690f21e56a",
+      "sha256": "d440530e8a5a684569958c7d0ef5c18654a9256fa4f1e80524ca5db992c9fecb",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-BodyAInc00.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-BodyAInc01.mat",
+      "bytes": 3554,
+      "blobSha": "57a6a33abcb10e50f4ac4250a7a8ec49644d9315",
+      "sha256": "12706f6c602d45c84c7742f4af3dd71ea71fcfec864b051f3236d69fa0ad2ab8",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-BodyAInc01.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-BodyBInc.mat",
+      "bytes": 3552,
+      "blobSha": "f75c6d9627d1a4d292a11544f14174e368d08118",
+      "sha256": "a4263ea1294f497657c487d03ee988344e63173cd34733c2e33d893a8e3b28b9",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-BodyBInc.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-LEye.mat",
+      "bytes": 3518,
+      "blobSha": "8c9e8bc5fbbdc01dfed538fa37b5006573bc4321",
+      "sha256": "baba14912e31c10e0520ed08031050982066ce912038ca8a2c1fdfe7e0669eec",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-LEye.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-Mouth.mat",
+      "bytes": 3547,
+      "blobSha": "2ee156b522434c855248564dbe9556e2c3929968",
+      "sha256": "63eb61048c2913144adfac7e8bcdd5027dc1ced648d98d319501c3e7a94257b0",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-Mouth.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/Material/pm0850_00_00-REye.mat",
+      "bytes": 3518,
+      "blobSha": "e2ededf2cfff81fc2ce71988728153b68890a872",
+      "sha256": "91ff13b6506948857894c66ed138aa9a70b2c6467df8f50da6bb0a940f7f66cb",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/Material/pm0850_00_00-REye.mat"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/ac/pm0850_00_00_ba10_waitA01.anim",
+      "bytes": 711762,
+      "blobSha": "fda8d3ca9711fdc1eb7fc191fc7681f6f0186a38",
+      "sha256": "4128d7c9f05dad9bbe78a2ca70ecbbf9ab159fc3d337dd61c263bb0e6cb36892",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/ac/pm0850_00_00_ba10_waitA01.anim"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_col.png",
+      "bytes": 14028,
+      "blobSha": "72ca3c5171ae3aad0bc64fd12fee5f5c7ea06399",
+      "sha256": "279fc8c52642c840b3265cd359d1321aaaafd815ea473825c34290c9e81a6c35",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_col.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_col.png.meta",
+      "bytes": 2856,
+      "blobSha": "d4a349e042aca81f73923bff51e094895350f5f6",
+      "sha256": "308a1204053c9bf28aee12f0e29dec0703502c9841d1ba9c53e0c5df4b7ba592",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_col.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_emi.png",
+      "bytes": 14067,
+      "blobSha": "6e8f51ac017d45d212057cdf62afc836c98f4e5e",
+      "sha256": "bbbc86848847642830dd4ff9cfbd4ad1eb40fd43e0a28579fa6064a779b86900",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_emi.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_emi.png.meta",
+      "bytes": 2856,
+      "blobSha": "1cb8d31224d94364c0853de94dd7e34f10241db4",
+      "sha256": "c4d68339eb911dc5b50c3a269d978aa69398a079f4cc03174de7c6d8742c1150",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_emi.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_lyc.png",
+      "bytes": 16185,
+      "blobSha": "70cb44d0da3c539660fbec82961e83d2172f2911",
+      "sha256": "987f68df3d6ca9c5a688ad62a9280071ade7168ad25057ec6512eef14c15caa7",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_lyc.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_lyc.png.meta",
+      "bytes": 2856,
+      "blobSha": "fe8d7b656e3b8b46593d59bf1db0c71fa8c70e29",
+      "sha256": "3bac838cc1a5ffcf4f37d70aaf6c901fbdf9c3c29b81023fa05a499e52ce4ec5",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyA_lyc.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_col.png",
+      "bytes": 6131,
+      "blobSha": "73121725eba4135a17f707b2e9059f07786e021e",
+      "sha256": "28d28229f8e348251deae3a211c11d7ecafad764569fbdc6801296e04fb6c34a",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_col.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_col.png.meta",
+      "bytes": 2856,
+      "blobSha": "7ffd5316ead4183277a26ccd7e909b6e0d8824c1",
+      "sha256": "f1c0bb1b07247e37c139bbf86df4ee235eafb6b9a1b9169f2892679761dea480",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_col.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_emi.png",
+      "bytes": 477,
+      "blobSha": "32de798e6442e78232cbf11328cd4e12ee61b0a5",
+      "sha256": "868309b4bbd9a690f767a5f5a3dd71cef5b3727145511630ed3347f86af49b67",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_emi.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_emi.png.meta",
+      "bytes": 2856,
+      "blobSha": "3180b98bb860a1909104102d4e444a03cae4148d",
+      "sha256": "7daf07baade9117f067cc52c9609ddfd3485cb2e7bab40ab9ba7eba6dab7029c",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_emi.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_lyc.png",
+      "bytes": 64916,
+      "blobSha": "394f137bfed3204bfe3d0f6b099d4585b9274e7b",
+      "sha256": "47910fcd932cc83106ba0aee9cd6436ea5bde4c08666018d4344baf03fd23c53",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_lyc.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_lyc.png.meta",
+      "bytes": 2856,
+      "blobSha": "876a0dac237940b8b3ee65e85a3b48d09bcff4ab",
+      "sha256": "d456c89840e7ee729cfbec2434356276fcd78e66dbcc37662c2c31422f413070",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_BodyB_lyc.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_col.png",
+      "bytes": 28351,
+      "blobSha": "8454eeff9f47f4412b4bcda891d85c7d6416a4f4",
+      "sha256": "cda2cde500670367d6eb386e50a83f774a2eecd3417bb0668bb65a2fc9f4f025",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_col.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_col.png.meta",
+      "bytes": 2856,
+      "blobSha": "76ffec231bb0ac756e8616d949e954209e5874de",
+      "sha256": "4e794802b65453b684433bae6a16996689daa4c2b4ce16a5b3aea697b170fe45",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_col.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_emi.png",
+      "bytes": 14197,
+      "blobSha": "afbec46d227fd373f392707f3c1dee46227b88fc",
+      "sha256": "8a65c5fe724af8d2b2199566a421b964cacca017814388af1c37e62c6999e6cf",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_emi.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_emi.png.meta",
+      "bytes": 2856,
+      "blobSha": "497b4cb8f98a107edc4b81f5175c90e4bf0b518c",
+      "sha256": "79e97f776426a835aa6f80fd0b01744bfbd5ef393044b38c74caddeb8c2ff6bc",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Eye_emi.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Iris_lyc.png",
+      "bytes": 2368,
+      "blobSha": "a6a06a308484cb913c3a8d415eac8faded737d33",
+      "sha256": "e3d4442b29e042883e843d5720a65ae20b7de1b10f20919afc7c86c3e6f7a1fc",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Iris_lyc.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Iris_lyc.png.meta",
+      "bytes": 2856,
+      "blobSha": "14be0bc086adadc656311b5fd6fede538580d47d",
+      "sha256": "a18bbf9d7efde2ecbcbe5fe6f6b71e6a34cc4c6176dcf4b2f7a8839b1f2cbf4c",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Iris_lyc.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_col.png",
+      "bytes": 14008,
+      "blobSha": "ec72e6175485d7018a450b473b1e7b5f6c8f4d8a",
+      "sha256": "e1dbfca370b52f3c5d3affedaed793b200b10d8f881fefca26bb64a0c6823264",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_col.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_col.png.meta",
+      "bytes": 2856,
+      "blobSha": "c71c5e03684f4f55db2a833aa8ce4810ce710cfd",
+      "sha256": "4ae292c6448cf348b318e683abd9b9dbac6027e37855afadb8a101a32b67eef9",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_col.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_emi.png",
+      "bytes": 12412,
+      "blobSha": "4c453c50be74d1124ee94f22fd9968fbabea2b19",
+      "sha256": "48a181cb13cc9f7e36f9ec92a78bc82a418fc9352ad368f5dfbd5a33024cbcc8",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_emi.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_emi.png.meta",
+      "bytes": 2856,
+      "blobSha": "c5909ae608e728b61af1ff38138fcf8eaf11350b",
+      "sha256": "7a3d52900fe038052643169e7a7d81a844c3259a7a9773425ba4ebc949acea15",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_emi.png.meta"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_lyc.png",
+      "bytes": 23880,
+      "blobSha": "baf9761d1aaeda3f57386125ef69e08b05fa9f58",
+      "sha256": "176f6a2ec0beec5152a4b276fec4740b6dc4b784b3ad41915dde6925d8988f14",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_lyc.png"
+    },
+    {
+      "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_lyc.png.meta",
+      "bytes": 2856,
+      "blobSha": "f51a373ff330bd54ced976959322e08326ce2d8e",
+      "sha256": "16b6c2dd71e8e38412e9821e7a8a05e05b7c3a56ebc72f3c6cdf626733d96afc",
+      "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-Unity-Models/main/Mitake12orion/Assets/sandbox/models/12orion/pm0850_00_00/fbx/textures/pm0850_00_00_Mouth_lyc.png.meta"
+    }
+  ],
+  "meshSource": {
+    "id": 850,
+    "path": "Pokemon (Generation 8)/pm0850_00_00.glb",
+    "url": "https://raw.githubusercontent.com/Lilothestitch16/Pokemon-HOME-GLB-Models/27703273836f38f0e185976d955b1fbfb15448af/Pokemon%20%28Generation%208%29/pm0850_00_00.glb",
+    "bytes": 249512,
+    "blobSha": "09f009047026edf9bf89187985139ce57d9d656e",
+    "sha256": "59a9b883a5b4a692c6e58eb7c30eaf9ea550a47fa6406be70f6a1d56e207c60c",
+    "asset": {
+      "generator": "UnityGltf 2.18.3, Unity 2022.3.62f3, Built-in RP",
+      "version": "2.0"
+    },
+    "skins": 5,
+    "joints": 67,
+    "meshes": 5,
+    "textures": 0,
+    "animations": [],
+    "externalResources": 0,
+    "decodedBufferBytes": 231956
+  },
+  "shaderEvidence": {
+    "url": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Project/blob/main/Assets/Shader/MT_Standard2nd.shader",
+    "blobSha": "31074bc5a1cb461966f8330bc803f1eed80542c0",
+    "observation": "Property declarations retained but rendering pass says No subprograms found. Other exported shader only exposes a non-layer variant; cannot treat it as full material reconstruction."
+  }
+}
