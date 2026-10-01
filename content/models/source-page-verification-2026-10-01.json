@@ -1,0 +1,651 @@
+{
+  "method": "Visible public DOM in one isolated headless browser. Only terms and source metadata recorded. No model bytes downloaded from restricted or authenticated endpoints.",
+  "searchSummary": {
+    "searched": 54,
+    "noResults": [
+      850,
+      938,
+      968,
+      971,
+      972,
+      976,
+      993
+    ],
+    "matchingLeadSpecies": [
+      851,
+      852,
+      853,
+      854,
+      859,
+      861,
+      864,
+      866,
+      873,
+      878,
+      879,
+      918,
+      919,
+      931,
+      935,
+      936,
+      939,
+      940,
+      944,
+      950,
+      951,
+      952,
+      953,
+      954,
+      955,
+      956,
+      961,
+      963,
+      969,
+      970,
+      977,
+      986,
+      988,
+      989,
+      991,
+      1011,
+      1012,
+      1022,
+      1024
+    ],
+    "unrelatedResultsOnly": [
+      860,
+      863,
+      868,
+      882,
+      883,
+      964,
+      992,
+      1013
+    ]
+  },
+  "results": [
+    {
+      "id": 41,
+      "url": "https://sketchfab.com/3d-models/zubat-35532414945142e0bf1c84f8b8d87aaf",
+      "bucket": "restricted-terms",
+      "title": "zubat - Download Free 3D model by lucasprs51450 (@lucasprs51450) [3553241]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by-nc/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "Download advertised; this dialog was not independently verified. No asset bytes obtained."
+    },
+    {
+      "id": 81,
+      "url": "https://sketchfab.com/3d-models/pokemon-magnemite-100a13915fd243d0bf35b0c64468984b",
+      "bucket": "restricted-terms",
+      "title": "[Pokémon] Magnemite - Download Free 3D model by MortyJHin (@MortyJHin) [100a139]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by-nc/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "Download advertised; this dialog was not independently verified. No asset bytes obtained."
+    },
+    {
+      "id": 95,
+      "url": "https://sketchfab.com/3d-models/onix-905c217897e14657891c32e34c58bf3f",
+      "bucket": "restricted-terms",
+      "title": "Onix - Download Free 3D model by lucasprs51450 (@lucasprs51450) [905c217]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by-nc/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "Download advertised; this dialog was not independently verified. No asset bytes obtained."
+    },
+    {
+      "id": 253,
+      "url": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-mystery-dungeon--rescu-f261a8f60a44466fb97ab6e24a5f9310",
+      "bucket": "restricted-terms",
+      "title": "Nintendo Switch - Pokemon Mystery Dungeon_ Rescu - Download Free 3D model by markolivas2005 (@markolivas2005) [f261a8f]",
+      "licenseLinks": [],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "Download advertised; this dialog was not independently verified. No asset bytes obtained."
+    },
+    {
+      "id": 789,
+      "url": "https://sketchfab.com/3d-models/cosmog-d928b7339a9b4ecb841162c53b4c4f4a",
+      "bucket": "restricted-terms",
+      "title": "Cosmog - Download Free 3D model by AlmondFeather (@almondfeather) [d928b73]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "Download advertised; this dialog was not independently verified. No asset bytes obtained."
+    },
+    {
+      "id": 925,
+      "url": "https://sketchfab.com/3d-models/maushold-from-pokemon-scarlet-violet-c9a689709c2c499bb784012c21499262",
+      "bucket": "restricted-terms",
+      "title": "Maushold from Pokémon Scarlet & Violet - Download Free 3D model by JojoTZ (@JojoTZ) [c9a6897]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by-nc/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "Download advertised; this dialog was not independently verified. No asset bytes obtained."
+    },
+    {
+      "id": 937,
+      "url": "https://sketchfab.com/3d-models/lowpoly-ceruledge-d668d5e89e824625a99a1ae289eb827b",
+      "bucket": "restricted-terms",
+      "title": "Lowpoly Ceruledge - Download Free 3D model by Sandwing87 (@Nallaz87) [d668d5e]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "Download advertised; this dialog was not independently verified. No asset bytes obtained."
+    },
+    {
+      "id": 851,
+      "url": "https://sketchfab.com/3d-models/centiskorch-gmax-cobblemon-f655d47cc4e742c0b1af1a6ea3796990",
+      "bucket": "missing-source-lead",
+      "title": "Centiskorch Gmax Cobblemon - 3D model by SThyx05 (@SThynx05) [f655d47]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 852,
+      "url": "https://sketchfab.com/3d-models/clobbopus-and-grapploct-d06553c05d11450fa6015359c9a5aa49",
+      "bucket": "missing-source-lead",
+      "title": "Clobbopus and Grapploct - 3D model by gaus108 (@gaus108) [d06553c]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 853,
+      "url": "https://sketchfab.com/3d-models/clobbopus-and-grapploct-d06553c05d11450fa6015359c9a5aa49",
+      "bucket": "missing-source-lead",
+      "title": "Clobbopus and Grapploct - 3D model by gaus108 (@gaus108) [d06553c]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 854,
+      "url": "https://sketchfab.com/3d-models/sinistea-line-cobblemon-dea69039acac4a2f8add18b537a2c65f",
+      "bucket": "missing-source-lead",
+      "title": "Sinistea Line (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [dea6903]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 859,
+      "url": "https://sketchfab.com/3d-models/impidimp-line-cobblemon-565b691d61324d6cbdbf10c58a065c32",
+      "bucket": "missing-source-lead",
+      "title": "Impidimp Line (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [565b691]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 861,
+      "url": "https://sketchfab.com/3d-models/grimmsnarl-d5d6b2d681f84106bf9692255db1af16",
+      "bucket": "missing-source-lead",
+      "title": "Grimmsnarl - Download Free 3D model by seth the yutyrannus (@slang107123456789) [d5d6b2d]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true
+    },
+    {
+      "id": 864,
+      "url": "https://sketchfab.com/3d-models/cursola-b3b064b2fedd4446b423bb79da7cab24",
+      "bucket": "missing-source-lead",
+      "title": "Cursola - 3D model by jdvcmultimedia (@jdvcmultimedia) [b3b064b]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 866,
+      "url": "https://sketchfab.com/3d-models/mr-rime-2770d6f64e9e4819a2efda6164424de8",
+      "bucket": "missing-source-lead",
+      "title": "Mr. Rime - 3D model by Glitch Ratt (@La_Rodente) [2770d6f]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 873,
+      "url": "https://sketchfab.com/3d-models/frosmoth-3584a3de5c2649d2ae373b3fe3a57d03",
+      "bucket": "missing-source-lead",
+      "title": "Frosmoth - 3D model by Bao Cu (Zumi) (@bao_cu) [3584a3d]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 878,
+      "url": "https://sketchfab.com/3d-models/cufant-9782975e111b4a589a899e1fe7b8a211",
+      "bucket": "missing-source-lead",
+      "title": "Cufant - 3D model by jotape (@joaozinpedrin) [9782975]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 879,
+      "url": "https://sketchfab.com/3d-models/copperajah-55548056e97b465dade1c92d8448cf6a",
+      "bucket": "missing-source-lead",
+      "title": "Copperajah - 3D model by jotape (@joaozinpedrin) [5554805]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 918,
+      "url": "https://sketchfab.com/3d-models/spidops-minecraft-cobblemon-style-03599d88bb1349408da86012ad87a503",
+      "bucket": "missing-source-lead",
+      "title": "Spidops - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [03599d8]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 919,
+      "url": "https://sketchfab.com/3d-models/nymble-minecraft-cobblemon-style-12a02c0f4c6f412080a774b02188b66e",
+      "bucket": "missing-source-lead",
+      "title": "Nymble - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [12a02c0]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 931,
+      "url": "https://sketchfab.com/3d-models/squawkabilly-minecraft-cobblemon-style-ba5685eba2c843b5bb01d1c1fc31a584",
+      "bucket": "missing-source-lead",
+      "title": "Squawkabilly - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [ba5685e]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 935,
+      "url": "https://sketchfab.com/3d-models/charcadet-line-cobblemon-c56c350797ed4781a329605dbb914612",
+      "bucket": "missing-source-lead",
+      "title": "Charcadet Line (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [c56c350]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 936,
+      "url": "https://sketchfab.com/3d-models/pokemon-violet-and-scarlet-armarouge-e71dfab2e96448c68234639138b10e5f",
+      "bucket": "missing-source-lead",
+      "title": "Pokemon Violet and Scarlet - Armarouge - グレンアルマ - 3D model by Kaijin (@Kaijin13) [e71dfab]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 939,
+      "url": "https://sketchfab.com/3d-models/bellibolt-f7fb08e775d34f7c8e7bc8d2b37590ec",
+      "bucket": "missing-source-lead",
+      "title": "Bellibolt - Download Free 3D model by hellojello (@halynnj) [f7fb08e]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true
+    },
+    {
+      "id": 940,
+      "url": "https://sketchfab.com/3d-models/wattrel-kilowattrel-eb6c608dff5a484d9b36a04860848d9b",
+      "bucket": "missing-source-lead",
+      "title": "wattrel + kilowattrel - 3D model by pohell (@pohell) [eb6c608]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 944,
+      "url": "https://sketchfab.com/3d-models/shroodle-71713d6d840b44a79f2a14d65181a2d7",
+      "bucket": "missing-source-lead",
+      "title": "Shroodle - 3D model by nymphh (@nymphh) [71713d6]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 950,
+      "url": "https://sketchfab.com/3d-models/klawf-minecraft-cobblemon-style-56ce682755a144cdaeaf3ae90c3440f0",
+      "bucket": "missing-source-lead",
+      "title": "Klawf - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [56ce682]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 951,
+      "url": "https://sketchfab.com/3d-models/capsakid-scovillain-unofficial-cobblemon-9e531e9d64da4ac18d718bdb12a38fbe",
+      "bucket": "missing-source-lead",
+      "title": "Capsakid & Scovillain (unofficial cobblemon) - 3D model by fire jaguar (@ofirofirbonen) [9e531e9]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 952,
+      "url": "https://sketchfab.com/3d-models/goat-simulator-3-scovillain-b22796f78fef4ecc89cbf1c7eab70185",
+      "bucket": "missing-source-lead",
+      "title": "Goat Simulator 3 Scovillain - Download Free 3D model by noiq998 (@noiq998) [b22796f]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true
+    },
+    {
+      "id": 953,
+      "url": "https://sketchfab.com/3d-models/rellor-cee72b1de5c942c39c0c0e1125a5f037",
+      "bucket": "missing-source-lead",
+      "title": "rellor - Download Free 3D model by dannysmoto86 (@dannysmoto86) [cee72b1]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true
+    },
+    {
+      "id": 954,
+      "url": "https://sketchfab.com/3d-models/rabsca-minecraft-cobblemon-style-2b74424acfbb4734904cb82296e860e6",
+      "bucket": "missing-source-lead",
+      "title": "Rabsca - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [2b74424]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 955,
+      "url": "https://sketchfab.com/3d-models/flittle-line-cobblemon-f4593a633f204af7b011c45f52942c02",
+      "bucket": "missing-source-lead",
+      "title": "Flittle Line (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [f4593a6]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 956,
+      "url": "https://sketchfab.com/3d-models/espathra-ae0d7a4427654f6799a8fc2dcd557276",
+      "bucket": "missing-source-lead",
+      "title": "Espathra - 3D model by ArthiaSculpts3D (@ArthiaSculpts3D) [ae0d7a4]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [
+        {
+          "label": "Blender",
+          "url": "https://github.com/sketchfab/blender-plugin/releases/latest"
+        }
+      ],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 961,
+      "url": "https://sketchfab.com/3d-models/wugtrio-minecraft-cobblemon-style-e41e8b5ee7a34e5095da2bd76dd1ed01",
+      "bucket": "missing-source-lead",
+      "title": "Wugtrio - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [e41e8b5]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 963,
+      "url": "https://sketchfab.com/3d-models/finizen-line-cobblemon-04ac757c6d2c4b46b493e15b2335c12d",
+      "bucket": "missing-source-lead",
+      "title": "Finizen Line (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [04ac757]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 969,
+      "url": "https://sketchfab.com/3d-models/glimmet-line-cobblemon-d0641d8d00d34b408426db1b55f5d97d",
+      "bucket": "missing-source-lead",
+      "title": "Glimmet Line (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [d0641d8]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 970,
+      "url": "https://sketchfab.com/3d-models/mega-glimmora-cobblemon-0495566c7421459a85690fe1c5490532",
+      "bucket": "missing-source-lead",
+      "title": "Mega Glimmora (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [0495566]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 977,
+      "url": "https://sketchfab.com/3d-models/dondozo-minecraft-cobblemon-style-4e270b75ebca4f88b53d4bf2d11ff706",
+      "bucket": "missing-source-lead",
+      "title": "Dondozo - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [4e270b7]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 986,
+      "url": "https://sketchfab.com/3d-models/brute-bonnet-mask-760ee78d0adb45c69f044b6b7c9dc51e",
+      "bucket": "missing-source-lead",
+      "title": "Brute Bonnet Mask - Download Free 3D model by 1amB1GB4ND (@1amB1GB4ND) [760ee78]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true
+    },
+    {
+      "id": 988,
+      "url": "https://sketchfab.com/3d-models/slitherwing-titan-wing-2e64ae35962c4669bc741ef8328f640e",
+      "bucket": "missing-source-lead",
+      "title": "Slitherwing Titan Wing - Download Free 3D model by Dragonblue223 (@Dragonblue223) [2e64ae3]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true
+    },
+    {
+      "id": 989,
+      "url": "https://sketchfab.com/3d-models/sandy-shocks-minecraft-cobblemon-style-42c4d576cce740d2a8fdc81ca6f38b39",
+      "bucket": "missing-source-lead",
+      "title": "Sandy shocks - Minecraft Cobblemon Style - 3D model by AGA_0 (@AGA0) [42c4d57]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 991,
+      "url": "https://sketchfab.com/3d-models/iron-bundlecobblemon-style-a917baca034b4bd394e6312f5cfae9fe",
+      "bucket": "missing-source-lead",
+      "title": "Iron bundle(cobblemon style) - 3D model by rabitt (@rabitt23) [a917bac]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 1011,
+      "url": "https://sketchfab.com/3d-models/dipplin-cobblemon-addon-ed3380c4c6e14129b1d9abf704519aa5",
+      "bucket": "missing-source-lead",
+      "title": "Dipplin (Cobblemon Addon) - 3D model by nurikungs (@nurikungs) [ed3380c]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 1012,
+      "url": "https://sketchfab.com/3d-models/poltchageist-line-cobblemon-df66ffc34d014058b2277a3748012502",
+      "bucket": "missing-source-lead",
+      "title": "Poltchageist Line (Cobblemon) - 3D model by heaveninvoid_ (@heaveninvoid_) [df66ffc]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 1022,
+      "url": "https://sketchfab.com/3d-models/iron-boulder-5688e8cd69914c1a954257cc23c80aa5",
+      "bucket": "missing-source-lead",
+      "title": "Iron boulder - 3D model by bob12521 (@bob12521) [5688e8c]",
+      "licenseLinks": [],
+      "downloadButton": false,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "No public download advertised on inspected page; no permission inferred."
+    },
+    {
+      "id": 1024,
+      "url": "https://sketchfab.com/3d-models/terapagos-51815f5dd4ac48b18b5d73cb599fae4b",
+      "bucket": "missing-source-lead",
+      "title": "Terapagos - Download Free 3D model by OrangeBlueArt13 (@OrangeBlueArt13) [51815f5]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true
+    }
+  ]
+}

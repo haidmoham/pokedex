@@ -1,0 +1,169 @@
+{
+  "observed": "2026-10-01",
+  "scope": "Current catalog gaps, not universal absence. New replacement leads never transfer their terms to unproven existing GLBs.",
+  "authenticatedDownloadLeads": [
+    {
+      "id": 861,
+      "url": "https://sketchfab.com/3d-models/grimmsnarl-d5d6b2d681f84106bf9692255db1af16",
+      "bucket": "missing-source-lead",
+      "title": "Grimmsnarl - Download Free 3D model by seth the yutyrannus (@slang107123456789) [d5d6b2d]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true,
+      "verificationDate": "2026-10-01",
+      "verificationScope": "Prior same-date browser receipt retained; not re-downloaded in this pass"
+    },
+    {
+      "id": 939,
+      "url": "https://sketchfab.com/3d-models/bellibolt-f7fb08e775d34f7c8e7bc8d2b37590ec",
+      "bucket": "missing-source-lead",
+      "title": "Bellibolt - Download Free 3D model by hellojello (@halynnj) [f7fb08e]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true,
+      "verificationDate": "2026-10-01",
+      "verificationScope": "Prior same-date browser receipt retained; not re-downloaded in this pass"
+    },
+    {
+      "id": 953,
+      "url": "https://sketchfab.com/3d-models/rellor-cee72b1de5c942c39c0c0e1125a5f037",
+      "bucket": "missing-source-lead",
+      "title": "rellor - Download Free 3D model by dannysmoto86 (@dannysmoto86) [cee72b1]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true,
+      "verificationDate": "2026-10-01",
+      "verificationScope": "Prior same-date browser receipt retained; not re-downloaded in this pass"
+    },
+    {
+      "id": 988,
+      "url": "https://sketchfab.com/3d-models/slitherwing-titan-wing-2e64ae35962c4669bc741ef8328f640e",
+      "bucket": "missing-source-lead",
+      "title": "Slitherwing Titan Wing - Download Free 3D model by Dragonblue223 (@Dragonblue223) [2e64ae3]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true,
+      "verificationDate": "2026-10-01",
+      "verificationScope": "Prior same-date browser receipt retained; not re-downloaded in this pass"
+    },
+    {
+      "id": 1024,
+      "url": "https://sketchfab.com/3d-models/terapagos-51815f5dd4ac48b18b5d73cb599fae4b",
+      "bucket": "missing-source-lead",
+      "title": "Terapagos - Download Free 3D model by OrangeBlueArt13 (@OrangeBlueArt13) [51815f5]",
+      "licenseLinks": [
+        {
+          "label": "Learn more",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "downloadButton": true,
+      "externalSourceLinks": [],
+      "admitted": false,
+      "decision": "CC uploader license observed, but authorized download dialog requires login. No new credentials or bypass used. Underlying Pokémon rights remain unknown.",
+      "loginRequired": true,
+      "verificationDate": "2026-10-01",
+      "verificationScope": "Prior same-date browser receipt retained; not re-downloaded in this pass"
+    }
+  ],
+  "boundedProvenanceReplacementResearch": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "creator": "kishi",
+      "url": "https://sketchfab.com/3d-models/bulbasaur-c4104aa936fb45c793d01e819133a211",
+      "indexedTriangles": 1100000,
+      "indexedVertices": 539400,
+      "priority": "low: indexed geometry already exceeds runtime accessor count budget; would need approved simplification and visual review",
+      "verificationDate": "2026-10-01",
+      "license": "CC Attribution shown in primary-page search index only",
+      "download": "Download 3D Model advertised in search index; actual dialog not checked",
+      "directPageResult": "HTTP403",
+      "identityMatchToExistingAsset": false,
+      "admitted": false,
+      "requiredEvidence": [
+        "Direct primary-page asset license and creator/source record",
+        "Authorized downloadable bytes tied to exact source identity",
+        "SHA256 plus retained terms/credit/modification record",
+        "Bounded decode, texture and geometry checks",
+        "Coherent still/idle poses and runtime material review"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "creator": "nguyenlouis32",
+      "url": "https://sketchfab.com/3d-models/squirtle-df11cb9c684e4a5fad6eec86d590774d",
+      "indexedTriangles": 4700,
+      "indexedVertices": 2500,
+      "priority": "higher: small indexed geometry; binary, materials, terms and pose still unverified",
+      "verificationDate": "2026-10-01",
+      "license": "CC Attribution shown in primary-page search index only",
+      "download": "Download 3D Model advertised in search index; actual dialog not checked",
+      "directPageResult": "HTTP403",
+      "identityMatchToExistingAsset": false,
+      "admitted": false,
+      "requiredEvidence": [
+        "Direct primary-page asset license and creator/source record",
+        "Authorized downloadable bytes tied to exact source identity",
+        "SHA256 plus retained terms/credit/modification record",
+        "Bounded decode, texture and geometry checks",
+        "Coherent still/idle poses and runtime material review"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "creator": "gaddiellartey2010",
+      "url": "https://sketchfab.com/3d-models/pikachu-bdd57b2bf2374bb89251c083cb2d834e",
+      "indexedTriangles": 1500,
+      "indexedVertices": 823,
+      "priority": "higher: small indexed geometry; binary, materials, terms and pose still unverified",
+      "verificationDate": "2026-10-01",
+      "license": "CC Attribution shown in primary-page search index only",
+      "download": "Download 3D Model advertised in search index; actual dialog not checked",
+      "directPageResult": "HTTP403",
+      "identityMatchToExistingAsset": false,
+      "admitted": false,
+      "requiredEvidence": [
+        "Direct primary-page asset license and creator/source record",
+        "Authorized downloadable bytes tied to exact source identity",
+        "SHA256 plus retained terms/credit/modification record",
+        "Bounded decode, texture and geometry checks",
+        "Coherent still/idle poses and runtime material review"
+      ]
+    }
+  ]
+}

@@ -1,14 +1,15 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { assetUseTerms } from './model-candidate-policy.js';
 const read = async name => JSON.parse(await readFile(new URL(`../content/models/${name}.json`, import.meta.url), 'utf8'));
-const [availability, audit, optimized, followup, batch, admitted, rejected] = await Promise.all([
-  read('availability'), read('source-audit'), read('optimization-report'), read('coverage-pass-2026-09-30'), read('coverage-batch-2026-10-01'), read('admitted'), read('pose-rejections'),
+const [availability, audit, optimized, followup, batch, admitted, rejected, lossy] = await Promise.all([
+  read('availability'), read('source-audit'), read('optimization-report'), read('coverage-pass-2026-09-30'), read('coverage-batch-2026-10-01'), read('admitted'), read('pose-rejections'), read('coverage-batch-lossy-2026-10-01'),
 ]);
 const species = Array.from({ length: 1025 }, (_, index) => {
   const id = index + 1;
   const source = audit.results.find(entry => entry.id === id);
   const asset = admitted.find(entry => entry.id === id);
   const pose = rejected.find(entry => entry.id === id && entry.sha256 === asset?.sha256);
+  const reviewedCandidate = lossy.results.find(entry => entry.id === id);
   const candidate = [...batch.results, ...followup.results, ...optimized.results].find(entry => entry.id === id);
   let status;
   if (pose) status = 'pose-rejected';
@@ -16,6 +17,7 @@ const species = Array.from({ length: 1025 }, (_, index) => {
   else if (!source) status = 'source-missing';
   else if (source.status === 'rejected') status = 'source-visual-rejected';
   else if (!assetUseTerms(source.provenance)) status = 'source-terms-unresolved';
+  else if (reviewedCandidate?.poseReview?.status === 'rejected') status = 'candidate-pose-rejected';
   else if (candidate?.status === 'pose-rejected') status = 'candidate-pose-rejected';
   else if (candidate?.status === 'budget-rejected') status = 'optimization-budget-rejected';
   else if (candidate?.status === 'machine-candidate') status = 'optimized-pose-review-pending';

@@ -269,3 +269,6 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 @media (min-width: 768px) { .dex-navigation { top: 28px; } }
 @media (max-width: 480px) { .dex-navigation { top: calc(14px + env(safe-area-inset-top)); } }
 @media (max-height: 600px) { .dex-navigation { top: calc(10px + env(safe-area-inset-top)); } }
+
+.model-recovery { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; font-size: 12px; padding: 8px; text-align: center; }
+.model-recovery button { min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 24px; background: #141a25; color: #fff; font: inherit; }

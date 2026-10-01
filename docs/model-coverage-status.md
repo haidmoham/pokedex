@@ -1,7 +1,7 @@
 # Model coverage and pose review — 2026-10-01
 
 Target: all 1,025 national-dex species. Current effective runtime coverage is
-517 species after rejecting the four exact screenshot failures. Admission of
+527 species on this review branch after rejecting the four exact screenshot failures. Admission of
 the remaining existing models is based on the earlier machine/representative
 review; it is not per-asset pose certification.
 
@@ -10,12 +10,12 @@ buckets in `content/models/coverage-status.json`:
 
 | Bucket | Species |
 | --- | ---: |
-| Effective runtime admitted | 517 |
+| Effective runtime admitted | 527 |
 | Embedded source terms unresolved | 434 |
 | Source missing | 54 |
-| Optimization budget rejected | 14 |
+| Optimization budget rejected (without later pose evidence) | 0 |
 | Screenshot pose rejected | 4 |
-| New candidate pose rejected | 1 |
+| New candidate pose rejected | 5 |
 | Earlier source visual rejection (Gholdengo) | 1 |
 
 The source audit covers 971 species. Its 906 machine candidates are not all
@@ -54,6 +54,7 @@ Runtime idle sampling rejects absent clips and invalid/zero durations. Existing
 model cancellation, deadlines, one active scene, Inspect, and teardown remain.
 
 Full coverage needs usable source assets for 54 missing species, source evidence
-for the 434 unresolved entries, budget repairs for 14, and usable pose replacements
-for the five identified failures plus Gholdengo. Larger batches should be split
+for the 434 unresolved entries, usable pose replacements for nine identified failures plus Gholdengo. Magearna
+also exceeds structural complexity. Ten individually reviewed derivatives from the
+existing batch account for the increase from production’s 517 to the draft’s 527. Larger batches should be split
 by this audit; they must not auto-admit artifacts to make the count look complete.

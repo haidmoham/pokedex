@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import ts from 'typescript';
 const source = await readFile(new URL('../src/model-motion.ts', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
-const { prepareIdle, idleMayPlay } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const { prepareIdle, idleMayPlay, sampleIdlePose, IDLE_POSE_PHASES } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 
 test('idle pose sampling waits for reactive clip selection rather than being reset to bind pose', async () => {
   const calls = [];
@@ -41,4 +41,17 @@ test('clip presence does not admit zero, negative or nonfinite idle durations', 
     await assert.rejects(prepareIdle(viewer, 'idle', new AbortController().signal), /usable duration/);
     assert.equal(played, false);
   }
+});
+
+
+test('three still poses sample distinct positions in the real idle and pause playback', () => {
+  const viewer = {duration: 4, currentTime: 0, pauses: 0, pause() { this.pauses++; }};
+  const times = IDLE_POSE_PHASES.map((_, pose) => { sampleIdlePose(viewer, pose); return viewer.currentTime; });
+  assert.deepEqual(times, [0.5, 1.5, 2.5]);
+  assert.equal(viewer.pauses, 3);
+});
+
+test('pose selection rejects unknown indices and unusable clip duration', () => {
+  for (const pose of [-1, 3, 0.5, NaN]) assert.throws(() => sampleIdlePose({duration: 4, currentTime: 0, pause() {}}, pose), /Unknown idle pose/);
+  for (const duration of [0, -1, Infinity, NaN]) assert.throws(() => sampleIdlePose({duration, currentTime: 0, pause() {}}, 0), /usable duration/);
 });

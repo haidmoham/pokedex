@@ -1,0 +1,359 @@
+{
+  "method": "SHA256-matched admitted bytes, decoded joint-channel checks, Blender 4.3.2 fixed-camera rendering at three clip phases. Offline evidence only; not browser or phone performance.",
+  "newAssets": 0,
+  "newAnimations": 0,
+  "existingAnimationCount": 36,
+  "results": [
+    {
+      "id": 149,
+      "sha256": "59d8eda57205c4693133025705a3b0eaba515d059407b8fc29fe02d6cfdc4357",
+      "bytes": 242472,
+      "url": "/models/species-149-mobile-candidate.glb",
+      "credit": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/dragonite-official-874c7fcdbd344c7bb9e8ed3e6a04dfac",
+      "animation": "pm0149_00_00_00000_defaultwait01_loop",
+      "duration": 2.5166666507720947,
+      "joints": 80,
+      "jointChannels": 200,
+      "movingJointChannels": 46,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 7.549999952316284,
+          "worldVertexSha256": "1a8e94110995105bcd75a621477a3e87c2c762353b9d341b5a41ab9935b42b41"
+        },
+        {
+          "phase": 0.375,
+          "frame": 22.649999856948853,
+          "worldVertexSha256": "cc09f74e5ce2bd241c24dd73bc37975900ba0f6fc373e4df0159e6e31d67267c"
+        },
+        {
+          "phase": 0.625,
+          "frame": 37.74999976158142,
+          "worldVertexSha256": "d6d288697a8996a4e9168b60310d0209f9c8b46f0bfd1997661c38cdf2734766"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Existing approved idle: three offline poses are coherent.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/149-pose-1.png",
+        "docs/model-idle-review-2026-10-01/149-pose-2.png",
+        "docs/model-idle-review-2026-10-01/149-pose-3.png"
+      ]
+    },
+    {
+      "id": 150,
+      "sha256": "07904dd6bb221b6096c269ee57dfca3f3ad4a32d64b3a69c70bb09b4b2875075",
+      "bytes": 141384,
+      "url": "/models/mewtwo-idle-mobile.glb",
+      "credit": "Mariokart07",
+      "license": "CC-BY-4.0 (embedded uploader claim)",
+      "source": "https://sketchfab.com/3d-models/mewtwo-official-d8aebb93c39243b3a62022591202a97a",
+      "animation": "pm0150_00_00_00000_defaultwait01_loop",
+      "duration": 3.0166666507720947,
+      "joints": 88,
+      "jointChannels": 61,
+      "movingJointChannels": 53,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 9.049999952316284,
+          "worldVertexSha256": "29e56bff2f767c78a114792aee8f589b4f37772967de5443e981e7602024b9ec"
+        },
+        {
+          "phase": 0.375,
+          "frame": 27.149999856948853,
+          "worldVertexSha256": "5c3dcd246ecb4d54e716b26a5c70e0726ced8b5ea11b134d670669d0db686c48"
+        },
+        {
+          "phase": 0.625,
+          "frame": 45.24999976158142,
+          "worldVertexSha256": "c3d471278084d3f54936cd1d60aacfde61eadf245aa115e854dbdeaaaadb004a"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Existing approved idle: three offline poses are coherent.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/150-pose-1.png",
+        "docs/model-idle-review-2026-10-01/150-pose-2.png",
+        "docs/model-idle-review-2026-10-01/150-pose-3.png"
+      ]
+    },
+    {
+      "id": 909,
+      "sha256": "d4fbff8341a1e2a898adac5f7e132e0824a6070b6f379b194d8f96dcfe291818",
+      "bytes": 265436,
+      "url": "/models/species-909-mobile-candidate.glb",
+      "credit": "Mariokart07 (https://sketchfab.com/Mariokart07)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/fuecoco-sv-a591ae67a0c54a8487a60debdf5c5ea7",
+      "animation": "pm1013_00_00|pm1013_00_00_00000_defaultwait01_loop",
+      "duration": 3.3333332538604736,
+      "joints": 200,
+      "jointChannels": 342,
+      "movingJointChannels": 35,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 9.999999761581421,
+          "worldVertexSha256": "2844fa9438220325b4249cbbb2714f972ae3f06ed3f7aa0e1bb60624bd3c0c99"
+        },
+        {
+          "phase": 0.375,
+          "frame": 29.999999284744263,
+          "worldVertexSha256": "96b51907ccb6778d9d4e2a2243a55939151d73d24bca37cb8913c6855b3c0dfd"
+        },
+        {
+          "phase": 0.625,
+          "frame": 49.999998807907104,
+          "worldVertexSha256": "058a8253a297f62bb2c09318dc19a88224f3ad36d2797a2512c09b72b2c59911"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Existing approved idle: three offline poses are coherent.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/909-pose-1.png",
+        "docs/model-idle-review-2026-10-01/909-pose-2.png",
+        "docs/model-idle-review-2026-10-01/909-pose-3.png"
+      ]
+    },
+    {
+      "id": 847,
+      "sha256": "ac03bda7d91e8b27c1979f3545df356a17b04f0b139b57bbcec40c276287242c",
+      "bytes": 310972,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/847.glb",
+      "credit": "LunaEagle (https://sketchfab.com/LunaEagle)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/barraskewda-cfc044247fe5465ca673a4a2ef716b7b",
+      "animation": "Armature|Armature|pm0847_00_00_ba10_waitA01|Base Layer",
+      "duration": 1.5,
+      "joints": 62,
+      "jointChannels": 37,
+      "movingJointChannels": 26,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 4.5,
+          "worldVertexSha256": "de3261d35a39368e9928f8da81c629f5adb4b3cad7b637766eebb2044aa9617b"
+        },
+        {
+          "phase": 0.375,
+          "frame": 13.5,
+          "worldVertexSha256": "5e1ea25d8355642468da149d91b5b7e951dfb5a019bf8c84bbdbb004b21c8745"
+        },
+        {
+          "phase": 0.625,
+          "frame": 22.5,
+          "worldVertexSha256": "7b364d7af501f2bb65a5e06da0489331a6c3dad4204bce625d7f60eed505d6ca"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Candidate clip withheld: offline sampled renders distort or fragment geometry; runtime/source cause remains unverified.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/847-pose-1.png",
+        "docs/model-idle-review-2026-10-01/847-pose-2.png",
+        "docs/model-idle-review-2026-10-01/847-pose-3.png"
+      ]
+    },
+    {
+      "id": 899,
+      "sha256": "bd08b7bdbd878687ec4f5ac9e2561215c7c94df36306df122f281598a8fcaf7b",
+      "bytes": 233720,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/899.glb",
+      "credit": "markolivas2005 (https://sketchfab.com/markolivas2005)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/mobile-pokemon-home-pokemon-8th-generation-d46fb80a200a4d72b78b6cda19835bb2",
+      "animation": "Armature|Armature|pm0899_00_00_ba10_waitA01|Base Layer",
+      "duration": 1.350000023841858,
+      "joints": 91,
+      "jointChannels": 63,
+      "movingJointChannels": 28,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 4.050000071525574,
+          "worldVertexSha256": "3f0c6f31d83f6aedff06dc849de8aec9ad683ac4614ceb781d78f0443accf48b"
+        },
+        {
+          "phase": 0.375,
+          "frame": 12.150000214576721,
+          "worldVertexSha256": "86e2ef259edeb45af8b4564c2c425e1fbf8ed28fbbda63ac3627526cea8977de"
+        },
+        {
+          "phase": 0.625,
+          "frame": 20.25000035762787,
+          "worldVertexSha256": "63e4ee3470e4eb9b8e5cb3e65a6bba8f8c6d6ffea4860acd83b083d6da3c9269"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Candidate clip withheld: offline sampled renders distort or fragment geometry; runtime/source cause remains unverified.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/899-pose-1.png",
+        "docs/model-idle-review-2026-10-01/899-pose-2.png",
+        "docs/model-idle-review-2026-10-01/899-pose-3.png"
+      ]
+    },
+    {
+      "id": 900,
+      "sha256": "797ea9bd5dd6191cc5d747fe96b03be66293d49f0d39bb25cf2fe23fceffe6dd",
+      "bytes": 201700,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/900.glb",
+      "credit": "Forsaken AR Official (https://sketchfab.com/FNAF_AR_Official)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/mobile-pokemon-home-900-kleavor-dfb7dbf2c6e74a3e9c937c7477b1f5b4",
+      "animation": "Armature|Armature|pm0900_00_00_ba10_waitA01|Base Layer",
+      "duration": 1.5499999523162842,
+      "joints": 84,
+      "jointChannels": 54,
+      "movingJointChannels": 26,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 4.6499998569488525,
+          "worldVertexSha256": "bd817e434fc5f3b9c69c919d5af70648f9a911151b76c34f20f56adfc4aeb781"
+        },
+        {
+          "phase": 0.375,
+          "frame": 13.949999570846558,
+          "worldVertexSha256": "c667e1bc30fa92157093802b69c4aedc35d007f7636d97fd4ece34066a628762"
+        },
+        {
+          "phase": 0.625,
+          "frame": 23.249999284744263,
+          "worldVertexSha256": "a0d7c2bd1a8b4f8b7d7b45e3e3b3f68a93d8a5ba9a41003fc4391315ad1875e7"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Candidate clip withheld: offline sampled renders distort or fragment geometry; runtime/source cause remains unverified.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/900-pose-1.png",
+        "docs/model-idle-review-2026-10-01/900-pose-2.png",
+        "docs/model-idle-review-2026-10-01/900-pose-3.png"
+      ]
+    },
+    {
+      "id": 133,
+      "sha256": "f0c8eb0876da64ac4e6f62de361b2362fb8dd45168e89903c6bda026be0ef40c",
+      "bytes": 168400,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/133.glb",
+      "credit": "seth the yutyrannus (https://sketchfab.com/slang107123456789)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pokedex-3d-pro-eevee-08d0e011acc64f92b77045384a4fbc3b",
+      "animation": "Armature|ArmatureAction",
+      "duration": 4.125,
+      "joints": 69,
+      "jointChannels": 107,
+      "movingJointChannels": 38,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 12.375,
+          "worldVertexSha256": "9afe4814e11d263dfa1e07c47c9c1e423222aac72a95bfd33784f638ef25b1b7"
+        },
+        {
+          "phase": 0.375,
+          "frame": 37.125,
+          "worldVertexSha256": "a5b8e23ef463c244db7fc0f79d0a7c5646d2f77a7135b9b7071b7df87bce7fcc"
+        },
+        {
+          "phase": 0.625,
+          "frame": 61.875,
+          "worldVertexSha256": "0287843df0bc31a262be4aa14715c7f6ee0bb10160d403c40828832d281368b8"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Candidate clip withheld: offline sampled renders distort or fragment geometry; runtime/source cause remains unverified.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/133-pose-1.png",
+        "docs/model-idle-review-2026-10-01/133-pose-2.png",
+        "docs/model-idle-review-2026-10-01/133-pose-3.png"
+      ]
+    },
+    {
+      "id": 134,
+      "sha256": "44101789d8141a5435b1a0660c90da30ae10bb05d932093000a95e7140e43399",
+      "bytes": 212264,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/134.glb",
+      "credit": "seth the yutyrannus (https://sketchfab.com/slang107123456789)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pokedex-3d-pro-vaporeon-a0eea1c4b9584af5b49fa26855d39343",
+      "animation": "Armature|ArmatureAction",
+      "duration": 5.541666507720947,
+      "joints": 69,
+      "jointChannels": 118,
+      "movingJointChannels": 41,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 16.624999523162842,
+          "worldVertexSha256": "0cd2d4ae097bcc9fd39a21c5c454e49deec92a61e3928e4fd8e502ac17e11925"
+        },
+        {
+          "phase": 0.375,
+          "frame": 49.874998569488525,
+          "worldVertexSha256": "a79b5587bc53b482b6f8920185d0914196e654052ad8ae1775813a245106c3c9"
+        },
+        {
+          "phase": 0.625,
+          "frame": 83.12499761581421,
+          "worldVertexSha256": "e3f30093dad3082e06902f69e56d8fb2d0c41bd369b23ea726e351482a1569de"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Candidate clip withheld: offline sampled renders distort or fragment geometry; runtime/source cause remains unverified.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/134-pose-1.png",
+        "docs/model-idle-review-2026-10-01/134-pose-2.png",
+        "docs/model-idle-review-2026-10-01/134-pose-3.png"
+      ]
+    },
+    {
+      "id": 135,
+      "sha256": "4c745afc675f66cd17259cea1325b684bf2b17c8162c3246935b9857c69d2faf",
+      "bytes": 221300,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/135.glb",
+      "credit": "seth the yutyrannus (https://sketchfab.com/slang107123456789)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pokedex-3d-pro-jolteon-1b9171b6c27547a1bdc9902ef92512c0",
+      "animation": "Armature|ArmatureAction",
+      "duration": 6.333333492279053,
+      "joints": 81,
+      "jointChannels": 126,
+      "movingJointChannels": 38,
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 19.000000476837158,
+          "worldVertexSha256": "6cd2066dc70706e19330ae0e9e812e3437f7216b49c81ae535bf64637683aa2a"
+        },
+        {
+          "phase": 0.375,
+          "frame": 57.000001430511475,
+          "worldVertexSha256": "8f58069446feb6f6386cbb5739d788bb1cf0a643139711fbc1811f1887de4006"
+        },
+        {
+          "phase": 0.625,
+          "frame": 95.00000238418579,
+          "worldVertexSha256": "9bffde45ccbed1ecccf96b59467db05793e296d443fb94d6c983cb554d5ad8be"
+        }
+      ],
+      "visualReviewed": true,
+      "review": "Candidate clip withheld: offline sampled renders distort or fragment geometry; runtime/source cause remains unverified.",
+      "additionalAnimationAdmitted": false,
+      "evidence": [
+        "docs/model-idle-review-2026-10-01/135-pose-1.png",
+        "docs/model-idle-review-2026-10-01/135-pose-2.png",
+        "docs/model-idle-review-2026-10-01/135-pose-3.png"
+      ]
+    }
+  ]
+}

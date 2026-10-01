@@ -264,6 +264,18 @@
     "admitted": true
   },
   {
+    "id": 110,
+    "bytes": 309276,
+    "url": "/models/species-110-batch1.glb",
+    "blobSha": "899e4ccdd9b81f819d8ea3a629b5fa59f6ce89a8",
+    "sha256": "b76bd50e922bfa209d362d739192f9ea83219d19b1bde200a8e4ed4603ec3d7d",
+    "credit": "ghost028 (https://sketchfab.com/ghost028)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+    "animation": null,
+    "admitted": true
+  },
+  {
     "id": 111,
     "bytes": 87688,
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/111.glb",
@@ -2928,6 +2940,18 @@
     "admitted": true
   },
   {
+    "id": 462,
+    "bytes": 73412,
+    "url": "/models/species-462-batch1.glb",
+    "blobSha": "acdd931e996576dcf33a42e4683b02f261db3f61",
+    "sha256": "d5a9b4b368b103789e2b7b46dc84243a5839229ebdc345ea34687105528a1521",
+    "credit": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+    "animation": null,
+    "admitted": true
+  },
+  {
     "id": 463,
     "bytes": 17168,
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/463.glb",
@@ -3056,6 +3080,18 @@
     "credit": "nguyenlouis32 (https://sketchfab.com/nguyenlouis32)",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/dusknoir-5126e0e828c14f6d957bfc814ef02a13",
+    "animation": null,
+    "admitted": true
+  },
+  {
+    "id": 478,
+    "bytes": 82608,
+    "url": "/models/species-478-batch1.glb",
+    "blobSha": "fe147139cad807730032415839d0fd2143e4a084",
+    "sha256": "6fdbcb3723dd61d7b47fb8d8f7f37566b7f9b0c4cc49f2270f47c9cebdea74bf",
+    "credit": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
     "animation": null,
     "admitted": true
   },
@@ -4380,6 +4416,18 @@
     "admitted": false
   },
   {
+    "id": 674,
+    "bytes": 481116,
+    "url": "/models/species-674-batch1.glb",
+    "blobSha": "e895e7af8f28e092f06823e49c9204611aed62a9",
+    "sha256": "7611d87ce35cbfeff76752499ceb533965fbde2eda23ac0d11f23a5eca44935f",
+    "credit": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+    "animation": null,
+    "admitted": true
+  },
+  {
     "id": 690,
     "bytes": 54612,
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/690.glb",
@@ -4728,6 +4776,18 @@
     "admitted": true
   },
   {
+    "id": 763,
+    "bytes": 152376,
+    "url": "/models/species-763-batch1.glb",
+    "blobSha": "ade0416caa9d6b9bac996d8d769c5c2c5c769bd4",
+    "sha256": "93f57fb70f068335eaad852d63d56297efc927c5fc99bee04176a58c97ec2ba5",
+    "credit": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+    "animation": null,
+    "admitted": true
+  },
+  {
     "id": 764,
     "bytes": 108624,
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/764.glb",
@@ -5036,6 +5096,18 @@
     "credit": "LunaEagle (https://sketchfab.com/LunaEagle)",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/lusamine-mother-beast-d1422b1a32154f7ebf95be074ed5309b",
+    "animation": null,
+    "admitted": true
+  },
+  {
+    "id": 795,
+    "bytes": 207836,
+    "url": "/models/species-795-batch1.glb",
+    "blobSha": "72bb5dc6a7be66010daa77dabadf31fc9eee364f",
+    "sha256": "d7780c61541e8bcadb3fcd0515af6bbc7680a066ff9b7be25c645755369b3ebf",
+    "credit": "Abe95 (https://sketchfab.com/Abe95)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
     "animation": null,
     "admitted": true
   },
@@ -5604,6 +5676,18 @@
     "admitted": true
   },
   {
+    "id": 889,
+    "bytes": 310192,
+    "url": "/models/species-889-batch1.glb",
+    "blobSha": "6cc2c6b0f97dad788a6be90f03580a41e7deae65",
+    "sha256": "78d12701fbe10c70ef78c94bca61236f3e3016204ba83ff0c028e4145125ed6e",
+    "credit": "User 37564 (https://sketchfab.com/rhl89ryo)",
+    "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+    "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+    "animation": null,
+    "admitted": true
+  },
+  {
     "id": 890,
     "bytes": 701688,
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/890.glb",
@@ -5760,6 +5844,18 @@
     "admitted": true
   },
   {
+    "id": 907,
+    "bytes": 262644,
+    "url": "/models/species-907-batch1.glb",
+    "blobSha": "edfed43d2adfb6014ac281017081c30f6dd32445",
+    "sha256": "f503f06ad994ef8d32f506fb919e7ca36c14cca6b30972f0ebef5f759dbe81a9",
+    "credit": "kishi (https://sketchfab.com/ash.takafumi)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+    "animation": null,
+    "admitted": true
+  },
+  {
     "id": 908,
     "bytes": 207288,
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/908.glb",
@@ -5816,6 +5912,18 @@
     "credit": "Eire (https://sketchfab.com/Eire)",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/0912-quaxly-52a6f4b15deb402b89915b2eda294c2a",
+    "animation": null,
+    "admitted": true
+  },
+  {
+    "id": 913,
+    "bytes": 173216,
+    "url": "/models/species-913-batch1.glb",
+    "blobSha": "d00dbd56004eeac5794dd657417b2e6d72b058e2",
+    "sha256": "10d362f137a04cf96d9161396c8ee310824984fa1774f4716cb2c5dbacdaffbb",
+    "credit": "kishi (https://sketchfab.com/ash.takafumi)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
     "animation": null,
     "admitted": true
   },
@@ -6057,6 +6165,18 @@
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/kingambit-sv-2a77f29e48c144cda86e49969d48ceec",
     "animation": "pm1112_00_00|pm1112_00_00_00000_defaultwait01_loop",
+    "admitted": true
+  },
+  {
+    "id": 985,
+    "bytes": 81288,
+    "url": "/models/species-985-batch1.glb",
+    "blobSha": "0b2463acff41a76a28a8b0d9c83efe1fb0731a0f",
+    "sha256": "7219028909b0e78ac72732a0c114cd1b0fbfaac37b5f50eb9a9f143d4d555528",
+    "credit": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+    "animation": null,
     "admitted": true
   },
   {
