@@ -2,12 +2,37 @@ import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
 export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null };
+// Exact source identities observed in the supplied screenshot and browser rendering.
+// Static models are allowed; absence of animation alone is not a pose failure.
+export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): string | undefined {
+  const rejected: Record<string, { id: number; reason: string }> = {
+  "a11a7365af8ba1d899359c3d964618c98f6037af85c7a713c380a9016efa86ce": {
+    "id": 106,
+    "reason": "Hitmonlee has outstretched rest-pose arms; no usable idle clip in source."
+  },
+  "025429fa95bd72f41c713ee86fa3bb314acbedfabfbf1ee316bdcabd8b8cbec4": {
+    "id": 336,
+    "reason": "Seviper is a straight vertical rest pose; no usable coil or idle clip in source."
+  },
+  "272d8fb7ac581519b8a7d57870ff306813aa9df9f722fc7211e46dcf880bc46c": {
+    "id": 563,
+    "reason": "Cofagrigus has straight outstretched rest-pose arms; no usable idle clip in source."
+  },
+  "302453bc350c49ba852eb200a9b897771a4eb989a675c6e5076708add3602439": {
+    "id": 669,
+    "reason": "Flabebe is separated from its flower in the source rest pose; no usable idle clip."
+  }
+};
+  const review = asset.sha256 ? rejected[asset.sha256] : undefined;
+  return review?.id === asset.id ? review.reason : undefined;
+}
+
 export const MODEL_TRANSFER_LIMIT = 750_000;
 export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
 export function admittedModel(id: number, entries: ModelAsset[] = admission): ModelAsset | undefined {
   // Source-level stray props/black geometry were verified for Gholdengo.
   if (id === 1000) return undefined;
-  return entries.find(asset => asset.id === id && asset.admitted && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
+  return entries.find(asset => asset.id === id && asset.admitted && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
     (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) || /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
     (asset.sha256 ? /^[a-f0-9]{64}$/.test(asset.sha256) : /^[a-f0-9]{40}$/.test(asset.blobSha)));
 }
@@ -53,6 +78,7 @@ export function validateModelStructure(bytes: ArrayBuffer) {
 
 // Reject changed, oversized, or malformed bytes before decoder/GPU allocation.
 export async function fetchModel(asset: ModelAsset, signal: AbortSignal, fetcher: typeof fetch = fetch): Promise<Blob> {
+  if (rejectedModelPose(asset)) throw new Error('model pose rejected');
   const response = await fetcher(asset.url, { signal });
   if (!response.ok || !response.body) throw new Error('model source unavailable');
   const reader = response.body.getReader();

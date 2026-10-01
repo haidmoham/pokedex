@@ -33,3 +33,12 @@ test('idle respects explicit pause, open panels, hidden tabs and reduced motion'
   assert.equal(idleMayPlay(true, false, false, false), true);
   for (const flags of [[false,false,false,false],[true,true,false,false],[true,false,true,false],[true,false,false,true]]) assert.equal(idleMayPlay(...flags), false);
 });
+
+test('clip presence does not admit zero, negative or nonfinite idle durations', async () => {
+  for (const duration of [0, -1, NaN, Infinity]) {
+    let played = false;
+    const viewer = { animationName: undefined, updateComplete: Promise.resolve(), availableAnimations: ['idle'], duration, currentTime: 0, timeScale: 1, play() { played = true; }, pause() {} };
+    await assert.rejects(prepareIdle(viewer, 'idle', new AbortController().signal), /usable duration/);
+    assert.equal(played, false);
+  }
+});

@@ -14,7 +14,7 @@ const policy = (await readFile(new URL('src/model-policy.ts', root), 'utf8'))
   .replace("import admission from '../content/models/admitted.json';", 'const admission = [];')
   .replace("import { officialEdition, Pokemon, CardEdition } from './feed-model';", '');
 const compiled = ts.transpileModule(policy, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
-const { validateModelStructure, validateModelTextures } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const { validateModelStructure, validateModelTextures, rejectedModelPose } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 await MeshoptDecoder.ready;
 const decoder = await draco.createDecoderModule();
 sharp.concurrency(1); sharp.cache(false);
@@ -24,6 +24,7 @@ const started = Date.now();
 await mkdir(new URL('public/models/', root), { recursive: true });
 async function check(candidate) {
   try {
+    if (rejectedModelPose(candidate)) throw new Error('model pose rejected');
     if (Date.now() - started > 12 * 60 * 1000) throw new Error('batch time budget');
     let bytes;
     if (candidate.localArtifact) bytes = await readFile(new URL(candidate.localArtifact.replaceAll('\\', '/'), root));
@@ -56,6 +57,10 @@ async function check(candidate) {
     }
     if (!doc.getRoot().listMeshes().length || !doc.getRoot().listScenes().length) throw new Error('empty model');
     if (candidate.animation && !doc.getRoot().listAnimations().some(clip => clip.getName() === candidate.animation)) throw new Error('idle absent');
+    // New assets need a hash-bound visual pose review. A clip name and decoded
+    // geometry prove neither an appealing idle nor connected body parts.
+    if (!previous.some(asset => asset.id === candidate.id && asset.sha256 === candidate.sha256) &&
+      !(candidate.poseReview?.status === 'approved' && candidate.poseReview.sha256 === candidate.sha256)) throw new Error('visual pose review pending');
     if (candidate.localArtifact && !previous.some(asset => asset.id === candidate.id)) await copyFile(new URL(candidate.localArtifact.replaceAll('\\', '/'), root), new URL(`public${candidate.url}`, root));
     const { localArtifact, ...asset } = candidate;
     results.push({ ...asset, textureDecoded: true, geometryDecoded: true, decodedGeometryBytes: decoded,
