@@ -32,7 +32,7 @@ export function ModelView({ asset, name, suspended = false, controlsTarget, onFa
   const [angle, setAngle] = useState(-12);
   const [playing, setPlaying] = useState(true);
   const [pose, setPose] = useState<number | null>(null);
-  const cameraOrbitPercent = asset.previewOnly && Number.isInteger(asset.cameraOrbitPercent) &&
+  const cameraOrbitPercent = (asset.previewOnly || asset.publicRelease) && Number.isInteger(asset.cameraOrbitPercent) &&
     asset.cameraOrbitPercent! >= 110 && asset.cameraOrbitPercent! <= 240 ? asset.cameraOrbitPercent! : 110;
   const inspectOrbitPercent = Math.max(160, cameraOrbitPercent);
   const fallback = useRef(onFallback);

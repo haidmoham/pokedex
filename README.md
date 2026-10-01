@@ -8,6 +8,8 @@ Share any species using the share button beside its name. Native sharing falls b
 
 The active admitted model plays its idle at a gentle pace, with an explicit Pause idle control. Hidden tabs and open panels pause playback; reduced motion keeps a sampled idle pose still. Rotation remains behind Inspect. Only the active model loads, with unchanged byte/decoded-memory admission and teardown guards.
 
+The approved public 998-model release is documented in [the October 1 release record](docs/public-model-release-2026-10-01.md). Its extracted-asset redistribution rights remain unresolved.
+
 ## Run locally
 
 Use Node.js 24. Tests use JSON import attributes.

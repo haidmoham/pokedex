@@ -1,6 +1,7 @@
 import {readFile,writeFile,mkdir,readdir,unlink} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {isProtectedModelPreview} from './preview-model-context.js';
+import {isPublicModelRelease,verifyPublicModelManifest,publicModelAsset} from './public-model-release.js';
 import {trimHomeIdle} from './trim-home-idle.js';
 import {compressHomeAnimation} from './compress-home-animation.js';
 import {selectCatalogIdle,reviewedCatalogSource} from './select-catalog-idle.js';
@@ -10,8 +11,11 @@ await mkdir(directory,{recursive:true});await mkdir(generated,{recursive:true});
 // Only remove this build step's generated assets, including after a preview build.
 for(const name of await readdir(directory))if(/^home-preview-\d+\.glb$/.test(name))await unlink(new URL(name,directory));
 let assets=[];
-if(isProtectedModelPreview()){
- const manifest=JSON.parse(await readFile(new URL('../content/models/protected-preview.json',import.meta.url)));
+const publicRelease=isPublicModelRelease()&&!isProtectedModelPreview();
+if(isProtectedModelPreview()||publicRelease){
+ const manifestBytes=await readFile(new URL('../content/models/protected-preview.json',import.meta.url));
+ if(publicRelease)verifyPublicModelManifest(manifestBytes);
+ const manifest=JSON.parse(manifestBytes);
  assets=manifest.assets;
  if(!Array.isArray(assets)||assets.length>1025)throw Error('Invalid preview inventory');
  const normalModels=JSON.parse(await readFile(new URL('../content/models/admitted.json',import.meta.url)));
@@ -47,5 +51,6 @@ if(isProtectedModelPreview()){
   await writeFile(new URL(`home-preview-${asset.id}.glb`,directory),result.bytes);
  }}));
 }
+if(publicRelease)assets=assets.map(publicModelAsset);
 await writeFile(new URL('preview-models.json',generated),JSON.stringify(assets)+'\n');
-console.log(`${assets.length} protected-preview models prepared; production admission unchanged`);
+console.log(`${assets.length} extracted models prepared for ${publicRelease ? 'approved public release' : 'protected preview'}`);

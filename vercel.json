@@ -1,7 +1,20 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build",
+  "buildCommand": "POKEDEX_MODEL_RELEASE=2026-10-01-998 npm run build",
   "outputDirectory": "dist",
-  "functions": {"api/index.js": {"maxDuration": 60}},
-  "rewrites": [{"source":"/api/:path*","destination":"/api/index"},{"source":"/((?!api/).*)","destination":"/index.html"}]
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
 }

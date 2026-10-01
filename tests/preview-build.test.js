@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
+import {publicModelAsset} from '../scripts/public-model-release.js';
 
 test('preview build retains source-family attribution and excludes extracted assets outside its authorized branch', async () => {
   const configUrl = new URL('../vite.config.ts', import.meta.url);
@@ -17,7 +18,7 @@ test('preview build retains source-family attribution and excludes extracted ass
       '@vitejs/plugin-react': { default: () => ({}) },
       'node:fs': { readFileSync: url => {
         assert.equal(url.pathname, new URL('../.generated/preview-models.json', import.meta.url).pathname);
-        return JSON.stringify(manifest.assets);
+        return JSON.stringify(env.POKEDEX_MODEL_RELEASE && env.VERCEL_ENV !== 'preview' ? manifest.assets.map(publicModelAsset) : manifest.assets);
       } },
     };
     runInNewContext(compiled, { exports, URL, process: { env }, require: id => {
@@ -26,6 +27,9 @@ test('preview build retains source-family attribution and excludes extracted ass
     } });
     return JSON.parse(exports.default.define.__POKEDEX_PREVIEW_ASSETS__);
   };
+  const publicAssets = buildAssets({ POKEDEX_MODEL_RELEASE: '2026-10-01-998', VERCEL_ENV: 'production' });
+  assert.equal(publicAssets.length, 511);
+  assert.ok(publicAssets.every(asset => asset.publicRelease === '2026-10-01-998' && !asset.previewOnly));
   const assets = buildAssets(previewEnv);
   assert.equal(assets.length, manifest.assets.length);
   for (const id of [995, 1023]) assert.equal(assets.find(asset => asset.id === id)?.preparation, 'catalog-native-idle');
