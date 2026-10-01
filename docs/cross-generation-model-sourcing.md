@@ -67,3 +67,10 @@ Atlas stores an extra guard frame after the native `homeDuration`. `scripts/trim
 ### Second protected-preview batch
 
 Twenty-four more old-catalog misses were fetched and independently decoded (4,204,684 source bytes). Twenty-three passed all existing budgets, three-pose image review and loop-endpoint preservation; Bellibolt remains held for its custom additive layer. This brings the candidate protected preview to **568 species and 77 native idle clips**, with 41 preview-only additions. All 41 derived models have zero decoded position/retained-motion difference from their pinned sources. The production manifest remains 527. See `preview-source-review-batch2-2026-10-01.json` for exact files and outcomes. No new automated tests were added for this data batch; the existing 119-test suite is retained.
+
+
+### Third protected-preview batch
+
+The third 24-file pass adds 15 reviewed native-idle models, taking the protected candidate to **583 species and 92 native idle clips** (56 preview-only additions). All 56 derivatives retain exactly the same decoded positions and retained animation values as their sources. Eight files need custom additive/stencil handling; Iron Boulder is additionally held for surface/face appearance review.
+
+All 54 previously missing catalog species have now been source-inspected. Forty-four are technically reviewed for this preview; ten remain held: Centiskorch, Milcery, Bellibolt, Glimmet, Glimmora, Iron Bundle, Iron Hands, Iron Jugulis, Iron Boulder and Terapagos. The remaining candidate gap of 442 is mostly an unreviewed-source queue, not proof of universal unavailability. This batch also fills five older provenance gaps with newly sourced Bulbasaur, Ivysaur, Venusaur, Squirtle and Wartortle. See `preview-source-review-batch3-2026-10-01.json`. Production stays at 527 and no new binary or broad test suite is committed.
