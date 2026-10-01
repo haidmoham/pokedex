@@ -4,8 +4,24 @@ import { fetchModel, validateModelTextures, ModelAsset } from './model-policy';
 import { artwork } from './feed-model';
 import { prepareIdle, idleMayPlay, sampleIdlePose, IDLE_POSE_PHASES } from './model-motion';
 
+// Probe an independent canvas once per page, before loading the shared renderer.
+// model-viewer can emit load after WebGL construction failed; load is not render proof.
+let rendererAvailable: boolean | undefined;
+function hasModelRenderer() {
+  if (rendererAvailable !== undefined) return rendererAvailable;
+  const canvas = document.createElement('canvas');
+  try {
+    const context = canvas.getContext('webgl2');
+    rendererAvailable = Boolean(context);
+    // This is only our disposable probe, never model-viewer's shared context.
+    context?.getExtension('WEBGL_lose_context')?.loseContext();
+  } catch { rendererAvailable = false; }
+  canvas.width = canvas.height = 0;
+  return rendererAvailable;
+}
+
 // Only the active admitted view mounts this component. No adjacent GLB fetches.
-export function ModelView({ asset, name, suspended = false, onFallback, onFailure, onInspect }: { asset: ModelAsset; name: string; suspended?: boolean; onFallback: () => void; onFailure: () => void; onInspect: (active: boolean) => void }) {
+export function ModelView({ asset, name, suspended = false, onFallback, onFailure, onInspect }: { asset: ModelAsset; name: string; suspended?: boolean; onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void }) {
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<ModelViewerElement | null>(null);
   const inspectButton = useRef<HTMLButtonElement>(null);
@@ -37,6 +53,12 @@ export function ModelView({ asset, name, suspended = false, onFallback, onFailur
     let element: ModelViewerElement | undefined;
     const fail = () => { if (!controller.signal.aborted) { window.clearTimeout(timeout); controller.abort(); failure.current(); } };
     const timeout = window.setTimeout(fail, 12000);
+    if (!hasModelRenderer()) {
+      window.clearTimeout(timeout);
+      controller.abort();
+      failure.current('unsupported');
+      return () => controller.abort();
+    }
     Promise.all([import('@google/model-viewer'), fetchModel(asset, controller.signal).then(async blob => { await validateModelTextures(blob, controller.signal); return blob; })]).then(([runtime, blob]) => {
       if (controller.signal.aborted || !host.current) return;
       runtime.ModelViewerElement.modelCacheSize = 0;
