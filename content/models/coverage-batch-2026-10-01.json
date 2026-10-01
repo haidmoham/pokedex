@@ -1,0 +1,49 @@
+{
+  "workers": 1,
+  "sources": 1,
+  "pipeline": {
+    "geometry": "exact decoded positions and topology; no simplification or quantization",
+    "textures": "WebP quality 90, at most 512x512",
+    "animation": "at most one recognized default-wait or idle; no automatic clip inference",
+    "toolchain": "scripts/model-pipeline/package-lock.json",
+    "perModelTimeoutSeconds": 120,
+    "sourceTransferCap": 16777216
+  },
+  "results": [
+    {
+      "id": 855,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "BlenderLager (https://sketchfab.com/blenderlager)",
+        "source": "https://sketchfab.com/3d-models/polteageist-40ca3d26605c42529080f93cb7678376",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "f26a12291ebf406208b62b4ec39eea67f51c7e7e798c8d737b1884c4f6b0bdcf",
+      "originalBytes": 236736,
+      "bytes": 233992,
+      "sha256": "854a53337a9b307122b4cf513b136d2416d501576b6fe8a89609623cbe592e6b",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "BlenderLager (https://sketchfab.com/blenderlager)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/polteageist-40ca3d26605c42529080f93cb7678376",
+        "title": "Polteageist"
+      },
+      "visualReviewed": true,
+      "admitted": false,
+      "status": "pose-rejected",
+      "artifact": "data/model-optimization/855-candidate.glb",
+      "poseReview": {
+        "status": "rejected",
+        "sha256": "854a53337a9b307122b4cf513b136d2416d501576b6fe8a89609623cbe592e6b",
+        "reason": "Rendered at 390x844: static purple arms form a straight horizontal rest pose. Geometry unchanged by optimization. Keep official art; no animation is available."
+      }
+    }
+  ]
+}
