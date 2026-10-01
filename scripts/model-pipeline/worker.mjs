@@ -2,14 +2,16 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { NodeIO, Logger, PropertyType } from '@gltf-transform/core';
 import { ALL_EXTENSIONS, EXTMeshoptCompression } from '@gltf-transform/extensions';
-import { prune, textureCompress } from '@gltf-transform/functions';
+import { dedup, prune, textureCompress } from '@gltf-transform/functions';
 import { MeshoptEncoder, MeshoptDecoder } from 'meshoptimizer';
 import draco from 'draco3dgltf';
 import sharp from 'sharp';
 import ts from 'typescript';
 import { selectedIdle } from '../model-candidate-policy.js';
 import { geometryValuesHash } from './geometry.mjs';
-const [input, output, metrics] = process.argv.slice(2);
+const [input, output, metrics, sizeArgument = '512'] = process.argv.slice(2);
+const textureSize = Number(sizeArgument);
+if (![256, 512].includes(textureSize)) throw new Error('texture size must be 256 or 512');
 sharp.concurrency(1);
 sharp.cache(false);
 const policy = (await readFile(new URL('../../src/model-policy.ts', import.meta.url), 'utf8'))
@@ -49,8 +51,8 @@ for (const clip of doc.getRoot().listAnimations()) {
   clip.dispose();
 }
 for (const extension of doc.getRoot().listExtensionsUsed()) if (['KHR_draco_mesh_compression', 'EXT_meshopt_compression'].includes(extension.extensionName)) extension.dispose();
-await doc.transform(prune({ propertyTypes: [PropertyType.ACCESSOR, PropertyType.BUFFER, PropertyType.ANIMATION], keepExtras: true, keepAttributes: true, keepLeaves: true, keepSolidTextures: true }),
-  textureCompress({ encoder: sharp, targetFormat: 'webp', resize: [512, 512], quality: 90, limitInputPixels: 16 * 1024 * 1024 }));
+await doc.transform(dedup({ propertyTypes: [PropertyType.TEXTURE] }), prune({ propertyTypes: [PropertyType.ACCESSOR, PropertyType.BUFFER, PropertyType.ANIMATION, PropertyType.TEXTURE], keepExtras: true, keepAttributes: true, keepLeaves: true, keepSolidTextures: true }),
+  textureCompress({ encoder: sharp, targetFormat: 'webp', resize: [textureSize, textureSize], quality: 90, limitInputPixels: 16 * 1024 * 1024 }));
 // Compression only: no simplify, weld, reorder or position quantization.
 doc.createExtension(EXTMeshoptCompression).setRequired(true).setEncoderOptions({ method: EXTMeshoptCompression.EncoderMethod.QUANTIZE });
 const encoded = Buffer.from(await io.writeBinary(doc));
@@ -81,5 +83,5 @@ try {
 } catch (error) { machineFailure = error.message; }
 await writeFile(output, bytes);
 await writeFile(metrics, JSON.stringify({ originalBytes: original.length, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'),
-  geometryPreserved, animation, textureDecoded: !machineFailure, machineFailure, sourceExtras: sourceJSON.asset.extras ?? {},
+  textureSize, geometryPreserved, animation, textureDecoded: !machineFailure, machineFailure, sourceExtras: sourceJSON.asset.extras ?? {},
   visualReviewed: false, admitted: false }, null, 2));

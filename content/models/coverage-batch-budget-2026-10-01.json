@@ -1,0 +1,961 @@
+{
+  "checkedAt": "2026-10-01T01:34:49.313Z",
+  "admittedInBatch": 0,
+  "underlyingPokemonRights": "Unknown; uploader license and repository software license do not establish underlying rights.",
+  "processing": [
+    {
+      "pipeline": {
+        "geometry": "exact decoded positions and topology; no simplification or quantization",
+        "textures": "WebP quality 90, at most 512x512",
+        "animation": "at most one recognized default-wait or idle; no automatic clip inference",
+        "toolchain": "scripts/model-pipeline/package-lock.json",
+        "perModelTimeoutSeconds": 120,
+        "sourceTransferCap": 16777216
+      },
+      "results": [
+        {
+          "id": 462,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "31f29807bc109c72bb556ee6554ff1e18c34654794d3521a522acf3bab2303d2",
+          "originalBytes": 232492,
+          "bytes": 227864,
+          "sha256": "801e8fbbce4dfa72a508534bfce6f5afffa7d785fdf3977d80ee0306e9195654",
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "decoded model complexity exceeds budget",
+          "sourceExtras": {
+            "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+            "title": "Pokemon S&V Magnezone"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/462-candidate.glb"
+        },
+        {
+          "id": 478,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "66353086f5aff42db99e35fbc351c96e0298ca38d9bf2ead117a4f16bdc51efb",
+          "originalBytes": 89136,
+          "bytes": 166084,
+          "sha256": "1777f1abd06c9c83c469967bfca6fb0dffe00ea2557291567bf8d5e654692d93",
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "decoded model complexity exceeds budget",
+          "sourceExtras": {
+            "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+            "title": "Pokemon PokeDex 3DS Pro Froslass"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/478-candidate.glb"
+        },
+        {
+          "id": 801,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "source": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-scarlet-violet-magearna-0c3abbd8f4794749bcf2c622c702621b",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "2d629b740fa7b28c10ba578c3991b50e19aa2476afe3e060e5164fc0da627225",
+          "originalBytes": 232068,
+          "bytes": 376000,
+          "sha256": "9cb93937f602f7f9dad378ee216b08254ffc2359cfe597f00d152dbd426189d1",
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "decoded model complexity exceeds budget",
+          "sourceExtras": {
+            "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-scarlet-violet-magearna-0c3abbd8f4794749bcf2c622c702621b",
+            "title": "Nintendo Switch Pokemon Scarlet Violet magearna"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/801-candidate.glb"
+        }
+      ]
+    },
+    {
+      "pipeline": {
+        "geometry": "exact decoded positions and topology; no simplification or quantization",
+        "textures": "WebP quality 90, at most 256x256",
+        "animation": "at most one recognized default-wait or idle; no automatic clip inference",
+        "toolchain": "scripts/model-pipeline/package-lock.json",
+        "perModelTimeoutSeconds": 120,
+        "sourceTransferCap": 16777216
+      },
+      "results": [
+        {
+          "id": 110,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "ghost028 (https://sketchfab.com/ghost028)",
+            "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "ada0e6844d110c00dd5b8aac2230a1ea10ca5fe76136157e4588fc72f3cc61ef",
+          "originalBytes": 1523484,
+          "bytes": 5060344,
+          "sha256": "20243905293824e9ddff318a0ea03820a9eff9dd57ab47fedd1ed7723b28ebfd",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "ghost028 (https://sketchfab.com/ghost028)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+            "title": "Pokemon Weezing"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/110-candidate-256.glb"
+        },
+        {
+          "id": 674,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+            "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "4acb915b3be1363f5215b5b6b635a7bfc7c5d9c0bbca01035ddeee67d3db0eb9",
+          "originalBytes": 366688,
+          "bytes": 2005716,
+          "sha256": "19f55761bbc1eabd9c75906354f2f378cf1d8c3bab41a2a2742ab19ab8a4e1ea",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+            "title": "pancham"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/674-candidate-256.glb"
+        },
+        {
+          "id": 763,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+            "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "92226ba682991da3b3d4f1915f20511dea2c4b79342021b6616124d3a0e37c04",
+          "originalBytes": 343712,
+          "bytes": 1541856,
+          "sha256": "86a34dee2b4ea9ab23a6769315e5f5cbba6cb408c79495ebb57238c38f2f0397",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+            "title": "Tsareena"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/763-candidate-256.glb"
+        },
+        {
+          "id": 795,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "Abe95 (https://sketchfab.com/Abe95)",
+            "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "02359e05b27ce6ecd8b11d21253464bf92e24fbeee0b4de00da1e78bf9b83ed9",
+          "originalBytes": 519944,
+          "bytes": 2128436,
+          "sha256": "324f2379862d4a4f9f9c18a8b9e503fd1f47dcbc5dce7ef8de597bc7e0b6bffd",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "Abe95 (https://sketchfab.com/Abe95)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+            "title": "Pheromosa - Pokémon"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/795-candidate-256.glb"
+        },
+        {
+          "id": 796,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "korbenhall (https://sketchfab.com/korbenhall)",
+            "source": "https://sketchfab.com/3d-models/xurkitree-56e21cf3dcb049f29311e7428860c9da",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "a094ff373b69b743e00ff3aab86d509244e8b2eef3a9900db1adf13aedb64ed8",
+          "originalBytes": 1053060,
+          "bytes": 1381768,
+          "sha256": "bf1475649036db8efab33cfe47852015df1701242ab9279ab58067429eca0c3b",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "korbenhall (https://sketchfab.com/korbenhall)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/xurkitree-56e21cf3dcb049f29311e7428860c9da",
+            "title": "Xurkitree"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/796-candidate-256.glb"
+        },
+        {
+          "id": 889,
+          "assetUseTerms": {
+            "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+            "attribution": "User 37564 (https://sketchfab.com/rhl89ryo)",
+            "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": true,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "345a85742be87b21bc4bb0f91abc730083bb13f58ff097a41b1f2371913bdb9e",
+          "originalBytes": 445472,
+          "bytes": 1507084,
+          "sha256": "e8e64f02579591e6c95cb0d8844825211a05d6a883e1841086d90ef27282279a",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "User 37564 (https://sketchfab.com/rhl89ryo)",
+            "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+            "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+            "title": "Zamazenta (Armor) [Pokemon Shield]"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/889-candidate-256.glb"
+        },
+        {
+          "id": 907,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+            "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "500419d17134c12b6741d63c9ee0e5212dff6c539b740a993b4f26ef64302d99",
+          "originalBytes": 656560,
+          "bytes": 2866800,
+          "sha256": "b4e779cf79fe05c90b19fce995b0a52c35991c311608295f7fe5b73747b74ade",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "kishi (https://sketchfab.com/ash.takafumi)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+            "title": "Floragato"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/907-candidate-256.glb"
+        },
+        {
+          "id": 913,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+            "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "59993b31c5e8c26eb9c2fc6767cb20f920d8f06e63d5ff6a73c599a0d35a7506",
+          "originalBytes": 429868,
+          "bytes": 1923780,
+          "sha256": "67d59cc5ebb157d35699a78d86ccab6fccece539475968527bde9be81906df1b",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "transfer exceeds 750 KB",
+          "sourceExtras": {
+            "author": "kishi (https://sketchfab.com/ash.takafumi)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+            "title": "Quaxwell"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/913-candidate-256.glb"
+        }
+      ]
+    },
+    {
+      "pipeline": {
+        "geometry": "exact decoded positions and topology; no simplification or quantization",
+        "textures": "WebP quality 90, at most 256x256",
+        "animation": "at most one recognized default-wait or idle; no automatic clip inference",
+        "toolchain": "scripts/model-pipeline/package-lock.json",
+        "perModelTimeoutSeconds": 120,
+        "sourceTransferCap": 16777216
+      },
+      "results": [
+        {
+          "id": 805,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "Galanodel (https://sketchfab.com/Galanodel)",
+            "source": "https://sketchfab.com/3d-models/stakataka-bedrock-model-17e8af141e0247578844b81ff8031660",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "afd5b97c79f1d6894240bca300feadde366354571bc3f310f070406f3542069c",
+          "originalBytes": 118532,
+          "bytes": 102264,
+          "sha256": "00ccd130e08830d3e3c181b1f3eeec53d4952163b0e8b6fd17b7f5cc3a431e9a",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "decoded model complexity exceeds budget",
+          "sourceExtras": {
+            "author": "Galanodel (https://sketchfab.com/Galanodel)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/stakataka-bedrock-model-17e8af141e0247578844b81ff8031660",
+            "title": "Stakataka (Bedrock Model)"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/805-candidate-256.glb"
+        },
+        {
+          "id": 867,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "korbenhall (https://sketchfab.com/korbenhall)",
+            "source": "https://sketchfab.com/3d-models/runerigus-491c7715893440f29afa86cb62549e67",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "7257011637ab1d40148fa9657ce1734c6c8517a18542749c17d768a29127d0b1",
+          "originalBytes": 398720,
+          "bytes": 310812,
+          "sha256": "40124f90d2e12fbbe59ca8d12a888c277fda28bc5fd81ae905c99be29da85044",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "decoded model complexity exceeds budget",
+          "sourceExtras": {
+            "author": "korbenhall (https://sketchfab.com/korbenhall)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/runerigus-491c7715893440f29afa86cb62549e67",
+            "title": "Runerigus"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/867-candidate-256.glb"
+        },
+        {
+          "id": 985,
+          "assetUseTerms": {
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+            "evidence": "embedded uploader claim",
+            "derivativesPermitted": true,
+            "shareAlike": false,
+            "underlyingRights": "unknown"
+          },
+          "originalSha256": "b7fb93e41e517dc15cdd6554b9c51c442415ba44c918e4ad9cd215ef8946ffca",
+          "originalBytes": 226804,
+          "bytes": 201196,
+          "sha256": "297809e4c6e2ad7bec2d4318b9350d3e0f1fc6696e46f736175424eb41178b20",
+          "textureSize": 256,
+          "geometryPreserved": true,
+          "animation": null,
+          "textureDecoded": false,
+          "machineFailure": "decoded model complexity exceeds budget",
+          "sourceExtras": {
+            "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+            "title": "Pokemon Scarlet and Violet Scream tail"
+          },
+          "visualReviewed": false,
+          "admitted": false,
+          "status": "budget-rejected",
+          "artifact": "data/model-optimization/985-candidate-256.glb"
+        }
+      ]
+    }
+  ],
+  "missingSources": {
+    "checkedAt": "2026-10-01T01:33:51.338Z",
+    "catalog": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/MergedOpt.json",
+    "method": "HEAD",
+    "concurrency": 2,
+    "results": [
+      {
+        "id": 850,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/850.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 851,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/851.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 852,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/852.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 853,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/853.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 854,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/854.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 859,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/859.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 860,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/860.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 861,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/861.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 863,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/863.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 864,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/864.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 866,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/866.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 868,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/868.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 873,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/873.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 878,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/878.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 879,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/879.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 882,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/882.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 883,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/883.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 918,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/918.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 919,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/919.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 931,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/931.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 935,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/935.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 936,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/936.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 938,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/938.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 939,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/939.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 940,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/940.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 944,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/944.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 950,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/950.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 951,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/951.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 952,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/952.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 953,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/953.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 954,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/954.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 955,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/955.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 956,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/956.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 961,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/961.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 963,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/963.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 964,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/964.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 968,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/968.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 969,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/969.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 970,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/970.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 971,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/971.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 972,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/972.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 976,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/976.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 977,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/977.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 986,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/986.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 988,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/988.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 989,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/989.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 991,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/991.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 992,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/992.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 993,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/993.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 1011,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/1011.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 1012,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/1012.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 1013,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/1013.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 1022,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/1022.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      },
+      {
+        "id": 1024,
+        "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/opt/regular/1024.glb",
+        "status": 404,
+        "error": null,
+        "admitted": false
+      }
+    ]
+  },
+  "restrictedSourceTerms": [
+    {
+      "id": 41,
+      "provenance": {
+        "author": "lucasprs51450 (https://sketchfab.com/lucasprs51450)",
+        "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+        "source": "https://sketchfab.com/3d-models/zubat-35532414945142e0bf1c84f8b8d87aaf",
+        "title": "zubat"
+      },
+      "pageVerification": "Public page confirms Attribution NonCommercial; remains incompatible with admission policy.",
+      "admitted": false
+    },
+    {
+      "id": 81,
+      "provenance": {
+        "author": "MortyJHin (https://sketchfab.com/MortyJHin)",
+        "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-magnemite-100a13915fd243d0bf35b0c64468984b",
+        "title": "[Pokémon] Magnemite"
+      },
+      "pageVerification": "Public page fetch returned HTTP 403; embedded uploader claim retained, not independently reconfirmed.",
+      "admitted": false
+    },
+    {
+      "id": 95,
+      "provenance": {
+        "author": "lucasprs51450 (https://sketchfab.com/lucasprs51450)",
+        "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+        "source": "https://sketchfab.com/3d-models/onix-905c217897e14657891c32e34c58bf3f",
+        "title": "Onix"
+      },
+      "pageVerification": "Public page fetch returned HTTP 403; embedded uploader claim retained, not independently reconfirmed.",
+      "admitted": false
+    },
+    {
+      "id": 253,
+      "provenance": {
+        "author": "markolivas2005 (https://sketchfab.com/markolivas2005)",
+        "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
+        "source": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-mystery-dungeon--rescu-f261a8f60a44466fb97ab6e24a5f9310",
+        "title": "Nintendo Switch - Pokemon Mystery Dungeon_ Rescu"
+      },
+      "pageVerification": "Public page fetch returned HTTP 403; embedded uploader claim retained, not independently reconfirmed.",
+      "admitted": false
+    },
+    {
+      "id": 789,
+      "provenance": {
+        "author": "AlmondFeather (https://sketchfab.com/almondfeather)",
+        "license": "CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)",
+        "source": "https://sketchfab.com/3d-models/cosmog-d928b7339a9b4ecb841162c53b4c4f4a",
+        "title": "Cosmog"
+      },
+      "pageVerification": "Public page fetch returned HTTP 403; embedded uploader claim retained, not independently reconfirmed.",
+      "admitted": false
+    },
+    {
+      "id": 925,
+      "provenance": {
+        "author": "JojoTZ (https://sketchfab.com/JojoTZ)",
+        "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+        "source": "https://sketchfab.com/3d-models/maushold-from-pokemon-scarlet-violet-c9a689709c2c499bb784012c21499262",
+        "title": "Maushold from Pokémon Scarlet & Violet"
+      },
+      "pageVerification": "Public page fetch returned HTTP 403; embedded uploader claim retained, not independently reconfirmed.",
+      "admitted": false
+    },
+    {
+      "id": 937,
+      "provenance": {
+        "author": "Sandwing87 (https://sketchfab.com/Nallaz87)",
+        "license": "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
+        "source": "https://sketchfab.com/3d-models/lowpoly-ceruledge-d668d5e89e824625a99a1ae289eb827b",
+        "title": "Lowpoly Ceruledge"
+      },
+      "pageVerification": "Public page fetch returned HTTP 403; embedded uploader claim retained, not independently reconfirmed.",
+      "admitted": false
+    }
+  ],
+  "alternativeRepositories": [
+    {
+      "url": "https://github.com/pokemon-party/3d-pokemon",
+      "treeSha": "429de1288cea0d43f5b4f56305d2276e94239d65",
+      "finding": "Same asset tree as primary source; no additional species."
+    },
+    {
+      "url": "https://github.com/PoGo-Devs/PoGo-3D-Assets",
+      "treeSha": "2ce68809da92ca19318bb72100a78b961ca4482f",
+      "finding": "Gen 1 FBX/DAE assets; no replacement for missing Gen 8/9 species and no repository asset license observed."
+    },
+    {
+      "url": "https://github.com/Hectoris919/CSP-Pokemon-Models",
+      "treeSha": "3ca6179bcf5f7cc1a085ade95e08cbe76f5e4cd7",
+      "finding": "README identifies Models Resource downloads converted to proprietary Clip Studio formats; MIT repository license does not establish source asset rights. No GLB/glTF/FBX/OBJ found."
+    }
+  ],
+  "limitations": [
+    "427 source assets still lack per-asset license/provenance; current upstream model_map.json is empty, so identity cannot be inferred from a different upload.",
+    "Budget-rejected candidates were not admitted or rendered as accepted models. Prior verified pose failures continue to use official artwork.",
+    "All geometry comparisons passed without simplification or position quantization. Lower texture dimensions do not cure excessive geometry transfer or texture/mesh counts."
+  ]
+}
