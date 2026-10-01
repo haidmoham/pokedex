@@ -10,7 +10,9 @@
       "maxWorldDisplacement": 0.041331120871358255,
       "relativeDisplacement": 0.04846079417515979,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "45c1eca7ad3b2575b7f3af816b67e796a27976a85ee7c92d4b2fe390d0168855",
+      "derivativeSha256": "d1fe3413a49aceaca53fbc66004d86731446d39fc20ac77e9db047451d16da5f"
     },
     {
       "id": 2,
@@ -19,7 +21,9 @@
       "maxWorldDisplacement": 0.10189832335583952,
       "relativeDisplacement": 0.06140033421596409,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "5fa993abd3f81e38972df0fee153b440610f5e7196519c979c0bc9e07de51f90",
+      "derivativeSha256": "083b566a7cea631b9973c49721dcda4cee6d801098cc988983cbf29cfbf610d3"
     },
     {
       "id": 3,
@@ -28,7 +32,9 @@
       "maxWorldDisplacement": 0.15080503294038453,
       "relativeDisplacement": 0.057512282454975285,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "e90921707077c3f565411dd64d54bc5f515095dd4ab379b1ebf22e2f98c0e70a",
+      "derivativeSha256": "ffadfb2cd997a4fe8b26fecfde4c2d5e54a7d880b843dc8a2867d003d9d6dac1"
     },
     {
       "id": 7,
@@ -37,7 +43,9 @@
       "maxWorldDisplacement": 0.042020560093396914,
       "relativeDisplacement": 0.08887882444320175,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "b05029eb5c6dfc65a937a7b19b2e7500d23fb0b947e3447bc06f8d50ce694759",
+      "derivativeSha256": "41eb6f7ad922d751e6e5e9aeafbb280697aa0d168c9f421b8c834d809f561485"
     },
     {
       "id": 8,
@@ -46,7 +54,9 @@
       "maxWorldDisplacement": 0.27285344420017704,
       "relativeDisplacement": 0.2630351642027396,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "5acf9c970604148510a8fe923814ce86a0cbb96195e2b67e164c4829b36151e2",
+      "derivativeSha256": "dd6850dd02e43e97d54ad220db00b516bd8e129bd6fbbfc8b40611a9ce9d0d2f"
     },
     {
       "id": 9,
@@ -55,7 +65,9 @@
       "maxWorldDisplacement": 0.09857895989201641,
       "relativeDisplacement": 0.06112463797162769,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "dd63f626c3af027837cdc22460bbc394d5336bda039b24e0e0276c2a1e0fc5ba",
+      "derivativeSha256": "a8a719f30cdab3d50b6218ea888c3918e9dc89ac3dc6dfdedfdfdbe736fc7e85"
     },
     {
       "id": 10,
@@ -64,7 +76,9 @@
       "maxWorldDisplacement": 0.046197183353799826,
       "relativeDisplacement": 0.21733551588141722,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "6100afd3bd4217b02c3ee2e05c09bba3b205df466a2b38b74ce7c78a6a0c88e3",
+      "derivativeSha256": "3609e2f663858c643aee9a8298db3268b0a8dfe831a866af8f48e5e2f60863cd"
     },
     {
       "id": 11,
@@ -73,7 +87,9 @@
       "maxWorldDisplacement": 0.03698399286912287,
       "relativeDisplacement": 0.05345153566692191,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "3b700baeafb5de200b0bdb65d599891b26acd3a17a0014cd16e4174ec489d7da",
+      "derivativeSha256": "8b721d57e7402e8c715263817dab5beb5d532d9a14d7f80bcfc3d18800bb2469"
     },
     {
       "id": 12,
@@ -82,7 +98,9 @@
       "maxWorldDisplacement": 0.20841452331029128,
       "relativeDisplacement": 0.2164679512409919,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 3.004006326346596e-06
+      "loopRelativeDisplacement": 3.004006326346596e-06,
+      "sourceSha256": "3598ac01e69aa2b495903d7b3ccaed87aef2bf70f4ddf47eed2cedafda27740f",
+      "derivativeSha256": "706409118c8685465d960db0a41f105a91e59ef61ecb2e491b11a9572434ce30"
     },
     {
       "id": 13,
@@ -91,7 +109,9 @@
       "maxWorldDisplacement": 0.0416652807920307,
       "relativeDisplacement": 0.184728998599603,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "31c32160c829936bcae9eb23e231d81b69137aec3c09510c589faf5f18943e6e",
+      "derivativeSha256": "40f4fcacac756268bc1b90b4d5904d49226fa06104732d8d43fa561ddcdb67a2"
     },
     {
       "id": 14,
@@ -100,7 +120,9 @@
       "maxWorldDisplacement": 0.062262914636825525,
       "relativeDisplacement": 0.10374039501847841,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "dfa7ef4920ffa63bfa405ff182bf81d1678bb3c34ab361244184d3f1b59140ac",
+      "derivativeSha256": "d3b3d5fe1acbfc1e3e53ae6dd2cba761108d4fca0d6628ef0cc67f60255de0ee"
     },
     {
       "id": 16,
@@ -109,7 +131,9 @@
       "maxWorldDisplacement": 0.009253656271319355,
       "relativeDisplacement": 0.026667402424290318,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "2218be707860444882dba4a54a77f2f38256ac28ff1676e0227be95d271b7a16",
+      "derivativeSha256": "e8981c07adf02db3c96213704fe608e9b1ebeaa8a33228900a2796238205e552"
     },
     {
       "id": 17,
@@ -118,7 +142,9 @@
       "maxWorldDisplacement": 0.8107071289628548,
       "relativeDisplacement": 0.34138410934579433,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "28d01c6bafa16897029b56e450ac46212bbde744ef18d16a9e0dca5c1a0c6de1",
+      "derivativeSha256": "20ed520193887a488c9e259be474ca414b2a986c4dd273e153fefd565d307ded"
     },
     {
       "id": 18,
@@ -127,7 +153,9 @@
       "maxWorldDisplacement": 2.5562783625971557,
       "relativeDisplacement": 1.3664507582632008,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "0129f64d9740dbf09cc7b0e8b899da4386395c41446f1397f910694a32824150",
+      "derivativeSha256": "e2ca360d3853cc6423e985cfcfc980ce0fead1e275017c68a6bb69e2a6558bfd"
     },
     {
       "id": 19,
@@ -136,7 +164,9 @@
       "maxWorldDisplacement": 0.047031840736522924,
       "relativeDisplacement": 0.09037469884150975,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "7443c28041433ea0869b1b2efd886c63eb44c3abb44e31605c9d60544345d36d",
+      "derivativeSha256": "f89cae0a949ba6bd1ebec8121bf3cf11749683ca0190a28440e5dab8e1693f98"
     },
     {
       "id": 20,
@@ -145,7 +175,9 @@
       "maxWorldDisplacement": 0.7498674762512153,
       "relativeDisplacement": 0.6384452253719728,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 2.5876522031093595e-07
+      "loopRelativeDisplacement": 2.5876522031093595e-07,
+      "sourceSha256": "b598414bf767ccbb11a43b3d507ee87bcab393f7cc6025ce21bb0ef35d2ec3b8",
+      "derivativeSha256": "cab16e9f97e96bbd3e30affd2486d789d23ba185905fa3a70c45f807f0b93e9b"
     },
     {
       "id": 21,
@@ -154,7 +186,9 @@
       "maxWorldDisplacement": 0.008710952290812096,
       "relativeDisplacement": 0.021449788551839495,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "90c4cb3efbba4e6fdb2ab1fd12d3057f27ba836990ec5a2d02ce6d93a7f92456",
+      "derivativeSha256": "302a54f408bd2df6c70dc16f25097ed50696c72bf5d40697170ac4a01e5b472d"
     },
     {
       "id": 22,
@@ -163,7 +197,9 @@
       "maxWorldDisplacement": 1.9247337228631392,
       "relativeDisplacement": 1.2320882730412996,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 7.705157831430362e-08
+      "loopRelativeDisplacement": 7.705157831430362e-08,
+      "sourceSha256": "5509feb08a11d833a53ae51ba438216b2df58e9d714b7401487d6f5a9ed38e32",
+      "derivativeSha256": "cbc0b3b1abb681601b7cffcf6836b9b7163169c27904d04060022fe1e2a460da"
     },
     {
       "id": 23,
@@ -172,7 +208,9 @@
       "maxWorldDisplacement": 0.13019247590982871,
       "relativeDisplacement": 0.30703612713928974,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "81732dd657edb4a07b28ab45efcef59ecd7b1cefe62211a5fd69e324058b0620",
+      "derivativeSha256": "d92dc1282f80b0a898155db8f2a61e34c95c745d898e101b69da384b44c3c98e"
     },
     {
       "id": 24,
@@ -181,7 +219,9 @@
       "maxWorldDisplacement": 0.6294912390682783,
       "relativeDisplacement": 0.26106522018674644,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "df9196e58b82012eb5ffd92e2e86030a64a02ddfcdbbb484d91f927802a6ac24",
+      "derivativeSha256": "f2c12e152806eed71b4ad9cd3bce05d3c3de0fc1234002f2bfcbbeee86d44ede"
     },
     {
       "id": 25,
@@ -190,7 +230,9 @@
       "maxWorldDisplacement": 0.03124354482876671,
       "relativeDisplacement": 0.06633293813645277,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "98d79576b9c6a32f875fba8d20b69f3c0d82ec4f3a44a66aa939a6c49ce760fa",
+      "derivativeSha256": "09c699044bfc8bcba58101eff2b7465b656755ff2dcefa57aa7a1da6ca742de5"
     },
     {
       "id": 26,
@@ -199,7 +241,9 @@
       "maxWorldDisplacement": 0.14881446217951927,
       "relativeDisplacement": 0.12014867452705963,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "bfc66d57afc3565bef34fd223fc49eb9f544c6dab0eb4d4f7b68fbc11af7a59f",
+      "derivativeSha256": "d734df20b88856fcf01918042968c0c3a6f9f4a76f3f6f54eb4af68abb89ec5e"
     },
     {
       "id": 27,
@@ -208,7 +252,9 @@
       "maxWorldDisplacement": 0.02546053526875992,
       "relativeDisplacement": 0.032416088796231556,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "4b477003fd1d15e5da4fcc516eb361cc417f3e7fb4b5ab3bcdeea506c80e3949",
+      "derivativeSha256": "677aaa554343dd1494269aeefbd59bedb9b004457b5f20941f3541760968901e"
     },
     {
       "id": 28,
@@ -217,7 +263,9 @@
       "maxWorldDisplacement": 0.11070648735983647,
       "relativeDisplacement": 0.11194871362948122,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "c8336bc5aa90d5a0090a74b1bdfee63d72843f9d767dac21d401c9efbff00b26",
+      "derivativeSha256": "5ff73b0954bb9082ac494d1b6f320f0277aade0ab2140c0de21488e54eda9dd0"
     },
     {
       "id": 29,
@@ -226,7 +274,9 @@
       "maxWorldDisplacement": 0.031205310304298694,
       "relativeDisplacement": 0.06639007188020135,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "96d808fdc436abe2467deb615da2ebcbea763b0689f2ce0eb6b26d3816346752",
+      "derivativeSha256": "9ebde1aa113f9750fa149c31d8fd6dbe708acf520b1cbe628ca5c745ce2fcb24"
     },
     {
       "id": 30,
@@ -235,7 +285,9 @@
       "maxWorldDisplacement": 0.03841409020476412,
       "relativeDisplacement": 0.044974979118401016,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "cb59148f22cf2e5bf98d4b0fd5c062ab01d93d22ec9d170c8b906542410f9e80",
+      "derivativeSha256": "6f5bde9a79b86163fbe7597d13230410bdd30ff25f3b4e4ad63c83b8dab1dadb"
     },
     {
       "id": 31,
@@ -244,7 +296,9 @@
       "maxWorldDisplacement": 0.13049208387174255,
       "relativeDisplacement": 0.08505076536021161,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "f0b3fd3ca38482eaa3610e0d070c22b6d8709c7427ebed77273584310d02ab00",
+      "derivativeSha256": "eeeba42b00e4f129455c4b3ee97b8fcc4b3ba5c563dcdfecc59a1147b6429861"
     },
     {
       "id": 32,
@@ -253,7 +307,9 @@
       "maxWorldDisplacement": 0.06572421934274064,
       "relativeDisplacement": 0.09825645202612104,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "297fe15fce32d53720055eb954568021620d16e192472a548a5fa047acb7332c",
+      "derivativeSha256": "af5584f67bda13665af7da6ba694475a2923c689182199a19f44f5d6c16629b0"
     },
     {
       "id": 33,
@@ -262,7 +318,9 @@
       "maxWorldDisplacement": 0.07254663628149478,
       "relativeDisplacement": 0.055639320663667696,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "642af713f6ca3f09e64ea848577e2cf8b150c9789bd1cfa5e16db2934f344271",
+      "derivativeSha256": "db022ebe7a7e289285fb41ff3347364979bab491a99e2db2877e202e0ff236f6"
     },
     {
       "id": 106,
@@ -271,7 +329,9 @@
       "maxWorldDisplacement": 0.0911442337309444,
       "relativeDisplacement": 0.06253892118177948,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "3bafaf64610c5cd779f37fdbb373113aabd609aed46554b92726b855cc2521ba",
+      "derivativeSha256": "23ac02eafeae3be1c3466f9516eb887ab80bcdd6c246aba72efb841f6fd0eb7a"
     },
     {
       "id": 336,
@@ -280,7 +340,9 @@
       "maxWorldDisplacement": 0.22008918857961368,
       "relativeDisplacement": 0.1726275612719447,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "28742619c0240a383fb9bc1026815f4237ff914542c265ac9c402ab574ad7cb4",
+      "derivativeSha256": "c6b45796a9e634511f523ff67b97c0bc1d992405b15f47ce0d8369cc2cd81bc8"
     },
     {
       "id": 669,
@@ -289,7 +351,9 @@
       "maxWorldDisplacement": 0.07983997895181648,
       "relativeDisplacement": 0.3990974811982789,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 8.94276639639165e-08
+      "loopRelativeDisplacement": 8.94276639639165e-08,
+      "sourceSha256": "460fc409b37f2dd6810088aef407efa2984c3681c25af71194756a4cb8dab484",
+      "derivativeSha256": "c11662e05d0b6749dd48c8df0addae68bb8e1b7269c21a4260f88726a1d45bdf"
     },
     {
       "id": 801,
@@ -298,7 +362,9 @@
       "maxWorldDisplacement": 0.037290597246730804,
       "relativeDisplacement": 0.03164357049038515,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "d3aeb901c260a13ef080960619fe233feb060e971e2bdf48c660fb823e024215",
+      "derivativeSha256": "027158f7ee7c254fa01cc07fc8368509d9bec1c9a0d3eeae1253a2e8a02eb107"
     },
     {
       "id": 805,
@@ -307,7 +373,9 @@
       "maxWorldDisplacement": 0.37795354057225455,
       "relativeDisplacement": 0.04446721146392739,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 3.136148216590771e-08
+      "loopRelativeDisplacement": 3.136148216590771e-08,
+      "sourceSha256": "e10fb5edc2e703b0f8dac65e09ec8bec164fe24a2fc2fbbc5951f169ceafd7cd",
+      "derivativeSha256": "5e5f3350b373b8358ee73960de5761d5d6192296ac5472a56cc8ae6a225bc957"
     },
     {
       "id": 850,
@@ -316,7 +384,9 @@
       "maxWorldDisplacement": 0.024788905577523696,
       "relativeDisplacement": 0.035743654581169605,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 4.55793335696177e-08
+      "loopRelativeDisplacement": 4.55793335696177e-08,
+      "sourceSha256": "0879ed7fe86c57f75e7c7d835eb84053ed65383e4bd27cae4d39a57316a8dff6",
+      "derivativeSha256": "23e882ca92c0a76536c24a139e21e141c162dda296e3e647733cbee84c5d39a4"
     },
     {
       "id": 852,
@@ -325,7 +395,9 @@
       "maxWorldDisplacement": 0.19503982045414517,
       "relativeDisplacement": 0.2011997675884754,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "e665c3c25b3dfe2b7c3d1bee51c8dc099751bb47f3a10d6c025629063a599ab6",
+      "derivativeSha256": "4357cbad0b940e50fcec20714f024e0cfda381caaac1074039f3f020aed4fdfa"
     },
     {
       "id": 853,
@@ -334,7 +406,9 @@
       "maxWorldDisplacement": 0.11950885235971663,
       "relativeDisplacement": 0.08259565930326829,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "5f83412c2bb2a36903f77cbafabe77f1ee88ebf3995baabd9d4aae628200a5a2",
+      "derivativeSha256": "0242742ec3c13bbca38965ecefc0ca7b7a2068f0fea1d14f66af1cda51954e66"
     },
     {
       "id": 854,
@@ -343,7 +417,9 @@
       "maxWorldDisplacement": 0.1260690014769621,
       "relativeDisplacement": 0.7547571365095511,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 7.636749006364894e-06
+      "loopRelativeDisplacement": 7.636749006364894e-06,
+      "sourceSha256": "6ef2827f04a10341367d3178b831dd522385674ca576eea5232d855e4cdf8611",
+      "derivativeSha256": "f39442d6a581175a9f8702dbd4a2a3adc65edcc7496b7ab305124fdb4c805cf4"
     },
     {
       "id": 855,
@@ -352,7 +428,9 @@
       "maxWorldDisplacement": 0.1161851946386552,
       "relativeDisplacement": 0.33851118525940294,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 2.191932944161486e-06
+      "loopRelativeDisplacement": 2.191932944161486e-06,
+      "sourceSha256": "8e8d9c071c8531a77b11355714c1c2fd53628c7b54b3d5647b1fcde9905d4e66",
+      "derivativeSha256": "8ce263553bd84df3817772137a1411b4b9b0212373962f860eb2a2c405006ca9"
     },
     {
       "id": 859,
@@ -361,7 +439,9 @@
       "maxWorldDisplacement": 0.02600887246337971,
       "relativeDisplacement": 0.0637391644274528,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "852a78b9963dfd6931c5e8bc3675638cb12a77ca61386b469513a9a78723c25a",
+      "derivativeSha256": "5bdbf50ae43bc42f20cc1c04b508f43724c095db2e7dc69542bcc4e8bdf7360d"
     },
     {
       "id": 860,
@@ -370,7 +450,9 @@
       "maxWorldDisplacement": 0.10275097720472083,
       "relativeDisplacement": 0.13149972063594892,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 1.9178816263543163e-07
+      "loopRelativeDisplacement": 1.9178816263543163e-07,
+      "sourceSha256": "dc40e8e0b7e2555d6c47ba05067cc09429d5461df02a89b9bb9506b8a0181fa5",
+      "derivativeSha256": "3fc4805ff3409f3bf498ed731d8952d6e5b2892f37ed0d1b36d9f5ba4ac5b4f8"
     },
     {
       "id": 861,
@@ -379,7 +461,9 @@
       "maxWorldDisplacement": 0.11262615007885653,
       "relativeDisplacement": 0.058121374098867806,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 1.268239277621558e-07
+      "loopRelativeDisplacement": 1.268239277621558e-07,
+      "sourceSha256": "cb1bc0b3d40495ef55a000abf5b124b7773ad2266f3ccb26e2599c812e9c8fdd",
+      "derivativeSha256": "2c95f31f869325ad34e41a8822454d45fd8fd5093bac225f890a2a464eaf3ade"
     },
     {
       "id": 863,
@@ -388,7 +472,9 @@
       "maxWorldDisplacement": 0.048629648743697865,
       "relativeDisplacement": 0.05943571985047394,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "427e88a015f536029c8b961f6b2b2c4b42ad976090eb09c7c175dd74936561eb",
+      "derivativeSha256": "1d4ac86a04aba44bf27b0cc2ca2a8f7b9ab5e199e4bfe604d1183bfa8c8b6753"
     },
     {
       "id": 864,
@@ -397,7 +483,9 @@
       "maxWorldDisplacement": 0.14557948983563943,
       "relativeDisplacement": 0.10379834789612932,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "cc7511ceaf0133e5f0dc840049ef33d8e0e89db671a663b4bdfd5b50b08ba708",
+      "derivativeSha256": "08daeb1b150e26770309d68461ee2d0aa1835ffb596308189c6c9ecadbebf99b"
     },
     {
       "id": 866,
@@ -406,7 +494,9 @@
       "maxWorldDisplacement": 0.5181907118589117,
       "relativeDisplacement": 0.3202159538239874,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 8.844161029714288e-08
+      "loopRelativeDisplacement": 8.844161029714288e-08,
+      "sourceSha256": "c499e5658259d4c24420a2251c1ecb181ae2503690b246ff0b9e9001f496f3e7",
+      "derivativeSha256": "70d1d5c2ba2a1cf5e67e7cc6e9c8d1c7d10c820270e53ab84650a78d39df9afc"
     },
     {
       "id": 873,
@@ -415,7 +505,9 @@
       "maxWorldDisplacement": 0.37898805682815606,
       "relativeDisplacement": 0.27921084777905725,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "3eb5ec0aa211946c91d4092b1ae49f5b6a30fe48a17b92a1684e5a0410778b0f",
+      "derivativeSha256": "c2dd1ebcb8960909940c20619146664f0aaeb14f2b631cb25a6021bd383c347d"
     },
     {
       "id": 878,
@@ -424,7 +516,9 @@
       "maxWorldDisplacement": 0.342860310149436,
       "relativeDisplacement": 0.1976895855712209,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "e008826043483e88a2a6704eaa6d5fb236ef3c01509a94dd03b8c5e0503174a2",
+      "derivativeSha256": "4da4b16dc17e21f8cc7c080f5c25b74a0e5dac3bca6a1b1e093be20fc0165498"
     },
     {
       "id": 879,
@@ -433,7 +527,9 @@
       "maxWorldDisplacement": 0.3488677869606581,
       "relativeDisplacement": 0.08185266798996484,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "88136aeb8ca74f3c7bc036fae38a8610884f58f6c30f3a2728f7b5dea4585567",
+      "derivativeSha256": "316ae3a5e2ae455d536ea83c981f100e549903184b1332af8c0856f7720ed54e"
     },
     {
       "id": 882,
@@ -442,7 +538,9 @@
       "maxWorldDisplacement": 0.3544780563840362,
       "relativeDisplacement": 0.13103215322800654,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "f65e40ac4ff953d4cc94ba94c496f6bfc4bc3a97a9fb4008714c2042e805e507",
+      "derivativeSha256": "ebdaa0f8bbffc8ecdd1a43c0b271b2ad4d86da580e528bc2577bef4271251a46"
     },
     {
       "id": 883,
@@ -451,7 +549,9 @@
       "maxWorldDisplacement": 0.2056064468841484,
       "relativeDisplacement": 0.08228492671957142,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "8bff4e61c0a9c228445be00c5e3284ec2ee81c4442002fd742783157e6edbab8",
+      "derivativeSha256": "4ea67dc3bda64ca9dc9a7852b3bafaf84b11e3ff1bb28b47f98aa07c6040b55c"
     },
     {
       "id": 918,
@@ -460,7 +560,9 @@
       "maxWorldDisplacement": 0.06008184773546882,
       "relativeDisplacement": 0.04402816357625803,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 4.9138276244993575e-08
+      "loopRelativeDisplacement": 4.9138276244993575e-08,
+      "sourceSha256": "906679e1348143510a1214a5378460df0c66005e78b94580857c12252a1babe0",
+      "derivativeSha256": "6693e75e00b15b5764469c1539a785922bd2230a6dc8590faf9ef4baf592b5a4"
     },
     {
       "id": 919,
@@ -469,7 +571,9 @@
       "maxWorldDisplacement": 0.005388465756823503,
       "relativeDisplacement": 0.02393966452869613,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "14027433935fe7d86d88215bd860e055b7fc58393ea0cb32878a9533f2aaf00a",
+      "derivativeSha256": "91b3f0b54436612b6c41e50ab62bf243adadd600b7d89635b7390dbf1f18b28f"
     },
     {
       "id": 931,
@@ -478,7 +582,9 @@
       "maxWorldDisplacement": 0.75816182927664,
       "relativeDisplacement": 0.8973765928261564,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "8d6703fff9b20a9e54aa77f3f64aecd3b852bb709c6ca84389c0d14069dc4344",
+      "derivativeSha256": "b2778854124cb474f41ebd7bbbaca3206cdaa14057392216e55bbca4f920a911"
     },
     {
       "id": 935,
@@ -487,7 +593,9 @@
       "maxWorldDisplacement": 0.13600798717864623,
       "relativeDisplacement": 0.1853531804576616,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 4.748420729291107e-07
+      "loopRelativeDisplacement": 4.748420729291107e-07,
+      "sourceSha256": "44f7d8a05fe66a20e6d6125afe38dd06a07c8a273a117ba7e9a5149bfef308d4",
+      "derivativeSha256": "0648a80a01c3c0c51a2b73a547d51e83c11d043d8dc87694d19a7e35a94b4dfd"
     },
     {
       "id": 936,
@@ -496,7 +604,9 @@
       "maxWorldDisplacement": 0.11682037563666627,
       "relativeDisplacement": 0.07057580223230302,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "5bde32027527c38c9174c37c62544279ede60c27291335fc9b83693a4154a2b3",
+      "derivativeSha256": "5d9d660545b3f3f81705647794b9a4399818405f2630e27027847c60571c7b75"
     },
     {
       "id": 938,
@@ -505,7 +615,9 @@
       "maxWorldDisplacement": 0.0611246601177939,
       "relativeDisplacement": 0.2112812743120521,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "9c30340bf3315c8cc77193266aa7da7b93e22b8f8e780ac3e3e03cf3a663ae9d",
+      "derivativeSha256": "f973c7c58386ad9ce80d2b6eb8d0e50c68cb8de291bb3567c1337996be34c866"
     },
     {
       "id": 940,
@@ -514,7 +626,9 @@
       "maxWorldDisplacement": 0.7328117419250147,
       "relativeDisplacement": 1.061748153658289,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "23cd40336a15394e3b79ec36085e5456dd33a7ae4c68f51002c9fbb92fa21da9",
+      "derivativeSha256": "fae1ed5f2d45d98ba7ce61618ed7202ff832eb37df7b58d011063f601760e810"
     },
     {
       "id": 944,
@@ -523,7 +637,9 @@
       "maxWorldDisplacement": 0.02670978090930082,
       "relativeDisplacement": 0.08869944995865135,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "4fca4cbe4acb011edb88feb7610980e2e38f734b5c70de27a5a04423b16abccd",
+      "derivativeSha256": "e9bb4f112ba54886b6553e87519bbc6d9696d592e8d17fddfc7d8ee151fcf28e"
     },
     {
       "id": 950,
@@ -532,7 +648,9 @@
       "maxWorldDisplacement": 0.081110099338719,
       "relativeDisplacement": 0.03903097900599237,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 2.8682342369877392e-08
+      "loopRelativeDisplacement": 2.8682342369877392e-08,
+      "sourceSha256": "62060e524a7dd087c05e2c00e7212bae9dbadba28e03d15413110bc2a5539b1c",
+      "derivativeSha256": "11476845a5a2cb8de6bbdcc6cbcbf3c7e1c570bd1ecb7e48d98929974c7751b8"
     },
     {
       "id": 951,
@@ -541,7 +659,9 @@
       "maxWorldDisplacement": 0.030273999435326493,
       "relativeDisplacement": 0.10569314715214169,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "26cbe6d4ea8a42b8918adf7f7f7409719cd51a87c2dca1ab6d367e7591df19a6",
+      "derivativeSha256": "5b8e481433d1d683e2154671f426e282e91eb4805f621728a7406ec45365555b"
     },
     {
       "id": 952,
@@ -550,7 +670,9 @@
       "maxWorldDisplacement": 0.11512720214270968,
       "relativeDisplacement": 0.12074658533583175,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "4bc844bb9f7410bb1792f277288677e78179586fe4414a1d804419253f21296e",
+      "derivativeSha256": "876368f80d411966ca289eb840ecfb87e5a566d76d96dd53d0dec18313956e0d"
     },
     {
       "id": 953,
@@ -559,7 +681,9 @@
       "maxWorldDisplacement": 0.026110049343847568,
       "relativeDisplacement": 0.06811590353851418,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "d0f968f885387852f8e0246fe987132f6c27de00a7b575e70dfebedbb78f6587",
+      "derivativeSha256": "0b5d601028f382ebe0c74b916dffd9e6233e6ae39b4c2f35a1ba1ab935634d55"
     },
     {
       "id": 954,
@@ -568,7 +692,9 @@
       "maxWorldDisplacement": 0.3153421335854282,
       "relativeDisplacement": 0.2769785914181576,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "a8d43297dea9b3ba7aec64e1497601c6128898a34417d01fc5208f02dff43bd3",
+      "derivativeSha256": "b6b8fbd164763b8fce2748c32885c8f8f94dcfbd18ca885f9a9cc166fcaaa69d"
     },
     {
       "id": 955,
@@ -577,7 +703,9 @@
       "maxWorldDisplacement": 0.02694110005147458,
       "relativeDisplacement": 0.10247800330589234,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 2.2683360172012021e-07
+      "loopRelativeDisplacement": 2.2683360172012021e-07,
+      "sourceSha256": "ed66b6fbd32b8aecd08c73a1efd811712c02311d468d499de5902a06f6b06f07",
+      "derivativeSha256": "83ee847d2f36b9b646c49b2240768132041684037623acedf8fa4d0057b114eb"
     },
     {
       "id": 956,
@@ -586,7 +714,9 @@
       "maxWorldDisplacement": 0.1341034940648549,
       "relativeDisplacement": 0.06196475268311075,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "607a998f8952a021e9ba68e14da8b0626f8dfe227ff6402529bdbb60c769496e",
+      "derivativeSha256": "5b884cf6ef2de87b609fec236cf4016a6ff195ab1fefb42fc8b8bca62b5bb719"
     },
     {
       "id": 961,
@@ -595,7 +725,9 @@
       "maxWorldDisplacement": 0.07416740707573727,
       "relativeDisplacement": 0.04545844098535628,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 2.0009773497018234e-07
+      "loopRelativeDisplacement": 2.0009773497018234e-07,
+      "sourceSha256": "bcefcc79b09e03822c000e69568d7144783587926cc6292e4b9ba84a0aa8e596",
+      "derivativeSha256": "ba4dbe3b713556f09fadbb553a66482dbf971094629e0b8d7733ea603cdde706"
     },
     {
       "id": 963,
@@ -604,7 +736,9 @@
       "maxWorldDisplacement": 0.26110793760151946,
       "relativeDisplacement": 0.2145932469542894,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "877324a7c16dfb1c75e5fac941c0454bd3da1371a47be296496837f7783bfee4",
+      "derivativeSha256": "2419a0767409c235b45d098bfa867c1979db34b0e1676dbfb5c7c452d1df2964"
     },
     {
       "id": 964,
@@ -613,7 +747,9 @@
       "maxWorldDisplacement": 0.26110793760151946,
       "relativeDisplacement": 0.2145932469542894,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "f06242d032e406aeed1db81269d718f7331be6c87c7a8cfdfcda485d802dafd6",
+      "derivativeSha256": "54996701071c96759eb2a1669ad90ad2dc3e5e70e502ce9f22e724515282de25"
     },
     {
       "id": 968,
@@ -622,7 +758,9 @@
       "maxWorldDisplacement": 0.23301917213047232,
       "relativeDisplacement": 0.1065195352776907,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "8ac9095b4296cc98fe4713a4d32139cf3aaf45247a89176f4fdab6f627e1bd85",
+      "derivativeSha256": "6cb5f7a43f7fb2f7d861b7a3cc7d37096e3ba94db8cbf0581079e72a8181b613"
     },
     {
       "id": 971,
@@ -631,7 +769,9 @@
       "maxWorldDisplacement": 0.12286930826519894,
       "relativeDisplacement": 0.18579227200412393,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 9.838723740370435e-08
+      "loopRelativeDisplacement": 9.838723740370435e-08,
+      "sourceSha256": "d769ca6eab35e1d1fcb28080c79c304fd1dd0090d63442fc1875050fa4e8ca66",
+      "derivativeSha256": "4f5d6e4c13947739e2cb930f959c0a5df35f6fcdf3a08c0c8d496083c633b32f"
     },
     {
       "id": 972,
@@ -640,7 +780,9 @@
       "maxWorldDisplacement": 0.14336728080451225,
       "relativeDisplacement": 0.0614448238825494,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 7.77593674907939e-08
+      "loopRelativeDisplacement": 7.77593674907939e-08,
+      "sourceSha256": "9b59e1bd5f4405f4d6ffa9c0f82b7ea847c589358109f820c59a2a1c44c3e5ec",
+      "derivativeSha256": "ec8b4cd392c7e74bb9454c2a362f1ddb0581ef724ada12722907dad3f9149e73"
     },
     {
       "id": 976,
@@ -649,7 +791,9 @@
       "maxWorldDisplacement": 0.2686422148651271,
       "relativeDisplacement": 0.10764859640760209,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 1.8967638251892875e-07
+      "loopRelativeDisplacement": 1.8967638251892875e-07,
+      "sourceSha256": "cc4d115cefe2982e7fd4e9e5c1059d202b6d01f1a5614fa56fb0bdcb25556bd6",
+      "derivativeSha256": "25aa3ead847837691ff102696105b572ff53149a268712f6c5a7252f0ff876f8"
     },
     {
       "id": 977,
@@ -658,7 +802,9 @@
       "maxWorldDisplacement": 2.749903034463066,
       "relativeDisplacement": 0.2366808113161901,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 2.294250161597913e-08
+      "loopRelativeDisplacement": 2.294250161597913e-08,
+      "sourceSha256": "5c923ebdeb4c2069c6dcf0cfb0325e386c203c2f442e383c0457414d365fc1ad",
+      "derivativeSha256": "1db50981efb605f234c347fd43e135dca69c4f7b6681413289afd34e1e8a59a5"
     },
     {
       "id": 986,
@@ -667,7 +813,9 @@
       "maxWorldDisplacement": 0.1295825507074564,
       "relativeDisplacement": 0.07697061090011025,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "912560a37b80d8145cc9d8b876ec0d9a271e135c5efe7709954132c3603608bb",
+      "derivativeSha256": "8000f16677a3c3004e1ef745138f3c90378a9cf0604250a32354e0a1cdf071c1"
     },
     {
       "id": 988,
@@ -676,7 +824,9 @@
       "maxWorldDisplacement": 0.09234131507994181,
       "relativeDisplacement": 0.03347297033225729,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "8ce25985f369b8ed93d38160574414ec3fa03770d6ce1573148eab39099ab72c",
+      "derivativeSha256": "9b521cc57ddccc661f737c56bc18dbcbfb9b32af88181d59021b7bcd263ac2d0"
     },
     {
       "id": 989,
@@ -685,7 +835,9 @@
       "maxWorldDisplacement": 0.4429118386484724,
       "relativeDisplacement": 0.18857192451972152,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 1.1348928150899523e-07
+      "loopRelativeDisplacement": 1.1348928150899523e-07,
+      "sourceSha256": "72ef9ab4d59e2cbb77e14c03ae2b634f5fd3116aa87cc16f46cb70c9b00564cf",
+      "derivativeSha256": "e59f3562f5eec6e09caf6e87c7e5e84e67f9ba7e306ce7b09aa7207e494ad762"
     },
     {
       "id": 1000,
@@ -694,7 +846,9 @@
       "maxWorldDisplacement": 0.0743677573532966,
       "relativeDisplacement": 0.0532813244503911,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "084006107a31310508fd2623fc5bb09101e7719106a1a5edbda8877f17ad434e",
+      "derivativeSha256": "ad320fdeb2b0f3fcfdc60270948ae7071ce340c7ce7db1ca3ff23c8cc8e86e05"
     },
     {
       "id": 1011,
@@ -703,7 +857,9 @@
       "maxWorldDisplacement": 0.041319593569064075,
       "relativeDisplacement": 0.061110092420705246,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 9.414742508424219e-08
+      "loopRelativeDisplacement": 9.414742508424219e-08,
+      "sourceSha256": "a9ee1f24bb44c42e10f8d29875e12ee0a90286ca12a9fcfd4504a229ac83dd8d",
+      "derivativeSha256": "d2eb14393b3d570fb1ce46f04a7bacbd9e78991347e40ff27173ff8287cb4a5e"
     },
     {
       "id": 1012,
@@ -712,7 +868,9 @@
       "maxWorldDisplacement": 0.03320083212384031,
       "relativeDisplacement": 0.24871035824110724,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 1.2499641309089048e-07
+      "loopRelativeDisplacement": 1.2499641309089048e-07,
+      "sourceSha256": "fb7c3914f3171439dd785735d150226fcbf727c5916f34c0b12950537c6618b9",
+      "derivativeSha256": "71079d9282f963d919f20dae47fe09c9b9f6625c256e88510dc2b0cb7c2ef668"
     },
     {
       "id": 1013,
@@ -721,7 +879,9 @@
       "maxWorldDisplacement": 0.07235186411284382,
       "relativeDisplacement": 0.29397856540870976,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "c8c13b4db3301caf9d7aa33b2050f8e576c02aed4cf2f601a7e8b22c632f47c5",
+      "derivativeSha256": "c0dbc6329661ba085b8548dd20c101b0517959238bd5a59b51e5bf06522fb87b"
     },
     {
       "id": 1024,
@@ -730,7 +890,262 @@
       "maxWorldDisplacement": 0.08445114680407673,
       "relativeDisplacement": 0.11109939436246656,
       "meaningfulMotion": true,
-      "loopRelativeDisplacement": 0.0
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "280025952acf09ed15772579128de8959468fbd1eda0b775044153924916d44e",
+      "derivativeSha256": "9090b4e1e2502dd861afd34dae828a7fe43bf78dbba68079aa26432f9ee125b1"
+    },
+    {
+      "id": 34,
+      "vertices": 3878,
+      "bodyExtent": 2.3768226504325867,
+      "maxWorldDisplacement": 0.4100066505840272,
+      "relativeDisplacement": 0.17250199568293625,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 8.317248341873917e-08,
+      "sourceSha256": "8011a861b1f6a1d7acf683ce5708b65bbfac27c221de4aecb04636670bc2cc40",
+      "derivativeSha256": "8914013c1840fbf344bba7923c9915ea38ef710fa5d662e22d62e1aaf84b8204"
+    },
+    {
+      "id": 36,
+      "vertices": 2829,
+      "bodyExtent": 1.8625344038009644,
+      "maxWorldDisplacement": 0.17146279815751908,
+      "relativeDisplacement": 0.09205886227261446,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "7a18e8172cfe6bda5576c8938275ea1c7fb3b5076a50718fa7c62c2d16e1e575",
+      "derivativeSha256": "940f40d9d6c1c9af4e7968dfb6b3853b2e26f6a9f90a9ecdc0f327196aa14965"
+    },
+    {
+      "id": 37,
+      "vertices": 3729,
+      "bodyExtent": 0.7454590201377869,
+      "maxWorldDisplacement": 0.10711632612823296,
+      "relativeDisplacement": 0.14369177008339656,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 6.41431591895058e-08,
+      "sourceSha256": "86b046d8fabc86c350022d6d09b283914e4279d076d171a3c4dac608c7d54237",
+      "derivativeSha256": "dd8f3e1e80aa8f68b0f6dd60b86eea7c7c4f8d6dceec6b3501c49980b2d630fa"
+    },
+    {
+      "id": 38,
+      "vertices": 4502,
+      "bodyExtent": 1.605907678604126,
+      "maxWorldDisplacement": 0.15160534278745785,
+      "relativeDisplacement": 0.09440476859742959,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.75351812209779e-07,
+      "sourceSha256": "1c3ec0fd94fb6722c5e5f1f7e907c4fdc8dfe47482a22da63c62480757f88f13",
+      "derivativeSha256": "16b05e62ce20cd4a98699031b96de0ae15e1fd480e9ccb0b50e2ff7a018c328f"
+    },
+    {
+      "id": 39,
+      "vertices": 2292,
+      "bodyExtent": 0.598829829134047,
+      "maxWorldDisplacement": 0.03283118180223612,
+      "relativeDisplacement": 0.054825561795598055,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "bad15910b0cb3e817eb0e6c83dcb4c6251fa9d413a6f6780feb755dd92d3694b",
+      "derivativeSha256": "65f1903444d0964a2f319be02f98cb851edd38c338f3ab8bee5b3404181fc2b4"
+    },
+    {
+      "id": 41,
+      "vertices": 2393,
+      "bodyExtent": 0.7658990621566772,
+      "maxWorldDisplacement": 1.1673044293491797,
+      "relativeDisplacement": 1.5240969561474516,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "0ca459a27831eeab34fa41f71be2173747fe73f0ae43ec4b9035cfa06c7431e1",
+      "derivativeSha256": "e160f80dc080a29e72c79dcfe269851659ae1edd12432ce73357d13a4943bac6"
+    },
+    {
+      "id": 43,
+      "vertices": 2334,
+      "bodyExtent": 0.5468059778213501,
+      "maxWorldDisplacement": 0.042415310755077554,
+      "relativeDisplacement": 0.07756921554529034,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "7fa5da95e23c15c0bc842474b96c47f6c3a045c9b0d0229fda5def9bd4ec2278",
+      "derivativeSha256": "c50398affbf7043f5a58878c41e4b6c7cd93ac560498c77f2fb15aa6ee0f6e04"
+    },
+    {
+      "id": 44,
+      "vertices": 3099,
+      "bodyExtent": 0.9539996981620789,
+      "maxWorldDisplacement": 0.10676681839531314,
+      "relativeDisplacement": 0.11191493938730167,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 3.12393415271627e-08,
+      "sourceSha256": "827edf064529fe5af2bc2e886fce5691bf78152efba89d6f4001c9c08a457a22",
+      "derivativeSha256": "de667fe95be290d8fd7a8a104408a88ff21d8e86021e09ac34e38fa056f31ecc"
+    },
+    {
+      "id": 45,
+      "vertices": 2833,
+      "bodyExtent": 2.0168588757514954,
+      "maxWorldDisplacement": 0.13685279605187323,
+      "relativeDisplacement": 0.06785442337946473,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "0cd8a4415c51aa6c33ffa0848623a2f0e33cd1ed9827bcb5b7731e2377bf4d23",
+      "derivativeSha256": "a16e5918a54a4134d4adaffb5f6c2b6fcfb33c987050c37f88b5f3970d0cdd52"
+    },
+    {
+      "id": 47,
+      "vertices": 3238,
+      "bodyExtent": 1.2644003629684448,
+      "maxWorldDisplacement": 0.3246041642977232,
+      "relativeDisplacement": 0.256725775952521,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "50165a00093497cbd01c3b13fdf69a0a97317a681bd8af0dd8d1933868ef89ee",
+      "derivativeSha256": "f3602c99a25e79590cb4350aba36e0d9f36a7bd5bb568375309a848950891b9f"
+    },
+    {
+      "id": 48,
+      "vertices": 2973,
+      "bodyExtent": 1.4507502752821892,
+      "maxWorldDisplacement": 0.35847861272385645,
+      "relativeDisplacement": 0.2470987728429883,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "6b148c5bea76e27fd150b5ac7df7a0e67a8a03d955d81befd431fd421c65c01c",
+      "derivativeSha256": "73446f45c0097bc540c4365c4a0fcd3c0aa2dc469fc2fb011f4694a7d758ce4d"
+    },
+    {
+      "id": 49,
+      "vertices": 3358,
+      "bodyExtent": 2.7222800254821777,
+      "maxWorldDisplacement": 1.4644105810658723,
+      "relativeDisplacement": 0.5379353216267646,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.006720792111031e-07,
+      "sourceSha256": "a2bd1cd19e5043468ab78e7698cc70cc25220d7d6c02b9f29beed78f7a73c2a4",
+      "derivativeSha256": "fcc81d7a43bc92106c7f6b42254d8ad0bb53bb981ed87256554a9e1da78be7a3"
+    },
+    {
+      "id": 50,
+      "vertices": 1249,
+      "bodyExtent": 0.28263118863105774,
+      "maxWorldDisplacement": 0.014478043578455613,
+      "relativeDisplacement": 0.05122592325560722,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 5.2722989511604805e-08,
+      "sourceSha256": "97e190be74fc8e005e99d93df449311dfaf1a8336c3dd867a8e4aba3f5c7de36",
+      "derivativeSha256": "69a59fc810f7b38bada4b2f93b59cdd1c2cea60e36352a1ad41553603446f1e5"
+    },
+    {
+      "id": 51,
+      "vertices": 3318,
+      "bodyExtent": 1.0140751600265503,
+      "maxWorldDisplacement": 0.13735798795762674,
+      "relativeDisplacement": 0.135451486607788,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "c540250e1535872a67d3d75b256eb280a188ff32c00bc9a99294a5d304b073a8",
+      "derivativeSha256": "1f37c9ae3b83ed2e2d7262987587ce5447bb314542b5ff0a8620d29e7772a66f"
+    },
+    {
+      "id": 52,
+      "vertices": 3737,
+      "bodyExtent": 0.4375963897909969,
+      "maxWorldDisplacement": 0.0863864159241387,
+      "relativeDisplacement": 0.19741117143447698,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 6.810458925844745e-08,
+      "sourceSha256": "cf1b052d37e2884b00648c7bec4adfe834028e898985cf988aa4060346377945",
+      "derivativeSha256": "a639240832094fed3604c1f33eb04cd4b8faf9266c13eb9417defe5a85e1629e"
+    },
+    {
+      "id": 53,
+      "vertices": 3241,
+      "bodyExtent": 2.0323193073272705,
+      "maxWorldDisplacement": 0.23170633750596048,
+      "relativeDisplacement": 0.11401079381107711,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "45d20d8cf610e3b27674bd64f1fd4cb9b85a47ddd0f5d5649ac91f806beada34",
+      "derivativeSha256": "edaccb1c8feb25f0ce0d0b161aeb70d1add71490628a2b8abe30aac39d461673"
+    },
+    {
+      "id": 54,
+      "vertices": 2901,
+      "bodyExtent": 1.0230607265257277,
+      "maxWorldDisplacement": 0.04818711262819564,
+      "relativeDisplacement": 0.04710093094066576,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "b581c73e243e99e263f2c112c2fc36b8a0c5b7406ee81a930b4dc7e0daa6cb07",
+      "derivativeSha256": "7d10ea0256665b2bbfa58b1b72940d0c449a45d620e45d76265dec01cdc760cc"
+    },
+    {
+      "id": 55,
+      "vertices": 3429,
+      "bodyExtent": 1.3935678601264954,
+      "maxWorldDisplacement": 0.16861949280207914,
+      "relativeDisplacement": 0.12099840820580736,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "10edd70700bff88a8841b628de1c7064268e9ce86297005f67763161983d94da",
+      "derivativeSha256": "7d0f41997124b65826b9eba79ac0c643310f2a9eed575fe41f207a16de689e41"
+    },
+    {
+      "id": 56,
+      "vertices": 2850,
+      "bodyExtent": 0.7303003049455583,
+      "maxWorldDisplacement": 0.2231520138791647,
+      "relativeDisplacement": 0.30556198918169697,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 8.225178154807136e-08,
+      "sourceSha256": "6a6c2254d9d0550daae357c4599fc531c1513d59bf919b8e73a89ea38571f6df",
+      "derivativeSha256": "ddad7a5ed3034af636c490e57edcef2da95b0f3da5a2a063a182873374752174"
+    },
+    {
+      "id": 57,
+      "vertices": 2546,
+      "bodyExtent": 1.2330448364373296,
+      "maxWorldDisplacement": 0.5107061668997048,
+      "relativeDisplacement": 0.41418296545914923,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "42387de5f20fa5981e07e90c612ae601693cf68654a421d2984944b3c4435091",
+      "derivativeSha256": "19314f17471fa9b4c9866fcb3b15778b69c67077976dda500a010cfc6e888ce5"
+    },
+    {
+      "id": 58,
+      "vertices": 3603,
+      "bodyExtent": 0.9428534209728241,
+      "maxWorldDisplacement": 0.08221217470256559,
+      "relativeDisplacement": 0.08719507494361119,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "75502958944a746a26c77777c42c52c92f605afe5316e91d87ecf6a5a05c4339",
+      "derivativeSha256": "ac5ef8516c93da04b491aa8b4fa88dcf23ab8190de6d8f01bf3cba80801387fa"
+    },
+    {
+      "id": 59,
+      "vertices": 4848,
+      "bodyExtent": 3.3909279108047485,
+      "maxWorldDisplacement": 0.3034625236856418,
+      "relativeDisplacement": 0.08949247275906343,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "28cc1dd6b61f9758e02146b0bfebac5540d930e9c33c1185beba18d03aaae279",
+      "derivativeSha256": "92dd2c0380759e0f43983a5d89b8fba00dc75502d4202a450106b24748b0d61a"
+    },
+    {
+      "id": 61,
+      "vertices": 2720,
+      "bodyExtent": 1.4292774200439453,
+      "maxWorldDisplacement": 0.45918565751581103,
+      "relativeDisplacement": 0.32127118995673537,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 9.555275715675389e-08,
+      "sourceSha256": "5939cc9d407bf0e30333ad932c2d8abe9874174bac40c6758c76680f87e8d81f",
+      "derivativeSha256": "eea3030e0e60e234fd75b992b41ebce37efd08116c1b2ef0343461a7f3f43539"
     }
   ]
 }

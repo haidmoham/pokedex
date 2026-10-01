@@ -83,3 +83,8 @@ Twenty-four additional Gen-1 provenance gaps pass source identity, all budgets a
 The candidate is now **608 species and 117 native idle clips**, including 81 protected-preview additions. All 81 retain exactly unchanged decoded geometry positions and retained motion. Additional evaluated-vertex measurements confirm meaningful motion for every new clip: the smallest sampled displacement exceeds 2% of body extent. Native loop endpoint differences are below 0.001% of body extent in every case. These numerical pose/loop measurements are offline evidence, not a claim of live GPU playback. See `preview-idle-loop-review-2026-10-01.json` and `preview-source-review-batch4-2026-10-01.json`. The suite remains 119 tests.
 
 Of the original 54 absent-catalog species, 45 now have approved preview replacements; nine await effect/appearance handling. The original catalog's Charmander and Charmeleon alternatives were also inspected: neither contains a clip. Its Charizard has only `Chariard_dizzy`, which is not being relabeled as an idle. The native HOME flame pipeline remains preferable for that trio.
+
+
+### Fifth protected-preview batch
+
+The next 24 source files pass decoded budgets and native motion/loop measurements. Twenty-three pass appearance review, increasing the protected candidate to **631 species and 140 native idle clips** (104 preview-only additions). Paras remains held because its eyes lose the reference artwork's pupils; successful geometry decoding alone does not clear that material defect. Cumulative motion records are now bound to both source and derivative SHA256. Production stays at 527; the 119-test suite is unchanged. See `preview-source-review-batch5-2026-10-01.json`.
