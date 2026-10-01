@@ -112,3 +112,15 @@ The pinned [Atlas viewer](https://github.com/rrih/rrih.github.io/blob/ef25889c60
 Current sampled holds: 4, 5, 6, 46, 78, 88, 89, 109, 146, 479, 484, 563, 851, 867, 868, 969, 970, 991, 992, 993, 1022. These are conversion/appearance/budget issues, not claims that no other usable source exists. Reports: `preview-source-review-batch8-2026-10-01.json` through `preview-source-review-batch13-2026-10-01.json`, `preview-zero-additive-review-2026-10-01.json`, and the cumulative `preview-idle-loop-review-2026-10-01.json`.
 
 The full suite passes **121 tests: 115 existing and six added pose/idle checks**. Two new checks cover binary pose preservation during the no-op material repair and refusal of nonzero effects. Production build exclusion is rechecked separately. Rights remain unresolved under the user's protected-preview exception; Atlas's MIT license does not license Pokémon assets. No new model binaries enter this repository. Browser GPU playback and mobile performance remain unverified in the current WebGL-disabled QA environment.
+
+## Complete first-pass gap review (2026-10-01)
+
+All 498 original runtime gaps now have pinned source files inspected. Cohorts 14–21 add **174** further approved preview models, bringing the candidate to **992/1,025 species and 501 native idle clips** (527 normal models plus 465 protected-preview additions). No filenames are counted as admitted without the existing budgets, source/material review, three deformed renders and measured native motion. The remaining 33 are explicit technical/appearance holds; there are no unreviewed original gaps.
+
+New appearance holds are Solosis, Duosion and Reuniclus (inner bodies/faces obscured by the reconstructed outer material), Hatterene (face surface artifacts), and Iron Thorns, Iron Valiant and Iron Crown (missing luminous surfaces compared with official references). These retain official-art fallback. Lampent exceeds the existing texture-count cap; Yveltal and Quaquaval exceed transfer limits; Morelull and Cosmog need custom material treatment. Existing limits have not been raised to pad coverage.
+
+Fletchinder's authentic native loop has measured endpoint drift of 0.122361% of body extent, approximately 1 mm. It is explicitly admitted as a small source-curve seam, rather than claiming mathematically identical endpoints or inventing replacement movement. The retained source animation values are unchanged. All other new measured seams remain below 0.1% of body extent.
+
+The source/derivative comparison again finds exactly zero position and retained-motion differences. No runtime code or new tests were added in this data-only cohort; the previously passing 121-test suite remains the latest full run. Per-new-asset pose/structure/texture checks and the protected build are rerun. GPU/browser-motion and physical-phone limits remain unchanged. Reports: `preview-source-review-batch14-2026-10-01.json` through `preview-source-review-batch21-2026-10-01.json`.
+
+Remaining IDs: 4, 5, 6, 46, 78, 88, 89, 109, 146, 479, 484, 563, 577, 578, 579, 608, 717, 755, 789, 851, 858, 867, 868, 914, 969, 970, 991, 992, 993, 995, 1006, 1022, 1023.
