@@ -16,16 +16,21 @@ export function trimHomeIdle(bytes, { normalizeZeroAdditive = false } = {}) {
       if (material.extras?.homeBlend !== 'additive') continue;
       const pbr = material.pbrMetallicRoughness ?? {}, factor = pbr.baseColorFactor;
       const extensions = material.extensions ?? {};
-      if (!Array.isArray(factor) || factor.length !== 4 || factor.slice(0, 3).some(v => v !== 0)
+      // With ordinary (non-premultiplied) additive blending, source alpha zero
+      // also contributes zero, including textured surfaces. Preserve their data.
+      const alreadyTransparent = material.alphaMode === 'BLEND' && Array.isArray(factor)
+        && factor.length === 4 && factor.every(Number.isFinite) && factor[3] === 0
+        && Object.keys(extensions).every(k => k === 'KHR_materials_specular');
+      if (!alreadyTransparent && (!Array.isArray(factor) || factor.length !== 4 || factor.slice(0, 3).some(v => v !== 0)
         || ![0, 1].includes(factor[3]) || pbr.baseColorTexture || pbr.metallicRoughnessTexture
         || pbr.metallicFactor !== 0 || material.emissiveTexture || material.normalTexture
         || (material.emissiveFactor ?? [0, 0, 0]).some(v => v !== 0)
         || Object.keys(extensions).some(k => k !== 'KHR_materials_specular')
         || extensions.KHR_materials_specular?.specularFactor !== 0
         || extensions.KHR_materials_specular?.specularTexture
-        || extensions.KHR_materials_specular?.specularColorTexture) throw new Error('Nonzero additive effect requires its own renderer');
+        || extensions.KHR_materials_specular?.specularColorTexture)) throw new Error('Nonzero additive effect requires its own renderer');
       material.alphaMode = 'BLEND';
-      material.pbrMetallicRoughness.baseColorFactor = [0, 0, 0, 0];
+      if (!alreadyTransparent) material.pbrMetallicRoughness.baseColorFactor = [0, 0, 0, 0];
       delete material.extras.homeBlend;
       if (!Object.keys(material.extras).length) delete material.extras;
       normalizedMaterials++;

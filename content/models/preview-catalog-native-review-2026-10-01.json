@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-10-01",
+  "previewApproved": 2,
+  "ids": [
+    995,
+    1023
+  ],
+  "rightsStatus": "unresolved; protected preview exception only",
+  "sourceFamily": "Pokemon-3D-api/assets",
+  "sourceRevision": "429de1288cea0d43f5b4f56305d2276e94239d65",
+  "method": "Exact native defaultwait01 clip selected, unused accessor/view data removed without retained value edits. No HOME/catalog rig transplant, interpolation changes, key removal, or appearance repair.",
+  "sources": [
+    {
+      "id": 995,
+      "variant": null,
+      "bytes": 2914604,
+      "blobSha": "1be877f05ee72603d9a60421d2edebbe64b5c0de",
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/429de1288cea0d43f5b4f56305d2276e94239d65/models/opt/regular/995.glb",
+      "sourceRevision": "429de1288cea0d43f5b4f56305d2276e94239d65",
+      "sha256": "0732b261a555c62bbdedcd77374f64e6fad4ce4d6a14ce1ab05ef2c5e61791ef",
+      "preparedBytes": 211068,
+      "budgetError": null,
+      "customNodes": [],
+      "customMaterials": [],
+      "clips": [
+        {
+          "name": "pm1095_00_00_00000_defaultwait01_loop",
+          "duration": 2.683333396911621
+        }
+      ],
+      "visualReviewed": true,
+      "previewDecision": "approved"
+    },
+    {
+      "id": 1023,
+      "variant": null,
+      "bytes": 3163984,
+      "blobSha": "5a285a1785d6dbd44b7061a1828447aa9fb841f6",
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/429de1288cea0d43f5b4f56305d2276e94239d65/models/opt/regular/1023.glb",
+      "sourceRevision": "429de1288cea0d43f5b4f56305d2276e94239d65",
+      "sha256": "fcad43d2cb051dadac3fe489155950530922ceb05384842cf3558a100694b9e9",
+      "preparedBytes": 205044,
+      "budgetError": null,
+      "customNodes": [],
+      "customMaterials": [],
+      "clips": [
+        {
+          "name": "pm1128_00_00_00000_defaultwait01_loop",
+          "duration": 3.3499999046325684
+        }
+      ],
+      "visualReviewed": true,
+      "previewDecision": "approved"
+    }
+  ],
+  "verification": [
+    {
+      "id": 995,
+      "sourceSha256": "0732b261a555c62bbdedcd77374f64e6fad4ce4d6a14ce1ab05ef2c5e61791ef",
+      "sha256": "56606c3de2c39b7c7f63196ff713a001963a20d4d5e4288a94ff34fb69205206",
+      "bytes": 211068,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "animation": "pm1095_00_00_00000_defaultwait01_loop",
+      "channels": 216,
+      "animationBytes": 8884,
+      "geometryBytes": 289708,
+      "animationByteDifferences": 0,
+      "geometryByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true
+    },
+    {
+      "id": 1023,
+      "sourceSha256": "fcad43d2cb051dadac3fe489155950530922ceb05384842cf3558a100694b9e9",
+      "sha256": "e709379766cb118aabbabf6597e5aecccfbb846c7bb68654141a18625eb4a6d5",
+      "bytes": 205044,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "animation": "pm1128_00_00_00000_defaultwait01_loop",
+      "channels": 237,
+      "animationBytes": 8656,
+      "geometryBytes": 600324,
+      "animationByteDifferences": 0,
+      "geometryByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true
+    }
+  ],
+  "motion": [
+    {
+      "id": 995,
+      "vertices": 4817,
+      "bodyExtent": 1.656849890947342,
+      "maxWorldDisplacement": 0.008683213694880721,
+      "relativeDisplacement": 0.005240796853308114,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.5979400548878508e-06,
+      "sourceSha256": "0732b261a555c62bbdedcd77374f64e6fad4ce4d6a14ce1ab05ef2c5e61791ef",
+      "derivativeSha256": "56606c3de2c39b7c7f63196ff713a001963a20d4d5e4288a94ff34fb69205206"
+    },
+    {
+      "id": 1023,
+      "vertices": 9446,
+      "bodyExtent": 2.7159459453541785,
+      "maxWorldDisplacement": 0.008947753047170062,
+      "relativeDisplacement": 0.003294525453452356,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.377872263835342e-05,
+      "sourceSha256": "fcad43d2cb051dadac3fe489155950530922ceb05384842cf3558a100694b9e9",
+      "derivativeSha256": "e709379766cb118aabbabf6597e5aecccfbb846c7bb68654141a18625eb4a6d5"
+    }
+  ],
+  "appearance": "All three fixed-camera rendered poses of each prepared asset inspected. Source appearance retained. Offline evidence only; no live GPU claim."
+}

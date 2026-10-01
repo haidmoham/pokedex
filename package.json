@@ -25,6 +25,7 @@
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
     "concurrently": "^9.2.1",
+    "meshoptimizer": "1.0.1",
     "typescript": "^5.9.2",
     "vite": "^7.1.3"
   }
