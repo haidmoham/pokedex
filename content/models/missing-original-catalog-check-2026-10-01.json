@@ -1,0 +1,386 @@
+{
+  "checkedAt": "2026-10-01T01:58:14.832Z",
+  "catalog": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/Merged.json",
+  "method": "HEAD",
+  "concurrency": 2,
+  "results": [
+    {
+      "id": 850,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/850.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 851,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/851.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 852,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/852.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 853,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/853.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 854,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/854.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 859,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/859.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 860,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/860.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 861,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/861.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 863,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/863.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 864,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/864.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 866,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/866.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 868,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/868.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 873,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/873.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 878,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/878.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 879,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/879.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 882,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/882.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 883,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/883.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 918,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/918.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 919,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/919.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 931,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/931.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 935,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/935.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 936,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/936.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 938,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/938.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 939,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/939.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 940,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/940.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 944,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/944.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 950,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/950.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 951,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/951.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 952,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/952.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 953,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/953.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 954,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/954.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 955,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/955.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 956,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/956.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 961,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/961.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 963,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/963.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 964,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/964.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 968,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/968.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 969,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/969.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 970,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/970.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 971,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/971.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 972,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/972.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 976,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/976.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 977,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/977.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 986,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/986.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 988,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/988.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 989,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/989.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 991,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/991.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 992,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/992.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 993,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/993.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 1011,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/1011.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 1012,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/1012.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 1013,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/1013.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 1022,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/1022.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    },
+    {
+      "id": 1024,
+      "url": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-api/main/models/glb/regular/1024.glb",
+      "status": 404,
+      "error": null,
+      "admitted": false
+    }
+  ]
+}

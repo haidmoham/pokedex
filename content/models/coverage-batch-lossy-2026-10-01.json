@@ -1,0 +1,787 @@
+{
+  "pipeline": {
+    "workers": 1,
+    "timeoutSeconds": 120,
+    "textureSize": 256,
+    "textureQuality": 90,
+    "lossy": "Opt-in weld, 20% vertex target with 2% radius error cap and locked borders; Pancham uses 50% target and 0.5% cap. Meshopt positions 12 bits, normals 8 bits, UV 10 bits. Later profile removes auxiliary PBR maps and joins compatible static meshes; retained exact candidate metrics identify output.",
+    "notice": "Target percentage is not a quality score. Every selected artifact was rendered and inspected before admission."
+  },
+  "underlyingPokemonRights": "Unknown; uploader terms are retained as evidence, not underlying rights clearance.",
+  "results": [
+    {
+      "id": 110,
+      "originalBytes": 1523484,
+      "bytes": 309276,
+      "sha256": "b76bd50e922bfa209d362d739192f9ea83219d19b1bde200a8e4ed4603ec3d7d",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 115236,
+      "afterVertices": 23018,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "ghost028 (https://sketchfab.com/ghost028)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+        "title": "Pokemon Weezing"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "ada0e6844d110c00dd5b8aac2230a1ea10ca5fe76136157e4588fc72f3cc61ef",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/110.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ghost028 (https://sketchfab.com/ghost028)",
+        "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "b76bd50e922bfa209d362d739192f9ea83219d19b1bde200a8e4ed4603ec3d7d",
+        "evidence": "docs/model-review-2026-10-01/weezing-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected two-head pose; recognizable floating body and gas clouds.",
+        "screenshotSha256": "0c2f1c59269379b7f88a8486398e01a855f3afe8bf640fc2c3783dc3ab3c9749"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 462,
+      "originalBytes": 232492,
+      "bytes": 73412,
+      "sha256": "d5a9b4b368b103789e2b7b46dc84243a5839229ebdc345ea34687105528a1521",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 4375,
+      "afterVertices": 1043,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+        "title": "Pokemon S&V Magnezone"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "31f29807bc109c72bb556ee6554ff1e18c34654794d3521a522acf3bab2303d2",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/462.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "d5a9b4b368b103789e2b7b46dc84243a5839229ebdc345ea34687105528a1521",
+        "evidence": "docs/model-review-2026-10-01/magnezone-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Recognizable floating body, connected magnets and three eyes.",
+        "screenshotSha256": "7958ad8e2704d7db0be60911bf60dc26a53dd13f048f0641af048220bb2aec04"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 478,
+      "originalBytes": 89136,
+      "bytes": 82608,
+      "sha256": "6fdbcb3723dd61d7b47fb8d8f7f37566b7f9b0c4cc49f2270f47c9cebdea74bf",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 2942,
+      "afterVertices": 817,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+        "title": "Pokemon PokeDex 3DS Pro Froslass"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "66353086f5aff42db99e35fbc351c96e0298ca38d9bf2ead117a4f16bdc51efb",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/478.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "6fdbcb3723dd61d7b47fb8d8f7f37566b7f9b0c4cc49f2270f47c9cebdea74bf",
+        "evidence": "docs/model-review-2026-10-01/froslass-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected floating body with hanging sleeves; recognizable face.",
+        "screenshotSha256": "384d432276832a44f4e5615bdc633eb823b199c386a82b64893da63848a27c14"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 674,
+      "originalBytes": 366688,
+      "bytes": 481116,
+      "sha256": "7611d87ce35cbfeff76752499ceb533965fbde2eda23ac0d11f23a5eca44935f",
+      "textureSize": 256,
+      "geometryProfile": "review-gentle",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 98266,
+      "afterVertices": 63022,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+        "title": "pancham"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "4acb915b3be1363f5215b5b6b635a7bfc7c5d9c0bbca01035ddeee67d3db0eb9",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/674.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+        "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "7611d87ce35cbfeff76752499ceb533965fbde2eda23ac0d11f23a5eca44935f",
+        "evidence": "docs/model-review-2026-10-01/pancham-gentle.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Relaxed arms and connected body; gentler profile retains eye detail lost by first candidate.",
+        "screenshotSha256": "6bc9d8c7314a10745a9dabb5727a04fb7f8bde85bb78a605c092ff16d35a7ce3"
+      },
+      "lossySettings": {
+        "ratio": 0.5,
+        "error": 0.005,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": false,
+        "compatibleStaticJoinAttempted": false
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 763,
+      "originalBytes": 343712,
+      "bytes": 152376,
+      "sha256": "93f57fb70f068335eaad852d63d56297efc927c5fc99bee04176a58c97ec2ba5",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 74383,
+      "afterVertices": 16142,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+        "title": "Tsareena"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "92226ba682991da3b3d4f1915f20511dea2c4b79342021b6616124d3a0e37c04",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/763.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+        "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "93f57fb70f068335eaad852d63d56297efc927c5fc99bee04176a58c97ec2ba5",
+        "evidence": "docs/model-review-2026-10-01/tsareena-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected body in a deliberate raised-leg pose; face and leaf silhouette retained.",
+        "screenshotSha256": "212db46d439ee00125917cbba6bec2df2aff0aea80c1b936bd5cc3b065c9f2d7"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": false,
+        "compatibleStaticJoinAttempted": false
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 795,
+      "originalBytes": 519944,
+      "bytes": 207836,
+      "sha256": "d7780c61541e8bcadb3fcd0515af6bbc7680a066ff9b7be25c645755369b3ebf",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 180,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 86530,
+      "afterVertices": 18186,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Abe95 (https://sketchfab.com/Abe95)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+        "title": "Pheromosa - Pokémon"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "02359e05b27ce6ecd8b11d21253464bf92e24fbeee0b4de00da1e78bf9b83ed9",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/795.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Abe95 (https://sketchfab.com/Abe95)",
+        "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "d7780c61541e8bcadb3fcd0515af6bbc7680a066ff9b7be25c645755369b3ebf",
+        "evidence": "docs/model-review-2026-10-01/pheromosa-front.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected upright body, relaxed limbs; 180-degree root adjustment faces the viewer.",
+        "screenshotSha256": "9b02466a1b7d11896592c0c71a16f6bf9a7e9a8c24ac07f6c9da9a022b0fcdba"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": false,
+        "compatibleStaticJoinAttempted": false
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 889,
+      "originalBytes": 445472,
+      "bytes": 310192,
+      "sha256": "78d12701fbe10c70ef78c94bca61236f3e3016204ba83ff0c028e4145125ed6e",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 52192,
+      "afterVertices": 13154,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "User 37564 (https://sketchfab.com/rhl89ryo)",
+        "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+        "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+        "title": "Zamazenta (Armor) [Pokemon Shield]"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "345a85742be87b21bc4bb0f91abc730083bb13f58ff097a41b1f2371913bdb9e",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/889.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+        "attribution": "User 37564 (https://sketchfab.com/rhl89ryo)",
+        "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": true,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "78d12701fbe10c70ef78c94bca61236f3e3016204ba83ff0c028e4145125ed6e",
+        "evidence": "docs/model-review-2026-10-01/zamazenta-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected four-legged shield-form stance; recognizable shield face.",
+        "screenshotSha256": "b22609a5c5a47f84fe61e522ef23b14f12fabc3cdada11fe203249c45ce0a952"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": false,
+        "compatibleStaticJoinAttempted": false
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 907,
+      "originalBytes": 656560,
+      "bytes": 262644,
+      "sha256": "f503f06ad994ef8d32f506fb919e7ca36c14cca6b30972f0ebef5f759dbe81a9",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 123845,
+      "afterVertices": 26503,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "kishi (https://sketchfab.com/ash.takafumi)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+        "title": "Floragato"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "500419d17134c12b6741d63c9ee0e5212dff6c539b740a993b4f26ef64302d99",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/907.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+        "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "f503f06ad994ef8d32f506fb919e7ca36c14cca6b30972f0ebef5f759dbe81a9",
+        "evidence": "docs/model-review-2026-10-01/floragato-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected body in deliberate asymmetric fighting stance; face and held flower retained.",
+        "screenshotSha256": "22b4268ac2874ab6cf6a4010856bcaa8dae058c870062bffa65ecee1b69177e8"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": false,
+        "compatibleStaticJoinAttempted": false
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 913,
+      "originalBytes": 429868,
+      "bytes": 173216,
+      "sha256": "10d362f137a04cf96d9161396c8ee310824984fa1774f4716cb2c5dbacdaffbb",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 82006,
+      "afterVertices": 17063,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "kishi (https://sketchfab.com/ash.takafumi)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+        "title": "Quaxwell"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "59993b31c5e8c26eb9c2fc6767cb20f920d8f06e63d5ff6a73c599a0d35a7506",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/913.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+        "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "10d362f137a04cf96d9161396c8ee310824984fa1774f4716cb2c5dbacdaffbb",
+        "evidence": "docs/model-review-2026-10-01/quaxwell-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected body in a deliberate dance pose; one raised leg and asymmetric arms.",
+        "screenshotSha256": "66caee926a5028c93fb916573bc0235b38aa0c0396f8cb52fa241d901b116b6e"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": false,
+        "compatibleStaticJoinAttempted": false
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 985,
+      "originalBytes": 226804,
+      "bytes": 81288,
+      "sha256": "7219028909b0e78ac72732a0c114cd1b0fbfaac37b5f50eb9a9f143d4d555528",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 4072,
+      "afterVertices": 1308,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+        "title": "Pokemon Scarlet and Violet Scream tail"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "b7fb93e41e517dc15cdd6554b9c51c442415ba44c918e4ad9cd215ef8946ffca",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/985.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "7219028909b0e78ac72732a0c114cd1b0fbfaac37b5f50eb9a9f143d4d555528",
+        "evidence": "docs/model-review-2026-10-01/scream-tail-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected spherical body, relaxed short arms, recognizable hair and face.",
+        "screenshotSha256": "af70024fd709aaaf65259955139e7f4f14ef0b0b39bdba5690ef86251d971d57"
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 796,
+      "originalBytes": 1053060,
+      "bytes": 226472,
+      "sha256": "27d8dc45b00821164782454604425c65896212199416879ad10f429279986f52",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 11784,
+      "afterVertices": 29328,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "korbenhall (https://sketchfab.com/korbenhall)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/xurkitree-56e21cf3dcb049f29311e7428860c9da",
+        "title": "Xurkitree"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "a094ff373b69b743e00ff3aab86d509244e8b2eef3a9900db1adf13aedb64ed8",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/796.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "korbenhall (https://sketchfab.com/korbenhall)",
+        "source": "https://sketchfab.com/3d-models/xurkitree-56e21cf3dcb049f29311e7428860c9da",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "rejected",
+        "sha256": "27d8dc45b00821164782454604425c65896212199416879ad10f429279986f52",
+        "evidence": "docs/model-review-2026-10-01/xurkitree-lossy.png",
+        "reason": "Limbs are collapsed into a straight vertical stack; original source render has the same failure."
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 801,
+      "originalBytes": 232068,
+      "bytes": 429112,
+      "sha256": "9a3c1cfed5cd2e0e89b7fc01280e0f74642e1612645679136943480bc3cefab6",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 6251,
+      "afterVertices": 4262,
+      "animation": null,
+      "textureDecoded": false,
+      "machineFailure": "decoded model complexity exceeds budget",
+      "sourceExtras": {
+        "author": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-scarlet-violet-magearna-0c3abbd8f4794749bcf2c622c702621b",
+        "title": "Nintendo Switch Pokemon Scarlet Violet magearna"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "2d629b740fa7b28c10ba578c3991b50e19aa2476afe3e060e5164fc0da627225",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/801.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-scarlet-violet-magearna-0c3abbd8f4794749bcf2c622c702621b",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "rejected",
+        "sha256": "9a3c1cfed5cd2e0e89b7fc01280e0f74642e1612645679136943480bc3cefab6",
+        "evidence": "docs/model-review-2026-10-01/magearna-lossy.png",
+        "reason": "Outstretched T-pose arms and disconnected-looking prop; no usable idle; also remains structurally over budget."
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 805,
+      "originalBytes": 118532,
+      "bytes": 21688,
+      "sha256": "2f16ded7e9e67a79735b31de1f1d439011ed770782c95409047dd91954de9dfd",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 1248,
+      "afterVertices": 1248,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "Galanodel (https://sketchfab.com/Galanodel)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/stakataka-bedrock-model-17e8af141e0247578844b81ff8031660",
+        "title": "Stakataka (Bedrock Model)"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "afd5b97c79f1d6894240bca300feadde366354571bc3f310f070406f3542069c",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/805.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Galanodel (https://sketchfab.com/Galanodel)",
+        "source": "https://sketchfab.com/3d-models/stakataka-bedrock-model-17e8af141e0247578844b81ff8031660",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "rejected",
+        "sha256": "2f16ded7e9e67a79735b31de1f1d439011ed770782c95409047dd91954de9dfd",
+        "evidence": "docs/model-review-2026-10-01/stakataka-lossy.png",
+        "reason": "Cuboid biped depiction does not provide a recognizable usable species view; reverse angle and original render checked."
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    },
+    {
+      "id": 867,
+      "originalBytes": 398720,
+      "bytes": 46676,
+      "sha256": "459d98a3f37aadd56e650cf8e0cf0d57fbdf6cac3b402ccee1968815e8234c3e",
+      "textureSize": 256,
+      "geometryProfile": "review-lossy",
+      "facingRotationDegrees": 0,
+      "geometryPreserved": false,
+      "encodingPreserved": true,
+      "beforeVertices": 3400,
+      "afterVertices": 5256,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "korbenhall (https://sketchfab.com/korbenhall)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/runerigus-491c7715893440f29afa86cb62549e67",
+        "title": "Runerigus"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "originalSha256": "7257011637ab1d40148fa9657ce1734c6c8517a18542749c17d768a29127d0b1",
+      "sourceURL": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/867.glb",
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "korbenhall (https://sketchfab.com/korbenhall)",
+        "source": "https://sketchfab.com/3d-models/runerigus-491c7715893440f29afa86cb62549e67",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "rejected",
+        "sha256": "459d98a3f37aadd56e650cf8e0cf0d57fbdf6cac3b402ccee1968815e8234c3e",
+        "evidence": "docs/model-review-2026-10-01/runerigus-lossy.png",
+        "reason": "Disassembled horizontal rest-pose slabs and straight outstretched arms; original render has the same failure."
+      },
+      "lossySettings": {
+        "ratio": 0.2,
+        "error": 0.02,
+        "lockBorder": true,
+        "positionBits": 12,
+        "normalBits": 8,
+        "uvBits": 10,
+        "auxiliaryPBRMapsRemoved": true,
+        "compatibleStaticJoinAttempted": true
+      },
+      "textureQuality": 90
+    }
+  ]
+}

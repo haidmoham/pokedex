@@ -2,14 +2,16 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { NodeIO, Logger, PropertyType } from '@gltf-transform/core';
 import { ALL_EXTENSIONS, EXTMeshoptCompression } from '@gltf-transform/extensions';
-import { dedup, prune, textureCompress } from '@gltf-transform/functions';
-import { MeshoptEncoder, MeshoptDecoder } from 'meshoptimizer';
+import { dedup, prune, textureCompress, weld, simplify, meshopt, flatten, join } from '@gltf-transform/functions';
+import { MeshoptEncoder, MeshoptDecoder, MeshoptSimplifier } from 'meshoptimizer';
 import draco from 'draco3dgltf';
 import sharp from 'sharp';
 import ts from 'typescript';
 import { selectedIdle } from '../model-candidate-policy.js';
 import { geometryValuesHash } from './geometry.mjs';
-const [input, output, metrics, sizeArgument = '512'] = process.argv.slice(2);
+const [input, output, metrics, sizeArgument = '512', geometryProfile = 'exact', rotationArgument = '0'] = process.argv.slice(2);
+if (!['exact', 'review-lossy', 'review-gentle'].includes(geometryProfile)) throw new Error('unknown geometry profile');
+if (!['0', '180'].includes(rotationArgument)) throw new Error('unknown facing adjustment');
 const textureSize = Number(sizeArgument);
 if (![256, 512].includes(textureSize)) throw new Error('texture size must be 256 or 512');
 sharp.concurrency(1);
@@ -23,7 +25,7 @@ const original = await readFile(input);
 const sourceJSON = JSON.parse(original.subarray(20, 20 + original.readUInt32LE(12)).toString('utf8'));
 if ((sourceJSON.buffers ?? []).some(buffer => buffer.uri) || (sourceJSON.images ?? []).some(image => image.uri) ||
   (sourceJSON.buffers ?? []).reduce((total, buffer) => total + buffer.byteLength, 0) > 128 * 1024 * 1024) throw new Error('source decode exceeds processing bounds');
-await Promise.all([MeshoptEncoder.ready, MeshoptDecoder.ready]);
+await Promise.all([MeshoptEncoder.ready, MeshoptDecoder.ready, MeshoptSimplifier.ready]);
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({
   'draco3d.decoder': await draco.createDecoderModule(), 'meshopt.encoder': MeshoptEncoder, 'meshopt.decoder': MeshoptDecoder,
 });
@@ -43,6 +45,7 @@ const geometry = document => document.getRoot().listMeshes().flatMap(mesh => mes
   morphTargets: primitive.listTargets().map(target => Object.fromEntries(target.listSemantics().sort().map(semantic => [semantic, accessorIdentity(target.getAttribute(semantic))]))),
 })));
 const before = geometry(doc);
+const beforeMeshes = doc.getRoot().listMeshes().length;
 const animation = selectedIdle(doc.getRoot().listAnimations().map(clip => clip.getName()));
 for (const clip of doc.getRoot().listAnimations()) {
   if (clip.getName() === animation) continue;
@@ -51,9 +54,27 @@ for (const clip of doc.getRoot().listAnimations()) {
   clip.dispose();
 }
 for (const extension of doc.getRoot().listExtensionsUsed()) if (['KHR_draco_mesh_compression', 'EXT_meshopt_compression'].includes(extension.extensionName)) extension.dispose();
+if (geometryProfile !== 'exact') {
+  // Keep color/opacity/emissive identity; the review profile drops auxiliary PBR maps.
+  for (const material of doc.getRoot().listMaterials()) {
+    material.setNormalTexture(null).setOcclusionTexture(null).setMetallicRoughnessTexture(null);
+  }
+  await doc.transform(dedup(), flatten(), join(), prune({ keepExtras: true, keepSolidTextures: true }));
+}
 await doc.transform(dedup({ propertyTypes: [PropertyType.TEXTURE] }), prune({ propertyTypes: [PropertyType.ACCESSOR, PropertyType.BUFFER, PropertyType.ANIMATION, PropertyType.TEXTURE], keepExtras: true, keepAttributes: true, keepLeaves: true, keepSolidTextures: true }),
   textureCompress({ encoder: sharp, targetFormat: 'webp', resize: [textureSize, textureSize], quality: 90, limitInputPixels: 16 * 1024 * 1024 }));
-// Compression only: no simplify, weld, reorder or position quantization.
+// The opt-in lossy profile is a visual-review candidate, never automatic admission.
+if (geometryProfile !== 'exact') await doc.transform(
+  weld(), simplify({ simplifier: MeshoptSimplifier, ratio: geometryProfile === 'review-gentle' ? 0.5 : 0.2, error: geometryProfile === 'review-gentle' ? 0.005 : 0.02, lockBorder: true }),
+  meshopt({ encoder: MeshoptEncoder, level: 'medium', quantizePosition: 12, quantizeNormal: 8, quantizeTexcoord: 10 }),
+);
+if (rotationArgument === '180') for (const scene of doc.getRoot().listScenes()) {
+  const children = scene.listChildren();
+  const facing = doc.createNode('reviewed-front-facing').setRotation([0, 1, 0, 0]);
+  for (const child of children) { scene.removeChild(child); facing.addChild(child); }
+  scene.addChild(facing);
+}
+const processedGeometry = geometry(doc);
 doc.createExtension(EXTMeshoptCompression).setRequired(true).setEncoderOptions({ method: EXTMeshoptCompression.EncoderMethod.QUANTIZE });
 const encoded = Buffer.from(await io.writeBinary(doc));
 const oldJSONLength = encoded.readUInt32LE(12);
@@ -67,7 +88,8 @@ bytes.writeUInt32LE(bytes.length, 8);
 bytes.writeUInt32LE(padded.length, 12);
 const roundtrip = await io.readBinary(bytes);
 const geometryPreserved = JSON.stringify(before) === JSON.stringify(geometry(roundtrip));
-if (!geometryPreserved) {
+const encodingPreserved = JSON.stringify(processedGeometry) === JSON.stringify(geometry(roundtrip));
+if (!encodingPreserved) {
   await writeFile(`${metrics}.geometry-debug.json`, JSON.stringify({ before, after: geometry(roundtrip) }, null, 2));
   throw new Error('geometry changed in roundtrip');
 }
@@ -83,5 +105,9 @@ try {
 } catch (error) { machineFailure = error.message; }
 await writeFile(output, bytes);
 await writeFile(metrics, JSON.stringify({ originalBytes: original.length, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'),
-  textureSize, geometryPreserved, animation, textureDecoded: !machineFailure, machineFailure, sourceExtras: sourceJSON.asset.extras ?? {},
+  textureSize, geometryProfile, facingRotationDegrees: Number(rotationArgument), geometryPreserved, encodingPreserved,
+  lossySettings: geometryProfile === 'exact' ? null : { ratio: geometryProfile === 'review-gentle' ? 0.5 : 0.2, error: geometryProfile === 'review-gentle' ? 0.005 : 0.02, lockBorder: true, positionBits:12, normalBits:8, uvBits:10, auxiliaryPBRMapsRemoved:true, compatibleStaticJoinAttempted:true },
+  beforeMeshes, afterMeshes: doc.getRoot().listMeshes().length,
+  beforeVertices: before.reduce((n,p) => n+p.vertices,0), afterVertices: processedGeometry.reduce((n,p) => n+p.vertices,0),
+  animation, textureDecoded: !machineFailure, machineFailure, sourceExtras: sourceJSON.asset.extras ?? {},
   visualReviewed: false, admitted: false }, null, 2));

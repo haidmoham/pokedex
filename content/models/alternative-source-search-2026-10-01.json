@@ -1,0 +1,2048 @@
+{
+  "method": "One isolated headless browser; visible public search DOM, no authentication or asset scraping. Search hits are leads, not terms verification or admission.",
+  "results": [
+    {
+      "id": 850,
+      "name": "Sizzlipede",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Sizzlipede",
+      "noResults": true,
+      "hits": [],
+      "status": "search-no-results",
+      "admitted": false
+    },
+    {
+      "id": 851,
+      "name": "Centiskorch",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Centiskorch",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Centiskorch Gmax Cobblemon",
+          "url": "https://sketchfab.com/3d-models/centiskorch-gmax-cobblemon-f655d47cc4e742c0b1af1a6ea3796990",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Minecraft Centiskorch Build Schematic",
+          "url": "https://sketchfab.com/3d-models/minecraft-centiskorch-build-schematic-2251787598e04c95aa47bf81bccfb4a1",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "284_RadouxJF_SculptrisV2",
+          "url": "https://sketchfab.com/3d-models/284-radouxjf-sculptrisv2-1452384c0bb1476f87e3deaeb5bf7de7",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 852,
+      "name": "Clobbopus",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Clobbopus",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Clobbopus and Grapploct",
+          "url": "https://sketchfab.com/3d-models/clobbopus-and-grapploct-d06553c05d11450fa6015359c9a5aa49",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 853,
+      "name": "Grapploct",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Grapploct",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Clobbopus and Grapploct",
+          "url": "https://sketchfab.com/3d-models/clobbopus-and-grapploct-d06553c05d11450fa6015359c9a5aa49",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Minecraft Grapploct Build Schematic",
+          "url": "https://sketchfab.com/3d-models/minecraft-grapploct-build-schematic-4af1bd5a358342abbf8960aa2a750074",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 854,
+      "name": "Sinistea",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Sinistea",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Sinistea Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/sinistea-line-cobblemon-dea69039acac4a2f8add18b537a2c65f",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "#0854 SINISTEA LIFESIZE",
+          "url": "https://sketchfab.com/3d-models/0854-sinistea-lifesize-1366d3cad50c473fab55032b82cf7514",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Mocemedes: The Sinister Alchemage",
+          "url": "https://sketchfab.com/3d-models/mocemedes-the-sinister-alchemage-7cb4e6db2dd6482f8cb9b2ae55acd35d",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Broken Teacup",
+          "url": "https://sketchfab.com/3d-models/broken-teacup-76866510ddc2400794fbb40e29c589f3",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Satyr",
+          "url": "https://sketchfab.com/3d-models/satyr-714f9922c724461282a0086a32f00a16",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Christmas Skins [BlockéMon]",
+          "url": "https://sketchfab.com/3d-models/christmas-skins-blockemon-a1992c76dc7643dd8e28f437b4990064",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Sci-Fi Power Hub",
+          "url": "https://sketchfab.com/3d-models/sci-fi-power-hub-d49e07c874cf4d219c204946971d1b50",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Turret Top Cannon",
+          "url": "https://sketchfab.com/3d-models/turret-top-cannon-9f1f8027244f4247ae774fd2dcaf240c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Sinister Prime set for Doom",
+          "url": "https://sketchfab.com/3d-models/sinister-prime-set-for-doom-678a98a2de334912b1c801fa952fe1d7",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "pokemon-Sinistea",
+          "url": "https://sketchfab.com/3d-models/pokemon-sinistea-9974185124f74dfabe61618de0b2381b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "It - Pennywise Meets Georgie",
+          "url": "https://sketchfab.com/3d-models/it-pennywise-meets-georgie-de41f3b7a90643f3b7c51d6b28a32607",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Grimmblar",
+          "url": "https://sketchfab.com/3d-models/grimmblar-803b7071c8164ccdb4e09cae44b8bd3b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Low Poly Mystical Halloween Set",
+          "url": "https://sketchfab.com/3d-models/low-poly-mystical-halloween-set-7379c3cd14b9461f8cbc1361864b2b27",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Sinister Hands",
+          "url": "https://sketchfab.com/3d-models/sinister-hands-2696f1f7570c497ebddd981b22d13ee8",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Armor Griffin",
+          "url": "https://sketchfab.com/3d-models/armor-griffin-94d5a5eb4a7e43409bf024802c60283b",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Extractor_medical",
+          "url": "https://sketchfab.com/3d-models/extractor-medical-a8fe36617ec94e9183913ba234c0b462",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Harbinger of Ruin (Sinister)",
+          "url": "https://sketchfab.com/3d-models/harbinger-of-ruin-sinister-65185d4d6bbe4980918fdfcc999ddfc2",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Sinister Skull Mask",
+          "url": "https://sketchfab.com/3d-models/sinister-skull-mask-c7670dca6581418689c175f18a913a55",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "sinister mark",
+          "url": "https://sketchfab.com/3d-models/sinister-mark-a3592318e66d4d94890698f8eb8cbaea",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Sinister Column",
+          "url": "https://sketchfab.com/3d-models/sinister-column-c49d7bc59b1742068827a9f7abab63a7",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Mammuthus meridionalis “vestinus” - Animation",
+          "url": "https://sketchfab.com/3d-models/mammuthus-meridionalis-vestinus-animation-ef79e309515141d3ab5f4de9f6f72fb6",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Slayer - Doom Inspired Character",
+          "url": "https://sketchfab.com/3d-models/slayer-doom-inspired-character-15349cc8cdc242afa20ba72117625671",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "sinister",
+          "url": "https://sketchfab.com/3d-models/sinister-00a35466eac847f79221867b617b1f64",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Santanico Pandemonium",
+          "url": "https://sketchfab.com/3d-models/santanico-pandemonium-579c09647c5d49238e50384bb3be54c2",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 859,
+      "name": "Impidimp",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Impidimp",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Impidimp Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/impidimp-line-cobblemon-565b691d61324d6cbdbf10c58a065c32",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 860,
+      "name": "Morgrem",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Morgrem",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Impidimp Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/impidimp-line-cobblemon-565b691d61324d6cbdbf10c58a065c32",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Corpse Flower Dog",
+          "url": "https://sketchfab.com/3d-models/corpse-flower-dog-70c537f09a57483aad9856fc6c960304",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Mordrem",
+          "url": "https://sketchfab.com/3d-models/mordrem-ec37fece6d0143abb0794fec701f9ffe",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Is This Thing Poisonous",
+          "url": "https://sketchfab.com/3d-models/is-this-thing-poisonous-a701dfafaf2740da98b42e6873ece799",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Character do jogo \"What Happened To My Home?\"",
+          "url": "https://sketchfab.com/3d-models/character-do-jogo-what-happened-to-my-home-f8bb00d290e0499aa46d60d07823a352",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Neutrófilo - Células do Sangue [2/7]",
+          "url": "https://sketchfab.com/3d-models/neutrofilo-celulas-do-sangue-27-f61c0d0bda7f462b8d3d429bab6a63af",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 861,
+      "name": "Grimmsnarl",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Grimmsnarl",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Grimmsnarl",
+          "url": "https://sketchfab.com/3d-models/grimmsnarl-d5d6b2d681f84106bf9692255db1af16",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Grimmsnarl Christmas Regular (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/grimmsnarl-christmas-regular-cobblemon-98770cf63c2542feb3662117c033e19f",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Grimmsnarl Minecraft",
+          "url": "https://sketchfab.com/3d-models/grimmsnarl-minecraft-ff444309bc6142bbba72744bffa791f9",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Impidimp Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/impidimp-line-cobblemon-565b691d61324d6cbdbf10c58a065c32",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Grimmsnarl gigantamax cobblemon",
+          "url": "https://sketchfab.com/3d-models/grimmsnarl-gigantamax-cobblemon-5573cef64a3041a195f98dcc66e437df",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Grimmsnarl Christmas Shiny (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/grimmsnarl-christmas-shiny-cobblemon-bf70558592e64561ad019938079a7e0c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Gigantamax Grimmsnarl (Pokémon)",
+          "url": "https://sketchfab.com/3d-models/gigantamax-grimmsnarl-pokemon-db5a44d0e1774f96a52f40ac874921d9",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Grimmsnarl Grinch",
+          "url": "https://sketchfab.com/3d-models/grimmsnarl-grinch-34e7546a68654f97af0ee6072d1f252f",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 863,
+      "name": "Perrserker",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Perrserker",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Valheim - Axe concept",
+          "url": "https://sketchfab.com/3d-models/valheim-axe-concept-80a86055818b43e29ef36e9dc61121e3",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 864,
+      "name": "Cursola",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Cursola",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Cursola",
+          "url": "https://sketchfab.com/3d-models/cursola-b3b064b2fedd4446b423bb79da7cab24",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Minecraft Cursola Build Schematic",
+          "url": "https://sketchfab.com/3d-models/minecraft-cursola-build-schematic-0361d4a276284f83abc8ec2059414fae",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Instamuseum for @cursolab",
+          "url": "https://sketchfab.com/3d-models/instamuseum-for-cursolab-3c457c730c85483b9b9df90ec97c4f00",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 866,
+      "name": "Mr. Rime",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Mr.%20Rime",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Mr. Rime",
+          "url": "https://sketchfab.com/3d-models/mr-rime-2770d6f64e9e4819a2efda6164424de8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Mr. Rime",
+          "url": "https://sketchfab.com/3d-models/mr-rime-8dbc59e85eec4839a707bebe61b135f8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Jr.Mime Pokemon Polygon Model",
+          "url": "https://sketchfab.com/3d-models/jrmime-pokemon-polygon-model-42c888cf19e54be99a81452e8f38d05e",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 868,
+      "name": "Milcery",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Milcery",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Amaltheus Amaltheus margaritatus",
+          "url": "https://sketchfab.com/3d-models/amaltheus-amaltheus-margaritatus-42edea256b914e2298503714b288414e",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 873,
+      "name": "Frosmoth",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Frosmoth",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Frosmoth",
+          "url": "https://sketchfab.com/3d-models/frosmoth-3584a3de5c2649d2ae373b3fe3a57d03",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Frosmoth",
+          "url": "https://sketchfab.com/3d-models/frosmoth-3b87743903834bb29173b9af5bef9514",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "snom + frosmoth",
+          "url": "https://sketchfab.com/3d-models/snom-frosmoth-ee3d00354a2c43d288b379773619f66c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Snom and frosmoth",
+          "url": "https://sketchfab.com/3d-models/snom-and-frosmoth-a5eed959abb64ade81eaac3a1d97b33a",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Snom Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/snom-line-cobblemon-83e47a4853894f45b9446555df3472be",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 878,
+      "name": "Cufant",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Cufant",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Cufant",
+          "url": "https://sketchfab.com/3d-models/cufant-9782975e111b4a589a899e1fe7b8a211",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Cufant",
+          "url": "https://sketchfab.com/3d-models/cufant-0f424a2cc9b74fa6b0153297aa5000b1",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 879,
+      "name": "Copperajah",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Copperajah",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Copperajah",
+          "url": "https://sketchfab.com/3d-models/copperajah-55548056e97b465dade1c92d8448cf6a",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Magma Copperajah (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/magma-copperajah-cobblemon-a0a9cf360df3444fb103dbc96c8cbbda",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Copperajah",
+          "url": "https://sketchfab.com/3d-models/copperajah-bf8c2a6e0a9c489990a504261053b47b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "New Copperajah",
+          "url": "https://sketchfab.com/3d-models/new-copperajah-b5b36a2de49a47f6bb51acd303da7fe3",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 882,
+      "name": "Dracovish",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Dracovish",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Galar Fossils (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/galar-fossils-cobblemon-dad0280720c04ef99c3c22d10a147863",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 883,
+      "name": "Arctovish",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Arctovish",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Galar Fossils (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/galar-fossils-cobblemon-dad0280720c04ef99c3c22d10a147863",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 918,
+      "name": "Spidops",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Spidops",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Spidops - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/spidops-minecraft-cobblemon-style-03599d88bb1349408da86012ad87a503",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Tarountula",
+          "url": "https://sketchfab.com/3d-models/tarountula-51350d7395e943c68b01fd593fefd09c",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Spido",
+          "url": "https://sketchfab.com/3d-models/spido-d08d2bf2662c40749470121003c3a24b",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Marker (Spidol Snowman)",
+          "url": "https://sketchfab.com/3d-models/marker-spidol-snowman-a6e7ae719b814bc59963beb86564231f",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Jeniaxtrab",
+          "url": "https://sketchfab.com/3d-models/jeniaxtrab-12672817d037437c8543ad93c421dac5",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Spidol",
+          "url": "https://sketchfab.com/3d-models/spidol-ab9227d41dce40b5bfaf76fc7490f6fb",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Spidor Low Poly",
+          "url": "https://sketchfab.com/3d-models/spidor-low-poly-d30ea0247dc44bfc93b87c5dd1a0dfdf",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "3d Spidol",
+          "url": "https://sketchfab.com/3d-models/3d-spidol-439ba20f52ca4a34b8d2d6b0d536a683",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Spidor",
+          "url": "https://sketchfab.com/3d-models/spidor-26ec251b60b04018991686f84a2d0cb3",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Spido-bot",
+          "url": "https://sketchfab.com/3d-models/spido-bot-832083da4adc4817b3d1e966dbbaf685",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 919,
+      "name": "Nymble",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Nymble",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Nymble - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/nymble-minecraft-cobblemon-style-12a02c0f4c6f412080a774b02188b66e",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 931,
+      "name": "Squawkabilly",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Squawkabilly",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Squawkabilly - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/squawkabilly-minecraft-cobblemon-style-ba5685eba2c843b5bb01d1c1fc31a584",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 935,
+      "name": "Charcadet",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Charcadet",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Charcadet Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/charcadet-line-cobblemon-c56c350797ed4781a329605dbb914612",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Charcadet Sonic (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/charcadet-sonic-cobblemon-b0e6b96cd85a4d0eba96401b30f4c955",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Fantasy Themed Pokemon (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/fantasy-themed-pokemon-cobblemon-71cb5062971b415da500cbbf2e0bdf9a",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 936,
+      "name": "Armarouge",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Armarouge",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Pokemon Violet and Scarlet - Armarouge - グレンアルマ",
+          "url": "https://sketchfab.com/3d-models/pokemon-violet-and-scarlet-armarouge-e71dfab2e96448c68234639138b10e5f",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Charcadet Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/charcadet-line-cobblemon-c56c350797ed4781a329605dbb914612",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Iron Legionary",
+          "url": "https://sketchfab.com/3d-models/iron-legionary-45ed059aa0c84068b615f6dfc2c9e605",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Magma Armarouge (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/magma-armarouge-cobblemon-c0be57315f8246bab63be12f3add544a",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Armarouge Walking",
+          "url": "https://sketchfab.com/3d-models/armarouge-walking-82cc0f7695a945b5884da6c5791ce237",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "armarouge",
+          "url": "https://sketchfab.com/3d-models/armarouge-6ca8bcd267ec4c62bab541e1e3922ca9",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Armarouge Solforge (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/armarouge-solforge-cobblemon-41de088de3c64e98accbf767a7f4204a",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Armarouge Sonic (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/armarouge-sonic-cobblemon-09577228c6814a85ade8db4cffd7717b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Fantasy Themed Pokemon (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/fantasy-themed-pokemon-cobblemon-71cb5062971b415da500cbbf2e0bdf9a",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 938,
+      "name": "Tadbulb",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Tadbulb",
+      "noResults": true,
+      "hits": [],
+      "status": "search-no-results",
+      "admitted": false
+    },
+    {
+      "id": 939,
+      "name": "Bellibolt",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Bellibolt",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Bellibolt",
+          "url": "https://sketchfab.com/3d-models/bellibolt-f9f88049c9eb4ee3882989d4b758b5f3",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Bellibolt",
+          "url": "https://sketchfab.com/3d-models/bellibolt-7373db84a17e4356826d9aea649dba26",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Bellibolt",
+          "url": "https://sketchfab.com/3d-models/bellibolt-f7fb08e775d34f7c8e7bc8d2b37590ec",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Desk Belibolt",
+          "url": "https://sketchfab.com/3d-models/desk-belibolt-a89e97217fa14350ac20b3320d711943",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 940,
+      "name": "Wattrel",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Wattrel",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "wattrel + kilowattrel",
+          "url": "https://sketchfab.com/3d-models/wattrel-kilowattrel-eb6c608dff5a484d9b36a04860848d9b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Wattrelos - écluse du Sartel 2021/03",
+          "url": "https://sketchfab.com/3d-models/wattrelos-ecluse-du-sartel-202103-e30ec936297e40ce86a0c0b1e4001c27",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Wattrelos - cimetière métropolitain 2023",
+          "url": "https://sketchfab.com/3d-models/wattrelos-cimetiere-metropolitain-2023-3ea4a13be2884727b90225a83e8dc0ab",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Wattrelos - Station d'épuration 2025",
+          "url": "https://sketchfab.com/3d-models/wattrelos-station-depuration-2025-fded0578c56048509aba7e717aa453f2",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 944,
+      "name": "Shroodle",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Shroodle",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Shroodle",
+          "url": "https://sketchfab.com/3d-models/shroodle-71713d6d840b44a79f2a14d65181a2d7",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 950,
+      "name": "Klawf",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Klawf",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Klawf - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/klawf-minecraft-cobblemon-style-56ce682755a144cdaeaf3ae90c3440f0",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 951,
+      "name": "Capsakid",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Capsakid",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Capsakid & Scovillain (unofficial cobblemon)",
+          "url": "https://sketchfab.com/3d-models/capsakid-scovillain-unofficial-cobblemon-9e531e9d64da4ac18d718bdb12a38fbe",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Capsakid and Scovillan (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/capsakid-and-scovillan-cobblemon-30462838472145f88e8eaa6f6de8782a",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 952,
+      "name": "Scovillain",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Scovillain",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Capsakid & Scovillain (unofficial cobblemon)",
+          "url": "https://sketchfab.com/3d-models/capsakid-scovillain-unofficial-cobblemon-9e531e9d64da4ac18d718bdb12a38fbe",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Mega Scovillain – Cobblemon Style (Unofficial)",
+          "url": "https://sketchfab.com/3d-models/mega-scovillain-cobblemon-style-unofficial-3373e34ee37345edbb3d40500831779e",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Goat Simulator 3 Scovillain",
+          "url": "https://sketchfab.com/3d-models/goat-simulator-3-scovillain-b22796f78fef4ecc89cbf1c7eab70185",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Capsakid and Scovillan (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/capsakid-and-scovillan-cobblemon-30462838472145f88e8eaa6f6de8782a",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 953,
+      "name": "Rellor",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Rellor",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Rellor Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/rellor-line-cobblemon-c5acd63b83e5412e82307225090815ac",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Rellor - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/rellor-minecraft-cobblemon-style-a8263eac3cea4b3899c6fc8ae30ddfff",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "rellor",
+          "url": "https://sketchfab.com/3d-models/rellor-cee72b1de5c942c39c0c0e1125a5f037",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 954,
+      "name": "Rabsca",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Rabsca",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Rabsca - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/rabsca-minecraft-cobblemon-style-2b74424acfbb4734904cb82296e860e6",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Rellor Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/rellor-line-cobblemon-c5acd63b83e5412e82307225090815ac",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 955,
+      "name": "Flittle",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Flittle",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Flittle Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/flittle-line-cobblemon-f4593a633f204af7b011c45f52942c02",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Flittle - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/flittle-minecraft-cobblemon-style-e127fb4785cd46e2b251e3c998006a00",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "bil abumalnce",
+          "url": "https://sketchfab.com/3d-models/bil-abumalnce-8a59a59d08e6453fa698b5716e66d38c",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Scan 2023-04-24T18:07:35.473Z",
+          "url": "https://sketchfab.com/3d-models/scan-2023-04-24t180735473z-1e7c9d36c8574bbf994cadc36ce38d33",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Scan 2023-04-24T17:54:33.499Z",
+          "url": "https://sketchfab.com/3d-models/scan-2023-04-24t175433499z-450105e1418c4de5892004b5cb5e495c",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Scan 2023-04-24T08:02:43.218Z",
+          "url": "https://sketchfab.com/3d-models/scan-2023-04-24t080243218z-29a2df6da4cb47758e79d827b616dd44",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 956,
+      "name": "Espathra",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Espathra",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Espathra",
+          "url": "https://sketchfab.com/3d-models/espathra-ae0d7a4427654f6799a8fc2dcd557276",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Espathra - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/espathra-minecraft-cobblemon-style-9d88fbe0e87b43f1a90f7bc6fac1d47c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Flittle Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/flittle-line-cobblemon-f4593a633f204af7b011c45f52942c02",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Pokepamps Espathara Diaper",
+          "url": "https://sketchfab.com/3d-models/pokepamps-espathara-diaper-6206b17b194b4d03bd2c112f23188629",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Link Papu",
+          "url": "https://sketchfab.com/3d-models/link-papu-3c86194666c74819993421ce51d12f03",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 961,
+      "name": "Wugtrio",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Wugtrio",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Wugtrio - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/wugtrio-minecraft-cobblemon-style-e41e8b5ee7a34e5095da2bd76dd1ed01",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Wiglett Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/wiglett-line-cobblemon-d08d6cc63e2a428fa7837ac5600aab23",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 963,
+      "name": "Finizen",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Finizen",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Finizen Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/finizen-line-cobblemon-04ac757c6d2c4b46b493e15b2335c12d",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Finizen - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/finizen-minecraft-cobblemon-style-723e35e71d4149e1bdbc8973ba0d0f49",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Challenger 2",
+          "url": "https://sketchfab.com/3d-models/challenger-2-112c3598e0e844babb1241343fe715c9",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "VBL",
+          "url": "https://sketchfab.com/3d-models/vbl-88f7c70aca5c40e997554d490ac23e02",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Begleitpanzer 57",
+          "url": "https://sketchfab.com/3d-models/begleitpanzer-57-2b91458e78f74d7f8b15bd5708ce6332",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "T-80",
+          "url": "https://sketchfab.com/3d-models/t-80-bf5bde5d99f74d988db5b17952de1712",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "M551 Sheridan",
+          "url": "https://sketchfab.com/3d-models/m551-sheridan-b705efe19fba4a8f8b992280745674e6",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "PzH 2000",
+          "url": "https://sketchfab.com/3d-models/pzh-2000-1f113b20ad474e3eaa5b726ab4602411",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "T-64B",
+          "url": "https://sketchfab.com/3d-models/t-64b-60bdfffd96274a1785c0fe2687a92954",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 964,
+      "name": "Palafin",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Palafin",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Finizen Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/finizen-line-cobblemon-04ac757c6d2c4b46b493e15b2335c12d",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Paladin Alyonushka",
+          "url": "https://sketchfab.com/3d-models/paladin-alyonushka-0003d3d8e7a34205a1c7e7d91019a994",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Path of the Paladin",
+          "url": "https://sketchfab.com/3d-models/path-of-the-paladin-fe4d5c6c5f1a4daf81116b27375fdaec",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Paladin's book",
+          "url": "https://sketchfab.com/3d-models/paladins-book-09544c73158c4947815ff6d4c57c6e2e",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Paladin - Mechanised warrior",
+          "url": "https://sketchfab.com/3d-models/paladin-mechanised-warrior-3d6bbf2fb5b44366a508a6000a3199fd",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "The Paladin",
+          "url": "https://sketchfab.com/3d-models/the-paladin-509aee800c0b456f9970a608326a5886",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Protector of the Light",
+          "url": "https://sketchfab.com/3d-models/protector-of-the-light-e84d20885dfb471d987e3aba816de4d5",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "robot+animation",
+          "url": "https://sketchfab.com/3d-models/robotanimation-7497bc6a91ea49c9a6b55be91ec825e5",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Judgement",
+          "url": "https://sketchfab.com/3d-models/judgement-f3eb3183601746d2b150737b956d5d07",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Stylized Paladin Character",
+          "url": "https://sketchfab.com/3d-models/stylized-paladin-character-5c1df32513494ff199eb5bfa30e3ebae",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Paladin Sketchfab",
+          "url": "https://sketchfab.com/3d-models/paladin-sketchfab-a3edf38c825d4c33846de9047266153d",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Paladin",
+          "url": "https://sketchfab.com/3d-models/paladin-97171f0019c54768935944146fa69b2a",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Undead Paladin",
+          "url": "https://sketchfab.com/3d-models/undead-paladin-cbf1f47abe4944d6b4864069dfb91987",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Vengeful_arbiter",
+          "url": "https://sketchfab.com/3d-models/vengeful-arbiter-bb8e9a6acd4b483ea4c2781ba17f2777",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Paladin's Curse - The Beast - polycount contest",
+          "url": "https://sketchfab.com/3d-models/paladins-curse-the-beast-polycount-contest-a1015842da184ce79269e457bf087ee6",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Light of the Titans Fan-Art",
+          "url": "https://sketchfab.com/3d-models/light-of-the-titans-fan-art-04127dadeb404448a0f02a614a8a073b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Judgement Crown",
+          "url": "https://sketchfab.com/3d-models/judgement-crown-623ac3821bb54c689c71e3147d84c0ab",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Hero Series - Expeditions",
+          "url": "https://sketchfab.com/3d-models/hero-series-expeditions-b817ef0d4dc640fc9eb24db5e48059b7",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Silver Hand Paladin Chest",
+          "url": "https://sketchfab.com/3d-models/silver-hand-paladin-chest-12993557c8b249ef91da9e52be698f6a",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Templar",
+          "url": "https://sketchfab.com/3d-models/templar-8d0f706768cf4555999efb579a6e9ae8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Jabberwock and the Vorpal Sword",
+          "url": "https://sketchfab.com/3d-models/jabberwock-and-the-vorpal-sword-b7a482136abb41758f9de264f9e33c1b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Stylized Paladin Memorial",
+          "url": "https://sketchfab.com/3d-models/stylized-paladin-memorial-6dcba6d6479240b69b4d0f54b73e2581",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Dark Paladin Bust",
+          "url": "https://sketchfab.com/3d-models/dark-paladin-bust-be95d5fc51d9491ca355acf6012b6a14",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Artix",
+          "url": "https://sketchfab.com/3d-models/artix-dbca92541ce74cfb8cf544b01132bcd0",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 968,
+      "name": "Orthworm",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Orthworm",
+      "noResults": true,
+      "hits": [],
+      "status": "search-no-results",
+      "admitted": false
+    },
+    {
+      "id": 969,
+      "name": "Glimmet",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Glimmet",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Glimmet Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/glimmet-line-cobblemon-d0641d8d00d34b408426db1b55f5d97d",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "She-Ra's Glimmer",
+          "url": "https://sketchfab.com/3d-models/she-ras-glimmer-0e06a0c9e78c44128dee29823a2371df",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Starlight Glimmer",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-d9e42a873d1b4e3e9dc94d40a3495838",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Starlight Glimmer EqG (My Version)",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-eqg-my-version-f73e6e0cfabb4a8f8d8596caa95c5004",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Starlight Glimmer (MLP EG)",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-mlp-eg-18bc6c0913184ae49654ff09423b9f7d",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Starlight Glimmer",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-28751ffca58c440fba0e180f8febd225",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Amethyst Scarab (Minecraft Mob)",
+          "url": "https://sketchfab.com/3d-models/amethyst-scarab-minecraft-mob-f149e2c3f0044528ade506051f70aafc",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Glimmer V2",
+          "url": "https://sketchfab.com/3d-models/glimmer-v2-2f8957e2846d49c09ee2788d5f9459e1",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "starlight-glimmer-mlp-eg",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-mlp-eg-5200daa109a94470afb40e87c84ee8c9",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Starlight Glimmer (MLP)",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-mlp-69148ef1849a48eab87aa16ecd323120",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "glimmer's staff",
+          "url": "https://sketchfab.com/3d-models/glimmers-staff-707180b3d1ba4255ad9c8d7388e94d65",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Starlight Glimmer",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-a267d4e074014ff59d6b2d9873001cf7",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Diancie",
+          "url": "https://sketchfab.com/3d-models/diancie-c995fbf8c15f4e7ebd3391604dae7a20",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Swordtember 2022 Day 4-A: Crystal",
+          "url": "https://sketchfab.com/3d-models/swordtember-2022-day-4-a-crystal-b940fcae1a7a497bb4b3ef1ca699cd49",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Raiinbow glimmer",
+          "url": "https://sketchfab.com/3d-models/raiinbow-glimmer-f9d7150137f8404c970b98849c85ebfa",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Eclipse - Tales from the Loop",
+          "url": "https://sketchfab.com/3d-models/eclipse-tales-from-the-loop-34c3aa1a46a046b2b6812ec567ff30b8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Christmas - Santa's Glimmering Sleigh",
+          "url": "https://sketchfab.com/3d-models/christmas-santas-glimmering-sleigh-85e671cd59cb4bb6b445a50b1321d56f",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "_blender_release__starlight_glimmer_by_mythicspe",
+          "url": "https://sketchfab.com/3d-models/blender-release--starlight-glimmer-by-mythicspe-6cfa723e112045818dc04442f3902f1e",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Starlight Glimmer",
+          "url": "https://sketchfab.com/3d-models/starlight-glimmer-086d0a8a85494648a60bb21de7d4fb4c",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Stylized Creation Final – Glimmer",
+          "url": "https://sketchfab.com/3d-models/stylized-creation-final-glimmer-93e542e58e864417a28735b2c4a54fd8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "get lost in this all-day midnight",
+          "url": "https://sketchfab.com/3d-models/get-lost-in-this-all-day-midnight-77fcb6ddd07a4921ad09a83c13f8c670",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Potion Of Healing (Dungeons and Dragons)",
+          "url": "https://sketchfab.com/3d-models/potion-of-healing-dungeons-and-dragons-1befbfc977984c319d40cb2cdc8a5566",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Ripto Voxel",
+          "url": "https://sketchfab.com/3d-models/ripto-voxel-b5b7e0e05714409c98230b10232209bc",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Crystal Cavern Mines",
+          "url": "https://sketchfab.com/3d-models/crystal-cavern-mines-cc34d1339af741b1a08a8ff936a85a52",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 970,
+      "name": "Glimmora",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Glimmora",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Mega Glimmora (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/mega-glimmora-cobblemon-0495566c7421459a85690fe1c5490532",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Glimmet Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/glimmet-line-cobblemon-d0641d8d00d34b408426db1b55f5d97d",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Glimmora Mega Cobblemon",
+          "url": "https://sketchfab.com/3d-models/glimmora-mega-cobblemon-58ff9dfe5c454435bb2528dd1721d536",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 971,
+      "name": "Greavard",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Greavard",
+      "noResults": true,
+      "hits": [],
+      "status": "search-no-results",
+      "admitted": false
+    },
+    {
+      "id": 972,
+      "name": "Houndstone",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Houndstone",
+      "noResults": true,
+      "hits": [],
+      "status": "search-no-results",
+      "admitted": false
+    },
+    {
+      "id": 976,
+      "name": "Veluza",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Veluza",
+      "noResults": true,
+      "hits": [],
+      "status": "search-no-results",
+      "admitted": false
+    },
+    {
+      "id": 977,
+      "name": "Dondozo",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Dondozo",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Dondozo - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/dondozo-minecraft-cobblemon-style-4e270b75ebca4f88b53d4bf2d11ff706",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Toy - Toy_Ele",
+          "url": "https://sketchfab.com/3d-models/toy-toy-ele-89c796b5b6a84d0ca89528be69fcc2ef",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Baby Toy - Elefolo",
+          "url": "https://sketchfab.com/3d-models/baby-toy-elefolo-faad5eab0dd94baf99a0065aaae100cf",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "POLTRONA DONDOLO ARTI AGAVE CASA",
+          "url": "https://sketchfab.com/3d-models/poltrona-dondolo-arti-agave-casa-89bde7eedaf8453784a5f397d897aa69",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Dondolo - Rocking chair (Octopus) - C. Bolimond",
+          "url": "https://sketchfab.com/3d-models/dondolo-rocking-chair-octopus-c-bolimond-6927cedd179f47a3bab2e3cab125eed7",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Cavallino a Dondolo",
+          "url": "https://sketchfab.com/3d-models/cavallino-a-dondolo-f1cbcde4a4f042bcb171673287fb361e",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Cavallo A Dondolo Sofia Cardinale Con Animazione",
+          "url": "https://sketchfab.com/3d-models/cavallo-a-dondolo-sofia-cardinale-con-animazione-7921d5a378564d2f842feccd469c4964",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "cavallo a dondolo",
+          "url": "https://sketchfab.com/3d-models/cavallo-a-dondolo-2a204b91d4db4c4c82df44292bf684f1",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Dondolo",
+          "url": "https://sketchfab.com/3d-models/dondolo-7bc3c0bfb5664c3791da08325a0679da",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "DONDOLO",
+          "url": "https://sketchfab.com/3d-models/dondolo-a8265c9877ac493b860c9598fbadbcc4",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "cavallo a dondolo sofia cardinale con animazione",
+          "url": "https://sketchfab.com/3d-models/cavallo-a-dondolo-sofia-cardinale-con-animazione-7be0b9442ced4a169d50f57437439cc8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Dondolo-gioco",
+          "url": "https://sketchfab.com/3d-models/dondolo-gioco-d08cc3a3004c4843b4d42a37e56f8a29",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Schiaccianoci con cavallo a dondolo",
+          "url": "https://sketchfab.com/3d-models/schiaccianoci-con-cavallo-a-dondolo-a9f0d55808f64c35b4b32ec011f41c3a",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 986,
+      "name": "Brute Bonnet",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Brute%20Bonnet",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "brute bonnet",
+          "url": "https://sketchfab.com/3d-models/brute-bonnet-d02eeb3f8eb54a5898ab3583e7c85406",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Brute bonnet - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/brute-bonnet-minecraft-cobblemon-style-88c5865089364ef2a9e717dad05c9cc7",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Brute Bonnet Mask",
+          "url": "https://sketchfab.com/3d-models/brute-bonnet-mask-760ee78d0adb45c69f044b6b7c9dc51e",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 988,
+      "name": "Slither Wing",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Slither%20Wing",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Slitherwing Titan Wing",
+          "url": "https://sketchfab.com/3d-models/slitherwing-titan-wing-2e64ae35962c4669bc741ef8328f640e",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Mythical Creature",
+          "url": "https://sketchfab.com/3d-models/mythical-creature-e57252f0fb3b48fcb6ae9548b00444e6",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Pouli-Mirkiladis",
+          "url": "https://sketchfab.com/3d-models/pouli-mirkiladis-b050ef2603d94150b49e70afae6d1fe6",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Solwhisper the Radiant 4-Legged Hummingbird",
+          "url": "https://sketchfab.com/3d-models/solwhisper-the-radiant-4-legged-hummingbird-7d65f7a03d074889b83241b28ff9fa9e",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Sweet Baby Mark's Baby Ray's",
+          "url": "https://sketchfab.com/3d-models/sweet-baby-marks-baby-rays-76e7a8d096a24a3aa20424ada27d54bb",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 989,
+      "name": "Sandy Shocks",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Sandy%20Shocks",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Sandy shocks - Minecraft Cobblemon Style",
+          "url": "https://sketchfab.com/3d-models/sandy-shocks-minecraft-cobblemon-style-42c4d576cce740d2a8fdc81ca6f38b39",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 991,
+      "name": "Iron Bundle",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Iron%20Bundle",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Arc Reactor bundle",
+          "url": "https://sketchfab.com/3d-models/arc-reactor-bundle-ff38bee0ad2f4d63b9f77a59369eef4d",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron bundle(cobblemon style)",
+          "url": "https://sketchfab.com/3d-models/iron-bundlecobblemon-style-a917baca034b4bd394e6312f5cfae9fe",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Free Bundle Axe N°7 (Updated)",
+          "url": "https://sketchfab.com/3d-models/free-bundle-axe-n7-updated-c77222df8fba42da87fc9ee214cf4521",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Bundle of Iron Arrow Points, Mleiha, Sharjah",
+          "url": "https://sketchfab.com/3d-models/bundle-of-iron-arrow-points-mleiha-sharjah-d7a2f4827ba343c3872e832b31b05056",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Construction Jobs - Bundle Edition",
+          "url": "https://sketchfab.com/3d-models/construction-jobs-bundle-edition-dbae60ee751b4735a3f09e0dece76192",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Bundle Sword N°47 (Updated)",
+          "url": "https://sketchfab.com/3d-models/bundle-sword-n47-updated-fa4be58746654b45b4d049954942ea7f",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Cursed Bone Charm Fetish Bundle Prop",
+          "url": "https://sketchfab.com/3d-models/cursed-bone-charm-fetish-bundle-prop-4cb929bd38d7442e986998c3ef8839e2",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Throwing Javelins Bundle - Hemp Bound Five",
+          "url": "https://sketchfab.com/3d-models/throwing-javelins-bundle-hemp-bound-five-7caa8a272a6c4c399cb570c67464b941",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Bundle of Iron Arrow Points, Mleiha, Sharjah",
+          "url": "https://sketchfab.com/3d-models/bundle-of-iron-arrow-points-mleiha-sharjah-0f25605ca49f4ee0b57d10eb7be30bdf",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Bundle of Iron Arrow Points, Mleiha, Sharjah",
+          "url": "https://sketchfab.com/3d-models/bundle-of-iron-arrow-points-mleiha-sharjah-46a9a0a100c74ab8828d5dfd852f853a",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Bundle of Iron Arrow Points, Mleiha, Sharjah",
+          "url": "https://sketchfab.com/3d-models/bundle-of-iron-arrow-points-mleiha-sharjah-220de386356349dba5155fb20043aedc",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Barony Skeleton Warrior",
+          "url": "https://sketchfab.com/3d-models/barony-skeleton-warrior-65241bc31b5344b09ed0f31e4396f9db",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Halloween Teddy Bears in Costumes Pack",
+          "url": "https://sketchfab.com/3d-models/halloween-teddy-bears-in-costumes-pack-de4c39c1c5ba4e7190de57f9e901d630",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Cutlery",
+          "url": "https://sketchfab.com/3d-models/cutlery-fdbf4f6ae1e7460ab4f61f3b599b29a7",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Minecart Railway Low-Poly Underground Mine Props",
+          "url": "https://sketchfab.com/3d-models/minecart-railway-low-poly-underground-mine-props-b34df05c2c854e53a300e13f042281db",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Buckle Set",
+          "url": "https://sketchfab.com/3d-models/buckle-set-6ad0cda81d1c4742a22b5030ead20c8b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Medieval Lamp",
+          "url": "https://sketchfab.com/3d-models/medieval-lamp-fa805131e6474f24abeb7158edf0558c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Rusty Bandit Weapon Kit - Single Texture",
+          "url": "https://sketchfab.com/3d-models/rusty-bandit-weapon-kit-single-texture-a0c1d59396094833b59f9bf12a16064b",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Kitchen Pans and Pots",
+          "url": "https://sketchfab.com/3d-models/kitchen-pans-and-pots-8f6ee3830fad4765a471cf9fa558946c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Nuts, Screws and Bolts",
+          "url": "https://sketchfab.com/3d-models/nuts-screws-and-bolts-c06c6abe1db7418d9c226b84530c217c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Ninja Star - 4 Point",
+          "url": "https://sketchfab.com/3d-models/ninja-star-4-point-3c79645efe1a4e6c9ad0362b2571f282",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "PSX Cauldrons",
+          "url": "https://sketchfab.com/3d-models/psx-cauldrons-24831616f56546209d1b92d636e9e71e",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Basic sword",
+          "url": "https://sketchfab.com/3d-models/basic-sword-82e58bc02ddf4fbc987464682c9d6c09",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "\"Perica\" - Angled Cutting Tool - Guatemala",
+          "url": "https://sketchfab.com/3d-models/perica-angled-cutting-tool-guatemala-79c3de71367c43abbe9935f415aadc71",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 992,
+      "name": "Iron Hands",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Iron%20Hands",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Iron Hand - Prosthetic Arm",
+          "url": "https://sketchfab.com/3d-models/iron-hand-prosthetic-arm-47a48a615ab949c3a87e1f65258f198b",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Hand 3D Print",
+          "url": "https://sketchfab.com/3d-models/iron-hand-3d-print-0cf1831252704c8a901e5c89904858c9",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Iron Man Rig",
+          "url": "https://sketchfab.com/3d-models/iron-man-rig-a921a8cac309424e939aee1d31fa28c0",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Man Mark 85",
+          "url": "https://sketchfab.com/3d-models/iron-man-mark-85-8da781aa74024366844b36444c650d69",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Man Mk1",
+          "url": "https://sketchfab.com/3d-models/iron-man-mk1-a2cfc83539a64074883cfeb502f5f511",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Door",
+          "url": "https://sketchfab.com/3d-models/iron-door-e8d18cc2db694241b16a083e6632c8ba",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "The IRON GIANT! - Tilt Brush + HTC Vive",
+          "url": "https://sketchfab.com/3d-models/the-iron-giant-tilt-brush-htc-vive-371a3e2528ab4e07b81b6b4c7aaff574",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Cauldron (game ready asset)",
+          "url": "https://sketchfab.com/3d-models/iron-cauldron-game-ready-asset-bf6ccff9968f49bfbe483b5d2fa1cedd",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Man Mark 85",
+          "url": "https://sketchfab.com/3d-models/iron-man-mark-85-3d93663855244a378de31657264d6c93",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Hand-Painted Stylized Iron Horde Sword",
+          "url": "https://sketchfab.com/3d-models/hand-painted-stylized-iron-horde-sword-d2ee30fcc7da4f999465963948012413",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Wow Legion - Corrupted Dwarf Forge Final Entry",
+          "url": "https://sketchfab.com/3d-models/wow-legion-corrupted-dwarf-forge-final-entry-9903dd0c4bfa44b884caba37a4e930c2",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Iron Man Suit",
+          "url": "https://sketchfab.com/3d-models/iron-man-suit-a699e968904b458ca642a3ca7975ff75",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Medieval Hand Forged Iron Brooch",
+          "url": "https://sketchfab.com/3d-models/medieval-hand-forged-iron-brooch-9a117f9464e4492196dc880575189c27",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "[ Minecraft ] Two handed Iron Sword",
+          "url": "https://sketchfab.com/3d-models/minecraft-two-handed-iron-sword-3311e2540f4e4835a0afa503285b017d",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Hills Dwarf Warrior",
+          "url": "https://sketchfab.com/3d-models/iron-hills-dwarf-warrior-907279b222e34918a9fce24999a7a33c",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron Foot and Hand Shackles",
+          "url": "https://sketchfab.com/3d-models/iron-foot-and-hand-shackles-3ee5033db563469aae09fcdc083ec8a0",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Iron Lamp",
+          "url": "https://sketchfab.com/3d-models/iron-lamp-1b7407f7f56c409bb6723cb5de8b1a2f",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Iron Claymore, Iron Weapons Set(TES:Skyblivion)",
+          "url": "https://sketchfab.com/3d-models/iron-claymore-iron-weapons-settesskyblivion-08a27fc8f65a4ec29c2341e787220a4b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Iron Man Hand",
+          "url": "https://sketchfab.com/3d-models/iron-man-hand-374026b107e54966a1ba07c1161b7a37",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Primarch Ferrus Manus",
+          "url": "https://sketchfab.com/3d-models/primarch-ferrus-manus-5091293e4c974f46bd2f6a0e1a31c0fc",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Rune Cannon - Demonic Cannon Ball (Iron Black)",
+          "url": "https://sketchfab.com/3d-models/rune-cannon-demonic-cannon-ball-iron-black-9b749d0a16234c24b3aacf63ef6ca6f6",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Figure embodying \"Iron\" - Mars ♂",
+          "url": "https://sketchfab.com/3d-models/figure-embodying-iron-mars-0d6e9169b49647dfb60482cdc2eba49a",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Hand Cannon",
+          "url": "https://sketchfab.com/3d-models/hand-cannon-857f0542a8344d26b5e7a41ea88fd6fb",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Iron shrine",
+          "url": "https://sketchfab.com/3d-models/iron-shrine-a16a678e4d2e4897a85075b667d45e7c",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 993,
+      "name": "Iron Jugulis",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Iron%20Jugulis",
+      "noResults": true,
+      "hits": [],
+      "status": "search-no-results",
+      "admitted": false
+    },
+    {
+      "id": 1011,
+      "name": "Dipplin",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Dipplin",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Dipplin (Cobblemon Addon)",
+          "url": "https://sketchfab.com/3d-models/dipplin-cobblemon-addon-ed3380c4c6e14129b1d9abf704519aa5",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Dipplin",
+          "url": "https://sketchfab.com/3d-models/dipplin-e6a319a4ebe2430a93a986754a55405b",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Aerospace Engineering Career 3D Models",
+          "url": "https://sketchfab.com/3d-models/aerospace-engineering-career-3d-models-14abe81cefd64392a217aa727e09109e",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Aerospace Engineer S.P.R.U.E. Set",
+          "url": "https://sketchfab.com/3d-models/aerospace-engineer-sprue-set-4fd1a982677440c1b8fed46b523b8573",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "ScamanderRoad",
+          "url": "https://sketchfab.com/3d-models/scamanderroad-490fd42cd8534e8da0729f27602d5920",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Waffle Cutter",
+          "url": "https://sketchfab.com/3d-models/waffle-cutter-40e6fe09caa844209ad45f8d898c5921",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 1012,
+      "name": "Poltchageist",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Poltchageist",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Poltchageist Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/poltchageist-line-cobblemon-df66ffc34d014058b2277a3748012502",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Poltchageist",
+          "url": "https://sketchfab.com/3d-models/poltchageist-9ad50864edfc432fa12e7692ea22853d",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Fantasy Themed Pokemon (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/fantasy-themed-pokemon-cobblemon-71cb5062971b415da500cbbf2e0bdf9a",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 1013,
+      "name": "Sinistcha",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Sinistcha",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Poltchageist Line (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/poltchageist-line-cobblemon-df66ffc34d014058b2277a3748012502",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Fantasy Themed Pokemon (Cobblemon)",
+          "url": "https://sketchfab.com/3d-models/fantasy-themed-pokemon-cobblemon-71cb5062971b415da500cbbf2e0bdf9a",
+          "downloadAdvertised": false
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 1022,
+      "name": "Iron Boulder",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Iron%20Boulder",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Iron boulder",
+          "url": "https://sketchfab.com/3d-models/iron-boulder-5688e8cd69914c1a954257cc23c80aa5",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Boulder 003 Low Poly | Iron Mountain",
+          "url": "https://sketchfab.com/3d-models/boulder-003-low-poly-iron-mountain-62956dfae5964daab4a1206297330559",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Moonrise Arch -- Escalante Area, UT",
+          "url": "https://sketchfab.com/3d-models/moonrise-arch-escalante-area-ut-bb826393791f4d43a2b19095dc7a261c",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Herm boulder HER002",
+          "url": "https://sketchfab.com/3d-models/herm-boulder-her002-1a98f7a1088c4b699d808d1c4675ca40",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Valcamonica, Massi di Cemmo - Boulder 2",
+          "url": "https://sketchfab.com/3d-models/valcamonica-massi-di-cemmo-boulder-2-57704590ed8b4ec0b9c318c6a3f4378f",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Ores and Ingots 3",
+          "url": "https://sketchfab.com/3d-models/ores-and-ingots-3-959f5ed7f7124ab9acc06a14564846f0",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Carved rock, Rosedale Railway",
+          "url": "https://sketchfab.com/3d-models/carved-rock-rosedale-railway-9fb01280ab894c1cbd94cb4f4533a663",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "rock on watergate beach Cornwall",
+          "url": "https://sketchfab.com/3d-models/rock-on-watergate-beach-cornwall-172e9f877af2489aa3ba7d1e6f96e312",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Boulder004 Low Poly | Iron Mountain Texturing",
+          "url": "https://sketchfab.com/3d-models/boulder004-low-poly-iron-mountain-texturing-b9d573520699401cacabb99c737c6ce3",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Drum Stone, Aberdeenshire (Inscription)",
+          "url": "https://sketchfab.com/3d-models/drum-stone-aberdeenshire-inscription-d58f7758465d48e8a14dc3900ce1f4ca",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Drum Stone, Harlaw Hill Battle",
+          "url": "https://sketchfab.com/3d-models/drum-stone-harlaw-hill-battle-fe9b331b825646d1838fe44e7f1eef5b",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Valcamonica, Massi di Cemmo - Boulder 1",
+          "url": "https://sketchfab.com/3d-models/valcamonica-massi-di-cemmo-boulder-1-496ec59070a745fabe7b8483a71fbc91",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Barrel Chair Set - Iron & Oak",
+          "url": "https://sketchfab.com/3d-models/barrel-chair-set-iron-oak-595a63dc26b74b5686beb5552fe55a9e",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Cwm Fryddlas Hut Circle 2",
+          "url": "https://sketchfab.com/3d-models/cwm-fryddlas-hut-circle-2-d5d91c70e8db4e5a8c2efb740c1671a1",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Aungier Street - Sunken-floored Structure",
+          "url": "https://sketchfab.com/3d-models/aungier-street-sunken-floored-structure-4e06a440998444e29ecd4fc3426cba61",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Dun Ban, Barra",
+          "url": "https://sketchfab.com/3d-models/dun-ban-barra-f92db2d884664223827d2f3043e752d8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Cumberland Stone at Culloden Battlefield",
+          "url": "https://sketchfab.com/3d-models/cumberland-stone-at-culloden-battlefield-fa77040209ad4be7a698e6d499476e9f",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Cwm Fryddlas Hut Circle 1",
+          "url": "https://sketchfab.com/3d-models/cwm-fryddlas-hut-circle-1-07f40e6324b14ee2b22c5ac1a983bf02",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Valcamonica, Bedolina - Rock 5 (5)",
+          "url": "https://sketchfab.com/3d-models/valcamonica-bedolina-rock-5-5-0616127cad034725ae4e69544a77a3a9",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Petroglyph Rock",
+          "url": "https://sketchfab.com/3d-models/petroglyph-rock-212dcefd6d394f44a9846aa20f0d0aaf",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Buck Wood (IAG 10b) - 2009",
+          "url": "https://sketchfab.com/3d-models/buck-wood-iag-10b-2009-338c5165cf1b42349529f4e8bd1484a4",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "TO-EM-0056",
+          "url": "https://sketchfab.com/3d-models/to-em-0056-77895fb8768d43c784e8cef7dd143686",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Old Bewick 1a (Feb 2007)",
+          "url": "https://sketchfab.com/3d-models/old-bewick-1a-feb-2007-30910bdac9524136b47ccd39cf2461ea",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Cwm Fryddlas Hut Circle 3",
+          "url": "https://sketchfab.com/3d-models/cwm-fryddlas-hut-circle-3-e18101e4a28f4e848d1a2ff70b0ba4c8",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    },
+    {
+      "id": 1024,
+      "name": "Terapagos",
+      "searchURL": "https://sketchfab.com/search?type=models&q=Terapagos",
+      "noResults": false,
+      "hits": [
+        {
+          "title": "Terapagos",
+          "url": "https://sketchfab.com/3d-models/terapagos-51815f5dd4ac48b18b5d73cb599fae4b",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Terapagos with stand",
+          "url": "https://sketchfab.com/3d-models/terapagos-with-stand-43faf1430bfa4c499375c246d6de4bc8",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Stellar terapagos",
+          "url": "https://sketchfab.com/3d-models/stellar-terapagos-cc30cec5962849da91e8e236a8a0a2a3",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Stellar_terapagos",
+          "url": "https://sketchfab.com/3d-models/stellar-terapagos-d6e468d2ad6746ac961d51ff6aa9be44",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Walking Wake",
+          "url": "https://sketchfab.com/3d-models/walking-wake-91c7ea7139a54129abaef334061c19c0",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Terastal terapagos",
+          "url": "https://sketchfab.com/3d-models/terastal-terapagos-81c8f556c3ec400aa64e85f01cd20d29",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Terapagos NF",
+          "url": "https://sketchfab.com/3d-models/terapagos-nf-c9d21756b0e44147a566a3bf4461b60c",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "terapagos/pagogo",
+          "url": "https://sketchfab.com/3d-models/terapagospagogo-faa90c3bfff9402b865224201cce6a8e",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Terapagos - #1024 - Pokemon: Scarlet/Violet",
+          "url": "https://sketchfab.com/3d-models/terapagos-1024-pokemon-scarletviolet-946407097dcf41e4af7b29c9be612faa",
+          "downloadAdvertised": true
+        },
+        {
+          "title": "Nintendo Switch - Pokemon Scarlet _ Violet - Pok",
+          "url": "https://sketchfab.com/3d-models/nintendo-switch-pokemon-scarlet---violet-pok-7487b36239b941a0ae7acff1a8c1edec",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Porygon-z",
+          "url": "https://sketchfab.com/3d-models/porygon-z-a4663ca503d84731b634133d0da72625",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "V4 Base Fdalia",
+          "url": "https://sketchfab.com/3d-models/v4-base-fdalia-7710c86a7edd47f3b13025fc5a3c6bfe",
+          "downloadAdvertised": false
+        },
+        {
+          "title": "Empire by Teramago",
+          "url": "https://sketchfab.com/3d-models/empire-by-teramago-aba92e4659534176b801fd3a44fe35a8",
+          "downloadAdvertised": true
+        }
+      ],
+      "status": "sources-discovered-unverified",
+      "admitted": false
+    }
+  ]
+}
