@@ -1,0 +1,736 @@
+{
+  "checkedAt": "2026-10-01",
+  "method": "Blender 4.3.2 evaluated world-space mesh vertices at 12.5%, 37.5%, 62.5%, start and exact native loop end; fixed scene and no camera rotation. Importer helper geometry excluded. Offline CPU evidence, not browser playback.",
+  "relativeMovementThreshold": 0.0001,
+  "samples": [
+    {
+      "id": 1,
+      "vertices": 2889,
+      "bodyExtent": 0.8528774976730347,
+      "maxWorldDisplacement": 0.041331120871358255,
+      "relativeDisplacement": 0.04846079417515979,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 2,
+      "vertices": 4142,
+      "bodyExtent": 1.6595727801322937,
+      "maxWorldDisplacement": 0.10189832335583952,
+      "relativeDisplacement": 0.06140033421596409,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 3,
+      "vertices": 4328,
+      "bodyExtent": 2.622136116027832,
+      "maxWorldDisplacement": 0.15080503294038453,
+      "relativeDisplacement": 0.057512282454975285,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 7,
+      "vertices": 3065,
+      "bodyExtent": 0.4727848321199417,
+      "maxWorldDisplacement": 0.042020560093396914,
+      "relativeDisplacement": 0.08887882444320175,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 8,
+      "vertices": 3288,
+      "bodyExtent": 1.0373268723487854,
+      "maxWorldDisplacement": 0.27285344420017704,
+      "relativeDisplacement": 0.2630351642027396,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 9,
+      "vertices": 4310,
+      "bodyExtent": 1.6127532720565796,
+      "maxWorldDisplacement": 0.09857895989201641,
+      "relativeDisplacement": 0.06112463797162769,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 10,
+      "vertices": 2774,
+      "bodyExtent": 0.21256159245967865,
+      "maxWorldDisplacement": 0.046197183353799826,
+      "relativeDisplacement": 0.21733551588141722,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 11,
+      "vertices": 1903,
+      "bodyExtent": 0.6919163763523102,
+      "maxWorldDisplacement": 0.03698399286912287,
+      "relativeDisplacement": 0.05345153566692191,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 12,
+      "vertices": 2560,
+      "bodyExtent": 0.9627962112426758,
+      "maxWorldDisplacement": 0.20841452331029128,
+      "relativeDisplacement": 0.2164679512409919,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 3.004006326346596e-06
+    },
+    {
+      "id": 13,
+      "vertices": 2664,
+      "bodyExtent": 0.2255481332540512,
+      "maxWorldDisplacement": 0.0416652807920307,
+      "relativeDisplacement": 0.184728998599603,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 14,
+      "vertices": 2271,
+      "bodyExtent": 0.6001800419762731,
+      "maxWorldDisplacement": 0.062262914636825525,
+      "relativeDisplacement": 0.10374039501847841,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 16,
+      "vertices": 3669,
+      "bodyExtent": 0.3470025360584259,
+      "maxWorldDisplacement": 0.009253656271319355,
+      "relativeDisplacement": 0.026667402424290318,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 17,
+      "vertices": 3669,
+      "bodyExtent": 2.3747652769088745,
+      "maxWorldDisplacement": 0.8107071289628548,
+      "relativeDisplacement": 0.34138410934579433,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 18,
+      "vertices": 3973,
+      "bodyExtent": 1.8707431256771088,
+      "maxWorldDisplacement": 2.5562783625971557,
+      "relativeDisplacement": 1.3664507582632008,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 19,
+      "vertices": 2755,
+      "bodyExtent": 0.5204093771753833,
+      "maxWorldDisplacement": 0.047031840736522924,
+      "relativeDisplacement": 0.09037469884150975,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 20,
+      "vertices": 3619,
+      "bodyExtent": 1.1745212376117706,
+      "maxWorldDisplacement": 0.7498674762512153,
+      "relativeDisplacement": 0.6384452253719728,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.5876522031093595e-07
+    },
+    {
+      "id": 21,
+      "vertices": 3483,
+      "bodyExtent": 0.4061090052127838,
+      "maxWorldDisplacement": 0.008710952290812096,
+      "relativeDisplacement": 0.021449788551839495,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 22,
+      "vertices": 5138,
+      "bodyExtent": 1.5621719360351562,
+      "maxWorldDisplacement": 1.9247337228631392,
+      "relativeDisplacement": 1.2320882730412996,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 7.705157831430362e-08
+    },
+    {
+      "id": 23,
+      "vertices": 1864,
+      "bodyExtent": 0.4240298271179199,
+      "maxWorldDisplacement": 0.13019247590982871,
+      "relativeDisplacement": 0.30703612713928974,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 24,
+      "vertices": 2454,
+      "bodyExtent": 2.411241292953491,
+      "maxWorldDisplacement": 0.6294912390682783,
+      "relativeDisplacement": 0.26106522018674644,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 25,
+      "vertices": 3519,
+      "bodyExtent": 0.47101101966109127,
+      "maxWorldDisplacement": 0.03124354482876671,
+      "relativeDisplacement": 0.06633293813645277,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 26,
+      "vertices": 3288,
+      "bodyExtent": 1.2385859666392207,
+      "maxWorldDisplacement": 0.14881446217951927,
+      "relativeDisplacement": 0.12014867452705963,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 27,
+      "vertices": 2564,
+      "bodyExtent": 0.7854289710521698,
+      "maxWorldDisplacement": 0.02546053526875992,
+      "relativeDisplacement": 0.032416088796231556,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 28,
+      "vertices": 3345,
+      "bodyExtent": 0.9889036128297448,
+      "maxWorldDisplacement": 0.11070648735983647,
+      "relativeDisplacement": 0.11194871362948122,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 29,
+      "vertices": 2918,
+      "bodyExtent": 0.4700297713279724,
+      "maxWorldDisplacement": 0.031205310304298694,
+      "relativeDisplacement": 0.06639007188020135,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 30,
+      "vertices": 3202,
+      "bodyExtent": 0.8541213572025299,
+      "maxWorldDisplacement": 0.03841409020476412,
+      "relativeDisplacement": 0.044974979118401016,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 31,
+      "vertices": 3306,
+      "bodyExtent": 1.5342846512794495,
+      "maxWorldDisplacement": 0.13049208387174255,
+      "relativeDisplacement": 0.08505076536021161,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 32,
+      "vertices": 2946,
+      "bodyExtent": 0.6689048707485199,
+      "maxWorldDisplacement": 0.06572421934274064,
+      "relativeDisplacement": 0.09825645202612104,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 33,
+      "vertices": 3303,
+      "bodyExtent": 1.3038735091686249,
+      "maxWorldDisplacement": 0.07254663628149478,
+      "relativeDisplacement": 0.055639320663667696,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 106,
+      "vertices": 3239,
+      "bodyExtent": 1.4574001599103212,
+      "maxWorldDisplacement": 0.0911442337309444,
+      "relativeDisplacement": 0.06253892118177948,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 336,
+      "vertices": 3372,
+      "bodyExtent": 1.274936556816101,
+      "maxWorldDisplacement": 0.22008918857961368,
+      "relativeDisplacement": 0.1726275612719447,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 669,
+      "vertices": 4629,
+      "bodyExtent": 0.20005132257938385,
+      "maxWorldDisplacement": 0.07983997895181648,
+      "relativeDisplacement": 0.3990974811982789,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 8.94276639639165e-08
+    },
+    {
+      "id": 801,
+      "vertices": 6080,
+      "bodyExtent": 1.1784573190961964,
+      "maxWorldDisplacement": 0.037290597246730804,
+      "relativeDisplacement": 0.03164357049038515,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 805,
+      "vertices": 11664,
+      "bodyExtent": 8.499600674957037,
+      "maxWorldDisplacement": 0.37795354057225455,
+      "relativeDisplacement": 0.04446721146392739,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 3.136148216590771e-08
+    },
+    {
+      "id": 850,
+      "vertices": 2675,
+      "bodyExtent": 0.6935190558433533,
+      "maxWorldDisplacement": 0.024788905577523696,
+      "relativeDisplacement": 0.035743654581169605,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 4.55793335696177e-08
+    },
+    {
+      "id": 852,
+      "vertices": 3108,
+      "bodyExtent": 0.9693839251995087,
+      "maxWorldDisplacement": 0.19503982045414517,
+      "relativeDisplacement": 0.2011997675884754,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 853,
+      "vertices": 5416,
+      "bodyExtent": 1.4469144428148866,
+      "maxWorldDisplacement": 0.11950885235971663,
+      "relativeDisplacement": 0.08259565930326829,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 854,
+      "vertices": 2636,
+      "bodyExtent": 0.16703253984451294,
+      "maxWorldDisplacement": 0.1260690014769621,
+      "relativeDisplacement": 0.7547571365095511,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 7.636749006364894e-06
+    },
+    {
+      "id": 855,
+      "vertices": 5061,
+      "bodyExtent": 0.34322409331798553,
+      "maxWorldDisplacement": 0.1161851946386552,
+      "relativeDisplacement": 0.33851118525940294,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.191932944161486e-06
+    },
+    {
+      "id": 859,
+      "vertices": 5034,
+      "bodyExtent": 0.40805166959762573,
+      "maxWorldDisplacement": 0.02600887246337971,
+      "relativeDisplacement": 0.0637391644274528,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 860,
+      "vertices": 7086,
+      "bodyExtent": 0.7813779124990106,
+      "maxWorldDisplacement": 0.10275097720472083,
+      "relativeDisplacement": 0.13149972063594892,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.9178816263543163e-07
+    },
+    {
+      "id": 861,
+      "vertices": 8455,
+      "bodyExtent": 1.9377750754356384,
+      "maxWorldDisplacement": 0.11262615007885653,
+      "relativeDisplacement": 0.058121374098867806,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.268239277621558e-07
+    },
+    {
+      "id": 863,
+      "vertices": 8895,
+      "bodyExtent": 0.8181889420375228,
+      "maxWorldDisplacement": 0.048629648743697865,
+      "relativeDisplacement": 0.05943571985047394,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 864,
+      "vertices": 7928,
+      "bodyExtent": 1.402522224932909,
+      "maxWorldDisplacement": 0.14557948983563943,
+      "relativeDisplacement": 0.10379834789612932,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 866,
+      "vertices": 5782,
+      "bodyExtent": 1.6182538866996765,
+      "maxWorldDisplacement": 0.5181907118589117,
+      "relativeDisplacement": 0.3202159538239874,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 8.844161029714288e-08
+    },
+    {
+      "id": 873,
+      "vertices": 4340,
+      "bodyExtent": 1.3573543429374695,
+      "maxWorldDisplacement": 0.37898805682815606,
+      "relativeDisplacement": 0.27921084777905725,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 878,
+      "vertices": 3652,
+      "bodyExtent": 1.7343367338180542,
+      "maxWorldDisplacement": 0.342860310149436,
+      "relativeDisplacement": 0.1976895855712209,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 879,
+      "vertices": 5847,
+      "bodyExtent": 4.262143135070801,
+      "maxWorldDisplacement": 0.3488677869606581,
+      "relativeDisplacement": 0.08185266798996484,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 882,
+      "vertices": 4672,
+      "bodyExtent": 2.7052753667812794,
+      "maxWorldDisplacement": 0.3544780563840362,
+      "relativeDisplacement": 0.13103215322800654,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 883,
+      "vertices": 4396,
+      "bodyExtent": 2.4987133741378784,
+      "maxWorldDisplacement": 0.2056064468841484,
+      "relativeDisplacement": 0.08228492671957142,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 918,
+      "vertices": 5954,
+      "bodyExtent": 1.3646230697631836,
+      "maxWorldDisplacement": 0.06008184773546882,
+      "relativeDisplacement": 0.04402816357625803,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 4.9138276244993575e-08
+    },
+    {
+      "id": 919,
+      "vertices": 2908,
+      "bodyExtent": 0.22508526593446732,
+      "maxWorldDisplacement": 0.005388465756823503,
+      "relativeDisplacement": 0.02393966452869613,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 931,
+      "vertices": 9447,
+      "bodyExtent": 0.8448647260665894,
+      "maxWorldDisplacement": 0.75816182927664,
+      "relativeDisplacement": 0.8973765928261564,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 935,
+      "vertices": 2991,
+      "bodyExtent": 0.7337774665793404,
+      "maxWorldDisplacement": 0.13600798717864623,
+      "relativeDisplacement": 0.1853531804576616,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 4.748420729291107e-07
+    },
+    {
+      "id": 936,
+      "vertices": 4694,
+      "bodyExtent": 1.6552468684967607,
+      "maxWorldDisplacement": 0.11682037563666627,
+      "relativeDisplacement": 0.07057580223230302,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 938,
+      "vertices": 1247,
+      "bodyExtent": 0.2893046736717224,
+      "maxWorldDisplacement": 0.0611246601177939,
+      "relativeDisplacement": 0.2112812743120521,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 940,
+      "vertices": 3721,
+      "bodyExtent": 0.6901935636997223,
+      "maxWorldDisplacement": 0.7328117419250147,
+      "relativeDisplacement": 1.061748153658289,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 944,
+      "vertices": 4730,
+      "bodyExtent": 0.30112679302692413,
+      "maxWorldDisplacement": 0.02670978090930082,
+      "relativeDisplacement": 0.08869944995865135,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 950,
+      "vertices": 11761,
+      "bodyExtent": 2.0780954360961914,
+      "maxWorldDisplacement": 0.081110099338719,
+      "relativeDisplacement": 0.03903097900599237,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.8682342369877392e-08
+    },
+    {
+      "id": 951,
+      "vertices": 4845,
+      "bodyExtent": 0.2864329452859238,
+      "maxWorldDisplacement": 0.030273999435326493,
+      "relativeDisplacement": 0.10569314715214169,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 952,
+      "vertices": 9935,
+      "bodyExtent": 0.9534613490104675,
+      "maxWorldDisplacement": 0.11512720214270968,
+      "relativeDisplacement": 0.12074658533583175,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 953,
+      "vertices": 6945,
+      "bodyExtent": 0.3833179622888565,
+      "maxWorldDisplacement": 0.026110049343847568,
+      "relativeDisplacement": 0.06811590353851418,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 954,
+      "vertices": 10664,
+      "bodyExtent": 1.1385072469711304,
+      "maxWorldDisplacement": 0.3153421335854282,
+      "relativeDisplacement": 0.2769785914181576,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 955,
+      "vertices": 4645,
+      "bodyExtent": 0.26289641857147217,
+      "maxWorldDisplacement": 0.02694110005147458,
+      "relativeDisplacement": 0.10247800330589234,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.2683360172012021e-07
+    },
+    {
+      "id": 956,
+      "vertices": 12459,
+      "bodyExtent": 2.16418993473053,
+      "maxWorldDisplacement": 0.1341034940648549,
+      "relativeDisplacement": 0.06196475268311075,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 961,
+      "vertices": 3577,
+      "bodyExtent": 1.631543129682541,
+      "maxWorldDisplacement": 0.07416740707573727,
+      "relativeDisplacement": 0.04545844098535628,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.0009773497018234e-07
+    },
+    {
+      "id": 963,
+      "vertices": 2720,
+      "bodyExtent": 1.2167574763298035,
+      "maxWorldDisplacement": 0.26110793760151946,
+      "relativeDisplacement": 0.2145932469542894,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 964,
+      "vertices": 2720,
+      "bodyExtent": 1.2167574763298035,
+      "maxWorldDisplacement": 0.26110793760151946,
+      "relativeDisplacement": 0.2145932469542894,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 968,
+      "vertices": 3188,
+      "bodyExtent": 2.187572181224823,
+      "maxWorldDisplacement": 0.23301917213047232,
+      "relativeDisplacement": 0.1065195352776907,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 971,
+      "vertices": 9908,
+      "bodyExtent": 0.6613262593746185,
+      "maxWorldDisplacement": 0.12286930826519894,
+      "relativeDisplacement": 0.18579227200412393,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 9.838723740370435e-08
+    },
+    {
+      "id": 972,
+      "vertices": 14081,
+      "bodyExtent": 2.333268642425537,
+      "maxWorldDisplacement": 0.14336728080451225,
+      "relativeDisplacement": 0.0614448238825494,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 7.77593674907939e-08
+    },
+    {
+      "id": 976,
+      "vertices": 3540,
+      "bodyExtent": 2.4955477714538574,
+      "maxWorldDisplacement": 0.2686422148651271,
+      "relativeDisplacement": 0.10764859640760209,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.8967638251892875e-07
+    },
+    {
+      "id": 977,
+      "vertices": 7770,
+      "bodyExtent": 11.618614196777344,
+      "maxWorldDisplacement": 2.749903034463066,
+      "relativeDisplacement": 0.2366808113161901,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.294250161597913e-08
+    },
+    {
+      "id": 986,
+      "vertices": 7470,
+      "bodyExtent": 1.6835328340530396,
+      "maxWorldDisplacement": 0.1295825507074564,
+      "relativeDisplacement": 0.07697061090011025,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 988,
+      "vertices": 12381,
+      "bodyExtent": 2.7586830258369446,
+      "maxWorldDisplacement": 0.09234131507994181,
+      "relativeDisplacement": 0.03347297033225729,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 989,
+      "vertices": 14165,
+      "bodyExtent": 2.3487687245942652,
+      "maxWorldDisplacement": 0.4429118386484724,
+      "relativeDisplacement": 0.18857192451972152,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.1348928150899523e-07
+    },
+    {
+      "id": 1000,
+      "vertices": 5327,
+      "bodyExtent": 1.3957565454766154,
+      "maxWorldDisplacement": 0.0743677573532966,
+      "relativeDisplacement": 0.0532813244503911,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 1011,
+      "vertices": 9434,
+      "bodyExtent": 0.6761500749271363,
+      "maxWorldDisplacement": 0.041319593569064075,
+      "relativeDisplacement": 0.061110092420705246,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 9.414742508424219e-08
+    },
+    {
+      "id": 1012,
+      "vertices": 5556,
+      "bodyExtent": 0.13349195569753647,
+      "maxWorldDisplacement": 0.03320083212384031,
+      "relativeDisplacement": 0.24871035824110724,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.2499641309089048e-07
+    },
+    {
+      "id": 1013,
+      "vertices": 5638,
+      "bodyExtent": 0.24611271917819977,
+      "maxWorldDisplacement": 0.07235186411284382,
+      "relativeDisplacement": 0.29397856540870976,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 1024,
+      "vertices": 2528,
+      "bodyExtent": 0.7601404786109924,
+      "maxWorldDisplacement": 0.08445114680407673,
+      "relativeDisplacement": 0.11109939436246656,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    }
+  ]
+}
