@@ -30,7 +30,7 @@ npm start
 
 ## The feed
 
-- Opens immediately on Bulbasaur (#001). Every species stays in strict national-dex order through Pecharunt (#1025), with real endpoints rather than a #1-to-#1025 wrap.
+- Opens on the linked species or Bulbasaur (#001). Shuffle is a persistent browser-local switch: forward species moves choose a different species, backward moves retrace the actual session path (up to 2,000 steps). Switching it off resumes national-dex order from the current species. Toggling never navigates. Numerical order has finite #1 and #1025 endpoints.
 - Native vertical scroll snapping handles touch, mouse wheels and trackpads. Only the current and adjacent artworks mount, so scrolling does not preload thousands of images.
 - Left/right swipes and horizontal trackpad movement reveal artwork continuously through a native snap gallery. Visible arrows and keyboard controls select editions directly. Both artwork and species stop at finite endpoints.
 - Up/down arrows, Page Up/Down, Home/End and species buttons offer keyboard/button alternatives. Search jumps to any name or number without filtering or reordering the feed.

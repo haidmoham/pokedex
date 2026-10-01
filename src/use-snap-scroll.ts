@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, HTMLAttributes } from 'react';
 import { GalleryDrag, GalleryMotion, galleryIndex } from './gallery-motion';
-type Options = { axis: 'x' | 'y'; selected: number; length: number; suspended: boolean; onSelect: (index: number) => void; onMotion: (moving: boolean) => void };
-export function useSnapScroll({ axis, selected, length, suspended, onSelect, onMotion }: Options) {
+type Options = { axis: 'x' | 'y'; selected: number; length: number; suspended: boolean; alignmentKey?: number; onSelect: (index: number) => void; onMotion: (moving: boolean) => void };
+export function useSnapScroll({ axis, selected, length, suspended, alignmentKey, onSelect, onMotion }: Options) {
   const size = (element: HTMLDivElement) => axis === 'x' ? element.clientWidth : element.clientHeight;
   const offset = (element: HTMLDivElement) => axis === 'x' ? element.scrollLeft : element.scrollTop;
   const setOffset = (element: HTMLDivElement, value: number) => { if (axis === 'x') element.scrollLeft = value; else element.scrollTop = value; };
@@ -63,7 +63,7 @@ export function useSnapScroll({ axis, selected, length, suspended, onSelect, onM
     scrollTo(element, selected * size(element), 'instant');
     setCenter(selected);
     stopMotion();
-  }, [selected, suspended]);
+  }, [selected, suspended, alignmentKey]);
 
   useEffect(() => {
     const element = scroller.current;

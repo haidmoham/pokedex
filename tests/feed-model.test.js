@@ -140,7 +140,7 @@ test('the feed uses native vertical scrolling while modal drawers and pinch zoom
   assert.match(app, /<ArtGallery\b/);
   assert.doesNotMatch(app, /wheel\.current\.handle/);
   assert.match(app, /if \(drawerRef\.current \|\| feedPosition\.current\.locked\) return/);
-  assert.match(app, /feedPosition\.current\.lock\(feedRef\.current, activeIndexRef\.current\)/);
+  assert.match(app, /feedPosition\.current\.lock\(feedRef\.current, feedSelected\)/);
   assert.match(app, /window\.addEventListener\('online', recoverImages\)/);
   assert.doesNotMatch(app, /setPointerCapture|navigation\?\.axis === 'y'/);
   assert.match(css, /scroll-snap-type: y mandatory/);

@@ -261,6 +261,11 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .random-pokemon svg { width: 16px; height: 16px; }
 .random-pokemon:hover { background: #29312fea; color: #fff; }
 .random-pokemon:active { transform: translateY(1px); }
+.shuffle-track { width: 28px; height: 16px; border-radius: 12px; background: #ffffff30; padding: 2px; }
+.shuffle-track span { display: block; width: 12px; height: 12px; border-radius: 50%; background: #fff; transition: transform 120ms; }
+.random-pokemon[aria-checked="true"] .shuffle-track { background: #df88aa; }
+.random-pokemon[aria-checked="true"] .shuffle-track span { transform: translateX(12px); }
+@media (prefers-reduced-motion: reduce) { .shuffle-track span { transition: none; } }
 @media (min-width: 768px) { .dex-navigation { top: 28px; } }
 @media (max-width: 480px) { .dex-navigation { top: calc(14px + env(safe-area-inset-top)); } }
 @media (max-height: 600px) { .dex-navigation { top: calc(10px + env(safe-area-inset-top)); } }

@@ -61,6 +61,33 @@ function Icon({ name }: { name: 'search' | 'heart' | 'info' | 'close' | 'left' |
 function App() {
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const activePokemon = pokemon[activeIndex];
+  const [shuffle, setShuffle] = useState(() => { try { return localStorage.getItem('pokedex.shuffle.v1') === 'true'; } catch { return false; } });
+  const shufflePast = useRef<number[]>([]);
+  const shuffleNext = useRef<number | null>(null);
+  if (shuffleNext.current === null) shuffleNext.current = drawSpecies(initialIndex);
+  const shuffleCurrent = useRef(initialIndex);
+  function rememberSpecies(index: number) {
+    if (shuffle && index !== shuffleCurrent.current) {
+      shufflePast.current = [...shufflePast.current.slice(-1999), shuffleCurrent.current];
+      shuffleNext.current = drawSpecies(index);
+    }
+    shuffleCurrent.current = index;
+  }
+  const feedIndices: number[] = shuffle ? [...shufflePast.current.slice(-1), activeIndex, shuffleNext.current!] : pokemon.map((_, index) => index);
+  const feedSelected = shuffle ? Number(shufflePast.current.length > 0) : activeIndex;
+  function drawSpecies(current: number) {
+    const draw = Math.floor(Math.random() * (pokemon.length - 1));
+    return draw >= current ? draw + 1 : draw;
+  }
+  function toggleShuffle() {
+    setInspectingModel(false);
+    shufflePast.current = [];
+    shuffleCurrent.current = activeIndexRef.current;
+    shuffleNext.current = drawSpecies(activeIndexRef.current);
+    const next = !shuffle;
+    try { localStorage.setItem('pokedex.shuffle.v1', String(next)); } catch { /* Session mode still works. */ }
+    setShuffle(next);
+  }
   const [allCards, setAllCards] = useState<CardEdition[]>(cardsSnapshot as CardEdition[]);
   const [, redrawPortfolio] = useState(0);
   const [portfolio] = useState(() => new ArtistPortfolio(() => redrawPortfolio(version => version + 1), incoming => setAllCards(previous => mergeCardLibrary(previous, incoming))));
@@ -102,11 +129,12 @@ function App() {
   const [brokenImages, setBrokenImages] = useState<string[]>([]);
   const [hasScrolled, setHasScrolled] = useState(false);
   const completedDiscovery = useRef(new Set<number>());
-  const speciesScroll = useSnapScroll({ axis: 'x', selected: activeIndex, length: pokemon.length, suspended: Boolean(drawer) || inspectingModel,
+  const speciesScroll = useSnapScroll({ axis: 'x', selected: feedSelected, length: feedIndices.length, alignmentKey: activeIndex, suspended: Boolean(drawer) || inspectingModel,
     onMotion: () => {}, onSelect: index => {
       if (drawerRef.current || feedPosition.current.locked) return;
+      if (shuffle) { moveSpecies(index > feedSelected ? 1 : -1); return; }
       feedPosition.current.index = index;
-      activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); enterSpecies(index);
+      rememberSpecies(index); activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); enterSpecies(index);
     } });
   const feedRef = speciesScroll.scroller;
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -121,7 +149,7 @@ function App() {
   const baseIndex = useRef(initialIndex);
 
   useLayoutEffect(() => {
-    if (feedRef.current) feedPosition.current.jump(feedRef.current, initialIndex, pokemon.length);
+    if (feedRef.current) feedPosition.current.jump(feedRef.current, feedSelected, feedIndices.length);
   }, []);
 
   useEffect(() => {
@@ -357,10 +385,10 @@ function App() {
     const feed = feedRef.current;
     if (feed) {
       feedPosition.current.unlock(feed);
-      feedPosition.current.jump(feed, index, pokemon.length);
-      activeIndexRef.current = index;
+      feedPosition.current.jump(feed, shuffle ? feedSelected : index, shuffle ? feedIndices.length : pokemon.length);
+      rememberSpecies(index); activeIndexRef.current = index;
       setActiveIndex(index);
-      if (top && top.kind !== 'branch') feedPosition.current.lock(feed, index);
+      if (top && top.kind !== 'branch') feedPosition.current.lock(feed, shuffle ? feedSelected : index);
     }
   }
   useEffect(() => {
@@ -426,32 +454,35 @@ function App() {
     if (feedRef.current && !drawerRef.current) feedPosition.current.unlock(feedRef.current);
     const feed = feedRef.current;
     if (!feed) return;
-    const next = feedPosition.current.jump(feed, index, pokemon.length);
+    const next = adjacentIndex(index, 0, pokemon.length);
+    feedPosition.current.jump(feed, shuffle ? feedSelected : next, shuffle ? feedIndices.length : pokemon.length);
     if (next !== activeIndexRef.current) setHasScrolled(true);
-    activeIndexRef.current = next;
+    rememberSpecies(next); activeIndexRef.current = next;
     setActiveIndex(next);
     enterSpecies(next);
 
-  }
-  function randomPokemon() {
-    if (drawerRef.current || pokemon.length < 2) return;
-    // Draw once from every other national-dex entry, including both endpoints.
-    // Keep the same route/URL behavior as deliberate species navigation.
-    const current = activeIndexRef.current;
-    const draw = Math.floor(Math.random() * (pokemon.length - 1));
-    setInspectingModel(false);
-    jumpTo(draw >= current ? draw + 1 : draw);
   }
   function positionFeed(index: number) {
     const feed = feedRef.current;
     if (!feed) return;
     feedPosition.current.unlock(feed);
-    const next = feedPosition.current.jump(feed, index, pokemon.length);
-    activeIndexRef.current = next;
+    const next = adjacentIndex(index, 0, pokemon.length);
+    feedPosition.current.jump(feed, shuffle ? feedSelected : next, shuffle ? feedIndices.length : pokemon.length);
+    rememberSpecies(next); activeIndexRef.current = next;
     setActiveIndex(next);
 
   }
-  function moveSpecies(direction: number) { if (!inspectingModel) jumpTo(adjacentIndex(activeIndexRef.current, direction, pokemon.length)); }
+  function moveSpecies(direction: number) {
+    if (inspectingModel || drawerRef.current) return;
+    if (!shuffle) { jumpTo(adjacentIndex(activeIndexRef.current, direction, pokemon.length)); return; }
+    const current = activeIndexRef.current;
+    const next = direction < 0 ? shufflePast.current.pop() : shuffleNext.current;
+    if (next == null) return;
+    if (direction > 0) shufflePast.current = [...shufflePast.current.slice(-1999), current];
+    shuffleNext.current = drawSpecies(next);
+    shuffleCurrent.current = next;
+    jumpTo(next);
+  }
   function enterSpecies(index: number) {
     const item = pokemon[index];
     if (routesRef.current.at(-1)?.kind === 'branch') {
@@ -525,7 +556,7 @@ function App() {
     if (!routesRef.current.length) baseIndex.current = activeIndexRef.current;
     if (routesRef.current.length && invoker?.dataset.focusId) replaceTop({ ...routesRef.current.at(-1)!, focusId: invoker.dataset.focusId });
     drawerRef.current = next;
-    if (feedRef.current) feedPosition.current.lock(feedRef.current, activeIndexRef.current);
+    if (feedRef.current) feedPosition.current.lock(feedRef.current, feedSelected);
 
     pushRoute({ kind: next, artist, invoker: invoker ?? (document.activeElement as HTMLElement), originIndex: baseIndex.current });
   }
@@ -538,8 +569,8 @@ function App() {
     if (feed) {
       feedPosition.current.unlock(feed);
       const index = pokemon.findIndex(entry => entry.id === item.id);
-      feedPosition.current.jump(feed, index, pokemon.length);
-      activeIndexRef.current = index;
+      feedPosition.current.jump(feed, shuffle ? feedSelected : index, shuffle ? feedIndices.length : pokemon.length);
+      rememberSpecies(index); activeIndexRef.current = index;
       setActiveIndex(index);
     }
   }
@@ -566,19 +597,20 @@ function App() {
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" /><span className="brand-name">pokédex<span className="brand-dot">.</span></span></button>
       <div className="dex-navigation">
         <button className="dex-position dex-jump" onClick={event => { setQuery(''); openDrawer('search', undefined, event.currentTarget); }} aria-label={`Jump to Pokédex number. Current ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></button>
-        <button className="random-pokemon" onClick={randomPokemon} aria-label="Random Pokémon"><Icon name="shuffle" /><span>Random</span></button>
+        <button className="random-pokemon" onClick={toggleShuffle} role="switch" aria-checked={shuffle} aria-label="Shuffle species"><Icon name="shuffle" /><span>Shuffle</span><span className="shuffle-track" aria-hidden="true"><span /></span></button>
       </div>
       <button className="icon-button search-button" onClick={() => openDrawer('search')} aria-label="Search Pokédex"><Icon name="search" /></button>
     </header>
 
     <div ref={feedRef} className={`species-feed ${speciesScroll.nativeEnd ? '' : 'species-fallback'}`} {...speciesScroll.events} tabIndex={0} role="region" aria-label="Pokédex feed. Swipe horizontally or use left and right arrows for species. Scroll vertically or use up and down arrows to explore artwork."
       onDragStart={event => event.preventDefault()}>
-      {pokemon.map((item, index) => {
-        const nearby = Math.abs(index - speciesScroll.center) <= 1 || index === activeIndex;
+      {feedIndices.map((index, slot) => {
+        const item = pokemon[index];
+        const nearby = Math.abs(slot - speciesScroll.center) <= 1 || index === activeIndex;
         const visit = index === activeIndex ? activeVisit : visits[item.id];
         const chosenId = visit?.selectedId ?? `official-${item.id}`;
         const edition = nearby ? (allCards.find(entry => entry.cardId === chosenId) ?? (chosenId === `model-${item.id}` ? modelEdition(item) : undefined) ?? officialEdition(item)) : undefined;
-        return <section className={`species-slide type-${item.types[0]}`} key={item.id} aria-label={`Number ${item.id}, ${item.name}`} aria-hidden={index !== activeIndex}>
+        return <section className={`species-slide type-${item.types[0]}`} key={`${slot}-${item.id}`} aria-label={`Number ${item.id}, ${item.name}`} aria-hidden={index !== activeIndex}>
           {edition && <>
             <span className="ghost-number" aria-hidden="true">{dexNumber(item.id)}</span>
             {speciesScroll.moving && <div className="species-preview-name">#{dexNumber(item.id)} · {item.name}</div>}
@@ -592,7 +624,7 @@ function App() {
                   inspectGallery(inspecting);
                   setInspectingModel(inspecting);
                   const feed = feedRef.current; if (!feed) return;
-                  if (inspecting) feedPosition.current.lock(feed, activeIndexRef.current); else if (!drawerRef.current) feedPosition.current.unlock(feed);
+                  if (inspecting) feedPosition.current.lock(feed, feedSelected); else if (!drawerRef.current) feedPosition.current.unlock(feed);
                 }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${species.id}`))} /> : brokenImages.includes(frame.image) ?
                 <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{frame.title}</small><button className="image-retry" tabIndex={selected ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, frame.image))}>Retry image</button></div> :
                 <img key={frame.image} className="hero-art" src={frame.image} alt={frame.sourceType === 'official' || frame.sourceType === 'model' ? `${species.name}, official species artwork${frame.sourceType === 'model' ? ' while 3D is inactive' : ''}` : `${frame.title} Pokémon TCG card, illustrated by ${frame.artist}`} draggable={false} fetchPriority={selected ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, frame.image))} />;
@@ -621,8 +653,8 @@ function App() {
           <button className="mini-button" onClick={() => moveArt(1)} disabled={trail ? trailIndex === trail.length - 1 && candidate?.state !== 'ready' : cardIndex === cards.length - 1 && candidate?.state !== 'ready'} aria-label={trail ? 'Next discovery' : 'Next artwork'}><Icon name="down" /></button>
         </nav>
         <nav className="species-controls" aria-label="Species navigation">
-          <button className="mini-button previous-species" onClick={() => moveSpecies(-1)} disabled={activeIndex === 0 || inspectingModel} aria-label="Previous species"><Icon name="left" /></button>
-          <button className="next-species" onClick={() => moveSpecies(1)} disabled={activeIndex === pokemon.length - 1 || inspectingModel} aria-label="Next species"><span>{activeIndex === pokemon.length - 1 ? 'End of the dex' : !hasScrolled ? 'Swipe left' : pokemon[activeIndex + 1].name}</span><Icon name="right" /></button>
+          <button className="mini-button previous-species" onClick={() => moveSpecies(-1)} disabled={(shuffle ? !shufflePast.current.length : activeIndex === 0) || inspectingModel} aria-label="Previous species"><Icon name="left" /></button>
+          <button className="next-species" onClick={() => moveSpecies(1)} disabled={(!shuffle && activeIndex === pokemon.length - 1) || inspectingModel} aria-label="Next species"><span>{shuffle ? 'Random species' : activeIndex === pokemon.length - 1 ? 'End of the dex' : !hasScrolled ? 'Swipe left' : pokemon[activeIndex + 1].name}</span><Icon name="right" /></button>
         </nav>
       </div>
     </div>
@@ -644,7 +676,7 @@ function App() {
             <div className="species-grid">{filtered.slice(0, visibleLimit).map(item => <button className={`species-tile type-${item.types[0]}`} key={item.id} data-search-result data-focus-id={`species-${item.id}`} aria-label={`#${dexNumber(item.id)} ${item.name}`} onClick={event => pickSearch(item, event.currentTarget)}><span>#{dexNumber(item.id)}</span><img src={artwork(item.id)} alt="" loading="lazy" /><strong>{item.name}</strong>{favorites.includes(item.id) && <span className="tile-heart" aria-label="Saved">♥</span>}</button>)}</div>
             {!filtered.length && <div className="empty-state"><p>{search.invalidNumber ? 'Enter a national-dex number from 1 to 1025.' : query.trim() ? `No Pokémon match “${query.trim()}”${filterCount ? ' with these filters' : ''}.` : 'No Pokémon match these filters.'}</p>{!!filterCount && <button className="inline-link" onClick={clearFilters}>Clear filters</button>}</div>}
             {filtered.length > visibleLimit && <button className="load-more" onClick={() => setVisibleLimit(limit => limit + 60)}>Show more</button>}
-            <p className="quiet-note">Names, 150 or #001. Search jumps to a species; the feed stays in Pokédex order.</p>
+            <p className="quiet-note">Names, 150 or #001. Search jumps to a species; Shuffle changes how you move forward.</p>
           </div>}
           {drawer === 'details' && <>
             {manualShare && <label className="manual-share">Species link<input readOnly value={manualShare} onFocus={event => event.currentTarget.select()} aria-label="Species link to copy" /></label>}
