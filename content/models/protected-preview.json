@@ -5705,6 +5705,124 @@
       }
     },
     {
+      "id": 108,
+      "bytes": 140060,
+      "url": "/models/home-preview-108.glb",
+      "blobSha": "a13e5036fa292cf125457e65cc775f60164a0035",
+      "sha256": "09b47d49ed900f1ad9fa6cd809faed143e90ca20fe0cd4cf15432d0d44dd1a71",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/108.glb",
+        "sha256": "97ccfcb41a574fd2bebd1f6a01a2fb9844b1699eddc333abbf53f0e0a0c9b615",
+        "bytes": 123180
+      },
+      "loop": {
+        "duration": 0.8,
+        "removedGuardKeys": 15
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "09b47d49ed900f1ad9fa6cd809faed143e90ca20fe0cd4cf15432d0d44dd1a71",
+        "sourceSha256": "97ccfcb41a574fd2bebd1f6a01a2fb9844b1699eddc333abbf53f0e0a0c9b615",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 2.4000000000000004,
+            "worldVertexSha256": "84bff82af7cee7819b484dc421417fca5130db749ac9d25a979e34f520e3c1cd"
+          },
+          {
+            "phase": 0.375,
+            "frame": 7.200000000000001,
+            "worldVertexSha256": "d8e4b94009a85b34da7c38af0aa0102160c4d517346386310b7697e4ecd292ee"
+          },
+          {
+            "phase": 0.625,
+            "frame": 12.000000000000002,
+            "worldVertexSha256": "b2e68268f6d699e49cc446b14347aca25fdc1f5c718aae24a70d804249c73fd7"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "3ac61e563a4c028acc295421ba7cc4f85cdb3a2bed5a779dec9e8af9291eed82"
+    },
+    {
+      "id": 111,
+      "bytes": 144052,
+      "url": "/models/home-preview-111.glb",
+      "blobSha": "e16a2eca62a9584b27e4efb9723cdff5d9681167",
+      "sha256": "2b87ee6cf3373c7144e5059764bbb2c91df30408832405a28d0acbf5d86e32de",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/111.glb",
+        "sha256": "b0ad8947f0dfd508e07f8d086a7e000c5e370f65663e830f25bf079772f7fca2",
+        "bytes": 133952
+      },
+      "loop": {
+        "duration": 2.4,
+        "removedGuardKeys": 0
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "2b87ee6cf3373c7144e5059764bbb2c91df30408832405a28d0acbf5d86e32de",
+        "sourceSha256": "b0ad8947f0dfd508e07f8d086a7e000c5e370f65663e830f25bf079772f7fca2",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 7.199999999999999,
+            "worldVertexSha256": "dc05c81fb122650175159ed56a7f2f3e9a5a3f7f378cf2a1967f1be2e152cef5"
+          },
+          {
+            "phase": 0.375,
+            "frame": 21.599999999999998,
+            "worldVertexSha256": "ffa2b86de146eed34bf4dcccf309db13619abc10e968cc0652fad54730c394d0"
+          },
+          {
+            "phase": 0.625,
+            "frame": 36,
+            "worldVertexSha256": "9d2e840724f974e06ece0088edd41235443bd06203a17d089bff0499aac673d3"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "ddba7d173ee3461ccaa2ba671238c45969d83b2ad735f795346fa175f9fb1769"
+    },
+    {
       "id": 112,
       "bytes": 198316,
       "url": "/models/home-preview-112.glb",
@@ -5763,6 +5881,124 @@
       }
     },
     {
+      "id": 113,
+      "bytes": 149608,
+      "url": "/models/home-preview-113.glb",
+      "blobSha": "033382a6342b4f0834220350e16387e3904a3bd3",
+      "sha256": "cdd39dc00c05ccecc2e81cc8945cc1afe22bbf1e3f41efdc4b8c9a25a10154e2",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/113.glb",
+        "sha256": "c23f29fbf2d219337bca104cebb6d229f60eba1c93356662b3ca184b19963fa9",
+        "bytes": 133596
+      },
+      "loop": {
+        "duration": 1.7333333,
+        "removedGuardKeys": 7
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "cdd39dc00c05ccecc2e81cc8945cc1afe22bbf1e3f41efdc4b8c9a25a10154e2",
+        "sourceSha256": "c23f29fbf2d219337bca104cebb6d229f60eba1c93356662b3ca184b19963fa9",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 5.1999999,
+            "worldVertexSha256": "906752ad82b29236fda70dd51297079352babb8ab24586501ef01c37f1fe4040"
+          },
+          {
+            "phase": 0.375,
+            "frame": 15.5999997,
+            "worldVertexSha256": "eee72995fd25f395649ddf34a5e77ee3c40856e044eeb817d5775ee413ec771d"
+          },
+          {
+            "phase": 0.625,
+            "frame": 25.9999995,
+            "worldVertexSha256": "c3f38b9061006c86282c7de87dbd821a6062bbc74abbfbe5196418ff57b607ed"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "8bc94c9385614596b62c61ea98dc358e7a74a168a7ea11b0e02446743bcba151"
+    },
+    {
+      "id": 114,
+      "bytes": 254596,
+      "url": "/models/home-preview-114.glb",
+      "blobSha": "3bbbb4bfb0efed1a6522da1da680b6f13ff4d4b9",
+      "sha256": "c05804bedb9804b98da00b2b5070a664648db6380bf63fca6a89e05147ac2588",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/114.glb",
+        "sha256": "cc3d6eee54b6fc8e82d307fabef2da395f6eb3db4b31fcff1383e6f3e55da796",
+        "bytes": 225584
+      },
+      "loop": {
+        "duration": 1.8666667,
+        "removedGuardKeys": 13
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "c05804bedb9804b98da00b2b5070a664648db6380bf63fca6a89e05147ac2588",
+        "sourceSha256": "cc3d6eee54b6fc8e82d307fabef2da395f6eb3db4b31fcff1383e6f3e55da796",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 5.6000001,
+            "worldVertexSha256": "afeef7b381db9a03bc5cbbf41e3aa76b80ecc8119006b7bcc3edbca253359636"
+          },
+          {
+            "phase": 0.375,
+            "frame": 16.8000003,
+            "worldVertexSha256": "4cc0e3baeaccd3cdd0d699c7eb57277a353a1c123da2575145ce2a015d1abe07"
+          },
+          {
+            "phase": 0.625,
+            "frame": 28.0000005,
+            "worldVertexSha256": "980954639f689a25b1fdd4fdedafe361b28d7a8405c08c7ddb8b248dde16d609"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "041a4a09d0ba7aada10c8372092886f85b2169cb8e07ff255f49153253645336"
+    },
+    {
       "id": 115,
       "bytes": 247688,
       "url": "/models/home-preview-115.glb",
@@ -5819,6 +6055,360 @@
         "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
         "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
       }
+    },
+    {
+      "id": 116,
+      "bytes": 97760,
+      "url": "/models/home-preview-116.glb",
+      "blobSha": "6a50141ab4bb6f54748f32e7249528d36705c797",
+      "sha256": "2d28176656290cb5cde39b4484b23be0bcd7ae16fd9a28e3cabef2f5ee988014",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/116.glb",
+        "sha256": "9eecbbe0ed91742c10f4211d33526806243135805787800eabb038cc67d0d8d2",
+        "bytes": 88008
+      },
+      "loop": {
+        "duration": 2,
+        "removedGuardKeys": 0
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "2d28176656290cb5cde39b4484b23be0bcd7ae16fd9a28e3cabef2f5ee988014",
+        "sourceSha256": "9eecbbe0ed91742c10f4211d33526806243135805787800eabb038cc67d0d8d2",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6,
+            "worldVertexSha256": "dfed24f96d39b936f13302e3877abe5e4bfea0e715d2d45474d3d2f98df97065"
+          },
+          {
+            "phase": 0.375,
+            "frame": 18,
+            "worldVertexSha256": "5ff54c7e54f2582068f086fdbbf624fadc42301cfda8c9149e0c1bdde63cec50"
+          },
+          {
+            "phase": 0.625,
+            "frame": 30,
+            "worldVertexSha256": "8da80afc680b59825428556ae70598802f045080d6821a852d2dd02866c4c247"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "740b7b70ed6bd9d7f9dbae1d4b0a16915b96730e01011fe62dd5559b1ed7ead9"
+    },
+    {
+      "id": 117,
+      "bytes": 160552,
+      "url": "/models/home-preview-117.glb",
+      "blobSha": "24ba01e42dd0aa0c5fafb5e0ff72384b547cdbd9",
+      "sha256": "0a0a2cbb9e241d1cfe1ba4616d1278c2dbe1e3fd4217e640a641a84addae4f43",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/117.glb",
+        "sha256": "06fc7f4d20c3bc23983f5ba8bd60c96efe9d064729f2041cd745a85664f4583b",
+        "bytes": 151608
+      },
+      "loop": {
+        "duration": 2,
+        "removedGuardKeys": 9
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "0a0a2cbb9e241d1cfe1ba4616d1278c2dbe1e3fd4217e640a641a84addae4f43",
+        "sourceSha256": "06fc7f4d20c3bc23983f5ba8bd60c96efe9d064729f2041cd745a85664f4583b",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6,
+            "worldVertexSha256": "bccc80ef104c96b9a9426a1722ae750c5ea2f0d46fefe846cb594cc54fc79fd4"
+          },
+          {
+            "phase": 0.375,
+            "frame": 18,
+            "worldVertexSha256": "0ae5fa47ac77f615b23fdea5f3a75d5292c22545d5b089e9a0474c089f55ae78"
+          },
+          {
+            "phase": 0.625,
+            "frame": 30,
+            "worldVertexSha256": "7abda256c29b550412ecbad12b72f5addef75e34968a0c77f21afe004539d1cd"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "20b73e0114a339bf217efdf83afa67e549781db12d3ac3b778776d25771abb62"
+    },
+    {
+      "id": 118,
+      "bytes": 269180,
+      "url": "/models/home-preview-118.glb",
+      "blobSha": "c78fd2c02f2fcce2fb0a2961016904d30175bd82",
+      "sha256": "04f5f3703d8f598868733124cbb0f6584f888116ec78137c028457ce1ab9c19c",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/118.glb",
+        "sha256": "2471a4c7f260882baaf5b769954313177305c5339667d059002b925f6694e313",
+        "bytes": 260240
+      },
+      "loop": {
+        "duration": 2.3,
+        "removedGuardKeys": 17
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "04f5f3703d8f598868733124cbb0f6584f888116ec78137c028457ce1ab9c19c",
+        "sourceSha256": "2471a4c7f260882baaf5b769954313177305c5339667d059002b925f6694e313",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6.8999999999999995,
+            "worldVertexSha256": "998895186b7b4d9f36e5f6a0a0fa02f7434ad67e70c599ce4fe5247852053b8b"
+          },
+          {
+            "phase": 0.375,
+            "frame": 20.7,
+            "worldVertexSha256": "eaa009725504d26edbd22e7644081804a34b91a329c949a0ef466814a39c9591"
+          },
+          {
+            "phase": 0.625,
+            "frame": 34.5,
+            "worldVertexSha256": "4a8751d7a906e31410a354212c89aadac394173590a557a8e7784cdd6950ce10"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "bf3cbb6963d1a80e8529dc15bb8a12a5845a8b7bb319672f26d61f9a894dc881"
+    },
+    {
+      "id": 119,
+      "bytes": 327404,
+      "url": "/models/home-preview-119.glb",
+      "blobSha": "009f3f1a259cc35c7d609fe67c8d4e7b260f1b29",
+      "sha256": "e9dcdb4b5869206a49b4f6c7fb29f2f93cc957bb8eb6effb23c468e7b1292192",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/119.glb",
+        "sha256": "601cafd41dc353cf7bbf75a40dafc512b418b0d73c5bbbea15761a161101ac4a",
+        "bytes": 318108
+      },
+      "loop": {
+        "duration": 2,
+        "removedGuardKeys": 27
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "e9dcdb4b5869206a49b4f6c7fb29f2f93cc957bb8eb6effb23c468e7b1292192",
+        "sourceSha256": "601cafd41dc353cf7bbf75a40dafc512b418b0d73c5bbbea15761a161101ac4a",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6,
+            "worldVertexSha256": "7ee9eff3486e1b3e057304daf17cc5510ba0cb047b920bd570b34ce17ddc0efd"
+          },
+          {
+            "phase": 0.375,
+            "frame": 18,
+            "worldVertexSha256": "fdf6ca395ec1cd845a5957d8318e40c34aac41deb37e935e796f35779c14ac06"
+          },
+          {
+            "phase": 0.625,
+            "frame": 30,
+            "worldVertexSha256": "3b199ff833daf9218f1983709789511fa94f55291bea4e195ccc505e0ace7557"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "2488f2af1e9e509a8fa353788f76eb0defbf3e1a18db98f09500851a4859ad4a"
+    },
+    {
+      "id": 120,
+      "bytes": 72252,
+      "url": "/models/home-preview-120.glb",
+      "blobSha": "8653260ccd68b8eafb6ac5e7a4057eee780ad17a",
+      "sha256": "b5a3ec9cf175401898ab79187a99a7a7c1ced8d69e15407d2d61b6b729cbe89f",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/120.glb",
+        "sha256": "dbc2b52a6835f1df5dd22f85e0fe9d53509a399014b69c0bbf01de9a423b4914",
+        "bytes": 66504
+      },
+      "loop": {
+        "duration": 2,
+        "removedGuardKeys": 1
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "b5a3ec9cf175401898ab79187a99a7a7c1ced8d69e15407d2d61b6b729cbe89f",
+        "sourceSha256": "dbc2b52a6835f1df5dd22f85e0fe9d53509a399014b69c0bbf01de9a423b4914",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6,
+            "worldVertexSha256": "8f75031c6d60d669631e7b142a92d472ed2bb435182832c8fbf6cb3ad030919c"
+          },
+          {
+            "phase": 0.375,
+            "frame": 18,
+            "worldVertexSha256": "847b3c32ee9b0e09ecfb75e6b0721544e688b9809a626e11bda2bc48837088df"
+          },
+          {
+            "phase": 0.625,
+            "frame": 30,
+            "worldVertexSha256": "b6ec1334724fd53b4e6c6bd10aa52f4f290e0fbfaf9051030853ab525253c8bf"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "96ebf6b2f5f07ba9aba46d4db8bc9a97fb6c163da5b4a796611982b492aea5f1"
+    },
+    {
+      "id": 121,
+      "bytes": 97384,
+      "url": "/models/home-preview-121.glb",
+      "blobSha": "b8cf16a9979c8498bc834073dddbe993a1340873",
+      "sha256": "9ce98e0af5e0dc335daa085f3622e99b0071b227bcfa6319e5d96f18330f7c1c",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/121.glb",
+        "sha256": "56985d969306ed18c07b2859e8539738f2f656dfbbea6883c66e6a296abf7dd2",
+        "bytes": 88116
+      },
+      "loop": {
+        "duration": 1.9,
+        "removedGuardKeys": 3
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "9ce98e0af5e0dc335daa085f3622e99b0071b227bcfa6319e5d96f18330f7c1c",
+        "sourceSha256": "56985d969306ed18c07b2859e8539738f2f656dfbbea6883c66e6a296abf7dd2",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 5.699999999999999,
+            "worldVertexSha256": "6a50675e1fe2f90e84bc4287e2ed6f394815c073f1fe61d4cebe55f38e06a1dd"
+          },
+          {
+            "phase": 0.375,
+            "frame": 17.099999999999998,
+            "worldVertexSha256": "ff5cce9e8c2f03cb3fbf1f126a0e1347f1ea3414a040e1298fe4710044452623"
+          },
+          {
+            "phase": 0.625,
+            "frame": 28.499999999999996,
+            "worldVertexSha256": "e48afc3f8c054d3bf3153a5f07f019f2c4c39c3cf78823fabe53ba651a507e51"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "ab24bb12f7fc42cda90cdd02efd437c33e72db2054ba3d8f9c9b80905a722e2a"
     },
     {
       "id": 122,
@@ -5937,6 +6527,124 @@
       }
     },
     {
+      "id": 124,
+      "bytes": 399748,
+      "url": "/models/home-preview-124.glb",
+      "blobSha": "1fccd69fdfa1fa95dd9859e80c54039e6a0bc1f5",
+      "sha256": "3fc4998cf96fd42d049a1cbfb3827d45524df23a596b6dffd621761f850c7edd",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/124.glb",
+        "sha256": "7aa9389345574370a4bd92fbc3b113c848bd1c79ece6667844417f0ee0da2dae",
+        "bytes": 375472
+      },
+      "loop": {
+        "duration": 2,
+        "removedGuardKeys": 40
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "3fc4998cf96fd42d049a1cbfb3827d45524df23a596b6dffd621761f850c7edd",
+        "sourceSha256": "7aa9389345574370a4bd92fbc3b113c848bd1c79ece6667844417f0ee0da2dae",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6,
+            "worldVertexSha256": "9670629f3767e84115266d716a754c41170f57df46a34cdf75b10d3918d6225a"
+          },
+          {
+            "phase": 0.375,
+            "frame": 18,
+            "worldVertexSha256": "d3e1c738fc08a028b5af73352928fea3eaa40254a6171cc14a414071166b5209"
+          },
+          {
+            "phase": 0.625,
+            "frame": 30,
+            "worldVertexSha256": "e5c585585263b1ab320e099c31b89e7ef481cabc41b55276b55c7960e048c18f"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "6efddcd4f558a5ee71b7a09db5cf5512b177732adc1871441d0e273bdc836005"
+    },
+    {
+      "id": 125,
+      "bytes": 189336,
+      "url": "/models/home-preview-125.glb",
+      "blobSha": "fc24d9342ede998d119699ccba5b9eb3d4a6a61b",
+      "sha256": "134d0eb34cf7bf69dc278f91faa63ae480b954680a13ddd6fbe260be515f82b6",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/125.glb",
+        "sha256": "346152c242751912558ebd563c35f5888bebab8b8d09e6c46242b0cd289a18b5",
+        "bytes": 163448
+      },
+      "loop": {
+        "duration": 1.3333334,
+        "removedGuardKeys": 2
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "134d0eb34cf7bf69dc278f91faa63ae480b954680a13ddd6fbe260be515f82b6",
+        "sourceSha256": "346152c242751912558ebd563c35f5888bebab8b8d09e6c46242b0cd289a18b5",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 4.0000002,
+            "worldVertexSha256": "a05710b24b4a6839bdc6cb545dd2b2225fae84db24729d8dc5993b126c2480f2"
+          },
+          {
+            "phase": 0.375,
+            "frame": 12.0000006,
+            "worldVertexSha256": "47fbb80b9b6e49068fb5edbc6728d69f0fbccb491082f2ac4c7fc98d2117aaa8"
+          },
+          {
+            "phase": 0.625,
+            "frame": 20.000000999999997,
+            "worldVertexSha256": "43e84bf33f37da184bd52922de6e6de160fadcdaa82f2e20380496f7f1cdeabe"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "c9e74b6ec404acf2c519048100c909b1328b572cc9503bb99b292d7381b8e123"
+    },
+    {
       "id": 127,
       "bytes": 142100,
       "url": "/models/home-preview-127.glb",
@@ -5993,6 +6701,65 @@
         "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
         "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
       }
+    },
+    {
+      "id": 128,
+      "bytes": 262760,
+      "url": "/models/home-preview-128.glb",
+      "blobSha": "221b599e5ec1b24487e71871354d7cebf92a9cda",
+      "sha256": "c7d6501f198a75dfab1527f2b1ca87e273d783ba720cf1c3380dac0bd9a33a28",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/128.glb",
+        "sha256": "a4f4f536796a3ed3ce0a11a799987797778b39e428ee7bba021d36a627942121",
+        "bytes": 244308
+      },
+      "loop": {
+        "duration": 1.6,
+        "removedGuardKeys": 24
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "c7d6501f198a75dfab1527f2b1ca87e273d783ba720cf1c3380dac0bd9a33a28",
+        "sourceSha256": "a4f4f536796a3ed3ce0a11a799987797778b39e428ee7bba021d36a627942121",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 4.800000000000001,
+            "worldVertexSha256": "94ca005dfb633ddd088ac1244f3ffc2d0277ec0b5396e20966de6bdd16e0a085"
+          },
+          {
+            "phase": 0.375,
+            "frame": 14.400000000000002,
+            "worldVertexSha256": "477e33790a65bc3e434e0c5030797be648fbf8daabb0160f8dd9e189beb60b35"
+          },
+          {
+            "phase": 0.625,
+            "frame": 24.000000000000004,
+            "worldVertexSha256": "9c895e9db7c5bf6c22e225738f751eafe90e2e6264cf885e2779c56f5c87f5e2"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "92c004fc425b27159f266a5a019b3a84368bdb5d069fd33becec51718f914296"
     },
     {
       "id": 129,
@@ -6109,6 +6876,360 @@
         "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
         "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
       }
+    },
+    {
+      "id": 131,
+      "bytes": 113040,
+      "url": "/models/home-preview-131.glb",
+      "blobSha": "c2d03be328194297313f9171507b85a674ec066f",
+      "sha256": "326f721318d1ecd254eb5b733845f5738f013df45b6b64e7ca99f6d7639f2db9",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/131.glb",
+        "sha256": "7da2ca6105f07c2101715bcd5a3441b6c855a745c8bb3f00ff6fedbe270d4249",
+        "bytes": 105788
+      },
+      "loop": {
+        "duration": 3,
+        "removedGuardKeys": 0
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "326f721318d1ecd254eb5b733845f5738f013df45b6b64e7ca99f6d7639f2db9",
+        "sourceSha256": "7da2ca6105f07c2101715bcd5a3441b6c855a745c8bb3f00ff6fedbe270d4249",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 9,
+            "worldVertexSha256": "d58bae49812a2e12c9972f4adf8a47d3c9a64bf1a65da1294a2d7543b9bd0b9c"
+          },
+          {
+            "phase": 0.375,
+            "frame": 27,
+            "worldVertexSha256": "601401f396eb03535a5e620e23f5adf65bb57083ae06878b63d820ec039115c9"
+          },
+          {
+            "phase": 0.625,
+            "frame": 45,
+            "worldVertexSha256": "77c4b0d327c6e6a769c358e1b391db88794a623c4bb4a1949ab70e1b719a1cfe"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "d4165d082f4419a84653ea6ab835adc1c977c50895f28915775528ebbd1349f1"
+    },
+    {
+      "id": 132,
+      "bytes": 71952,
+      "url": "/models/home-preview-132.glb",
+      "blobSha": "a8284c61e2542a43a203a66b4dd765c6d700a927",
+      "sha256": "7f42d993f7401e4509482d39e056f0d15b008c85397bb91d32022c3cd2e63c92",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/132.glb",
+        "sha256": "ec354a9002d7d55cb430cd98bea5045ea53eec23018b6b1f055082795c332175",
+        "bytes": 68096
+      },
+      "loop": {
+        "duration": 2,
+        "removedGuardKeys": 0
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "7f42d993f7401e4509482d39e056f0d15b008c85397bb91d32022c3cd2e63c92",
+        "sourceSha256": "ec354a9002d7d55cb430cd98bea5045ea53eec23018b6b1f055082795c332175",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6,
+            "worldVertexSha256": "2aed34f08c75df9765d0b1e0d388b6601d23462504f892cb4899dd4638b04f35"
+          },
+          {
+            "phase": 0.375,
+            "frame": 18,
+            "worldVertexSha256": "589c1e0ab112fcae63eda075ce57243665f2e06eb22d4826632e64f38e8634cc"
+          },
+          {
+            "phase": 0.625,
+            "frame": 30,
+            "worldVertexSha256": "557b6bca4dda788574f348e39a978343349355e186e83bd936b65d4af638794a"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "b5b46d5618ba46108ad1e3d92d388c93477e9e0aec4916eee0cec9a25623431a"
+    },
+    {
+      "id": 133,
+      "bytes": 165532,
+      "url": "/models/home-preview-133.glb",
+      "blobSha": "dac4959aa1d2fc7bc0d33354b1e6f1d500da9b54",
+      "sha256": "355130c30b5d3ea148724c4891e9b7c99357e9fb0ba18eec53fbcf1e4211596a",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/133.glb",
+        "sha256": "ba43da23243f09e57bfa731ad9e944d9661a1bbcab4d274ebeb4e067c8cd39c0",
+        "bytes": 152496
+      },
+      "loop": {
+        "duration": 0.8666667,
+        "removedGuardKeys": 19
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "355130c30b5d3ea148724c4891e9b7c99357e9fb0ba18eec53fbcf1e4211596a",
+        "sourceSha256": "ba43da23243f09e57bfa731ad9e944d9661a1bbcab4d274ebeb4e067c8cd39c0",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 2.6000001,
+            "worldVertexSha256": "377311ffb801838f40219ac4f983fa1bf02d3767e3606af68e906d62a12f8684"
+          },
+          {
+            "phase": 0.375,
+            "frame": 7.8000003,
+            "worldVertexSha256": "68a8c4401f52f7fdd8a56094b1c6a21a64e14a48d2d5d0005867df12bc8de7f1"
+          },
+          {
+            "phase": 0.625,
+            "frame": 13.000000499999999,
+            "worldVertexSha256": "877ad02f929dd0f820e00b7dc9d49454a92944556ab5c7e2b78d98ffe467056f"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "f0c8eb0876da64ac4e6f62de361b2362fb8dd45168e89903c6bda026be0ef40c"
+    },
+    {
+      "id": 134,
+      "bytes": 161824,
+      "url": "/models/home-preview-134.glb",
+      "blobSha": "d1a0c9194478a41e495aee267085aae6e72a7cf2",
+      "sha256": "9067fb836b4aeda595635541439fe9739edc72f3a900a5ebe1bbba01dc766722",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/134.glb",
+        "sha256": "cd5571463bc898b6910877d509732cf9e0d5c05bf3faa035f9c13f3239cdb2ff",
+        "bytes": 147628
+      },
+      "loop": {
+        "duration": 2.1333334,
+        "removedGuardKeys": 0
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "9067fb836b4aeda595635541439fe9739edc72f3a900a5ebe1bbba01dc766722",
+        "sourceSha256": "cd5571463bc898b6910877d509732cf9e0d5c05bf3faa035f9c13f3239cdb2ff",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6.400000200000001,
+            "worldVertexSha256": "34dacaf24f0f27fc92adf08bec9effd4ab0d691a6c147d96679ec2d639412558"
+          },
+          {
+            "phase": 0.375,
+            "frame": 19.200000600000003,
+            "worldVertexSha256": "cebec86dd928ece8912c5a11b677bbe92c64c603fde0abfcc6264a5cb60b585b"
+          },
+          {
+            "phase": 0.625,
+            "frame": 32.000001000000005,
+            "worldVertexSha256": "2dfd9d23b18fd919c4e054f1e54b3b897cfa26bcd3d3ddf77f6ebb98d5b17436"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "44101789d8141a5435b1a0660c90da30ae10bb05d932093000a95e7140e43399"
+    },
+    {
+      "id": 135,
+      "bytes": 154896,
+      "url": "/models/home-preview-135.glb",
+      "blobSha": "45cf5ecd5cd906e0ed4ade520c9e0a35dc32c999",
+      "sha256": "abd05fa38e2980e02fcc0409a431e119e58c49408a169f0c059fb6e56605217d",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/135.glb",
+        "sha256": "5fa251a19c3632381ba9bb4cc6ba180ac704c04291453f722203512f130c8dfa",
+        "bytes": 138244
+      },
+      "loop": {
+        "duration": 1.3333334,
+        "removedGuardKeys": 6
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "abd05fa38e2980e02fcc0409a431e119e58c49408a169f0c059fb6e56605217d",
+        "sourceSha256": "5fa251a19c3632381ba9bb4cc6ba180ac704c04291453f722203512f130c8dfa",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 4.0000002,
+            "worldVertexSha256": "3809a7c1e394fe99b9550d63ce35ed531f58f120ae7204b6918548d7d9dc303f"
+          },
+          {
+            "phase": 0.375,
+            "frame": 12.0000006,
+            "worldVertexSha256": "7ac21abdef8ff06b8948ee082899a5fbacfca4e9e84bcb1d222acd47cfc9b06d"
+          },
+          {
+            "phase": 0.625,
+            "frame": 20.000000999999997,
+            "worldVertexSha256": "d8ffffe6fb8d52d8ab1b3faae9cf140d3e9d6c2244b8ef7ac91d2bb9dd102c65"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "4c745afc675f66cd17259cea1325b684bf2b17c8162c3246935b9857c69d2faf"
+    },
+    {
+      "id": 136,
+      "bytes": 177876,
+      "url": "/models/home-preview-136.glb",
+      "blobSha": "fb6c8f17527def9c2acd4b4168b06bff4ae48433",
+      "sha256": "ee7ec75ecd75eee1e4fc92f40f6bae2b648cf41bb21899c0777edaeee590af86",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/136.glb",
+        "sha256": "634f84bb5eaf2467b1c6fd8527e9b5f239d53e75f437fef07a12eb1a26154287",
+        "bytes": 164696
+      },
+      "loop": {
+        "duration": 1,
+        "removedGuardKeys": 22
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "ee7ec75ecd75eee1e4fc92f40f6bae2b648cf41bb21899c0777edaeee590af86",
+        "sourceSha256": "634f84bb5eaf2467b1c6fd8527e9b5f239d53e75f437fef07a12eb1a26154287",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 3,
+            "worldVertexSha256": "ce4377286fea64727899c7512a80749176e08819a5683a67f8cec39f43e2c72d"
+          },
+          {
+            "phase": 0.375,
+            "frame": 9,
+            "worldVertexSha256": "03fe67efb45fbf289d1248fdc25ddc601a173f919c4d769a97af295008dccddc"
+          },
+          {
+            "phase": 0.625,
+            "frame": 15,
+            "worldVertexSha256": "e59c4b3ba9e8027a1e603ceb0bcca664ceee01ea36fa4690ece7bb321f815091"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "8f7bfd8fe7e8eb719a569ca9f660951acf373423fd2eef2a0d6e0e84fb5a0762"
     },
     {
       "id": 137,
@@ -6285,6 +7406,124 @@
       }
     },
     {
+      "id": 140,
+      "bytes": 90820,
+      "url": "/models/home-preview-140.glb",
+      "blobSha": "be732c79db13c23709b8636c1b026bccab52f9d2",
+      "sha256": "d70c3e68b6c06f447c1b32201b0217c62b7cd5f026f6266ce0c1721ac73d0694",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/140.glb",
+        "sha256": "1db9bd60058f7591fc3c9add842433639c8ed1179e842e856dc95407b1049929",
+        "bytes": 85960
+      },
+      "loop": {
+        "duration": 2,
+        "removedGuardKeys": 1
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "d70c3e68b6c06f447c1b32201b0217c62b7cd5f026f6266ce0c1721ac73d0694",
+        "sourceSha256": "1db9bd60058f7591fc3c9add842433639c8ed1179e842e856dc95407b1049929",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 6,
+            "worldVertexSha256": "0539f352c39b68adece58dc2ce9b1347c4a3c9239ad385956ff82c493802d135"
+          },
+          {
+            "phase": 0.375,
+            "frame": 18,
+            "worldVertexSha256": "dfa8583cdda57d4d876c2a6a62955bb02d83802359818a1106b31c985060e9e2"
+          },
+          {
+            "phase": 0.625,
+            "frame": 30,
+            "worldVertexSha256": "e68692df767d9d8bbb4773c71e6450722e4d7ee53a90b120219e18e15b5ab670"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "7080d8c0d965b25d5ce52a2311024d5778b9be055deea7ed221b82a6996681e1"
+    },
+    {
+      "id": 141,
+      "bytes": 110940,
+      "url": "/models/home-preview-141.glb",
+      "blobSha": "0b8149455dcbf2d3ed061f0994322e140312a3f4",
+      "sha256": "6365267da61d9be727d1b4fbf3a543e9565f104e3ebfe615d9ec774248a06413",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/141.glb",
+        "sha256": "1f073698ce5182f7f95715af68f2b49ffd8cb8ac65b2ab99e9f4caf9a2ffdd82",
+        "bytes": 101108
+      },
+      "loop": {
+        "duration": 1.2,
+        "removedGuardKeys": 0
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "6365267da61d9be727d1b4fbf3a543e9565f104e3ebfe615d9ec774248a06413",
+        "sourceSha256": "1f073698ce5182f7f95715af68f2b49ffd8cb8ac65b2ab99e9f4caf9a2ffdd82",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 3.5999999999999996,
+            "worldVertexSha256": "118dfc8db6eb25ba259336ba1c517007386471e25bccabb73e040af41aa12f5e"
+          },
+          {
+            "phase": 0.375,
+            "frame": 10.799999999999999,
+            "worldVertexSha256": "aee7dd1e3a45388248e9aab0654e2d5745fde26fc839e92b2b58177007a27d38"
+          },
+          {
+            "phase": 0.625,
+            "frame": 18,
+            "worldVertexSha256": "4c82981a63cced11303e194487a6035088f31a5ca0d8d5651166ec329658be39"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "ab89a17d95fddfd7707f5061abfcb058dbb1776a8e88754c9bf8fa1e40d34559"
+    },
+    {
       "id": 142,
       "bytes": 144512,
       "url": "/models/home-preview-142.glb",
@@ -6341,6 +7580,65 @@
         "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
         "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
       }
+    },
+    {
+      "id": 143,
+      "bytes": 150412,
+      "url": "/models/home-preview-143.glb",
+      "blobSha": "1eeb58c550b961cc166b140751e1090b22faf516",
+      "sha256": "99c122cfbb0690add1ec1442cc303f22e02ccc2dffd0bbf409029c6ad974170a",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/143.glb",
+        "sha256": "9a1de18bc6f1f9cd288d0a6a03b80c794f1e5a9f9e932d5855f9d3bfc43f2d3d",
+        "bytes": 137140
+      },
+      "loop": {
+        "duration": 2.5,
+        "removedGuardKeys": 0
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "99c122cfbb0690add1ec1442cc303f22e02ccc2dffd0bbf409029c6ad974170a",
+        "sourceSha256": "9a1de18bc6f1f9cd288d0a6a03b80c794f1e5a9f9e932d5855f9d3bfc43f2d3d",
+        "method": "Three fixed-camera CPU-rendered native poses compared with official species artwork; retained source geometry, textures, transforms, skin bindings and motion values unchanged. GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 7.5,
+            "worldVertexSha256": "e9c97c3afaf442258c1c6b4fbb0ff9b32599262352d0d247b216fa8b48c55829"
+          },
+          {
+            "phase": 0.375,
+            "frame": 22.5,
+            "worldVertexSha256": "81cb0a350528c6708f1a1910ba93b5b054f3a373c045dc94293c197cbb3b0881"
+          },
+          {
+            "phase": 0.625,
+            "frame": 37.5,
+            "worldVertexSha256": "f10f61c8e0b729bc8203f7fdcb74d4f5bfa0532065b90a202b93dc06cd53e903"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      },
+      "replacesSha256": "7cb9b9774019d008d82de381ba2e9674051a9a3cd2f0236e9ce12fd27d685d97"
     },
     {
       "id": 144,
@@ -20498,6 +21796,104 @@
         "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
         "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
         "modifications": "Retained original geometry, texture and animation binary bytes. Trimmed metadata to exact native idle duration; original special lighting remains a PBR approximation."
+      }
+    },
+    {
+      "id": 717,
+      "bytes": 377148,
+      "url": "/models/home-preview-717.glb",
+      "blobSha": "5d5485cf42c14f0b0205e18405d47da7c7972e53",
+      "sha256": "582afeba058cc3a63079458cab29b0584c83e5e11f982d4ee5a3ac47e6991821",
+      "credit": "HOME extraction: Lilothestitch16 · web reconstruction: rrih",
+      "license": "Redistribution rights unresolved. Extracted Pokemon asset, protected preview only; not CC-BY or MIT-licensed.",
+      "source": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md",
+      "provider": "Pokemon HOME research preview",
+      "animation": "HOME Idle",
+      "admitted": true,
+      "previewOnly": true,
+      "rightsStatus": "unresolved",
+      "sourceArtifact": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/717.glb",
+        "sha256": "a7f4ac2287612d736cea251df2bfd8b5e8a971c0ee07b857881bc7beedc42038",
+        "bytes": 971244
+      },
+      "materialRepair": "zero-additive-to-transparent",
+      "textureRepair": "prune-yveltal-zero-alpha",
+      "loop": {
+        "duration": 2.4,
+        "removedGuardKeys": 10
+      },
+      "poseReview": {
+        "status": "approved-for-protected-preview",
+        "sha256": "582afeba058cc3a63079458cab29b0584c83e5e11f982d4ee5a3ac47e6991821",
+        "sourceSha256": "a7f4ac2287612d736cea251df2bfd8b5e8a971c0ee07b857881bc7beedc42038",
+        "method": "Three uncropped fixed-camera CPU-rendered native poses inspected against official reference artwork. All world-vertex identities match before/after pruning. Source geometry, retained motion, skin bindings and visible texture bytes remain unchanged; GPU playback unverified.",
+        "poses": [
+          {
+            "phase": 0.125,
+            "frame": 7.199999999999999,
+            "worldVertexSha256": "678fb0c5f5f7afc0ca416a3138a0bcc007cf18e09d046eff8e98717330675429"
+          },
+          {
+            "phase": 0.375,
+            "frame": 21.599999999999998,
+            "worldVertexSha256": "5fb58f547f252459ed47c67d5193188a755f5d6318a2ba8076f7a2cb8756bd25"
+          },
+          {
+            "phase": 0.625,
+            "frame": 36,
+            "worldVertexSha256": "2d87a71d989800344e44e3dcd76c28919ec62e8afb1964f52390c742018364d2"
+          }
+        ]
+      },
+      "credits": {
+        "assetOwners": "Pokemon / Nintendo / Creatures / GAME FREAK",
+        "extractionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models",
+        "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+        "materialMotionRepository": "https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models",
+        "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+        "reconstructionRepository": "https://github.com/rrih/rrih.github.io",
+        "reconstructionRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+        "rightsNotice": "https://rrih.github.io/atlas/legal/en/rights.html",
+        "modifications": "Trimmed the native guard frame; normalized two ordinary-additive effects whose source alpha is exactly zero; removed only texture maps exclusively used by those already-invisible effects and compacted unused data. All geometry, retained native curves, skin bindings and visible texture bytes are preserved."
+      },
+      "cameraOrbitPercent": 165,
+      "framingReview": {
+        "sha256": "582afeba058cc3a63079458cab29b0584c83e5e11f982d4ee5a3ac47e6991821",
+        "sourceSha256": "a7f4ac2287612d736cea251df2bfd8b5e8a971c0ee07b857881bc7beedc42038",
+        "cameraOrbitPercent": 165,
+        "method": "CPU geometry projection using installed Three.js 0.183.2 loader, skinning, vertex reduction and the model-viewer 4.3.1 rest-pose framing equations. Image maps omitted only from the CPU fixture; material opacity, geometry and animation retained.",
+        "sampledPoses": 97,
+        "cameraConfigurations": 54,
+        "aspectRatios": [
+          0.5,
+          1,
+          2
+        ],
+        "thetaDegrees": [
+          -180,
+          -90,
+          -12,
+          0,
+          90,
+          180
+        ],
+        "phiDegrees": [
+          35,
+          85,
+          145
+        ],
+        "restCenter": [
+          2.5721666840894386e-7,
+          0.8643978416530514,
+          -0.6821648735377672
+        ],
+        "restRadius": 4.327987001447423,
+        "maxAnimatedRadius": 6.463092630887045,
+        "animatedToRestRadiusRatio": 1.4933253331688778,
+        "maxNormalizedScreenExtent": 0.8944706079353465,
+        "allSampledViewsWithinFrame": true,
+        "gpuPlaybackVerified": false
       }
     },
     {

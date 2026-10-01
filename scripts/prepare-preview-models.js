@@ -4,6 +4,7 @@ import {isProtectedModelPreview} from './preview-model-context.js';
 import {trimHomeIdle} from './trim-home-idle.js';
 import {compressHomeAnimation} from './compress-home-animation.js';
 import {selectCatalogIdle,reviewedCatalogSource} from './select-catalog-idle.js';
+import {pruneYveltalZeroAlphaTextures} from './prune-yveltal-zero-alpha.js';
 const directory=new URL('../public/models/',import.meta.url),generated=new URL('../.generated/',import.meta.url);
 await mkdir(directory,{recursive:true});await mkdir(generated,{recursive:true});
 // Only remove this build step's generated assets, including after a preview build.
@@ -21,6 +22,7 @@ if(isProtectedModelPreview()){
   const normal=normalModels.find(item=>item.id===asset.id&&item.admitted);
   if(normal&&(normal.animation||!asset.animation||!normal.sha256||asset.replacesSha256!==normal.sha256))throw Error('Unreviewed preview idle replacement');
   if(!normal&&asset.replacesSha256!==undefined)throw Error('Unexpected preview replacement identity');
+  if(asset.cameraOrbitPercent!==undefined&&(!Number.isInteger(asset.cameraOrbitPercent)||asset.cameraOrbitPercent<110||asset.cameraOrbitPercent>240||asset.framingReview?.sha256!==asset.sha256||asset.framingReview?.cameraOrbitPercent!==asset.cameraOrbitPercent))throw Error('Unreviewed camera clearance');
  }
  let cursor=0,transferred=0;
  await Promise.all([0,1].map(async()=>{while(cursor<assets.length){
@@ -35,6 +37,10 @@ if(isProtectedModelPreview()){
   const bytes=Buffer.concat(chunks);if(size!==source.bytes||createHash('sha256').update(bytes).digest('hex')!==source.sha256)throw Error('Preview source changed');
   if(asset.materialRepair!==undefined&&asset.materialRepair!=='zero-additive-to-transparent')throw Error('Unknown preview material repair');
   const result=catalog?selectCatalogIdle(bytes,catalog.animation):trimHomeIdle(bytes,{normalizeZeroAdditive:asset.materialRepair==='zero-additive-to-transparent'});if(asset.compressionRepair!==undefined&&asset.compressionRepair!=='lossless-animation-meshopt')throw Error('Unknown animation compression');
+  if(asset.textureRepair!==undefined){
+   if(asset.textureRepair!=='prune-yveltal-zero-alpha'||asset.id!==717||source.bytes!==971244||source.sha256!=='a7f4ac2287612d736cea251df2bfd8b5e8a971c0ee07b857881bc7beedc42038'||asset.materialRepair!=='zero-additive-to-transparent'||asset.compressionRepair!==undefined)throw Error('Unreviewed zero-alpha texture pruning');
+   result.bytes=pruneYveltalZeroAlphaTextures(result.bytes);
+  }
   if(asset.compressionRepair==='lossless-animation-meshopt')result.bytes=await compressHomeAnimation(result.bytes);
   if(result.bytes.length!==asset.bytes||asset.bytes>750000||createHash('sha256').update(result.bytes).digest('hex')!==asset.sha256)throw Error('Preview derivative changed');
   if(asset.url!==`/models/home-preview-${asset.id}.glb`)throw Error('Invalid preview destination');

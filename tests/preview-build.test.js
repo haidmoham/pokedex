@@ -29,6 +29,9 @@ test('preview build retains source-family attribution and excludes extracted ass
   const assets = buildAssets(previewEnv);
   assert.equal(assets.length, manifest.assets.length);
   for (const id of [995, 1023]) assert.equal(assets.find(asset => asset.id === id)?.preparation, 'catalog-native-idle');
+  const yveltal = assets.find(asset => asset.id === 717);
+  assert.equal(yveltal?.textureRepair, 'prune-yveltal-zero-alpha');
+  assert.equal(yveltal?.cameraOrbitPercent, 165);
   for (const env of [{}, { ...previewEnv, VERCEL_ENV: 'production' }, { ...previewEnv, VERCEL_GIT_COMMIT_REF: 'main' }, { ...previewEnv, VERCEL_BRANCH_URL: 'unrelated.vercel.app' }]) {
     assert.deepEqual(buildAssets(env), []);
   }

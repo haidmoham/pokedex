@@ -1,14 +1,17 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle' };
+export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number };
 
 export function previewModelAttribution(asset: ModelAsset) {
   const catalog = asset.preparation === 'catalog-native-idle';
+  const homePreparation = asset.textureRepair === 'prune-yveltal-zero-alpha'
+    ? 'This protected draft trims the native idle guard frame and removes texture maps used only by two source effects whose opacity is already zero. Visible texture values, geometry and native motion remain unchanged.'
+    : 'This protected draft trims the idle guard frame without changing the source geometry, texture or skeletal values.';
   return {
     description: catalog
       ? 'Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Pokemon-3D-api published this source file; its original extractor is not identified. This protected draft selects its exact native wait clip and removes unused data without changing retained geometry, textures, motion or skin bindings. Redistribution rights remain unresolved; no software license is asserted to license these assets.'
-      : 'Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Lilothestitch16 published the HOME extraction; rrih reconstructed its web materials and native idle. This protected draft trims the idle guard frame without changing the source geometry, texture or skeletal values. Redistribution rights remain unresolved; neither project’s software license licenses these assets.',
+      : `Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Lilothestitch16 published the HOME extraction; rrih reconstructed its web materials and native idle. ${homePreparation} Redistribution rights remain unresolved; neither project’s software license licenses these assets.`,
     links: catalog ? [
       { url: asset.source, label: 'Pinned source file ↗' },
       { url: '/models/attribution.json', label: 'Pinned hashes & modifications ↗' },

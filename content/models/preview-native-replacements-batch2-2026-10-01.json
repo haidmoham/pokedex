@@ -1,0 +1,1197 @@
+{
+  "checkedAt": "2026-10-01",
+  "sourceRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+  "purpose": "Protected-preview replacement of normal static assets; production admission unchanged",
+  "sampleCount": 24,
+  "previewApproved": 22,
+  "held": 2,
+  "rightsStatus": "Unresolved; existing protected-preview exception only",
+  "appearance": "Approved candidates inspected in three fixed-camera CPU-rendered deformed poses beside official references. Supplemental view notes identify any additional checks. GPU playback unverified.",
+  "results": [
+    {
+      "id": 108,
+      "bytes": 123180,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/108.glb",
+      "blobSha": "a13e5036fa292cf125457e65cc775f60164a0035",
+      "sha256": "97ccfcb41a574fd2bebd1f6a01a2fb9844b1699eddc333abbf53f0e0a0c9b615",
+      "replacesSha256": "3ac61e563a4c028acc295421ba7cc4f85cdb3a2bed5a779dec9e8af9291eed82",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 140060,
+      "derivativeSha256": "09b47d49ed900f1ad9fa6cd809faed143e90ca20fe0cd4cf15432d0d44dd1a71",
+      "duration": 0.8,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 15,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/108.png",
+      "motion": {
+        "vertices": 3147,
+        "bodyExtent": 1.610284447669983,
+        "maxWorldDisplacement": 0.31687588152953794,
+        "relativeDisplacement": 0.19678255105055795,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 2.4000000000000004,
+          "worldVertexSha256": "84bff82af7cee7819b484dc421417fca5130db749ac9d25a979e34f520e3c1cd"
+        },
+        {
+          "phase": 0.375,
+          "frame": 7.200000000000001,
+          "worldVertexSha256": "d8e4b94009a85b34da7c38af0aa0102160c4d517346386310b7697e4ecd292ee"
+        },
+        {
+          "phase": 0.625,
+          "frame": 12.000000000000002,
+          "worldVertexSha256": "b2e68268f6d699e49cc446b14347aca25fdc1f5c718aae24a70d804249c73fd7"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "bytes": 252216,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/110.glb",
+      "blobSha": "f702abc97da0f66e1aa0e0585c88883abd6403d6",
+      "sha256": "1d7079c08a7808e0faf61d5288ad3c5a959385acbe1bc3a51f0abfd5bfef7396",
+      "replacesSha256": "b76bd50e922bfa209d362d739192f9ea83219d19b1bde200a8e4ed4603ec3d7d",
+      "customNodes": [],
+      "customMaterials": [
+        {
+          "name": "pm0110_00_00-SmokeCoreB00",
+          "extras": {
+            "homeStencil": {
+              "role": "core",
+              "ref": 1
+            }
+          }
+        },
+        {
+          "name": "pm0110_00_00-SmokeMaskB00",
+          "extras": {
+            "homeStencil": {
+              "role": "mask",
+              "ref": 1
+            }
+          }
+        }
+      ],
+      "status": "held",
+      "holdReason": "Custom material handling required"
+    },
+    {
+      "id": 111,
+      "bytes": 133952,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/111.glb",
+      "blobSha": "e16a2eca62a9584b27e4efb9723cdff5d9681167",
+      "sha256": "b0ad8947f0dfd508e07f8d086a7e000c5e370f65663e830f25bf079772f7fca2",
+      "replacesSha256": "ddba7d173ee3461ccaa2ba671238c45969d83b2ad735f795346fa175f9fb1769",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 144052,
+      "derivativeSha256": "2b87ee6cf3373c7144e5059764bbb2c91df30408832405a28d0acbf5d86e32de",
+      "duration": 2.4,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 0,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/111.png",
+      "motion": {
+        "vertices": 3815,
+        "bodyExtent": 1.6017546653747559,
+        "maxWorldDisplacement": 0.12370056525686067,
+        "relativeDisplacement": 0.07722815979931544,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 7.199999999999999,
+          "worldVertexSha256": "dc05c81fb122650175159ed56a7f2f3e9a5a3f7f378cf2a1967f1be2e152cef5"
+        },
+        {
+          "phase": 0.375,
+          "frame": 21.599999999999998,
+          "worldVertexSha256": "ffa2b86de146eed34bf4dcccf309db13619abc10e968cc0652fad54730c394d0"
+        },
+        {
+          "phase": 0.625,
+          "frame": 36,
+          "worldVertexSha256": "9d2e840724f974e06ece0088edd41235443bd06203a17d089bff0499aac673d3"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "bytes": 133596,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/113.glb",
+      "blobSha": "033382a6342b4f0834220350e16387e3904a3bd3",
+      "sha256": "c23f29fbf2d219337bca104cebb6d229f60eba1c93356662b3ca184b19963fa9",
+      "replacesSha256": "8bc94c9385614596b62c61ea98dc358e7a74a168a7ea11b0e02446743bcba151",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 149608,
+      "derivativeSha256": "cdd39dc00c05ccecc2e81cc8945cc1afe22bbf1e3f41efdc4b8c9a25a10154e2",
+      "duration": 1.7333333,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 7,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/113.png",
+      "motion": {
+        "vertices": 2294,
+        "bodyExtent": 1.391850233078003,
+        "maxWorldDisplacement": 0.19212626568657976,
+        "relativeDisplacement": 0.13803659411092148,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 5.1999999,
+          "worldVertexSha256": "906752ad82b29236fda70dd51297079352babb8ab24586501ef01c37f1fe4040"
+        },
+        {
+          "phase": 0.375,
+          "frame": 15.5999997,
+          "worldVertexSha256": "eee72995fd25f395649ddf34a5e77ee3c40856e044eeb817d5775ee413ec771d"
+        },
+        {
+          "phase": 0.625,
+          "frame": 25.9999995,
+          "worldVertexSha256": "c3f38b9061006c86282c7de87dbd821a6062bbc74abbfbe5196418ff57b607ed"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "bytes": 225584,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/114.glb",
+      "blobSha": "3bbbb4bfb0efed1a6522da1da680b6f13ff4d4b9",
+      "sha256": "cc3d6eee54b6fc8e82d307fabef2da395f6eb3db4b31fcff1383e6f3e55da796",
+      "replacesSha256": "041a4a09d0ba7aada10c8372092886f85b2169cb8e07ff255f49153253645336",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 254596,
+      "derivativeSha256": "c05804bedb9804b98da00b2b5070a664648db6380bf63fca6a89e05147ac2588",
+      "duration": 1.8666667,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 13,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/114.png",
+      "motion": {
+        "vertices": 3017,
+        "bodyExtent": 1.0081484019756317,
+        "maxWorldDisplacement": 0.168208070229821,
+        "relativeDisplacement": 0.16684852140834602,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 5.6000001,
+          "worldVertexSha256": "afeef7b381db9a03bc5cbbf41e3aa76b80ecc8119006b7bcc3edbca253359636"
+        },
+        {
+          "phase": 0.375,
+          "frame": 16.8000003,
+          "worldVertexSha256": "4cc0e3baeaccd3cdd0d699c7eb57277a353a1c123da2575145ce2a015d1abe07"
+        },
+        {
+          "phase": 0.625,
+          "frame": 28.0000005,
+          "worldVertexSha256": "980954639f689a25b1fdd4fdedafe361b28d7a8405c08c7ddb8b248dde16d609"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "bytes": 88008,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/116.glb",
+      "blobSha": "6a50141ab4bb6f54748f32e7249528d36705c797",
+      "sha256": "9eecbbe0ed91742c10f4211d33526806243135805787800eabb038cc67d0d8d2",
+      "replacesSha256": "740b7b70ed6bd9d7f9dbae1d4b0a16915b96730e01011fe62dd5559b1ed7ead9",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 97760,
+      "derivativeSha256": "2d28176656290cb5cde39b4484b23be0bcd7ae16fd9a28e3cabef2f5ee988014",
+      "duration": 2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 0,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/116.png",
+      "motion": {
+        "vertices": 2324,
+        "bodyExtent": 0.39584216475486755,
+        "maxWorldDisplacement": 0.11279820912513112,
+        "relativeDisplacement": 0.284957539061013,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6,
+          "worldVertexSha256": "dfed24f96d39b936f13302e3877abe5e4bfea0e715d2d45474d3d2f98df97065"
+        },
+        {
+          "phase": 0.375,
+          "frame": 18,
+          "worldVertexSha256": "5ff54c7e54f2582068f086fdbbf624fadc42301cfda8c9149e0c1bdde63cec50"
+        },
+        {
+          "phase": 0.625,
+          "frame": 30,
+          "worldVertexSha256": "8da80afc680b59825428556ae70598802f045080d6821a852d2dd02866c4c247"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "bytes": 151608,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/117.glb",
+      "blobSha": "24ba01e42dd0aa0c5fafb5e0ff72384b547cdbd9",
+      "sha256": "06fc7f4d20c3bc23983f5ba8bd60c96efe9d064729f2041cd745a85664f4583b",
+      "replacesSha256": "20b73e0114a339bf217efdf83afa67e549781db12d3ac3b778776d25771abb62",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 160552,
+      "derivativeSha256": "0a0a2cbb9e241d1cfe1ba4616d1278c2dbe1e3fd4217e640a641a84addae4f43",
+      "duration": 2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 9,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/117.png",
+      "motion": {
+        "vertices": 3289,
+        "bodyExtent": 1.2266969680786133,
+        "maxWorldDisplacement": 0.22678683640473768,
+        "relativeDisplacement": 0.18487600630492793,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6,
+          "worldVertexSha256": "bccc80ef104c96b9a9426a1722ae750c5ea2f0d46fefe846cb594cc54fc79fd4"
+        },
+        {
+          "phase": 0.375,
+          "frame": 18,
+          "worldVertexSha256": "0ae5fa47ac77f615b23fdea5f3a75d5292c22545d5b089e9a0474c089f55ae78"
+        },
+        {
+          "phase": 0.625,
+          "frame": 30,
+          "worldVertexSha256": "7abda256c29b550412ecbad12b72f5addef75e34968a0c77f21afe004539d1cd"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "bytes": 260240,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/118.glb",
+      "blobSha": "c78fd2c02f2fcce2fb0a2961016904d30175bd82",
+      "sha256": "2471a4c7f260882baaf5b769954313177305c5339667d059002b925f6694e313",
+      "replacesSha256": "bf3cbb6963d1a80e8529dc15bb8a12a5845a8b7bb319672f26d61f9a894dc881",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 269180,
+      "derivativeSha256": "04f5f3703d8f598868733124cbb0f6584f888116ec78137c028457ce1ab9c19c",
+      "duration": 2.3,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 17,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/118.png",
+      "motion": {
+        "vertices": 2626,
+        "bodyExtent": 0.4563682973384857,
+        "maxWorldDisplacement": 0.2795196448641576,
+        "relativeDisplacement": 0.6124869902101011,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6.8999999999999995,
+          "worldVertexSha256": "998895186b7b4d9f36e5f6a0a0fa02f7434ad67e70c599ce4fe5247852053b8b"
+        },
+        {
+          "phase": 0.375,
+          "frame": 20.7,
+          "worldVertexSha256": "eaa009725504d26edbd22e7644081804a34b91a329c949a0ef466814a39c9591"
+        },
+        {
+          "phase": 0.625,
+          "frame": 34.5,
+          "worldVertexSha256": "4a8751d7a906e31410a354212c89aadac394173590a557a8e7784cdd6950ce10"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "bytes": 318108,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/119.glb",
+      "blobSha": "009f3f1a259cc35c7d609fe67c8d4e7b260f1b29",
+      "sha256": "601cafd41dc353cf7bbf75a40dafc512b418b0d73c5bbbea15761a161101ac4a",
+      "replacesSha256": "2488f2af1e9e509a8fa353788f76eb0defbf3e1a18db98f09500851a4859ad4a",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 327404,
+      "derivativeSha256": "e9dcdb4b5869206a49b4f6c7fb29f2f93cc957bb8eb6effb23c468e7b1292192",
+      "duration": 2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 27,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/119.png",
+      "motion": {
+        "vertices": 2888,
+        "bodyExtent": 1.341627061367035,
+        "maxWorldDisplacement": 0.6702742633775918,
+        "relativeDisplacement": 0.4995980497699739,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 1.9868418181233914e-7
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6,
+          "worldVertexSha256": "7ee9eff3486e1b3e057304daf17cc5510ba0cb047b920bd570b34ce17ddc0efd"
+        },
+        {
+          "phase": 0.375,
+          "frame": 18,
+          "worldVertexSha256": "fdf6ca395ec1cd845a5957d8318e40c34aac41deb37e935e796f35779c14ac06"
+        },
+        {
+          "phase": 0.625,
+          "frame": 30,
+          "worldVertexSha256": "3b199ff833daf9218f1983709789511fa94f55291bea4e195ccc505e0ace7557"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "bytes": 66504,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/120.glb",
+      "blobSha": "8653260ccd68b8eafb6ac5e7a4057eee780ad17a",
+      "sha256": "dbc2b52a6835f1df5dd22f85e0fe9d53509a399014b69c0bbf01de9a423b4914",
+      "replacesSha256": "96ebf6b2f5f07ba9aba46d4db8bc9a97fb6c163da5b4a796611982b492aea5f1",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 72252,
+      "derivativeSha256": "b5a3ec9cf175401898ab79187a99a7a7c1ced8d69e15407d2d61b6b729cbe89f",
+      "duration": 2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 1,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/120.png",
+      "motion": {
+        "vertices": 1950,
+        "bodyExtent": 0.8471436500549316,
+        "maxWorldDisplacement": 0.040578756934374405,
+        "relativeDisplacement": 0.04790068004610923,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6,
+          "worldVertexSha256": "8f75031c6d60d669631e7b142a92d472ed2bb435182832c8fbf6cb3ad030919c"
+        },
+        {
+          "phase": 0.375,
+          "frame": 18,
+          "worldVertexSha256": "847b3c32ee9b0e09ecfb75e6b0721544e688b9809a626e11bda2bc48837088df"
+        },
+        {
+          "phase": 0.625,
+          "frame": 30,
+          "worldVertexSha256": "b6ec1334724fd53b4e6c6bd10aa52f4f290e0fbfaf9051030853ab525253c8bf"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "bytes": 88116,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/121.glb",
+      "blobSha": "b8cf16a9979c8498bc834073dddbe993a1340873",
+      "sha256": "56985d969306ed18c07b2859e8539738f2f656dfbbea6883c66e6a296abf7dd2",
+      "replacesSha256": "ab24bb12f7fc42cda90cdd02efd437c33e72db2054ba3d8f9c9b80905a722e2a",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 97384,
+      "derivativeSha256": "9ce98e0af5e0dc335daa085f3622e99b0071b227bcfa6319e5d96f18330f7c1c",
+      "duration": 1.9,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 3,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png",
+      "motion": {
+        "vertices": 2661,
+        "bodyExtent": 1.134734034538269,
+        "maxWorldDisplacement": 0.042084883286956386,
+        "relativeDisplacement": 0.03708788315676194,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 1.3138264053248544e-8
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 5.699999999999999,
+          "worldVertexSha256": "6a50675e1fe2f90e84bc4287e2ed6f394815c073f1fe61d4cebe55f38e06a1dd"
+        },
+        {
+          "phase": 0.375,
+          "frame": 17.099999999999998,
+          "worldVertexSha256": "ff5cce9e8c2f03cb3fbf1f126a0e1347f1ea3414a040e1298fe4710044452623"
+        },
+        {
+          "phase": 0.625,
+          "frame": 28.499999999999996,
+          "worldVertexSha256": "e48afc3f8c054d3bf3153a5f07f019f2c4c39c3cf78823fabe53ba651a507e51"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "bytes": 375472,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/124.glb",
+      "blobSha": "1fccd69fdfa1fa95dd9859e80c54039e6a0bc1f5",
+      "sha256": "7aa9389345574370a4bd92fbc3b113c848bd1c79ece6667844417f0ee0da2dae",
+      "replacesSha256": "6efddcd4f558a5ee71b7a09db5cf5512b177732adc1871441d0e273bdc836005",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 399748,
+      "derivativeSha256": "3fc4998cf96fd42d049a1cbfb3827d45524df23a596b6dffd621761f850c7edd",
+      "duration": 2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 40,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/124.png",
+      "motion": {
+        "vertices": 3644,
+        "bodyExtent": 1.5024870038032532,
+        "maxWorldDisplacement": 0.6029101517917995,
+        "relativeDisplacement": 0.40127478658094873,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6,
+          "worldVertexSha256": "9670629f3767e84115266d716a754c41170f57df46a34cdf75b10d3918d6225a"
+        },
+        {
+          "phase": 0.375,
+          "frame": 18,
+          "worldVertexSha256": "d3e1c738fc08a028b5af73352928fea3eaa40254a6171cc14a414071166b5209"
+        },
+        {
+          "phase": 0.625,
+          "frame": 30,
+          "worldVertexSha256": "e5c585585263b1ab320e099c31b89e7ef481cabc41b55276b55c7960e048c18f"
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "bytes": 163448,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/125.glb",
+      "blobSha": "fc24d9342ede998d119699ccba5b9eb3d4a6a61b",
+      "sha256": "346152c242751912558ebd563c35f5888bebab8b8d09e6c46242b0cd289a18b5",
+      "replacesSha256": "c9e74b6ec404acf2c519048100c909b1328b572cc9503bb99b292d7381b8e123",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 189336,
+      "derivativeSha256": "134d0eb34cf7bf69dc278f91faa63ae480b954680a13ddd6fbe260be515f82b6",
+      "duration": 1.3333334,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 2,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/125.png",
+      "motion": {
+        "vertices": 3301,
+        "bodyExtent": 1.212743396870792,
+        "maxWorldDisplacement": 0.7453496482589269,
+        "relativeDisplacement": 0.6145979851814752,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 9.829720768496755e-8
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 4.0000002,
+          "worldVertexSha256": "a05710b24b4a6839bdc6cb545dd2b2225fae84db24729d8dc5993b126c2480f2"
+        },
+        {
+          "phase": 0.375,
+          "frame": 12.0000006,
+          "worldVertexSha256": "47fbb80b9b6e49068fb5edbc6728d69f0fbccb491082f2ac4c7fc98d2117aaa8"
+        },
+        {
+          "phase": 0.625,
+          "frame": 20.000000999999997,
+          "worldVertexSha256": "43e84bf33f37da184bd52922de6e6de160fadcdaa82f2e20380496f7f1cdeabe"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "bytes": 351088,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/126.glb",
+      "blobSha": "666bcae9d355a6db98d037a9d166b58dd929bc97",
+      "sha256": "f519cb6914c465829370719cb6d5f391f08e821d13b54579cc8d70c8f0613bdf",
+      "replacesSha256": "ee580134f3d17f9342d0e5ad4aaedf87fb0900c2ffcf171e347decf6cd5c6f5f",
+      "customNodes": [],
+      "customMaterials": [
+        {
+          "name": "pm0126_00_00-FireCore",
+          "extras": {
+            "homeStencil": {
+              "role": "core",
+              "ref": 1
+            }
+          }
+        },
+        {
+          "name": "pm0126_00_00-FireMask",
+          "extras": {
+            "homeStencil": {
+              "role": "mask",
+              "ref": 1
+            }
+          }
+        }
+      ],
+      "status": "held",
+      "holdReason": "Custom material handling required"
+    },
+    {
+      "id": 128,
+      "bytes": 244308,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/128.glb",
+      "blobSha": "221b599e5ec1b24487e71871354d7cebf92a9cda",
+      "sha256": "a4f4f536796a3ed3ce0a11a799987797778b39e428ee7bba021d36a627942121",
+      "replacesSha256": "92c004fc425b27159f266a5a019b3a84368bdb5d069fd33becec51718f914296",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 262760,
+      "derivativeSha256": "c7d6501f198a75dfab1527f2b1ca87e273d783ba720cf1c3380dac0bd9a33a28",
+      "duration": 1.6,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 24,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/128.png",
+      "motion": {
+        "vertices": 3237,
+        "bodyExtent": 2.5938632488250732,
+        "maxWorldDisplacement": 1.3168124877482013,
+        "relativeDisplacement": 0.5076645765133031,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0.00002962627504316387
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 4.800000000000001,
+          "worldVertexSha256": "94ca005dfb633ddd088ac1244f3ffc2d0277ec0b5396e20966de6bdd16e0a085"
+        },
+        {
+          "phase": 0.375,
+          "frame": 14.400000000000002,
+          "worldVertexSha256": "477e33790a65bc3e434e0c5030797be648fbf8daabb0160f8dd9e189beb60b35"
+        },
+        {
+          "phase": 0.625,
+          "frame": 24.000000000000004,
+          "worldVertexSha256": "9c895e9db7c5bf6c22e225738f751eafe90e2e6264cf885e2779c56f5c87f5e2"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "bytes": 105788,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/131.glb",
+      "blobSha": "c2d03be328194297313f9171507b85a674ec066f",
+      "sha256": "7da2ca6105f07c2101715bcd5a3441b6c855a745c8bb3f00ff6fedbe270d4249",
+      "replacesSha256": "d4165d082f4419a84653ea6ab835adc1c977c50895f28915775528ebbd1349f1",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 113040,
+      "derivativeSha256": "326f721318d1ecd254eb5b733845f5738f013df45b6b64e7ca99f6d7639f2db9",
+      "duration": 3,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 0,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png",
+      "motion": {
+        "vertices": 3181,
+        "bodyExtent": 2.6671507358551025,
+        "maxWorldDisplacement": 0.18266231485387313,
+        "relativeDisplacement": 0.06848593609588798,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 2.95843176256678e-7
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 9,
+          "worldVertexSha256": "d58bae49812a2e12c9972f4adf8a47d3c9a64bf1a65da1294a2d7543b9bd0b9c"
+        },
+        {
+          "phase": 0.375,
+          "frame": 27,
+          "worldVertexSha256": "601401f396eb03535a5e620e23f5adf65bb57083ae06878b63d820ec039115c9"
+        },
+        {
+          "phase": 0.625,
+          "frame": 45,
+          "worldVertexSha256": "77c4b0d327c6e6a769c358e1b391db88794a623c4bb4a1949ab70e1b719a1cfe"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "bytes": 68096,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/132.glb",
+      "blobSha": "a8284c61e2542a43a203a66b4dd765c6d700a927",
+      "sha256": "ec354a9002d7d55cb430cd98bea5045ea53eec23018b6b1f055082795c332175",
+      "replacesSha256": "b5b46d5618ba46108ad1e3d92d388c93477e9e0aec4916eee0cec9a25623431a",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 71952,
+      "derivativeSha256": "7f42d993f7401e4509482d39e056f0d15b008c85397bb91d32022c3cd2e63c92",
+      "duration": 2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 0,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
+      "motion": {
+        "vertices": 1834,
+        "bodyExtent": 0.4507463872432709,
+        "maxWorldDisplacement": 0.053610350202961135,
+        "relativeDisplacement": 0.11893683836455747,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6,
+          "worldVertexSha256": "2aed34f08c75df9765d0b1e0d388b6601d23462504f892cb4899dd4638b04f35"
+        },
+        {
+          "phase": 0.375,
+          "frame": 18,
+          "worldVertexSha256": "589c1e0ab112fcae63eda075ce57243665f2e06eb22d4826632e64f38e8634cc"
+        },
+        {
+          "phase": 0.625,
+          "frame": 30,
+          "worldVertexSha256": "557b6bca4dda788574f348e39a978343349355e186e83bd936b65d4af638794a"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "bytes": 152496,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/133.glb",
+      "blobSha": "dac4959aa1d2fc7bc0d33354b1e6f1d500da9b54",
+      "sha256": "ba43da23243f09e57bfa731ad9e944d9661a1bbcab4d274ebeb4e067c8cd39c0",
+      "replacesSha256": "f0c8eb0876da64ac4e6f62de361b2362fb8dd45168e89903c6bda026be0ef40c",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 165532,
+      "derivativeSha256": "355130c30b5d3ea148724c4891e9b7c99357e9fb0ba18eec53fbcf1e4211596a",
+      "duration": 0.8666667,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 19,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
+      "motion": {
+        "vertices": 3323,
+        "bodyExtent": 0.4459555596113205,
+        "maxWorldDisplacement": 0.11301495836606879,
+        "relativeDisplacement": 0.2534220191459632,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 1.0311658684625405e-7
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 2.6000001,
+          "worldVertexSha256": "377311ffb801838f40219ac4f983fa1bf02d3767e3606af68e906d62a12f8684"
+        },
+        {
+          "phase": 0.375,
+          "frame": 7.8000003,
+          "worldVertexSha256": "68a8c4401f52f7fdd8a56094b1c6a21a64e14a48d2d5d0005867df12bc8de7f1"
+        },
+        {
+          "phase": 0.625,
+          "frame": 13.000000499999999,
+          "worldVertexSha256": "877ad02f929dd0f820e00b7dc9d49454a92944556ab5c7e2b78d98ffe467056f"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "bytes": 147628,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/134.glb",
+      "blobSha": "d1a0c9194478a41e495aee267085aae6e72a7cf2",
+      "sha256": "cd5571463bc898b6910877d509732cf9e0d5c05bf3faa035f9c13f3239cdb2ff",
+      "replacesSha256": "44101789d8141a5435b1a0660c90da30ae10bb05d932093000a95e7140e43399",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 161824,
+      "derivativeSha256": "9067fb836b4aeda595635541439fe9739edc72f3a900a5ebe1bbba01dc766722",
+      "duration": 2.1333334,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 0,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png",
+      "motion": {
+        "vertices": 3742,
+        "bodyExtent": 1.736893117427826,
+        "maxWorldDisplacement": 0.5256874395145129,
+        "relativeDisplacement": 0.3026596364737781,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0.000005350480552027669
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6.400000200000001,
+          "worldVertexSha256": "34dacaf24f0f27fc92adf08bec9effd4ab0d691a6c147d96679ec2d639412558"
+        },
+        {
+          "phase": 0.375,
+          "frame": 19.200000600000003,
+          "worldVertexSha256": "cebec86dd928ece8912c5a11b677bbe92c64c603fde0abfcc6264a5cb60b585b"
+        },
+        {
+          "phase": 0.625,
+          "frame": 32.000001000000005,
+          "worldVertexSha256": "2dfd9d23b18fd919c4e054f1e54b3b897cfa26bcd3d3ddf77f6ebb98d5b17436"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "bytes": 138244,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/135.glb",
+      "blobSha": "45cf5ecd5cd906e0ed4ade520c9e0a35dc32c999",
+      "sha256": "5fa251a19c3632381ba9bb4cc6ba180ac704c04291453f722203512f130c8dfa",
+      "replacesSha256": "4c745afc675f66cd17259cea1325b684bf2b17c8162c3246935b9857c69d2faf",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 154896,
+      "derivativeSha256": "abd05fa38e2980e02fcc0409a431e119e58c49408a169f0c059fb6e56605217d",
+      "duration": 1.3333334,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 6,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png",
+      "motion": {
+        "vertices": 3338,
+        "bodyExtent": 0.8201988935470581,
+        "maxWorldDisplacement": 0.038296305591323174,
+        "relativeDisplacement": 0.046691486531645704,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 4.0000002,
+          "worldVertexSha256": "3809a7c1e394fe99b9550d63ce35ed531f58f120ae7204b6918548d7d9dc303f"
+        },
+        {
+          "phase": 0.375,
+          "frame": 12.0000006,
+          "worldVertexSha256": "7ac21abdef8ff06b8948ee082899a5fbacfca4e9e84bcb1d222acd47cfc9b06d"
+        },
+        {
+          "phase": 0.625,
+          "frame": 20.000000999999997,
+          "worldVertexSha256": "d8ffffe6fb8d52d8ab1b3faae9cf140d3e9d6c2244b8ef7ac91d2bb9dd102c65"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "bytes": 164696,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/136.glb",
+      "blobSha": "fb6c8f17527def9c2acd4b4168b06bff4ae48433",
+      "sha256": "634f84bb5eaf2467b1c6fd8527e9b5f239d53e75f437fef07a12eb1a26154287",
+      "replacesSha256": "8f7bfd8fe7e8eb719a569ca9f660951acf373423fd2eef2a0d6e0e84fb5a0762",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 177876,
+      "derivativeSha256": "ee7ec75ecd75eee1e4fc92f40f6bae2b648cf41bb21899c0777edaeee590af86",
+      "duration": 1,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 22,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png",
+      "motion": {
+        "vertices": 4020,
+        "bodyExtent": 1.3146110391244292,
+        "maxWorldDisplacement": 0.1842457633881678,
+        "relativeDisplacement": 0.14015230201541673,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 3,
+          "worldVertexSha256": "ce4377286fea64727899c7512a80749176e08819a5683a67f8cec39f43e2c72d"
+        },
+        {
+          "phase": 0.375,
+          "frame": 9,
+          "worldVertexSha256": "03fe67efb45fbf289d1248fdc25ddc601a173f919c4d769a97af295008dccddc"
+        },
+        {
+          "phase": 0.625,
+          "frame": 15,
+          "worldVertexSha256": "e59c4b3ba9e8027a1e603ceb0bcca664ceee01ea36fa4690ece7bb321f815091"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "bytes": 85960,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/140.glb",
+      "blobSha": "be732c79db13c23709b8636c1b026bccab52f9d2",
+      "sha256": "1db9bd60058f7591fc3c9add842433639c8ed1179e842e856dc95407b1049929",
+      "replacesSha256": "7080d8c0d965b25d5ce52a2311024d5778b9be055deea7ed221b82a6996681e1",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 90820,
+      "derivativeSha256": "d70c3e68b6c06f447c1b32201b0217c62b7cd5f026f6266ce0c1721ac73d0694",
+      "duration": 2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 1,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/140.png",
+      "motion": {
+        "vertices": 1762,
+        "bodyExtent": 0.5214326977729797,
+        "maxWorldDisplacement": 0.00820250551347719,
+        "relativeDisplacement": 0.015730708006056766,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 6,
+          "worldVertexSha256": "0539f352c39b68adece58dc2ce9b1347c4a3c9239ad385956ff82c493802d135"
+        },
+        {
+          "phase": 0.375,
+          "frame": 18,
+          "worldVertexSha256": "dfa8583cdda57d4d876c2a6a62955bb02d83802359818a1106b31c985060e9e2"
+        },
+        {
+          "phase": 0.625,
+          "frame": 30,
+          "worldVertexSha256": "e68692df767d9d8bbb4773c71e6450722e4d7ee53a90b120219e18e15b5ab670"
+        }
+      ],
+      "appearanceNote": "Three standard deformed views plus a near-front view inspected. Pink eyes are present under the shell; higher camera elevation obscures them anatomically."
+    },
+    {
+      "id": 141,
+      "bytes": 101108,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/141.glb",
+      "blobSha": "0b8149455dcbf2d3ed061f0994322e140312a3f4",
+      "sha256": "1f073698ce5182f7f95715af68f2b49ffd8cb8ac65b2ab99e9f4caf9a2ffdd82",
+      "replacesSha256": "ab89a17d95fddfd7707f5061abfcb058dbb1776a8e88754c9bf8fa1e40d34559",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 110940,
+      "derivativeSha256": "6365267da61d9be727d1b4fbf3a543e9565f104e3ebfe615d9ec774248a06413",
+      "duration": 1.2,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 0,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/141.png",
+      "motion": {
+        "vertices": 3855,
+        "bodyExtent": 1.2845582459121943,
+        "maxWorldDisplacement": 0.22616336416722488,
+        "relativeDisplacement": 0.1760631445766954,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0.0000026489178078714064
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 3.5999999999999996,
+          "worldVertexSha256": "118dfc8db6eb25ba259336ba1c517007386471e25bccabb73e040af41aa12f5e"
+        },
+        {
+          "phase": 0.375,
+          "frame": 10.799999999999999,
+          "worldVertexSha256": "aee7dd1e3a45388248e9aab0654e2d5745fde26fc839e92b2b58177007a27d38"
+        },
+        {
+          "phase": 0.625,
+          "frame": 18,
+          "worldVertexSha256": "4c82981a63cced11303e194487a6035088f31a5ca0d8d5651166ec329658be39"
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "bytes": 137140,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/143.glb",
+      "blobSha": "1eeb58c550b961cc166b140751e1090b22faf516",
+      "sha256": "9a1de18bc6f1f9cd288d0a6a03b80c794f1e5a9f9e932d5855f9d3bfc43f2d3d",
+      "replacesSha256": "7cb9b9774019d008d82de381ba2e9674051a9a3cd2f0236e9ce12fd27d685d97",
+      "customNodes": [],
+      "customMaterials": [],
+      "preparedBytes": 150412,
+      "derivativeSha256": "99c122cfbb0690add1ec1442cc303f22e02ccc2dffd0bbf409029c6ad974170a",
+      "duration": 2.5,
+      "animation": "HOME Idle",
+      "removedGuardKeys": 0,
+      "normalizedMaterials": 0,
+      "structureBudget": "pass",
+      "textureBudget": "pass",
+      "geometryByteDifferences": 0,
+      "retainedAnimationByteDifferences": 0,
+      "texturesUnchanged": true,
+      "restTransformsUnchanged": true,
+      "skinBindingsUnchanged": true,
+      "status": "approved-for-protected-preview",
+      "visualReviewed": true,
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+      "motion": {
+        "vertices": 3108,
+        "bodyExtent": 2.328150749206543,
+        "maxWorldDisplacement": 0.073359718529515,
+        "relativeDisplacement": 0.031509866169326335,
+        "meaningfulMotion": true,
+        "loopRelativeDisplacement": 0
+      },
+      "poses": [
+        {
+          "phase": 0.125,
+          "frame": 7.5,
+          "worldVertexSha256": "e9c97c3afaf442258c1c6b4fbb0ff9b32599262352d0d247b216fa8b48c55829"
+        },
+        {
+          "phase": 0.375,
+          "frame": 22.5,
+          "worldVertexSha256": "81cb0a350528c6708f1a1910ba93b5b054f3a373c045dc94293c197cbb3b0881"
+        },
+        {
+          "phase": 0.625,
+          "frame": 37.5,
+          "worldVertexSha256": "f10f61c8e0b729bc8203f7fdcb74d4f5bfa0532065b90a202b93dc06cd53e903"
+        }
+      ]
+    }
+  ]
+}
