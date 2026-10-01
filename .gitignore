@@ -10,3 +10,7 @@ data/
 public/model-runtime/
 public/release.json
 public/models/attribution.json
+
+# Extracted models exist only in the protected preview build output.
+.generated/
+public/models/home-preview-*.glb

@@ -1,7 +1,10 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null };
+export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; provider?: string };
+declare const __POKEDEX_PREVIEW_ASSETS__: ModelAsset[];
+const previewAdmission: ModelAsset[] = typeof __POKEDEX_PREVIEW_ASSETS__ === 'undefined' ? [] : __POKEDEX_PREVIEW_ASSETS__;
+export const modelPreviewEnabled = previewAdmission.length > 0;
 // Exact source identities observed in the supplied screenshot and browser rendering.
 // Static models are allowed; absence of animation alone is not a pose failure.
 export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): string | undefined {
@@ -29,17 +32,17 @@ export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): str
 
 export const MODEL_TRANSFER_LIMIT = 750_000;
 export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
-export function admittedModel(id: number, entries: ModelAsset[] = admission): ModelAsset | undefined {
+export function admittedModel(id: number, entries: ModelAsset[] = [...admission, ...previewAdmission]): ModelAsset | undefined {
   // Source-level stray props/black geometry were verified for Gholdengo.
-  if (id === 1000) return undefined;
-  return entries.find(asset => asset.id === id && asset.admitted && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
+  return entries.find(asset => asset.id === id && asset.admitted &&
+    (id !== 1000 || (asset.previewOnly && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
     (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) || /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
     (asset.sha256 ? /^[a-f0-9]{64}$/.test(asset.sha256) : /^[a-f0-9]{40}$/.test(asset.blobSha)));
 }
 export function modelEdition(species: Pokemon): CardEdition | undefined {
   const model = admittedModel(species.id);
   return model ? { ...officialEdition(species), cardId: `model-${species.id}`, sourceType: 'model',
-    set: 'Interactive 3D', artist: model.credit, imageProvider: 'Pokemon-3D-api assets', tcgdexUrl: model.source,
+    set: 'Interactive 3D', artist: model.credit, imageProvider: model.provider ?? 'Pokemon-3D-api assets', tcgdexUrl: model.source,
     artistEvidenceMethod: model.license, artistEvidenceUrl: model.source } : undefined;
 }
 
