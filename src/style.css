@@ -273,4 +273,4 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .model-recovery { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; font-size: 12px; padding: 8px; text-align: center; }
 .model-recovery button { min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 24px; background: #141a25; color: #fff; font: inherit; }
 
-.preview-rights-notice { position: absolute; z-index: 12; top: calc(74px + env(safe-area-inset-top)); left: var(--edge); right: var(--edge); padding: 8px 12px; border: 1px solid #ffffff30; border-radius: 9px; background: #12231bee; color: #fff; font-size: 10px; line-height: 1.4; text-align: center; text-underline-offset: 2px; }
+.preview-rights-notice { position: absolute; z-index: 12; top: calc(140px + env(safe-area-inset-top)); left: var(--edge); right: var(--edge); padding: 8px 12px; border: 1px solid #ffffff30; border-radius: 9px; background: #12231bee; color: #fff; font-size: 10px; line-height: 1.4; text-align: center; text-underline-offset: 2px; }
