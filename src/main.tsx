@@ -148,6 +148,7 @@ function App() {
     } });
   const feedRef = speciesScroll.scroller;
   const overlayRef = useRef<HTMLDivElement>(null);
+  const [modelControlsTarget, setModelControlsTarget] = useState<HTMLDivElement | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const drawerScrollRef = useRef<HTMLDivElement>(null);
   const pendingFocus = useRef<HTMLElement | null>(null);
@@ -631,7 +632,7 @@ function App() {
             }) : cards} selected={trail ? trailIndex : cardIndex} suspended={Boolean(drawer)} onMotion={setArtMoving} onSelect={selectArtwork}
               render={(frame, selected, moving, inspectGallery) => {
                 const species = pokemon[frame.pokemonId - 1] ?? item;
-                return frame.sourceType === 'model' && selected && !failedModels.includes(species.id) && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} suspended={Boolean(drawer) || moving || speciesScroll.moving} onInspect={inspecting => {
+                return frame.sourceType === 'model' && selected && !failedModels.includes(species.id) && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} controlsTarget={modelControlsTarget} suspended={Boolean(drawer) || moving || speciesScroll.moving} onInspect={inspecting => {
                   inspectGallery(inspecting);
                   setInspectingModel(inspecting);
                   const feed = feedRef.current; if (!feed) return;
@@ -655,7 +656,7 @@ function App() {
       })}
     </div>
 
-    <div ref={overlayRef} className="feed-overlay">
+    <div ref={overlayRef} className={`feed-overlay ${card.sourceType === 'model' && !failedModels.includes(activePokemon.id) ? 'has-model-controls' : ''}`}>
       {branch && <button className="branch-back" onClick={goBack} aria-label={`Back to ${branch.originLabel ?? 'previous view'}`}><Icon name="left" /> Back to {branch.originLabel ?? 'previous view'}</button>}
       <div className={`feed-caption ${artMoving ? 'caption-in-motion' : ''}`} key={activePokemon.id} inert={artMoving}>
         <span className="species-types">{trail ? trail[trailIndex]?.context : activeVisit.context ?? activePokemon.types.join(' · ')}</span>
@@ -663,6 +664,7 @@ function App() {
         {card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? <span className="credit-link">Official art · PokéAPI</span> : card.sourceType === 'model' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>3D · {card.artist} <span>›</span></button> : card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :
           <button className="credit-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} <span>›</span></button>}
       </div>
+      <div ref={setModelControlsTarget} className={`model-controls-row ${artMoving ? 'caption-in-motion' : ''}`} inert={artMoving} />
       {continuationKey && <button className={`continuation continuation-${candidate?.state ?? 'loading'}`} onClick={acceptCandidate} disabled={!candidate || candidate.state === 'loading' || candidate.state === 'exhausted'} aria-label={candidate?.state === 'ready' ? `Continue to ${candidate.card?.title} by ${candidate.card?.artist}. ${candidate.context}` : candidate?.state === 'search' ? 'Search next page for related artwork' : candidate?.state === 'error' ? 'Retry related artwork' : undefined}>
         {candidate?.state === 'ready' && candidate.card ? <><img src={candidate.card.image} alt="" /><span><small>DISCOVER NEXT · {candidate.context}</small><strong>{candidate.card.title}</strong><em>Art by {candidate.card.artist}</em></span><Icon name="down" /></> :
           <span><small>RELATED ARTWORK</small><strong>{candidate?.state === 'search' ? 'Search more source editions' : candidate?.state === 'exhausted' ? 'No unseen art in checked sources' : candidate?.state === 'error' ? 'Retry related artwork' : 'Looking for the next artwork…'}</strong>{candidate?.partial && <em>Some source editions were unavailable</em>}{candidate?.error && <em>{candidate.error}</em>}</span>}

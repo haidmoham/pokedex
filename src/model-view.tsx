@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import type { ModelViewerElement } from '@google/model-viewer';
 import { fetchModel, validateModelTextures, ModelAsset } from './model-policy';
 import { artwork } from './feed-model';
@@ -21,7 +22,7 @@ function hasModelRenderer() {
 }
 
 // Only the active admitted view mounts this component. No adjacent GLB fetches.
-export function ModelView({ asset, name, suspended = false, onFallback, onFailure, onInspect }: { asset: ModelAsset; name: string; suspended?: boolean; onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void }) {
+export function ModelView({ asset, name, suspended = false, controlsTarget, onFallback, onFailure, onInspect }: { asset: ModelAsset; name: string; suspended?: boolean; controlsTarget: HTMLDivElement | null; onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void }) {
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<ModelViewerElement | null>(null);
   const inspectButton = useRef<HTMLButtonElement>(null);
@@ -138,7 +139,7 @@ export function ModelView({ asset, name, suspended = false, onFallback, onFailur
     onWheel={event => { if (inspecting) event.stopPropagation(); }} onKeyDown={event => { if (!inspecting) return; event.stopPropagation(); if (event.key === 'Escape') exit(); }}>
     {!loaded && <img className="model-poster" src={artwork(asset.id)} alt={`${name}, official artwork while 3D loads`} />}
     <div className="model-host" ref={host} aria-hidden={!loaded} style={{ visibility: loaded ? 'visible' : 'hidden' }} />
-    <div className="model-actions">
+    {controlsTarget && createPortal(<div className="model-actions">
       {inspecting && <button onClick={() => setAngle(value => value - 30)} aria-label="Rotate model left">↶</button>}
       {loaded ? <button ref={inspectButton} onClick={() => inspecting ? exit() : setInspecting(true)}>{inspecting ? 'Done inspecting' : 'Inspect 3D'}</button> : <span role="status">Preparing 3D…</span>}
       {inspecting && <button onClick={() => setAngle(value => value + 30)} aria-label="Rotate model right">↷</button>}
@@ -148,6 +149,6 @@ export function ModelView({ asset, name, suspended = false, onFallback, onFailur
         {pose === null ? 'Still poses' : `Pose ${pose + 1}/${IDLE_POSE_PHASES.length}`}
       </button>}
       <button onClick={() => fallback.current()}>Use official art</button>
-    </div>
+    </div>, controlsTarget)}
   </div>;
 }
