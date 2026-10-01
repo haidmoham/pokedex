@@ -88,3 +88,8 @@ Of the original 54 absent-catalog species, 45 now have approved preview replacem
 ### Fifth protected-preview batch
 
 The next 24 source files pass decoded budgets and native motion/loop measurements. Twenty-three pass appearance review, increasing the protected candidate to **631 species and 140 native idle clips** (104 preview-only additions). Paras remains held because its eyes lose the reference artwork's pupils; successful geometry decoding alone does not clear that material defect. Cumulative motion records are now bound to both source and derivative SHA256. Production stays at 527; the 119-test suite is unchanged. See `preview-source-review-batch5-2026-10-01.json`.
+
+
+### Sixth protected-preview batch
+
+Twenty-two more source assets pass decoded budgets, appearance review, measured native motion and loop closure. Rapidash is held for its 937,828-byte source and custom flame-stencil passes; Grimer is held for animated visibility controls. The protected candidate reaches **653 species and 162 native idle clips**, with 126 preview-only additions. All retained geometry/motion remains unchanged from pinned sources. Production stays 527; tests remain 119. See `preview-source-review-batch6-2026-10-01.json`.

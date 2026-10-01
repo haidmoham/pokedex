@@ -1146,6 +1146,248 @@
       "loopRelativeDisplacement": 9.555275715675389e-08,
       "sourceSha256": "5939cc9d407bf0e30333ad932c2d8abe9874174bac40c6758c76680f87e8d81f",
       "derivativeSha256": "eea3030e0e60e234fd75b992b41ebce37efd08116c1b2ef0343461a7f3f43539"
+    },
+    {
+      "id": 62,
+      "vertices": 2922,
+      "bodyExtent": 1.5127012133598328,
+      "maxWorldDisplacement": 0.055333300611654375,
+      "relativeDisplacement": 0.03657913414953545,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "6daca377d4f2c852795ee612a9d2532f8d373fa8ef7695e2764e5349231cfc8a",
+      "derivativeSha256": "bff3781ab1c564f02d8d7e0548b0345381d165e14bfbc5f20c2ceb6ac739f2ee"
+    },
+    {
+      "id": 63,
+      "vertices": 3061,
+      "bodyExtent": 1.1234337091445923,
+      "maxWorldDisplacement": 0.17521029884679162,
+      "relativeDisplacement": 0.1559596239819087,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "6f941fa2805d1f1aac52281b21a93a86578a2b789074759d2d63c25ca2682dbd",
+      "derivativeSha256": "1fb47e85f18a656470d2c64244b304a78da0d86114f6f72633ac01cef9570d66"
+    },
+    {
+      "id": 64,
+      "vertices": 3741,
+      "bodyExtent": 1.78456449508667,
+      "maxWorldDisplacement": 0.23720134323052464,
+      "relativeDisplacement": 0.13291833603301886,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.1422985780939355e-06,
+      "sourceSha256": "263d4735b583be987b72f52abe179f46e85a5a08d898bbdad40b0f854eed8904",
+      "derivativeSha256": "fa30a1ebc1a3fcc173ac66818dc39df9ec023fba537b3dc0b3ae148b6f614579"
+    },
+    {
+      "id": 65,
+      "vertices": 3474,
+      "bodyExtent": 1.4598822216503322,
+      "maxWorldDisplacement": 0.18829481053204203,
+      "relativeDisplacement": 0.128979453095321,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "899651eefcd2b19f8f9d9077a90f6a0b018252ac287e0c9623b36cd3da45cc64",
+      "derivativeSha256": "4c91597b0676ed06d351d82519964cd6f8bc2a076362a9e1967d21608d939d1f"
+    },
+    {
+      "id": 66,
+      "vertices": 2996,
+      "bodyExtent": 0.7744715271983296,
+      "maxWorldDisplacement": 0.04768882568441753,
+      "relativeDisplacement": 0.06157595729430243,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "59e6d524fcfa6b4012e48fc711b589665d21b1773a253042e6722ab992772b85",
+      "derivativeSha256": "eae6c5f3945eb91d68617c844bc95932144c02d91d4c617df242f1e779276c26"
+    },
+    {
+      "id": 67,
+      "vertices": 3704,
+      "bodyExtent": 1.3991020414978266,
+      "maxWorldDisplacement": 0.059827152254631345,
+      "relativeDisplacement": 0.04276110711023095,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "40872db70ad4deacc31a2823a9c34335da555b922d183fada0e5e7b679cb8712",
+      "derivativeSha256": "d0ef72746e60439d46b01fa3ae91f0542ae007219e5752da9acb97f3cc02d5ed"
+    },
+    {
+      "id": 68,
+      "vertices": 4294,
+      "bodyExtent": 1.50152920326218,
+      "maxWorldDisplacement": 0.19728243139776822,
+      "relativeDisplacement": 0.13138767529073558,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 7.939192210966694e-08,
+      "sourceSha256": "78184478346045de9f652f1675fcfa9509ab22ae981c943b1d6aebfd0dcdafcd",
+      "derivativeSha256": "e21a2010ca2dc816afd946d026bd943a1aed7de0481de34bc4ff7748f5e03a7a"
+    },
+    {
+      "id": 69,
+      "vertices": 2516,
+      "bodyExtent": 0.5870641469955444,
+      "maxWorldDisplacement": 0.19278048790286462,
+      "relativeDisplacement": 0.32838061886332115,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "1dd0d9af29f17974c46c2c6a9bf5231e837e7a0855299758828d82072db251a0",
+      "derivativeSha256": "5ade84647c33d93fd937b7fb2bd6447510fedbde035c5ddab1f8eddaf8781620"
+    },
+    {
+      "id": 70,
+      "vertices": 1975,
+      "bodyExtent": 1.4492574334144592,
+      "maxWorldDisplacement": 0.22596071853620978,
+      "relativeDisplacement": 0.1559148246035523,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "5c43612f88cd23af6a9470354150befdd068850c47bbb25dddac05e53ce4fd0b",
+      "derivativeSha256": "0090ae5d4e1854efabe3b610ba7df93393953f463d7505b898c3a3cca8eab0f2"
+    },
+    {
+      "id": 71,
+      "vertices": 2597,
+      "bodyExtent": 2.526126980781555,
+      "maxWorldDisplacement": 0.8266911990186051,
+      "relativeDisplacement": 0.32725639103179055,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "81d88463ea32cb69c05b6dbb4ec2f08bd9b5128cbb02dd4c942d67360fb7ef99",
+      "derivativeSha256": "1a6435cd41c15d77fdb77653da8a4aae097acae194eb99ce333b248bfa2c6499"
+    },
+    {
+      "id": 72,
+      "vertices": 2703,
+      "bodyExtent": 0.8910433799028397,
+      "maxWorldDisplacement": 0.20378641568706996,
+      "relativeDisplacement": 0.22870538099872426,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "fe036661acb446e99998297f642fd34ae2a224ce4c6e0dac6a02c00ee5f2991f",
+      "derivativeSha256": "abc9828a04c43a917aef94f18ac5a4f509d23498bd0fa494db5dbd73433a5bae"
+    },
+    {
+      "id": 73,
+      "vertices": 3035,
+      "bodyExtent": 1.578430026769638,
+      "maxWorldDisplacement": 0.38736337970725826,
+      "relativeDisplacement": 0.2454105491771613,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "733cb7d03046f027aab32e6edd661f9590efcda77ded59bc1c7c8f876032f27d",
+      "derivativeSha256": "0767ba124b7dbb10c850d7ba8759247c68d958d12479a0ee53f45553b46832cb"
+    },
+    {
+      "id": 74,
+      "vertices": 2863,
+      "bodyExtent": 1.2886835932731628,
+      "maxWorldDisplacement": 0.34270182465821614,
+      "relativeDisplacement": 0.2659317046070078,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "7ac0ad9332e3bdf9796e3297cbd33a8f68ac2bae3d4bbcadbb9b2f93bcdee48a",
+      "derivativeSha256": "f9f80abbc8dc5026f74ed92e85b6f618157ca1ea51766cf1627ce5a026879a8b"
+    },
+    {
+      "id": 75,
+      "vertices": 3328,
+      "bodyExtent": 1.6215187311172485,
+      "maxWorldDisplacement": 0.17166846409220873,
+      "relativeDisplacement": 0.10586893681698442,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "6f140e69cb0f30b5c3f20b797918153e782b5b6bde3170596be37ab4458dd044",
+      "derivativeSha256": "02196198078dc85299f0b60c78794ba5bbd42f763e197a5d1a2ef40ad1b06a26"
+    },
+    {
+      "id": 76,
+      "vertices": 4064,
+      "bodyExtent": 1.6424019932746887,
+      "maxWorldDisplacement": 0.07686531795535849,
+      "relativeDisplacement": 0.04680055082136211,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 4.989207226476478e-07,
+      "sourceSha256": "2bb81a9632d0b3477a4d8c11aef0d68469a51231d7b89514bd2e6c61cd3a0fe5",
+      "derivativeSha256": "598c6611d74e9c2ca50e940a94ecb1d074744271d03da4f8886edcc832866bcd"
+    },
+    {
+      "id": 79,
+      "vertices": 2596,
+      "bodyExtent": 1.5385907888412476,
+      "maxWorldDisplacement": 0.06360448988023824,
+      "relativeDisplacement": 0.041339445381796694,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.2195433065495993e-07,
+      "sourceSha256": "af794702579c9e9d789f750d95cd8e2155bca2e31faa090a908df24faab90b65",
+      "derivativeSha256": "49f6f6952dfcdadb371ae01185b894399089225fbd170b2a7f0bd092ff0674ab"
+    },
+    {
+      "id": 80,
+      "vertices": 3468,
+      "bodyExtent": 1.9014119505882263,
+      "maxWorldDisplacement": 0.12230485095285061,
+      "relativeDisplacement": 0.06432317358424829,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "a10914601b259ea0b2691f7284f49e10c85d140de8ab8728cd9405bdded220c9",
+      "derivativeSha256": "0f95986c9fcaa38765b9a5aa08c93f9af91bd3775679fddb459357c9cae5d83d"
+    },
+    {
+      "id": 81,
+      "vertices": 2048,
+      "bodyExtent": 0.6284170746803284,
+      "maxWorldDisplacement": 0.060926386484490294,
+      "relativeDisplacement": 0.0969521499960566,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "5fad062ee8ebc3fea2295fd0daf1d43092912b506c8b2099b6b7a90bef898d00",
+      "derivativeSha256": "dbaa870005e9a5e4d53788ed1a5bf0f781ffec8d17e785342e6db24a478cf1f5"
+    },
+    {
+      "id": 84,
+      "vertices": 3449,
+      "bodyExtent": 1.3596493564546108,
+      "maxWorldDisplacement": 0.32716106088272107,
+      "relativeDisplacement": 0.24062164213854256,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "d340e10eef014faefa5d9c1bcf7cad05783ce20e2264a4dbeade943d4d8a7af8",
+      "derivativeSha256": "a3c64a5bc92a4351bb5e20a5d574123f982386a698bead34c64ddcfeb0484c5c"
+    },
+    {
+      "id": 85,
+      "vertices": 4242,
+      "bodyExtent": 1.8052941504865885,
+      "maxWorldDisplacement": 0.33360818617163546,
+      "relativeDisplacement": 0.18479436499681598,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "0a4b59756c97ca49f2dfe065760e5bc78d6280f4a123ae71e7a35c1e5d3585b8",
+      "derivativeSha256": "298858ea022559aaea52e291190386dcead7851cd6ad0384991aa6122d5b0f55"
+    },
+    {
+      "id": 86,
+      "vertices": 2855,
+      "bodyExtent": 1.084859311580658,
+      "maxWorldDisplacement": 0.10476270819891721,
+      "relativeDisplacement": 0.09656801308759218,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "ac0f0deaadd6d9be5dea57d525be9a13121485a8c95b28ac54d73f5aa5af3996",
+      "derivativeSha256": "d65d8fc27a55e33e5c73301759aeefc12bf911ace4fd9d0edc54ef69495ac726"
+    },
+    {
+      "id": 87,
+      "vertices": 2937,
+      "bodyExtent": 1.6792099475860596,
+      "maxWorldDisplacement": 0.6332445683108868,
+      "relativeDisplacement": 0.37710863327197686,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "e9f36e6d57b223fd335da6840e9c7cdba5ac090ebec1b7187804c3dd6268daf9",
+      "derivativeSha256": "23782b452dd5498922dedde8601858aca9aad782be2a9b783593630cf75a581b"
     }
   ]
 }
