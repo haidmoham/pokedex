@@ -51,7 +51,7 @@ export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): str
 
 export const MODEL_TRANSFER_LIMIT = 750_000;
 export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
-export function admittedModel(id: number, entries: ModelAsset[] = [...admission, ...previewAdmission]): ModelAsset | undefined {
+export function admittedModel(id: number, entries: ModelAsset[] = [...previewAdmission, ...admission]): ModelAsset | undefined {
   // Source-level stray props/black geometry were verified for Gholdengo.
   return entries.find(asset => asset.id === id && asset.admitted &&
     (id !== 1000 || (asset.previewOnly && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&

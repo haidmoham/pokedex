@@ -13,6 +13,15 @@ if(isProtectedModelPreview()){
  const manifest=JSON.parse(await readFile(new URL('../content/models/protected-preview.json',import.meta.url)));
  assets=manifest.assets;
  if(!Array.isArray(assets)||assets.length>1025)throw Error('Invalid preview inventory');
+ const normalModels=JSON.parse(await readFile(new URL('../content/models/admitted.json',import.meta.url)));
+ const ids=new Set();
+ for(const asset of assets){
+  if(!Number.isInteger(asset.id)||asset.id<1||asset.id>1025||ids.has(asset.id)||asset.admitted!==true)throw Error('Invalid or duplicate preview species');
+  ids.add(asset.id);
+  const normal=normalModels.find(item=>item.id===asset.id&&item.admitted);
+  if(normal&&(normal.animation||!asset.animation||!normal.sha256||asset.replacesSha256!==normal.sha256))throw Error('Unreviewed preview idle replacement');
+  if(!normal&&asset.replacesSha256!==undefined)throw Error('Unexpected preview replacement identity');
+ }
  let cursor=0,transferred=0;
  await Promise.all([0,1].map(async()=>{while(cursor<assets.length){
   const asset=assets[cursor++],source=asset.sourceArtifact;

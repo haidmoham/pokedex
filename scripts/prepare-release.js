@@ -3,10 +3,12 @@ import { execFileSync } from 'node:child_process';
 import { isProtectedModelPreview } from './preview-model-context.js';
 const models = JSON.parse(await readFile(new URL('../content/models/admitted.json', import.meta.url)));
 const previewAssets = isProtectedModelPreview() ? JSON.parse(await readFile(new URL('../.generated/preview-models.json', import.meta.url))) : [];
-const effectiveModels = [...models, ...previewAssets];
+// A reviewed preview idle may replace one normal static model for the same species.
+const effectiveModels = [...new Map([...models, ...previewAssets].map(asset => [asset.id, asset])).values()].filter(asset => asset.admitted);
+const previewReplacementModels = previewAssets.filter(asset => models.some(normal => normal.id === asset.id && normal.admitted)).length;
 let sha = process.env.VERCEL_GIT_COMMIT_SHA;
 if (!sha) { try { sha = execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(); } catch { sha = 'local'; } }
-await writeFile(new URL('../public/release.json', import.meta.url),JSON.stringify({ sha, admittedModels: effectiveModels.filter(asset => asset.admitted).length, productionAdmittedModels: models.filter(asset => asset.admitted).length, previewOnlyModels: previewAssets.length, protectedResearchPreview: isProtectedModelPreview(), species:1025 }) + '\n');
+await writeFile(new URL('../public/release.json', import.meta.url),JSON.stringify({ sha, admittedModels: effectiveModels.length, nativeIdleModels: effectiveModels.filter(asset => asset.animation).length, staticModels: effectiveModels.filter(asset => !asset.animation).length, productionAdmittedModels: models.filter(asset => asset.admitted).length, previewOnlyModels: previewAssets.length, previewReplacementModels, protectedResearchPreview: isProtectedModelPreview(), species:1025 }) + '\n');
 await writeFile(new URL('../public/models/attribution.json',import.meta.url),JSON.stringify({
   previewException: previewAssets.length ? 'Protected research preview only. Extracted Pokemon asset redistribution rights are unresolved; these entries are excluded from production admission. Source code MIT licenses do not cover models or textures.' : null,
   previewAssets,
