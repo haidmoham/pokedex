@@ -1,0 +1,144 @@
+# Cross-generation model sourcing — 2026-10-01
+
+## Best next input
+
+The strongest technical source is now [Lilothestitch16's HOME GLB collection](https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models), paired with the same uploader's [HOME Unity materials, textures and animation data](https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models). Complete mesh and 17 generation-subtree inventories identify **all 1,025 National Dex IDs** with mesh files, materials, textures and named wait/idle animation files. There are 1,283 wait-named clips across forms. This is file-level availability, not 1,025 reviewed runtime models. No downloaded addon or Unity script was executed.
+
+The GLB repository contains 2,998 Pokemon GLBs across variants, totaling 1,082,009,440 bytes. 952 IDs have a plain `_00_00` candidate; all remaining 73 have non-shiny candidates, but their canonical form has not been selected. Exact alternatives are retained in `content/models/home-source-coverage-2026-10-01.json`. Three hash-checked GLBs (Sizzlipede, Charcadet and a non-default Terapagos candidate) contain rigs but no textures or animation; the resources are in the sibling Unity data. Matching IDs alone do not validate bind poses, UVs or clip compatibility.
+
+[ChicoEevee's Switch importer](https://github.com/ChicoEevee/Pokemon-Switch-Model-Importer-Blender) links the [Scarlet/Violet base + DLC archive](https://drive.google.com/file/d/1N8NbyD1kh1LI6rSTbtG2wVdjQ47oJIAM/view). After explicit download-warning approval it was downloaded and inspected as RAR data: **4,583,929,289 bytes**, SHA256 `3d3f263334416222094256ab64e5f6a4c1008a09067e9d46f63a4e1f864fcdff`. Its 37,541 entries declare 5,168,218,945 expanded bytes, with 993 TRMDL, 2,353 TRSKL and 19,177 PNG files. The 735 model-ID families map to **733 canonical species** after removing placeholders, using [the viewer's explicit species/resource mapping](https://github.com/freedom12/PokemonModelViewer/blob/main/assets/local/configs/pokemon_species.json). It covers 46 of the former catalog's 54 missing species. Sizzlipede, Centiskorch, Clobbopus, Grapploct, Cursola, Mr. Rime, Dracovish and Arctovish are the eight absent IDs. No TRANM/GFBANM/SMD idle files are present. No traversal paths, symlinks or executable scripts were found in the listing. See `content/models/scvi-archive-inventory-2026-10-01.json`.
+
+## First reconstructed specimen
+
+Sizzlipede is the first same-source pairing: a hash-verified HOME GLB, eight material records, texture GUID metadata and `pm0850_00_00_ba10_waitA01.anim` from the HOME Orion subtree. A local data-only converter reconstructed **183 matched skeletal channels** into a **1.3333334-second** loop and restored four base-color textures. Its Meshopt candidate is **293,760 bytes**, with no geometry simplification. Three offline poses have distinct evaluated vertex hashes and a recognizable moving silhouette.
+
+It is **not admitted**: eye/iris and six layered materials are incomplete. Exported shader properties survive, but `MT_Standard2nd.shader` has no rendering subprogram; another exported variant does not implement the layer inputs. Simply assigning a base-color PNG loses those visual details. Material compositing, loop/rig verification and a browser-rendered comparison are the next conversion gates. Source file hashes, candidate hash, clip identity and explicit approximations are in `content/models/home-sizzlipede-reconstruction-2026-10-01.json`. No dump binaries were added to this repository. Public uploader provenance is retained; an asset redistribution grant remains unresolved independently of technical availability.
+
+Its earlier [Legends Arceus importer](https://github.com/SomeKitten/LegendsArceusBlenderScript) links a separate [prepared Pokémon/PNG dump](https://drive.google.com/file/d/1dITgyrvozPXmH0WOnFfFvMB1DRC5Idqs/view). This is a promising source of Hisuian forms and alternate rigs, with archive coverage still unverified. The newer repository also links ZA assets, but marks that route not working; it is not a priority for this 1–1025 target.
+
+## What is already measurable
+
+The public [PoGo-3D-Assets repository](https://github.com/PoGo-Devs/PoGo-3D-Assets) has **151 species folders with model files in every folder**, measured from the complete recursive tree `2ce68809da92ca19318bb72100a78b961ca4482f`. Its whole repository has 440 FBX files, 170 C4D files, 30 OBJ files and two DAE files, including source/Unity duplicates. This is 151 technical mesh sources, not 151 reviewed rigs or idles. The README lists rigging/texture gaps and mostly says animation is absent; Bulbasaur has an attack FBX, which is not an idle. Its stated origins are Models Resource and Roe Studios. No license file appears in the tree. The per-species file/byte/blob-SHA inventory is committed separately.
+
+The `pokemon-party/3d-pokemon` fork has exactly the existing source tree SHA `429de1288cea0d43f5b4f56305d2276e94239d65`: 1,322 GLBs across forms and the same 971 regular species. It is not an independent gap-filling collection.
+
+The [Starfield-2026 animation document](https://github.com/ChrisColeTech/Starfield-2026/blob/master/docs/15-SKELETAL-ANIMATION-FRAMEWORK.md) describes 25 Pokémon with separated model/clip DAE manifests. Its current complete 1,615-file tree contains no DAE files or those model manifests. Keep it as a split-clip design reference, not an available asset source.
+
+## Piece generations together
+
+The current draft has 527 admitted species. All **54 missing source files are late-generation**: 17 from Gen 8 and 37 from Gen 9. By contrast, Gen 6 has 67 source-term gaps out of 72 species despite existing geometry. Different problems need different batches.
+
+1. Use the measured SV base+DLC inventory for compatible alternatives; its 733 species do not cover the entire target. Prioritize the coherent HOME pipeline for the 54 former catalog misses.
+2. Use Sword/Shield for the 17 missing Gen-8 entries and PLA for Hisuian/late-Gen8 forms where present. The [Sword/Shield primary mapping](https://gbatemp.net/threads/wip-sword-and-shield-pokemon-models-and-textures.552281/) identifies GFPAK/GFBMDL files and DAE export with textures.
+3. Use paired Sun/Moon or USUM meshes and motion for older gaps. The [primary Sun/Moon index](https://gbatemp.net/threads/pokemon-sun-moon-pokemon-animations-textures-and-models.473906/) separates model, normal/shiny/greyscale textures, battle, refresh, idle/walk/run and lip-animation files. This is an index, not a downloaded pack.
+4. [Random Talking Bush's collection](https://archive.vg-resource.com/thread-25872.html) is the primary cross-generation extraction hub. Its indexed first post was updated December 20, 2023 and advertises original rigs. Direct cloud-browser access stopped at a Cloudflare challenge loop; archive membership/current download URLs remain unverified. A converted USUM DAE mirror mentioned by users has an expired free-hosting/paywall issue, so no payment or bypass was attempted.
+5. For alternate personality and pose references, [StarsMmd's GameCube importer](https://github.com/StarsMmd/Blender-Addon-Gamecube-Models) supports Colosseum/XD PKX/DAT/FSYS plus skeletons, materials and animations. It is a converter, not a dump. Its current target is Blender 4.5.7 LTS and particle effects are unsupported.
+6. [pret/pokestadium](https://github.com/pret/pokestadium) is useful animation/rig research but requires an existing user-supplied base ROM. The [Gen2 3D mod](https://github.com/randyadr/Gen2-3D-Sprites) explicitly excludes extracted Stadium2 models and marks animation semantics provisional. Emerald/Platinum decompiles supply useful identities and 2D content, not demonstrated rotatable battle-model coverage. No ROM was acquired.
+
+## Conversion contract
+
+Maintain one record per `(nationalDexId, form, sourceGame, sourceRevision, assetPath)` with independent mesh, texture, rig, clip, provenance and redistribution fields. Game model IDs must not be assumed to equal National Dex IDs: existing Fuecoco #909 uses `pm1013` and later generations diverge. Preserve a sourced mapping rather than join on numeric filename alone.
+
+A file listing comes before extraction or rendering. Verify archive checksum and declared expanded sizes, reject traversal/symlinks/executables from the model import set, and select at most three species for the first conversion. Match rig and clips from the same game/form first; confirm bone names, hierarchy, bind matrices and scale semantics before trying cross-generation retargeting.
+
+[Shararamosh's animation importer](https://github.com/Shararamosh/io_scene_gfbanm) supports translation/rotation/scale but requires correct bone scale inheritance and omits material flags/events. ChicoEevee integrates it for Blender 4.x/5.x. These tools were inspected as source/documentation only; none was installed or executed. Import success is not proof that eyes, mouths, particles or material animation survived.
+
+Retain one verified idle and three sampled poses first, then pass the current 750 KB transfer, geometry, texture and complexity gates. Compare texture/material identity and actual deformed poses, including the loop boundary. Only after that should a hash-bound candidate enter review. Public extraction availability, uploader attribution and software licensing stay separate from permission to redistribute game assets; unresolved rights are recorded, not silently waived.
+
+## Small concrete alternative
+
+A [SamsungInternet demo source](https://github.com/SamsungInternet/ar-demos/blob/master/src/obj/pikachu/pikachu.gltf) provides an openly retrievable Pikachu with Kataphoric, original Sketchfab URL and CC-BY claim embedded. Its six source files were hash-recorded and a local self-contained 181,632-byte Meshopt/WebP candidate was prepared. It has one rig and zero animations. Offline rendering is recognizable but has outstretched arms; no new runtime admission or idle claim was made. This is a different source, not retroactive provenance for the catalog's original Pikachu.
+
+Exact generation-gap counts, source states and uncertainty are in `content/models/cross-generation-source-matrix-2026-10-01.json`. This research leaves current runtime coverage at 527. It establishes the next technical acquisition/conversion path rather than claiming the remaining 498 are universally unavailable.
+
+## Reconstructed Atlas source and protected-preview batch
+
+A later primary-source search found [Pokémon Atlas's pinned preparation report](https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/README-assets.md). Its complete repository tree contains **1,025 normal model files totaling 188,932,296 bytes**; 1,019 are under the 750,000-byte transfer cap before our own review. These are already reconstructed HOME assets, not another raw archive. Its MIT license explicitly excludes Pokémon models and textures, and its rights notice supplies no asset redistribution grant. No Atlas preparation script was executed.
+
+A bounded 24-file sample was downloaded by pinned Git blob/size and SHA256, decoded independently and checked against the existing structure/texture budgets. Twenty-three pass the transfer/structure/texture gates. Three require unsupported custom runtime semantics: Xurkitree additive material, Centiskorch stencil effects (also 1,086,864 bytes), and Milcery animated visibility. Of the remaining 21, fixed-camera three-pose image review holds Cofagrigus and Runerigus for missing visible surfaces, and Terapagos for shell appearance/canonical-form review. **18 additions** are approved only for the authorized protected research preview. They include usable replacements for Hitmonlee, Seviper, Flabébé, Magearna, Stakataka, Polteageist and Gholdengo, plus eleven old-catalog misses. The source's broad audits were not accepted as a substitute for these renders.
+
+`content/models/protected-preview.json` preserves each source/output SHA256, pinned URL, credits, pose hashes, explicit unresolved-rights label and loop metadata. Its 18 entries yield **545 preview species**, with **54 genuine idle clips** including the existing 36. The normal manifest remains at 527 species and is byte-for-byte unchanged. None of the new binary assets is committed to GitHub.
+
+Build preparation activates only for `VERCEL_ENV=preview` the exact `codex/model-idle-expansion` branch, and its existing `pokedex-review-…-zarnab.vercel.app` branch URL. An unauthenticated request to that preview was verified to redirect to Vercel SSO before publication. It downloads reviewed, hash-bound public source files into ignored preview output, trims metadata for the native idle duration, and verifies the final hash and 750 KB cap. Production/unrelated builds remove generated preview models and use no preview entries. Both a production build (zero preview binaries/manifest entries) and the candidate preview build were checked locally. The user-authorized rights exception applies only to the protected rough draft, not to production or an asset-license claim.
+
+Atlas stores an extra guard frame after the native `homeDuration`. `scripts/trim-home-idle.js` retains the exact source endpoint and drops subsequent accessor ranges, preserving all original binary geometry, texture and curve values. All 18 decoded derivatives passed the existing budgets; decoded position and retained motion differences were exactly zero. Missing endpoints or unexpectedly long tails fail rather than invent motion. Two additional requested idle-loop checks bring the suite to **119 tests** (115 existing, four new pose/idle checks across this work). Browser WebGL remains unavailable here; successful live model playback is not claimed from offline renders.
+
+
+### Second protected-preview batch
+
+Twenty-four more old-catalog misses were fetched and independently decoded (4,204,684 source bytes). Twenty-three passed all existing budgets, three-pose image review and loop-endpoint preservation; Bellibolt remains held for its custom additive layer. This brings the candidate protected preview to **568 species and 77 native idle clips**, with 41 preview-only additions. All 41 derived models have zero decoded position/retained-motion difference from their pinned sources. The production manifest remains 527. See `preview-source-review-batch2-2026-10-01.json` for exact files and outcomes. No new automated tests were added for this data batch; the existing 119-test suite is retained.
+
+
+### Third protected-preview batch
+
+The third 24-file pass adds 15 reviewed native-idle models, taking the protected candidate to **583 species and 92 native idle clips** (56 preview-only additions). All 56 derivatives retain exactly the same decoded positions and retained animation values as their sources. Eight files need custom additive/stencil handling; Iron Boulder is additionally held for surface/face appearance review.
+
+All 54 previously missing catalog species have now been source-inspected. Forty-four are technically reviewed for this preview; ten remain held: Centiskorch, Milcery, Bellibolt, Glimmet, Glimmora, Iron Bundle, Iron Hands, Iron Jugulis, Iron Boulder and Terapagos. The remaining candidate gap of 442 is mostly an unreviewed-source queue, not proof of universal unavailability. This batch also fills five older provenance gaps with newly sourced Bulbasaur, Ivysaur, Venusaur, Squirtle and Wartortle. See `preview-source-review-batch3-2026-10-01.json`. Production stays at 527 and no new binary or broad test suite is committed.
+
+
+### Fourth batch and canonical-form resolution
+
+Twenty-four additional Gen-1 provenance gaps pass source identity, all budgets and three-pose/material review. Terapagos is also approved after comparing its exact `pm1024_11_00` geometry and pale shell against the official [Normal Form reference](https://id.portal-pokemon.com/pokedex/1024/). The earlier hold was cautious; a pale shell is correct for this form. Iron Boulder stays held: its expected orange energy bands are missing relative to its [official reference](https://id.portal-pokemon.com/pokedex/1022/).
+
+The candidate is now **608 species and 117 native idle clips**, including 81 protected-preview additions. All 81 retain exactly unchanged decoded geometry positions and retained motion. Additional evaluated-vertex measurements confirm meaningful motion for every new clip: the smallest sampled displacement exceeds 2% of body extent. Native loop endpoint differences are below 0.001% of body extent in every case. These numerical pose/loop measurements are offline evidence, not a claim of live GPU playback. See `preview-idle-loop-review-2026-10-01.json` and `preview-source-review-batch4-2026-10-01.json`. The suite remains 119 tests.
+
+Of the original 54 absent-catalog species, 45 now have approved preview replacements; nine await effect/appearance handling. The original catalog's Charmander and Charmeleon alternatives were also inspected: neither contains a clip. Its Charizard has only `Chariard_dizzy`, which is not being relabeled as an idle. The native HOME flame pipeline remains preferable for that trio.
+
+
+### Fifth protected-preview batch
+
+The next 24 source files pass decoded budgets and native motion/loop measurements. Twenty-three pass appearance review, increasing the protected candidate to **631 species and 140 native idle clips** (104 preview-only additions). Paras remains held because its eyes lose the reference artwork's pupils; successful geometry decoding alone does not clear that material defect. Cumulative motion records are now bound to both source and derivative SHA256. Production stays at 527; the 119-test suite is unchanged. See `preview-source-review-batch5-2026-10-01.json`.
+
+
+### Sixth protected-preview batch
+
+Twenty-two more source assets pass decoded budgets, appearance review, measured native motion and loop closure. Rapidash is held for its 937,828-byte source and custom flame-stencil passes; Grimer is held for animated visibility controls. The protected candidate reaches **653 species and 162 native idle clips**, with 126 preview-only additions. All retained geometry/motion remains unchanged from pinned sources. Production stays 527; tests remain 119. See `preview-source-review-batch6-2026-10-01.json`.
+
+
+### Seventh protected-preview batch
+
+Twenty-one additional models pass independent budgets, appearance, measured native motion and loop closure. Muk requires visibility handling; Koffing and Moltres require smoke/fire stencil handling. The protected candidate reaches **674 species and 183 native idle clips**, with 147 preview-only additions. Gen 1 now has 142/151 models; its nine held cases are Charmander, Charmeleon, Charizard, Paras, Rapidash, Grimer, Muk, Koffing and Moltres. All are source-available; they are conversion/appearance holds rather than missing files.
+
+A bounded inspection of the three starter flames found that their core and three mask meshes have different geometry, UVs, joint indices and weights. Blindly copying an alpha texture between those passes would therefore be unsupported; no such shortcut was admitted. The suite remains 119 tests and production remains 527. See `preview-source-review-batch7-2026-10-01.json`.
+
+## Bulk coverage checkpoint and bounded material repair (2026-10-01)
+
+Cohorts 8–13 add 137 independently reviewed native-idle models. A further seven earlier holds (171, 180, 181, 183, 184, 796, 939) pass a narrowly defined material repair. The protected candidate now has **818/1,025 species, including 327 native idle clips**: 527 normal admitted models plus 291 preview-only models. The other 491 normal models remain static. This is 291 of the original 498 gaps resolved; 21 sampled cases remain held and 186 are awaiting review. All 1,025 source filenames are available, but that inventory alone is not runtime admission.
+
+Every new source was decoded, checked against existing structure/texture/750 KB budgets and inspected in three fixed-camera deformed poses. Native loop movement and endpoint closure were measured. Prepared derivatives retain exactly the source geometry and retained skeletal curve values (maximum difference zero). The 291 preview assets total 53,666,220 bytes; the largest is 448,508 bytes. They load individually, not all at once.
+
+The pinned [Atlas viewer](https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/src/Viewer.tsx#L386-L392) uses ordinary additive blending for `homeBlend`. Black, untextured, non-emissive, non-specular placeholders contribute zero light. The new opt-in preparation path represents only those no-op surfaces with standard alpha zero, retaining all original GLB binary bytes. Colored/textured/emissive additive effects and stencil passes are refused. Seven candidates pass the resulting renders. Glimmet, Glimmora and Iron Jugulis still lack important face/luminous surfaces and remain held; a technically successful blend conversion does not imply appearance approval. Rotom also lacks its face in front and reverse views and is held. Palkia requires a separate custom-material treatment.
+
+Current sampled holds: 4, 5, 6, 46, 78, 88, 89, 109, 146, 479, 484, 563, 851, 867, 868, 969, 970, 991, 992, 993, 1022. These are conversion/appearance/budget issues, not claims that no other usable source exists. Reports: `preview-source-review-batch8-2026-10-01.json` through `preview-source-review-batch13-2026-10-01.json`, `preview-zero-additive-review-2026-10-01.json`, and the cumulative `preview-idle-loop-review-2026-10-01.json`.
+
+The full suite passes **121 tests: 115 existing and six added pose/idle checks**. Two new checks cover binary pose preservation during the no-op material repair and refusal of nonzero effects. Production build exclusion is rechecked separately. Rights remain unresolved under the user's protected-preview exception; Atlas's MIT license does not license Pokémon assets. No new model binaries enter this repository. Browser GPU playback and mobile performance remain unverified in the current WebGL-disabled QA environment.
+
+## Complete first-pass gap review (2026-10-01)
+
+All 498 original runtime gaps now have pinned source files inspected. Cohorts 14–21 add **174** further approved preview models, bringing the candidate to **992/1,025 species and 501 native idle clips** (527 normal models plus 465 protected-preview additions). No filenames are counted as admitted without the existing budgets, source/material review, three deformed renders and measured native motion. The remaining 33 are explicit technical/appearance holds; there are no unreviewed original gaps.
+
+New appearance holds are Solosis, Duosion and Reuniclus (inner bodies/faces obscured by the reconstructed outer material), Hatterene (face surface artifacts), and Iron Thorns, Iron Valiant and Iron Crown (missing luminous surfaces compared with official references). These retain official-art fallback. Lampent exceeds the existing texture-count cap; Yveltal and Quaquaval exceed transfer limits; Morelull and Cosmog need custom material treatment. Existing limits have not been raised to pad coverage.
+
+Fletchinder's authentic native loop has measured endpoint drift of 0.122361% of body extent, approximately 1 mm. It is explicitly admitted as a small source-curve seam, rather than claiming mathematically identical endpoints or inventing replacement movement. The retained source animation values are unchanged. All other new measured seams remain below 0.1% of body extent.
+
+The source/derivative comparison again finds exactly zero position and retained-motion differences. No runtime code or new tests were added in this data-only cohort; the previously passing 121-test suite remains the latest full run. Per-new-asset pose/structure/texture checks and the protected build are rerun. GPU/browser-motion and physical-phone limits remain unchanged. Reports: `preview-source-review-batch14-2026-10-01.json` through `preview-source-review-batch21-2026-10-01.json`.
+
+Remaining IDs: 4, 5, 6, 46, 78, 88, 89, 109, 146, 479, 484, 563, 577, 578, 579, 608, 717, 755, 789, 851, 858, 867, 868, 914, 969, 970, 991, 992, 993, 995, 1006, 1022, 1023.
+
+## Three held-source repairs (2026-10-01)
+
+Palkia (484), Morelull (755) and Quaquaval (914) bring the protected candidate to **995/1,025 species and 504 native idle clips**. Thirty technical/appearance holds remain. Palkia's source additive surface has alpha zero, so its contribution is zero even with a texture; Morelull's placeholder is strictly black and non-emissive. The guarded normalization represents those no-op surfaces as ordinary transparency, without modifying source binary data. Nonzero effects remain rejected.
+
+Quaquaval's prepared GLB drops from 939,408 to **666,572 bytes** by grouping native cubic tangent/value/tangent records for lossless Meshopt compression. The original Draco geometry and image bytes stay unchanged; no resampling, quantization, invented poses or relaxed size limits are used. The free official npm package `meshoptimizer@1.0.1` is pinned for reproducible builds. The exact production decoder independently reconstructed 718 animation accessors / 623,800 bytes with **zero byte differences**. Independent structure/texture checks and decoded source comparisons also report zero position and motion error. All three models have reviewed fixed-camera native poses and measured loop behavior.
+
+The suite passes **122 tests: 115 existing and seven added pose/idle checks**. This repair adds one pose-preservation test covering both linear and cubic records with the production decoder, and extends the existing zero-contribution material check. The production build and protected-preview build are checked again after the approved dependency addition. See `preview-held-repair-review-2026-10-01.json`. Visibility-dependent models remain unadmitted pending a guarded implementation and capable-browser evidence; current cloud-browser checks still verify fallback and deployment identity, not GPU animation.
+
+## Two catalog-native idle recoveries (2026-10-01)
+
+Iron Thorns (995) and Iron Crown (1023) raise the local protected candidate to **997/1,025 species and 506 native idle clips**, with 491 static models and 28 holds. Both pinned catalog files already contain explicitly named `defaultwait01_loop` animations. Selecting those exact native clips and compacting unused accessors/views produces **211,068 and 205,044 bytes**, respectively. No HOME/catalog rig transplant, motion relabeling, resampling or pose invention is involved.
+
+Independent decoding compares every retained clip channel/input/output, mesh attribute/index, image, rest transform and skin binding with the original source: zero differences. The three fixed-camera poses were inspected. Evaluated body movement is 0.524% / 0.329% of body extent; loop endpoint differences are 0.000160% / 0.001378%, respectively. These are native endpoint measurements, not forced closed curves, and remain offline CPU/render evidence rather than verified GPU playback.
+
+The preparation exception accepts only these two exact source IDs, immutable catalog revision `429de1288cea0d43f5b4f56305d2276e94239d65`, byte counts, SHA256 identities and clip names. The normal 750,000-byte runtime limit, texture/geometry gates and protected branch/environment isolation are unchanged. Build-time acquisition allows only the exact two known source sizes (2,914,604 / 3,163,984 bytes), retaining the existing 250 MiB aggregate limit. Attribution names the publisher and underlying asset owners; the original extractor is not identified, and redistribution rights remain explicitly unresolved. No production admission changed. See `preview-catalog-native-review-2026-10-01.json`.
+
+Final checks: 127 tests, production/preview builds, all 470 derivative SHA256/size checks, and the existing card audit pass. Source-family-specific detail credits prevent attributing the two catalog files to HOME extractors. Production output contains zero protected extracted GLBs. Capable-browser GPU playback remains unverified.

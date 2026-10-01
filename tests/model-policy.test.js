@@ -7,7 +7,7 @@ const source = (await readFile(new URL('../src/model-policy.ts', import.meta.url
   .replace("import admission from '../content/models/admitted.json';", 'const admission = [];')
   .replace("import { officialEdition, Pokemon, CardEdition } from './feed-model';", '');
 const compiled = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
-const { admittedModel, fetchModel, validateModelStructure, rejectedModelPose } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const { admittedModel, fetchModel, validateModelStructure, rejectedModelPose, previewModelAttribution } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 const asset = { id: 1, bytes: 500, url: 'https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1.glb', blobSha: 'a'.repeat(40), admitted: true };
 test('observed broken poses are rejected by exact identity while other static or replacement models remain usable', async () => {
   const rejected = JSON.parse(await readFile(new URL('../content/models/pose-rejections.json', import.meta.url)));
@@ -80,4 +80,15 @@ test('compressed models cannot declare oversized decoder allocations', () => {
   for (const bufferViews of [[meshopt(3000000, 16)], [meshopt(1500000, 16), meshopt(1500000, 16)], [meshopt(-1, 16)], [meshopt(1, 0)], [meshopt(1, 257)]]) {
     assert.throws(() => validate({ bufferViews }), /meshopt allocation|geometry exceeds budget/);
   }
+});
+
+
+test('protected preview credits identify each source family without invented extraction attribution', () => {
+  const home = previewModelAttribution(asset);
+  assert.match(home.description, /Lilothestitch16/);
+  const catalog = previewModelAttribution({ ...asset, preparation: 'catalog-native-idle', source: 'https://github.com/Pokemon-3D-api/assets/blob/pinned/995.glb' });
+  assert.match(catalog.description, /original extractor is not identified/);
+  assert.match(catalog.description, /rights remain unresolved/);
+  assert.doesNotMatch(catalog.description, /Lilothestitch16|rrih/);
+  assert.equal(catalog.links[0].url, 'https://github.com/Pokemon-3D-api/assets/blob/pinned/995.glb');
 });

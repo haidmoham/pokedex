@@ -1,0 +1,3368 @@
+{
+  "repo": "https://github.com/PoGo-Devs/PoGo-3D-Assets",
+  "treeSha": "2ce68809da92ca19318bb72100a78b961ca4482f",
+  "truncated": false,
+  "speciesFolders": 151,
+  "speciesWithModelFiles": 151,
+  "missingModelFileSpecies": [],
+  "files": [
+    {
+      "id": 1,
+      "files": 11,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/001_Bulbasaur/Bulbasaur.c4d",
+          "bytes": 966503,
+          "blobSha": "019802902d4944bc8f1b116f0405dec6f4d4500e"
+        },
+        {
+          "path": "Pokemon-Gen1/001_Bulbasaur/Bulbasaur.fbx",
+          "bytes": 421648,
+          "blobSha": "f5b9c5fa633af4d3067388d60fe7fae0bcf1e998"
+        },
+        {
+          "path": "Pokemon-Gen1/001_Bulbasaur/Bulbasaur_anim_Attack.c4d",
+          "bytes": 1950132,
+          "blobSha": "dff4f3c6f2a2e49911c60ab53c8a91779d3d36b0"
+        },
+        {
+          "path": "Pokemon-Gen1/001_Bulbasaur/Bulbasaur_anim_Attack.fbx",
+          "bytes": 601840,
+          "blobSha": "c825d492ed6ddfea0ea18f0f222995d02385f7f1"
+        },
+        {
+          "path": "Pokemon-Gen1/001_Bulbasaur/Bulbasaur_split.c4d",
+          "bytes": 1043892,
+          "blobSha": "6437393c01c3805e4bdea621cba3fd630924d5ae"
+        },
+        {
+          "path": "Pokemon-Gen1/001_Bulbasaur/Bulbasaur_split.fbx",
+          "bytes": 584624,
+          "blobSha": "9eff052126c45ccf1114030b935e50aa5e08d138"
+        },
+        {
+          "path": "Pokemon-Gen1/001_Bulbasaur/source/Bulbasaur.FBX",
+          "bytes": 1544208,
+          "blobSha": "bb6627149830592165cf17d56a5fa20751d2b11d"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/002_Ivysaur/Ivysaur.c4d",
+          "bytes": 823751,
+          "blobSha": "469c385b40fbd6519df9c489867b14858ff9cca6"
+        },
+        {
+          "path": "Pokemon-Gen1/002_Ivysaur/Ivysaur.fbx",
+          "bytes": 475280,
+          "blobSha": "76f8640907dc9536105d789735a232477dea9dc6"
+        },
+        {
+          "path": "Pokemon-Gen1/002_Ivysaur/source/Ivysaur.FBX",
+          "bytes": 1534992,
+          "blobSha": "748af92b1ce4e9fe3d87e23ec7654d39d6b2633d"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/003_Venusaur/Venusaur.c4d",
+          "bytes": 894321,
+          "blobSha": "f40b24b648a0d145045650f3d42e7a1003da35ec"
+        },
+        {
+          "path": "Pokemon-Gen1/003_Venusaur/Venusaur.fbx",
+          "bytes": 497312,
+          "blobSha": "7f85d05be63ab310a16e6e9cb604e72d831eba01"
+        },
+        {
+          "path": "Pokemon-Gen1/003_Venusaur/source/Venusaur.FBX",
+          "bytes": 1689632,
+          "blobSha": "2b3bb7cc171a8e1307045e18650d5bbd41458be7"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "files": 11,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/004_Charmander/Charmander.c4d",
+          "bytes": 734601,
+          "blobSha": "e2b340b855ceb0fd5cdc4a0971beb868b9551660"
+        },
+        {
+          "path": "Pokemon-Gen1/004_Charmander/Charmander.fbx",
+          "bytes": 354816,
+          "blobSha": "d76333db040b732d69dc5f0c5e79b3db9500c428"
+        },
+        {
+          "path": "Pokemon-Gen1/004_Charmander/source/Charmander.FBX",
+          "bytes": 1296832,
+          "blobSha": "e8b446c984f1eeb168a38e9df890a086f817db73"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "files": 12,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/005_Charmeleon/Charmeleon.c4d",
+          "bytes": 732965,
+          "blobSha": "ff29f92f2402b2fa4ee9fff3c619447030e22922"
+        },
+        {
+          "path": "Pokemon-Gen1/005_Charmeleon/Charmeleon.fbx",
+          "bytes": 362992,
+          "blobSha": "c780c0d9a5496eb5f5a7a18e36967c8b17fa0021"
+        },
+        {
+          "path": "Pokemon-Gen1/005_Charmeleon/source/Charmeleon.FBX",
+          "bytes": 1465616,
+          "blobSha": "0fd31999d7e705ab20d4915636c23c236b1ebdbd"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "files": 11,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/006_Charizard/Charizard.c4d",
+          "bytes": 891417,
+          "blobSha": "e92bf97c0b6e82f9cf8e7bdbae09feef425ee771"
+        },
+        {
+          "path": "Pokemon-Gen1/006_Charizard/Charizard.fbx",
+          "bytes": 529808,
+          "blobSha": "919c5463410daa7d46e9f92528f22062799a1f51"
+        },
+        {
+          "path": "Pokemon-Gen1/006_Charizard/source/Charizard.FBX",
+          "bytes": 1651456,
+          "blobSha": "d16ba92addb1e0ec7bce3c4bb666719fb9e627d5"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/007_Squirtle/Squirtle.c4d",
+          "bytes": 607322,
+          "blobSha": "07f6c4388c93b7ae6438c813c1f3cb3543131f63"
+        },
+        {
+          "path": "Pokemon-Gen1/007_Squirtle/Squirtle.fbx",
+          "bytes": 348512,
+          "blobSha": "dd9964cccf4bb9fd951302870b92e3c54a5054ce"
+        },
+        {
+          "path": "Pokemon-Gen1/007_Squirtle/source/Squirtle.FBX",
+          "bytes": 1098016,
+          "blobSha": "6509e5075988099028ec14041ae824685ece9035"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/008_Wartortle/Wartortle.c4d",
+          "bytes": 800610,
+          "blobSha": "1f295d490f44300d2ae3808dd98b81b0849e4032"
+        },
+        {
+          "path": "Pokemon-Gen1/008_Wartortle/Wartortle.fbx",
+          "bytes": 427072,
+          "blobSha": "477ec9908aee7e6224e2ef186b4637a139b8d9e5"
+        },
+        {
+          "path": "Pokemon-Gen1/008_Wartortle/source/Wartortle.FBX",
+          "bytes": 1379296,
+          "blobSha": "860aace8d12e54f7ab13850a434b747d8ef1f654"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/009_Blastoise/Blastoise.c4d",
+          "bytes": 803606,
+          "blobSha": "828c420e44dfb7b0c5d8d11a9b3352b61ff2d36d"
+        },
+        {
+          "path": "Pokemon-Gen1/009_Blastoise/Blastoise.fbx",
+          "bytes": 519648,
+          "blobSha": "85f1ee2283d9ca7bf5232cffa28021aaa009d846"
+        },
+        {
+          "path": "Pokemon-Gen1/009_Blastoise/origin/Blastoise.FBX",
+          "bytes": 1780208,
+          "blobSha": "24fc86074aa0909114ca423e4dba1f05c4148a72"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "files": 4,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/010_Caterpie/Caterpie.c4d",
+          "bytes": 539003,
+          "blobSha": "d495a6495c75ea61d674177fbc41108db9b02592"
+        },
+        {
+          "path": "Pokemon-Gen1/010_Caterpie/Caterpie.fbx",
+          "bytes": 258384,
+          "blobSha": "946ef28436ed62072411097ca737ca4cf01b1869"
+        },
+        {
+          "path": "Pokemon-Gen1/010_Caterpie/source/Caterpie.FBX",
+          "bytes": 929296,
+          "blobSha": "051d7bcf0e395fa58ce30632712f78c374655261"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/011_Metapod/Metapod.c4d",
+          "bytes": 485546,
+          "blobSha": "af789c65fd87be05a7dcd7dd204ce7f24aff85ba"
+        },
+        {
+          "path": "Pokemon-Gen1/011_Metapod/Metapod.fbx",
+          "bytes": 203088,
+          "blobSha": "bfd63150eb4e4723bc77911b14ab77e2e3735260"
+        },
+        {
+          "path": "Pokemon-Gen1/011_Metapod/source/Metapod.FBX",
+          "bytes": 718896,
+          "blobSha": "d1f927aac0a95cdc6713a5804a50feb18ffe2bab"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/012_Butterfree/Butterfree.c4d",
+          "bytes": 632233,
+          "blobSha": "e7faa39e605fe8f7e3919df9de1028ee5d4b3f52"
+        },
+        {
+          "path": "Pokemon-Gen1/012_Butterfree/Butterfree.fbx",
+          "bytes": 358240,
+          "blobSha": "6a2f5cecd99c8aada13b510a0983ca0297ae0897"
+        },
+        {
+          "path": "Pokemon-Gen1/012_Butterfree/source/Butterfree.FBX",
+          "bytes": 1113168,
+          "blobSha": "47732b0c196f00c12c3f148503524fb26af8f627"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/013_Weedle/Weedle.c4d",
+          "bytes": 598930,
+          "blobSha": "2b965deef142ce26f02f0193ee9ce3e9bc560d30"
+        },
+        {
+          "path": "Pokemon-Gen1/013_Weedle/Weedle.fbx",
+          "bytes": 254144,
+          "blobSha": "598cbc607d0695ccd11c377a2a3ddf14ee60db25"
+        },
+        {
+          "path": "Pokemon-Gen1/013_Weedle/source/Weedle.FBX",
+          "bytes": 293280,
+          "blobSha": "29cd9141fc7b61d357c40de87d1f988192c762a0"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/014_Kakuna/Kakuna.c4d",
+          "bytes": 484665,
+          "blobSha": "ca401ddf5ecd4e99c18a840e7bfab29e4bcbef63"
+        },
+        {
+          "path": "Pokemon-Gen1/014_Kakuna/Kakuna.fbx",
+          "bytes": 171168,
+          "blobSha": "22386fe8c96a57373548bed66026b764f22503c6"
+        },
+        {
+          "path": "Pokemon-Gen1/014_Kakuna/source/Kakuna.FBX",
+          "bytes": 185408,
+          "blobSha": "74b862d25e5e6d2ef0a9c2be604d489ebe0fb783"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/015_Beedrill/Beedrill.c4d",
+          "bytes": 651653,
+          "blobSha": "67671b392ee1e6b2014fb09e78a12e0dacee3d0a"
+        },
+        {
+          "path": "Pokemon-Gen1/015_Beedrill/Beedrill.fbx",
+          "bytes": 319728,
+          "blobSha": "09e7b55dd23be9b22827cc8547bd5088238789ab"
+        },
+        {
+          "path": "Pokemon-Gen1/015_Beedrill/source/Beedrill.FBX",
+          "bytes": 333856,
+          "blobSha": "ba05894b54abe9c88bc89a0df80cf3405c101fe1"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/016_Pidgey/Pidgey.c4d",
+          "bytes": 671926,
+          "blobSha": "661e56f094998d0f592b2e4e3f340049c4f27460"
+        },
+        {
+          "path": "Pokemon-Gen1/016_Pidgey/Pidgey.fbx",
+          "bytes": 376192,
+          "blobSha": "8bf073971e821a5c977d3712a78ec51396fa70d3"
+        },
+        {
+          "path": "Pokemon-Gen1/016_Pidgey/source/Pidgey.FBX",
+          "bytes": 404016,
+          "blobSha": "c6c24c514d5a6a8a56b5220da0bf9f2e865ed94e"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/017_Pidgeotto/Pidgeotto.c4d",
+          "bytes": 712513,
+          "blobSha": "9cc8a1e715f5a5557f33efa771115f1bef75b2ee"
+        },
+        {
+          "path": "Pokemon-Gen1/017_Pidgeotto/Pidgeotto.fbx",
+          "bytes": 426320,
+          "blobSha": "5521909d3a240cc22d506738435687213e370826"
+        },
+        {
+          "path": "Pokemon-Gen1/017_Pidgeotto/source/Pidgeotto.FBX",
+          "bytes": 429440,
+          "blobSha": "2be4bf3bf6ab6d28d15691578552838617436a9f"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/018_Pidgeot/Pidgeot.c4d",
+          "bytes": 825023,
+          "blobSha": "959cc6828e87d33042f293d7123d953e49d2e18a"
+        },
+        {
+          "path": "Pokemon-Gen1/018_Pidgeot/Pidgeot.fbx",
+          "bytes": 502048,
+          "blobSha": "3074ad4c62c1ae00371ae36f37a7b2a8c3a194af"
+        },
+        {
+          "path": "Pokemon-Gen1/018_Pidgeot/source/Pidgeot.FBX",
+          "bytes": 539168,
+          "blobSha": "9753a56142aec57ce0c91f849a2dfff9077d392a"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/019_Rattata/Rattata.c4d",
+          "bytes": 598090,
+          "blobSha": "e7eac823b997ea9730630577003ebd1a7cb21b2d"
+        },
+        {
+          "path": "Pokemon-Gen1/019_Rattata/Rattata.fbx",
+          "bytes": 325632,
+          "blobSha": "334d30bc87ca955828bdc62516f5b339cce53463"
+        },
+        {
+          "path": "Pokemon-Gen1/019_Rattata/source/Rattata.FBX",
+          "bytes": 371840,
+          "blobSha": "66a98f56d67ea957eb42b70029c08af298906bfb"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/020_Raticate/Raticate.c4d",
+          "bytes": 721983,
+          "blobSha": "ad7b282bdb899e028a4f9e8e2170cb5efe3382e2"
+        },
+        {
+          "path": "Pokemon-Gen1/020_Raticate/Raticate.fbx",
+          "bytes": 383440,
+          "blobSha": "a118553fc8954c8c9a65b9e506df28cc22028ee1"
+        },
+        {
+          "path": "Pokemon-Gen1/020_Raticate/source/Raticate.FBX",
+          "bytes": 444784,
+          "blobSha": "dc20569eaf86b4e335346a644a1876285f7dcfcc"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/021_Spearow/Spearow.c4d",
+          "bytes": 687697,
+          "blobSha": "c7e8a96f29171fb7910d7da3d5dcd19048dcfb7c"
+        },
+        {
+          "path": "Pokemon-Gen1/021_Spearow/Spearow.fbx",
+          "bytes": 410448,
+          "blobSha": "4f9d632e7036a6a9d864799d0d113b14ec4f5f92"
+        },
+        {
+          "path": "Pokemon-Gen1/021_Spearow/source/Spearow.FBX",
+          "bytes": 396224,
+          "blobSha": "3c6e4cf334f15ed33765e552a60a022d699b5d78"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/022_Fearow/Fearow.c4d",
+          "bytes": 866740,
+          "blobSha": "d484bf1ed3906978f101dd2919e8a7d82e2277d0"
+        },
+        {
+          "path": "Pokemon-Gen1/022_Fearow/Fearow.fbx",
+          "bytes": 526848,
+          "blobSha": "5817b921bf63c0912b129c6a4e95dfad9b81af26"
+        },
+        {
+          "path": "Pokemon-Gen1/022_Fearow/source/Fearow.FBX",
+          "bytes": 572640,
+          "blobSha": "8b3ea64344ddab7f725644b0f820bf8537151150"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/023_Ekans/Ekans.c4d",
+          "bytes": 456389,
+          "blobSha": "d60bcd3555069391b3828420f3822ac6a0b65b53"
+        },
+        {
+          "path": "Pokemon-Gen1/023_Ekans/Ekans.fbx",
+          "bytes": 241760,
+          "blobSha": "74614100561204fac0a3c26d4fa53671b9503bb0"
+        },
+        {
+          "path": "Pokemon-Gen1/023_Ekans/source/Ekans.FBX",
+          "bytes": 730608,
+          "blobSha": "19d01e506de7e5201cdf85e5b85920fd51f6f49b"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/024_Arbok/Arbok.c4d",
+          "bytes": 554405,
+          "blobSha": "65e18f589681f0af7c83c9c9e54f1c1279d5cb95"
+        },
+        {
+          "path": "Pokemon-Gen1/024_Arbok/Arbok.fbx",
+          "bytes": 300592,
+          "blobSha": "8360b7afd467ed699aa1e9215ba81fd661239f3b"
+        },
+        {
+          "path": "Pokemon-Gen1/024_Arbok/source/Arbok.FBX",
+          "bytes": 666208,
+          "blobSha": "0e91c42dfa6d50feedee1024668c0c3dd47d3a69"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/025_Pikachu/Pikachu.c4d",
+          "bytes": 652707,
+          "blobSha": "c70858313b9900b0ca2da1d1dd9fe23c5ffd77df"
+        },
+        {
+          "path": "Pokemon-Gen1/025_Pikachu/Pikachu.fbx",
+          "bytes": 341824,
+          "blobSha": "2342f333d86c4a7832b015a6242a42e1dbb48423"
+        },
+        {
+          "path": "Pokemon-Gen1/025_Pikachu/source/Pikachu.FBX",
+          "bytes": 1129440,
+          "blobSha": "d3ccbefea81abe7e124720db4b1a81bccf49338f"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/026_Raichu/Raichu.c4d",
+          "bytes": 692777,
+          "blobSha": "b8290b200386c1f5e16e45a22416a0dd988c4f33"
+        },
+        {
+          "path": "Pokemon-Gen1/026_Raichu/Raichu.fbx",
+          "bytes": 397760,
+          "blobSha": "4ba390e831cc5382f251279a2d324018affc8726"
+        },
+        {
+          "path": "Pokemon-Gen1/026_Raichu/source/Raichu.FBX",
+          "bytes": 1446608,
+          "blobSha": "c6df0344d1f8d8b54a1dad3220de74b9ffcda5d1"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/027_Sandshrew/Sandshrew.c4d",
+          "bytes": 692612,
+          "blobSha": "204dd7b2ca969b52ed67be035330dfab3111362b"
+        },
+        {
+          "path": "Pokemon-Gen1/027_Sandshrew/Sandshrew.fbx",
+          "bytes": 461776,
+          "blobSha": "5851e59852dbdd26a5a50b1e558200c63280b909"
+        },
+        {
+          "path": "Pokemon-Gen1/027_Sandshrew/source/Sandshrew.FBX",
+          "bytes": 316208,
+          "blobSha": "25ebfc4014a4e39f5ea8a7143147b3e23b59dd11"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/028_Sandslash/Sandslash.c4d",
+          "bytes": 784685,
+          "blobSha": "5bfcbfca37f21c87c04f8fff53f66fbbb7fdaf51"
+        },
+        {
+          "path": "Pokemon-Gen1/028_Sandslash/Sandslash.fbx",
+          "bytes": 474432,
+          "blobSha": "34483de1c78ffdc478311c05c2dbd3d9d3a34bd3"
+        },
+        {
+          "path": "Pokemon-Gen1/028_Sandslash/source/Sandslash.FBX",
+          "bytes": 392944,
+          "blobSha": "4e2051e34308aa6a7e437c49e433fe4e2ecdfb0a"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/029_NidoranFemale/NidoranFemale.c4d",
+          "bytes": 604603,
+          "blobSha": "0f8ac9aa31658e55aaa1717ab92155f5dbc9fd39"
+        },
+        {
+          "path": "Pokemon-Gen1/029_NidoranFemale/NidoranFemale.fbx",
+          "bytes": 355184,
+          "blobSha": "6fb3af95d3872e0bd0873775fac4fdfbb5ff7aec"
+        },
+        {
+          "path": "Pokemon-Gen1/029_NidoranFemale/source/NidoranF.FBX",
+          "bytes": 1121792,
+          "blobSha": "b42248fdea170db1fa205bca02fbd938f3560204"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/030_Nidorina/Nidorina.c4d",
+          "bytes": 644427,
+          "blobSha": "76f217f071eaa111c5dbc679fb262b816a0a3f09"
+        },
+        {
+          "path": "Pokemon-Gen1/030_Nidorina/Nidorina.fbx",
+          "bytes": 384784,
+          "blobSha": "7a8885abc5659523814d4875930ad794437c937a"
+        },
+        {
+          "path": "Pokemon-Gen1/030_Nidorina/source/Nidorina.FBX",
+          "bytes": 1411264,
+          "blobSha": "a8bcb164c8a15af40fca080f270cdfd9530d65cc"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/031_Nidoqueen/Nidoqueen.c4d",
+          "bytes": 674487,
+          "blobSha": "e96eae2687bf9271ab8dcf508b2f81070ce5ccb4"
+        },
+        {
+          "path": "Pokemon-Gen1/031_Nidoqueen/Nidoqueen.fbx",
+          "bytes": 402128,
+          "blobSha": "64f4fa2e43cbc4bb95a32a4e595b3331cf46c89a"
+        },
+        {
+          "path": "Pokemon-Gen1/031_Nidoqueen/source/Nidoqueen.FBX",
+          "bytes": 1245872,
+          "blobSha": "3ef0e66602b679c5b3995eef8b495433cf36c917"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/032_NidoranMale/NidoranMale.c4d",
+          "bytes": 585087,
+          "blobSha": "77db3164ec9361676d2f1f5675e235e9cdaf6660"
+        },
+        {
+          "path": "Pokemon-Gen1/032_NidoranMale/NidoranMale.fbx",
+          "bytes": 350080,
+          "blobSha": "6f2577eb7f3398a15127ebb585572abb8e124ee2"
+        },
+        {
+          "path": "Pokemon-Gen1/032_NidoranMale/source/NidoranM.FBX",
+          "bytes": 1269712,
+          "blobSha": "61e9c75973931b9c8ceb41b8e094508c5bb1f14c"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/033_Nidorino/Nidorino.c4d",
+          "bytes": 646633,
+          "blobSha": "7d06d917f21c5cb99b50580caaf02bab43810da6"
+        },
+        {
+          "path": "Pokemon-Gen1/033_Nidorino/Nidorino.fbx",
+          "bytes": 371104,
+          "blobSha": "7ddf6e9524a012463b055a662b53f58738d121a8"
+        },
+        {
+          "path": "Pokemon-Gen1/033_Nidorino/source/Nidorino.FBX",
+          "bytes": 1163920,
+          "blobSha": "bbf088531775eaa3282ce8cc523212505f19bac7"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/034_Nidoking/Nidoking.c4d",
+          "bytes": 735854,
+          "blobSha": "830fdb09be7f01433e5762b93ff02b697cb18fb1"
+        },
+        {
+          "path": "Pokemon-Gen1/034_Nidoking/Nidoking.fbx",
+          "bytes": 486720,
+          "blobSha": "6422130064ed4abf59ac7f6391019eea70f7f50f"
+        },
+        {
+          "path": "Pokemon-Gen1/034_Nidoking/source/Nidoking.FBX",
+          "bytes": 1394336,
+          "blobSha": "0c8cbd391381254bf2a9cfc699b21a52c50f0f34"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "files": 14,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/035_Clefairy/Clefairy.c4d",
+          "bytes": 639592,
+          "blobSha": "1b1ee02dd95f20a80ddecdce5f3bd7b5ac0f283a"
+        },
+        {
+          "path": "Pokemon-Gen1/035_Clefairy/Clefairy.fbx",
+          "bytes": 334288,
+          "blobSha": "1ca13c54f665128d94fc8e99dbe1e3ba3d4065be"
+        },
+        {
+          "path": "Pokemon-Gen1/035_Clefairy/placeholder/Clefairy.c4d",
+          "bytes": 219389,
+          "blobSha": "a8ab20dd49056472d1bb1ee3dc64161ae8575062"
+        },
+        {
+          "path": "Pokemon-Gen1/035_Clefairy/placeholder/Clefairy.fbx",
+          "bytes": 228688,
+          "blobSha": "f1a17515b5a21c59f32f2d707ea413df4b26764d"
+        },
+        {
+          "path": "Pokemon-Gen1/035_Clefairy/source/clefairy.dae",
+          "bytes": 836921,
+          "blobSha": "e6005ec499d1484596db013160c57d46f9900635"
+        },
+        {
+          "path": "Pokemon-Gen1/035_Clefairy/source/clefairy.obj",
+          "bytes": 310778,
+          "blobSha": "87079419e262a5fabd66febb1e936a46f1d56406"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/036_Clefable/Clefable.c4d",
+          "bytes": 674019,
+          "blobSha": "5353a4b4f129ca628c169be5edb1107be064874a"
+        },
+        {
+          "path": "Pokemon-Gen1/036_Clefable/Clefable.fbx",
+          "bytes": 313152,
+          "blobSha": "c11a2a15212fdff07c2b34f4c9787760c0d325a0"
+        },
+        {
+          "path": "Pokemon-Gen1/036_Clefable/source/Clefable.FBX",
+          "bytes": 377632,
+          "blobSha": "bc6ec8bec9b559804a327ad5525a35eccfc6f3f1"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/037_Vulpix/Vulpix.c4d",
+          "bytes": 787124,
+          "blobSha": "21bdef6298c9a518f79c82a811848579b885e154"
+        },
+        {
+          "path": "Pokemon-Gen1/037_Vulpix/Vulpix.fbx",
+          "bytes": 443888,
+          "blobSha": "e9f881a3452c969815687195cd985e44f4fa1218"
+        },
+        {
+          "path": "Pokemon-Gen1/037_Vulpix/source/Vulpix.FBX",
+          "bytes": 464048,
+          "blobSha": "9fd0cc56f92574a83973444b57e15c9855db3fd8"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/038_Ninetales/Ninetales.c4d",
+          "bytes": 981203,
+          "blobSha": "e20900d93c48ec4879530a93676c7ce26fc5fb21"
+        },
+        {
+          "path": "Pokemon-Gen1/038_Ninetales/Ninetales.fbx",
+          "bytes": 576464,
+          "blobSha": "0c309a887570cea37d57019b2628e440cbc93f81"
+        },
+        {
+          "path": "Pokemon-Gen1/038_Ninetales/source/Ninetales.FBX",
+          "bytes": 692048,
+          "blobSha": "3b3e4155682b711773195796ba584d6695161b54"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/039_Jigglypuff/Jigglypuff.c4d",
+          "bytes": 532929,
+          "blobSha": "9b7fbf7ea5ad551ed6fa6a52415913ebda9bcae8"
+        },
+        {
+          "path": "Pokemon-Gen1/039_Jigglypuff/Jigglypuff.fbx",
+          "bytes": 281824,
+          "blobSha": "17633f55e89543acb23984a68ec7d6aec6e6fbbc"
+        },
+        {
+          "path": "Pokemon-Gen1/039_Jigglypuff/source/Jigglypuff.FBX",
+          "bytes": 260208,
+          "blobSha": "e66285eb5066bbe24d427b88dff7f81df28877ae"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/040_Wigglytuff/Wigglytuff.c4d",
+          "bytes": 584119,
+          "blobSha": "afbb3baef8d646fc6bc2fc0f0fff2a33a9befc4f"
+        },
+        {
+          "path": "Pokemon-Gen1/040_Wigglytuff/Wigglytuff.fbx",
+          "bytes": 320944,
+          "blobSha": "e8bc52a6af5fe8872849bb7a5f1a79c01563db2e"
+        },
+        {
+          "path": "Pokemon-Gen1/040_Wigglytuff/source/Wigglytuff.FBX",
+          "bytes": 311872,
+          "blobSha": "ec7d9c863fa3787635e9889da57afd11a7752fd2"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "files": 8,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/041_Zubat/Zubat.c4d",
+          "bytes": 455470,
+          "blobSha": "ee76ee631ecb153868ec6380ff991aff66c88ab8"
+        },
+        {
+          "path": "Pokemon-Gen1/041_Zubat/Zubat.fbx",
+          "bytes": 260576,
+          "blobSha": "ffae20ebd394cfe96ac41bc00f4054828bcdd0a3"
+        },
+        {
+          "path": "Pokemon-Gen1/041_Zubat/placeholder/Zubat.c4d",
+          "bytes": 223842,
+          "blobSha": "0a8db487b24cfac7eddbc812898b4d8aa9dd5ddb"
+        },
+        {
+          "path": "Pokemon-Gen1/041_Zubat/placeholder/Zubat.fbx",
+          "bytes": 185328,
+          "blobSha": "3902c8d3b2913a2ae803c29248ed27e4dafaa899"
+        },
+        {
+          "path": "Pokemon-Gen1/041_Zubat/source/zubat_f.obj",
+          "bytes": 236386,
+          "blobSha": "52eb82e81266305c4cd2689f1010c193d3a958d6"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "files": 9,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/042_Golbat/Golbat.c4d",
+          "bytes": 596766,
+          "blobSha": "e53b26070dec4b291a26e2a0d5545fab980c327b"
+        },
+        {
+          "path": "Pokemon-Gen1/042_Golbat/Golbat.fbx",
+          "bytes": 364144,
+          "blobSha": "238a2a02217d6315bf74a5ba7fd76728ae4cf8de"
+        },
+        {
+          "path": "Pokemon-Gen1/042_Golbat/placeholder/Golbat.c4d",
+          "bytes": 219751,
+          "blobSha": "08be03f21274481a1883317600cffab788405da1"
+        },
+        {
+          "path": "Pokemon-Gen1/042_Golbat/placeholder/Golbat.fbx",
+          "bytes": 186064,
+          "blobSha": "5cb15fc922a41f5881b2dd8b2d5c70f943e2e059"
+        },
+        {
+          "path": "Pokemon-Gen1/042_Golbat/source/Golbat.obj",
+          "bytes": 293854,
+          "blobSha": "2e958de59156de396d64b75b72b9595d186055d0"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/043_Oddish/Oddish.c4d",
+          "bytes": 550477,
+          "blobSha": "70043c193ef64a875306958f7831a226aa3016f9"
+        },
+        {
+          "path": "Pokemon-Gen1/043_Oddish/Oddish.fbx",
+          "bytes": 258496,
+          "blobSha": "93355f6679a30010087ee92681b7e6d39c32d162"
+        },
+        {
+          "path": "Pokemon-Gen1/043_Oddish/source/Oddish.FBX",
+          "bytes": 268944,
+          "blobSha": "3297ec0bef1c3115cd6b4756d458b5f4a8d10dfe"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/044_Gloom/Gloom.c4d",
+          "bytes": 652246,
+          "blobSha": "41ba4878ffc6f746e02ae29e6ac67ed16a054087"
+        },
+        {
+          "path": "Pokemon-Gen1/044_Gloom/Gloom.fbx",
+          "bytes": 321040,
+          "blobSha": "f331549d27dbb562c77e35895598ef7211540bf6"
+        },
+        {
+          "path": "Pokemon-Gen1/044_Gloom/source/Gloom.FBX",
+          "bytes": 379712,
+          "blobSha": "74c9d4097b394698e44ca90e44ae1eaa147a2fe3"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/045_Vileplume/Vileplume.c4d",
+          "bytes": 645078,
+          "blobSha": "32f6623ae011a1a68cd2a422afd07682d71723e6"
+        },
+        {
+          "path": "Pokemon-Gen1/045_Vileplume/Vileplume.fbx",
+          "bytes": 305520,
+          "blobSha": "3803207503493c090faf395087e68a66b8f62a4d"
+        },
+        {
+          "path": "Pokemon-Gen1/045_Vileplume/source/Vileplume.FBX",
+          "bytes": 327472,
+          "blobSha": "5925adf78c3887b401913857c5afe47510814c04"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/046_Paras/Paras.c4d",
+          "bytes": 639171,
+          "blobSha": "b94162ee944614153240376767ab45ce8102bfd8"
+        },
+        {
+          "path": "Pokemon-Gen1/046_Paras/Paras.fbx",
+          "bytes": 278096,
+          "blobSha": "a408c604d3bc1f6f2d8693c452e7d876cdd71092"
+        },
+        {
+          "path": "Pokemon-Gen1/046_Paras/source/Paras.FBX",
+          "bytes": 316464,
+          "blobSha": "bee861ecdc3b72b02ec3ae30e64387e073d9313a"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/047_Parasect/Parasect.c4d",
+          "bytes": 614352,
+          "blobSha": "6d32aa0fc8f223bb69aec52b060803d7234f625e"
+        },
+        {
+          "path": "Pokemon-Gen1/047_Parasect/Parasect.fbx",
+          "bytes": 311952,
+          "blobSha": "2425240078fb1b2800d7667305a3d9f46a54364b"
+        },
+        {
+          "path": "Pokemon-Gen1/047_Parasect/source/Parasect.FBX",
+          "bytes": 327760,
+          "blobSha": "d5651827b479df2123efa4e660fc3bfc5b5789fb"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/048_Venonat/Venonat.c4d",
+          "bytes": 683447,
+          "blobSha": "1bf7bfa357f3af9f5175933008860264a9e6cd85"
+        },
+        {
+          "path": "Pokemon-Gen1/048_Venonat/Venonat.fbx",
+          "bytes": 343920,
+          "blobSha": "b65e892b7ec6f66ab9c2adbb5c76bebbfe78249b"
+        },
+        {
+          "path": "Pokemon-Gen1/048_Venonat/source/Venonat.FBX",
+          "bytes": 426976,
+          "blobSha": "69ae4f6b5c925dd66f3e3c7a4a6d0beed6ea1918"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "files": 8,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/049_Venomoth/Venomoth.c4d",
+          "bytes": 681361,
+          "blobSha": "2b041ab56c1faf62d88a9c683c4ec364efe5c90c"
+        },
+        {
+          "path": "Pokemon-Gen1/049_Venomoth/Venomoth.fbx",
+          "bytes": 338048,
+          "blobSha": "0c92490da341b5388b9f52f3d7c28cf0074b639d"
+        },
+        {
+          "path": "Pokemon-Gen1/049_Venomoth/source/Venomoth.FBX",
+          "bytes": 349232,
+          "blobSha": "3215f1eca497057f4f969797562c7814bef3fdcb"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/050_Diglett/Diglett.c4d",
+          "bytes": 356014,
+          "blobSha": "d48e6c90b20d8b6bb47ec52108006eb115d89064"
+        },
+        {
+          "path": "Pokemon-Gen1/050_Diglett/Diglett.fbx",
+          "bytes": 119664,
+          "blobSha": "15002a10205c566bb1fcfe34fa70463294e09d6f"
+        },
+        {
+          "path": "Pokemon-Gen1/050_Diglett/source/Diglett.FBX",
+          "bytes": 123312,
+          "blobSha": "dbb88b5ad01d5483165245d153828e8ba32f95f8"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/051_Dugtrio/Dugtrio.c4d",
+          "bytes": 623527,
+          "blobSha": "683df415d81de6f66ca999399df79b1bfef6406d"
+        },
+        {
+          "path": "Pokemon-Gen1/051_Dugtrio/Dugtrio.fbx",
+          "bytes": 288848,
+          "blobSha": "b90b2698d8487df7b842612010682c43820966e5"
+        },
+        {
+          "path": "Pokemon-Gen1/051_Dugtrio/source/Dugtrio.FBX",
+          "bytes": 290496,
+          "blobSha": "7b3eaf77b584242f774b7bffb9bdf1f2b4f71eff"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/052_Meowth/Meowth.c4d",
+          "bytes": 745174,
+          "blobSha": "4e3161d1807fff07e83fdcb3fc21c01ce0154613"
+        },
+        {
+          "path": "Pokemon-Gen1/052_Meowth/Meowth.fbx",
+          "bytes": 397088,
+          "blobSha": "5d9520c490eb4d467e93a0d74f7f83d0a315b18f"
+        },
+        {
+          "path": "Pokemon-Gen1/052_Meowth/source/Meowth.FBX",
+          "bytes": 474416,
+          "blobSha": "ddb88e39b5b4010e76a955f5fecf4e29f0c6de53"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/053_Persian/Persian.c4d",
+          "bytes": 684414,
+          "blobSha": "98357d2fd416f75ab2c9e74ec0bfaddfa3d16ca6"
+        },
+        {
+          "path": "Pokemon-Gen1/053_Persian/Persian.fbx",
+          "bytes": 373152,
+          "blobSha": "4ff710c49993038470fdd17fdef2e8f071cb7113"
+        },
+        {
+          "path": "Pokemon-Gen1/053_Persian/source/Persian.FBX",
+          "bytes": 428096,
+          "blobSha": "07ec5d48979c32b31cfb37a707d6cdc730656693"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/054_Psyduck/Psyduck.c4d",
+          "bytes": 632350,
+          "blobSha": "3d93227e28358f2e3e4da7bb38199592cd67418d"
+        },
+        {
+          "path": "Pokemon-Gen1/054_Psyduck/Psyduck.fbx",
+          "bytes": 301792,
+          "blobSha": "a7d015516e10cf9312c8398d813502ff9d0b2ced"
+        },
+        {
+          "path": "Pokemon-Gen1/054_Psyduck/source/Psyduck.FBX",
+          "bytes": 360160,
+          "blobSha": "d9352bb450e77d12dfd7d72d7f47442682141965"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/055_Golduck/Golduck.c4d",
+          "bytes": 721699,
+          "blobSha": "a87b33dddfb49e880fe862117809e370ac3e48df"
+        },
+        {
+          "path": "Pokemon-Gen1/055_Golduck/Golduck.fbx",
+          "bytes": 376000,
+          "blobSha": "37fd427aa94bf0f7d068e9259f8c65977eb5f9d6"
+        },
+        {
+          "path": "Pokemon-Gen1/055_Golduck/source/Golduck.FBX",
+          "bytes": 433536,
+          "blobSha": "22b5915f809a4c508d0416afaa46ffab62569211"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/056_Mankey/Mankey.c4d",
+          "bytes": 607289,
+          "blobSha": "f45f26bf29873db7c6c8df0d5024fbd1695f60b4"
+        },
+        {
+          "path": "Pokemon-Gen1/056_Mankey/Mankey.fbx",
+          "bytes": 308528,
+          "blobSha": "2248ca8ecdadd3c795588b632581c5eecfcc1e67"
+        },
+        {
+          "path": "Pokemon-Gen1/056_Mankey/source/Mankey.FBX",
+          "bytes": 354464,
+          "blobSha": "cc1f30a45187fe8017180d6db5acb7cf51c4ee74"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/057_Primeape/Primeape.c4d",
+          "bytes": 572522,
+          "blobSha": "3897299c7bb446fa1d64e6328f69e822a9b8348d"
+        },
+        {
+          "path": "Pokemon-Gen1/057_Primeape/Primeape.fbx",
+          "bytes": 282240,
+          "blobSha": "5ea566ebd1ac2f9a81619454606fb86795fad0bf"
+        },
+        {
+          "path": "Pokemon-Gen1/057_Primeape/source/Primeape.FBX",
+          "bytes": 306608,
+          "blobSha": "ee1af29ecf6345d63d730d6ac8c8816b4ecf3514"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/058_Growlithe/Growlithe.c4d",
+          "bytes": 714986,
+          "blobSha": "2a84246893849af02b3d1f0603334b3eb0a38e17"
+        },
+        {
+          "path": "Pokemon-Gen1/058_Growlithe/Growlithe.fbx",
+          "bytes": 414896,
+          "blobSha": "184061c6b6c4608597963d4725f4396b26b82068"
+        },
+        {
+          "path": "Pokemon-Gen1/058_Growlithe/source/Growlithe.FBX",
+          "bytes": 438624,
+          "blobSha": "a08ff9568daf626394df645002365770a0821608"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/059_Arcanine/Arcanine.c4d",
+          "bytes": 814075,
+          "blobSha": "23742cf7ff70a712c96ee985fa1c8bedc47879d2"
+        },
+        {
+          "path": "Pokemon-Gen1/059_Arcanine/Arcanine.fbx",
+          "bytes": 572752,
+          "blobSha": "5a81769176136aad5d74c3cc37ced1cfe366968a"
+        },
+        {
+          "path": "Pokemon-Gen1/059_Arcanine/source/Arcanine.FBX",
+          "bytes": 1209248,
+          "blobSha": "65c328df035ea42038eeefe385b4e0048271964f"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "files": 9,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/060_Poliwag/Poliwag.c4d",
+          "bytes": 526811,
+          "blobSha": "02600b8bb34d2f60170612d7203507f545ba9b41"
+        },
+        {
+          "path": "Pokemon-Gen1/060_Poliwag/Poliwag.fbx",
+          "bytes": 284016,
+          "blobSha": "4695ce32ccb409c0e6903ceb332da83ec4a2e81e"
+        },
+        {
+          "path": "Pokemon-Gen1/060_Poliwag/placeholder/Poliwag.c4d",
+          "bytes": 225587,
+          "blobSha": "477c1ef74ab3e78ed0b2c0f8fe77285018d22ff6"
+        },
+        {
+          "path": "Pokemon-Gen1/060_Poliwag/placeholder/Poliwag.fbx",
+          "bytes": 272960,
+          "blobSha": "569b6f17c087f5d0c786b57e2ae2c14cf8c89c72"
+        },
+        {
+          "path": "Pokemon-Gen1/060_Poliwag/source/poliwag.obj",
+          "bytes": 246914,
+          "blobSha": "b92a970b33548172f27dc4795083def128936a3e"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/061_Poliwhirl/Poliwhirl.c4d",
+          "bytes": 597720,
+          "blobSha": "73826b973ebab27affc209130f525a356a62de1a"
+        },
+        {
+          "path": "Pokemon-Gen1/061_Poliwhirl/Poliwhirl.fbx",
+          "bytes": 299408,
+          "blobSha": "4e9ebf89f0d5789cf807ee99c58ce7fbb386b496"
+        },
+        {
+          "path": "Pokemon-Gen1/061_Poliwhirl/source/Poliwhirl.FBX",
+          "bytes": 327136,
+          "blobSha": "a50e2bdaae6db3e9dd38036f062fbd1c90e0ab2b"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/062_Poliwrath/Poliwrath.c4d",
+          "bytes": 636583,
+          "blobSha": "b0d6473e867ca2aa98d9c0907901413d1873e4ba"
+        },
+        {
+          "path": "Pokemon-Gen1/062_Poliwrath/Poliwrath.fbx",
+          "bytes": 323680,
+          "blobSha": "4a3b17dab4306ed9ee505642d9b4b2ae1553c581"
+        },
+        {
+          "path": "Pokemon-Gen1/062_Poliwrath/source/Poliwrath.FBX",
+          "bytes": 354336,
+          "blobSha": "0f43fa3e1373ff2cc48c9866740078184b732e5a"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "files": 4,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/063_Abra/Abra.c4d",
+          "bytes": 652594,
+          "blobSha": "f212629e9cfca7e0aa6e5ea730fa316feaab950b"
+        },
+        {
+          "path": "Pokemon-Gen1/063_Abra/Abra.fbx",
+          "bytes": 377792,
+          "blobSha": "13592c0d23c559a1c5f641c52c82a1c24d63e88a"
+        },
+        {
+          "path": "Pokemon-Gen1/063_Abra/source/Abra.FBX",
+          "bytes": 977696,
+          "blobSha": "8f86510e01f5c4a803f7ff50c40aaf93c98ae111"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/064_Kadabra/Kadabra.c4d",
+          "bytes": 779922,
+          "blobSha": "dfe7aab52814ac8c71fd5f55abee3ffdc29f48a1"
+        },
+        {
+          "path": "Pokemon-Gen1/064_Kadabra/Kadabra.fbx",
+          "bytes": 482560,
+          "blobSha": "fea2bc51b2a6771b42622866373d3c449a783f26"
+        },
+        {
+          "path": "Pokemon-Gen1/064_Kadabra/source/Kadabra.FBX",
+          "bytes": 1166736,
+          "blobSha": "7ba58b09a72277aa99da4b1f971f24be692f83e1"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/065_Alakazam/Alakazam.c4d",
+          "bytes": 890578,
+          "blobSha": "a813d9799a5e29d71b7e572219407e550402a1d5"
+        },
+        {
+          "path": "Pokemon-Gen1/065_Alakazam/Alakazam.fbx",
+          "bytes": 480368,
+          "blobSha": "fc4907e4f64b438571c89ca0a1dcb89705ee6ec3"
+        },
+        {
+          "path": "Pokemon-Gen1/065_Alakazam/source/Alakazam.FBX",
+          "bytes": 1676480,
+          "blobSha": "f75f2d4234b2673a464706e1fc743bc657503542"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/066_Machop/Machop.c4d",
+          "bytes": 800868,
+          "blobSha": "70464368dfbcbbdb1b370f2d27b078416971085a"
+        },
+        {
+          "path": "Pokemon-Gen1/066_Machop/Machop.fbx",
+          "bytes": 420704,
+          "blobSha": "971090a2563613db39c5a27563584cdca74b34a8"
+        },
+        {
+          "path": "Pokemon-Gen1/066_Machop/source/Machop.FBX",
+          "bytes": 1449200,
+          "blobSha": "7d9c2c3df01720bb111cbd73d0a2b39792e3d50b"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/067_Machoke/Machoke.c4d",
+          "bytes": 719215,
+          "blobSha": "f45a57c1c12946a2e80c1633abc53069b538e6fe"
+        },
+        {
+          "path": "Pokemon-Gen1/067_Machoke/Machoke.fbx",
+          "bytes": 447200,
+          "blobSha": "3d058e85605d02cc76b6a1ba2a1dee575e7bbb7d"
+        },
+        {
+          "path": "Pokemon-Gen1/067_Machoke/source/Machoke.FBX",
+          "bytes": 1418240,
+          "blobSha": "c9f014e264bb558439e6d2de38bbb99ef658f1b7"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/068_Machamp/Machamp.c4d",
+          "bytes": 894974,
+          "blobSha": "d43f9b6467b48292f7ef7665af07f568dadc101b"
+        },
+        {
+          "path": "Pokemon-Gen1/068_Machamp/Machamp.fbx",
+          "bytes": 593248,
+          "blobSha": "4b3e1b3dc4ac4dab6e1a854bb4fc6a37031bfc27"
+        },
+        {
+          "path": "Pokemon-Gen1/068_Machamp/source/Machamp.FBX",
+          "bytes": 1813056,
+          "blobSha": "02933d907c14828942da83f8daa9eda23b49d4ae"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/069_Bellsprout/Bellsprout.c4d",
+          "bytes": 631399,
+          "blobSha": "3eca45f7a532bb35d40c705d2cbecd13b8181491"
+        },
+        {
+          "path": "Pokemon-Gen1/069_Bellsprout/Bellsprout.fbx",
+          "bytes": 327584,
+          "blobSha": "d521e2ddfe830261612e7266f0844a223ab96ef8"
+        },
+        {
+          "path": "Pokemon-Gen1/069_Bellsprout/source/Bellsprout.FBX",
+          "bytes": 396064,
+          "blobSha": "0ba9ce27dd3cbfee330c60c6af7e88c2b08f851d"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/070_Weepinbell/Weepinbell.c4d",
+          "bytes": 515099,
+          "blobSha": "d0de47cc04ca66aa20c9b19a9b2d679c33929cb2"
+        },
+        {
+          "path": "Pokemon-Gen1/070_Weepinbell/Weepinbell.fbx",
+          "bytes": 259824,
+          "blobSha": "1cac9365408f6e1159f2cb26aad53eb97671388e"
+        },
+        {
+          "path": "Pokemon-Gen1/070_Weepinbell/source/Weepinbell.FBX",
+          "bytes": 872608,
+          "blobSha": "b2f59087185cdb8df9b9c4855400385e31baa4a4"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/071_Victreebel/Victreebel.c4d",
+          "bytes": 614558,
+          "blobSha": "02e29b2ffd844de8d80f5a364eadbccef9a69eb6"
+        },
+        {
+          "path": "Pokemon-Gen1/071_Victreebel/Victreebel.fbx",
+          "bytes": 305312,
+          "blobSha": "9bdda0cddde141957f61ce12aee1a7a6f2902fba"
+        },
+        {
+          "path": "Pokemon-Gen1/071_Victreebel/source/Victreebel.FBX",
+          "bytes": 346224,
+          "blobSha": "a6fca460c0a7dee9e1bc313bd47dfe922ef6278f"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/072_Tentacool/Tentacool.c4d",
+          "bytes": 536042,
+          "blobSha": "994ca96c732c04ed0614bc03f5d496985546e0c3"
+        },
+        {
+          "path": "Pokemon-Gen1/072_Tentacool/Tentacool.fbx",
+          "bytes": 237120,
+          "blobSha": "5dc01fcef9ab62d1b70dfefcdefd99415bad205c"
+        },
+        {
+          "path": "Pokemon-Gen1/072_Tentacool/source/Tentacool.FBX",
+          "bytes": 238288,
+          "blobSha": "61472b907949a10baf0d170d7dd7ea90f849a65f"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/073_Tentacruel/Tentacruel.c4d",
+          "bytes": 698230,
+          "blobSha": "53f02f9f9a10a349a031c0361a847fb729a52777"
+        },
+        {
+          "path": "Pokemon-Gen1/073_Tentacruel/Tentacruel.fbx",
+          "bytes": 340512,
+          "blobSha": "46b8e61f6ed375694db8424edabf2a525459d414"
+        },
+        {
+          "path": "Pokemon-Gen1/073_Tentacruel/source/Tentacruel.FBX",
+          "bytes": 393216,
+          "blobSha": "1ea14895e8e1a0b467ecdda103b29ca5979d6822"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/074_Geodude/Geodude.c4d",
+          "bytes": 605694,
+          "blobSha": "a269370a15232830befb40486811d36a91e831dd"
+        },
+        {
+          "path": "Pokemon-Gen1/074_Geodude/Geodude.fbx",
+          "bytes": 301040,
+          "blobSha": "1b49de31fc06092b878c541b3d9b2816d169eaef"
+        },
+        {
+          "path": "Pokemon-Gen1/074_Geodude/source/Geodude.FBX",
+          "bytes": 345312,
+          "blobSha": "71d45772a2e587ed6c55bf39fd7c7b69c1c51f2f"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/075_Graveler/Graveler.c4d",
+          "bytes": 707423,
+          "blobSha": "2844858e6e4f7a2747ce277a007364bd5880b193"
+        },
+        {
+          "path": "Pokemon-Gen1/075_Graveler/Graveler.fbx",
+          "bytes": 413952,
+          "blobSha": "e93094a43b6131b55a6c61192a9fe730ead112d5"
+        },
+        {
+          "path": "Pokemon-Gen1/075_Graveler/source/Graveler.FBX",
+          "bytes": 408208,
+          "blobSha": "0671721006c3015bec8873cb8478ff00ce9370b6"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/076_Golem/Golem.c4d",
+          "bytes": 692748,
+          "blobSha": "34f0b2417c4e44f5068de66e152e4f61257fade1"
+        },
+        {
+          "path": "Pokemon-Gen1/076_Golem/Golem.fbx",
+          "bytes": 431952,
+          "blobSha": "40b40c05b0d09f3d4c788f97bc7cf6a5e976b485"
+        },
+        {
+          "path": "Pokemon-Gen1/076_Golem/source/Golem.FBX",
+          "bytes": 394640,
+          "blobSha": "5e7f3c6c90eef7f244320748d1b39d53322ad235"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "files": 11,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/077_Ponyta/Ponyta.c4d",
+          "bytes": 844859,
+          "blobSha": "b988fe3cefec9ae9abb7bfe1277af231f654ba9c"
+        },
+        {
+          "path": "Pokemon-Gen1/077_Ponyta/Ponyta.fbx",
+          "bytes": 510880,
+          "blobSha": "329e95aed0d7899bd7340eb71a2e5b6c28a16645"
+        },
+        {
+          "path": "Pokemon-Gen1/077_Ponyta/source/Ponyta.FBX",
+          "bytes": 1095136,
+          "blobSha": "767a6e6a1a22b9504d2ea0777eb44b2409b23d28"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "files": 11,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/078_Rapidash/Rapidash.c4d",
+          "bytes": 951536,
+          "blobSha": "36bb1524e63fd1aee006fa34ab070da10be66023"
+        },
+        {
+          "path": "Pokemon-Gen1/078_Rapidash/Rapidash.fbx",
+          "bytes": 601424,
+          "blobSha": "7a0ce91ccd26d8902f2ece0a5a553483ea36fd32"
+        },
+        {
+          "path": "Pokemon-Gen1/078_Rapidash/source/Rapidash.FBX",
+          "bytes": 1246512,
+          "blobSha": "e4ef4382d97f01d61101baf81b7846ca47e708c8"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/079_Slowpoke/Slowpoke.c4d",
+          "bytes": 577640,
+          "blobSha": "be349c593c2e2bafd957a1c7ae8a9436f0a79ace"
+        },
+        {
+          "path": "Pokemon-Gen1/079_Slowpoke/Slowpoke.fbx",
+          "bytes": 329424,
+          "blobSha": "9c26e85ad4bccff11f4a52c496925b1372d1a39d"
+        },
+        {
+          "path": "Pokemon-Gen1/079_Slowpoke/source/Slowpoke.FBX",
+          "bytes": 1016512,
+          "blobSha": "2e75f8a65db5551a6fcfd40c0fc6127a549a0a04"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/080_Slowbro/Slowbro.c4d",
+          "bytes": 724557,
+          "blobSha": "e70bf7e767b87533b69a70c857e307e911dbea36"
+        },
+        {
+          "path": "Pokemon-Gen1/080_Slowbro/Slowbro.fbx",
+          "bytes": 426096,
+          "blobSha": "7bb2699a5d38dd29539fbaed8278727212d8e0ba"
+        },
+        {
+          "path": "Pokemon-Gen1/080_Slowbro/source/Slowbro.FBX",
+          "bytes": 1286000,
+          "blobSha": "e41a2b3b1fe36eabb29b0de71484adb2d4dcf097"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/081_Magnemite/Magnemite.c4d",
+          "bytes": 502776,
+          "blobSha": "d29d37c5bee264deef5b101c384487a01a558863"
+        },
+        {
+          "path": "Pokemon-Gen1/081_Magnemite/Magnemite.fbx",
+          "bytes": 220960,
+          "blobSha": "b1e6d950dc794a007372aba54a292232818d43ef"
+        },
+        {
+          "path": "Pokemon-Gen1/081_Magnemite/source/081_Magnemite.fbx",
+          "bytes": 702784,
+          "blobSha": "a8a6f6b2f7e3cfe58b8f9c6c7245df7fcc74d133"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/082_Magneton/Magneton.c4d",
+          "bytes": 903373,
+          "blobSha": "de23dee34c4fc91356c9ed2e71c314f30066a68d"
+        },
+        {
+          "path": "Pokemon-Gen1/082_Magneton/Magneton.fbx",
+          "bytes": 474560,
+          "blobSha": "5f03e0ad445a5ddab7a23dd00f05a9fac774551c"
+        },
+        {
+          "path": "Pokemon-Gen1/082_Magneton/source/082_Magneton.fbx",
+          "bytes": 1672272,
+          "blobSha": "5fbba69afc3a7f66b8e343a59f2b3c81796a0ba9"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/083_Farfetch'd/Farfetch'd.c4d",
+          "bytes": 703498,
+          "blobSha": "c1680f11cfe0f7d17f8294351bd1a572144ad6a1"
+        },
+        {
+          "path": "Pokemon-Gen1/083_Farfetch'd/Farfetch'd.fbx",
+          "bytes": 1431616,
+          "blobSha": "905a934eeb737951bbaad882d3abac6cda04478e"
+        },
+        {
+          "path": "Pokemon-Gen1/083_Farfetch'd/source/a083.fbx",
+          "bytes": 1076208,
+          "blobSha": "dcdab113a09110ca541244f871d127616c08d51b"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/084_Doduo/Doduo.c4d",
+          "bytes": 703021,
+          "blobSha": "a19a889bc0be18519b8b68c679ba4ac490665c36"
+        },
+        {
+          "path": "Pokemon-Gen1/084_Doduo/Doduo.fbx",
+          "bytes": 398496,
+          "blobSha": "fea5f2cfa2a42cd58c0ae65f3cc08a0aa79673fb"
+        },
+        {
+          "path": "Pokemon-Gen1/084_Doduo/source/DoduoF.FBX",
+          "bytes": 1000064,
+          "blobSha": "e327e7aad79c441d15957872ab6c60108ca5946a"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/085_Dodrio/Dodrio.c4d",
+          "bytes": 757678,
+          "blobSha": "6903a2a44ebff2b6e2b3be70d186c399e0a0fa92"
+        },
+        {
+          "path": "Pokemon-Gen1/085_Dodrio/Dodrio.fbx",
+          "bytes": 480976,
+          "blobSha": "a49a32f948a7c8bba82d95fc473dfaa9f17717fd"
+        },
+        {
+          "path": "Pokemon-Gen1/085_Dodrio/source/DodrioF.FBX",
+          "bytes": 1132320,
+          "blobSha": "e30068aa497d52f93c0337f46fc48b548c383f77"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/086_Seel/Seel.c4d",
+          "bytes": 594398,
+          "blobSha": "aeabee62c29df0683691d321adbfda80d3d357ef"
+        },
+        {
+          "path": "Pokemon-Gen1/086_Seel/Seel.fbx",
+          "bytes": 313040,
+          "blobSha": "2cf2b62329d337c75a6c8c6670b09262344458dd"
+        },
+        {
+          "path": "Pokemon-Gen1/086_Seel/source/Seel.FBX",
+          "bytes": 890800,
+          "blobSha": "bd5773f29d8afcd65dd5c06f4c14f979e268a900"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/087_Dewgong/Dewgong.c4d",
+          "bytes": 614471,
+          "blobSha": "ce5717bd1a3c2998593ca6580e415f1587994046"
+        },
+        {
+          "path": "Pokemon-Gen1/087_Dewgong/Dewgong.fbx",
+          "bytes": 330064,
+          "blobSha": "6a6fc1b7d0883cf5d164547ae68116d038da3bcb"
+        },
+        {
+          "path": "Pokemon-Gen1/087_Dewgong/source/Dewgong.FBX",
+          "bytes": 912016,
+          "blobSha": "fa94af3cadf3069740b2d68bfdc7bfaece1bf638"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "files": 8,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/088_Grimer/Grimer.c4d",
+          "bytes": 1187978,
+          "blobSha": "9846412aab81a016efcb3a3547d5ab8e4c0701c6"
+        },
+        {
+          "path": "Pokemon-Gen1/088_Grimer/Grimer.fbx",
+          "bytes": 576672,
+          "blobSha": "2ac0a8e291b1b119d4865e6d8a0fef93497d1bc2"
+        },
+        {
+          "path": "Pokemon-Gen1/088_Grimer/source/Grimer.fbx",
+          "bytes": 2178800,
+          "blobSha": "8b8b7c5460c2648d056952669135c39e49f4533b"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "files": 8,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/089_Muk/Muk.c4d",
+          "bytes": 855422,
+          "blobSha": "aca6833390254bc47f0fb5325b938359bec134a1"
+        },
+        {
+          "path": "Pokemon-Gen1/089_Muk/Muk.fbx",
+          "bytes": 518240,
+          "blobSha": "5d1015bc7051a939c5d4b36ddad7749c5676ed68"
+        },
+        {
+          "path": "Pokemon-Gen1/089_Muk/source/pm0089_00.fbx",
+          "bytes": 2014304,
+          "blobSha": "d773c8eef2be1f26139bdf9098624c53ebfe9d9f"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/090_Shellder/Shellder.c4d",
+          "bytes": 548844,
+          "blobSha": "e8ff11b21455ecea17c955046daba4641f7ec631"
+        },
+        {
+          "path": "Pokemon-Gen1/090_Shellder/Shellder.fbx",
+          "bytes": 224848,
+          "blobSha": "5ef5c633c9d3e52f14b2c8b709e5b504e4d1e2e7"
+        },
+        {
+          "path": "Pokemon-Gen1/090_Shellder/source/pm0090_00.fbx",
+          "bytes": 522176,
+          "blobSha": "436f7557ef40450409af4d1906f47aa2a5ee6b72"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/091_Cloyster/Cloyster.c4d",
+          "bytes": 700324,
+          "blobSha": "eee6cc178d4c720b601616ca51ec9f66ddbbbd3b"
+        },
+        {
+          "path": "Pokemon-Gen1/091_Cloyster/Cloyster.fbx",
+          "bytes": 342656,
+          "blobSha": "a9d5af1cd943322d69bc93a4faa4a460008e575c"
+        },
+        {
+          "path": "Pokemon-Gen1/091_Cloyster/source/pm0091_00.fbx",
+          "bytes": 768656,
+          "blobSha": "680d4e6b82a24ed1eaaad7abcfa2a79f2a884bf9"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "files": 9,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/092 - Gastly/Gastly.c4d",
+          "bytes": 408674,
+          "blobSha": "8d9a78c2662bec6fc96765e8d4124e701200f14f"
+        },
+        {
+          "path": "Pokemon-Gen1/092 - Gastly/Gastly.fbx",
+          "bytes": 231712,
+          "blobSha": "337f018d0b2370b54ed94d742fefa4a8c641759b"
+        },
+        {
+          "path": "Pokemon-Gen1/092 - Gastly/placeholder/Gastly.c4d",
+          "bytes": 219848,
+          "blobSha": "8c123b8db60592ba2ec6ea5998b79e957fc6b3df"
+        },
+        {
+          "path": "Pokemon-Gen1/092 - Gastly/placeholder/Gastly.fbx",
+          "bytes": 64368,
+          "blobSha": "ebf73a44ec95afe0977fa74fcf8865fe4c0a55a3"
+        },
+        {
+          "path": "Pokemon-Gen1/092 - Gastly/source/Gastly.obj",
+          "bytes": 129800,
+          "blobSha": "9d8d463bc9641b49c3e9cb005aa0e1ececf036ec"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "files": 9,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/093 - Haunter/Haunter.c4d",
+          "bytes": 454109,
+          "blobSha": "c42f2ae525031538f3a91e885cc0a3272c5a7803"
+        },
+        {
+          "path": "Pokemon-Gen1/093 - Haunter/Haunter.fbx",
+          "bytes": 1676080,
+          "blobSha": "de721b3b8d2f954b4031ff09b05cae9dd78d5454"
+        },
+        {
+          "path": "Pokemon-Gen1/093 - Haunter/placeholder/Haunter.c4d",
+          "bytes": 219916,
+          "blobSha": "223b1e5902330807d85823919383f7c17a4c44fd"
+        },
+        {
+          "path": "Pokemon-Gen1/093 - Haunter/placeholder/Haunter.fbx",
+          "bytes": 66640,
+          "blobSha": "9f6b841619b51a2bc9136daed27c545621d7412e"
+        },
+        {
+          "path": "Pokemon-Gen1/093 - Haunter/source/BR_Haunter.obj",
+          "bytes": 101383,
+          "blobSha": "cac3eba8cfcbcb7eb8d30255a3d145a03f3eeda3"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/094_Gengar/Gengar.c4d",
+          "bytes": 723140,
+          "blobSha": "10fee404571078c1b3fd8ee7df45a57195f0a1c7"
+        },
+        {
+          "path": "Pokemon-Gen1/094_Gengar/Gengar.fbx",
+          "bytes": 372480,
+          "blobSha": "7d5b6c19b11e5377e1e9d0f29975077b848c1bdc"
+        },
+        {
+          "path": "Pokemon-Gen1/094_Gengar/source/Gengar.FBX",
+          "bytes": 1346192,
+          "blobSha": "b470acf38e87a9218fff0d5f4a3259ee2b940e35"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "files": 11,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/095 - Onix/Onix.c4d",
+          "bytes": 429654,
+          "blobSha": "22ad1124ba52f480335a0b51e63e15d5af175e8a"
+        },
+        {
+          "path": "Pokemon-Gen1/095 - Onix/Onix.fbx",
+          "bytes": 127216,
+          "blobSha": "fa7fae976ab2722915b6814ca76fdc107807b839"
+        },
+        {
+          "path": "Pokemon-Gen1/095 - Onix/placeholder/Onix.c4d",
+          "bytes": 219846,
+          "blobSha": "f81c1484185c59e311cbe02d78f5ad13f0d055c3"
+        },
+        {
+          "path": "Pokemon-Gen1/095 - Onix/placeholder/Onix.fbx",
+          "bytes": 72608,
+          "blobSha": "95e0f81ad07b0e399a0e8309358e08ec72d10715"
+        },
+        {
+          "path": "Pokemon-Gen1/095 - Onix/source/BR_Onix.obj",
+          "bytes": 50824,
+          "blobSha": "1419fe388f65c442228203e82643a371baf686bb"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "files": 8,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/096_Drowzee/Drowzee.c4d",
+          "bytes": 289264,
+          "blobSha": "cf25b3275fd34781034e950d631f293de0076684"
+        },
+        {
+          "path": "Pokemon-Gen1/096_Drowzee/Drowzee.fbx",
+          "bytes": 51968,
+          "blobSha": "19f48695c59cce3a40a1d4e40c723da558e659a9"
+        },
+        {
+          "path": "Pokemon-Gen1/096_Drowzee/placeholder/Drowzee.c4d",
+          "bytes": 221571,
+          "blobSha": "19ecb49f43170667fcee650848b3bedc88cb9cde"
+        },
+        {
+          "path": "Pokemon-Gen1/096_Drowzee/placeholder/Drowzee.fbx",
+          "bytes": 50256,
+          "blobSha": "74dcf0f81ac66c84b2a9bf1c54ba90774cd38090"
+        },
+        {
+          "path": "Pokemon-Gen1/096_Drowzee/source/drowzee.obj",
+          "bytes": 147706,
+          "blobSha": "e6a5c8b03784537b22cb78dbcb4d85ccebb07b9a"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "files": 10,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/097 - Hypno/Hypno.c4d",
+          "bytes": 459290,
+          "blobSha": "fefacc1bf138eede403de89bab626ce3981bcf4b"
+        },
+        {
+          "path": "Pokemon-Gen1/097 - Hypno/Hypno.fbx",
+          "bytes": 1227664,
+          "blobSha": "2ecfcc6ece3ba8db393bb42ca7d940186aca1aae"
+        },
+        {
+          "path": "Pokemon-Gen1/097 - Hypno/placeholder/Hypno.c4d",
+          "bytes": 223103,
+          "blobSha": "0e6ebc668a33e36b77f33fb8c0a4a1e9cc82ff14"
+        },
+        {
+          "path": "Pokemon-Gen1/097 - Hypno/placeholder/Hypno.fbx",
+          "bytes": 57616,
+          "blobSha": "58029d28eba5693db8591eafe9e1cc0017ad1abd"
+        },
+        {
+          "path": "Pokemon-Gen1/097 - Hypno/source/BR_Hypno.obj",
+          "bytes": 107845,
+          "blobSha": "334d6745761fa533dab90f3d9ec102183841c0ea"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "files": 18,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/098 - Krabby/Krabby.c4d",
+          "bytes": 535549,
+          "blobSha": "827f7da7ed373e296609800707bc262f50d861ee"
+        },
+        {
+          "path": "Pokemon-Gen1/098 - Krabby/Krabby.fbx",
+          "bytes": 137584,
+          "blobSha": "dead5d146529b05f410b46c56939df3201d8e7ed"
+        },
+        {
+          "path": "Pokemon-Gen1/098 - Krabby/placeholder/Krabby.c4d",
+          "bytes": 222950,
+          "blobSha": "7012e42e36d3085b97499796add829f3acd1e4d6"
+        },
+        {
+          "path": "Pokemon-Gen1/098 - Krabby/placeholder/Krabby.fbx",
+          "bytes": 55360,
+          "blobSha": "b97908b8d3c267f4ee0c8c277c0b2020282fe60d"
+        },
+        {
+          "path": "Pokemon-Gen1/098 - Krabby/source/BR_Krabby.obj",
+          "bytes": 38013,
+          "blobSha": "04a4b8697ea4e607081d1977ab008c3563b66517"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "files": 18,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/099 - Kingler/Kingler.c4d",
+          "bytes": 538409,
+          "blobSha": "065128b718cf050941c5d8e59b1223cb0b6c543e"
+        },
+        {
+          "path": "Pokemon-Gen1/099 - Kingler/Kingler.fbx",
+          "bytes": 166816,
+          "blobSha": "0507a94722b012bdac02ba27ebe26de23f3d7f9a"
+        },
+        {
+          "path": "Pokemon-Gen1/099 - Kingler/placeholder/Kingler.c4d",
+          "bytes": 223380,
+          "blobSha": "52bd490ae5b6063b0950d9d973c65ae5bb018a01"
+        },
+        {
+          "path": "Pokemon-Gen1/099 - Kingler/placeholder/Kingler.fbx",
+          "bytes": 76832,
+          "blobSha": "39f06e4ef9af5c46ffa98bec0ef3682568da19ff"
+        },
+        {
+          "path": "Pokemon-Gen1/099 - Kingler/source/BR_Kingler.obj",
+          "bytes": 40434,
+          "blobSha": "37bd27f29df973edbf3410b13efbfdfaedd574c7"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/100_Voltorb/Voltorb.c4d",
+          "bytes": 681398,
+          "blobSha": "747548b3c5d1356b279c8dc23e640f1066406362"
+        },
+        {
+          "path": "Pokemon-Gen1/100_Voltorb/Voltorb.fbx",
+          "bytes": 259376,
+          "blobSha": "17c20536219ad1cf53f458f2fd4f01d66ab6b100"
+        },
+        {
+          "path": "Pokemon-Gen1/100_Voltorb/source/pm0100_00.fbx",
+          "bytes": 747520,
+          "blobSha": "a58f0a1dfef30e04955ef1d2c1cf88eaa40f89f4"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "files": 25,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/101 - Electrode/Electrode.c4d",
+          "bytes": 387514,
+          "blobSha": "68cd35c7b5d391547b4f26783bbd7adad2f1812e"
+        },
+        {
+          "path": "Pokemon-Gen1/101 - Electrode/Electrode.fbx",
+          "bytes": 78144,
+          "blobSha": "5c056f95ee1ea0485699ac44f795ccb858b3d7dd"
+        },
+        {
+          "path": "Pokemon-Gen1/101 - Electrode/placeholder/Electrode.c4d",
+          "bytes": 219881,
+          "blobSha": "0986bea801a1a25660e3677b7c9d820375d8bedd"
+        },
+        {
+          "path": "Pokemon-Gen1/101 - Electrode/placeholder/Electrode.fbx",
+          "bytes": 55808,
+          "blobSha": "b43a4c3465dcc6153c9bce1dbe747e18b3adef85"
+        },
+        {
+          "path": "Pokemon-Gen1/101 - Electrode/source/Electrode.obj",
+          "bytes": 116176,
+          "blobSha": "0fd81ac25547eb59e98451e3b2b50bf0e766b07c"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "files": 65,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/102 - Exeggcute/Exeggcute.c4d",
+          "bytes": 619080,
+          "blobSha": "1bcdc6c8b887913818684cf36283594e50d29735"
+        },
+        {
+          "path": "Pokemon-Gen1/102 - Exeggcute/Exeggcute.fbx",
+          "bytes": 110288,
+          "blobSha": "04b3782a1ae9e9800ddc0a419e71cfcd75c5f7c3"
+        },
+        {
+          "path": "Pokemon-Gen1/102 - Exeggcute/placeholder/Exeggcute.c4d",
+          "bytes": 222782,
+          "blobSha": "2aa488adf6619a86c778e9860809b1ca53c15283"
+        },
+        {
+          "path": "Pokemon-Gen1/102 - Exeggcute/placeholder/Exeggcute.fbx",
+          "bytes": 51040,
+          "blobSha": "cbbc6f9459a5601d432869c13db81433751203e1"
+        },
+        {
+          "path": "Pokemon-Gen1/102 - Exeggcute/source/BR_Exeggcute.obj",
+          "bytes": 41613,
+          "blobSha": "692a5d7be02b213b92e70068de9afe0d7510bcef"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "files": 38,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/103 - Exeggutor/Exeggutor.c4d",
+          "bytes": 549123,
+          "blobSha": "e694df4238e1899a3ed726c160b8bd1d787dc2bb"
+        },
+        {
+          "path": "Pokemon-Gen1/103 - Exeggutor/Exeggutor.fbx",
+          "bytes": 95664,
+          "blobSha": "04e02644e15a1623c34b588011adcd5549fba332"
+        },
+        {
+          "path": "Pokemon-Gen1/103 - Exeggutor/placeholder/Exeggutor.c4d",
+          "bytes": 220204,
+          "blobSha": "6bb9c32254bca9899c2d7fa6aaaed0e2fd63a3da"
+        },
+        {
+          "path": "Pokemon-Gen1/103 - Exeggutor/placeholder/Exeggutor.fbx",
+          "bytes": 66512,
+          "blobSha": "db9571ef5ec122298f88b293b6e605a9ffd00d07"
+        },
+        {
+          "path": "Pokemon-Gen1/103 - Exeggutor/source/BR_Exeggutor.obj",
+          "bytes": 40740,
+          "blobSha": "e8bad0c23906faee1e59d8cf090d72eaf60acac7"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/104_Cubone/Cubone.c4d",
+          "bytes": 696204,
+          "blobSha": "87ae1e1dac33fa40c9061a4be6f9207d5998d900"
+        },
+        {
+          "path": "Pokemon-Gen1/104_Cubone/Cubone.fbx",
+          "bytes": 344704,
+          "blobSha": "cfa6ef259955034a923120c8635e0f53d86ee27a"
+        },
+        {
+          "path": "Pokemon-Gen1/104_Cubone/source/Cubone.FBX",
+          "bytes": 1195392,
+          "blobSha": "56e7e4876dd26c2ceebea2f04d29fc6497bacfea"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/105_Marowak/Marowak.c4d",
+          "bytes": 884625,
+          "blobSha": "9e35b2b99e064f4d7e64c7afa6bbb2d8ddd36c54"
+        },
+        {
+          "path": "Pokemon-Gen1/105_Marowak/Marowak.fbx",
+          "bytes": 400336,
+          "blobSha": "12a97e5a3fca95cf6ca11f028ca3b46ca7ed14f2"
+        },
+        {
+          "path": "Pokemon-Gen1/105_Marowak/source/Marowak.FBX",
+          "bytes": 1385472,
+          "blobSha": "e394d7a59c0e471a65bf73103f32431854eebfca"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "files": 14,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/106 - Hitmonlee/Hitmonlee.c4d",
+          "bytes": 397509,
+          "blobSha": "b0a5666c14bcd44bf1bbf98780d65af2d222b98d"
+        },
+        {
+          "path": "Pokemon-Gen1/106 - Hitmonlee/Hitmonlee.fbx",
+          "bytes": 87520,
+          "blobSha": "7dbffa83f4c09d2a16d6d285bd10879107fdc877"
+        },
+        {
+          "path": "Pokemon-Gen1/106 - Hitmonlee/placeholder/Hitmonlee.c4d",
+          "bytes": 220419,
+          "blobSha": "bbafd918bfca7b4b8242e9496824f77059c5d6c3"
+        },
+        {
+          "path": "Pokemon-Gen1/106 - Hitmonlee/placeholder/Hitmonlee.fbx",
+          "bytes": 52208,
+          "blobSha": "5e60d8f3022ea1b533937ebc6a7a4b3852f3e16d"
+        },
+        {
+          "path": "Pokemon-Gen1/106 - Hitmonlee/source/Hitmonlee.obj",
+          "bytes": 158521,
+          "blobSha": "130098ce2a4a6c34ece6fec46292979694904514"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/107_Hitmonchan/Hitmonchan.c4d",
+          "bytes": 937684,
+          "blobSha": "3114e8a98c3c97f04c4e0990d46d4a44b23c6a8a"
+        },
+        {
+          "path": "Pokemon-Gen1/107_Hitmonchan/Hitmonchan.fbx",
+          "bytes": 429024,
+          "blobSha": "e10c596e61cc84b51341875fdf76589840555259"
+        },
+        {
+          "path": "Pokemon-Gen1/107_Hitmonchan/source/Hitmonchan.FBX",
+          "bytes": 1455440,
+          "blobSha": "445f5d679be376562d4165a5b340ecdf4677cf5b"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "files": 25,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/108 - Lickitung/placeholder/Lickitung.c4d",
+          "bytes": 222222,
+          "blobSha": "0f5a5cf1ce970885576f04d30a6fc1bf8ec006e8"
+        },
+        {
+          "path": "Pokemon-Gen1/108 - Lickitung/placeholder/Lickitung.fbx",
+          "bytes": 60304,
+          "blobSha": "c862efa8ad249d506a1558a809a46af47476900d"
+        },
+        {
+          "path": "Pokemon-Gen1/108 - Lickitung/source/BR_Lickitung.obj",
+          "bytes": 37291,
+          "blobSha": "f603491e75d3e1902dc6903efd1f553fbfaf798f"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "files": 16,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/109 - Koffing/placeholder/Koffing.c4d",
+          "bytes": 220649,
+          "blobSha": "75c6122b6027380d64a8700b4ca827c466a94403"
+        },
+        {
+          "path": "Pokemon-Gen1/109 - Koffing/placeholder/Koffing.fbx",
+          "bytes": 51920,
+          "blobSha": "02dca873d4e32edc57721f896ab7987c2ea9bddf"
+        },
+        {
+          "path": "Pokemon-Gen1/109 - Koffing/source/BR_Koffing.obj",
+          "bytes": 36087,
+          "blobSha": "8a8af4c382a0ee7eb717e5b1047505b4ea98aeaf"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "files": 19,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/110 - Weezing/placeholder/Weezing.c4d",
+          "bytes": 222394,
+          "blobSha": "da7053ce3d91ea6e4d6eb9480c9773e1f63049fd"
+        },
+        {
+          "path": "Pokemon-Gen1/110 - Weezing/placeholder/Weezing.fbx",
+          "bytes": 73232,
+          "blobSha": "fac37ef308532eccd7306140633442c82be42591"
+        },
+        {
+          "path": "Pokemon-Gen1/110 - Weezing/source/BR_Weezing.obj",
+          "bytes": 35910,
+          "blobSha": "beece9df6fb6d7376ce0d73e66f82c502be6e91a"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "files": 10,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/111 - Rhyhorn/placeholder/Rhyhorn.c4d",
+          "bytes": 220379,
+          "blobSha": "7c0177f6ef6457ba8023d2747d7e0dffad52ccb9"
+        },
+        {
+          "path": "Pokemon-Gen1/111 - Rhyhorn/placeholder/Rhyhorn.fbx",
+          "bytes": 62352,
+          "blobSha": "ca362d16d3c16f0fbfa68bbd59384ef7606cc427"
+        },
+        {
+          "path": "Pokemon-Gen1/111 - Rhyhorn/source/BR_Rhyhorn.obj",
+          "bytes": 149102,
+          "blobSha": "a4384b2591fe469c8ba487ebdc33ce63897bb01c"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/112_Rhydon/Rhydon.c4d",
+          "bytes": 792561,
+          "blobSha": "8aed69c08d346f326063d755a8e78533a23e0e38"
+        },
+        {
+          "path": "Pokemon-Gen1/112_Rhydon/Rhydon.fbx",
+          "bytes": 472032,
+          "blobSha": "68e78a8df8738b04bfcdb79cfc7a15026a2bd0bf"
+        },
+        {
+          "path": "Pokemon-Gen1/112_Rhydon/source/RhydonF.FBX",
+          "bytes": 1007200,
+          "blobSha": "fb44f0bfe7c076012bb69c380912b4cc0dbb491b"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "files": 12,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/113 - Chansey/placeholder/Chansey.c4d",
+          "bytes": 220509,
+          "blobSha": "09884c9fbad48a5f8ab8891b11e9bf3449852958"
+        },
+        {
+          "path": "Pokemon-Gen1/113 - Chansey/placeholder/Chansey.fbx",
+          "bytes": 57712,
+          "blobSha": "eb939a9d48d8e0187fb32af364c18fea062c6768"
+        },
+        {
+          "path": "Pokemon-Gen1/113 - Chansey/source/BR_Chansey.obj",
+          "bytes": 138497,
+          "blobSha": "91d211fc004d3d1ded7608b29c323c480d47d416"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/114 - Tangela/placeholder/Tangela.c4d",
+          "bytes": 225884,
+          "blobSha": "610cf132537b8a889985a86725594caee6c82710"
+        },
+        {
+          "path": "Pokemon-Gen1/114 - Tangela/placeholder/Tangela.fbx",
+          "bytes": 67200,
+          "blobSha": "dc0930a338fff62b4dcb70f551e5825dda558759"
+        },
+        {
+          "path": "Pokemon-Gen1/114 - Tangela/source/BR_Tangela.obj",
+          "bytes": 28888,
+          "blobSha": "6044ddb327194f524beda5dfecad63c6742f5aac"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "files": 8,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/115_Kangaskhan/Kangaskhan.c4d",
+          "bytes": 989010,
+          "blobSha": "24f755df7dd9d09255bd1c5af73a8d7632afeb82"
+        },
+        {
+          "path": "Pokemon-Gen1/115_Kangaskhan/Kangaskhan.fbx",
+          "bytes": 538400,
+          "blobSha": "67f5dd6640854675656fdecf6c844e588f007e3f"
+        },
+        {
+          "path": "Pokemon-Gen1/115_Kangaskhan/source/Kangaskhan.FBX",
+          "bytes": 1857312,
+          "blobSha": "f212f88b133b60bb5066ece50421e5fd54ec0028"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "files": 15,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/116 - Horsea/placeholder/Horsea.c4d",
+          "bytes": 221661,
+          "blobSha": "0279df95c6d5279f6a9710dcc0a48d8ee05efe89"
+        },
+        {
+          "path": "Pokemon-Gen1/116 - Horsea/placeholder/Horsea.fbx",
+          "bytes": 39728,
+          "blobSha": "f15a7e90e36142f93644ec54d27a928d41520938"
+        },
+        {
+          "path": "Pokemon-Gen1/116 - Horsea/source/BR_Horsea.obj",
+          "bytes": 31202,
+          "blobSha": "894026c5e4d7d7c1888c4bc2d19f05577c706ccd"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "files": 9,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/117 - Seadra/placeholder/Seadra.c4d",
+          "bytes": 222864,
+          "blobSha": "8af88f0b40a7e105db4bec86f390e639a8906068"
+        },
+        {
+          "path": "Pokemon-Gen1/117 - Seadra/placeholder/Seadra.fbx",
+          "bytes": 54320,
+          "blobSha": "4ca4c10ffd0322d1bb40bfd1c3c9d14f2296a35c"
+        },
+        {
+          "path": "Pokemon-Gen1/117 - Seadra/source/BR_Seadra.obj",
+          "bytes": 136659,
+          "blobSha": "02e3625ba8cdd6c34399538e107b0c1a97d05f54"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "files": 3,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/118_Goldeen/Goldeen.c4d",
+          "bytes": 558886,
+          "blobSha": "ff12c6e08bc534eb394af678c2c58b18ea2b5945"
+        },
+        {
+          "path": "Pokemon-Gen1/118_Goldeen/Goldeen.fbx",
+          "bytes": 608528,
+          "blobSha": "c7971aeb15fa5ae0bb373f10c24f2c270d96e35c"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/119_Seaking/Seaking.blend",
+          "bytes": 1311396,
+          "blobSha": "66b32a5b3a4a7a54c66c145aa7cd6f2c79d095ab"
+        },
+        {
+          "path": "Pokemon-Gen1/119_Seaking/Seaking.dae",
+          "bytes": 773483,
+          "blobSha": "0e58ddde01a00d2381c5499eaa63907955114597"
+        },
+        {
+          "path": "Pokemon-Gen1/119_Seaking/placeholder/Seaking.c4d",
+          "bytes": 127597,
+          "blobSha": "87f1dd7ea402963907f0fae81f054b910103fd92"
+        },
+        {
+          "path": "Pokemon-Gen1/119_Seaking/placeholder/Seaking.fbx",
+          "bytes": 48288,
+          "blobSha": "4a3f4fb0adf6c6761f2f5343125d89cd7e92a27d"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "files": 4,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/120_Staryu/Staryu.c4d",
+          "bytes": 502510,
+          "blobSha": "98b513ac34972ba8d465b099200e0ff80810f608"
+        },
+        {
+          "path": "Pokemon-Gen1/120_Staryu/Staryu.fbx",
+          "bytes": 216528,
+          "blobSha": "97deb00d78162dd2e9ba2e1c27b7729776f1c1d1"
+        },
+        {
+          "path": "Pokemon-Gen1/120_Staryu/source/pm0120_00.fbx",
+          "bytes": 675552,
+          "blobSha": "af150f30e8d4ba91504f6f336cede07595f6e2e9"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/121_Starmie/Starmie.c4d",
+          "bytes": 631690,
+          "blobSha": "174729a651d27cdbe5e0c0badb7db1fbe6916c53"
+        },
+        {
+          "path": "Pokemon-Gen1/121_Starmie/Starmie.fbx",
+          "bytes": 398592,
+          "blobSha": "2a6089ba64bfa57b9baae00f8bfedf792ba75989"
+        },
+        {
+          "path": "Pokemon-Gen1/121_Starmie/source/pm0121_00.fbx",
+          "bytes": 948928,
+          "blobSha": "97b545b05a9c68a41a00378a43765b35d7c37e1c"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/122_Mr. Mime/MrMime.c4d",
+          "bytes": 912358,
+          "blobSha": "9b7a874d444f6460a6d9ba19c306b8010a8bbf25"
+        },
+        {
+          "path": "Pokemon-Gen1/122_Mr. Mime/MrMime.fbx",
+          "bytes": 416944,
+          "blobSha": "bfb7fa17c3d35ce21489a03fd8d1256d57166554"
+        },
+        {
+          "path": "Pokemon-Gen1/122_Mr. Mime/source/MrMime.FBX",
+          "bytes": 1437488,
+          "blobSha": "681f7c7b45587f1989896eed10821cca2a55ddbb"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/123_Scyther/Scyther.c4d",
+          "bytes": 718086,
+          "blobSha": "0908f80454404a9580fa88d83edaac617c3a4d04"
+        },
+        {
+          "path": "Pokemon-Gen1/123_Scyther/Scyther.fbx",
+          "bytes": 371280,
+          "blobSha": "a39b7c72249b64c2689709d38b9b46136a209bf1"
+        },
+        {
+          "path": "Pokemon-Gen1/123_Scyther/source/Scyther.FBX",
+          "bytes": 1004528,
+          "blobSha": "13d8924577c8f2bf44cdc266b6983dddc07fb4b5"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "files": 9,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/124 - Jynx/placeholder/Jynx.c4d",
+          "bytes": 223765,
+          "blobSha": "367bcb3cdbf28d397dcc722f6708854aa96a3396"
+        },
+        {
+          "path": "Pokemon-Gen1/124 - Jynx/placeholder/Jynx.fbx",
+          "bytes": 65968,
+          "blobSha": "d08e886e20dbb1b3c84cf8fdfdae2009c2e89b16"
+        },
+        {
+          "path": "Pokemon-Gen1/124 - Jynx/source/BR_Jynx.obj",
+          "bytes": 5989,
+          "blobSha": "963e49f090cec2b855a420ef555d5b3414997584"
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "files": 9,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/125 - Electabuzz/placeholder/Electabuzz.c4d",
+          "bytes": 225227,
+          "blobSha": "d1d5e3bfd4f77e392742bb27953eb87443526dbd"
+        },
+        {
+          "path": "Pokemon-Gen1/125 - Electabuzz/placeholder/Electabuzz.fbx",
+          "bytes": 62480,
+          "blobSha": "5bd99b577ea6ed09da8d9a21b3f8de8d69ee2c09"
+        },
+        {
+          "path": "Pokemon-Gen1/125 - Electabuzz/source/BR_Electabuzz.obj",
+          "bytes": 140840,
+          "blobSha": "e361c048ef8d265d7fa395ac7b79d83b0d28c4b1"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "files": 27,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/126 - Magmar/placeholder/Magmar.c4d",
+          "bytes": 224938,
+          "blobSha": "792c74910cf9f8d476ef6309a9543eb66f7521ac"
+        },
+        {
+          "path": "Pokemon-Gen1/126 - Magmar/placeholder/Magmar.fbx",
+          "bytes": 62832,
+          "blobSha": "9f9b0e85096fb1b1b72dc55030b279e3d589ca71"
+        },
+        {
+          "path": "Pokemon-Gen1/126 - Magmar/source/BR_Magmar.obj",
+          "bytes": 55362,
+          "blobSha": "0d67dd98baea991f9ff6a2716689f76d2dfbd08b"
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/127_Pinsir/Pinsir.c4d",
+          "bytes": 735748,
+          "blobSha": "a5af20f21a130124d144725d33b4adf55ab554cd"
+        },
+        {
+          "path": "Pokemon-Gen1/127_Pinsir/Pinsir.fbx",
+          "bytes": 385488,
+          "blobSha": "ee14405acd44dbf3118dfd5fa4454e617fc3c4d5"
+        },
+        {
+          "path": "Pokemon-Gen1/127_Pinsir/source/Pinsir.FBX",
+          "bytes": 1336448,
+          "blobSha": "77db6a9f52e28b98c53f6286f5cce151be8f4b34"
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "files": 35,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/128 - Tauros/placeholder/Tauros.c4d",
+          "bytes": 222683,
+          "blobSha": "dadff56e6a8e4349a6aecf20d71ed1b37d8ecc37"
+        },
+        {
+          "path": "Pokemon-Gen1/128 - Tauros/placeholder/Tauros.fbx",
+          "bytes": 63232,
+          "blobSha": "cdf9638453f4c90c4048cf7314b3a887767f6530"
+        },
+        {
+          "path": "Pokemon-Gen1/128 - Tauros/source/BR_Tauros.obj",
+          "bytes": 37298,
+          "blobSha": "b70a7ad433c73dae04e2e25a42771db6da5be1e9"
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/129_Magikarp/Magikarp.c4d",
+          "bytes": 620291,
+          "blobSha": "d9d21b427f4e065946444437235655b70ceca429"
+        },
+        {
+          "path": "Pokemon-Gen1/129_Magikarp/Magikarp.fbx",
+          "bytes": 299280,
+          "blobSha": "a773166d5bd5b9f49216614bf3dec2c20bc4769f"
+        },
+        {
+          "path": "Pokemon-Gen1/129_Magikarp/source/MagikarpF.FBX",
+          "bytes": 701600,
+          "blobSha": "63602a1dbebe87c488a3bc5561b5a3504341cfae"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/130_Gyarados/Gyarados.c4d",
+          "bytes": 793511,
+          "blobSha": "6046f3e5b829dcb6689fa04b18cb097553cb2c17"
+        },
+        {
+          "path": "Pokemon-Gen1/130_Gyarados/Gyarados.fbx",
+          "bytes": 457536,
+          "blobSha": "3045a5c1d042978a21eaee838f7002ecbdfcffe8"
+        },
+        {
+          "path": "Pokemon-Gen1/130_Gyarados/source/GyaradosF.FBX",
+          "bytes": 1019360,
+          "blobSha": "489b5ff556b1b615a96312c879a01a11b5b5bfdb"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/131_Lapras/Lapras.c4d",
+          "bytes": 620869,
+          "blobSha": "61bc8a208ba0c7b5107465ff52764d070b186aae"
+        },
+        {
+          "path": "Pokemon-Gen1/131_Lapras/Lapras.fbx",
+          "bytes": 1165552,
+          "blobSha": "e51c617b0879140fb8332b54437431e62c7b2142"
+        },
+        {
+          "path": "Pokemon-Gen1/131_Lapras/source/a131.fbx",
+          "bytes": 828160,
+          "blobSha": "35d999aa0a72ff9d31818b653cd88ece61e0a708"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/132_Ditto/Ditto.c4d",
+          "bytes": 586970,
+          "blobSha": "97036674dda74a0ade14d5a7b9081946985b7738"
+        },
+        {
+          "path": "Pokemon-Gen1/132_Ditto/Ditto.fbx",
+          "bytes": 281968,
+          "blobSha": "a541e29c53eb7a70906272419b8314d818205fa1"
+        },
+        {
+          "path": "Pokemon-Gen1/132_Ditto/source/pm0132_00.fbx",
+          "bytes": 723760,
+          "blobSha": "59967ad53cda35371ebacd400e148d01182c6e67"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/133_Eevee/Eevee.c4d",
+          "bytes": 745033,
+          "blobSha": "6f4f0d75b9df33979863d5b1e8c806ff6c37a69d"
+        },
+        {
+          "path": "Pokemon-Gen1/133_Eevee/Eevee.fbx",
+          "bytes": 396368,
+          "blobSha": "c0c562d7104ce70b849ca40b65eba9cd2f5a8a0f"
+        },
+        {
+          "path": "Pokemon-Gen1/133_Eevee/source/Eevee.FBX",
+          "bytes": 1228688,
+          "blobSha": "fdafcec2f815083acf14d41798ea8531c06daeca"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/134_Vaporeon/Vaporeon.c4d",
+          "bytes": 781195,
+          "blobSha": "3b55d795dd933a3d1de1f9186f4e43e689cea1f5"
+        },
+        {
+          "path": "Pokemon-Gen1/134_Vaporeon/Vaporeon.fbx",
+          "bytes": 434240,
+          "blobSha": "832319283b9d521d030b9677df1f5ce094394bc3"
+        },
+        {
+          "path": "Pokemon-Gen1/134_Vaporeon/source/Vaporeon.FBX",
+          "bytes": 1337536,
+          "blobSha": "9d232ea45ac6c23c44b6e991060c92e122b962c2"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/135_Jolteon/Jolteon.c4d",
+          "bytes": 766710,
+          "blobSha": "564fb5ec7c4ce3836ed504f50e7169f025374d3d"
+        },
+        {
+          "path": "Pokemon-Gen1/135_Jolteon/Jolteon.fbx",
+          "bytes": 429520,
+          "blobSha": "399fad85fd9ef5665fba6a3569b123da5797cbed"
+        },
+        {
+          "path": "Pokemon-Gen1/135_Jolteon/source/Jolteon.FBX",
+          "bytes": 1363648,
+          "blobSha": "af6f0e57c160582328132e6f761b98857c81ed93"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "files": 7,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/136_Flareon/Flareon.c4d",
+          "bytes": 863676,
+          "blobSha": "b9a3fb5b6cc133437c968dbb8efbf4265d69b7d2"
+        },
+        {
+          "path": "Pokemon-Gen1/136_Flareon/Flareon.fbx",
+          "bytes": 469408,
+          "blobSha": "7aa8c508693f2d981cdc8113cb421df86e5dd4af"
+        },
+        {
+          "path": "Pokemon-Gen1/136_Flareon/source/Flareon.FBX",
+          "bytes": 1525136,
+          "blobSha": "e91aeecd4ede178d00446afb9e4a71f0756c0236"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/137_Porygon/Porygon.c4d",
+          "bytes": 333152,
+          "blobSha": "78b70815833b5928ed630e925df053dcaadb2e05"
+        },
+        {
+          "path": "Pokemon-Gen1/137_Porygon/Porygon.fbx",
+          "bytes": 108944,
+          "blobSha": "8e1e72512081745b33e21e97372a3c241930d11f"
+        },
+        {
+          "path": "Pokemon-Gen1/137_Porygon/source/Porygon.FBX",
+          "bytes": 132768,
+          "blobSha": "a7be6bfb422986f726b7f262d1daa4859790f0c6"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/138_Omanyte/Omanyte.c4d",
+          "bytes": 662480,
+          "blobSha": "a12f22839474345f25d56e267b53facdc6877ba5"
+        },
+        {
+          "path": "Pokemon-Gen1/138_Omanyte/Omanyte.fbx",
+          "bytes": 322080,
+          "blobSha": "eefc38e15e7187bc7b95704c89abfc4a9066e995"
+        },
+        {
+          "path": "Pokemon-Gen1/138_Omanyte/source/Omanyte.FBX",
+          "bytes": 1058928,
+          "blobSha": "092edecccd4b4fa668a41f4b3222c7fc64b184bc"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/139_Omastar/Omastar.c4d",
+          "bytes": 786823,
+          "blobSha": "3f6095b76f7c5ac70a884ba137f78ba4951741e4"
+        },
+        {
+          "path": "Pokemon-Gen1/139_Omastar/Omastar.fbx",
+          "bytes": 398608,
+          "blobSha": "7a7dcb271cb23ff9640fb8b187be09e98ea72a78"
+        },
+        {
+          "path": "Pokemon-Gen1/139_Omastar/source/Omastar.FBX",
+          "bytes": 1409392,
+          "blobSha": "ad87a6f41700720efefe104f9cc73585f4c7ee19"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "files": 21,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/140 - Kabuto/placeholder/Kabuto.c4d",
+          "bytes": 219316,
+          "blobSha": "885dc9f5eec727b47242905ea2144366af825dfe"
+        },
+        {
+          "path": "Pokemon-Gen1/140 - Kabuto/placeholder/Kabuto.fbx",
+          "bytes": 42800,
+          "blobSha": "e06c38ce4d8bea8eea909d152b0c185e98a11c4f"
+        },
+        {
+          "path": "Pokemon-Gen1/140 - Kabuto/source/BR_Kabuto.obj",
+          "bytes": 37730,
+          "blobSha": "5c12768f8aa78852e820336ff4218d7b223f42d9"
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "files": 37,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/141 - Kabutops/placeholder/Kabutops.c4d",
+          "bytes": 222342,
+          "blobSha": "d3917cc37011c973ff2fefd8f2d41a3faa6f2573"
+        },
+        {
+          "path": "Pokemon-Gen1/141 - Kabutops/placeholder/Kabutops.fbx",
+          "bytes": 54080,
+          "blobSha": "54bba470f2a2eb243af77e2df0d30509c433ff31"
+        },
+        {
+          "path": "Pokemon-Gen1/141 - Kabutops/source/BR_Kabutops.obj",
+          "bytes": 40370,
+          "blobSha": "cbd837c10a7bcdd98ec36a1e0965efa74577209e"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/142_Aerodactyl/Aerodactyl.c4d",
+          "bytes": 759858,
+          "blobSha": "ef17966e9d7c6ca9c334e95d74f820d9cb75d1d3"
+        },
+        {
+          "path": "Pokemon-Gen1/142_Aerodactyl/Aerodactyl.fbx",
+          "bytes": 470048,
+          "blobSha": "280a28407414d7ecbc144c35dd5545df31b699c8"
+        },
+        {
+          "path": "Pokemon-Gen1/142_Aerodactyl/source/Aerodactyl.FBX",
+          "bytes": 1399344,
+          "blobSha": "c230f78aaf70aad172e4e6c55e5e803d4d6c107e"
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "files": 10,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/143_Snorlax/Snorlax.c4d",
+          "bytes": 628050,
+          "blobSha": "4ea7abdfe242b450e7977d1004b41642a8a234c5"
+        },
+        {
+          "path": "Pokemon-Gen1/143_Snorlax/Snorlax.fbx",
+          "bytes": 331440,
+          "blobSha": "02d1ad4d7587bbd57bfdee1c92c716a49b590e90"
+        },
+        {
+          "path": "Pokemon-Gen1/143_Snorlax/placeholder/Snorlax.c4d",
+          "bytes": 138114,
+          "blobSha": "c96cc8650680190109091fc68f00de7967efe5de"
+        },
+        {
+          "path": "Pokemon-Gen1/143_Snorlax/placeholder/Snorlax.fbx",
+          "bytes": 60640,
+          "blobSha": "3cc1d40289ea24e23e6b37f7d75928244a91baa3"
+        },
+        {
+          "path": "Pokemon-Gen1/143_Snorlax/source/snorlax.obj",
+          "bytes": 323438,
+          "blobSha": "90e1789389a9fef6640243fa82b0dd3665522861"
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/144_Articuno/Articuno.c4d",
+          "bytes": 895562,
+          "blobSha": "9f9ccbcca9806002d03b0cdd19aded1880796a5a"
+        },
+        {
+          "path": "Pokemon-Gen1/144_Articuno/Articuno.fbx",
+          "bytes": 562064,
+          "blobSha": "074d1650f83b86229809c01a6fd7c2e82e3755df"
+        },
+        {
+          "path": "Pokemon-Gen1/144_Articuno/source/Articuno.FBX",
+          "bytes": 1723504,
+          "blobSha": "798774930a651d07b9d4db22211ac48ab5706293"
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/145_Zapdos/Zapdos.c4d",
+          "bytes": 858262,
+          "blobSha": "00527fa3a43db37532e5e6abef5c98f58c4ab095"
+        },
+        {
+          "path": "Pokemon-Gen1/145_Zapdos/Zapdos.fbx",
+          "bytes": 524160,
+          "blobSha": "3c78cbf89b35eb2f69081f12e5d718e30139e185"
+        },
+        {
+          "path": "Pokemon-Gen1/145_Zapdos/source/Zapdos.FBX",
+          "bytes": 1560656,
+          "blobSha": "1797dca7dbeaaead801deacb711cdcc4f9998bd1"
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "files": 8,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/146_Moltres/Moltres.c4d",
+          "bytes": 1011362,
+          "blobSha": "b351e5d7ab6ceb3a92b91dde99c0c4faf363c137"
+        },
+        {
+          "path": "Pokemon-Gen1/146_Moltres/Moltres.fbx",
+          "bytes": 503632,
+          "blobSha": "9ca4f7b7e4cbbc628ae22efc6645578a5bc38e2f"
+        },
+        {
+          "path": "Pokemon-Gen1/146_Moltres/source/Moltres.FBX",
+          "bytes": 1930576,
+          "blobSha": "58c9038bfd997b62ede480223d5a164616cc5eec"
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/147_Dratini/Dratini.c4d",
+          "bytes": 562426,
+          "blobSha": "979e6c4b0c7a5d331ab10dfd582bb98eea638ac5"
+        },
+        {
+          "path": "Pokemon-Gen1/147_Dratini/Dratini.fbx",
+          "bytes": 234240,
+          "blobSha": "8bd9ee4fa67534912fab6beb47cbbb36c2b24d80"
+        },
+        {
+          "path": "Pokemon-Gen1/147_Dratini/source/Dratini.FBX",
+          "bytes": 590976,
+          "blobSha": "7f22af0be1fbdaef8137a2c234dc0c97bc992396"
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/148_Dragonair/Dragonair.c4d",
+          "bytes": 663549,
+          "blobSha": "ed5cfdcd623959f7d815995b16142b31860739dd"
+        },
+        {
+          "path": "Pokemon-Gen1/148_Dragonair/Dragonair.fbx",
+          "bytes": 324384,
+          "blobSha": "c3a002d4b3887ed9d8448a266a275afc01986438"
+        },
+        {
+          "path": "Pokemon-Gen1/148_Dragonair/source/Dragonair.FBX",
+          "bytes": 874768,
+          "blobSha": "0f1460c574af2f21b1e02e0bc653dc6000a8dfb9"
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/149_Dragonite/Dragonite.c4d",
+          "bytes": 848839,
+          "blobSha": "796d80a8ceca17d99243dd6b75b44a4166d1d814"
+        },
+        {
+          "path": "Pokemon-Gen1/149_Dragonite/Dragonite.fbx",
+          "bytes": 518016,
+          "blobSha": "324f44064aff315661de83e650301134d1ffeaa4"
+        },
+        {
+          "path": "Pokemon-Gen1/149_Dragonite/source/Dragonite.FBX",
+          "bytes": 1050368,
+          "blobSha": "0ae84ee8eaf3383712fc0849bab3e94d1207a04f"
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "files": 5,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/150_Mewtwo/Mewtwo.c4d",
+          "bytes": 802903,
+          "blobSha": "a06f375d127a9c7716d3c53af513c3a9a5883bc9"
+        },
+        {
+          "path": "Pokemon-Gen1/150_Mewtwo/Mewtwo.fbx",
+          "bytes": 456688,
+          "blobSha": "274877008c3bb4382f65293431979fbf2ce45d7d"
+        },
+        {
+          "path": "Pokemon-Gen1/150_Mewtwo/source/Mewtwo.FBX",
+          "bytes": 1777728,
+          "blobSha": "0162fa1a415a0bafea40e04a55885d83b8646e59"
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "files": 6,
+      "modelFiles": [
+        {
+          "path": "Pokemon-Gen1/151_Mew/Mew.c4d",
+          "bytes": 732628,
+          "blobSha": "03f6b56a459ebb588fcdc37915d9fb074ae09aa2"
+        },
+        {
+          "path": "Pokemon-Gen1/151_Mew/Mew.fbx",
+          "bytes": 390048,
+          "blobSha": "30436bae31496a73add2fa4a15741d5b278956d3"
+        },
+        {
+          "path": "Pokemon-Gen1/151_Mew/source/Mew.FBX",
+          "bytes": 1301248,
+          "blobSha": "be42cdb9534a6cc0069de9ea16278d1691ed54d2"
+        }
+      ]
+    }
+  ],
+  "licenseFilesFound": [],
+  "animationNote": "README mostly marks animation No. Rigged flag is not an idle clip."
+}

@@ -1,0 +1,278 @@
+{
+  "checkedAt": "2026-10-01",
+  "runtimeAdmitted": 527,
+  "target": 1025,
+  "generationGaps": [
+    {
+      "generation": 1,
+      "firstDexId": 1,
+      "lastDexId": 151,
+      "counts": {
+        "source-terms-unresolved": 104,
+        "runtime-admitted": 46,
+        "pose-rejected": 1,
+        "candidate-pose-rejected": 0,
+        "source-missing": 0,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 2,
+      "firstDexId": 152,
+      "lastDexId": 251,
+      "counts": {
+        "source-terms-unresolved": 40,
+        "runtime-admitted": 60,
+        "pose-rejected": 0,
+        "candidate-pose-rejected": 0,
+        "source-missing": 0,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 3,
+      "firstDexId": 252,
+      "lastDexId": 386,
+      "counts": {
+        "source-terms-unresolved": 57,
+        "runtime-admitted": 77,
+        "pose-rejected": 1,
+        "candidate-pose-rejected": 0,
+        "source-missing": 0,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 4,
+      "firstDexId": 387,
+      "lastDexId": 493,
+      "counts": {
+        "source-terms-unresolved": 26,
+        "runtime-admitted": 81,
+        "pose-rejected": 0,
+        "candidate-pose-rejected": 0,
+        "source-missing": 0,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 5,
+      "firstDexId": 494,
+      "lastDexId": 649,
+      "counts": {
+        "source-terms-unresolved": 56,
+        "runtime-admitted": 99,
+        "pose-rejected": 1,
+        "candidate-pose-rejected": 0,
+        "source-missing": 0,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 6,
+      "firstDexId": 650,
+      "lastDexId": 721,
+      "counts": {
+        "source-terms-unresolved": 67,
+        "runtime-admitted": 4,
+        "pose-rejected": 1,
+        "candidate-pose-rejected": 0,
+        "source-missing": 0,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 7,
+      "firstDexId": 722,
+      "lastDexId": 809,
+      "counts": {
+        "source-terms-unresolved": 24,
+        "runtime-admitted": 61,
+        "pose-rejected": 0,
+        "candidate-pose-rejected": 3,
+        "source-missing": 0,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 8,
+      "firstDexId": 810,
+      "lastDexId": 905,
+      "counts": {
+        "source-terms-unresolved": 23,
+        "runtime-admitted": 54,
+        "pose-rejected": 0,
+        "candidate-pose-rejected": 2,
+        "source-missing": 17,
+        "source-visual-rejected": 0
+      }
+    },
+    {
+      "generation": 9,
+      "firstDexId": 906,
+      "lastDexId": 1025,
+      "counts": {
+        "source-terms-unresolved": 37,
+        "runtime-admitted": 45,
+        "pose-rejected": 0,
+        "candidate-pose-rejected": 0,
+        "source-missing": 37,
+        "source-visual-rejected": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "key": "scvi-dlc",
+      "family": "Scarlet/Violet + DLC",
+      "source": "https://github.com/ChicoEevee/Pokemon-Switch-Model-Importer-Blender",
+      "archive": "https://drive.google.com/file/d/1N8NbyD1kh1LI6rSTbtG2wVdjQ47oJIAM/view",
+      "observedName": "Pok\u00e9mon SCVI Base + DLC Model Dump.rar",
+      "observedDisplaySize": "4.3G",
+      "availability": "Public page and download warning observed in cloud browser",
+      "meshes": "Raw models with PNGs, per primary README",
+      "rigs": "TRMDL/TRSKL conversion supported; archive contents not yet listed",
+      "clips": "Animation importer exists; presence and completeness in archive unverified",
+      "count": null,
+      "blocker": "Google virus-scan warning requires approval; no archive bytes downloaded",
+      "rights": "Game extraction; primary source does not establish redistribution license"
+    },
+    {
+      "key": "pla",
+      "family": "Legends Arceus",
+      "source": "https://github.com/SomeKitten/LegendsArceusBlenderScript",
+      "archive": "https://drive.google.com/file/d/1dITgyrvozPXmH0WOnFfFvMB1DRC5Idqs/view",
+      "availability": "Prepared models+PNGs linked by original converter author; archive not listed",
+      "count": null,
+      "rigs": "Importer designed for native PLA model/skeleton",
+      "clips": "Not verified in archive",
+      "rights": "Game extraction; no blanket asset license established"
+    },
+    {
+      "key": "pogo",
+      "family": "Gen1 cross-source",
+      "source": "https://github.com/PoGo-Devs/PoGo-3D-Assets",
+      "treeSha": "2ce68809da92ca19318bb72100a78b961ca4482f",
+      "count": 151,
+      "measurement": "151 species folders each contain at least one FBX/OBJ/DAE/C4D model file; not151validatedrigs",
+      "rigs": "README gives per-species rig flags",
+      "clips": "Mostly No in README; Bulbasaur attack FBX exists but is not idle",
+      "rights": "No license file in recursive tree; origins models-resource.com and roestudios.co.uk"
+    },
+    {
+      "key": "rtb",
+      "family": "3DS and Switch generations",
+      "source": "https://archive.vg-resource.com/thread-25872.html",
+      "availability": "Indexed primary post updated2023-12-20; direct page403",
+      "meshes": "Model packs with original rigs advertised",
+      "clips": "Separate SV-PokeAnim.zip described in tutorial; exact archive URL/listing not verified",
+      "count": null,
+      "rights": "Game extraction; uploader distribution does not clear original IP"
+    },
+    {
+      "key": "sm-index",
+      "family": "Sun/Moon",
+      "source": "https://gbatemp.net/threads/pokemon-sun-moon-pokemon-animations-textures-and-models.473906/",
+      "availability": "Primary per-species/form file-index documentation; not itself asset dump",
+      "formats": [
+        "GARC",
+        "BIN"
+      ],
+      "clips": "File5battle; file6refresh; file7idle/walk/run; file8lip animations",
+      "count": null,
+      "rights": "Technical index; game assets need separate source/terms"
+    },
+    {
+      "key": "swsh-index",
+      "family": "Sword/Shield",
+      "source": "https://gbatemp.net/threads/wip-sword-and-shield-pokemon-models-and-textures.552281/",
+      "availability": "Primary ID/form mapping and conversion guide; not itself asset dump",
+      "formats": [
+        "GFPAK",
+        "GFBMDL",
+        "DAE"
+      ],
+      "count": null,
+      "rights": "Technical index; not redistribution terms"
+    },
+    {
+      "key": "switch-converter",
+      "family": "LGPE/SwSh/PLA/SV",
+      "source": "https://github.com/Shararamosh/io_scene_gfbanm",
+      "availability": "Source/documentation only; not installed/run",
+      "formats": [
+        "GFBANM"
+      ],
+      "clips": "Translation/rotation/scale supported; requires correct bone inherit-scale; material flags/events omitted",
+      "count": 0,
+      "rights": "Software and assets must be tracked independently"
+    },
+    {
+      "key": "gamecube",
+      "family": "Colosseum/XD",
+      "source": "https://github.com/StarsMmd/Blender-Addon-Gamecube-Models",
+      "availability": "Source/documentation only; not asset dump or installed/run",
+      "formats": [
+        "DAT",
+        "FDAT",
+        "RDAT",
+        "PKX",
+        "FSYS",
+        "WZX"
+      ],
+      "clips": "Importer supports skeleton and animation; particles unsupported; Blender4.5.7LTS target",
+      "count": 0,
+      "rights": "GPLsoftware does not license extracted game assets"
+    },
+    {
+      "key": "stadium",
+      "family": "Stadium",
+      "source": "https://github.com/pret/pokestadium",
+      "treeSha": "31fc278409113500c32757d4d3579473f3dc8987",
+      "availability": "Decompilation/source; requires user-supplied base ROM",
+      "count": 0,
+      "rights": "No ROM acquired; technicalsource not model license"
+    },
+    {
+      "key": "stadium2-romhack",
+      "family": "Stadium2/Gen2",
+      "source": "https://github.com/randyadr/Gen2-3D-Sprites",
+      "availability": "ROMhack model-routing documentation; explicitly excludes Nintendo ROM and extracted Stadium2assets",
+      "count": 0,
+      "clips": "Semantic routing provisional; bind-pose fallback documented",
+      "rights": "Not an included asset archive"
+    },
+    {
+      "key": "gba-ds",
+      "family": "Emerald/Platinum decompiles",
+      "sources": [
+        "https://github.com/pret/pokeemerald",
+        "https://github.com/pret/pokeplatinum"
+      ],
+      "availability": "Code/data projects; useful species/form identities and2D fallback, not evidence of rotatable3DPokemon battle meshes",
+      "count": 0,
+      "rights": "No game dump acquired"
+    },
+    {
+      "key": "starfield",
+      "family": "3DS/Switch converted-sample project",
+      "source": "https://github.com/ChrisColeTech/Starfield-2026",
+      "treeSha": "de949468fadc70da352daf910cc06625332fdb7b",
+      "availability": "Docs claim25Pokemon and splitDAEclips; recursive1615-file current tree contains no DAE or matching model manifests",
+      "count": 0,
+      "clips": "Documentation example35clips/species; not available assets",
+      "rights": "No asset rights inferred from docs"
+    },
+    {
+      "key": "duplicate-glb",
+      "family": "ExistingGLB fork",
+      "source": "https://github.com/pokemon-party/3d-pokemon",
+      "treeSha": "429de1288cea0d43f5b4f56305d2276e94239d65",
+      "availability": "Exact same treeSHA as existingcatalog;1322GLBs across forms; addszero sourcecoverage",
+      "count": 971,
+      "rights": "Same existingprovenance gaps"
+    }
+  ],
+  "newRuntimeAdmissions": 0,
+  "newDownloadExecutablesRun": 0
+}

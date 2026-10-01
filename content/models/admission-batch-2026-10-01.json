@@ -1,0 +1,390 @@
+{
+  "workers": 2,
+  "transferred": 0,
+  "elapsedMs": 132,
+  "proposed": 10,
+  "admitted": 527,
+  "visualReview": "Every proposed asset has a hash-bound pose review; runtime decoder/source fallback remains mandatory",
+  "results": [
+    {
+      "id": 110,
+      "bytes": 309276,
+      "sha256": "b76bd50e922bfa209d362d739192f9ea83219d19b1bde200a8e4ed4603ec3d7d",
+      "url": "/models/species-110-batch1.glb",
+      "credit": "ghost028 (https://sketchfab.com/ghost028)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ghost028 (https://sketchfab.com/ghost028)",
+        "source": "https://sketchfab.com/3d-models/pokemon-weezing-09764c47b7224ef0a23b56421f798f64",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "b76bd50e922bfa209d362d739192f9ea83219d19b1bde200a8e4ed4603ec3d7d",
+        "evidence": "docs/model-review-2026-10-01/weezing-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected two-head pose; recognizable floating body and gas clouds.",
+        "screenshotSha256": "0c2f1c59269379b7f88a8486398e01a855f3afe8bf640fc2c3783dc3ab3c9749"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "899e4ccdd9b81f819d8ea3a629b5fa59f6ce89a8",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 557804,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 462,
+      "bytes": 73412,
+      "sha256": "d5a9b4b368b103789e2b7b46dc84243a5839229ebdc345ea34687105528a1521",
+      "url": "/models/species-462-batch1.glb",
+      "credit": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-sv-magnezone-f51f083f49124f3994be3482faeccf64",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "d5a9b4b368b103789e2b7b46dc84243a5839229ebdc345ea34687105528a1521",
+        "evidence": "docs/model-review-2026-10-01/magnezone-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Recognizable floating body, connected magnets and three eyes.",
+        "screenshotSha256": "7958ad8e2704d7db0be60911bf60dc26a53dd13f048f0641af048220bb2aec04"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "acdd931e996576dcf33a42e4683b02f261db3f61",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 42459,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 674,
+      "bytes": 481116,
+      "sha256": "7611d87ce35cbfeff76752499ceb533965fbde2eda23ac0d11f23a5eca44935f",
+      "url": "/models/species-674-batch1.glb",
+      "credit": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "herogamer0108 (https://sketchfab.com/herogamer0108)",
+        "source": "https://sketchfab.com/3d-models/pancham-bcfab6717d304f6db9d5ae97aee24032",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "7611d87ce35cbfeff76752499ceb533965fbde2eda23ac0d11f23a5eca44935f",
+        "evidence": "docs/model-review-2026-10-01/pancham-gentle.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Relaxed arms and connected body; gentler profile retains eye detail lost by first candidate.",
+        "screenshotSha256": "6bc9d8c7314a10745a9dabb5727a04fb7f8bde85bb78a605c092ff16d35a7ce3"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "e895e7af8f28e092f06823e49c9204611aed62a9",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 1486862,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 478,
+      "bytes": 82608,
+      "sha256": "6fdbcb3723dd61d7b47fb8d8f7f37566b7f9b0c4cc49f2270f47c9cebdea74bf",
+      "url": "/models/species-478-batch1.glb",
+      "credit": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-pokedex-3ds-pro-froslass-bef7ae6dc8964fa68e5b7ea6a36cd6bf",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "6fdbcb3723dd61d7b47fb8d8f7f37566b7f9b0c4cc49f2270f47c9cebdea74bf",
+        "evidence": "docs/model-review-2026-10-01/froslass-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected floating body with hanging sleeves; recognizable face.",
+        "screenshotSha256": "384d432276832a44f4e5615bdc633eb823b199c386a82b64893da63848a27c14"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "fe147139cad807730032415839d0fd2143e4a084",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 38269,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 763,
+      "bytes": 152376,
+      "sha256": "93f57fb70f068335eaad852d63d56297efc927c5fc99bee04176a58c97ec2ba5",
+      "url": "/models/species-763-batch1.glb",
+      "credit": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Squirmy Worm (https://sketchfab.com/squirmyworm064)",
+        "source": "https://sketchfab.com/3d-models/tsareena-3e8adccce8c94ef7acc60511cfc8be39",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "93f57fb70f068335eaad852d63d56297efc927c5fc99bee04176a58c97ec2ba5",
+        "evidence": "docs/model-review-2026-10-01/tsareena-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected body in a deliberate raised-leg pose; face and leaf silhouette retained.",
+        "screenshotSha256": "212db46d439ee00125917cbba6bec2df2aff0aea80c1b936bd5cc3b065c9f2d7"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "ade0416caa9d6b9bac996d8d769c5c2c5c769bd4",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 356750,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 795,
+      "bytes": 207836,
+      "sha256": "d7780c61541e8bcadb3fcd0515af6bbc7680a066ff9b7be25c645755369b3ebf",
+      "url": "/models/species-795-batch1.glb",
+      "credit": "Abe95 (https://sketchfab.com/Abe95)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "Abe95 (https://sketchfab.com/Abe95)",
+        "source": "https://sketchfab.com/3d-models/pheromosa-pokemon-ab09d2d54dfe400686066afa994f66e5",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "d7780c61541e8bcadb3fcd0515af6bbc7680a066ff9b7be25c645755369b3ebf",
+        "evidence": "docs/model-review-2026-10-01/pheromosa-front.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected upright body, relaxed limbs; 180-degree root adjustment faces the viewer.",
+        "screenshotSha256": "9b02466a1b7d11896592c0c71a16f6bf9a7e9a8c24ac07f6c9da9a022b0fcdba"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "72bb5dc6a7be66010daa77dabadf31fc9eee364f",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 428484,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 907,
+      "bytes": 262644,
+      "sha256": "f503f06ad994ef8d32f506fb919e7ca36c14cca6b30972f0ebef5f759dbe81a9",
+      "url": "/models/species-907-batch1.glb",
+      "credit": "kishi (https://sketchfab.com/ash.takafumi)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+        "source": "https://sketchfab.com/3d-models/floragato-5aa746499d8b4170bd6e914567f7ad15",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "f503f06ad994ef8d32f506fb919e7ca36c14cca6b30972f0ebef5f759dbe81a9",
+        "evidence": "docs/model-review-2026-10-01/floragato-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected body in deliberate asymmetric fighting stance; face and held flower retained.",
+        "screenshotSha256": "22b4268ac2874ab6cf6a4010856bcaa8dae058c870062bffa65ecee1b69177e8"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "edfed43d2adfb6014ac281017081c30f6dd32445",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 632851,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 889,
+      "bytes": 310192,
+      "sha256": "78d12701fbe10c70ef78c94bca61236f3e3016204ba83ff0c028e4145125ed6e",
+      "url": "/models/species-889-batch1.glb",
+      "credit": "User 37564 (https://sketchfab.com/rhl89ryo)",
+      "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+      "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+        "attribution": "User 37564 (https://sketchfab.com/rhl89ryo)",
+        "source": "https://sketchfab.com/3d-models/zamazenta-armor-pokemon-shield-c55cbc938f4a4a40868732bf910d2140",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": true,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "78d12701fbe10c70ef78c94bca61236f3e3016204ba83ff0c028e4145125ed6e",
+        "evidence": "docs/model-review-2026-10-01/zamazenta-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected four-legged shield-form stance; recognizable shield face.",
+        "screenshotSha256": "b22609a5c5a47f84fe61e522ef23b14f12fabc3cdada11fe203249c45ce0a952"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "6cc2c6b0f97dad788a6be90f03580a41e7deae65",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 542178,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 913,
+      "bytes": 173216,
+      "sha256": "10d362f137a04cf96d9161396c8ee310824984fa1774f4716cb2c5dbacdaffbb",
+      "url": "/models/species-913-batch1.glb",
+      "credit": "kishi (https://sketchfab.com/ash.takafumi)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "kishi (https://sketchfab.com/ash.takafumi)",
+        "source": "https://sketchfab.com/3d-models/quaxwell-f6aac49cc8e943a682307a7c57ea175c",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "10d362f137a04cf96d9161396c8ee310824984fa1774f4716cb2c5dbacdaffbb",
+        "evidence": "docs/model-review-2026-10-01/quaxwell-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected body in a deliberate dance pose; one raised leg and asymmetric arms.",
+        "screenshotSha256": "66caee926a5028c93fb916573bc0235b38aa0c0396f8cb52fa241d901b116b6e"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "d00dbd56004eeac5794dd657417b2e6d72b058e2",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 412751,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    },
+    {
+      "id": 985,
+      "bytes": 81288,
+      "sha256": "7219028909b0e78ac72732a0c114cd1b0fbfaac37b5f50eb9a9f143d4d555528",
+      "url": "/models/species-985-batch1.glb",
+      "credit": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+      "animation": null,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "ijackprovostjr (https://sketchfab.com/ijackprovostjr)",
+        "source": "https://sketchfab.com/3d-models/pokemon-scarlet-and-violet-scream-tail-48e9026d9a204191956a604e24bd0dff",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "poseReview": {
+        "status": "approved",
+        "sha256": "7219028909b0e78ac72732a0c114cd1b0fbfaac37b5f50eb9a9f143d4d555528",
+        "evidence": "docs/model-review-2026-10-01/scream-tail-lossy.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reason": "Connected spherical body, relaxed short arms, recognizable hair and face.",
+        "screenshotSha256": "af70024fd709aaaf65259955139e7f4f14ef0b0b39bdba5690ef86251d971d57"
+      },
+      "modifications": "Reviewed lossy derivative; see coverage-batch-lossy-2026-10-01.json for actual profile and source identity.",
+      "blobSha": "0b2463acff41a76a28a8b0d9c83efe1fb0731a0f",
+      "visualReviewed": true,
+      "textureDecoded": true,
+      "geometryDecoded": true,
+      "decodedGeometryBytes": 58550,
+      "admissionBasis": "source terms, byte identity, structure and decoded mobile budgets; representative browser QA required",
+      "admitted": true
+    }
+  ]
+}

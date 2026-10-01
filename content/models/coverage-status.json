@@ -2,15 +2,14 @@
   "target": 1025,
   "sourceTreeSha": "429de1288cea0d43f5b4f56305d2276e94239d65",
   "available": 971,
-  "runtimeAdmitted": 517,
+  "runtimeAdmitted": 527,
   "note": "Runtime admission is not per-asset pose certification. No full coverage claim. Source terms are embedded uploader evidence; underlying rights remain unknown.",
   "counts": {
     "source-terms-unresolved": 434,
-    "runtime-admitted": 517,
+    "runtime-admitted": 527,
     "pose-rejected": 4,
-    "optimization-budget-rejected": 14,
+    "candidate-pose-rejected": 5,
     "source-missing": 54,
-    "candidate-pose-rejected": 1,
     "source-visual-rejected": 1
   },
   "buckets": {
@@ -472,6 +471,7 @@
       102,
       103,
       108,
+      110,
       111,
       113,
       114,
@@ -693,6 +693,7 @@
       459,
       460,
       461,
+      462,
       463,
       464,
       466,
@@ -704,6 +705,7 @@
       474,
       476,
       477,
+      478,
       480,
       481,
       482,
@@ -812,6 +814,7 @@
       644,
       645,
       658,
+      674,
       690,
       718,
       722,
@@ -841,6 +844,7 @@
       757,
       758,
       762,
+      763,
       764,
       765,
       767,
@@ -867,6 +871,7 @@
       791,
       792,
       793,
+      795,
       799,
       802,
       803,
@@ -914,6 +919,7 @@
       886,
       887,
       888,
+      889,
       890,
       892,
       893,
@@ -927,11 +933,13 @@
       904,
       905,
       906,
+      907,
       908,
       909,
       910,
       911,
       912,
+      913,
       917,
       924,
       926,
@@ -952,6 +960,7 @@
       980,
       981,
       983,
+      985,
       990,
       994,
       999,
@@ -975,21 +984,12 @@
       563,
       669
     ],
-    "optimization-budget-rejected": [
-      110,
-      462,
-      478,
-      674,
-      763,
-      795,
+    "candidate-pose-rejected": [
       796,
       801,
       805,
-      867,
-      889,
-      907,
-      913,
-      985
+      855,
+      867
     ],
     "source-missing": [
       850,
@@ -1046,9 +1046,6 @@
       1013,
       1022,
       1024
-    ],
-    "candidate-pose-rejected": [
-      855
     ],
     "source-visual-rejected": [
       1000

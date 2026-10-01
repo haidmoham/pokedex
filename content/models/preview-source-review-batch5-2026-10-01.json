@@ -1,0 +1,965 @@
+{
+  "checkedAt": "2026-10-01",
+  "sourceRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+  "sampleCount": 24,
+  "previewApproved": 23,
+  "held": 1,
+  "assetRights": "unresolved; protected preview exception only",
+  "motionMeasurements": [
+    {
+      "id": 34,
+      "vertices": 3878,
+      "bodyExtent": 2.3768226504325867,
+      "maxWorldDisplacement": 0.4100066505840272,
+      "relativeDisplacement": 0.17250199568293625,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 8.317248341873917e-08
+    },
+    {
+      "id": 36,
+      "vertices": 2829,
+      "bodyExtent": 1.8625344038009644,
+      "maxWorldDisplacement": 0.17146279815751908,
+      "relativeDisplacement": 0.09205886227261446,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 37,
+      "vertices": 3729,
+      "bodyExtent": 0.7454590201377869,
+      "maxWorldDisplacement": 0.10711632612823296,
+      "relativeDisplacement": 0.14369177008339656,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 6.41431591895058e-08
+    },
+    {
+      "id": 38,
+      "vertices": 4502,
+      "bodyExtent": 1.605907678604126,
+      "maxWorldDisplacement": 0.15160534278745785,
+      "relativeDisplacement": 0.09440476859742959,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.75351812209779e-07
+    },
+    {
+      "id": 39,
+      "vertices": 2292,
+      "bodyExtent": 0.598829829134047,
+      "maxWorldDisplacement": 0.03283118180223612,
+      "relativeDisplacement": 0.054825561795598055,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 41,
+      "vertices": 2393,
+      "bodyExtent": 0.7658990621566772,
+      "maxWorldDisplacement": 1.1673044293491797,
+      "relativeDisplacement": 1.5240969561474516,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 43,
+      "vertices": 2334,
+      "bodyExtent": 0.5468059778213501,
+      "maxWorldDisplacement": 0.042415310755077554,
+      "relativeDisplacement": 0.07756921554529034,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 44,
+      "vertices": 3099,
+      "bodyExtent": 0.9539996981620789,
+      "maxWorldDisplacement": 0.10676681839531314,
+      "relativeDisplacement": 0.11191493938730167,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 3.12393415271627e-08
+    },
+    {
+      "id": 45,
+      "vertices": 2833,
+      "bodyExtent": 2.0168588757514954,
+      "maxWorldDisplacement": 0.13685279605187323,
+      "relativeDisplacement": 0.06785442337946473,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 46,
+      "vertices": 3182,
+      "bodyExtent": 0.45807503163814545,
+      "maxWorldDisplacement": 0.012914513126964145,
+      "relativeDisplacement": 0.028193008208240247,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 47,
+      "vertices": 3238,
+      "bodyExtent": 1.2644003629684448,
+      "maxWorldDisplacement": 0.3246041642977232,
+      "relativeDisplacement": 0.256725775952521,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 48,
+      "vertices": 2973,
+      "bodyExtent": 1.4507502752821892,
+      "maxWorldDisplacement": 0.35847861272385645,
+      "relativeDisplacement": 0.2470987728429883,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 49,
+      "vertices": 3358,
+      "bodyExtent": 2.7222800254821777,
+      "maxWorldDisplacement": 1.4644105810658723,
+      "relativeDisplacement": 0.5379353216267646,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.006720792111031e-07
+    },
+    {
+      "id": 50,
+      "vertices": 1249,
+      "bodyExtent": 0.28263118863105774,
+      "maxWorldDisplacement": 0.014478043578455613,
+      "relativeDisplacement": 0.05122592325560722,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 5.2722989511604805e-08
+    },
+    {
+      "id": 51,
+      "vertices": 3318,
+      "bodyExtent": 1.0140751600265503,
+      "maxWorldDisplacement": 0.13735798795762674,
+      "relativeDisplacement": 0.135451486607788,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 52,
+      "vertices": 3737,
+      "bodyExtent": 0.4375963897909969,
+      "maxWorldDisplacement": 0.0863864159241387,
+      "relativeDisplacement": 0.19741117143447698,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 6.810458925844745e-08
+    },
+    {
+      "id": 53,
+      "vertices": 3241,
+      "bodyExtent": 2.0323193073272705,
+      "maxWorldDisplacement": 0.23170633750596048,
+      "relativeDisplacement": 0.11401079381107711,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 54,
+      "vertices": 2901,
+      "bodyExtent": 1.0230607265257277,
+      "maxWorldDisplacement": 0.04818711262819564,
+      "relativeDisplacement": 0.04710093094066576,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 55,
+      "vertices": 3429,
+      "bodyExtent": 1.3935678601264954,
+      "maxWorldDisplacement": 0.16861949280207914,
+      "relativeDisplacement": 0.12099840820580736,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 56,
+      "vertices": 2850,
+      "bodyExtent": 0.7303003049455583,
+      "maxWorldDisplacement": 0.2231520138791647,
+      "relativeDisplacement": 0.30556198918169697,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 8.225178154807136e-08
+    },
+    {
+      "id": 57,
+      "vertices": 2546,
+      "bodyExtent": 1.2330448364373296,
+      "maxWorldDisplacement": 0.5107061668997048,
+      "relativeDisplacement": 0.41418296545914923,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 58,
+      "vertices": 3603,
+      "bodyExtent": 0.9428534209728241,
+      "maxWorldDisplacement": 0.08221217470256559,
+      "relativeDisplacement": 0.08719507494361119,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 59,
+      "vertices": 4848,
+      "bodyExtent": 3.3909279108047485,
+      "maxWorldDisplacement": 0.3034625236856418,
+      "relativeDisplacement": 0.08949247275906343,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0
+    },
+    {
+      "id": 61,
+      "vertices": 2720,
+      "bodyExtent": 1.4292774200439453,
+      "maxWorldDisplacement": 0.45918565751581103,
+      "relativeDisplacement": 0.32127118995673537,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 9.555275715675389e-08
+    }
+  ],
+  "results": [
+    {
+      "id": 34,
+      "bytes": 134204,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/34.glb",
+      "blobSha": "8a43e8c6a78b1132c4ef7b6a518a7e6169687f31",
+      "sha256": "8011a861b1f6a1d7acf683ce5708b65bbfac27c221de4aecb04636670bc2cc40",
+      "budgetError": null,
+      "decodedBytes": 280372,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.4,
+          "channels": 123
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 34,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 123,
+        "outputDuration": 1.399999976158142
+      }
+    },
+    {
+      "id": 36,
+      "bytes": 206168,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/36.glb",
+      "blobSha": "392aed19319c58a68479830612fd9bb5d2633dcb",
+      "sha256": "7a18e8172cfe6bda5576c8938275ea1c7fb3b5076a50718fa7c62c2d16e1e575",
+      "budgetError": null,
+      "decodedBytes": 306452,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.3333334,
+          "channels": 132
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 36,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 132,
+        "outputDuration": 1.3333333730697632
+      }
+    },
+    {
+      "id": 37,
+      "bytes": 166312,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/37.glb",
+      "blobSha": "98fc4b5b6acd2a42b21ced27c71ec8be182ae6b7",
+      "sha256": "86b046d8fabc86c350022d6d09b283914e4279d076d171a3c4dac608c7d54237",
+      "budgetError": null,
+      "decodedBytes": 278706,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.3333334,
+          "channels": 165
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 37,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 165,
+        "outputDuration": 1.3333333730697632
+      }
+    },
+    {
+      "id": 38,
+      "bytes": 277504,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/38.glb",
+      "blobSha": "8353ae965a884c6161425772df624ece5925445a",
+      "sha256": "1c3ec0fd94fb6722c5e5f1f7e907c4fdc8dfe47482a22da63c62480757f88f13",
+      "budgetError": null,
+      "decodedBytes": 414428,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 2,
+          "channels": 348
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 38,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 348,
+        "outputDuration": 2
+      }
+    },
+    {
+      "id": 39,
+      "bytes": 142264,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/39.glb",
+      "blobSha": "3c0166e15fac1f0103b869e9fee9e2275a60a175",
+      "sha256": "bad15910b0cb3e817eb0e6c83dcb4c6251fa9d413a6f6780feb755dd92d3694b",
+      "budgetError": null,
+      "decodedBytes": 197852,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.6666666,
+          "channels": 49
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 39,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 49,
+        "outputDuration": 1.6666666269302368
+      }
+    },
+    {
+      "id": 41,
+      "bytes": 104788,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/41.glb",
+      "blobSha": "9659871b727b196b62fc95b54f5bbcc563812fa8",
+      "sha256": "0ca459a27831eeab34fa41f71be2173747fe73f0ae43ec4b9035cfa06c7431e1",
+      "budgetError": null,
+      "decodedBytes": 206936,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.3333334,
+          "channels": 69
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 41,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 69,
+        "outputDuration": 1.3333333730697632
+      }
+    },
+    {
+      "id": 43,
+      "bytes": 113460,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/43.glb",
+      "blobSha": "e00ca468b7b0c36e2b0ac97b39b1bb0b8d5298e2",
+      "sha256": "7fa5da95e23c15c0bc842474b96c47f6c3a045c9b0d0229fda5def9bd4ec2278",
+      "budgetError": null,
+      "decodedBytes": 190564,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.6666666,
+          "channels": 73
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 43,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 73,
+        "outputDuration": 1.6666666269302368
+      }
+    },
+    {
+      "id": 44,
+      "bytes": 110452,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/44.glb",
+      "blobSha": "64daeab7f8947e67f41b588e284005e5cbff67ec",
+      "sha256": "827edf064529fe5af2bc2e886fce5691bf78152efba89d6f4001c9c08a457a22",
+      "budgetError": null,
+      "decodedBytes": 236040,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.2666667,
+          "channels": 124
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 44,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 124,
+        "outputDuration": 1.2666666507720947
+      }
+    },
+    {
+      "id": 45,
+      "bytes": 135324,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/45.glb",
+      "blobSha": "401678afce5ff3b096cad06bd5c84e2705377b72",
+      "sha256": "0cd8a4415c51aa6c33ffa0848623a2f0e33cd1ed9827bcb5b7731e2377bf4d23",
+      "budgetError": null,
+      "decodedBytes": 234356,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 0.96666664,
+          "channels": 81
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 45,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 81,
+        "outputDuration": 0.9666666388511658
+      }
+    },
+    {
+      "id": 46,
+      "bytes": 97584,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/46.glb",
+      "blobSha": "f975517032b9dfc2952994dbc85ed39be7b9b88d",
+      "sha256": "cb0d7605a5292cab523e8032828215a4a58363dae8a7c80aaf456423785469ca",
+      "budgetError": null,
+      "decodedBytes": 225808,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.3333334,
+          "channels": 84
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "held",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "holdReason": "Paras eye appearance lacks the pupils in the reference artwork; material review required",
+      "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/46.png"
+    },
+    {
+      "id": 47,
+      "bytes": 101068,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/47.glb",
+      "blobSha": "5a7ed8f15dc854303f0140cb141cba92ea2c854c",
+      "sha256": "50165a00093497cbd01c3b13fdf69a0a97317a681bd8af0dd8d1933868ef89ee",
+      "budgetError": null,
+      "decodedBytes": 231580,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 2,
+          "channels": 114
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 47,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 114,
+        "outputDuration": 2
+      }
+    },
+    {
+      "id": 48,
+      "bytes": 213288,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/48.glb",
+      "blobSha": "d3c24603ee93ceaf06a07ed2819ed089f1609e80",
+      "sha256": "6b148c5bea76e27fd150b5ac7df7a0e67a8a03d955d81befd431fd421c65c01c",
+      "budgetError": null,
+      "decodedBytes": 300952,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 2,
+          "channels": 147
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 48,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 147,
+        "outputDuration": 2
+      }
+    },
+    {
+      "id": 49,
+      "bytes": 224480,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/49.glb",
+      "blobSha": "10ca94878f492b47805ccf63f20d1d2afd745447",
+      "sha256": "a2bd1cd19e5043468ab78e7698cc70cc25220d7d6c02b9f29beed78f7a73c2a4",
+      "budgetError": null,
+      "decodedBytes": 323608,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.6,
+          "channels": 99
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 49,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 99,
+        "outputDuration": 1.600000023841858
+      }
+    },
+    {
+      "id": 50,
+      "bytes": 59376,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/50.glb",
+      "blobSha": "8974129119c684941fea12e345269770e4cab670",
+      "sha256": "97e190be74fc8e005e99d93df449311dfaf1a8336c3dd867a8e4aba3f5c7de36",
+      "budgetError": null,
+      "decodedBytes": 100092,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.3333334,
+          "channels": 22
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 50,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 22,
+        "outputDuration": 1.3333333730697632
+      }
+    },
+    {
+      "id": 51,
+      "bytes": 163396,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/51.glb",
+      "blobSha": "4ce96597c53b2adc1521571a1d814461ab24230e",
+      "sha256": "c540250e1535872a67d3d75b256eb280a188ff32c00bc9a99294a5d304b073a8",
+      "budgetError": null,
+      "decodedBytes": 316248,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 2,
+          "channels": 59
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 51,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 59,
+        "outputDuration": 2
+      }
+    },
+    {
+      "id": 52,
+      "bytes": 163828,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/52.glb",
+      "blobSha": "d0e800b6a5613553c64c06f6314657a545f28a78",
+      "sha256": "cf1b052d37e2884b00648c7bec4adfe834028e898985cf988aa4060346377945",
+      "budgetError": null,
+      "decodedBytes": 295740,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.4,
+          "channels": 180
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 52,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 180,
+        "outputDuration": 1.399999976158142
+      }
+    },
+    {
+      "id": 53,
+      "bytes": 143604,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/53.glb",
+      "blobSha": "9fd8fe19521e808b750c04480b5219d8d44615ef",
+      "sha256": "45d20d8cf610e3b27674bd64f1fd4cb9b85a47ddd0f5d5649ac91f806beada34",
+      "budgetError": null,
+      "decodedBytes": 255252,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.6666666,
+          "channels": 144
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 53,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 144,
+        "outputDuration": 1.6666666269302368
+      }
+    },
+    {
+      "id": 54,
+      "bytes": 108944,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/54.glb",
+      "blobSha": "fe96945def1c7ff474ed10c20dad8f92e4ba311a",
+      "sha256": "b581c73e243e99e263f2c112c2fc36b8a0c5b7406ee81a930b4dc7e0daa6cb07",
+      "budgetError": null,
+      "decodedBytes": 222792,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.6666666,
+          "channels": 105
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 54,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 105,
+        "outputDuration": 1.6666666269302368
+      }
+    },
+    {
+      "id": 55,
+      "bytes": 124552,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/55.glb",
+      "blobSha": "b66f8565b7bcbd760e84a1fcbbcd0de8c93a1410",
+      "sha256": "10edd70700bff88a8841b628de1c7064268e9ce86297005f67763161983d94da",
+      "budgetError": null,
+      "decodedBytes": 243636,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.6666666,
+          "channels": 153
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 55,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 153,
+        "outputDuration": 1.6666666269302368
+      }
+    },
+    {
+      "id": 56,
+      "bytes": 172688,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/56.glb",
+      "blobSha": "5a5e7c3d2d927bf137396c0e2e76d630ef229bee",
+      "sha256": "6a6c2254d9d0550daae357c4599fc531c1513d59bf919b8e73a89ea38571f6df",
+      "budgetError": null,
+      "decodedBytes": 265784,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 0.93333334,
+          "channels": 111
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 56,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 111,
+        "outputDuration": 0.9333333373069763
+      }
+    },
+    {
+      "id": 57,
+      "bytes": 155852,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/57.glb",
+      "blobSha": "014b461de8c43596a3487456d023e070e12aba79",
+      "sha256": "42387de5f20fa5981e07e90c612ae601693cf68654a421d2984944b3c4435091",
+      "budgetError": null,
+      "decodedBytes": 244032,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.3333334,
+          "channels": 87
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 57,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 87,
+        "outputDuration": 1.3333333730697632
+      }
+    },
+    {
+      "id": 58,
+      "bytes": 161108,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/58.glb",
+      "blobSha": "5630c9a8fdf41cf010134217e75c4e617ac8fad7",
+      "sha256": "75502958944a746a26c77777c42c52c92f605afe5316e91d87ecf6a5a05c4339",
+      "budgetError": null,
+      "decodedBytes": 253720,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 0.8,
+          "channels": 135
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 58,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 135,
+        "outputDuration": 0.800000011920929
+      }
+    },
+    {
+      "id": 59,
+      "bytes": 161684,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/59.glb",
+      "blobSha": "f93ef35d2ce32b71384548cc117984c8d9876e3a",
+      "sha256": "28cc1dd6b61f9758e02146b0bfebac5540d930e9c33c1185beba18d03aaae279",
+      "budgetError": null,
+      "decodedBytes": 330920,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.7333333,
+          "channels": 159
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 59,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 159,
+        "outputDuration": 1.7333333492279053
+      }
+    },
+    {
+      "id": 61,
+      "bytes": 166024,
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/61.glb",
+      "blobSha": "e74fe99a9376384d5cf0c369cfb98902d4aeca57",
+      "sha256": "5939cc9d407bf0e30333ad932c2d8abe9874174bac40c6758c76680f87e8d81f",
+      "budgetError": null,
+      "decodedBytes": 243348,
+      "clips": [
+        {
+          "name": "HOME Idle",
+          "duration": 1.3333334,
+          "channels": 81
+        }
+      ],
+      "customNodes": [],
+      "customMaterials": [],
+      "visualReviewed": true,
+      "admitted": false,
+      "previewDecision": "approved",
+      "productionAdmission": "unchanged; unresolved source terms do not pass the normal gate",
+      "preparedVerification": {
+        "id": 61,
+        "structureBudget": "pass",
+        "textureBudget": "pass",
+        "motionMaxError": 0,
+        "positionMaxError": 0,
+        "channels": 81,
+        "outputDuration": 1.3333333730697632
+      }
+    }
+  ]
+}

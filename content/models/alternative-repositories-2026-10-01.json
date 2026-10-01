@@ -1,0 +1,8 @@
+{
+  "repositories": [
+    { "url": "https://github.com/Pokemon-3D-api/assets", "treeSha": "429de1288cea0d43f5b4f56305d2276e94239d65", "originalRegularGLBs": 0, "metadata": ["LICENSE", "README.md", "scripts/model_map.json"], "finding": "No original GLB directory. Mapping file is empty. Software MIT license does not establish per-asset rights." },
+    { "url": "https://github.com/battousaifader/cobblemon-assets", "treeSha": "0eeb482da45cc90e71399be1f1a5517ef0905fd8", "treeTruncated": false, "licenseCreditReadmeMetadataPaths": [], "finding": "No asset-use permission established; public repository availability is insufficient." },
+    { "url": "https://github.com/northerwood/cobblemon-assets", "treeSha": "9cdcb85bceabd98ae1829070c49ed83db94a04d8", "treeTruncated": false, "licenseCreditReadmeMetadataPaths": [], "finding": "No asset-use permission established; public repository availability is insufficient." }
+  ],
+  "notice": "Repository licenses are not asserted to clear underlying Pokémon rights. No assets from these alternative repositories were admitted."
+}

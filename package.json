@@ -10,7 +10,7 @@
     "test": "node --test --test-concurrency=1 server/index.test.js tests/*.test.js",
     "audit:cards": "node scripts/audit-cards.js",
     "audit:models": "node scripts/audit-models.js",
-    "prebuild": "node scripts/prepare-model-runtime.js && node scripts/prepare-release.js"
+    "prebuild": "node scripts/prepare-model-runtime.js && node scripts/prepare-preview-models.js && node scripts/prepare-release.js"
   },
   "dependencies": {
     "@google/model-viewer": "^4.3.1",
@@ -25,6 +25,7 @@
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
     "concurrently": "^9.2.1",
+    "meshoptimizer": "1.0.1",
     "typescript": "^5.9.2",
     "vite": "^7.1.3"
   }

@@ -7,9 +7,14 @@ import draco from 'draco3dgltf';
 import sharp from 'sharp';
 import ts from 'typescript';
 import { runtimeManifest } from '../model-runtime-manifest.js';
+import { assetUseTerms } from '../model-candidate-policy.js';
 const root = new URL('../../', import.meta.url);
-const proposals = JSON.parse(await readFile(new URL('content/models/candidates.json', root), 'utf8'));
-const previous = JSON.parse(await readFile(new URL('content/models/admitted.json', root), 'utf8')).filter(asset => asset.admitted);
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 2 || args[0] !== '--reviewed' || !/^content\/models\/[a-z0-9-]+\.json$/.test(args[1]))) throw new Error('Usage: admit.mjs [--reviewed content/models/reviewed-batch.json]');
+const proposals = JSON.parse(await readFile(new URL(args[1] ?? 'content/models/candidates.json', root), 'utf8'));
+if (args.length && (!Array.isArray(proposals) || proposals.length > 24)) throw new Error('reviewed batch must contain at most 24 assets');
+const previousEntries = JSON.parse(await readFile(new URL('content/models/admitted.json', root), 'utf8'));
+const previous = previousEntries.filter(asset => asset.admitted);
 const policy = (await readFile(new URL('src/model-policy.ts', root), 'utf8'))
   .replace("import admission from '../content/models/admitted.json';", 'const admission = [];')
   .replace("import { officialEdition, Pokemon, CardEdition } from './feed-model';", '');
@@ -24,6 +29,7 @@ const started = Date.now();
 await mkdir(new URL('public/models/', root), { recursive: true });
 async function check(candidate) {
   try {
+    if (args.length && !assetUseTerms({ author: candidate.credit, license: candidate.license, source: candidate.source })) throw new Error('source terms unresolved');
     if (rejectedModelPose(candidate)) throw new Error('model pose rejected');
     if (Date.now() - started > 12 * 60 * 1000) throw new Error('batch time budget');
     let bytes;
@@ -40,6 +46,7 @@ async function check(candidate) {
       bytes = Buffer.concat(chunks);
     }
     if (bytes.length !== candidate.bytes || createHash('sha256').update(bytes).digest('hex') !== candidate.sha256) throw new Error('source identity changed');
+    if (bytes.length > 750000) throw new Error('optimized transfer budget');
     validateModelStructure(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.length));
     await validateModelTextures(new Blob([bytes]), new AbortController().signal, async blob => {
       const image = sharp(Buffer.from(await blob.arrayBuffer()), { limitInputPixels: 2048 * 2048 });
@@ -71,7 +78,7 @@ async function check(candidate) {
 await Promise.all([0, 1].map(async () => { while (cursor < proposals.length) await check(proposals[cursor++]); }));
 // Keep the already reviewed optimized Mewtwo instead of its larger proposal.
 const admitted = [...results.filter(asset => asset.admitted && !previous.some(old => old.id === asset.id)), ...previous].sort((a, b) => a.id - b.id);
-await writeFile(new URL('content/models/admitted.json', root), JSON.stringify(runtimeManifest(admitted), null, 2) + '\n');
-await writeFile(new URL('content/models/admission-report.json', root), JSON.stringify({ workers: 2, transferred, elapsedMs: Date.now() - started,
-  proposed: proposals.length, admitted: admitted.length, visualReview: 'representative, not per-asset; runtime decoder/source fallback remains mandatory', results }, null, 2) + '\n');
+await writeFile(new URL('content/models/admitted.json', root), JSON.stringify(runtimeManifest([...admitted, ...previousEntries.filter(asset => !asset.admitted && !admitted.some(entry => entry.id === asset.id))].sort((a,b) => a.id-b.id)), null, 2) + '\n');
+await writeFile(new URL(args.length ? 'content/models/admission-batch-2026-10-01.json' : 'content/models/admission-report.json', root), JSON.stringify({ workers: 2, transferred, elapsedMs: Date.now() - started,
+  proposed: proposals.length, admitted: admitted.length, visualReview: args.length ? 'Every proposed asset has a hash-bound pose review; runtime decoder/source fallback remains mandatory' : 'representative, not per-asset; runtime decoder/source fallback remains mandatory', results }, null, 2) + '\n');
 console.log(`${admitted.length} admitted; ${results.filter(asset => !asset.admitted).length} rejected; ${transferred} remote bytes`);

@@ -1,0 +1,4276 @@
+{
+  "method": "One worker, 16 MiB per asset and 150 MiB total cap; exact source SHA-256; recursive GLB JSON metadata scan beyond asset.extras. Metadata alone does not establish permission.",
+  "transferred": 99617780,
+  "results": [
+    {
+      "id": 1,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1.glb",
+      "sha256": "f858e644251443d4011ef4b3c01f119d732307a3e6658c6cc60db51fd4e72eb4",
+      "bytes": 541608,
+      "generator": "glTF-Transform v4.1.3",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 2,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/2.glb",
+      "sha256": "e170c141f797179e504a705a60cffff91619f11a791454d2bbb5b1c61bbe6411",
+      "bytes": 75664,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 3,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/3.glb",
+      "sha256": "38705b7a41f86a4323fd2a66b0684a0f0e6fa66a9329b10e9927c44bfad28ccc",
+      "bytes": 81820,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 4,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/4.glb",
+      "sha256": "c8c3892e73f19c5152a5a36f7a1419ada27df465153d432e756333e8fd34ea8b",
+      "bytes": 62508,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 5,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/5.glb",
+      "sha256": "ba2fff1fddcf3c36a3c833a83092bc3ae00e8bdfe5aba62ac98fe04b15dabe30",
+      "bytes": 68544,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 6,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/6.glb",
+      "sha256": "1dc18de231df4ba6fcc2c2ee9f9d483c2f33478bca52cf83357a5c9188c3076e",
+      "bytes": 173672,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 7,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/7.glb",
+      "sha256": "6878675bc3f9f7453ae9bffaf1503c1da53321eca51235507efe6ffd7d76dfa9",
+      "bytes": 54720,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 8,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/8.glb",
+      "sha256": "ecb840dbe4f030cede3734afa2c6e9451ad9af46f81e8bd03e36590055edb2b7",
+      "bytes": 60984,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 9,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/9.glb",
+      "sha256": "64edfae1880699dc57b8da749aebcd67a692138cc6d7f43cc56a7265a8cf4dff",
+      "bytes": 84744,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 10,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/10.glb",
+      "sha256": "41d694bae74bee7cea7bed41b2efa3c8559356bdd4a44672a4152053ab20c5ac",
+      "bytes": 39612,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 11,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/11.glb",
+      "sha256": "9664caf9d70b0852462b00af8ccabd4267bb0a5c67cc8bc403e54e510db1c3e2",
+      "bytes": 42028,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 12,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/12.glb",
+      "sha256": "71ec8b1821b68e72880c0a7d4578f25dd20950616e353c35b4abfdb0ff196f38",
+      "bytes": 52848,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 13,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/13.glb",
+      "sha256": "eedbfe651fa08ba716964af8d810e1969bf3f155a44c831bfa7ffba05dbf186f",
+      "bytes": 35916,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 14,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/14.glb",
+      "sha256": "8f80fa131768854de99f41ea4271cb214654fc7a0a2ac4804324a192eb8ad0aa",
+      "bytes": 58336,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 16,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/16.glb",
+      "sha256": "5d250a341650112934979699a0f2db6bcdf9bedc35df859ffc0c08ec0e6a6f8a",
+      "bytes": 57812,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 17,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/17.glb",
+      "sha256": "982f331c5221eff74d49aeaf04cde4e7c84452c0a62bd8ee9c9751eaed3ecb51",
+      "bytes": 71312,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 18,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/18.glb",
+      "sha256": "07a8e1e83073ee0251e9339eb0cc21d3eda4d64ebbaa50ba3cb320faf51853fe",
+      "bytes": 84624,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 19,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/19.glb",
+      "sha256": "1e59c633c921529a1f4c404d7f4ac39e12cc3b982e3f1d0c8a63f98ac5af6709",
+      "bytes": 51136,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 20,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/20.glb",
+      "sha256": "11283c4601e717434360cd88b17b722958bc5b28fd4a367b9836234f99c27504",
+      "bytes": 58352,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 21,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/21.glb",
+      "sha256": "97e929387f41d31ce4ff82b40715d753f78aaf636c700645548adee550cabb09",
+      "bytes": 65196,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 22,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/22.glb",
+      "sha256": "01cb49448ee0b7a06bf513110c45437230ff812830d63eacbc256cabef78a1fe",
+      "bytes": 81004,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 23,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/23.glb",
+      "sha256": "8b5465317e13ad48431bde209377a21f9f4c24d90fd1eaccdb4b9033a053636e",
+      "bytes": 32132,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 24,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/24.glb",
+      "sha256": "c5e8d2027a7407aea6ded09d39229d63f098127392ad418c5feadfd915a02242",
+      "bytes": 47728,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 25,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/25.glb",
+      "sha256": "6c09be51ffcf8caf45ae0980c9e11a0e963fc6fdbf111a200910982ba9bf8b2c",
+      "bytes": 146152,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 26,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/26.glb",
+      "sha256": "0fcf6bd119d33fda6111a19b909fd1977eeb3c7e7bc05d79b33fd444954e9758",
+      "bytes": 68868,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 27,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/27.glb",
+      "sha256": "993c80edbc234a9708bc83f8f5cfd63e12396d22c394dd3caa9e6a323130de3b",
+      "bytes": 86496,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 28,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/28.glb",
+      "sha256": "0793a259bdc19a42202f633012ecb3e7e460acba52af8940abdb2f3242c4bebd",
+      "bytes": 78744,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 29,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/29.glb",
+      "sha256": "e827b57b23b5b9b2dc0e93521f877f9ae6440e2614d733bc37da62b2f7989e6c",
+      "bytes": 53640,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 30,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/30.glb",
+      "sha256": "55aa7da0dc84ce72d2fc47e6f55f657c7bfb941d044ad085f7e191ba81cedfce",
+      "bytes": 60436,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 31,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/31.glb",
+      "sha256": "87f418a585124f04ec57ac198e5bceeb8a3dd91ff5456018d6d9bba62f380bbb",
+      "bytes": 59552,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 32,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/32.glb",
+      "sha256": "6063992ebc0c2df2d5dd26dd114e90e02ad8d238ee8ddf21ebf3d840ab69bb24",
+      "bytes": 57716,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 33,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/33.glb",
+      "sha256": "f786a3f9a4bdee1ba7ab1dac0655a369c012b751aada568f51256aca0326bdc2",
+      "bytes": 56424,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 34,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/34.glb",
+      "sha256": "c497762ae7e80e5cf0697b3dd0433a278a895201cd5d2fee4f2ab633a6efeaf0",
+      "bytes": 75320,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 36,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/36.glb",
+      "sha256": "1cd15789ac7f94468fd5fda337b4313c220481965e7350a118bddeeb73f64d46",
+      "bytes": 45740,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 37,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/37.glb",
+      "sha256": "e70824e4312e14554b2aca25287afc430b68eade15c05854d16c230e1404ba1a",
+      "bytes": 69720,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 38,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/38.glb",
+      "sha256": "a842e0320c55bdc49868a9022b92fd2425e1fafb7cf17a7084b1bfd29e2b006a",
+      "bytes": 88984,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 39,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/39.glb",
+      "sha256": "4b80135adfb9bcc341d62b558db747cae1a5a1ae31cc002519b1bddd5fd9098f",
+      "bytes": 47996,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 43,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/43.glb",
+      "sha256": "cffd5802f946aa02048aea0453ed8c8598fb2b9e3320f65f6d11202bd2a0fb5e",
+      "bytes": 36872,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 44,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/44.glb",
+      "sha256": "c223b1e49e73c5601df14c39ac77f3c622522b4a776093f857cb2f1f4d8aedb3",
+      "bytes": 44064,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 45,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/45.glb",
+      "sha256": "1882c6c7271426e3eb900a247e51d9c47f8b1b1e833d14755b310f0970f269f1",
+      "bytes": 44132,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 46,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/46.glb",
+      "sha256": "a6d3b9a658a83af1521b714c9b31808f1df199af2bfc93a7d44aca4860820c47",
+      "bytes": 43200,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 47,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/47.glb",
+      "sha256": "bf116d7615d7599fbacb05f18ca61e878d9649dca136a2979262187f99d5f235",
+      "bytes": 48164,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 48,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/48.glb",
+      "sha256": "5161e02de616d83d3dcc3b4556a0b3e39e8f2d751ce9b12aba085ddbb9facd47",
+      "bytes": 49740,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 49,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/49.glb",
+      "sha256": "ee407f03c565bb238301f461b19cdfa844bcca373c61a9136f0cbdef0c492999",
+      "bytes": 51516,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 50,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/50.glb",
+      "sha256": "974857fa0a45cb6da8ffdfe0f01d201850a0ba523d851d81514382284c7fd635",
+      "bytes": 18208,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 51,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/51.glb",
+      "sha256": "4a3bb37c3ae6c3467ba86cbafb503d80726c3f1000f5d47c67e3cc99005e8d9e",
+      "bytes": 40360,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 52,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/52.glb",
+      "sha256": "7130143825e89beaefac74d0a8e94f7f7e8e745f1dd40d753dfa745d38ed5560",
+      "bytes": 63108,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 53,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/53.glb",
+      "sha256": "69468680aafb444563c84e623b504744008714d2a226a79906eb655379464e69",
+      "bytes": 57124,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 54,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/54.glb",
+      "sha256": "6dafc814712170c46ec69b71043ff756674819db77871dd687fc486df72535a6",
+      "bytes": 49680,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 55,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/55.glb",
+      "sha256": "50bd1b5b6abf4cb2fb6643111197cfa06092b25db73ea8d0623d63fe0dc38b6b",
+      "bytes": 57764,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 56,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/56.glb",
+      "sha256": "06136dc247ce385d890c5da7d694af314433b35c9b448d13c205fdf2bb1aa56f",
+      "bytes": 42996,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 57,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/57.glb",
+      "sha256": "9c6f1faeb3257ff3db7e768d0f1a57bb260bdf0f560bdedb00e1e5671d6192b2",
+      "bytes": 46112,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 58,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/58.glb",
+      "sha256": "ed676e83fae8477c33b985783c74ae7191e7f63622e716d534cc5357c89e534d",
+      "bytes": 67688,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 59,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/59.glb",
+      "sha256": "d3e70b6272cd5677746a6af2c6d709f22be597b40bd5de72cbc0013a41ebb548",
+      "bytes": 88168,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 61,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/61.glb",
+      "sha256": "8742f50a28814d1f3a393a4ddfd154007477bca800f236e052fd8c5ed39b7492",
+      "bytes": 46892,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 62,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/62.glb",
+      "sha256": "495f67a9aa465f8deb32189dfadad990318374ee3dcbe6d45b7fe498692f3554",
+      "bytes": 49468,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 63,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/63.glb",
+      "sha256": "6ff7e80c572e977986df0c9888cf2db034fc825715028c70d2dc233d40fdcf27",
+      "bytes": 53240,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 64,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/64.glb",
+      "sha256": "0121ba2791d6e9af8b646a96cd1b967a107f7c8219643b75b665595f97d9fc4d",
+      "bytes": 80032,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 65,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/65.glb",
+      "sha256": "b85039e57d15a54868d43d7ac44c3acea7cc16bd93dd6006055c41a6383d9f76",
+      "bytes": 69800,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 66,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/66.glb",
+      "sha256": "24c7b613d547d595ab0ec78a88570e5e63a15db1a79c69b7e0e2c309cc640ae1",
+      "bytes": 59372,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 67,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/67.glb",
+      "sha256": "d4aba5cc0cc32561aac7c1151b82137a306d10c573e2d733d53f5c797e518282",
+      "bytes": 67456,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 68,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/68.glb",
+      "sha256": "1bcd6b44189a07de02115885961d3951798ce1b17459cdf452526873f85137fc",
+      "bytes": 88116,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 69,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/69.glb",
+      "sha256": "c1f38166b8313fd1cfe6d2e9b0b90caa5c996899d92bca114ff7ccf94e88b0e5",
+      "bytes": 45844,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 70,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/70.glb",
+      "sha256": "5dde8f4e9b7b8b403aa58585b0a76b100b43fa4702eede5f14991aff71760f6b",
+      "bytes": 38128,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 71,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/71.glb",
+      "sha256": "bedc7ee7a3033c9caedcc7f093f0fd79d237bede99e544262a25613864c34ba6",
+      "bytes": 42876,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 72,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/72.glb",
+      "sha256": "7a29494bd7d75d40edf5d038d7a8cd18967da4b6f291ebd52f9b8b52a73cdf6a",
+      "bytes": 70540,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 73,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/73.glb",
+      "sha256": "4e266793704d60f4928386f65c9ad1a3627178595221e5d9326f60f724288367",
+      "bytes": 63256,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 74,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/74.glb",
+      "sha256": "6a3dd1e93824aec535bca1467b613b9bd75abd25cd07cb3d81ff46db6dd9f676",
+      "bytes": 48056,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 75,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/75.glb",
+      "sha256": "e8217a5445957bbf95c150f349b662025d38deb0e5e717fc737708be6e6aa265",
+      "bytes": 78700,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 76,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/76.glb",
+      "sha256": "d237d8ecebe73835d922953ac059833b135f44e02f75742411124dc39e0d40f4",
+      "bytes": 60512,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 78,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/78.glb",
+      "sha256": "a14ad6555de3d66b1815a979f580d0774c99811969229f6cabd87e51beffceab",
+      "bytes": 105044,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 79,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/79.glb",
+      "sha256": "116efc82898be99696c530bff79cb6ea0ebcee75e9af8ef670fee72f42dd272c",
+      "bytes": 50732,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 80,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/80.glb",
+      "sha256": "62a52ab0674c7a08da0bf0daaf9cce3f725f1d35452d811d46ae07858a828416",
+      "bytes": 71216,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 84,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/84.glb",
+      "sha256": "8ffa705bfed0f2d5b344c17346611ae9c105f79e4d4a098d74aaeee580de0e91",
+      "bytes": 62432,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 85,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/85.glb",
+      "sha256": "0673d58c4cec76a6538b3a1dd201a0e398320696bec5a72e2d44c598188f995f",
+      "bytes": 73312,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 86,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/86.glb",
+      "sha256": "1e08dc7baa498817654ecf5a382c405af447f6b5c76a33c76ce02041a4972aab",
+      "bytes": 48012,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 87,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/87.glb",
+      "sha256": "4214282e7fdbef4ae8131bd237802f458cfb844ccadbcd71ca994406054c08a1",
+      "bytes": 47472,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 88,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/88.glb",
+      "sha256": "38d4c08a38da5673b97ec149cb775528737988baad7b31adb27c797252339d14",
+      "bytes": 267996,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 89,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/89.glb",
+      "sha256": "a3f1fdda24c853fafe2a341636f9e7c050fc412c19e8c3af277ad05a5c70f532",
+      "bytes": 359212,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 94,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/94.glb",
+      "sha256": "14f689ea8609d9669504b7fb4b4a97c7a50bf997ae9bdc3df3101901d33b13ef",
+      "bytes": 47372,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 104,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/104.glb",
+      "sha256": "46d9f0f35d17f30d5e6e2258c9c60509ace79da359e947dafd0b84cc384958e5",
+      "bytes": 49768,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 105,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/105.glb",
+      "sha256": "e76c17ba4b6c4bae30d396e71358fc779ce96dc12e39a65dd507522dae0455cb",
+      "bytes": 55872,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 107,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/107.glb",
+      "sha256": "e379a1b686cce38a69863e28a92c73206fcbfa99a6ee49e2ce3a00a1f42084f3",
+      "bytes": 59776,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 109,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/109.glb",
+      "sha256": "101787d1818bfee4fe86f968fd204f52d7a3cf918fd14c86e8b8cbbacc18dcca",
+      "bytes": 112252,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 112,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/112.glb",
+      "sha256": "4f3d3a1fa24914c669f7a5cbe59fa66ec497b1e812f1665afad784e32821260a",
+      "bytes": 70476,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 115,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/115.glb",
+      "sha256": "fd1ed645a0df356a49af38d3464a1b3738681407840576b96ea3ecd40e8ce7be",
+      "bytes": 88288,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 122,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/122.glb",
+      "sha256": "dc8e42191eb2d50ec7f7e0c4615fb4d618c4aec76f4232af0926360ce9b3491b",
+      "bytes": 64148,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 123,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/123.glb",
+      "sha256": "0b69ec9f6b37400a4a653a1296023af5e14e0c053e55e36fe15b32299b207454",
+      "bytes": 58204,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 127,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/127.glb",
+      "sha256": "2f87a619b74d8f1ff737506ea69971a1a2184be277c150ef9a6c3036d19933e2",
+      "bytes": 56412,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 129,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/129.glb",
+      "sha256": "3288c802758922b7cfb0f25468c2ae8d9c4d4341e9c8df4544401bde412a70bc",
+      "bytes": 51632,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 130,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/130.glb",
+      "sha256": "48153f4695ca4dc3b8d66e1cfef8a0c49fa4e647a6d657c1194c753d44dc591b",
+      "bytes": 76920,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 137,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/137.glb",
+      "sha256": "ac8c24af591a66eaa0955f602e09e15112da1f91034890e460ae0b1d6601c7f8",
+      "bytes": 20480,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 138,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/138.glb",
+      "sha256": "fe601fee639248294fb66f0aa380d03df179e1d89d2bc098fbc930e3d1206b47",
+      "bytes": 49404,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 139,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/139.glb",
+      "sha256": "8fe5798e1150e1e2895990ac747e1bc16c92183544bdd7c128555d8eec8d010a",
+      "bytes": 55312,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 142,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/142.glb",
+      "sha256": "dc085302e48bc67f769b0f4b8ba7c0bca6002c6329fae13302d85405b00dc98e",
+      "bytes": 73884,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 144,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/144.glb",
+      "sha256": "9fbca36c3a935749b98d3819ede49a28e53f0397d6ed34c0b9d354ec15d44333",
+      "bytes": 86756,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 145,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/145.glb",
+      "sha256": "7ce83fe5e8f2115ab6d2b5991f6b6410b32b915deeb7556001a03a3744d05085",
+      "bytes": 81696,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 146,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/146.glb",
+      "sha256": "b5df8d4f7188211551d3d4a806224db35d547adf46abf7762584feb8854bbfb2",
+      "bytes": 141340,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 147,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/147.glb",
+      "sha256": "ae28a1041e835c618adbdac544cd6fa5a74b691f942cbf9d69b5a13deab7cb44",
+      "bytes": 38528,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 148,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/148.glb",
+      "sha256": "b9b8bc0be64df910687b0825d23b783346ef4cdbd815635c09c71f63d21c5401",
+      "bytes": 49040,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 151,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/151.glb",
+      "sha256": "4fb8e617eb114c4018c57c9c982232e55dc31857e2f6fec2c22578945bdaf38f",
+      "bytes": 52600,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 152,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/152.glb",
+      "sha256": "9ff7a896fdef4acac42ef7ee98b079db7fff5edf4daac3f37c6145498767b3d5",
+      "bytes": 68040,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 153,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/153.glb",
+      "sha256": "993bacc7bfa79d43ff2ab8e7e49b8622887bf29556234e807a5125a5b4c2fae7",
+      "bytes": 78644,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 154,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/154.glb",
+      "sha256": "da822ae16411f95a4a809523448c6ba7729aa74838a4ae783fd5ba1ed5c9a543",
+      "bytes": 88232,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 155,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/155.glb",
+      "sha256": "0239d60146746c1a1761b90c9d9e89ae0c95e384e4bca958eb67911242aa0fef",
+      "bytes": 67848,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 156,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/156.glb",
+      "sha256": "3389fd7afe25b05eb4707db716763bb51bdd86a7854f1f859523545aa306daef",
+      "bytes": 77536,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 157,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/157.glb",
+      "sha256": "b4f932b74412ba6af1d967ab329000211b4542fd93c210939638fef37c48300d",
+      "bytes": 80504,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 158,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/158.glb",
+      "sha256": "7c3028c88b0bbb878fb9aa8be57b541bec1022fb43459ce2a97370269b22ff07",
+      "bytes": 61968,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 159,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/159.glb",
+      "sha256": "ee432a7b2c92507fdb296ba1d9febfec71af7a45a81946409b1e52be99d71ca6",
+      "bytes": 66104,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 161,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/161.glb",
+      "sha256": "74c3f2f713c4779d9a3dc831ed030f18b4ad62d8fbe3e6ac5c122c1273f4393e",
+      "bytes": 331260,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 167,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/167.glb",
+      "sha256": "7274b5ad06a1e549bd87ebaa8f5b8381db1a7297570f0a1416db77037065f720",
+      "bytes": 74208,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 171,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/171.glb",
+      "sha256": "c1d3b3b3fbb57fa2b58935948f35f5c24c5d3c1ce03ea32fb637c21b649c0261",
+      "bytes": 26416,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 172,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/172.glb",
+      "sha256": "84f5ef236b6a1238eb7d52eddc52db7e9635ad59f86c6bed317d62409edb40b9",
+      "bytes": 49212,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 177,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/177.glb",
+      "sha256": "13f62f524664bdfa5acecf57766e3971ae0aac535c097adb952adde11a062435",
+      "bytes": 23080,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 180,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/180.glb",
+      "sha256": "afa61c134bc1670d6fe1fb08b99f7b9000a63534cbe64269bd9431d53ebd8bfd",
+      "bytes": 87028,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 181,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/181.glb",
+      "sha256": "2ecd68dd36a8814eb79b9878bd1b2cb5624748ffdd752705a20011ce06e8345a",
+      "bytes": 70556,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 182,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/182.glb",
+      "sha256": "db4723231ac5e51defe5a664c1801aeef42a345602a002d8decb7c2ccb650965",
+      "bytes": 77336,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 183,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/183.glb",
+      "sha256": "53c99e5de934a59431acb6e60e9cde0f18b5d794bdfe1844257cedbd9e316f10",
+      "bytes": 3792452,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 184,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/184.glb",
+      "sha256": "3c305d7757b53d1036650abbec9e7dfdb79917b8b5af89d9a319ccd6474afa2e",
+      "bytes": 64928,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 186,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/186.glb",
+      "sha256": "84320928b4fcd8ca04dd12cbedfd28eb138d22e72b54e5daa771e4fc43a0064b",
+      "bytes": 45224,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 189,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/189.glb",
+      "sha256": "6593da03d8babccb96ca2eaf4f58ff12700c976683fd02dd8f4b3adc40a7de58",
+      "bytes": 97568,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 193,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/193.glb",
+      "sha256": "ad30306a53d9d8ccdb3779724a503d716a375e0bbbcdbb7b37451e3f3e948d75",
+      "bytes": 66668,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 203,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/203.glb",
+      "sha256": "4c470ddbf5563021d85a09974f4fcdb2c12d8bfa7887205c3a386aa437f45edf",
+      "bytes": 71268,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 210,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/210.glb",
+      "sha256": "12f8c3a941ea3dd766c460142131ba283a0f8cae42a73830d2243473a09e1206",
+      "bytes": 187980,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 213,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/213.glb",
+      "sha256": "6d4c3a6285ce7a853f6853856512bc68e067225d07954c06e6997081aac825b1",
+      "bytes": 56136,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 214,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/214.glb",
+      "sha256": "698fc25cd8cb020ef33525160098fe6db0d9cd71a3b4ab82f38d0ac7af6a2095",
+      "bytes": 76996,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 215,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/215.glb",
+      "sha256": "f9d31dddc9661e6d466ebef6175badf75e164fa5a566989acb36f64c5362fa11",
+      "bytes": 58100,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 225,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/225.glb",
+      "sha256": "6b73bcf71ff6155ec0333b6de750b258e67af4cbcec2b843143a5ebc7e23cc98",
+      "bytes": 77396,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 229,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/229.glb",
+      "sha256": "d96642ebffa81354747b6c68e60debc9d479e69cc0c949a3b939240827bebc27",
+      "bytes": 62380,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 231,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/231.glb",
+      "sha256": "e8e87be9efdc3234038ed28e17143cd999cc08560502df4527b1abb07961c8e7",
+      "bytes": 59280,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 232,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/232.glb",
+      "sha256": "3a9da6b2072b0c820ae18c401b2b3d968ea2a4f01786c7046b20021f9649698e",
+      "bytes": 84064,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 233,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/233.glb",
+      "sha256": "f2e1c7ea73c66876e0d05e8412324de4b8dc6624cba6bef7462124d561c2190e",
+      "bytes": 39244,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 235,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/235.glb",
+      "sha256": "c0af60bd3a41538667c0321571b9ad20c42f76e519adacf00037de70c9e3213d",
+      "bytes": 68880,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 236,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/236.glb",
+      "sha256": "5f32fb24da1658d29600f2cc4e42d8f1ee66a0308ccfb21057f051ce24b90c23",
+      "bytes": 54348,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 239,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/239.glb",
+      "sha256": "812537c32a28759c0ae4bf3690b07331b8e3a00e17f5499a941f01a898726740",
+      "bytes": 20100,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 241,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/241.glb",
+      "sha256": "1127c5d702caf703e4c3fb085601b9f4ef6c858dd2d7473e1ad6975e421bcd74",
+      "bytes": 69888,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 243,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/243.glb",
+      "sha256": "d8c4f9e8c3ae19cebc47105ed485fc75800bfc83ce9097f1aaf8528f9ac9cff3",
+      "bytes": 102536,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 246,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/246.glb",
+      "sha256": "59499862c32d425489079373265c49536a75585f5e328a7ddafc8d22e2e264e5",
+      "bytes": 53932,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 247,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/247.glb",
+      "sha256": "2471f2e31a7ef8d5dc9306adf547f0afe0e02571cebed8e4e589a1f58f380031",
+      "bytes": 68484,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 248,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/248.glb",
+      "sha256": "4b123fbe632a085649b88f8c80765aa1932157d4ffc3dca9d8fb9bfc9b4de22e",
+      "bytes": 83188,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 251,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/251.glb",
+      "sha256": "8866ca502ccb4673a7430ff4991963929871b522e42985350789a198d0ebba35",
+      "bytes": 60924,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 254,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/254.glb",
+      "sha256": "2f6b6587ca8d5f555cc512e4b10ef9f0a4656dc6a98013031b7617dd5f3b0504",
+      "bytes": 92048,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 255,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/255.glb",
+      "sha256": "29c669b7da0ab6532e478e2e868126daa21332ae75c37b437bf529798abc1802",
+      "bytes": 53452,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 256,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/256.glb",
+      "sha256": "f5d2ca79117c1b34c4c5727ba3ba7c81908424ec0d17a0044b367521cd45368d",
+      "bytes": 67332,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 257,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/257.glb",
+      "sha256": "1dca0885fded1865e41696181cd57767ee206b2154f2da41d42b132486ca0016",
+      "bytes": 90552,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 258,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/258.glb",
+      "sha256": "319cb250466af6b90d3805567783b99470c71763f0c969ec571547c5a96ca9f3",
+      "bytes": 37940,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 259,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/259.glb",
+      "sha256": "2d3b19caac26a226deb718e4f9e0ced6a752a80a54d5627e73525fc252571355",
+      "bytes": 47292,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 260,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/260.glb",
+      "sha256": "5874d64963694cb21f6e5fa264ad34babd90c472f5e9ecccb92c4c708d46f39b",
+      "bytes": 78732,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 262,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/262.glb",
+      "sha256": "80763ae34ab5a488b1c39194bbf6b0e523fc559cb8bfb6838cbc9cacc8eee739",
+      "bytes": 95664,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 263,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/263.glb",
+      "sha256": "49d9589360e678e608594868d9867fa120215064500c1b40b99e11b16d7fd266",
+      "bytes": 54456,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 264,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/264.glb",
+      "sha256": "c1e2c16b0bac11e880bfcd803c1f3cd915ffb3eb7f8a4e2f38fa5c209dd1760a",
+      "bytes": 67548,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 271,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/271.glb",
+      "sha256": "00e453016a7a2bed4a8814f505a4563020f02823f9b314b29592a59285541208",
+      "bytes": 91852,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 272,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/272.glb",
+      "sha256": "c036829384ab9be7be92908f89619c38fb442a1cc5c8b77fa507a4259bb774cb",
+      "bytes": 34392,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 273,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/273.glb",
+      "sha256": "11414c9cd1966548df915c5b42ff69215873adc2f5fd7c46e47a825dc3c8e01a",
+      "bytes": 28196,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 274,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/274.glb",
+      "sha256": "dff308c8b4d099d5397a48c67bffb019830407827c8d2581de34ce5292f6d469",
+      "bytes": 57024,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 275,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/275.glb",
+      "sha256": "fdff5b0ee771ad0fa560d5dba90a6cd453e0abf54b071fccc9b8595a9b795011",
+      "bytes": 76864,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 277,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/277.glb",
+      "sha256": "cdb7e1eae21329ce1fbae1b8c75fbd03773c0666ce752df57a38d9d16b49a4de",
+      "bytes": 38644,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 280,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/280.glb",
+      "sha256": "c585414a50f1c2067577b7de2d89f4befa178eee942cc125896d1a0ea5141b82",
+      "bytes": 47696,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 281,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/281.glb",
+      "sha256": "14105d72eb5aaf3537311a6fcf510feb5d0a76db0db4071ee7318a3cece178a8",
+      "bytes": 48296,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 282,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/282.glb",
+      "sha256": "7c51ee42878eedb358ccc729355e16428b4e09a8bcf859a1cbc18cd30da1db7e",
+      "bytes": 81540,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 287,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/287.glb",
+      "sha256": "9163290aed9f6e5c824cd5b72a8d371e16c25c1f25d0fa952bd07af2a875d51e",
+      "bytes": 21112,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 288,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/288.glb",
+      "sha256": "7703387ba63432c300e8d7c01909eecad12cb99da36a96228c08cd6f2b909da8",
+      "bytes": 133612,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 289,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/289.glb",
+      "sha256": "b93331982dee7fdca67c94ce495245fb5cf2c36c0327769ee03f5d62b66a781b",
+      "bytes": 68344,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 295,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/295.glb",
+      "sha256": "1780b61ed3f484f906b693efd6d5a1414e57d60967d09b40f94277132654ae70",
+      "bytes": 45620,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 296,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/296.glb",
+      "sha256": "3fe930f13e0ec1d5526c4de58de80a5973988f94b924128108d5c2c86ba4cf52",
+      "bytes": 70200,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 297,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/297.glb",
+      "sha256": "cf2f73f301db35da7cf362109fcbabaee816dba077dadd04c38d152f67e7cd47",
+      "bytes": 28292,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 303,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/303.glb",
+      "sha256": "cd98cff1ab7e3b34d92777862a03bad31d47e844c6d20ff090fcea5d7edb00cb",
+      "bytes": 66948,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 306,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/306.glb",
+      "sha256": "a5c4bd4132d1defc954eb4c4c78ca03ecedeb4a8b2f2752d5cf27686a41c98ac",
+      "bytes": 69484,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 308,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/308.glb",
+      "sha256": "b4df891e0379f811dafc24e4ba5d65f208e582a14c7d1de08d95be7183559502",
+      "bytes": 28804,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 311,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/311.glb",
+      "sha256": "d4ed7f9f0c392e274a38a52df657b139260227aaf710d26b47436c2fd34d9ad3",
+      "bytes": 47640,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 312,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/312.glb",
+      "sha256": "17b9078380ef627ee4358a43d210d40bc8a9100c78c3e9f104b1c88e96b9d004",
+      "bytes": 47048,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 320,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/320.glb",
+      "sha256": "41768b53c64b3f81a5eb6736b3aeda368e56d6071f4265b48de49a377dbe6ef7",
+      "bytes": 41784,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 321,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/321.glb",
+      "sha256": "7a94869a4f3a3b013c05a1f243531923c8b77b7581b35d86cdf42e6d20e76253",
+      "bytes": 54672,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 323,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/323.glb",
+      "sha256": "d54139dc700a76e7ebbcc3cf1cf28c3b9e842279335ab6fa0574247233c5e4cf",
+      "bytes": 82652,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 328,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/328.glb",
+      "sha256": "3f7b41188b9e6e19a101e2317e83e2eea36a7f14086d31137adac747c7f10bfb",
+      "bytes": 191436,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 329,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/329.glb",
+      "sha256": "d72f04561e37e8fbde5008b74e9f882e53e8b7d930a62c7f9d127d08af1635b7",
+      "bytes": 113552,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 332,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/332.glb",
+      "sha256": "e08f2ff7e5a44c067fb160b565183efada872be632aada4751acbf9ecea446f4",
+      "bytes": 65008,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 334,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/334.glb",
+      "sha256": "72e60805470fb8f44391766f334028b08424ee8101aa96720848103fea9893b2",
+      "bytes": 18536,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 335,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/335.glb",
+      "sha256": "2330140d38d5ae89821106861822f3572e5644041cb602a24fb3242c88a6c58e",
+      "bytes": 80160,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 337,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/337.glb",
+      "sha256": "b0038db6127922423c2fc1671abfa3a658f211c568e6e9e4a6f4df25aaebef12",
+      "bytes": 42708,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 338,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/338.glb",
+      "sha256": "009c547c42974f03490b1030de8097bda40c209f8de7a7f4be4c8e8a6a87746f",
+      "bytes": 82928,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 351,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/351.glb",
+      "sha256": "a82e8c849e6eddd1ee683262b337c20c05dd12c63c8f298b03dfed097a5c4a0a",
+      "bytes": 32104,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 358,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/358.glb",
+      "sha256": "e7c904414798cb8b59e5a4fd6f552409dd117265969cb96685d028db04c74406",
+      "bytes": 896272,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 359,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/359.glb",
+      "sha256": "26ba37cad8d2ca97c2105d59cf3ccc1b83fa709fdec5e743791b3e4e2d1e0b36",
+      "bytes": 70600,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 360,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/360.glb",
+      "sha256": "e64a86cf8a5e29104dbd0a8b4e80ad562c77f74b88aafd9cecce654b8af9f3d4",
+      "bytes": 25140,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 361,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/361.glb",
+      "sha256": "a22e8fe81464976cc7251469ee31ee8d4a2637a874efd14f9236c7f40c503a4d",
+      "bytes": 72676,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 362,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/362.glb",
+      "sha256": "1ecfb1246a62e30b3729d65190c5347e855280ba18c8f6378bbb6cce2c7d0902",
+      "bytes": 81472,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 364,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/364.glb",
+      "sha256": "358d23ef38d322de69186d7bb980fcca815de5b8e01770dafd2c1bb2a23a47f9",
+      "bytes": 32388,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 365,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/365.glb",
+      "sha256": "0b4c1abbd7ee72cdb752b350d91f559d83dc15b6c57de21c3daeaf611511d883",
+      "bytes": 43432,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 376,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/376.glb",
+      "sha256": "ec1733a18e95e48b1bba14fa9357acc005615087de1a14f05a480cde4fc4d4ea",
+      "bytes": 92136,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 379,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/379.glb",
+      "sha256": "a4df135b569bf38001fc49fb6a06a2f631d0048eeb751b5ae427057eb0893cbc",
+      "bytes": 48548,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 380,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/380.glb",
+      "sha256": "39bb3d138e41880e7eaedf5329e6dc9ee9bdee104368b9708836ff99ee52fd21",
+      "bytes": 60564,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 381,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/381.glb",
+      "sha256": "4103019bd63a6d624d3aecd9438ae98abebad99189063e5a01d192511498cb7b",
+      "bytes": 71764,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 383,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/383.glb",
+      "sha256": "8b58e9c42871f6be6f083927f8f95015e8f28cad451720e03a2ce77b89c92b47",
+      "bytes": 93240,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 384,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/384.glb",
+      "sha256": "1eed0a7edd0a31e7c4fbf5a45dd18da8ac91a28885e1186b82bc2798e7ca450d",
+      "bytes": 77660,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 385,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/385.glb",
+      "sha256": "8461cdcccb08543f194d689a37ecfe9b0046da56e5fc5c7b82b269509bfa4248",
+      "bytes": 65012,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 386,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/386.glb",
+      "sha256": "a730bb093b16c483594c986a4d6f54acab01f9f8e507f27a608fdac85848171f",
+      "bytes": 169652,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 401,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/401.glb",
+      "sha256": "a131ec20847983fe2f24b9b6a3c5e404f2cbdbd69131f7b21a673ce9c87ab21b",
+      "bytes": 52444,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 402,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/402.glb",
+      "sha256": "5b54536dc2a740ccd929ded0ee5e40d7bb89af234e6271ff0a9a4a26ce1c7966",
+      "bytes": 74132,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 407,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/407.glb",
+      "sha256": "2fa555686942cab39add94683b4a8890db23d76de0947c1a3ae4a02cd583a573",
+      "bytes": 79412,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 409,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/409.glb",
+      "sha256": "9c917a01edffa5ca3e859e2907c478065560f6569fb7024d7c419228775114ac",
+      "bytes": 63524,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 417,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/417.glb",
+      "sha256": "ac06d7651285181ddc92b1d6b4855ffd711198882cb72033fcc18b35b62715fd",
+      "bytes": 56064,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 418,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/418.glb",
+      "sha256": "373f9638069cfb82f8e805d3284b09d38dd4fcca9b8a9db63cc0ff4fa1fb53c2",
+      "bytes": 66976,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 419,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/419.glb",
+      "sha256": "57af73115dd846d519e5264c38e82a2564228d7606f238a9d0b62df7959c89a1",
+      "bytes": 77088,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 427,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/427.glb",
+      "sha256": "0b346cd26fc41379f16b528d734ff5c347196b4e8cf2c86404084da51d8beee7",
+      "bytes": 70072,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 428,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/428.glb",
+      "sha256": "d31456d73ecfc22417d411158c0ddb9562d4d759d853beb299504a427fcf146c",
+      "bytes": 84204,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 443,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/443.glb",
+      "sha256": "af0c6f0b0153de53128878126fb1fe5e3eb14def7514387890c6e5ce9c02fc5e",
+      "bytes": 52288,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 444,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/444.glb",
+      "sha256": "09c78be5f7f91aa8d4718e430efd41b20316d61b7ae812f12899cdaf82cc4363",
+      "bytes": 61800,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 445,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/445.glb",
+      "sha256": "2d453e23c287eba0da171a73f318273418124f0ea0abd6f96424eccca9626e9d",
+      "bytes": 70316,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 447,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/447.glb",
+      "sha256": "ef8e6db8fd4bad46a2043e40f6e3b0974b76a4193c19b0d8657776d07d761344",
+      "bytes": 61864,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 448,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/448.glb",
+      "sha256": "50de3d407a145acd5e7c769b5ac4f7a7b9fc1748176d393e7e96cee3b986d33e",
+      "bytes": 82332,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 456,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/456.glb",
+      "sha256": "fb7a00ec90879e4cfa27ef40f7d7421b18c9fdd7a7b2764b17fde4771988b05c",
+      "bytes": 28516,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 465,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/465.glb",
+      "sha256": "a5f014bf5c62d7b69cf416f6343fbb0bf4a5d313e56ab2e26790c66db36b1bb0",
+      "bytes": 37892,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 467,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/467.glb",
+      "sha256": "07fcf36d433f5bbb8f19cf37c3fdca6104e6fc4a223946dc7b06862b955b9792",
+      "bytes": 27444,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 469,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/469.glb",
+      "sha256": "ba14ee2097c8c3a8225820c1fc467ff9249448dd0ef37afcbc0b45009207e86e",
+      "bytes": 54364,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 475,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/475.glb",
+      "sha256": "f2f8608cfcf2a46eb0814afc0905964a325a7d55dc4058e75d9b49711e15fa21",
+      "bytes": 62576,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 479,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/479.glb",
+      "sha256": "9165ce79f5313d44eb9db19616514bb1a7a7f256c7b42e378a9e5090bae922a5",
+      "bytes": 55084,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 483,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/483.glb",
+      "sha256": "1029bbba127dd891bd2337c84b52795b9910a80cf947e0a234ba99ac787ea293",
+      "bytes": 80208,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 484,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/484.glb",
+      "sha256": "e471f5db6987d482587e1601e0e63a91f2faa467ae8f80d2cde90a7e5d2f598e",
+      "bytes": 83148,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 487,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/487.glb",
+      "sha256": "1522014af532a4cf961bf7970484f03e350f7fd6ccbb29867933e28e9fa2da5d",
+      "bytes": 116556,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 491,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/491.glb",
+      "sha256": "4f0826a2ca0e4ea0234ddbe83a21ca9f3b8e8e8cfc58e36a51cfd2f7b9c90cd6",
+      "bytes": 82712,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 492,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/492.glb",
+      "sha256": "9623c6d6bda1d78e594a5163a0542bbd5c87f21050c2d98750065f32ff3eed8e",
+      "bytes": 24264,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 493,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/493.glb",
+      "sha256": "725121e4d5eb0b68a44661e6c0180d58f83b7dfe2e833307395998371bcce96d",
+      "bytes": 66868,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 495,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/495.glb",
+      "sha256": "6e205f63e11db6b3cee2dcc7849421ccf1d44c33c5cfd1901ebf7a50f2e005b2",
+      "bytes": 77020,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 496,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/496.glb",
+      "sha256": "d09ee1c28c9d7d1c8c0216c1284bf0cd43a07ac9c20e94cff938512e4ffdf004",
+      "bytes": 74460,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 497,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/497.glb",
+      "sha256": "eaace61b5bf066bcf5542337d7f9b60441c877808f08de60a2a69866fd836dd6",
+      "bytes": 56808,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 501,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/501.glb",
+      "sha256": "eddb5b0f46b5f139c45e6c2891bf5eee35a0d61ea2cd4d102b66ab4e54993a53",
+      "bytes": 108692,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 502,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/502.glb",
+      "sha256": "dcc1da90f4a62df739954ab8e37c4a262fa46faa631f0a7bce8b767a120c396c",
+      "bytes": 34792,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 503,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/503.glb",
+      "sha256": "36b89c058b9f8348fff5f6de8f3271f99e25ed9479a442b79bea8551a86c139d",
+      "bytes": 113348,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 506,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/506.glb",
+      "sha256": "465c90c198cda0ac05358ef84306fabce021a505148f84e865f3b945a7117a36",
+      "bytes": 67648,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 507,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/507.glb",
+      "sha256": "83a5f3ac10c1b27e3882e719d2f0cfaaaea40fb9acef56355ce0ef43e154e19c",
+      "bytes": 75656,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 508,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/508.glb",
+      "sha256": "49907487d5120961893e23f3c64cb7bf3fbd28d9c7c1e10544e2f97fbe2c7e49",
+      "bytes": 88248,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 512,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/512.glb",
+      "sha256": "c9be32d5596dc3e26f948d726c411d9921876e8da31bc7966c9ddaed34584b80",
+      "bytes": 22588,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 515,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/515.glb",
+      "sha256": "20370e90e701a8b19786f71cb1b66313ab20c00d9bc32175b0a24a20b35ed187",
+      "bytes": 46320,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 521,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/521-F.glb",
+      "sha256": "8c535a959080f5f9abbdf7f0796d69242e8011e782a82cefb1c65bf905ceddf3",
+      "bytes": 18064,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 527,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/527.glb",
+      "sha256": "e7e062dcbf728d717ab5cd53072de67afb18d8edb21e9e83d01b4b699b410cd3",
+      "bytes": 16420,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 530,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/530.glb",
+      "sha256": "b19d5e173555ca450dfc4533b23e336d70eb304c0c83a0837e4aaea7b5dbe46b",
+      "bytes": 22232,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 531,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/531.glb",
+      "sha256": "f57b03eb6ce41fab848f1ef512b5a2b06033db9e8fcf9ebcae77d1ef7f0a171b",
+      "bytes": 59768,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 549,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/549.glb",
+      "sha256": "9e9a78d0e9348d201a72836736be22292129fbbcf38f1c2d87465e91be78a124",
+      "bytes": 65816,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 550,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/550.glb",
+      "sha256": "c7115ff313146f214db9a16f3b8a527a30503d79e2dad8a5deba786897c1a6fe",
+      "bytes": 30560,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 553,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/553.glb",
+      "sha256": "3f0316e6e6763441f6bfe610db588b76f7379b6ce04816ecdeae8e0c34426419",
+      "bytes": 73500,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 554,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/554.glb",
+      "sha256": "162e2becad2077947434c7a3fbea982566aab2541c4f20f9dcc33a57c328cee3",
+      "bytes": 32888,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 560,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/560.glb",
+      "sha256": "363bfb65e57fc7947240c89896f6a9e6ec6bb40274558da637d7e27e17dfcf9a",
+      "bytes": 73044,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 561,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/561.glb",
+      "sha256": "b1001800ec7dea93e1cbc69f164ce3e18d7be324f46b989d466584c46403b5c9",
+      "bytes": 30300,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 564,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/564.glb",
+      "sha256": "535cdb18391b84470297c7987680cc58ba78fcc0f6f203239affd44010c4568f",
+      "bytes": 40752,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 565,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/565.glb",
+      "sha256": "cf616566c67da0ba1e0110f609968bc313817edde07eda2e7fd02ba656528e40",
+      "bytes": 22664,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 566,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/566.glb",
+      "sha256": "f5c3e947df28bdae2b88cf13400bda5380c2cf9d37d2f19fe962343a638a31b3",
+      "bytes": 85380,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 567,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/567.glb",
+      "sha256": "75edb6e508abe9925bf9e5996dd683d5a448ba92b0e0cd236419b23e716a5e87",
+      "bytes": 51912,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 571,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/571.glb",
+      "sha256": "ef453b274c521ccb14f81a76b1b72dd82759eb00f537a60e91db99467932a6fa",
+      "bytes": 83084,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 577,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/577.glb",
+      "sha256": "117fb42fc17add09a65b228d186a910a99676b5f18f372c1c57345c0c040f935",
+      "bytes": 42808,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 578,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/578.glb",
+      "sha256": "ac459395b2fdd7a2ad047c4c30199bd727c669cf21f9167b114fd24ad022e504",
+      "bytes": 12212,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 579,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/579.glb",
+      "sha256": "8489fb2f74a8130938f3b7cde9fd44afd4c356e58f84228e127f01c5a07b55f1",
+      "bytes": 19560,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 583,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/583.glb",
+      "sha256": "145611387341de0f22cc6b3e96de460f640cf6ed56bf3feddbd46e57b1490304",
+      "bytes": 29476,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 587,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/587.glb",
+      "sha256": "3e4406177a0b13d9963ef1efff32a8431e69eed831a5777422d5d92ccb2f7383",
+      "bytes": 54500,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 589,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/589.glb",
+      "sha256": "919505378f52f39325857035de06e2462a5024d45775f8b7fbeb102e3f26ab82",
+      "bytes": 56452,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 606,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/606.glb",
+      "sha256": "f8b61a747d7d7920e9ac81eccf389c31ef23a4c131f32ee39b0bf48f4e1d20fa",
+      "bytes": 20644,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 608,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/608.glb",
+      "sha256": "18bbcb178b68d9b087f598368f7879ac1e99196a613c45c57b90c2d96018875e",
+      "bytes": 13452,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 618,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/618.glb",
+      "sha256": "ddce371ca0dd846697d9044bed80aa0248e2ac68ffe18a4d3e089246f31d8626",
+      "bytes": 20968,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 619,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/619.glb",
+      "sha256": "e7b25abfb7e42d57ec49557a3d99c8efdf9444a93a1aa50f499f207987cc7921",
+      "bytes": 63308,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 620,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/620.glb",
+      "sha256": "282e46caab298b8f50bd4dfd04422f08cfccb561b3ddcc9d1ecf9b5f09b8ace1",
+      "bytes": 60576,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 621,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/621.glb",
+      "sha256": "cc8e5cb8ad269908336168d5f3dc6bd522aaa40657480d44108c88da5b548849",
+      "bytes": 73528,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 622,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/622.glb",
+      "sha256": "8e3af81b976de21f77fa2a879419a024c80d042edfe95e95a968832c32942ebf",
+      "bytes": 24492,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 623,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/623.glb",
+      "sha256": "6f96587875895e2a92d14e9bf614927f8e4224a2b38814b6fd70dcd626790443",
+      "bytes": 31956,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 625,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/625.glb",
+      "sha256": "bca7a32cfa3f696b33fd22a73c1b5b1f872df8930f46610d4fab0ca37a027fba",
+      "bytes": 62528,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 627,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/627.glb",
+      "sha256": "da6892c7cf95b9869bab4ab993fca5eaff7d16103ef5144709c54a6541fa95f9",
+      "bytes": 50456,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 629,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/629.glb",
+      "sha256": "cb07215c083f2e1a08e146527a6c4d8c8a101b9ace14f76393ef656fb9ad49d2",
+      "bytes": 46940,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 631,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/631.glb",
+      "sha256": "a1e48ce149eb91cb0b2a76831b9f27de6b2d9aa4e91de52b0e97a4054e84a369",
+      "bytes": 19768,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 635,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/635.glb",
+      "sha256": "68291ef3af81fc4e6fb6ddb64aaa91394926b4dafb5b7a92a8ea0809cebe0c2e",
+      "bytes": 72584,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 636,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/636.glb",
+      "sha256": "1bf3d4afda614bf45fa6223b631ad536c7b89abf579b896239f9aa48142b7fb9",
+      "bytes": 28248,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 638,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/638.glb",
+      "sha256": "197a1cca56a61b6903260a35a7db80dde42c5dd2d808067938ef5c083ee376f1",
+      "bytes": 87228,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 639,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/639.glb",
+      "sha256": "eb944f707b404c686c9d56331d793725c6853f1806f259fb7a4251eb54c9ab47",
+      "bytes": 70772,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 640,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/640.glb",
+      "sha256": "25f88acdeb525b703cb1a3d9ab74bb9256b0029ad419c2aa9fb5465ac32ae350",
+      "bytes": 65160,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 641,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/641.glb",
+      "sha256": "cf176d0cf2044a1d4aaf096ad5f33f16b9f4a8630f4d3e0f7c03a3402db64473",
+      "bytes": 75868,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 642,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/642.glb",
+      "sha256": "794e8bd3ef2ff1112bcb08afe03bfc423551244a6b55e58cbcc1d484fa7d1a2e",
+      "bytes": 75732,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 643,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/643.glb",
+      "sha256": "8fec98736c7cb8caa71af52a7476f332acf510b3d849dd704fcced1a3c4e8c28",
+      "bytes": 89132,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 646,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/646.glb",
+      "sha256": "c27f4f051df7a013be85137edbe41060a02716e68b3681a414b48ccccb861353",
+      "bytes": 79168,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 647,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/647.glb",
+      "sha256": "c58f288448f1d89eb25b87799a2793c5f67b55b41359e48e2faf79d1d8e70a1d",
+      "bytes": 77060,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 648,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/648.glb",
+      "sha256": "175973827c4166e543421ccffb187e71fc71a7f88501704396bcbff611284a9b",
+      "bytes": 47804,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 649,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/649.glb",
+      "sha256": "28174436ffe55d0418ff479581db76553bf908797211efb038019118398b9f4c",
+      "bytes": 93284,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 650,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/650.glb",
+      "sha256": "8fee36c6c03e8ca85ff4f718412e4085e2af518f85ad8f6e03387be8da203d9c",
+      "bytes": 70504,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 651,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/651.glb",
+      "sha256": "8c079fb6b447d9196f6d58435043c5cb597674a10768b28d609eeb2febbf28bd",
+      "bytes": 69004,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 652,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/652.glb",
+      "sha256": "c874f6cc67eb56030bab5176e0bc1771254aeda81554b62cdee2f2fa04956a64",
+      "bytes": 136136,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 653,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/653.glb",
+      "sha256": "7d4f3f18e415055ec3cd01b1f05bfa78004553c14c418e7243738b220c0e9f89",
+      "bytes": 85568,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 654,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/654.glb",
+      "sha256": "a28c07f14c4f57ed22d724abc827c627e727dbef144b94b3957c6f6fe85b9b9a",
+      "bytes": 66408,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 655,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/655.glb",
+      "sha256": "1399b5a2ede7477d2ac59df35cab0111c1bc70ba432a3491333480a1d536525d",
+      "bytes": 148908,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 656,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/656.glb",
+      "sha256": "ff9b7b377f96aae85598c020a4ed7cf71144016d67d515b412311d67cd33460b",
+      "bytes": 82836,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 657,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/657.glb",
+      "sha256": "9ffe5b218c5589bc352d4813f32e89c4958bafda917141606d19bfd8c222a47a",
+      "bytes": 77320,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 659,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/659.glb",
+      "sha256": "83c103c4f30579cdbd61776095e0d4b83bfdabaaaa6a39a912ff7184b903673a",
+      "bytes": 63532,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 660,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/660.glb",
+      "sha256": "74b8ddbbee76d4dd40cd9ffd8e071d6fb52aad5322a8a920bf4e9048046ec987",
+      "bytes": 96224,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 661,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/661.glb",
+      "sha256": "059e473369e2714aa12e18552956a999461b0207a33662bec2512d3c760c075b",
+      "bytes": 65796,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 662,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/662.glb",
+      "sha256": "c501340b6be98662146dc9c5396c9dd033dc6244c2c24c711c4cec71063ea2d2",
+      "bytes": 85472,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 663,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/663.glb",
+      "sha256": "5f9fe502e9d3e265aeba8f70d9ba5599c93f5d33ae434086ed02eacd6663dab3",
+      "bytes": 123012,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 664,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/664.glb",
+      "sha256": "d84a2123dfa2c614103637d8cf67d0771293a8fb130c618ffcb1d3960cd5f692",
+      "bytes": 48544,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 665,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/665.glb",
+      "sha256": "bad0bf506cb0520ae89cb9234edc0885812de9e83f23a4049c2dbb2fe1faf782",
+      "bytes": 71852,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 666,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/666.glb",
+      "sha256": "80631eb5737e6d1dcfea01868a30da250bf1d703c36e5078905acfff174f1ce5",
+      "bytes": 58108,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 667,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/667.glb",
+      "sha256": "64233d2d7e266ca42f0ad33e6957aa39e1bd49f6d3463e977fdb4df04b20ee86",
+      "bytes": 62608,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 668,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/668-F.glb",
+      "sha256": "9475196e19626fea86f63458e89070c2c462458519acacf29701c3c0f56df77a",
+      "bytes": 81048,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 670,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/670.glb",
+      "sha256": "2257c64308e268baaed278ffe51b5a18377e1a9d1e038a6afed9ce797cdefa6b",
+      "bytes": 98584,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 671,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/671.glb",
+      "sha256": "71dde3fd7938e4991ceba41bf572384eeda5820a8fdd7cce3a52bf1587b48960",
+      "bytes": 101488,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 672,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/672.glb",
+      "sha256": "d1976a0889735b200c02ebf78a909034bc1b05ab8a7456ec1fcf763ba258603c",
+      "bytes": 85116,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 673,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/673.glb",
+      "sha256": "75f647c091fc15a185f8a8e0ca9c30674e7ef4203283bec04b95b7c85bce8dcc",
+      "bytes": 107472,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 675,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/675.glb",
+      "sha256": "79d9de84f8a9499094e77eb4b7ff75f32b4886b7509fdd18be52bc292d9b97eb",
+      "bytes": 80816,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 676,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/676.glb",
+      "sha256": "c84824d2b327338794750b75db355696e7b377936de7481ecc64ebd39a1e7da5",
+      "bytes": 108420,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 677,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/677.glb",
+      "sha256": "b813eb06e2cb7c65ad44dd25f2f795aed6ef9858d62673c577fb930d8e8d869d",
+      "bytes": 52284,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 678,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/678.glb",
+      "sha256": "2d55a30688fcc92ae6561c04260dceaea62b60756e76a152247415bf7c6cf341",
+      "bytes": 136376,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 679,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/679.glb",
+      "sha256": "c169257b2919c1ec08277cd5708032d6d289ef6f19ac336d37094b23e635e69f",
+      "bytes": 70800,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 680,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/680.glb",
+      "sha256": "d5a73b72db95905e01462fa682d6a187fcb59046030a046c12ef14c14396f4ca",
+      "bytes": 125068,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 681,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/681.glb",
+      "sha256": "fdd70dee1d0ff63cd0c6055065473f8e4622a7b7ca2d8897e66f4c9e7219bfe2",
+      "bytes": 82092,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 682,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/682.glb",
+      "sha256": "c05c5c37d97c52fb9a69d145afe378d0ff4f79bc0db452bba1ae590b172e3f84",
+      "bytes": 76664,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 683,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/683.glb",
+      "sha256": "ae152c641e5b472ec7294b33a79f4e6975451f44c2f87560a4a9275bc7f7f15b",
+      "bytes": 127988,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 684,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/684.glb",
+      "sha256": "4fb1226bc1bfe71976fe709c2456bf13c448b67f97b479c39ddf828bf3686aeb",
+      "bytes": 52964,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 685,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/685.glb",
+      "sha256": "a397ee44a00ffca5805ca264aa886cf4ced2df058534d1778c5b09269abd9598",
+      "bytes": 57404,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 686,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/686.glb",
+      "sha256": "8ab1921c629d39001f00e60110453e50f601c678727dd197bcb5e232a075239b",
+      "bytes": 66808,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 687,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/687.glb",
+      "sha256": "864fe97406fa1ff8ea4318442f9974d7e7351536166a0c7232269a43bf0c17e1",
+      "bytes": 88844,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 688,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/688.glb",
+      "sha256": "0cb1db0ac63a2d7dd8481a6a4edf81b8a30d8c0687be6b645bb5eb9cae8861d8",
+      "bytes": 63036,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 689,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/689.glb",
+      "sha256": "bc7465192e47926a4a35d5e6da08236a900870ea7e391bcbd3474e348045841c",
+      "bytes": 111136,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 691,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/691.glb",
+      "sha256": "48145eccb56320f1e94cf0c5ca5dc27618b39b60ed0fe914eecb0ecc53131ab6",
+      "bytes": 74068,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 692,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/692.glb",
+      "sha256": "baae8ad3b2a89b90993ef676b285ea64c12d5d7855cb40f3052858df3faf2975",
+      "bytes": 53320,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 693,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/693.glb",
+      "sha256": "a190846229d6322c85102b598a368523dd39b870f01b429a96bd39cb03931d98",
+      "bytes": 72920,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 694,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/694.glb",
+      "sha256": "29297b169fa5aaae7ae743c6c5474732f277675e514b95731aec793ca809d7bc",
+      "bytes": 76600,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 695,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/695.glb",
+      "sha256": "c5d0dfeecc84b927a90f2a557e16fcac3ccae4f97928915ee8cea9a08b043c27",
+      "bytes": 75992,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 696,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/696.glb",
+      "sha256": "d04b625b874ac9022b88f6c965cec4442eeafad29119186b0a26079a5dc0df93",
+      "bytes": 67916,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 697,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/697.glb",
+      "sha256": "2579e037efc020cdd64f18663838c7595ef980bc5a5fb833729fe1b4663468f0",
+      "bytes": 89448,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 698,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/698.glb",
+      "sha256": "2ee4c0cb6479abc03b6d718e728d724581a1e4820171cbd517e4d40bfdecee55",
+      "bytes": 65424,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 699,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/699.glb",
+      "sha256": "f2cc908841b862b29d9f63e1426b84344e9ac056f481f680381f1f90491618aa",
+      "bytes": 86576,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 700,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/700.glb",
+      "sha256": "1552b7cec64b1215a06f78d8d1400f128ab9906299886d25fd7a53e7162ea742",
+      "bytes": 70172,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 701,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/701.glb",
+      "sha256": "fbbcd9e6c1c2974d33dd769d7a318caa8f558521968e64ecee3f2e55c76f4d36",
+      "bytes": 80276,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 702,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/702.glb",
+      "sha256": "62422047900c3676809a3ae7a7cc285c593c1c2f96c80de4efdade94cd767e1e",
+      "bytes": 48844,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 703,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/703.glb",
+      "sha256": "44f14279e0382d0782b807d7b21d49ff33474701d42b7ee424bb228cb50196e2",
+      "bytes": 48328,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 704,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/704.glb",
+      "sha256": "bae65395281c5860fea80bb4bd5542e41cf2ff91a24f8db816e7e9c207924bbf",
+      "bytes": 33060,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 705,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/705.glb",
+      "sha256": "b95d4bde13d24be74554eacfd89158460108bbc880218bb8441a675f159f2571",
+      "bytes": 43720,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 706,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/706.glb",
+      "sha256": "afab755cc3aca5c44f4e0183f9c1b7f1f9f0c22fe031517a3fdceb9f8887fa8c",
+      "bytes": 73036,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 707,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/707.glb",
+      "sha256": "79334d7de950ceaf294eefe66bb04d781b5e132d86efb91d5a6a6166108dd903",
+      "bytes": 69652,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 708,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/708.glb",
+      "sha256": "eae18c868fdc52104a00e9d9150b836747bad860d1fd84761b2d5176970de7cf",
+      "bytes": 48628,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 709,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/709.glb",
+      "sha256": "908dc7a81b44525a30d470062d25013f2f83b9181deaed7c81d947a83a1e5a1d",
+      "bytes": 90648,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 710,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/710.glb",
+      "sha256": "8a9e2a93ef0ba67c8e797cd847a1844d7bd9e405cc2f57016585176d0060dd9a",
+      "bytes": 49520,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 711,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/711.glb",
+      "sha256": "e0801ac90ffcae587c3ecafb92753d131a35d2575f31f4a9b6abf6dd7de6efe9",
+      "bytes": 62840,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 712,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/712.glb",
+      "sha256": "4ef7050932f662c10adb1968f336d564056a2e1e7ccaecc5f71498d3e23003ad",
+      "bytes": 43064,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 713,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/713.glb",
+      "sha256": "b04d176cf78f674ed7ea78fa16d0c0984e26c3f07b8d7bd40601977cd49f14ea",
+      "bytes": 66316,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 714,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/714.glb",
+      "sha256": "632092e1896b799f6d145fe4cf5d4021dc038ec8197efbf5e03c956c88f592a5",
+      "bytes": 67912,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 715,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/715.glb",
+      "sha256": "3e81c251d43e9e782bb5876033a2e14397073e1fa590415e1050953282d53548",
+      "bytes": 98508,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 716,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/716.glb",
+      "sha256": "2b2e5adc7c680d68f8287e6f3975836869d68f11a179450c3ecaa357941b6751",
+      "bytes": 243172,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 717,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/717.glb",
+      "sha256": "5e06bea00864d1e4d81fd32d29d6743ffc15f3149b2e4c3a16a30d175ae4e938",
+      "bytes": 121900,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 719,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/719.glb",
+      "sha256": "1cdd4aac374adeda395808a7525b28304ce56531ebe805a261c112c8c2c13ea9",
+      "bytes": 70264,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 720,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/720.glb",
+      "sha256": "c88e86a03c0a6e7369442bab51100856e309f81443aec059ce472df9aedb7603",
+      "bytes": 59252,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 721,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/721.glb",
+      "sha256": "e5778c677291a47602662e2d236f656883963322cc78da8d8875f64128516c15",
+      "bytes": 104592,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 725,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/725.glb",
+      "sha256": "ecbc99ffdc64519072c74eb272fab42c9825064ded638619bdb576d0ad55fc3e",
+      "bytes": 68792,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 727,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/727.glb",
+      "sha256": "9f9f4d3311ce105e5d86e98885dc9002deba731099956fc051f9b22f605148ec",
+      "bytes": 158860,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 740,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/740.glb",
+      "sha256": "87204758a0b7abce748b94d0faedce84e77a9b1626600064cce9e31e1f5d2be7",
+      "bytes": 107648,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 742,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/742.glb",
+      "sha256": "cba768bdde816665198ded1404e597ad07d50eb6641b58078c80526a306e5410",
+      "bytes": 89504,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 746,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/746.glb",
+      "sha256": "8884256a735c98f9a1ef4ef2bd924e54affc82370fd44a9bc222899ae1c729dc",
+      "bytes": 48952,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 748,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/748.glb",
+      "sha256": "b72843dfe1d0382c4bda17917245a35989360ac04acbf416282033d303a822c4",
+      "bytes": 106268,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 749,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/749.glb",
+      "sha256": "abe5e721b9646cb9162cc1a0ebe5a8939ac3d6721c33eeac8a837876cafc98f4",
+      "bytes": 67132,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 750,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/750.glb",
+      "sha256": "7a5490bea403f2d681987ee1ff022df058c6f145189291f5e593fd73a571faf5",
+      "bytes": 37872,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 751,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/751.glb",
+      "sha256": "dab18ee56b98a9826b87a13a67a965044f13473842e51f15505afd38a0bf9cae",
+      "bytes": 24340,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 755,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/755.glb",
+      "sha256": "3581053b51b7e58b9ca2faf35fc2ac6acd817fb6c8f073a1722b8a008584608a",
+      "bytes": 79840,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 756,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/756.glb",
+      "sha256": "c3d3a090b6b8ff819042530fb1526ebc45daa5f0be7853e10fb69fdf47bfe3bf",
+      "bytes": 137296,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 759,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/759.glb",
+      "sha256": "ea0b8d6cc397b943b8ed5b089b738c6a7adb2bbbe6bd7b6dcc392d3c5a37b12b",
+      "bytes": 49600,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 760,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/760.glb",
+      "sha256": "24f10fff0ea441e04c6c68b3b713d90b797e5c4f6bc61b6e069dd71f08daf9b5",
+      "bytes": 55132,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 761,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/761.glb",
+      "sha256": "ce419f81a6056191d94e0aebcd44aaab20f6ee1a9e68aa1d1144903fd6bc0ad3",
+      "bytes": 66968,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 766,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/766.glb",
+      "sha256": "7ebe5e2c7d23da70127f1f329884f5b44ee45db05c536a5bee2d3ae0d6ef9263",
+      "bytes": 126552,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 770,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/770.glb",
+      "sha256": "bcf6100f9a17a08a8ea863a5649ed76454d06ea11856c0d1d9df20d34308f15b",
+      "bytes": 35356,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 787,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/787.glb",
+      "sha256": "3948b5041eb1fdaa400c567028cce2701c5770a16ddf4e379b5a05ef0fc02249",
+      "bytes": 67772,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 794,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/794.glb",
+      "sha256": "f82137947519b24d291353ff4fd055c0643489d5b6d83333fbb0ea469333bdf2",
+      "bytes": 41028,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 797,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/797.glb",
+      "sha256": "3d91f69ba2494a05d9c2e0cc1c6b8667081ace648b75adc92782ea10303649a4",
+      "bytes": 38624,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 798,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/798.glb",
+      "sha256": "2074a1368de79c8e3409405f1365fefbf93ad86795f44da3da4849b1c3fd9c75",
+      "bytes": 90992,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 800,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/800.glb",
+      "sha256": "497bd9b10266cc365c6a91304c44b0f4998f612a4fb5bea3abb709ef284c28b3",
+      "bytes": 36148,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 807,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/807.glb",
+      "sha256": "36ab1d4351cdde115e0aee2f614b2705ede57ad74e41f1aeff77a16700e425e9",
+      "bytes": 150876,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 809,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/809.glb",
+      "sha256": "a41890441a5a14c9ceeef7762803bdc1238a42c9caa956d3cc05f0e5877d953b",
+      "bytes": 55652,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 817,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/817.glb",
+      "sha256": "ee92ab3ebeb98b7468f4293a3fb9cedb799488060047d100078391205ea8e2b4",
+      "bytes": 200968,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 819,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/819.glb",
+      "sha256": "a781f1da8233c0228a4f5f739ee7535160ee6a923a740e31dc08a3268035f115",
+      "bytes": 122756,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 820,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/820.glb",
+      "sha256": "b2a86445505d551701a92a9e50d5b63d39838a2f8a3ca84b096090d0016c1191",
+      "bytes": 214704,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 821,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/821.glb",
+      "sha256": "96754f72dd087ff0fcd210ee40543d742fd9a273940b5aa6c1bc858c805f23c6",
+      "bytes": 189668,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 822,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/822.glb",
+      "sha256": "c6d0fb7026ef6d66857db28aa738ccf26f4ee61468716e1601f9e783649bd290",
+      "bytes": 286980,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 823,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/823.glb",
+      "sha256": "962cf89e828f0131451692d9a7bf588be5e9876e5e81510c60cfe23d719d7dae",
+      "bytes": 165608,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 828,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/828.glb",
+      "sha256": "844d485bd03d59993007883661776d409614c295d650f6fe11de29419e75dcf8",
+      "bytes": 202816,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 829,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/829.glb",
+      "sha256": "fba9d3b095e4356bfd8218f50ae7eef954a35ba96aa2be28aa974765121b9013",
+      "bytes": 90232,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 834,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/834.glb",
+      "sha256": "1cfa8b942e425934fc7a9dddab2c686df57b2923655a543b47a8726ae38127fe",
+      "bytes": 100652,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 838,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/838.glb",
+      "sha256": "c0eccff811fc2d504581eb829f73288fb4c6e7c49fb91191432c7d53c2d2271c",
+      "bytes": 203744,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 841,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/841.glb",
+      "sha256": "8e57725af6b4c0a8b5e524c0324c4abf6e050dad58e725084459111d806a31ff",
+      "bytes": 138708,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 842,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/842.glb",
+      "sha256": "6e2ba037289a1d07e164afb0e12cedf032534862b064ef94b924ea31d67728d2",
+      "bytes": 146852,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 843,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/843.glb",
+      "sha256": "7acff4622ba3ab0dfeec16caf7e31c0efa56301ac58605af92130cf061ce78a0",
+      "bytes": 81008,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 845,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/845.glb",
+      "sha256": "1ff6c5cd3b4f327443f6195fafe1defcc5cb6f44292297d3ada8687f3fabb491",
+      "bytes": 536544,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 856,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/856.glb",
+      "sha256": "4178b62af85e204e3e2393b0e7b24e11766b143c164b048622359a3b1266d7eb",
+      "bytes": 50400,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 858,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/858.glb",
+      "sha256": "f1329169c3ca2dcb6cf01aadca0231ae809fa9011b79ba874e2dfcf7f3802977",
+      "bytes": 276968,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 862,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/862.glb",
+      "sha256": "86a481d5009dba8c5dfcf966a4a9405959ac036a0e4c61e1f55c74a0d7ebf50a",
+      "bytes": 336692,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 870,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/870.glb",
+      "sha256": "6bc720e8841ef1e94c496328c0f81f5ba1d9f0f1fac34ee7d7d358d47e57fc5e",
+      "bytes": 175204,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 871,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/871.glb",
+      "sha256": "d7e7e8795fe5ae6efaf09094314f6844582063b784d83f4802910b78880005ce",
+      "bytes": 25492,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 891,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/891.glb",
+      "sha256": "ac21c10865eb7fd74c5f4a3b19d4f902353724a0063f6202fbb37ed6d2aa093f",
+      "bytes": 246820,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 896,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/896.glb",
+      "sha256": "ab825b9549f708f8cfbe33fcf5abd238109c3880109f856118502882f2256694",
+      "bytes": 166192,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 897,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/897.glb",
+      "sha256": "bf38740287453983dcf16e8e8dc5060893e1918f5448af7b21804a0cb2d4408f",
+      "bytes": 520716,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 898,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/898.glb",
+      "sha256": "b74997634cb9921ac79a92d220a7b52e50bd6706437e2d4a0a1cc132e2b1e63d",
+      "bytes": 64908,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 914,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/914.glb",
+      "sha256": "b067508849a751f2241e378ba09a16cee953b883d194a2f9b6da1726bf91f6ba",
+      "bytes": 347660,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 915,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/915.glb",
+      "sha256": "577f154dc65684338a8e6cf3fdf155350f5e13885c4ffb65dfe3215fcaf18914",
+      "bytes": 47904,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 916,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/916-F.glb",
+      "sha256": "5ead0523c06e289decbc9f3221faa8e90a2cf8c2a1c0b62e7aaa0fe3049690a8",
+      "bytes": 162216,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 920,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/920.glb",
+      "sha256": "9c51a6f719c55c99e13c07d60d8f973a96743e1f22f14e0c8f2ea09f4f374c70",
+      "bytes": 128700,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 921,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/921.glb",
+      "sha256": "3e52a6496b7aa3a027ae305b25dd7b8466348a5436509cba770eb366f82333c3",
+      "bytes": 203184,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 922,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/922.glb",
+      "sha256": "b781b7f86669444fd4f9448ef7c22d18f53e0bffc0d2e207b21a28589b867574",
+      "bytes": 207628,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 923,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/923.glb",
+      "sha256": "86f81cb986f8cf16cfec1c82e2319ce086455d54068a9680d29a7d7794803b71",
+      "bytes": 303312,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 929,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/929.glb",
+      "sha256": "fbb5554322d0ac94881be47ec49ad944db9acaf17b8ba869e9f7bd5ba136366a",
+      "bytes": 189448,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 941,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/941.glb",
+      "sha256": "e9ac9cdfc3baa178765cf15770533b828533eb30ab8b43d33dc6e37d8a83bd4a",
+      "bytes": 5503420,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 942,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/942.glb",
+      "sha256": "ef840138f2de43c413c9d6f89a15da8da056b61df6c963a7c6759e38d280566d",
+      "bytes": 262036,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 943,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/943.glb",
+      "sha256": "c610edfe5cedfc7d90794f9d0719ebba4d452fbf9c5d50350d208e91eb2dc8f3",
+      "bytes": 251100,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 945,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/945.glb",
+      "sha256": "1cc6d74917e5a57e9fcac18fcc01a44c5ee4cecffb5f69223c617e757f2bb2bf",
+      "bytes": 195884,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 948,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/948.glb",
+      "sha256": "1ca1ad127e4f8abee705b692fc3e27054202c30dc4eb309b3539db4ce1a0fe99",
+      "bytes": 56976,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 949,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/949.glb",
+      "sha256": "8fc9465be331ebcfccc96e81cb5421273ce7ca36c4ec912fd00fd85426dc01f9",
+      "bytes": 65712,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 957,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/957.glb",
+      "sha256": "9310e75148df761ce0c26832fc330e67bc6814593345761a019251064bb3257c",
+      "bytes": 175496,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 962,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/962.glb",
+      "sha256": "e14c35ac7954c287d129d9670c68c57dcef12f29cbf0a765ab37000ad20ccb8b",
+      "bytes": 330512,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 965,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/965.glb",
+      "sha256": "cdaa49e34e1b066f7f07e80d750e2f729280b2a23651b330ef8e98dcf0cdb687",
+      "bytes": 169572,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 966,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/966.glb",
+      "sha256": "8e112a9e6908c086fe2d36d010537027477ff5a2c936d471a790f36df7bcdb6a",
+      "bytes": 133464,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 973,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/973.glb",
+      "sha256": "f14a61d01a3c3da4acc217f48978d7680c27c80267d639eb9ffd9c20162954c7",
+      "bytes": 210596,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 974,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/974.glb",
+      "sha256": "555c51b0743f78a986e551adbbb1426f4ba53490b310cded32071e17016ee54a",
+      "bytes": 128356,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 975,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/975.glb",
+      "sha256": "a0ea74e64bc8f4d886b23502dca73166df32953f7a7b976d7d9bde041905ff6c",
+      "bytes": 227228,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 982,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/982.glb",
+      "sha256": "1b6154ec1ecb87da46dfb9dee75e484b080a589fc9ffb1a52c6a6180a79c91cb",
+      "bytes": 92984,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 984,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/984.glb",
+      "sha256": "e74567dbd270dcd614b9621d935da59ca28f2d49c4fd30815995be7799955ecc",
+      "bytes": 9432832,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 987,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/987.glb",
+      "sha256": "e3671e791f4fda618309bcdf0f297aa7117a2a11d96d8dc31bd66cd7de530bc8",
+      "bytes": 7350960,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 995,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/995.glb",
+      "sha256": "0732b261a555c62bbdedcd77374f64e6fad4ce4d6a14ce1ab05ef2c5e61791ef",
+      "bytes": 2914604,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 996,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/996.glb",
+      "sha256": "3e66da6c97719a755232c6f4bb7731cf7eaecd62b6d1700de694127f01f890b2",
+      "bytes": 134536,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 997,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/997.glb",
+      "sha256": "6236203c3fa708613b27a085b007ec85236bfb0870411c02f1ba5885e3f6275c",
+      "bytes": 142224,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 998,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/998.glb",
+      "sha256": "3abcaed0e2189641690b6985ee659ca26fcb1e1d435bdb561079b7520f7c2a5e",
+      "bytes": 148172,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 1006,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1006.glb",
+      "sha256": "a4ef11760e51949b1f947222044d3a7f7e2cfe521eb29e501c969e4bbc0b8d95",
+      "bytes": 70056,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 1014,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1014.glb",
+      "sha256": "35e668b0303b4f33647b882cd42d8ec53fe6a16ca52cec105f9176e37f727dd9",
+      "bytes": 9175628,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 1015,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1015.glb",
+      "sha256": "8c5491b659c90ec46ab168d851513b8ee3a9e3195edcafbb70d269985439c9eb",
+      "bytes": 8247068,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 1016,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1016.glb",
+      "sha256": "a3e123f49d6aeeb17ec3d43933fbdb6cc28bf32814c1c3133c39ed5c724731e5",
+      "bytes": 552068,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 1018,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1018.glb",
+      "sha256": "368b33501872ba98bedf840cba0dc8365bca28a38d71d7254a939ae133e8207a",
+      "bytes": 4205568,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 1020,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1020.glb",
+      "sha256": "55ddb64b1686c614493ef23c8b7fd46a6b2a32306c1eb829cca9228df22f87f5",
+      "bytes": 9661356,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    },
+    {
+      "id": 1023,
+      "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1023.glb",
+      "sha256": "fcad43d2cb051dadac3fe489155950530922ceb05384842cf3558a100694b9e9",
+      "bytes": 3163984,
+      "generator": "glTF-Transform v4.3.0",
+      "metadataFields": [],
+      "status": "no-license-author-source-copyright-fields-found",
+      "admitted": false
+    }
+  ]
+}

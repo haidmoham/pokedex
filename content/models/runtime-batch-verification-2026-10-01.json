@@ -1,0 +1,101 @@
+{
+  "environment": "Local production build, isolated headless Chromium, viewport 390x844. Deployed preview QA remains separate.",
+  "results": [
+    {
+      "id": 110,
+      "sha256": "b76bd50e922bfa209d362d739192f9ea83219d19b1bde200a8e4ed4603ec3d7d",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Weezing",
+      "inspectAvailable": true
+    },
+    {
+      "id": 462,
+      "sha256": "d5a9b4b368b103789e2b7b46dc84243a5839229ebdc345ea34687105528a1521",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Magnezone",
+      "inspectAvailable": true
+    },
+    {
+      "id": 478,
+      "sha256": "6fdbcb3723dd61d7b47fb8d8f7f37566b7f9b0c4cc49f2270f47c9cebdea74bf",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Froslass",
+      "inspectAvailable": true
+    },
+    {
+      "id": 674,
+      "sha256": "7611d87ce35cbfeff76752499ceb533965fbde2eda23ac0d11f23a5eca44935f",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Pancham",
+      "inspectAvailable": true
+    },
+    {
+      "id": 763,
+      "sha256": "93f57fb70f068335eaad852d63d56297efc927c5fc99bee04176a58c97ec2ba5",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Tsareena",
+      "inspectAvailable": true
+    },
+    {
+      "id": 795,
+      "sha256": "d7780c61541e8bcadb3fcd0515af6bbc7680a066ff9b7be25c645755369b3ebf",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Pheromosa",
+      "inspectAvailable": true
+    },
+    {
+      "id": 889,
+      "sha256": "78d12701fbe10c70ef78c94bca61236f3e3016204ba83ff0c028e4145125ed6e",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Zamazenta",
+      "inspectAvailable": true
+    },
+    {
+      "id": 907,
+      "sha256": "f503f06ad994ef8d32f506fb919e7ca36c14cca6b30972f0ebef5f759dbe81a9",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Floragato",
+      "inspectAvailable": true
+    },
+    {
+      "id": 913,
+      "sha256": "10d362f137a04cf96d9161396c8ee310824984fa1774f4716cb2c5dbacdaffbb",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Quaxwell",
+      "inspectAvailable": true
+    },
+    {
+      "id": 985,
+      "sha256": "7219028909b0e78ac72732a0c114cd1b0fbfaac37b5f50eb9a9f143d4d555528",
+      "loaded": true,
+      "activeModelViewers": 1,
+      "alt": null,
+      "title": "Scream Tail",
+      "inspectAvailable": true
+    }
+  ],
+  "representativeChecks": [
+    "Tsareena Inspect enters and Escape exits",
+    "Use official art removes every model-viewer",
+    "Pheromosa loads facing forward",
+    "Runerigus starts on official artwork with no model-viewer"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "checkedAt": "2026-10-01",
+  "previewApproved": 3,
+  "ids": [
+    484,
+    755,
+    914
+  ],
+  "rightsStatus": "unresolved; protected preview exception only",
+  "materialMethod": "Zero source alpha or strictly black non-emissive/non-specular additive material contributes zero. Preserve source binary; standard transparent representation only.",
+  "compressionMethod": "Group cubic input-tangent/value/output-tangent records for lossless EXT_meshopt_compression. Original Draco geometry and images copied unchanged; no curve resampling, quantization or altered values.",
+  "productionDecoder": {
+    "id": 914,
+    "productionDecoder": "three/examples/jsm/libs/meshopt_decoder.module.js from locked three 0.183.2",
+    "animationAccessors": 718,
+    "checkedAnimationBytes": 623800,
+    "byteDifferences": 0
+  },
+  "results": [
+    {
+      "sources": [
+        {
+          "id": 484,
+          "bytes": 229272,
+          "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/484.glb",
+          "blobSha": "11bea02f67f8c3571bb4b0c0da4b9c05ff0a7242",
+          "sha256": "ecbe999c70f6878a8d866775f683c2fe62c5e1d8960a957666b7b2fc124890d4",
+          "budgetError": null,
+          "decodedBytes": 427884,
+          "clips": [
+            {
+              "name": "HOME Idle",
+              "duration": 2.6666667,
+              "channels": 192
+            }
+          ],
+          "customNodes": [],
+          "customMaterials": [],
+          "visualReviewed": true,
+          "admitted": false,
+          "sourceBatch": 12,
+          "repair": "zero-additive-to-transparent",
+          "normalizedMaterials": 1,
+          "previewDecision": "approved",
+          "preparedVerification": {
+            "id": 484,
+            "structureBudget": "pass",
+            "textureBudget": "pass",
+            "motionMaxError": 0,
+            "positionMaxError": 0,
+            "channels": 192,
+            "outputDuration": 2.6666667461395264
+          }
+        },
+        {
+          "id": 755,
+          "bytes": 131376,
+          "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/755.glb",
+          "blobSha": "588ba036d18960a1a737f7092fe3a42e2baf0c38",
+          "sha256": "8f08eb58ef69a6816c08cdb0b1ca796f9fad644fcdb2c7193c0a1b547bd35a16",
+          "budgetError": null,
+          "decodedBytes": 274008,
+          "clips": [
+            {
+              "name": "HOME Idle",
+              "duration": 1.6666666,
+              "channels": 129
+            }
+          ],
+          "customNodes": [],
+          "customMaterials": [],
+          "visualReviewed": true,
+          "admitted": false,
+          "sourceBatch": 18,
+          "repair": "zero-additive-to-transparent",
+          "normalizedMaterials": 1,
+          "previewDecision": "approved",
+          "preparedVerification": {
+            "id": 755,
+            "structureBudget": "pass",
+            "textureBudget": "pass",
+            "motionMaxError": 0,
+            "positionMaxError": 0,
+            "channels": 129,
+            "outputDuration": 1.6666666269302368
+          }
+        }
+      ],
+      "motion": [
+        {
+          "id": 484,
+          "vertices": 5869,
+          "bodyExtent": 5.72210693359375,
+          "maxWorldDisplacement": 0.3338688568440084,
+          "relativeDisplacement": 0.05834718936899056,
+          "meaningfulMotion": true,
+          "loopRelativeDisplacement": 1.2244216872076083e-06,
+          "sourceSha256": "ecbe999c70f6878a8d866775f683c2fe62c5e1d8960a957666b7b2fc124890d4",
+          "derivativeSha256": "2dde4ae28174c254f157fd36459b3cde40d1e93507310efd69b26f3230c4e2a3"
+        },
+        {
+          "id": 755,
+          "vertices": 3709,
+          "bodyExtent": 0.47214418463408947,
+          "maxWorldDisplacement": 0.026046695900179124,
+          "relativeDisplacement": 0.055166825617825294,
+          "meaningfulMotion": true,
+          "loopRelativeDisplacement": 0.0,
+          "sourceSha256": "8f08eb58ef69a6816c08cdb0b1ca796f9fad644fcdb2c7193c0a1b547bd35a16",
+          "derivativeSha256": "bb222b299737d78ac986e9ca322ccabb7bbdd99e2c9469bfa4dcb7de2ea08e48"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "id": 914,
+          "bytes": 895484,
+          "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/914.glb",
+          "blobSha": "5eccbf3fadaebecfe7887270729d5d173489d643",
+          "sha256": "57846b1ae89e1b68b849d1e1acc96bf68c9a1e97523636f26e433a4b40d50eea",
+          "budgetError": null,
+          "decodedBytes": 1838296,
+          "clips": [
+            {
+              "name": "HOME Idle",
+              "duration": 1.6,
+              "channels": 359
+            }
+          ],
+          "customNodes": [],
+          "customMaterials": [],
+          "visualReviewed": true,
+          "admitted": false,
+          "originalBudgetError": "transfer budget",
+          "preparedBytes": 666572,
+          "compressionRepair": "lossless-animation-meshopt",
+          "previewDecision": "approved",
+          "preparedVerification": {
+            "id": 914,
+            "structureBudget": "pass",
+            "textureBudget": "pass",
+            "motionMaxError": 0,
+            "positionMaxError": 0,
+            "channels": 359,
+            "outputDuration": 1.600000023841858
+          }
+        }
+      ],
+      "motion": [
+        {
+          "id": 914,
+          "vertices": 18739,
+          "bodyExtent": 2.356506241019815,
+          "maxWorldDisplacement": 0.7850411978305002,
+          "relativeDisplacement": 0.3331377545984182,
+          "meaningfulMotion": true,
+          "loopRelativeDisplacement": 7.265047933603115e-08,
+          "sourceSha256": "57846b1ae89e1b68b849d1e1acc96bf68c9a1e97523636f26e433a4b40d50eea",
+          "derivativeSha256": "b8a084a079fb6df209aac804c0a7cd5980bc47fc8fd02e236f7892d5ac61aa1b"
+        }
+      ]
+    }
+  ]
+}

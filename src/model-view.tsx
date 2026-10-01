@@ -1,11 +1,28 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import type { ModelViewerElement } from '@google/model-viewer';
 import { fetchModel, validateModelTextures, ModelAsset } from './model-policy';
 import { artwork } from './feed-model';
-import { prepareIdle, idleMayPlay } from './model-motion';
+import { prepareIdle, idleMayPlay, sampleIdlePose, IDLE_POSE_PHASES } from './model-motion';
+
+// Probe an independent canvas once per page, before loading the shared renderer.
+// model-viewer can emit load after WebGL construction failed; load is not render proof.
+let rendererAvailable: boolean | undefined;
+function hasModelRenderer() {
+  if (rendererAvailable !== undefined) return rendererAvailable;
+  const canvas = document.createElement('canvas');
+  try {
+    const context = canvas.getContext('webgl2');
+    rendererAvailable = Boolean(context);
+    // This is only our disposable probe, never model-viewer's shared context.
+    context?.getExtension('WEBGL_lose_context')?.loseContext();
+  } catch { rendererAvailable = false; }
+  canvas.width = canvas.height = 0;
+  return rendererAvailable;
+}
 
 // Only the active admitted view mounts this component. No adjacent GLB fetches.
-export function ModelView({ asset, name, suspended = false, onFallback, onInspect }: { asset: ModelAsset; name: string; suspended?: boolean; onFallback: () => void; onInspect: (active: boolean) => void }) {
+export function ModelView({ asset, name, suspended = false, controlsTarget, onFallback, onFailure, onInspect }: { asset: ModelAsset; name: string; suspended?: boolean; controlsTarget: HTMLDivElement | null; onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void }) {
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<ModelViewerElement | null>(null);
   const inspectButton = useRef<HTMLButtonElement>(null);
@@ -14,8 +31,11 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
   const [inspecting, setInspecting] = useState(false);
   const [angle, setAngle] = useState(-12);
   const [playing, setPlaying] = useState(true);
+  const [pose, setPose] = useState<number | null>(null);
   const fallback = useRef(onFallback);
   fallback.current = onFallback;
+  const failure = useRef(onFailure);
+  failure.current = onFailure;
   const wasInspecting = useRef(false);
   const inspect = useRef(onInspect);
   inspect.current = onInspect;
@@ -32,8 +52,14 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
     const controller = new AbortController();
     let source: string | undefined;
     let element: ModelViewerElement | undefined;
-    const timeout = window.setTimeout(() => { controller.abort(); fallback.current(); }, 12000);
-    const fail = () => { if (!controller.signal.aborted) { controller.abort(); fallback.current(); } };
+    const fail = () => { if (!controller.signal.aborted) { window.clearTimeout(timeout); controller.abort(); failure.current(); } };
+    const timeout = window.setTimeout(fail, 12000);
+    if (!hasModelRenderer()) {
+      window.clearTimeout(timeout);
+      controller.abort();
+      failure.current('unsupported');
+      return () => controller.abort();
+    }
     Promise.all([import('@google/model-viewer'), fetchModel(asset, controller.signal).then(async blob => { await validateModelTextures(blob, controller.signal); return blob; })]).then(([runtime, blob]) => {
       if (controller.signal.aborted || !host.current) return;
       runtime.ModelViewerElement.modelCacheSize = 0;
@@ -98,18 +124,31 @@ export function ModelView({ asset, name, suspended = false, onFallback, onInspec
     preference.addEventListener('change', sync);
     return () => { document.removeEventListener('visibilitychange', sync); preference.removeEventListener('change', sync); element.pause(); };
   }, [loaded, playing, suspended]);
+  const nextPose = () => {
+    if (!viewer.current || !asset.animation || !loaded) return;
+    const next = pose === null ? 0 : (pose + 1) % IDLE_POSE_PHASES.length;
+    try {
+      sampleIdlePose(viewer.current, next);
+      setPlaying(false);
+      setPose(next);
+    } catch { failure.current(); }
+  };
   const exit = () => setInspecting(false);
   return <div className={`model-stage ${inspecting ? 'is-inspecting' : ''}`} data-inspecting={inspecting || undefined}
     onPointerDown={event => { if (inspecting) event.stopPropagation(); }} onPointerUp={event => { if (inspecting) event.stopPropagation(); }}
     onWheel={event => { if (inspecting) event.stopPropagation(); }} onKeyDown={event => { if (!inspecting) return; event.stopPropagation(); if (event.key === 'Escape') exit(); }}>
     {!loaded && <img className="model-poster" src={artwork(asset.id)} alt={`${name}, official artwork while 3D loads`} />}
     <div className="model-host" ref={host} aria-hidden={!loaded} style={{ visibility: loaded ? 'visible' : 'hidden' }} />
-    <div className="model-actions">
+    {controlsTarget && createPortal(<div className="model-actions">
       {inspecting && <button onClick={() => setAngle(value => value - 30)} aria-label="Rotate model left">↶</button>}
       {loaded ? <button ref={inspectButton} onClick={() => inspecting ? exit() : setInspecting(true)}>{inspecting ? 'Done inspecting' : 'Inspect 3D'}</button> : <span role="status">Preparing 3D…</span>}
       {inspecting && <button onClick={() => setAngle(value => value + 30)} aria-label="Rotate model right">↷</button>}
-      {loaded && asset.animation && <button aria-pressed={playing} onClick={() => setPlaying(value => !value)}>{playing ? 'Pause idle' : 'Play idle'}</button>}
+      {loaded && asset.animation && <button aria-pressed={playing} onClick={() => { setPose(null); setPlaying(value => !value); }}>{playing ? 'Pause idle' : 'Play idle'}</button>}
+      {loaded && asset.animation && inspecting && <button onClick={nextPose}
+        aria-label={`Show idle pose ${pose === null ? 1 : (pose + 1) % IDLE_POSE_PHASES.length + 1} of ${IDLE_POSE_PHASES.length}`}>
+        {pose === null ? 'Still poses' : `Pose ${pose + 1}/${IDLE_POSE_PHASES.length}`}
+      </button>}
       <button onClick={() => fallback.current()}>Use official art</button>
-    </div>
+    </div>, controlsTarget)}
   </div>;
 }

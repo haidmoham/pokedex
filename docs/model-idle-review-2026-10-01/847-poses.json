@@ -1,0 +1,17 @@
+[
+  {
+    "phase": 0.125,
+    "frame": 4.5,
+    "worldVertexSha256": "de3261d35a39368e9928f8da81c629f5adb4b3cad7b637766eebb2044aa9617b"
+  },
+  {
+    "phase": 0.375,
+    "frame": 13.5,
+    "worldVertexSha256": "5e1ea25d8355642468da149d91b5b7e951dfb5a019bf8c84bbdbb004b21c8745"
+  },
+  {
+    "phase": 0.625,
+    "frame": 22.5,
+    "worldVertexSha256": "7b364d7af501f2bb65a5e06da0489331a6c3dad4204bce625d7f60eed505d6ca"
+  }
+]

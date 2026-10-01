@@ -11,7 +11,7 @@ import { ArtistPortfolio, portfolioCards, portfolioCoverage, portfolioTarget } f
 import { appendVisit, createVisit, prepareVisits, selectVisit, stepVisit, Visit } from './visit-model';
 import { extendTrail, traverseTrail } from './trail-model';
 import type { TrailCursor, TrailStep } from './trail-model';
-import { admittedModel, modelEdition } from './model-policy';
+import { admittedModel, modelEdition, modelPreviewEnabled, previewModelAttribution } from './model-policy';
 import { ModelView } from './model-view';
 import { searchSpecies, rememberSearchPick, validRecentPicks } from './search-model';
 import { linkedSpecies, speciesLink, speciesAddress } from './species-link';
@@ -134,6 +134,9 @@ function App() {
   const candidateRequest = useRef(0);
   const candidateAbort = useRef<AbortController | null>(null);
   const [brokenImages, setBrokenImages] = useState<string[]>([]);
+  // Session-only circuit breaker: no retries on navigation, only a deliberate button.
+  const [failedModels, setFailedModels] = useState<number[]>([]);
+  const [rendererUnavailable, setRendererUnavailable] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const completedDiscovery = useRef(new Set<number>());
   const speciesScroll = useSnapScroll({ axis: 'x', selected: feedSelected, length: feedIndices.length, alignmentKey: activeIndex, suspended: Boolean(drawer) || inspectingModel,
@@ -145,6 +148,7 @@ function App() {
     } });
   const feedRef = speciesScroll.scroller;
   const overlayRef = useRef<HTMLDivElement>(null);
+  const [modelControlsTarget, setModelControlsTarget] = useState<HTMLDivElement | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const drawerScrollRef = useRef<HTMLDivElement>(null);
   const pendingFocus = useRef<HTMLElement | null>(null);
@@ -600,6 +604,7 @@ function App() {
   }
 
   return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
+    {modelPreviewEnabled && <a className="preview-rights-notice" href="/models/attribution.json" target="_blank" rel="noreferrer">Protected research draft · extracted asset rights unresolved · credits ↗</a>}
     <header className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" /><span className="brand-name">pokédex<span className="brand-dot">.</span></span></button>
       <div className="dex-navigation">
@@ -627,28 +632,39 @@ function App() {
             }) : cards} selected={trail ? trailIndex : cardIndex} suspended={Boolean(drawer)} onMotion={setArtMoving} onSelect={selectArtwork}
               render={(frame, selected, moving, inspectGallery) => {
                 const species = pokemon[frame.pokemonId - 1] ?? item;
-                return frame.sourceType === 'model' && selected && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} suspended={Boolean(drawer) || moving || speciesScroll.moving} onInspect={inspecting => {
+                return frame.sourceType === 'model' && selected && !failedModels.includes(species.id) && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} controlsTarget={modelControlsTarget} suspended={Boolean(drawer) || moving || speciesScroll.moving} onInspect={inspecting => {
                   inspectGallery(inspecting);
                   setInspectingModel(inspecting);
                   const feed = feedRef.current; if (!feed) return;
                   if (inspecting) feedPosition.current.lock(feed, feedSelected); else if (!drawerRef.current) feedPosition.current.unlock(feed);
+                }} onFailure={reason => {
+                  if (reason === 'unsupported') setRendererUnavailable(true);
+                  setFailedModels(previous => previous.includes(species.id) ? previous : [...previous, species.id]);
+                  changeVisit(visit => selectVisit(visit, `official-${species.id}`));
                 }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${species.id}`))} /> : brokenImages.includes(frame.image) ?
                 <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{frame.title}</small><button className="image-retry" tabIndex={selected ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, frame.image))}>Retry image</button></div> :
-                <img key={frame.image} className="hero-art" src={frame.image} alt={frame.sourceType === 'official' || frame.sourceType === 'model' ? `${species.name}, official species artwork${frame.sourceType === 'model' ? ' while 3D is inactive' : ''}` : `${frame.title} Pokémon TCG card, illustrated by ${frame.artist}`} draggable={false} fetchPriority={selected ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, frame.image))} />;
+                <><img key={frame.image} className="hero-art" src={frame.image} alt={frame.sourceType === 'official' || frame.sourceType === 'model' ? `${species.name}, official species artwork${frame.sourceType === 'model' ? ' while 3D is inactive' : ''}` : `${frame.title} Pokémon TCG card, illustrated by ${frame.artist}`} draggable={false} fetchPriority={selected ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, frame.image))} />
+                {selected && failedModels.includes(species.id) && ['official', 'model'].includes(frame.sourceType ?? '') &&
+                  <div className="model-recovery"><span role="status">{rendererUnavailable ? '3D is unavailable in this browser. Showing official art.' : '3D unavailable. Showing official art.'}</span>{!rendererUnavailable && <button onClick={() => {
+                    setFailedModels(previous => previous.filter(id => id !== species.id));
+                    changeVisit(visit => selectVisit(visit, `model-${species.id}`));
+                  }}>Retry 3D</button>}</div>}
+                </>;
               }} /> : <div className={`art-stage ${['official','model'].includes(edition.sourceType ?? '') ? 'is-official' : 'is-card'}`}><img className="hero-art" src={edition.image} alt="" draggable={false} fetchPriority="low" /></div>}
           </>}
         </section>;
       })}
     </div>
 
-    <div ref={overlayRef} className="feed-overlay">
+    <div ref={overlayRef} className={`feed-overlay ${card.sourceType === 'model' && !failedModels.includes(activePokemon.id) ? 'has-model-controls' : ''}`}>
       {branch && <button className="branch-back" onClick={goBack} aria-label={`Back to ${branch.originLabel ?? 'previous view'}`}><Icon name="left" /> Back to {branch.originLabel ?? 'previous view'}</button>}
       <div className={`feed-caption ${artMoving ? 'caption-in-motion' : ''}`} key={activePokemon.id} inert={artMoving}>
         <span className="species-types">{trail ? trail[trailIndex]?.context : activeVisit.context ?? activePokemon.types.join(' · ')}</span>
         <div className="species-heading"><h1>{activePokemon.name}</h1><button className="icon-button share-species" aria-label={`Share ${activePokemon.name}`} onClick={event => shareSpecies(event.currentTarget)}><Icon name="share" /></button></div>
-        {card.sourceType === 'model' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>3D · {card.artist} <span>›</span></button> : card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :
+        {card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? <span className="credit-link">Official art · PokéAPI</span> : card.sourceType === 'model' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>3D · {card.artist} <span>›</span></button> : card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :
           <button className="credit-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} <span>›</span></button>}
       </div>
+      <div ref={setModelControlsTarget} className={`model-controls-row ${artMoving ? 'caption-in-motion' : ''}`} inert={artMoving} />
       {continuationKey && <button className={`continuation continuation-${candidate?.state ?? 'loading'}`} onClick={acceptCandidate} disabled={!candidate || candidate.state === 'loading' || candidate.state === 'exhausted'} aria-label={candidate?.state === 'ready' ? `Continue to ${candidate.card?.title} by ${candidate.card?.artist}. ${candidate.context}` : candidate?.state === 'search' ? 'Search next page for related artwork' : candidate?.state === 'error' ? 'Retry related artwork' : undefined}>
         {candidate?.state === 'ready' && candidate.card ? <><img src={candidate.card.image} alt="" /><span><small>DISCOVER NEXT · {candidate.context}</small><strong>{candidate.card.title}</strong><em>Art by {candidate.card.artist}</em></span><Icon name="down" /></> :
           <span><small>RELATED ARTWORK</small><strong>{candidate?.state === 'search' ? 'Search more source editions' : candidate?.state === 'exhausted' ? 'No unseen art in checked sources' : candidate?.state === 'error' ? 'Retry related artwork' : 'Looking for the next artwork…'}</strong>{candidate?.partial && <em>Some source editions were unavailable</em>}{candidate?.error && <em>{candidate.error}</em>}</span>}
@@ -667,7 +683,7 @@ function App() {
     </div>
     <span className="share-status" role="status">{shareStatus}</span>
     <div className="dex-progress" aria-hidden="true"><span style={{ width: `${((activeIndex + 1) / pokemon.length) * 100}%` }} /></div>
-    <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'model' ? `Community 3D model credited to ${card.artist}.` : card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} {trail ? trail[trailIndex]?.context : ''}</span>
+    <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? '3D unavailable. Official art via PokéAPI.' : card.sourceType === 'model' ? `Community 3D model credited to ${card.artist}.` : card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} {trail ? trail[trailIndex]?.context : ''}</span>
     {error && <button className="toast" role="alert" onClick={() => setError('')}>{error} ×</button>}
 
     <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={event => { event.preventDefault(); closeDrawer(); }} onClose={() => { pendingFocus.current?.focus({ preventScroll: true }); pendingFocus.current = null; }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
@@ -688,7 +704,7 @@ function App() {
           {drawer === 'details' && <>
             {manualShare && <label className="manual-share">Species link<input readOnly value={manualShare} onFocus={event => event.currentTarget.select()} aria-label="Species link to copy" /></label>}
             <p className="creator-credit">made by <a href="https://mhaider.dev" target="_blank" rel="noreferrer">haider ↗</a> · a pokédex you can doomscroll</p>
-            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
+            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : card.sourceType === 'model' ? <p>{failedModels.includes(activePokemon.id) ? 'Official-art fallback via PokéAPI. 3D source credits below.' : `3D source: ${card.artist}`}</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
             <button className={`save-pokemon ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)}><Icon name="heart" /> {favorites.includes(activePokemon.id) ? 'Saved Pokémon' : 'Save Pokémon'}</button>
             <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length} loaded</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => changeVisit(visit => selectVisit(visit, edition.cardId))} aria-label={`${edition.title}, ${edition.sourceType === 'model' ? 'interactive 3D model' : edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
             <section className="detail-section"><div className="detail-heading"><h3>Market price</h3><select aria-label="Price currency and provider" value={currency} onChange={event => setCurrency(event.target.value)}><option value="USD">USD · TCGplayer</option><option value="EUR">EUR · Cardmarket</option></select></div>
@@ -700,7 +716,11 @@ function App() {
               {(status?.error || (status?.failed ?? 0) > 0) && <button className="inline-link" onClick={() => { completedDiscovery.current.delete(activePokemon.id); setDiscoveryRetry(count => count + 1); }}>Retry card sources ↻</button>}
               {manifestFailed && <p className="quiet-note">Saved card collection unavailable. Live discovery and official species artwork remain available.</p>}
             </section>
-            <section className="detail-section"><h3>Credit & source</h3><p className="detail-copy">{card.sourceType === 'model' ? `Community 3D asset. ${card.artist}. ${card.artistEvidenceMethod}. Underlying Pokémon IP belongs to its owners; source licensing is not blanket rights clearance.` : card.sourceType === 'official' ? 'Official species artwork via PokéAPI sprites. No individual artist is specified by this source.' : card.sourceType === 'catalog' ? 'Artist credit from TCGdex metadata. This edition has not been independently reviewed.' : `Reviewed edition. Artist evidence: ${card.artistEvidenceMethod}.`}</p><div className="source-links"><a href={card.image} target="_blank" rel="noreferrer">Original image ↗</a><a href={card.tcgdexUrl} target="_blank" rel="noreferrer">{card.sourceType === 'model' ? 'Model source' : card.sourceType === 'official' ? 'PokéAPI source' : 'TCGdex record'} ↗</a>{card.publisherUrl && <a href={card.publisherUrl} target="_blank" rel="noreferrer">Publisher page ↗</a>}{card.sourceType !== 'official' && <a href={card.artistEvidenceUrl} target="_blank" rel="noreferrer">{card.sourceType === 'catalog' ? 'Credit metadata' : 'Credit evidence'} ↗</a>}</div></section>
+            <section className="detail-section"><h3>Credit & source</h3><p className="detail-copy">{card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? (rendererUnavailable ? '3D is unavailable in this browser. The displayed fallback is official species artwork via PokéAPI.' : 'This 3D model failed to load. The displayed fallback is official species artwork via PokéAPI. Retry 3D is available in the feed.') : card.sourceType === 'model' ? `Community 3D asset. ${card.artist}. ${card.artistEvidenceMethod}. Underlying Pokémon IP belongs to its owners; source licensing is not blanket rights clearance.` : card.sourceType === 'official' ? 'Official species artwork via PokéAPI sprites. No individual artist is specified by this source.' : card.sourceType === 'catalog' ? 'Artist credit from TCGdex metadata. This edition has not been independently reviewed.' : `Reviewed edition. Artist evidence: ${card.artistEvidenceMethod}.`}</p><div className="source-links"><a href={card.image} target="_blank" rel="noreferrer">Original image ↗</a><a href={card.tcgdexUrl} target="_blank" rel="noreferrer">{card.sourceType === 'model' ? 'Model source' : card.sourceType === 'official' ? 'PokéAPI source' : 'TCGdex record'} ↗</a>{card.publisherUrl && <a href={card.publisherUrl} target="_blank" rel="noreferrer">Publisher page ↗</a>}{card.sourceType !== 'official' && <a href={card.artistEvidenceUrl} target="_blank" rel="noreferrer">{card.sourceType === 'catalog' ? 'Credit metadata' : 'Credit evidence'} ↗</a>}</div></section>
+            {card.sourceType === 'model' && admittedModel(activePokemon.id)?.previewOnly && (() => {
+              const credit = previewModelAttribution(admittedModel(activePokemon.id)!);
+              return <section className="detail-section"><h3>Extracted model credits</h3><p className="detail-copy">{credit.description}</p><div className="source-links">{credit.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label}</a>)}</div></section>;
+            })()}
             <section className="detail-section"><h3>Keep exploring</h3><div className="source-links"><a href={`https://www.deviantart.com/search?q=${encodeURIComponent(activePokemon.name + ' pokemon')}`} target="_blank" rel="noreferrer">DeviantArt ↗</a><a href={`https://www.pixiv.net/en/tags/${encodeURIComponent(activePokemon.name)}/artworks`} target="_blank" rel="noreferrer">Pixiv ↗</a></div><p className="quiet-note">Opens the original communities. These are discovery links, not imported fan-art galleries.</p></section>
           </>}
           {drawer === 'artist' && <>

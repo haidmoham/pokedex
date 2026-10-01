@@ -20,3 +20,13 @@ export async function prepareIdle(viewer: {
 export function idleMayPlay(requested: boolean, suspended: boolean, hidden: boolean, reducedMotion: boolean) {
   return requested && !suspended && !hidden && !reducedMotion;
 }
+
+// Sample the admitted skeletal clip, never camera rotation or an invented attack.
+export const IDLE_POSE_PHASES = [0.125, 0.375, 0.625] as const;
+export function sampleIdlePose(viewer: { duration: number; currentTime: number; pause: () => void }, pose: number) {
+  if (!Number.isInteger(pose) || pose < 0 || pose >= IDLE_POSE_PHASES.length) throw new Error('Unknown idle pose');
+  if (!Number.isFinite(viewer.duration) || viewer.duration <= 0) throw new Error('Admitted idle has no usable duration');
+  viewer.pause();
+  viewer.currentTime = viewer.duration * IDLE_POSE_PHASES[pose];
+  if (!Number.isFinite(viewer.currentTime) || viewer.currentTime <= 0 || viewer.currentTime >= viewer.duration) throw new Error('Idle pose sampling failed');
+}

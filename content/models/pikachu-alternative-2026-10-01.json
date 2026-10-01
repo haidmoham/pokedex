@@ -1,0 +1,62 @@
+{
+  "source": "https://github.com/SamsungInternet/ar-demos/blob/master/src/obj/pikachu/pikachu.gltf",
+  "provenance": {
+    "author": "Kataphoric (https://sketchfab.com/Kataphoric)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/models/e343c80351c94e7392095b2d2e498852",
+    "title": "Pikachu"
+  },
+  "checkedAt": "2026-10-01",
+  "identities": [
+    {
+      "file": "pikachu.gltf",
+      "bytes": 13297,
+      "sha256": "13de8ac74885a30f72cffe7aafdf5d75c89dfa568fa925c3a033c73cf2b931ee"
+    },
+    {
+      "file": "pikachu.bin",
+      "bytes": 234640,
+      "sha256": "6cec07b928ae49dda99191d19cedef2ac5c3aaef63cb303f63322485adf07821"
+    },
+    {
+      "file": "textures/PikachuDh.png_baseColor.png",
+      "bytes": 15775,
+      "sha256": "8e90a0d111b76463186f7f124781862fe0fb6be4d4d13126380da53736e60464"
+    },
+    {
+      "file": "textures/PikachuEyeDh.png_baseColor.png",
+      "bytes": 44609,
+      "sha256": "4af1a7c33ae50a0caed7ffd08351aadc22bb37503a5c65c3d84497b975d2cc09"
+    },
+    {
+      "file": "textures/PikachuHohoDh.png_baseColor.png",
+      "bytes": 3927,
+      "sha256": "759416a31a584692bd55652be68d39524c8d6bc8c97278521f0ef63aa0d9b746"
+    },
+    {
+      "file": "textures/PikachuMouthDh.png_baseColor.png",
+      "bytes": 24889,
+      "sha256": "1f2a1ae9089bc2fd534ce5792bdd5a742c6c1ca243a18ec4747ad5caf982b5eb"
+    },
+    {
+      "file": "original.glb",
+      "bytes": 329264,
+      "sha256": "5a8f83c27ee395b07150b68bb5e6ea8a28b204e84798eb507778de23728a5425"
+    },
+    {
+      "file": "candidate.glb",
+      "bytes": 181632,
+      "sha256": "111c0f9d0082ff3485075ccc4fa54f7c1c0c6b046023c0f44f69b5802923dfbc"
+    }
+  ],
+  "rigs": 1,
+  "meshes": 4,
+  "animations": 0,
+  "candidateBytes": 181632,
+  "candidateSha256": "111c0f9d0082ff3485075ccc4fa54f7c1c0c6b046023c0f44f69b5802923dfbc",
+  "changes": "Embed external buffers/textures inGLB;512pxWebPquality90;Meshopt compression; no geometrysimplification or inventedanimation",
+  "render": "OfflineBlender staticrender has recognizablePikachu, outstretched arms; not browser/idleapproved",
+  "admitted": false,
+  "underlyingRights": "unknown",
+  "evidence": "data/pikachu-alternative/pikachu-pose-1.png"
+}
