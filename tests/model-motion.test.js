@@ -58,10 +58,10 @@ test('pose selection rejects unknown indices and unusable clip duration', () => 
 
 // Requested native-idle loop checks for the preview source's extra guard frame.
 import { trimHomeIdle } from '../scripts/trim-home-idle.js';
-function homeIdleFixture(times = [0, 1, 1 + 1 / 60], duration = 1) {
+function homeIdleFixture(times = [0, 1, 1 + 1 / 60], duration = 1, materials = []) {
   const binary = Buffer.alloc(times.length * 16);
   times.forEach((t, i) => binary.writeFloatLE(t, i * 4));
-  const model = { asset: { version: '2.0' }, buffers: [{ byteLength: binary.length }], bufferViews: [{ buffer: 0, byteOffset: 0, byteLength: times.length * 4 }, { buffer: 0, byteOffset: times.length * 4, byteLength: times.length * 12 }], accessors: [{ bufferView: 0, componentType: 5126, type: 'SCALAR', count: times.length }, { bufferView: 1, componentType: 5126, type: 'VEC3', count: times.length }], animations: [{ name: 'HOME Idle', extras: { homeDuration: duration }, samplers: [{ input: 0, output: 1, interpolation: 'LINEAR' }], channels: [{ sampler: 0, target: { node: 0, path: 'translation' } }] }], nodes: [{}] };
+  const model = { asset: { version: '2.0' }, materials, buffers: [{ byteLength: binary.length }], bufferViews: [{ buffer: 0, byteOffset: 0, byteLength: times.length * 4 }, { buffer: 0, byteOffset: times.length * 4, byteLength: times.length * 12 }], accessors: [{ bufferView: 0, componentType: 5126, type: 'SCALAR', count: times.length }, { bufferView: 1, componentType: 5126, type: 'VEC3', count: times.length }], animations: [{ name: 'HOME Idle', extras: { homeDuration: duration }, samplers: [{ input: 0, output: 1, interpolation: 'LINEAR' }], channels: [{ sampler: 0, target: { node: 0, path: 'translation' } }] }], nodes: [{}] };
   const json = Buffer.from(JSON.stringify(model)); const padded = Buffer.alloc(Math.ceil(json.length / 4) * 4, 32); json.copy(padded);
   const result = Buffer.alloc(28 + padded.length + binary.length);
   result.writeUInt32LE(0x46546c67, 0); result.writeUInt32LE(2, 4); result.writeUInt32LE(result.length, 8); result.writeUInt32LE(padded.length, 12); result.writeUInt32LE(0x4e4f534a, 16); padded.copy(result, 20); result.writeUInt32LE(binary.length, 20 + padded.length); result.writeUInt32LE(0x004e4942, 24 + padded.length); binary.copy(result, 28 + padded.length);
@@ -79,4 +79,25 @@ test('idle preparation refuses to invent a missing endpoint or silently discard 
   assert.throws(() => trimHomeIdle(homeIdleFixture([0, 0.5, 1.016])), /endpoint/);
   assert.throws(() => trimHomeIdle(homeIdleFixture([0, 1, 1.2])), /tail/);
   assert.throws(() => trimHomeIdle(homeIdleFixture([0, 1], 0)), /duration/);
+});
+
+function zeroAdditiveFixture() {
+  return { extras: { homeBlend: 'additive' }, alphaMode: 'BLEND', pbrMetallicRoughness: { baseColorFactor: [0, 0, 0, 1], metallicFactor: 0 }, extensions: { KHR_materials_specular: { specularFactor: 0 } } };
+}
+test('idle material normalization preserves every binary pose value and makes only zero-light placeholders transparent', () => {
+  const source = homeIdleFixture(undefined, 1, [zeroAdditiveFixture()]);
+  const result = trimHomeIdle(source, { normalizeZeroAdditive: true });
+  const end = 20 + result.bytes.readUInt32LE(12);
+  const model = JSON.parse(result.bytes.subarray(20, end));
+  assert.deepEqual(result.bytes.subarray(end + 8), source.subarray(28 + source.readUInt32LE(12)));
+  assert.equal(result.normalizedMaterials, 1);
+  assert.deepEqual(model.materials[0].pbrMetallicRoughness.baseColorFactor, [0, 0, 0, 0]);
+  assert.equal(model.materials[0].extras, undefined);
+  assert.equal(model.animations[0].channels.length, 1);
+});
+test('idle material normalization refuses colored, textured, emissive or stencil effects', () => {
+  for (const change of [m => { m.pbrMetallicRoughness.baseColorFactor[0] = 1; }, m => { m.pbrMetallicRoughness.baseColorTexture = { index: 0 }; }, m => { m.emissiveFactor = [1, 0, 0]; }, m => { m.extras.homeStencil = { role: 'core', ref: 1 }; }]) {
+    const material = zeroAdditiveFixture(); change(material);
+    assert.throws(() => trimHomeIdle(homeIdleFixture(undefined, 1, [material]), { normalizeZeroAdditive: true }), /effect|Stencil/);
+  }
 });

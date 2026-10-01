@@ -20,7 +20,8 @@ if(isProtectedModelPreview()){
   if(!response.ok||!response.body)throw Error(`Preview source HTTP ${response.status}`);
   const chunks=[];let size=0;for await(const chunk of response.body){size+=chunk.length;transferred+=chunk.length;if(size>source.bytes||size>1500000||transferred>250*1024*1024)throw Error('Preview acquisition cap');chunks.push(chunk);}
   const bytes=Buffer.concat(chunks);if(size!==source.bytes||createHash('sha256').update(bytes).digest('hex')!==source.sha256)throw Error('Preview source changed');
-  const result=trimHomeIdle(bytes);if(result.bytes.length!==asset.bytes||asset.bytes>750000||createHash('sha256').update(result.bytes).digest('hex')!==asset.sha256)throw Error('Preview derivative changed');
+  if(asset.materialRepair!==undefined&&asset.materialRepair!=='zero-additive-to-transparent')throw Error('Unknown preview material repair');
+  const result=trimHomeIdle(bytes,{normalizeZeroAdditive:asset.materialRepair==='zero-additive-to-transparent'});if(result.bytes.length!==asset.bytes||asset.bytes>750000||createHash('sha256').update(result.bytes).digest('hex')!==asset.sha256)throw Error('Preview derivative changed');
   if(asset.url!==`/models/home-preview-${asset.id}.glb`)throw Error('Invalid preview destination');
   await writeFile(new URL(`home-preview-${asset.id}.glb`,directory),result.bytes);
  }}));

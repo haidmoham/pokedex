@@ -1,11 +1,37 @@
 // Data-only GLB edit: keep original compressed geometry, images and skeletal values.
 // HOME's guard frame is not part of the documented loop duration.
-export function trimHomeIdle(bytes) {
+export function trimHomeIdle(bytes, { normalizeZeroAdditive = false } = {}) {
   if (bytes.readUInt32LE(0) !== 0x46546c67 || bytes.readUInt32LE(4) !== 2 || bytes.readUInt32LE(8) !== bytes.length) throw new Error('Invalid GLB');
   const jsonLength = bytes.readUInt32LE(12), binaryHeader = 20 + jsonLength;
   if (bytes.readUInt32LE(16) !== 0x4e4f534a || bytes.readUInt32LE(binaryHeader + 4) !== 0x004e4942) throw new Error('Invalid GLB chunks');
   const model = JSON.parse(bytes.subarray(20, binaryHeader).toString());
   const binary = bytes.subarray(binaryHeader + 8);
+  let normalizedMaterials = 0;
+  if (normalizeZeroAdditive) {
+    // Atlas applies ordinary THREE.AdditiveBlending to these placeholders.
+    // Black, untextured, non-emissive, non-specular surfaces add exactly zero.
+    // Encode that no-op as standard alpha zero; never approximate lit effects.
+    for (const material of model.materials ?? []) {
+      if (material.extras?.homeStencil) throw new Error('Stencil repair unsupported');
+      if (material.extras?.homeBlend !== 'additive') continue;
+      const pbr = material.pbrMetallicRoughness ?? {}, factor = pbr.baseColorFactor;
+      const extensions = material.extensions ?? {};
+      if (!Array.isArray(factor) || factor.length !== 4 || factor.slice(0, 3).some(v => v !== 0)
+        || ![0, 1].includes(factor[3]) || pbr.baseColorTexture || pbr.metallicRoughnessTexture
+        || pbr.metallicFactor !== 0 || material.emissiveTexture || material.normalTexture
+        || (material.emissiveFactor ?? [0, 0, 0]).some(v => v !== 0)
+        || Object.keys(extensions).some(k => k !== 'KHR_materials_specular')
+        || extensions.KHR_materials_specular?.specularFactor !== 0
+        || extensions.KHR_materials_specular?.specularTexture
+        || extensions.KHR_materials_specular?.specularColorTexture) throw new Error('Nonzero additive effect requires its own renderer');
+      material.alphaMode = 'BLEND';
+      material.pbrMetallicRoughness.baseColorFactor = [0, 0, 0, 0];
+      delete material.extras.homeBlend;
+      if (!Object.keys(material.extras).length) delete material.extras;
+      normalizedMaterials++;
+    }
+    if (!normalizedMaterials) throw new Error('Expected zero additive placeholder');
+  }
   if (model.animations?.length !== 1) throw new Error('Expected one HOME idle');
   const animation = model.animations[0], duration = animation.extras?.homeDuration;
   if (!Number.isFinite(duration) || duration <= 0 || duration > 30) throw new Error('Invalid HOME loop duration');
@@ -54,5 +80,5 @@ export function trimHomeIdle(bytes) {
   result.writeUInt32LE(0x46546c67, 0); result.writeUInt32LE(2, 4); result.writeUInt32LE(result.length, 8);
   result.writeUInt32LE(json.length, 12); result.writeUInt32LE(0x4e4f534a, 16); json.copy(result, 20);
   result.writeUInt32LE(binary.length, 20 + json.length); result.writeUInt32LE(0x004e4942, 24 + json.length); binary.copy(result, 28 + json.length);
-  return { bytes: result, duration, removedGuardKeys, animation: animation.name };
+  return { bytes: result, duration, removedGuardKeys, animation: animation.name, normalizedMaterials };
 }
