@@ -249,7 +249,7 @@
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/hitmonlee-b7534fa6f08e4760839df0f80f00e072",
     "animation": null,
-    "admitted": true
+    "admitted": false
   },
   {
     "id": 108,
@@ -653,7 +653,7 @@
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/170.glb",
     "blobSha": "c4d49caada997edc8e0b3cc542cdb135ca3e7092",
     "sha256": "d6bf2e5cfa4ca102056dae479a2811289d3431e19fbb25f5995f6e3fd1200756",
-    "credit": "Isabel Cotta Pérez (https://sketchfab.com/cicutta)",
+    "credit": "Isabel Cotta P\u00c3\u00a9rez (https://sketchfab.com/cicutta)",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/chinchou-1cb12e74ab6f48079da5a7c4f8eedd65",
     "animation": null,
@@ -1821,7 +1821,7 @@
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/seviper-802b0d18ce4247ab92ae8254cb2d0539",
     "animation": null,
-    "admitted": true
+    "admitted": false
   },
   {
     "id": 339,
@@ -3741,7 +3741,7 @@
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/cofagrigus-12a37aca1c1b482a931f6259d0a2845c",
     "animation": null,
-    "admitted": true
+    "admitted": false
   },
   {
     "id": 568,
@@ -4377,7 +4377,7 @@
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/flabebe-f25f21a144a544fc8cbabbde316a984a",
     "animation": null,
-    "admitted": true
+    "admitted": false
   },
   {
     "id": 690,
@@ -4409,7 +4409,7 @@
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/722.glb",
     "blobSha": "3b4d67c36b64972b142566781f9f3cb17aa48737",
     "sha256": "e39974c02543c13a476f9399a5fa52fc71760bb263a75b01fd2ef5eeac0882c5",
-    "credit": "JoaquínM (https://sketchfab.com/JoaquinM)",
+    "credit": "Joaqu\u00c3\u00adnM (https://sketchfab.com/JoaquinM)",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/rowlett-fanmade-88a67f04f99046ca9d3335c43cb0a311",
     "animation": null,
@@ -5117,7 +5117,7 @@
     "url": "https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/810.glb",
     "blobSha": "eaaace0ed9369f1968c1dd9b898651d675b67b6c",
     "sha256": "2ef93ff43a92b7dd34a9714650abb55bcc4b37e01215cc960959d791de2218ed",
-    "credit": "家庭酷樂網 (https://sketchfab.com/guj65536)",
+    "credit": "\u00e5\u00ae\u00b6\u00e5\u00ba\u00ad\u00e9\u2026\u00b7\u00e6\u00a8\u201a\u00e7\u00b6\u00b2 (https://sketchfab.com/guj65536)",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "source": "https://sketchfab.com/3d-models/grookey-3950f0a2bd994a14951ce1a6af548dcd",
     "animation": null,

@@ -7,12 +7,12 @@ const [availability, audit, optimized, followup, batch, admitted, rejected] = aw
 const species = Array.from({ length: 1025 }, (_, index) => {
   const id = index + 1;
   const source = audit.results.find(entry => entry.id === id);
-  const asset = admitted.find(entry => entry.id === id && entry.admitted);
+  const asset = admitted.find(entry => entry.id === id);
   const pose = rejected.find(entry => entry.id === id && entry.sha256 === asset?.sha256);
   const candidate = [...batch.results, ...followup.results, ...optimized.results].find(entry => entry.id === id);
   let status;
   if (pose) status = 'pose-rejected';
-  else if (asset) status = 'runtime-admitted';
+  else if (asset?.admitted) status = 'runtime-admitted';
   else if (!source) status = 'source-missing';
   else if (source.status === 'rejected') status = 'source-visual-rejected';
   else if (!assetUseTerms(source.provenance)) status = 'source-terms-unresolved';
