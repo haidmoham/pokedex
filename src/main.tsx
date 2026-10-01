@@ -11,7 +11,7 @@ import { ArtistPortfolio, portfolioCards, portfolioCoverage, portfolioTarget } f
 import { appendVisit, createVisit, prepareVisits, selectVisit, stepVisit, Visit } from './visit-model';
 import { extendTrail, traverseTrail } from './trail-model';
 import type { TrailCursor, TrailStep } from './trail-model';
-import { admittedModel, modelEdition, modelPreviewEnabled, previewModelAttribution } from './model-policy';
+import { admittedModel, modelEdition, modelPreviewEnabled, modelPublicReleaseEnabled, previewModelAttribution } from './model-policy';
 import { ModelView } from './model-view';
 import { searchSpecies, rememberSearchPick, validRecentPicks } from './search-model';
 import { linkedSpecies, speciesLink, speciesAddress } from './species-link';
@@ -604,7 +604,7 @@ function App() {
   }
 
   return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
-    {modelPreviewEnabled && <a className="preview-rights-notice" href="/models/attribution.json" target="_blank" rel="noreferrer">Protected research draft · extracted asset rights unresolved · credits ↗</a>}
+    {(modelPreviewEnabled || modelPublicReleaseEnabled) && <a className="preview-rights-notice" href="/models/attribution.json" target="_blank" rel="noreferrer">{modelPreviewEnabled ? 'Protected research draft · ' : ''}Extracted asset rights unresolved · credits ↗</a>}
     <header className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" /><span className="brand-name">pokédex<span className="brand-dot">.</span></span></button>
       <div className="dex-navigation">
@@ -717,7 +717,7 @@ function App() {
               {manifestFailed && <p className="quiet-note">Saved card collection unavailable. Live discovery and official species artwork remain available.</p>}
             </section>
             <section className="detail-section"><h3>Credit & source</h3><p className="detail-copy">{card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? (rendererUnavailable ? '3D is unavailable in this browser. The displayed fallback is official species artwork via PokéAPI.' : 'This 3D model failed to load. The displayed fallback is official species artwork via PokéAPI. Retry 3D is available in the feed.') : card.sourceType === 'model' ? `Community 3D asset. ${card.artist}. ${card.artistEvidenceMethod}. Underlying Pokémon IP belongs to its owners; source licensing is not blanket rights clearance.` : card.sourceType === 'official' ? 'Official species artwork via PokéAPI sprites. No individual artist is specified by this source.' : card.sourceType === 'catalog' ? 'Artist credit from TCGdex metadata. This edition has not been independently reviewed.' : `Reviewed edition. Artist evidence: ${card.artistEvidenceMethod}.`}</p><div className="source-links"><a href={card.image} target="_blank" rel="noreferrer">Original image ↗</a><a href={card.tcgdexUrl} target="_blank" rel="noreferrer">{card.sourceType === 'model' ? 'Model source' : card.sourceType === 'official' ? 'PokéAPI source' : 'TCGdex record'} ↗</a>{card.publisherUrl && <a href={card.publisherUrl} target="_blank" rel="noreferrer">Publisher page ↗</a>}{card.sourceType !== 'official' && <a href={card.artistEvidenceUrl} target="_blank" rel="noreferrer">{card.sourceType === 'catalog' ? 'Credit metadata' : 'Credit evidence'} ↗</a>}</div></section>
-            {card.sourceType === 'model' && admittedModel(activePokemon.id)?.previewOnly && (() => {
+            {card.sourceType === 'model' && (admittedModel(activePokemon.id)?.previewOnly || admittedModel(activePokemon.id)?.publicRelease) && (() => {
               const credit = previewModelAttribution(admittedModel(activePokemon.id)!);
               return <section className="detail-section"><h3>Extracted model credits</h3><p className="detail-copy">{credit.description}</p><div className="source-links">{credit.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label}</a>)}</div></section>;
             })()}

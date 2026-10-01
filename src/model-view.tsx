@@ -32,6 +32,9 @@ export function ModelView({ asset, name, suspended = false, controlsTarget, onFa
   const [angle, setAngle] = useState(-12);
   const [playing, setPlaying] = useState(true);
   const [pose, setPose] = useState<number | null>(null);
+  const cameraOrbitPercent = (asset.previewOnly || asset.publicRelease) && Number.isInteger(asset.cameraOrbitPercent) &&
+    asset.cameraOrbitPercent! >= 110 && asset.cameraOrbitPercent! <= 240 ? asset.cameraOrbitPercent! : 110;
+  const inspectOrbitPercent = Math.max(160, cameraOrbitPercent);
   const fallback = useRef(onFallback);
   fallback.current = onFallback;
   const failure = useRef(onFailure);
@@ -104,16 +107,16 @@ export function ModelView({ asset, name, suspended = false, controlsTarget, onFa
     element.toggleAttribute('camera-controls', inspecting);
     element.style.pointerEvents = inspecting ? 'auto' : 'none';
     // Side-on tail extent needs more orbit clearance than the front view.
-    element.setAttribute('camera-orbit', `${angle}deg 85deg ${inspecting ? '160%' : '110%'}`);
+    element.setAttribute('camera-orbit', `${angle}deg 85deg ${inspecting ? inspectOrbitPercent : cameraOrbitPercent}%`);
     if (inspecting) {
-      element.setAttribute('min-camera-orbit', 'auto 35deg 160%');
-      element.setAttribute('max-camera-orbit', 'auto 145deg 240%');
+      element.setAttribute('min-camera-orbit', `auto 35deg ${inspectOrbitPercent}%`);
+      element.setAttribute('max-camera-orbit', `auto 145deg ${Math.max(240, inspectOrbitPercent + 80)}%`);
     } else {
       element.removeAttribute('min-camera-orbit');
       element.removeAttribute('max-camera-orbit');
     }
     element.tabIndex = inspecting ? 0 : -1;
-  }, [loaded, inspecting, angle]);
+  }, [loaded, inspecting, angle, cameraOrbitPercent, inspectOrbitPercent]);
   useEffect(() => {
     const element = viewer.current;
     if (!element || !loaded) return;

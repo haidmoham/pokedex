@@ -142,3 +142,31 @@ Independent decoding compares every retained clip channel/input/output, mesh att
 The preparation exception accepts only these two exact source IDs, immutable catalog revision `429de1288cea0d43f5b4f56305d2276e94239d65`, byte counts, SHA256 identities and clip names. The normal 750,000-byte runtime limit, texture/geometry gates and protected branch/environment isolation are unchanged. Build-time acquisition allows only the exact two known source sizes (2,914,604 / 3,163,984 bytes), retaining the existing 250 MiB aggregate limit. Attribution names the publisher and underlying asset owners; the original extractor is not identified, and redistribution rights remain explicitly unresolved. No production admission changed. See `preview-catalog-native-review-2026-10-01.json`.
 
 Final checks: 127 tests, production/preview builds, all 470 derivative SHA256/size checks, and the existing card audit pass. Source-family-specific detail credits prevent attributing the two catalog files to HOME extractors. Production output contains zero protected extracted GLBs. Capable-browser GPU playback remains unverified.
+
+
+## First protected native-idle replacement batch (2026-10-01)
+
+Eighteen normal static models now have independently reviewed HOME native-idle replacements in the protected preview: Beedrill, Clefairy, Wigglytuff, Golbat, Poliwag, Magneton, Farfetch’d, Shellder, Cloyster, Haunter, Drowzee, Hypno, Krabby, Kingler, Voltorb, Electrode, Exeggcute and Exeggutor. Species coverage stays **997/1,025**; native idles rise to **524**, leaving **473 static models** and the same **28 species holds**. Ponyta and Gastly were inspected but require unsupported custom materials, so their existing static models remain selected.
+
+The preview now contains 488 extracted research assets, including 18 replacements rather than additional species. Each replacement binds the exact SHA256 of the normal static model it supersedes. Build preparation rejects duplicate species, mismatched replacement identities, and replacement of an existing animated model. Preview selection prefers the reviewed replacement; release counts deduplicate by species and report native-idle/static/replacement totals explicitly. Production builds import no preview list and retain the 527 normal models.
+
+All 18 replacements pass the existing transfer, decoded-structure and texture budgets. Independent decoding compares every retained animation channel/input/output, mesh attribute/index, image, rest transform and skin binding with its pinned source: zero differences. Three fixed-camera CPU-rendered deformed poses were inspected beside official reference art. All show measurable native movement; the largest native endpoint seam is Exeggutor at 0.053414% of body extent. No key resampling, invented movement, rig transplantation or relaxed budget is used. GPU playback and physical-phone performance remain unverified. See `preview-native-replacements-batch1-2026-10-01.json` and the cumulative loop record.
+
+
+## Protected native-idle replacements batch2 (2026-10-01)
+
+22 additional static-model replacements pass source, budget, texture, three-pose appearance and measured native-motion gates: Lickitung, Rhyhorn, Chansey, Tangela, Horsea, Seadra, Goldeen, Seaking, Staryu, Starmie, Jynx, Electabuzz, Tauros, Lapras, Ditto, Eevee, Vaporeon, Jolteon, Flareon, Kabuto, Kabutops, Snorlax. Coverage remains **997/1,025 species**, with **546 native idle clips** and **451 static models**. Weezing (Custom material handling required); Magmar (Custom material handling required). Existing normal static assets remain active for held replacements.
+
+Retained geometry, texture/image data, animation values, rest transforms and skin bindings compare identically to the pinned source. The maximum native loop seam in this cohort is 0.002963% of body extent. No source curves or admission budgets were relaxed. Production stays at 527 normal models; the extracted models remain protected-preview-only. See `preview-native-replacements-batch2-2026-10-01.json`. GPU/browser playback and physical-device performance remain unverified.
+
+
+## Yveltal zero-alpha texture recovery (2026-10-01)
+
+Yveltal raises the local protected candidate to **998/1,025 species and 547 native idle clips**, with 451 static models and 27 remaining species holds. Its pinned 971,244-byte source includes three large texture maps used exclusively by two ordinary-additive effects whose source alpha is exactly zero. The existing zero-contribution normalization plus a species/source-hash-bound map-pruning recipe produces **377,148 bytes**, below the unchanged 750,000-byte limit. No geometry, native curves, skin bindings or visible texture bytes are removed or altered.
+
+Independent decoding and all three evaluated world-vertex hashes match before/after preparation. Structure and texture budgets pass; seven source textures become four retained visible textures. Three uncropped fixed-camera native poses were inspected beside official artwork; measured movement and loop closure pass. Low-sample CPU render pixels are not claimed identical, though visible material values and image bytes are. The runtime credit text describes the exact zero-alpha pruning. Production admission stays unchanged; GPU playback remains unverified. See `preview-yveltal-zero-alpha-review-2026-10-01.json`.
+
+
+### Pose-aware camera clearance
+
+The source-correct Yveltal animation exceeds its static rest-pose frame during a wide-screen flap. A CPU projection check using the installed Three.js loader/skinning and model-viewer framing equations measured a normalized screen extent of 1.338 at the old 110% camera distance. The protected entry now binds a **165% camera distance** to its exact derivative SHA256. Across 97 sampled poses, three aspect ratios, six horizontal angles and three vertical angles (54 camera configurations), the worst normalized extent is **0.8945**, inside the ±1 frame. Inspect respects the same minimum clearance; normal production assets retain their original distances. The build preserves this reviewed metadata in the runtime projection and rejects unreviewed/out-of-range values. This is CPU geometry evidence, not successful GPU playback or a physical-device screenshot.

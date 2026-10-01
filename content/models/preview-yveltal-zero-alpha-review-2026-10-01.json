@@ -1,0 +1,116 @@
+{
+  "checkedAt": "2026-10-01",
+  "id": 717,
+  "sourceArtifact": {
+    "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/717.glb",
+    "sha256": "a7f4ac2287612d736cea251df2bfd8b5e8a971c0ee07b857881bc7beedc42038",
+    "bytes": 971244
+  },
+  "sourceBlobSha": "5d5485cf42c14f0b0205e18405d47da7c7972e53",
+  "derivative": {
+    "bytes": 377148,
+    "sha256": "582afeba058cc3a63079458cab29b0584c83e5e11f982d4ee5a3ac47e6991821"
+  },
+  "rightsStatus": "unresolved; existing protected-preview exception only",
+  "method": "Trimmed the native guard frame; normalized two ordinary-additive effects whose source alpha is exactly zero; removed only texture maps exclusively used by those already-invisible effects and compacted unused data. All geometry, retained native curves, skin bindings and visible texture bytes are preserved.",
+  "sourceEvidence": "Pinned Atlas viewer assigns ordinary AdditiveBlending with depthWrite=false to homeBlend materials; both affected source factors have alpha zero, and no material-opacity animation is present.",
+  "sourceEvidenceUrl": "https://github.com/rrih/rrih.github.io/blob/ef25889c60f099aa864bed11042f4054827a78c4/atlas/src/Viewer.tsx#L386-L392",
+  "sourceZeroAlphaMaterials": [
+    "pm0717_00_00-EffB",
+    "pm0717_00_00-EffC"
+  ],
+  "sourceTextureCount": 7,
+  "preparedTextureCount": 4,
+  "removedImages": 3,
+  "verification": {
+    "structureBudget": "pass",
+    "textureBudget": "pass",
+    "geometryByteDifferences": 0,
+    "animationByteDifferences": 0,
+    "restTransformsUnchanged": true,
+    "skinBindingsUnchanged": true,
+    "visibleMaterialValuesUnchanged": true,
+    "visibleTextureBytesUnchanged": true,
+    "sourceZeroAlphaMaterials": [
+      "pm0717_00_00-EffB",
+      "pm0717_00_00-EffC"
+    ]
+  },
+  "motion": {
+    "vertices": 5892,
+    "bodyExtent": 5.171445727348328,
+    "maxWorldDisplacement": 6.687290236460993,
+    "relativeDisplacement": 1.293118131569355,
+    "meaningfulMotion": true,
+    "loopRelativeDisplacement": 9.573983577042887e-8
+  },
+  "poses": [
+    {
+      "phase": 0.125,
+      "frame": 7.199999999999999,
+      "worldVertexSha256": "678fb0c5f5f7afc0ca416a3138a0bcc007cf18e09d046eff8e98717330675429"
+    },
+    {
+      "phase": 0.375,
+      "frame": 21.599999999999998,
+      "worldVertexSha256": "5fb58f547f252459ed47c67d5193188a755f5d6318a2ba8076f7a2cb8756bd25"
+    },
+    {
+      "phase": 0.625,
+      "frame": 36,
+      "worldVertexSha256": "2d87a71d989800344e44e3dcd76c28919ec62e8afb1964f52390c742018364d2"
+    }
+  ],
+  "appearance": "All three full-frame native poses inspected beside official species artwork. Visible anatomy, face, wing/finger surfaces and red/black pattern are retained. A wider fixed review camera accommodates the full flapping range; this is offline evidence, not GPU playback verification.",
+  "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png",
+  "renderComparison": {
+    "allThreeWorldVertexHashesIdentical": true,
+    "pixelIdentical": false,
+    "meanAbsolute8BitDifference": [
+      0.23288139329805996,
+      0.19142857142857142,
+      0.19644400352733687
+    ],
+    "note": "Low-sample CPU renders have small shading/noise differences; decoded visible material values and texture bytes are identical."
+  },
+  "decision": "approved-for-protected-preview",
+  "framing": {
+    "sha256": "582afeba058cc3a63079458cab29b0584c83e5e11f982d4ee5a3ac47e6991821",
+    "sourceSha256": "a7f4ac2287612d736cea251df2bfd8b5e8a971c0ee07b857881bc7beedc42038",
+    "cameraOrbitPercent": 165,
+    "method": "CPU geometry projection using installed Three.js 0.183.2 loader, skinning, vertex reduction and the model-viewer 4.3.1 rest-pose framing equations. Image maps omitted only from the CPU fixture; material opacity, geometry and animation retained.",
+    "sampledPoses": 97,
+    "cameraConfigurations": 54,
+    "aspectRatios": [
+      0.5,
+      1,
+      2
+    ],
+    "thetaDegrees": [
+      -180,
+      -90,
+      -12,
+      0,
+      90,
+      180
+    ],
+    "phiDegrees": [
+      35,
+      85,
+      145
+    ],
+    "restCenter": [
+      2.5721666840894386e-7,
+      0.8643978416530514,
+      -0.6821648735377672
+    ],
+    "restRadius": 4.327987001447423,
+    "maxAnimatedRadius": 6.463092630887045,
+    "animatedToRestRadiusRatio": 1.4933253331688778,
+    "maxNormalizedScreenExtent": 0.8944706079353465,
+    "allSampledViewsWithinFrame": true,
+    "gpuPlaybackVerified": false,
+    "originalDefaultWideViewMaxNormalizedExtent": 1.3380380784206949,
+    "adjustment": "Preview-only fixed camera distance is 165% of the automatic rest-pose distance, with inspection respecting that minimum. This changes framing only; no animation or mesh data changes."
+  }
+}

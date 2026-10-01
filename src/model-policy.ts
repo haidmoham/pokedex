@@ -1,14 +1,17 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle' };
+export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number };
 
 export function previewModelAttribution(asset: ModelAsset) {
   const catalog = asset.preparation === 'catalog-native-idle';
+  const homePreparation = asset.textureRepair === 'prune-yveltal-zero-alpha'
+    ? 'This derivative trims the native idle guard frame and removes texture maps used only by two source effects whose opacity is already zero. Visible texture values, geometry and native motion remain unchanged.'
+    : 'This derivative trims the idle guard frame without changing the source geometry, texture or skeletal values.';
   return {
     description: catalog
-      ? 'Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Pokemon-3D-api published this source file; its original extractor is not identified. This protected draft selects its exact native wait clip and removes unused data without changing retained geometry, textures, motion or skin bindings. Redistribution rights remain unresolved; no software license is asserted to license these assets.'
-      : 'Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Lilothestitch16 published the HOME extraction; rrih reconstructed its web materials and native idle. This protected draft trims the idle guard frame without changing the source geometry, texture or skeletal values. Redistribution rights remain unresolved; neither project’s software license licenses these assets.',
+      ? 'Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Pokemon-3D-api published this source file; its original extractor is not identified. This derivative selects its exact native wait clip and removes unused data without changing retained geometry, textures, motion or skin bindings. Redistribution rights remain unresolved; no software license is asserted to license these assets.'
+      : `Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Lilothestitch16 published the HOME extraction; rrih reconstructed its web materials and native idle. ${homePreparation} Redistribution rights remain unresolved; neither project’s software license licenses these assets.`,
     links: catalog ? [
       { url: asset.source, label: 'Pinned source file ↗' },
       { url: '/models/attribution.json', label: 'Pinned hashes & modifications ↗' },
@@ -23,7 +26,8 @@ export function previewModelAttribution(asset: ModelAsset) {
 
 declare const __POKEDEX_PREVIEW_ASSETS__: ModelAsset[];
 const previewAdmission: ModelAsset[] = typeof __POKEDEX_PREVIEW_ASSETS__ === 'undefined' ? [] : __POKEDEX_PREVIEW_ASSETS__;
-export const modelPreviewEnabled = previewAdmission.length > 0;
+export const modelPreviewEnabled = previewAdmission.some(asset => asset.previewOnly);
+export const modelPublicReleaseEnabled = previewAdmission.some(asset => asset.publicRelease);
 // Exact source identities observed in the supplied screenshot and browser rendering.
 // Static models are allowed; absence of animation alone is not a pose failure.
 export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): string | undefined {
@@ -51,10 +55,10 @@ export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): str
 
 export const MODEL_TRANSFER_LIMIT = 750_000;
 export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
-export function admittedModel(id: number, entries: ModelAsset[] = [...admission, ...previewAdmission]): ModelAsset | undefined {
+export function admittedModel(id: number, entries: ModelAsset[] = [...previewAdmission, ...admission]): ModelAsset | undefined {
   // Source-level stray props/black geometry were verified for Gholdengo.
   return entries.find(asset => asset.id === id && asset.admitted &&
-    (id !== 1000 || (asset.previewOnly && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
+    (id !== 1000 || ((asset.previewOnly || asset.publicRelease) && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
     (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) || /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
     (asset.sha256 ? /^[a-f0-9]{64}$/.test(asset.sha256) : /^[a-f0-9]{40}$/.test(asset.blobSha)));
 }
