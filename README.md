@@ -101,6 +101,6 @@ See [model source provenance](docs/pokemon-model-sources.md). Availability is 97
 
 ## Search and release
 
-Tap search or the dex number to jump by name or national number (`150`, `#150`, padded forms). Type, generation and saved filters disclose through Filters and removable chips. Recent picks stay private to this browser and are capped at eight; search never reorders the vertical dex.
+Tap search or the dex number to jump by name or national number (`150`, `#150`, padded forms). The Random button directly below the dex number chooses another species from the full national dex only when clicked, preserving normal species URL and excursion-history behavior. Type, generation and saved filters disclose through Filters and removable chips. Recent picks stay private to this browser and are capped at eight; search never reorders the vertical dex.
 
 Follow the [preview → review → mirror release flow](docs/release-flow.md). Review the exact Ready build before main/domain cutover, then verify both custom domains serve the tested build.

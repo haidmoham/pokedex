@@ -1,0 +1,137 @@
+{
+  "workers": 1,
+  "sources": 1,
+  "pipeline": {
+    "geometry": "exact decoded positions and topology; no simplification or quantization",
+    "textures": "WebP quality 90, at most 512x512",
+    "animation": "at most one recognized default-wait or idle; no automatic clip inference",
+    "toolchain": "scripts/model-pipeline/package-lock.json",
+    "perModelTimeoutSeconds": 120,
+    "sourceTransferCap": 16777216
+  },
+  "results": [
+    {
+      "id": 855,
+      "assetUseTerms": {
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "attribution": "BlenderLager (https://sketchfab.com/blenderlager)",
+        "source": "https://sketchfab.com/3d-models/polteageist-40ca3d26605c42529080f93cb7678376",
+        "evidence": "embedded uploader claim",
+        "derivativesPermitted": true,
+        "shareAlike": false,
+        "underlyingRights": "unknown"
+      },
+      "originalSha256": "f26a12291ebf406208b62b4ec39eea67f51c7e7e798c8d737b1884c4f6b0bdcf",
+      "originalBytes": 236736,
+      "bytes": 233992,
+      "sha256": "854a53337a9b307122b4cf513b136d2416d501576b6fe8a89609623cbe592e6b",
+      "geometryPreserved": true,
+      "animation": null,
+      "textureDecoded": true,
+      "machineFailure": null,
+      "sourceExtras": {
+        "author": "BlenderLager (https://sketchfab.com/blenderlager)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/polteageist-40ca3d26605c42529080f93cb7678376",
+        "title": "Polteageist"
+      },
+      "visualReviewed": false,
+      "admitted": false,
+      "status": "machine-candidate",
+      "artifact": "data/model-optimization/855-candidate.glb",
+      "measurements": {
+        "source": {
+          "decodedGeometryBytes": 152160,
+          "finite": true,
+          "meshes": 2,
+          "scenes": 1,
+          "textures": [
+            {
+              "width": 1024,
+              "height": 1024,
+              "decodedBytesWithMipmaps": 5592406
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "decodedBytesWithMipmaps": 5592406
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "decodedBytesWithMipmaps": 5592406
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "decodedBytesWithMipmaps": 5592406
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "decodedBytesWithMipmaps": 5592406
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "decodedBytesWithMipmaps": 5592406
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "decodedBytesWithMipmaps": 5592406
+            }
+          ]
+        },
+        "candidate": {
+          "decodedGeometryBytes": 152160,
+          "finite": true,
+          "meshes": 2,
+          "scenes": 1,
+          "textures": [
+            {
+              "width": 512,
+              "height": 512,
+              "decodedBytesWithMipmaps": 1398102
+            },
+            {
+              "width": 512,
+              "height": 512,
+              "decodedBytesWithMipmaps": 1398102
+            },
+            {
+              "width": 512,
+              "height": 512,
+              "decodedBytesWithMipmaps": 1398102
+            },
+            {
+              "width": 512,
+              "height": 512,
+              "decodedBytesWithMipmaps": 1398102
+            },
+            {
+              "width": 512,
+              "height": 512,
+              "decodedBytesWithMipmaps": 1398102
+            },
+            {
+              "width": 512,
+              "height": 512,
+              "decodedBytesWithMipmaps": 1398102
+            },
+            {
+              "width": 512,
+              "height": 512,
+              "decodedBytesWithMipmaps": 1398102
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "date": "2026-09-30",
+  "admittedBefore": 521,
+  "admittedAfter": 521,
+  "additionalAdmittedSpecies": 0,
+  "visualReview": "Blocked: cloud browser WebGL disabled. Candidate remains unadmitted pending original-versus-derivative render and physical-device checks."
+}

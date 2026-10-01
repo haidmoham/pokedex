@@ -11,7 +11,14 @@ const audit = JSON.parse(await readFile(resolve(root, 'content/models/source-aud
 const output = resolve(root, 'data/model-optimization');
 await mkdir(output, { recursive: true });
 const results = [];
-const sources = audit.results.filter(source => source.status === 'optimization-required');
+// Explicit IDs let a small follow-up repair decoder failures without repeating
+// the entire heavy-source experiment or overwriting its report.
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 2 || args[0] !== '--ids' || !/^\d+(,\d+)*$/.test(args[1]))) throw new Error('Usage: optimize.mjs [--ids 855,other-id]');
+const ids = args.length ? [...new Set(args[1].split(',').map(Number))] : null;
+if (ids && (ids.length > 24 || ids.some(id => !Number.isInteger(id) || id < 1 || id > 1025 || !audit.results.some(source => source.id === id && source.status !== 'rejected')))) throw new Error('Choose at most 24 audited, non-rejected species IDs');
+const sources = audit.results.filter(source => ids ? ids.includes(source.id) : source.status === 'optimization-required');
+const reportPath = resolve(output, ids ? `report-${ids.join('-')}.json` : 'report.json');
 const pipeline = { geometry: 'exact decoded positions and topology; no simplification or quantization', textures: 'WebP quality 90, at most 512x512', animation: 'at most one recognized default-wait or idle; no automatic clip inference',
   toolchain: 'scripts/model-pipeline/package-lock.json', perModelTimeoutSeconds: 120, sourceTransferCap: 16 * 1024 * 1024 };
 for (const source of sources) {
@@ -42,8 +49,8 @@ for (const source of sources) {
     const result = JSON.parse(await readFile(metrics, 'utf8'));
     results.push({ ...base, ...result, status: result.machineFailure ? 'budget-rejected' : 'machine-candidate', artifact: `data/model-optimization/${source.id}-candidate.glb` });
   } catch (error) { results.push({ ...base, status: 'processing-error', error: (error.stderr || error.message).slice(-800) }); }
-  await writeFile(resolve(output, 'report.json'), JSON.stringify({ workers: 1, sources: sources.length, pipeline, results }, null, 2));
+  await writeFile(reportPath, JSON.stringify({ workers: 1, sources: sources.length, pipeline, results }, null, 2));
   console.log(`${source.id}: ${results.at(-1).status}; ${results.length}/${sources.length}`);
 }
-await writeFile(resolve(output, 'report.json'), JSON.stringify({ workers: 1, sources: sources.length, pipeline, results }, null, 2));
+await writeFile(reportPath, JSON.stringify({ workers: 1, sources: sources.length, pipeline, results }, null, 2));
 console.log('local derivatives only; no runtime admission or publication');
