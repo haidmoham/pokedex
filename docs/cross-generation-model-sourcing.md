@@ -93,3 +93,10 @@ The next 24 source files pass decoded budgets and native motion/loop measurement
 ### Sixth protected-preview batch
 
 Twenty-two more source assets pass decoded budgets, appearance review, measured native motion and loop closure. Rapidash is held for its 937,828-byte source and custom flame-stencil passes; Grimer is held for animated visibility controls. The protected candidate reaches **653 species and 162 native idle clips**, with 126 preview-only additions. All retained geometry/motion remains unchanged from pinned sources. Production stays 527; tests remain 119. See `preview-source-review-batch6-2026-10-01.json`.
+
+
+### Seventh protected-preview batch
+
+Twenty-one additional models pass independent budgets, appearance, measured native motion and loop closure. Muk requires visibility handling; Koffing and Moltres require smoke/fire stencil handling. The protected candidate reaches **674 species and 183 native idle clips**, with 147 preview-only additions. Gen 1 now has 142/151 models; its nine held cases are Charmander, Charmeleon, Charizard, Paras, Rapidash, Grimer, Muk, Koffing and Moltres. All are source-available; they are conversion/appearance holds rather than missing files.
+
+A bounded inspection of the three starter flames found that their core and three mask meshes have different geometry, UVs, joint indices and weights. Blindly copying an alpha texture between those passes would therefore be unsupported; no such shortcut was admitted. The suite remains 119 tests and production remains 527. See `preview-source-review-batch7-2026-10-01.json`.

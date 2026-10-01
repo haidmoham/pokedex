@@ -1388,6 +1388,237 @@
       "loopRelativeDisplacement": 0.0,
       "sourceSha256": "e9f36e6d57b223fd335da6840e9c7cdba5ac090ebec1b7187804c3dd6268daf9",
       "derivativeSha256": "23782b452dd5498922dedde8601858aca9aad782be2a9b783593630cf75a581b"
+    },
+    {
+      "id": 94,
+      "vertices": 2884,
+      "bodyExtent": 1.6811425685882568,
+      "maxWorldDisplacement": 0.22913959504532655,
+      "relativeDisplacement": 0.13629991847612724,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "f798d5241d84fc7797a78a6d6189e49e67820a8b3b57faa648850a69c5688aaa",
+      "derivativeSha256": "40678f2fadd742e9ee21333ec786a26c509afdf45d526906221fd3c85a54b323"
+    },
+    {
+      "id": 95,
+      "vertices": 2674,
+      "bodyExtent": 4.382000923156738,
+      "maxWorldDisplacement": 0.594741593462436,
+      "relativeDisplacement": 0.13572374901144285,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "57c744f80392ab7d4160220ea868ec992707588ade862188290866433fff0bf1",
+      "derivativeSha256": "717bcfe174e1b7c3bdd55c8f7fefd90ea0677931fe0905e637d4f8ad0326b3c4"
+    },
+    {
+      "id": 104,
+      "vertices": 3150,
+      "bodyExtent": 0.39993032068014145,
+      "maxWorldDisplacement": 0.014123248109112975,
+      "relativeDisplacement": 0.03531427195891093,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "9b57ca3a98b4d76bc13a59a914db0c7d471db36042ef8ec95757138bb653c59f",
+      "derivativeSha256": "c93f249b1daa22cf15f05eb4e0c933e3e142df950c5015bdf565a09efc1f5988"
+    },
+    {
+      "id": 105,
+      "vertices": 3062,
+      "bodyExtent": 1.0030870554037392,
+      "maxWorldDisplacement": 0.04814145010864055,
+      "relativeDisplacement": 0.04799329215674484,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "a03fcf657ee9f629732092fb241b1d5edc66a05c0fdf5f21aa21c0c9db6b5910",
+      "derivativeSha256": "b90a6f39d11910d71002cdef6fbf07da28a412df5ea8501cec0c0667b4709c7c"
+    },
+    {
+      "id": 107,
+      "vertices": 3852,
+      "bodyExtent": 1.1653661337913945,
+      "maxWorldDisplacement": 0.09613880966381314,
+      "relativeDisplacement": 0.082496656523762,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.0621412238512895e-07,
+      "sourceSha256": "a155f3a4f141927c95f48b3692ff954993e0ab5f4680b45d7e70c075eb3c6a00",
+      "derivativeSha256": "fed52f609fc264cbf9d9bb49094db18f1c842915dbd34012e3cdf7e14086d7e5"
+    },
+    {
+      "id": 112,
+      "vertices": 3521,
+      "bodyExtent": 2.427031397819519,
+      "maxWorldDisplacement": 0.3806895015681567,
+      "relativeDisplacement": 0.1568539665000518,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 2.0460475928056933e-06,
+      "sourceSha256": "f968d69d662d2f2b58cd3aba334ef4d948e0ab1ab46a10946e9f8d9872fe3d62",
+      "derivativeSha256": "50834db1502f02a341e6ec0330630a6c2d271f998ce98d431c410dc4cf69a65f"
+    },
+    {
+      "id": 115,
+      "vertices": 4465,
+      "bodyExtent": 2.6413750052452087,
+      "maxWorldDisplacement": 0.2991971867576547,
+      "relativeDisplacement": 0.11327327099087134,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 9.3722656504439e-08,
+      "sourceSha256": "4ba7fc58a3e88902bab7111957b62262fd5e8d829503cad1efe0a56b1c2c93dc",
+      "derivativeSha256": "ca8c9e382578027f941b85326bc4ae0cfed41e35b4145b478abf7801ceccfb13"
+    },
+    {
+      "id": 122,
+      "vertices": 3093,
+      "bodyExtent": 1.2320342883467674,
+      "maxWorldDisplacement": 0.6134758030151993,
+      "relativeDisplacement": 0.4979372804943647,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 5.3065551845258327e-08,
+      "sourceSha256": "8991fe8e3a7c69231d124a3a451f3468e0d953e172e9c2c972b1b3f481761aaf",
+      "derivativeSha256": "409d6c33535bf902414d80dd75da61df57eae8fc2e856e2bace501b8db29677b"
+    },
+    {
+      "id": 123,
+      "vertices": 3732,
+      "bodyExtent": 2.4261236786842346,
+      "maxWorldDisplacement": 0.8715872839286661,
+      "relativeDisplacement": 0.35925096959663494,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "dda472f59638391654b8233bd6dc38a72c26e5d92515375387fd98c33823e4d6",
+      "derivativeSha256": "0d854d525c3e62a25d2690a2ac578e8f634a8bff52241b926db243997fbc5c7f"
+    },
+    {
+      "id": 127,
+      "vertices": 3687,
+      "bodyExtent": 1.517295241355896,
+      "maxWorldDisplacement": 0.21593281880087828,
+      "relativeDisplacement": 0.14231430569037762,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 7.856696989588697e-08,
+      "sourceSha256": "c3b7ad8d6bd16e304a08306f85854a26abee18e731863dc371d8bde55cc34463",
+      "derivativeSha256": "9c030cf0648f7af3dcc33b91ab7c95fb0cf5b500ac8a5c5e6537f04f20e7a6af"
+    },
+    {
+      "id": 129,
+      "vertices": 2485,
+      "bodyExtent": 0.9716459512710571,
+      "maxWorldDisplacement": 0.44213340511299826,
+      "relativeDisplacement": 0.4550355039658449,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "c7facfb2735869b23eb9a5583d752f24e9659745b17f0abd41fb500674edb96f",
+      "derivativeSha256": "d8bc0aa1c272e46b9c01242873040d52f9e49a0e9fdcafaae36f3f24bd3b6f5a"
+    },
+    {
+      "id": 130,
+      "vertices": 4139,
+      "bodyExtent": 5.601755857467651,
+      "maxWorldDisplacement": 2.0401424035972857,
+      "relativeDisplacement": 0.364196951010921,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "abdb798c8a0077b36a120e351698321a155a97b216e71e10248790afec8787b2",
+      "derivativeSha256": "2dfc14536effe2d10285765cdbc595707405fa1ea5bd266b603264bc62deebfe"
+    },
+    {
+      "id": 137,
+      "vertices": 325,
+      "bodyExtent": 1.2854530215263367,
+      "maxWorldDisplacement": 0.5825622926265208,
+      "relativeDisplacement": 0.4531960973064508,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 9.345888202984984e-08,
+      "sourceSha256": "332c95bead53442aed2c591c7576095a1ea726e885a75f63d4460e36e3a29df7",
+      "derivativeSha256": "e029f8dac96b0ea4e00e0b2d8fc6e8ddd842d2a941b93093aeba0426da2c9172"
+    },
+    {
+      "id": 138,
+      "vertices": 2923,
+      "bodyExtent": 0.508347675204277,
+      "maxWorldDisplacement": 0.022055231473197354,
+      "relativeDisplacement": 0.04338611652809186,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "2260462e5dc335a3d90ecb941486fb9ba884d9b28d18ca263f31a1d1f8d5c84f",
+      "derivativeSha256": "057245f2f2b3ed1ba892a53b76ade34aaff2cbee6ea1f7f639b28247dbe392cf"
+    },
+    {
+      "id": 139,
+      "vertices": 3680,
+      "bodyExtent": 1.1355407238006592,
+      "maxWorldDisplacement": 0.29232617339897654,
+      "relativeDisplacement": 0.25743345638944565,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "4d6eb70af5b2b82492f6a74aeec3915a5e112df6439120af7e4d4e33e1413624",
+      "derivativeSha256": "7dc40c5458d21102ccf2af6adab1f540e4a4156d798922e168f59c595339d2ff"
+    },
+    {
+      "id": 142,
+      "vertices": 3627,
+      "bodyExtent": 3.6964528560638428,
+      "maxWorldDisplacement": 4.225058695779526,
+      "relativeDisplacement": 1.1430035388787747,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.8095760690829814e-06,
+      "sourceSha256": "fccfd2d67d7a8813d59deed8bc2963c48905eb70edeed6b52e124dcc013fa674",
+      "derivativeSha256": "a0e658d3bee8bd0ddd5a083819823d381a54f3a04f03dafe9bdf0e1f63a654bc"
+    },
+    {
+      "id": 144,
+      "vertices": 4902,
+      "bodyExtent": 3.3250699043273926,
+      "maxWorldDisplacement": 2.3638892834103693,
+      "relativeDisplacement": 0.710929198912149,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 1.1050225031877464e-07,
+      "sourceSha256": "72ab09638df0f9ad790d25810c0562b0f82ea23c33662afba6740502131025b2",
+      "derivativeSha256": "905b6f7964bcbde334c5e13f515d8e0813d0ff6b27dad0deb45e2c74b0189295"
+    },
+    {
+      "id": 145,
+      "vertices": 4194,
+      "bodyExtent": 2.4197866320610046,
+      "maxWorldDisplacement": 1.9684107088622314,
+      "relativeDisplacement": 0.8134645769101043,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "39e658b88d3b55c6ed23eb5348d110c6231fe2dc4e32a14f17d0a89310fe13e4",
+      "derivativeSha256": "3f7bc77a0007c5dfa6226f27b64bd17682c215ea38404072faac78881cec5a37"
+    },
+    {
+      "id": 147,
+      "vertices": 1987,
+      "bodyExtent": 0.7972668372094631,
+      "maxWorldDisplacement": 0.13400728496172887,
+      "relativeDisplacement": 0.16808335516722567,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 4.732007537846097e-07,
+      "sourceSha256": "0fbfc3e36fbd18178563c3b5fa6a5ac240212f14eb83f60c1f039556661b92b3",
+      "derivativeSha256": "631ccba935cf8f81104a93695da31b8ac1ab15ec175656bae0b539dcbcfef78b"
+    },
+    {
+      "id": 148,
+      "vertices": 2743,
+      "bodyExtent": 1.8679584749042988,
+      "maxWorldDisplacement": 0.22731124620349,
+      "relativeDisplacement": 0.12168966776155762,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 3.5469595018004627e-07,
+      "sourceSha256": "01f5255b2ab97492682accd9744abded5829cb65c2138a39ef6d6bf9156ca5a6",
+      "derivativeSha256": "fc39bffad20fc07b6076450e01751bbaca4a923fb6ee66ebecce69ad7188735b"
+    },
+    {
+      "id": 151,
+      "vertices": 3048,
+      "bodyExtent": 0.5049239993095398,
+      "maxWorldDisplacement": 0.05865120520263242,
+      "relativeDisplacement": 0.11615848183654418,
+      "meaningfulMotion": true,
+      "loopRelativeDisplacement": 0.0,
+      "sourceSha256": "a855c8579ea05670da474dc2ed22ae746117538d458b53b54c0676edb5f4ece6",
+      "derivativeSha256": "c550c5bdff3a94cc58508a461bf05010c2f4abfe12bdfd29c17b2a8767eb572c"
     }
   ]
 }
