@@ -62,16 +62,23 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const activePokemon = pokemon[activeIndex];
   const [shuffle, setShuffle] = useState(() => { try { return localStorage.getItem('pokedex.shuffle.v1') === 'true'; } catch { return false; } });
+  const shuffleRef = useRef(shuffle);
+  shuffleRef.current = shuffle;
   const shufflePast = useRef<number[]>([]);
   const shuffleNext = useRef<number | null>(null);
   if (shuffleNext.current === null) shuffleNext.current = drawSpecies(initialIndex);
   const shuffleCurrent = useRef(initialIndex);
   function rememberSpecies(index: number) {
-    if (shuffle && index !== shuffleCurrent.current) {
+    if (shuffleRef.current && index !== shuffleCurrent.current) {
       shufflePast.current = [...shufflePast.current.slice(-1999), shuffleCurrent.current];
       shuffleNext.current = drawSpecies(index);
     }
     shuffleCurrent.current = index;
+  }
+  function feedSlot(index: number) { return shuffleRef.current ? Number(shufflePast.current.length > 0) : index; }
+  function placeFeed(feed: HTMLDivElement, index: number) {
+    rememberSpecies(index);
+    feedPosition.current.jump(feed, feedSlot(index), shuffleRef.current ? 2 + Number(shufflePast.current.length > 0) : pokemon.length);
   }
   const feedIndices: number[] = shuffle ? [...shufflePast.current.slice(-1), activeIndex, shuffleNext.current!] : pokemon.map((_, index) => index);
   const feedSelected = shuffle ? Number(shufflePast.current.length > 0) : activeIndex;
@@ -134,7 +141,7 @@ function App() {
       if (drawerRef.current || feedPosition.current.locked) return;
       if (shuffle) { moveSpecies(index > feedSelected ? 1 : -1); return; }
       feedPosition.current.index = index;
-      rememberSpecies(index); activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); enterSpecies(index);
+      activeIndexRef.current = index; setActiveIndex(index); setHasScrolled(true); enterSpecies(index);
     } });
   const feedRef = speciesScroll.scroller;
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -385,10 +392,10 @@ function App() {
     const feed = feedRef.current;
     if (feed) {
       feedPosition.current.unlock(feed);
-      feedPosition.current.jump(feed, shuffle ? feedSelected : index, shuffle ? feedIndices.length : pokemon.length);
-      rememberSpecies(index); activeIndexRef.current = index;
+      placeFeed(feed, index);
+      activeIndexRef.current = index;
       setActiveIndex(index);
-      if (top && top.kind !== 'branch') feedPosition.current.lock(feed, shuffle ? feedSelected : index);
+      if (top && top.kind !== 'branch') feedPosition.current.lock(feed, feedSlot(index));
     }
   }
   useEffect(() => {
@@ -455,9 +462,9 @@ function App() {
     const feed = feedRef.current;
     if (!feed) return;
     const next = adjacentIndex(index, 0, pokemon.length);
-    feedPosition.current.jump(feed, shuffle ? feedSelected : next, shuffle ? feedIndices.length : pokemon.length);
+    placeFeed(feed, next);
     if (next !== activeIndexRef.current) setHasScrolled(true);
-    rememberSpecies(next); activeIndexRef.current = next;
+    activeIndexRef.current = next;
     setActiveIndex(next);
     enterSpecies(next);
 
@@ -467,8 +474,8 @@ function App() {
     if (!feed) return;
     feedPosition.current.unlock(feed);
     const next = adjacentIndex(index, 0, pokemon.length);
-    feedPosition.current.jump(feed, shuffle ? feedSelected : next, shuffle ? feedIndices.length : pokemon.length);
-    rememberSpecies(next); activeIndexRef.current = next;
+    placeFeed(feed, next);
+    activeIndexRef.current = next;
     setActiveIndex(next);
 
   }
@@ -569,8 +576,8 @@ function App() {
     if (feed) {
       feedPosition.current.unlock(feed);
       const index = pokemon.findIndex(entry => entry.id === item.id);
-      feedPosition.current.jump(feed, shuffle ? feedSelected : index, shuffle ? feedIndices.length : pokemon.length);
-      rememberSpecies(index); activeIndexRef.current = index;
+      placeFeed(feed, index);
+      activeIndexRef.current = index;
       setActiveIndex(index);
     }
   }
@@ -610,7 +617,7 @@ function App() {
         const visit = index === activeIndex ? activeVisit : visits[item.id];
         const chosenId = visit?.selectedId ?? `official-${item.id}`;
         const edition = nearby ? (allCards.find(entry => entry.cardId === chosenId) ?? (chosenId === `model-${item.id}` ? modelEdition(item) : undefined) ?? officialEdition(item)) : undefined;
-        return <section className={`species-slide type-${item.types[0]}`} key={`${slot}-${item.id}`} aria-label={`Number ${item.id}, ${item.name}`} aria-hidden={index !== activeIndex}>
+        return <section className={`species-slide type-${item.types[0]}`} key={`${shuffle}-${slot}-${item.id}`} aria-label={`Number ${item.id}, ${item.name}`} aria-hidden={index !== activeIndex}>
           {edition && <>
             <span className="ghost-number" aria-hidden="true">{dexNumber(item.id)}</span>
             {speciesScroll.moving && <div className="species-preview-name">#{dexNumber(item.id)} · {item.name}</div>}
