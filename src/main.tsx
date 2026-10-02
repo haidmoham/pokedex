@@ -604,7 +604,6 @@ function App() {
   }
 
   return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
-    {(modelPreviewEnabled || modelPublicReleaseEnabled) && <a className="preview-rights-notice" href="/models/attribution.json" target="_blank" rel="noreferrer">{modelPreviewEnabled ? 'Protected research draft · ' : ''}Extracted asset rights unresolved · credits ↗</a>}
     <header className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" /><span className="brand-name">pokédex<span className="brand-dot">.</span></span></button>
       <div className="dex-navigation">
@@ -721,6 +720,7 @@ function App() {
               const credit = previewModelAttribution(admittedModel(activePokemon.id)!);
               return <section className="detail-section"><h3>Extracted model credits</h3><p className="detail-copy">{credit.description}</p><div className="source-links">{credit.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label}</a>)}</div></section>;
             })()}
+            {(modelPreviewEnabled || modelPublicReleaseEnabled) && <details className="detail-section asset-rights-details"><summary>3D asset credits &amp; rights</summary><p className="detail-copy">{modelPreviewEnabled && 'Protected research draft. '}Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK. Extracted asset rights remain unresolved.</p><div className="source-links"><a href="/models/attribution.json" target="_blank" rel="noreferrer">Per-asset credits, provenance and rights ↗</a></div></details>}
             <section className="detail-section"><h3>Keep exploring</h3><div className="source-links"><a href={`https://www.deviantart.com/search?q=${encodeURIComponent(activePokemon.name + ' pokemon')}`} target="_blank" rel="noreferrer">DeviantArt ↗</a><a href={`https://www.pixiv.net/en/tags/${encodeURIComponent(activePokemon.name)}/artworks`} target="_blank" rel="noreferrer">Pixiv ↗</a></div><p className="quiet-note">Opens the original communities. These are discovery links, not imported fan-art galleries.</p></section>
           </>}
           {drawer === 'artist' && <>
