@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 const fullReviewPreview = process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_GIT_COMMIT_REF === 'codex/pokedex-full-coverage-20261002' && process.env.VERCEL_BRANCH_URL === 'pokedex-review-git-codex-pokedex-full-coverage-20261002-zarnab.vercel.app';
 const protectedModelPreview = (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_GIT_COMMIT_REF === 'codex/model-idle-expansion' && process.env.VERCEL_BRANCH_URL === 'pokedex-review-git-codex-model-idle-expansion-zarnab.vercel.app') || fullReviewPreview;
 const integratedModelRelease = process.env.POKEDEX_MODEL_RELEASE === '2026-10-02-1025';
-const VERIFIED_ALT_FORM_BRANCH_URL: string | null = null; // Set after this branch's Vercel SSO preview is observed.
+const VERIFIED_ALT_FORM_BRANCH_URL: string | null = 'pokedex-review-git-codex-pokedex-alt-forms-20261002-zarnab.vercel.app';
 const protectedFormPreview = (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_GIT_COMMIT_REF === 'codex/pokedex-alt-forms-20261002' && VERIFIED_ALT_FORM_BRANCH_URL !== null && process.env.VERCEL_BRANCH_URL === VERIFIED_ALT_FORM_BRANCH_URL) ||
   (!process.env.VERCEL_ENV && process.env.POKEDEX_FORM_PREVIEW === '2026-10-02-forms');
 const publicModelRelease = (process.env.POKEDEX_MODEL_RELEASE === '2026-10-01-998' || integratedModelRelease) && !protectedModelPreview;
