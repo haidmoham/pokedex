@@ -12,7 +12,9 @@ import { appendVisit, createVisit, prepareVisits, selectVisit, stepVisit, Visit 
 import { extendTrail, traverseTrail } from './trail-model';
 import type { TrailCursor, TrailStep } from './trail-model';
 import { admittedModel, modelEdition, modelPreviewEnabled, modelPublicReleaseEnabled, previewModelAttribution } from './model-policy';
+import { formModelAsset, formsForSpecies, type FormCandidate } from './form-policy';
 import { ModelView } from './model-view';
+import { MegaActivation } from './mega-activation';
 import { searchSpecies, rememberSearchPick, validRecentPicks } from './search-model';
 import { linkedSpecies, speciesLink, speciesAddress } from './species-link';
 import './style.css';
@@ -136,6 +138,9 @@ function App() {
   const [brokenImages, setBrokenImages] = useState<string[]>([]);
   // Session-only circuit breaker: no retries on navigation, only a deliberate button.
   const [failedModels, setFailedModels] = useState<number[]>([]);
+  const [failedForms, setFailedForms] = useState<string[]>([]);
+  const [selectedFormId, setSelectedFormId] = useState<string | null>(null);
+  const [megaActivation, setMegaActivation] = useState<{ speciesId: number; formId: string } | null>(null);
   const [rendererUnavailable, setRendererUnavailable] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const completedDiscovery = useRef(new Set<number>());
@@ -226,6 +231,20 @@ function App() {
   const activeVisit = branch?.visit ?? visits[activePokemon.id] ?? createVisit(activePokemon, allCards, currency);
   const cards = activeVisit.ids.map(id => allCards.find(item => item.cardId === id) ?? (id === `official-${activePokemon.id}` ? officialEdition(activePokemon) : id === `model-${activePokemon.id}` ? modelEdition(activePokemon) : undefined)).filter((item): item is CardEdition => !!item);
   const card = cards.find(item => item.cardId === activeVisit.selectedId) ?? cards[0];
+  const formOptions = formsForSpecies(activePokemon.id);
+  const selectedForm = card.sourceType === 'model' ? formOptions.find(form => form.id === selectedFormId) : undefined;
+  const pendingMegaForm = formOptions.find(form => form.id === megaActivation?.formId && form.speciesId === megaActivation.speciesId);
+  const selectedFormAsset = useMemo(() => selectedForm ? formModelAsset(selectedForm) : undefined, [selectedForm]);
+  useEffect(() => { setSelectedFormId(null); setMegaActivation(null); }, [activePokemon.id]);
+  useEffect(() => { if (card.sourceType !== 'model') setSelectedFormId(null); }, [card.cardId]);
+  useEffect(() => {
+    if (!megaActivation) return;
+    const finish = () => { if (megaActivation.speciesId === activePokemon.id) setSelectedFormId(megaActivation.formId); setMegaActivation(null); };
+    const cancel = (event: KeyboardEvent) => { if (event.key === 'Escape' && !drawerRef.current) setMegaActivation(null); };
+    const timer = window.setTimeout(finish, 1300);
+    window.addEventListener('keydown', cancel);
+    return () => { window.clearTimeout(timer); window.removeEventListener('keydown', cancel); };
+  }, [megaActivation, activePokemon.id]);
   const cardIndex = cards.findIndex(item => item.cardId === card.cardId);
   const atEnd = trail ? trailIndex === trail.length - 1 : cardIndex === cards.length - 1;
   const edgeCard = trail ? card : cards.at(-1)!;
@@ -590,6 +609,16 @@ function App() {
     try { localStorage.setItem('pokedex.favorites.v1', JSON.stringify(next)); setFavorites(next); }
     catch { setError('This browser could not save favorites.'); }
   }
+  function chooseForm(form: FormCandidate | null) {
+    setMegaActivation(null);
+    if (form?.kind === 'mega' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setSelectedFormId(null);
+      setMegaActivation({ speciesId: activePokemon.id, formId: form.id });
+    } else setSelectedFormId(form?.id ?? null);
+    setFailedModels(previous => previous.filter(id => id !== activePokemon.id));
+    changeVisit(visit => selectVisit(visit, `model-${activePokemon.id}`));
+    closeDrawer();
+  }
 
   function onFeedKey(event: React.KeyboardEvent) {
     if (drawer || inspectingModel || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
@@ -631,16 +660,19 @@ function App() {
             }) : cards} selected={trail ? trailIndex : cardIndex} suspended={Boolean(drawer)} onMotion={setArtMoving} onSelect={selectArtwork}
               render={(frame, selected, moving, inspectGallery) => {
                 const species = pokemon[frame.pokemonId - 1] ?? item;
-                return frame.sourceType === 'model' && selected && !failedModels.includes(species.id) && admittedModel(species.id) ? <ModelView key={frame.cardId} asset={admittedModel(species.id)!} name={species.name} controlsTarget={modelControlsTarget} suspended={Boolean(drawer) || moving || speciesScroll.moving} onInspect={inspecting => {
+                const form = species.id === activePokemon.id ? selectedForm : undefined;
+                const model = form ? selectedFormAsset : admittedModel(species.id);
+                return frame.sourceType === 'model' && selected && (!failedModels.includes(species.id) || form) && model ? <><ModelView key={`${frame.cardId}:${form?.id ?? 'base'}`} asset={model} name={form?.name ?? species.name} controlsTarget={modelControlsTarget} suspended={Boolean(drawer) || moving || speciesScroll.moving || Boolean(megaActivation)} fallbackLabel={form ? 'Use base form' : undefined} onInspect={inspecting => {
                   inspectGallery(inspecting);
                   setInspectingModel(inspecting);
                   const feed = feedRef.current; if (!feed) return;
                   if (inspecting) feedPosition.current.lock(feed, feedSelected); else if (!drawerRef.current) feedPosition.current.unlock(feed);
                 }} onFailure={reason => {
                   if (reason === 'unsupported') setRendererUnavailable(true);
+                  if (form) { setFailedForms(previous => previous.includes(form.id) ? previous : [...previous, form.id]); setSelectedFormId(null); return; }
                   setFailedModels(previous => previous.includes(species.id) ? previous : [...previous, species.id]);
                   changeVisit(visit => selectVisit(visit, `official-${species.id}`));
-                }} onFallback={() => changeVisit(visit => selectVisit(visit, `official-${species.id}`))} /> : brokenImages.includes(frame.image) ?
+                }} onFallback={() => form ? setSelectedFormId(null) : changeVisit(visit => selectVisit(visit, `official-${species.id}`))} />{pendingMegaForm && <MegaActivation name={pendingMegaForm.name} onSkip={() => { setSelectedFormId(pendingMegaForm.id); setMegaActivation(null); }} onCancel={() => setMegaActivation(null)} />}</> : brokenImages.includes(frame.image) ?
                 <div className="image-unavailable"><Icon name="grid" /><span>Image unavailable</span><small>{frame.title}</small><button className="image-retry" tabIndex={selected ? 0 : -1} onClick={() => setBrokenImages(images => retryFailedImages(images, frame.image))}>Retry image</button></div> :
                 <><img key={frame.image} className="hero-art" src={frame.image} alt={frame.sourceType === 'official' || frame.sourceType === 'model' ? `${species.name}, official species artwork${frame.sourceType === 'model' ? ' while 3D is inactive' : ''}` : `${frame.title} Pokémon TCG card, illustrated by ${frame.artist}`} draggable={false} fetchPriority={selected ? 'high' : 'low'} onError={() => setBrokenImages(old => rememberFailedImage(old, frame.image))} />
                 {selected && failedModels.includes(species.id) && ['official', 'model'].includes(frame.sourceType ?? '') &&
@@ -655,13 +687,14 @@ function App() {
       })}
     </div>
 
-    <div ref={overlayRef} className={`feed-overlay ${card.sourceType === 'model' && !failedModels.includes(activePokemon.id) ? 'has-model-controls' : ''}`}>
+    <div ref={overlayRef} className={`feed-overlay ${card.sourceType === 'model' && (!failedModels.includes(activePokemon.id) || selectedForm) ? 'has-model-controls' : ''}`}>
       {branch && <button className="branch-back" onClick={goBack} aria-label={`Back to ${branch.originLabel ?? 'previous view'}`}><Icon name="left" /> Back to {branch.originLabel ?? 'previous view'}</button>}
       <div className={`feed-caption ${artMoving ? 'caption-in-motion' : ''}`} key={activePokemon.id} inert={artMoving}>
-        <span className="species-types">{trail ? trail[trailIndex]?.context : activeVisit.context ?? activePokemon.types.join(' · ')}</span>
-        <div className="species-heading"><h1>{activePokemon.name}</h1><button className="icon-button share-species" aria-label={`Share ${activePokemon.name}`} onClick={event => shareSpecies(event.currentTarget)}><Icon name="share" /></button></div>
-        {card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? <span className="credit-link">Official art · PokéAPI</span> : card.sourceType === 'model' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>3D · {card.artist} <span>›</span></button> : card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :
+        <span className="species-types">{selectedForm ? selectedForm.types.join(' · ') : trail ? trail[trailIndex]?.context : activeVisit.context ?? activePokemon.types.join(' · ')}</span>
+        <div className="species-heading"><h1>{selectedForm?.name ?? activePokemon.name}</h1><button className="icon-button share-species" aria-label={`Share ${activePokemon.name}`} onClick={event => shareSpecies(event.currentTarget)}><Icon name="share" /></button></div>
+        {selectedForm ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Form 3D · native {selectedForm.provenance.family === 'HOME' ? 'idle' : 'battle wait'} <span>›</span></button> : card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? <span className="credit-link">Official art · PokéAPI</span> : card.sourceType === 'model' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>3D · {card.artist} <span>›</span></button> : card.sourceType === 'official' ? <button className="credit-link" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Official art <span>· PokéAPI</span></button> :
           <button className="credit-link" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} <span>›</span></button>}
+        {formOptions.length > 0 && <button className="form-entry" onClick={event => openDrawer('details', undefined, event.currentTarget)}>Explore forms · {formOptions.length} ›</button>}
       </div>
       <div ref={setModelControlsTarget} className={`model-controls-row ${artMoving ? 'caption-in-motion' : ''}`} inert={artMoving} />
       {continuationKey && <button className={`continuation continuation-${candidate?.state ?? 'loading'}`} onClick={acceptCandidate} disabled={!candidate || candidate.state === 'loading' || candidate.state === 'exhausted'} aria-label={candidate?.state === 'ready' ? `Continue to ${candidate.card?.title} by ${candidate.card?.artist}. ${candidate.context}` : candidate?.state === 'search' ? 'Search next page for related artwork' : candidate?.state === 'error' ? 'Retry related artwork' : undefined}>
@@ -682,7 +715,7 @@ function App() {
     </div>
     <span className="share-status" role="status">{shareStatus}</span>
     <div className="dex-progress" aria-hidden="true"><span style={{ width: `${((activeIndex + 1) / pokemon.length) * 100}%` }} /></div>
-    <span className="sr-only" aria-live="polite">{activePokemon.name}, number {activePokemon.id}. {card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? '3D unavailable. Official art via PokéAPI.' : card.sourceType === 'model' ? `Community 3D model credited to ${card.artist}.` : card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`} {trail ? trail[trailIndex]?.context : ''}</span>
+    <span className="sr-only" aria-live="polite">{selectedForm ? `${selectedForm.name}, source-authored ${selectedForm.provenance.family === 'HOME' ? 'idle' : 'battle wait'} preview.` : `${activePokemon.name}, number ${activePokemon.id}. ${card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? '3D unavailable. Official art via PokéAPI.' : card.sourceType === 'model' ? `Community 3D model credited to ${card.artist}.` : card.sourceType === 'official' ? 'Official art via PokéAPI. Individual artist not specified.' : `Artwork by ${card.artist}.`}`} {trail ? trail[trailIndex]?.context : ''}</span>
     {error && <button className="toast" role="alert" onClick={() => setError('')}>{error} ×</button>}
 
     <dialog ref={dialogRef} className={`drawer drawer-${drawer ?? 'closed'}`} aria-labelledby="drawer-title" onCancel={event => { event.preventDefault(); closeDrawer(); }} onClose={() => { pendingFocus.current?.focus({ preventScroll: true }); pendingFocus.current = null; }} onClick={event => { if (event.target === event.currentTarget) closeDrawer(); }}>
@@ -703,8 +736,9 @@ function App() {
           {drawer === 'details' && <>
             {manualShare && <label className="manual-share">Species link<input readOnly value={manualShare} onFocus={event => event.currentTarget.select()} aria-label="Species link to copy" /></label>}
             <p className="creator-credit">made by <a href="https://mhaider.dev" target="_blank" rel="noreferrer">haider ↗</a> · a pokédex you can doomscroll</p>
-            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{card.title}</h3><p>{card.set}{card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}</p>{card.sourceType === 'official' ? <p>Individual artist not specified</p> : card.sourceType === 'model' ? <p>{failedModels.includes(activePokemon.id) ? 'Official-art fallback via PokéAPI. 3D source credits below.' : `3D source: ${card.artist}`}</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
+            <div className="details-identity"><img src={card.image} alt="" /><div><h3>{selectedForm?.name ?? card.title}</h3><p>{selectedForm ? `${selectedForm.kind === 'mega' ? 'Mega' : 'Regional'} form · interactive 3D review` : `${card.set}${card.language && ` · ${card.number} · ${card.language.toUpperCase()}`}`}</p>{selectedForm ? <p>Native {selectedForm.provenance.family === 'HOME' ? 'idle' : 'battle wait'} · source and rights below</p> : card.sourceType === 'official' ? <p>Individual artist not specified</p> : card.sourceType === 'model' ? <p>{failedModels.includes(activePokemon.id) ? 'Official-art fallback via PokéAPI. 3D source credits below.' : `3D source: ${card.artist}`}</p> : <button className="inline-link" data-focus-id="details-artist" onClick={event => openDrawer('artist', card.artist, event.currentTarget)}>Art by {card.artist} ›</button>}</div></div>
             <button className={`save-pokemon ${favorites.includes(activePokemon.id) ? 'is-saved' : ''}`} onClick={toggleFavorite} aria-pressed={favorites.includes(activePokemon.id)}><Icon name="heart" /> {favorites.includes(activePokemon.id) ? 'Saved Pokémon' : 'Save Pokémon'}</button>
+            {formOptions.length > 0 && <section className="detail-section form-section" aria-label={`${activePokemon.name} forms`}><div className="detail-heading"><h3>Forms</h3><span>Source-checked</span></div><div className="form-options"><button className={!selectedForm ? 'selected' : ''} aria-pressed={!selectedForm} onClick={() => chooseForm(null)}><strong>Base {activePokemon.name}</strong><small>Current Pokédex model</small></button>{formOptions.map(form => <button key={form.id} className={selectedForm?.id === form.id ? 'selected' : ''} aria-pressed={selectedForm?.id === form.id} onClick={() => chooseForm(form)}><strong>{form.name}</strong><small>{form.kind === 'mega' ? 'Mega Stone activation' : 'Regional form'} · native {form.provenance.family === 'HOME' ? 'idle' : 'battle wait'}{failedForms.includes(form.id) ? ' · retry' : ''}</small></button>)}</div><p className="quiet-note">Mega forms use a short referential Stone transition, then each form plays its own source-authored motion. Appearance and device playback still need review.</p></section>}
             <section className="detail-section"><div className="detail-heading"><h3>Artwork</h3><span>{cardIndex + 1} / {cards.length} loaded</span></div><div className="art-rail">{cards.map(edition => <button className={card.cardId === edition.cardId ? 'selected' : ''} key={edition.cardId} onClick={() => changeVisit(visit => selectVisit(visit, edition.cardId))} aria-label={`${edition.title}, ${edition.sourceType === 'model' ? 'interactive 3D model' : edition.sourceType === 'official' ? 'official artwork' : `${edition.set}, art by ${edition.artist}`}`} aria-current={card.cardId === edition.cardId ? 'true' : undefined}><img src={edition.image} alt="" loading="lazy" /></button>)}</div></section>
             <section className="detail-section"><div className="detail-heading"><h3>Market price</h3><select aria-label="Price currency and provider" value={currency} onChange={event => setCurrency(event.target.value)}><option value="USD">USD · TCGplayer</option><option value="EUR">EUR · Cardmarket</option></select></div>
               <p className="price-value">{formatPrice(card, currency) ?? 'No recent price'}</p>
@@ -715,8 +749,8 @@ function App() {
               {(status?.error || (status?.failed ?? 0) > 0) && <button className="inline-link" onClick={() => { completedDiscovery.current.delete(activePokemon.id); setDiscoveryRetry(count => count + 1); }}>Retry card sources ↻</button>}
               {manifestFailed && <p className="quiet-note">Saved card collection unavailable. Live discovery and official species artwork remain available.</p>}
             </section>
-            <section className="detail-section"><h3>Credit & source</h3><p className="detail-copy">{card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? (rendererUnavailable ? '3D is unavailable in this browser. The displayed fallback is official species artwork via PokéAPI.' : 'This 3D model failed to load. The displayed fallback is official species artwork via PokéAPI. Retry 3D is available in the feed.') : card.sourceType === 'model' ? `Community 3D asset. ${card.artist}. ${card.artistEvidenceMethod}. Underlying Pokémon IP belongs to its owners; source licensing is not blanket rights clearance.` : card.sourceType === 'official' ? 'Official species artwork via PokéAPI sprites. No individual artist is specified by this source.' : card.sourceType === 'catalog' ? 'Artist credit from TCGdex metadata. This edition has not been independently reviewed.' : `Reviewed edition. Artist evidence: ${card.artistEvidenceMethod}.`}</p><div className="source-links"><a href={card.image} target="_blank" rel="noreferrer">Original image ↗</a><a href={card.tcgdexUrl} target="_blank" rel="noreferrer">{card.sourceType === 'model' ? 'Model source' : card.sourceType === 'official' ? 'PokéAPI source' : 'TCGdex record'} ↗</a>{card.publisherUrl && <a href={card.publisherUrl} target="_blank" rel="noreferrer">Publisher page ↗</a>}{card.sourceType !== 'official' && <a href={card.artistEvidenceUrl} target="_blank" rel="noreferrer">{card.sourceType === 'catalog' ? 'Credit metadata' : 'Credit evidence'} ↗</a>}</div></section>
-            {card.sourceType === 'model' && (admittedModel(activePokemon.id)?.previewOnly || admittedModel(activePokemon.id)?.publicRelease) && (() => {
+            {selectedForm ? <section className="detail-section"><h3>Form model credits</h3><p className="detail-copy">{typeof selectedForm.provenance.credit === 'string' ? selectedForm.provenance.credit : selectedForm.provenance.credit?.author}. {selectedForm.provenance.sourceTerms}. The form uses its source-authored {selectedForm.provenance.family === 'HOME' ? 'HOME idle' : 'battle wait'}. {selectedForm.kind === 'mega' && 'The Mega Stone transition is an authored reference using Pokémon’s official emblem, not a native transformation clip.'} Browser appearance remains unverified.</p><div className="source-links"><a href={selectedForm.model.url} target="_blank" rel="noreferrer">Pinned form model ↗</a>{selectedForm.provenance.family === 'HOME' ? <><a href="https://github.com/Lilothestitch16/Pokemon-HOME-GLB-Models" target="_blank" rel="noreferrer">Original geometry ↗</a><a href="https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models" target="_blank" rel="noreferrer">Native motion ↗</a></> : typeof selectedForm.provenance.credit === 'object' && <a href={selectedForm.provenance.credit.source} target="_blank" rel="noreferrer">Uploader source ↗</a>}{selectedForm.kind === 'mega' && <a href="https://mega.pokemon.com/en-us" target="_blank" rel="noreferrer">Official Mega Stone emblem ↗</a>}<a href="https://rrih.github.io/atlas/legal/en/rights.html" target="_blank" rel="noreferrer">Reconstruction rights ↗</a></div></section> : <section className="detail-section"><h3>Credit & source</h3><p className="detail-copy">{card.sourceType === 'model' && failedModels.includes(activePokemon.id) ? (rendererUnavailable ? '3D is unavailable in this browser. The displayed fallback is official species artwork via PokéAPI.' : 'This 3D model failed to load. The displayed fallback is official species artwork via PokéAPI. Retry 3D is available in the feed.') : card.sourceType === 'model' ? `Community 3D asset. ${card.artist}. ${card.artistEvidenceMethod}. Underlying Pokémon IP belongs to its owners; source licensing is not blanket rights clearance.` : card.sourceType === 'official' ? 'Official species artwork via PokéAPI sprites. No individual artist is specified by this source.' : card.sourceType === 'catalog' ? 'Artist credit from TCGdex metadata. This edition has not been independently reviewed.' : `Reviewed edition. Artist evidence: ${card.artistEvidenceMethod}.`}</p><div className="source-links"><a href={card.image} target="_blank" rel="noreferrer">Original image ↗</a><a href={card.tcgdexUrl} target="_blank" rel="noreferrer">{card.sourceType === 'model' ? 'Model source' : card.sourceType === 'official' ? 'PokéAPI source' : 'TCGdex record'} ↗</a>{card.publisherUrl && <a href={card.publisherUrl} target="_blank" rel="noreferrer">Publisher page ↗</a>}{card.sourceType !== 'official' && <a href={card.artistEvidenceUrl} target="_blank" rel="noreferrer">{card.sourceType === 'catalog' ? 'Credit metadata' : 'Credit evidence'} ↗</a>}</div></section>}
+            {!selectedForm && card.sourceType === 'model' && (admittedModel(activePokemon.id)?.previewOnly || admittedModel(activePokemon.id)?.publicRelease) && (() => {
               const credit = previewModelAttribution(admittedModel(activePokemon.id)!);
               return <section className="detail-section"><h3>Extracted model credits</h3><p className="detail-copy">{credit.description}</p><div className="source-links">{credit.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label}</a>)}</div></section>;
             })()}

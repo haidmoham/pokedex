@@ -1,7 +1,7 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; reviewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number; integratedNativeIdle?: boolean; runtime?: 'home-canvas'; selection?: string; visualStatus?: 'pass' | 'uncertain' | 'hold'; visualFinding?: string; sourceAuthoredStationaryWait?: boolean; sourceAuthoredLoopSeam?: boolean; allowDisclosedLayerApproximation?: boolean; sourceSha256?: string; nativeWaitSha256?: string; rightsStatus?: string };
+export type ModelAsset = { id: number; formId?: string; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; reviewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number; integratedNativeIdle?: boolean; runtime?: 'home-canvas'; selection?: string; visualStatus?: 'pass' | 'uncertain' | 'hold'; visualFinding?: string; sourceAuthoredStationaryWait?: boolean; sourceAuthoredLoopSeam?: boolean; allowDisclosedLayerApproximation?: boolean; sourceSha256?: string; nativeWaitSha256?: string; rightsStatus?: string };
 
 export function previewModelAttribution(asset: ModelAsset) {
   if (asset.integratedNativeIdle) return {
@@ -79,7 +79,18 @@ const REVIEW_TRANSFER_EXCEPTIONS = {
   1022: { bytes: 1_025_596, sha256: '3f0e57475fe0c636cf940e479363f89993d6782102e8534eefc304f596cdc357' },
   1023: { bytes: 1_359_036, sha256: '1d12d6d193aa10963a22d39dd71118cab25bb61810fabd86025505b48af55f5e' },
 } as const;
-export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'bytes' | 'sha256' | 'url' | 'reviewOnly' | 'admitted' | 'integratedNativeIdle'>): number {
+const FORM_REVIEW_TRANSFER_EXCEPTIONS = {
+  'ninetales-alola': { bytes: 756_032, sha256: '197caee28a09d4ff0efe89d6852d95998eda18d0455948e559f6a269b7630a41' },
+  'darkrai-mega': { bytes: 819_852, sha256: 'd33388c348dcde07a076230365122935d2fc9d49c2d30da3be6354cc926bf98e' },
+  'zoroark-hisui': { bytes: 865_528, sha256: 'c85711fe03c7461d727a437642fe327c6f53dd68abc02d86e392ca7800f19a83' },
+} as const;
+export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'formId' | 'bytes' | 'sha256' | 'url' | 'previewOnly' | 'reviewOnly' | 'publicRelease' | 'admitted' | 'integratedNativeIdle'>): number {
+  const form = asset.formId && FORM_REVIEW_TRANSFER_EXCEPTIONS[asset.formId as keyof typeof FORM_REVIEW_TRANSFER_EXCEPTIONS];
+  const allowedFormContext = (asset.previewOnly === true && asset.reviewOnly === true && asset.admitted === false) ||
+    (asset.publicRelease === '2026-10-02-120' && asset.admitted === true && asset.previewOnly === false && asset.reviewOnly === false);
+  if (form && allowedFormContext &&
+    asset.bytes === form.bytes && asset.sha256 === form.sha256 &&
+    asset.url === `https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/forms/${asset.formId}.glb`) return 2_000_000;
   const expected = REVIEW_TRANSFER_EXCEPTIONS[asset.id as keyof typeof REVIEW_TRANSFER_EXCEPTIONS];
   return ((asset.reviewOnly === true && asset.admitted === false) || (asset.integratedNativeIdle === true && asset.admitted === true)) && expected && asset.bytes === expected.bytes &&
     asset.sha256 === expected.sha256 && asset.url === `/models/review-original-${asset.id}.glb` ? 2_000_000 : MODEL_TRANSFER_LIMIT;
