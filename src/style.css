@@ -56,6 +56,8 @@ h1 { font-size: clamp(36px, 7.8vw, 64px); line-height: 1.04; margin: 7px 0 10px;
 .credit-link { display: block; max-width: 100%; min-height: 44px; text-align: left; padding: 10px 0; font-size: 12px; font-weight: 500; line-height: 1.5; color: #fff; white-space: normal; overflow-wrap: anywhere; }
 .credit-link span { color: #ffffff80; }
 .credit-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.form-entry { display: inline-flex; align-items: center; min-height: 40px; margin: 0 0 8px; padding: 7px 12px; border: 1px solid #ffffff35; border-radius: 20px; background: #14231fdc; color: var(--accent); font-size: 12px; font-weight: 600; }
+.form-entry:hover { background: #25352ae8; }
 .side-actions { position: absolute; right: var(--edge); bottom: calc(97px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 12px; }
 .favorite-button.is-saved { color: #fdaaba; }
 .favorite-button.is-saved svg { fill: currentColor; }
@@ -125,6 +127,13 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .inline-link { min-height: 44px; padding: 10px 0; text-align: left; color: var(--accent); font-size: 12px; line-height: 1.5; }
 .detail-section { border-top: 1px solid #ffffff15; padding: 23px 0; }
 .detail-section:last-child { padding-bottom: 0; }
+.form-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.form-options button { min-height: 66px; padding: 11px 12px; border: 1px solid #ffffff24; border-radius: 11px; background: #ffffff08; text-align: left; }
+.form-options button:hover { background: #ffffff14; }
+.form-options button.selected { border-color: var(--accent); background: #c4e6ac16; }
+.form-options strong { display: block; font-size: 12px; font-weight: 600; line-height: 1.3; }
+.form-options small { display: block; margin-top: 5px; color: #c2cfc0a8; font-size: 10px; line-height: 1.35; }
+@media (max-width: 400px) { .form-options { grid-template-columns: 1fr; } }
 .asset-rights-details summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; color: #c2cfc0; font-size: 12px; list-style: none; }
 .asset-rights-details summary::-webkit-details-marker { display: none; }
 .asset-rights-details summary::after { content: '›'; margin-left: 8px; transition: transform .15s; }
@@ -221,6 +230,17 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .model-actions button, .model-actions span { min-height: 44px; padding: 10px 14px; border-radius: 24px; border: 1px solid var(--line); background: #141a25; color: #fff; font: inherit; font-size: 12px; }
 .model-stage.is-inspecting { touch-action: none; overscroll-behavior: contain; }
 .model-review-note { position: absolute; z-index: 2; bottom: 10px; left: 12px; right: 12px; margin: 0; padding: 5px 8px; border-radius: 8px; background: #101722dc; color: #fff; font-size: 10px; line-height: 1.35; text-align: center; pointer-events: none; }
+.mega-activation { position: absolute; z-index: 5; inset: calc(85px + env(safe-area-inset-top)) 16px var(--art-bottom, calc(184px + env(safe-area-inset-bottom))); display: grid; place-items: center; border-radius: 24px; background: radial-gradient(circle at center, #5fcad375, #20263bdc 52%, #111824e9); }
+.mega-activation-content { display: grid; justify-items: center; gap: 7px; text-align: center; }
+.mega-activation img { width: clamp(78px, 20vw, 126px); height: auto; filter: drop-shadow(0 0 20px #55d6d7); animation: mega-stone-pulse 1.3s ease-in-out both; }
+.mega-activation strong { font-size: clamp(19px, 4vw, 30px); letter-spacing: -.03em; }
+.mega-activation span { color: #ddf7f0; font-size: 14px; }
+.mega-activation small { color: #d4e8e2b5; font-size: 10px; }
+.mega-activation-actions { display: flex; gap: 8px; margin-top: 12px; }
+.mega-activation-actions button { min-height: 44px; padding: 10px 13px; border: 1px solid #ffffff5c; border-radius: 22px; background: #122c36d9; font-size: 12px; }
+.mega-activation-actions button:hover { background: #215166; }
+@keyframes mega-stone-pulse { 0% { opacity: .35; transform: scale(.65) rotate(-12deg); } 60% { opacity: 1; transform: scale(1.18) rotate(8deg); } 100% { opacity: 1; transform: scale(1) rotate(0); } }
+@media (prefers-reduced-motion: reduce) { .mega-activation img { animation: none; } }
 .species-heading { display: flex; align-items: center; gap: 12px; }
 .species-heading h1 { min-width: 0; flex: 0 1 auto; }
 .share-species { flex: 0 0 44px; opacity: .7; }

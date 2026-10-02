@@ -23,7 +23,7 @@ function hasModelRenderer() {
 }
 
 // Only the active admitted view mounts this component. No adjacent GLB fetches.
-function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFallback, onFailure, onInspect, onUseNativeIdle }: { asset: ModelAsset; name: string; suspended?: boolean; controlsTarget: HTMLDivElement | null; onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void; onUseNativeIdle?: () => void }) {
+function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFallback, fallbackLabel = 'Use official art', onFailure, onInspect, onUseNativeIdle }: { asset: ModelAsset; name: string; suspended?: boolean; controlsTarget: HTMLDivElement | null; onFallback: () => void; fallbackLabel?: string; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void; onUseNativeIdle?: () => void }) {
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<ModelViewerElement | null>(null);
   const inspectButton = useRef<HTMLButtonElement>(null);
@@ -153,7 +153,7 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
         {pose === null ? 'Still poses' : `Pose ${pose + 1}/${IDLE_POSE_PHASES.length}`}
       </button>}
       {onUseNativeIdle && <button onClick={onUseNativeIdle}>Try native idle</button>}
-      <button onClick={() => fallback.current()}>Use official art</button>
+      <button onClick={() => fallback.current()}>{fallbackLabel}</button>
     </div>, controlsTarget)}
   </div>;
 }

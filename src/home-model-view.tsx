@@ -7,9 +7,9 @@ import type { HomeLayerApproximationDisclosure } from './home-effects.js';
 
 // Normal-feed HOME source path. Only the active species mounts a renderer;
 // no neighbor GLBs or corrected textures are prefetched.
-export function HomeModelView({ asset, name, suspended = false, controlsTarget, onFallback, onFailure, onInspect, onUsePriorModel }: {
+export function HomeModelView({ asset, name, suspended = false, controlsTarget, onFallback, fallbackLabel = 'Use official art', onFailure, onInspect, onUsePriorModel }: {
   asset: ModelAsset; name: string; suspended?: boolean; controlsTarget: HTMLDivElement | null;
-  onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void;
+  onFallback: () => void; fallbackLabel?: string; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void;
   onUsePriorModel?: () => void;
 }) {
   const host = useRef<HTMLDivElement>(null);
@@ -104,7 +104,7 @@ export function HomeModelView({ asset, name, suspended = false, controlsTarget, 
       {loaded && <button aria-pressed={playing} onClick={() => { setPose(null); setPlaying(value => !value); }}>{playing ? 'Pause idle' : 'Play idle'}</button>}
       {loaded && inspecting && <button onClick={nextPose} aria-label={`Show idle pose ${pose === null ? 1 : (pose + 1) % 3 + 1} of 3`}>{pose === null ? 'Still poses' : `Pose ${pose + 1}/3`}</button>}
       {onUsePriorModel && <button onClick={onUsePriorModel}>Use prior 3D</button>}
-      <button onClick={() => fallback.current()}>Use official art</button>
+      <button onClick={() => fallback.current()}>{fallbackLabel}</button>
     </div>, controlsTarget)}
   </div>;
 }

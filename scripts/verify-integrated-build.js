@@ -3,7 +3,7 @@
 import { readFile, readdir, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { isIntegratedModelRelease } from './public-model-release.js';
-import { isProtectedFullReviewPreview } from './preview-model-context.js';
+import { isProtectedFullReviewPreview, isProtectedFormPreview } from './preview-model-context.js';
 
 if (!isIntegratedModelRelease()) throw Error('Integrated build audit requires the exact release flag');
 const root = new URL('../', import.meta.url);
@@ -40,6 +40,23 @@ if (hosted !== 520 || remote !== 469 || selected.filter(asset => asset.url.start
 const distFiles = await readdir(new URL('dist/', root));
 const models = await readdir(new URL('dist/models/', root));
 const protectedReview = isProtectedFullReviewPreview();
+const formPreview = isProtectedFormPreview();
+const attribution = await read('dist/models/attribution.json');
+const assetFiles = await readdir(new URL('dist/assets/', root));
+const entry = assetFiles.filter(name => /^index-[^/]+\.js$/.test(name));
+if (entry.length !== 1) throw Error('Built app entry is ambiguous');
+const appCode = await readFile(new URL(`dist/assets/${entry[0]}`, root), 'utf8');
+if (models.some(name => name.endsWith('.glb') && name.includes('forms'))) throw Error('Form binary entered public build');
+if (formPreview) {
+  const forms = await read('content/models/alt-form-preview-2026-10-02.json');
+  if (forms.forms.length !== 120 || release.protectedFormPreview !== true || release.alternateFormCandidates !== 120 ||
+      attribution.formPreviewAssets?.length !== 120 || !appCode.includes('Mega Charizard X') ||
+      !appCode.includes('atlas/public/models/forms/charizard-mega-x.glb') ||
+      !appCode.includes('Explore forms')) throw Error('Protected form preview inventory changed');
+} else if (release.protectedFormPreview !== false || release.alternateFormCandidates !== 0 ||
+    attribution.formPreviewAssets?.length !== 0 || appCode.includes('atlas/public/models/forms/charizard-mega-x.glb')) {
+  throw Error('Unreviewed alternate form entered non-form build');
+}
 if (models.filter(name => /^review-repaired-\d+\.glb$/.test(name)).length !== 4) throw Error('Native transfer repair inventory changed');
 if (protectedReview) {
   const catalog = await read('dist/models/review-catalog.json');
@@ -59,4 +76,5 @@ for (const name of ['draco_decoder.js', 'draco_wasm_wrapper.js', 'draco_decoder.
 console.log(JSON.stringify({ species: effective.size, nativeIdles: 1025, newNativeSelections: selected.length,
   hostedModels: hosted, remotePinnedNewModels: remote, offlineVisualHolds: 35,
   offlineVisualUncertain: 12, stationaryNativeWaitIds: [597], authoredLoopSeamIds: [868, 1008],
-  gpuVerified: false, protectedReviewWorkbench: protectedReview }, null, 2));
+  gpuVerified: false, protectedReviewWorkbench: protectedReview, protectedFormPreview: formPreview,
+  alternateFormCandidates: formPreview ? 120 : 0 }, null, 2));
