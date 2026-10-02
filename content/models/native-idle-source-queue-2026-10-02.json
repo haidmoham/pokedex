@@ -1,0 +1,179 @@
+{
+  "checkedAt": "2026-10-02",
+  "scope": "Source metadata triage only. No runtime admission, redistribution approval, decoded-budget, three-pose, camera, or live-playback claim.",
+  "sourceRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+  "sourceRepository": "https://github.com/rrih/rrih.github.io",
+  "underlyingRights": "unresolved",
+  "totalPublicStatic": 451,
+  "sourceScreenedLowRiskCount": 426,
+  "firstBatch": [
+    {
+      "id": 162,
+      "bytes": 202084,
+      "blobSha": "07d67fe25a8c35d2924e0fcef7000efb21cc12bb",
+      "path": "atlas/public/models/home/162.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 163,
+      "bytes": 140168,
+      "blobSha": "185363c7584616980e3ee05939969822252e21a5",
+      "path": "atlas/public/models/home/163.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 164,
+      "bytes": 216268,
+      "blobSha": "4144df8d4a810a325077adc9d7063e98c5ad9b48",
+      "path": "atlas/public/models/home/164.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 165,
+      "bytes": 188840,
+      "blobSha": "ba9e45a20fb853bb70270eb3ca1ad4f5be35b954",
+      "path": "atlas/public/models/home/165.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 166,
+      "bytes": 124020,
+      "blobSha": "04c7806fa59347445c4c0df3e4c47260eb412949",
+      "path": "atlas/public/models/home/166.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 168,
+      "bytes": 114220,
+      "blobSha": "9468438c2298f2b3d4c9c1e23af5884980b4f751",
+      "path": "atlas/public/models/home/168.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 169,
+      "bytes": 120088,
+      "blobSha": "2486324f547afc46bc8ff3249f09365af6fef235",
+      "path": "atlas/public/models/home/169.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 170,
+      "bytes": 123832,
+      "blobSha": "dda6c60acfca6bf0894319f8a9eae450b8a962ec",
+      "path": "atlas/public/models/home/170.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 173,
+      "bytes": 92564,
+      "blobSha": "8db95ef9e78d9b3b8aa8368159bc4c1830d3c36b",
+      "path": "atlas/public/models/home/173.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 174,
+      "bytes": 165216,
+      "blobSha": "1baf1cdaeff143b8298d5263c22c8565661e25e0",
+      "path": "atlas/public/models/home/174.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 175,
+      "bytes": 107540,
+      "blobSha": "a16de5b3d3a61753cac4aa196142674cc38072c5",
+      "path": "atlas/public/models/home/175.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 176,
+      "bytes": 98696,
+      "blobSha": "7c8dfc5cba51c8e5cc36a48a97153d81e563b29d",
+      "path": "atlas/public/models/home/176.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 178,
+      "bytes": 123044,
+      "blobSha": "2786cfe579c711d6e767c5716072036bed41aa00",
+      "path": "atlas/public/models/home/178.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 179,
+      "bytes": 140112,
+      "blobSha": "8b0dd926517db9be737d23b050a9d2ab4cd3329a",
+      "path": "atlas/public/models/home/179.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 185,
+      "bytes": 87248,
+      "blobSha": "da35a1401196fc6d415567793cf920d048d22e73",
+      "path": "atlas/public/models/home/185.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 187,
+      "bytes": 137348,
+      "blobSha": "be6b71f351aa131e3a287febf5045138a3517f92",
+      "path": "atlas/public/models/home/187.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 188,
+      "bytes": 75452,
+      "blobSha": "86c2a15a3b7c4c6c8141948530a5e62ac124b0ea",
+      "path": "atlas/public/models/home/188.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 190,
+      "bytes": 238268,
+      "blobSha": "a5fd787f599be0b79050ed0fe68e9e014ca55a9f",
+      "path": "atlas/public/models/home/190.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 191,
+      "bytes": 86244,
+      "blobSha": "a3cffe912902e948586424a9ac1db3d6b8c5471d",
+      "path": "atlas/public/models/home/191.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 192,
+      "bytes": 171260,
+      "blobSha": "e7f3b34bfde63aafac46f0f15a16457bbab11d32",
+      "path": "atlas/public/models/home/192.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 194,
+      "bytes": 288104,
+      "blobSha": "5cd592142dac7300de751e2fc2106f67e9fd5526",
+      "path": "atlas/public/models/home/194.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 195,
+      "bytes": 117248,
+      "blobSha": "682be031c6927071e0804d8e1f05ad219452caec",
+      "path": "atlas/public/models/home/195.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 196,
+      "bytes": 170344,
+      "blobSha": "733339d665ec8471f1193d22273718ce474bcdb2",
+      "path": "atlas/public/models/home/196.glb",
+      "status": "source-screened-only"
+    },
+    {
+      "id": 197,
+      "bytes": 138432,
+      "blobSha": "1b5da322bfe545b1ea4417eb900e8c577993e096",
+      "path": "atlas/public/models/home/197.glb",
+      "status": "source-screened-only"
+    }
+  ]
+}

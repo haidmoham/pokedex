@@ -1,0 +1,905 @@
+{
+  "checkedAt": "2026-10-02",
+  "scope": "Bounded source-only inspection of first 24 queued static-model replacements; no admission, redistribution, decoded visual, camera, or playback approval. Source and trimmed binaries remain ignored local review files, not repository assets.",
+  "sourceRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+  "target": "native idle replacements for current static public models",
+  "sampleCount": 24,
+  "sourceScreenedOnly": 22,
+  "sourceHeld": 2,
+  "sourceBytes": 3466640,
+  "preparedBytes": 3423576,
+  "results": [
+    {
+      "id": 162,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/162.glb",
+        "bytes": 202084,
+        "blobSha": "07d67fe25a8c35d2924e0fcef7000efb21cc12bb",
+        "sha256": "54118621f16b66859b04a5052edb1ed61cd7e0033869d8d8201d7c2bc6a55227"
+      },
+      "derivative": {
+        "bytes": 209528,
+        "sha256": "74a3ae806b30dd222efaf3301569d08990558d493787c3e5b68cd1bfcf6fa427",
+        "animation": "HOME Idle",
+        "duration": 2,
+        "removedGuardKeys": 15
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 163,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/163.glb",
+        "bytes": 140168,
+        "blobSha": "185363c7584616980e3ee05939969822252e21a5",
+        "sha256": "57daca17f40608f0ab2842257d1f301db36e6dbee32ffa0d259a0c4748184b97"
+      },
+      "derivative": {
+        "bytes": 152740,
+        "sha256": "a77ca174e924bee2047184ee37e8284be15e85d0a92725546e13c317d679efaa",
+        "animation": "HOME Idle",
+        "duration": 1.6,
+        "removedGuardKeys": 11
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 2,
+        "textures": 2,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 164,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/164.glb",
+        "bytes": 216268,
+        "blobSha": "4144df8d4a810a325077adc9d7063e98c5ad9b48",
+        "sha256": "8e59d67c64ff748503c6345670dbc78e8d2236ff857e97c6c43c0c206af69c30"
+      },
+      "derivative": {
+        "bytes": 237320,
+        "sha256": "391ddc5356103ac2357a8b30c7cad5b34c65441bfd63d5b0fee8041fe9b75471",
+        "animation": "HOME Idle",
+        "duration": 1,
+        "removedGuardKeys": 31
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 165,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/165.glb",
+        "bytes": 188840,
+        "blobSha": "ba9e45a20fb853bb70270eb3ca1ad4f5be35b954",
+        "sha256": "42e102e1b654e93a7ac733f79a9912d98bc9f20d83e5c9637e4cd0bf9f53864a"
+      },
+      "derivative": {
+        "bytes": 202208,
+        "sha256": "eb5af726da47079e48ae88b4e78e7d04114533fb1c714bb72f45e6f31b245e53",
+        "animation": "HOME Idle",
+        "duration": 1.3333334,
+        "removedGuardKeys": 21
+      },
+      "structure": {
+        "meshes": 4,
+        "images": 3,
+        "textures": 3,
+        "skins": 3,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 166,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/166.glb",
+        "bytes": 124020,
+        "blobSha": "04c7806fa59347445c4c0df3e4c47260eb412949",
+        "sha256": "72945ae17335f8df146a5a7bbeeb87f4b8f5ede6d5f77c6e18d0417963e0dcce"
+      },
+      "derivative": {
+        "bytes": 138184,
+        "sha256": "416f1b2b17559c2c99799092e64a358fd7e0aaf5832a75a80ea046ef762413dc",
+        "animation": "HOME Idle",
+        "duration": 1.4,
+        "removedGuardKeys": 2
+      },
+      "structure": {
+        "meshes": 4,
+        "images": 3,
+        "textures": 3,
+        "skins": 3,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 168,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/168.glb",
+        "bytes": 114220,
+        "blobSha": "9468438c2298f2b3d4c9c1e23af5884980b4f751",
+        "sha256": "0e241f767e035fb1d53e599b376a3aef8191ea6ba693b213d061bca0d222246a"
+      },
+      "derivative": {
+        "bytes": 121776,
+        "sha256": "d8c5fa4c5a5977db8f02512f917c7618db94d115fb6e876ac6743edf21737b7d",
+        "animation": "HOME Idle",
+        "duration": 1.3333334,
+        "removedGuardKeys": 11
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 169,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/169.glb",
+        "bytes": 120088,
+        "blobSha": "2486324f547afc46bc8ff3249f09365af6fef235",
+        "sha256": "4e9110c867b3e14347e5d5758ed346d22e9c0c5c026676955020748bef45a019"
+      },
+      "derivative": {
+        "bytes": 129700,
+        "sha256": "2fd332a02e8e80bc8f6bcbaad4681f8eedffae2a05d14a02f7efbbc48be943f9",
+        "animation": "HOME Idle",
+        "duration": 0.93333334,
+        "removedGuardKeys": 21
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 2,
+        "textures": 2,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 170,
+      "status": "source-held",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/170.glb",
+        "bytes": 123832,
+        "blobSha": "dda6c60acfca6bf0894319f8a9eae450b8a962ec",
+        "sha256": "7e0185da1a9be106a6fdee834800069cce033f26dd8a8c8713cf6bf87216d720"
+      },
+      "derivative": null,
+      "repairCandidate": {
+        "kind": "zero-additive-placeholder",
+        "bytes": 133232,
+        "sha256": "d2d71f0db755447e8a2c2824995dcf1679dddd9c23c217b8106a417eab65140a",
+        "normalizedMaterials": 1,
+        "duration": 2,
+        "removedGuardKeys": 6,
+        "status": "requires visual material review"
+      },
+      "structure": {
+        "meshes": 2,
+        "images": 2,
+        "textures": 2,
+        "skins": 2,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [
+        "custom blending requires renderer review"
+      ],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 173,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/173.glb",
+        "bytes": 92564,
+        "blobSha": "8db95ef9e78d9b3b8aa8368159bc4c1830d3c36b",
+        "sha256": "9f92e0c6f999698f00687ead02414af884e5bedf04c0cb38483f16a8c23ceed0"
+      },
+      "derivative": {
+        "bytes": 99532,
+        "sha256": "37be363f8a0aafb8abe2fa406ef6f08723c24e9c7c06c212a593cbb2d47ec50a",
+        "animation": "HOME Idle",
+        "duration": 1.4,
+        "removedGuardKeys": 5
+      },
+      "structure": {
+        "meshes": 2,
+        "images": 3,
+        "textures": 3,
+        "skins": 2,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 174,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/174.glb",
+        "bytes": 165216,
+        "blobSha": "1baf1cdaeff143b8298d5263c22c8565661e25e0",
+        "sha256": "a68525e9a8204e559c2055abb1e794b267e40dbb1b4f716a9298ff36fc58ae90"
+      },
+      "derivative": {
+        "bytes": 170044,
+        "sha256": "3c5f100bc9deeb1d90fc8727303390dac392104b1d74e092e66cb3c812785f62",
+        "animation": "HOME Idle",
+        "duration": 2.6666667,
+        "removedGuardKeys": 7
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 175,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/175.glb",
+        "bytes": 107540,
+        "blobSha": "a16de5b3d3a61753cac4aa196142674cc38072c5",
+        "sha256": "7ad6a6bc850efab084729e21c46e73850a374d117847f2dc782de3e18d0abc38"
+      },
+      "derivative": {
+        "bytes": 113828,
+        "sha256": "372f3d99324fee69231a279b21639fce69441569fcee7f7d920e87cd19de1d47",
+        "animation": "HOME Idle",
+        "duration": 1.6,
+        "removedGuardKeys": 7
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 176,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/176.glb",
+        "bytes": 98696,
+        "blobSha": "7c8dfc5cba51c8e5cc36a48a97153d81e563b29d",
+        "sha256": "4ad47b1b622dbb2b8662052676a8e7809e212b49005204141ab2ed9a0174233b"
+      },
+      "derivative": {
+        "bytes": 108016,
+        "sha256": "8b6d76879c8f106fbab0caf0248ac2b0972caa8fd617269b8f8a4e939c6fba77",
+        "animation": "HOME Idle",
+        "duration": 0.8666667,
+        "removedGuardKeys": 13
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 178,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/178.glb",
+        "bytes": 123044,
+        "blobSha": "2786cfe579c711d6e767c5716072036bed41aa00",
+        "sha256": "5630e939c8c5c974984dc4fa9ebf813ae7a21bcb7748bf09739669424b1c586e"
+      },
+      "derivative": {
+        "bytes": 133896,
+        "sha256": "54efea76bba7cc65bc6ec34729f84ef4ecb47de3a3da60755f33b597694da748",
+        "animation": "HOME Idle",
+        "duration": 1,
+        "removedGuardKeys": 5
+      },
+      "structure": {
+        "meshes": 3,
+        "images": 3,
+        "textures": 3,
+        "skins": 3,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 179,
+      "status": "source-held",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/179.glb",
+        "bytes": 140112,
+        "blobSha": "8b0dd926517db9be737d23b050a9d2ab4cd3329a",
+        "sha256": "09547c270a3b3eb23cbeed783fb03d461dd5d4541c9d248add89adc385251c74"
+      },
+      "derivative": null,
+      "repairCandidate": {
+        "kind": "zero-additive-placeholder",
+        "bytes": 149360,
+        "sha256": "28509849a12bd90f2dbe20c582d15b8cee2cf8c118d9695e32b27a773c72777e",
+        "normalizedMaterials": 1,
+        "duration": 2.5,
+        "removedGuardKeys": 0,
+        "status": "requires visual material review"
+      },
+      "structure": {
+        "meshes": 2,
+        "images": 3,
+        "textures": 3,
+        "skins": 2,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [
+        "custom blending requires renderer review"
+      ],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 185,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/185.glb",
+        "bytes": 87248,
+        "blobSha": "da35a1401196fc6d415567793cf920d048d22e73",
+        "sha256": "fc991f7d98ff2fe859d413386dadb9c80be407bc2dc0b42792441fb48c90a54b"
+      },
+      "derivative": {
+        "bytes": 96612,
+        "sha256": "7f0effe83b72d8402ab98b7bcea3153eb8b5441bebb8ecc4766b782de89c6b3a",
+        "animation": "HOME Idle",
+        "duration": 2,
+        "removedGuardKeys": 0
+      },
+      "structure": {
+        "meshes": 2,
+        "images": 3,
+        "textures": 3,
+        "skins": 2,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 187,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/187.glb",
+        "bytes": 137348,
+        "blobSha": "be6b71f351aa131e3a287febf5045138a3517f92",
+        "sha256": "39937fa7131a3653c1d1862eea7822a4023c136882eb205424a906f0cc94b1fb"
+      },
+      "derivative": {
+        "bytes": 147516,
+        "sha256": "cf3cc6a62d2398758f17c3c1cdb0d91e6f96b0cc74d6ac83d2bca62d026e226e",
+        "animation": "HOME Idle",
+        "duration": 1.6666666,
+        "removedGuardKeys": 14
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 188,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/188.glb",
+        "bytes": 75452,
+        "blobSha": "86c2a15a3b7c4c6c8141948530a5e62ac124b0ea",
+        "sha256": "d90db80d6740632f991d5f6b49ec8684d3739e9e60decf54753d58e47f1fbdd2"
+      },
+      "derivative": {
+        "bytes": 81652,
+        "sha256": "2c9a5b711114270fdc5c98f8bf5b543c114902d458ca567d68122e08394e9a2b",
+        "animation": "HOME Idle",
+        "duration": 1.6666666,
+        "removedGuardKeys": 0
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 190,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/190.glb",
+        "bytes": 238268,
+        "blobSha": "a5fd787f599be0b79050ed0fe68e9e014ca55a9f",
+        "sha256": "b6812b70dcc89c5fe4121f98bb365fccf5edc75ef9dd8ececd5927194a6a39c5"
+      },
+      "derivative": {
+        "bytes": 249432,
+        "sha256": "2dff5ae24d35868bdfae1eea4b03e858de6cb2676bb65e4da2c29c861e671e5b",
+        "animation": "HOME Idle",
+        "duration": 1,
+        "removedGuardKeys": 43
+      },
+      "structure": {
+        "meshes": 2,
+        "images": 3,
+        "textures": 3,
+        "skins": 2,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 191,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/191.glb",
+        "bytes": 86244,
+        "blobSha": "a3cffe912902e948586424a9ac1db3d6b8c5471d",
+        "sha256": "c98085e819a8f21fa942c86ac84217881be324b62d82a4631be655c783a51bee"
+      },
+      "derivative": {
+        "bytes": 89396,
+        "sha256": "c5ccdd9013fb53fadd3380c46edb7bc5774a873b5a34a04f4dd21a644e85a2d5",
+        "animation": "HOME Idle",
+        "duration": 2,
+        "removedGuardKeys": 0
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 192,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/192.glb",
+        "bytes": 171260,
+        "blobSha": "e7f3b34bfde63aafac46f0f15a16457bbab11d32",
+        "sha256": "ded9108a2548edf071d3bb98a19ac73e0087cfa0fb3f04746bed4c20892205d3"
+      },
+      "derivative": {
+        "bytes": 185708,
+        "sha256": "dc65a32cd411bc8004476024881f2e2558797e5003b461f882f8a0659a2b6f81",
+        "animation": "HOME Idle",
+        "duration": 1.3333334,
+        "removedGuardKeys": 9
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 194,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/194.glb",
+        "bytes": 288104,
+        "blobSha": "5cd592142dac7300de751e2fc2106f67e9fd5526",
+        "sha256": "a181340ac6bc6730a34e91b027a2701b174776cae18b209f8be619085470f01f"
+      },
+      "derivative": {
+        "bytes": 293996,
+        "sha256": "11427bc098798c45f093d3659e1e48dbd5b42f5c53ae0da08a72aa8e5a18e0c9",
+        "animation": "HOME Idle",
+        "duration": 2.6666667,
+        "removedGuardKeys": 26
+      },
+      "structure": {
+        "meshes": 2,
+        "images": 3,
+        "textures": 3,
+        "skins": 2,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 195,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/195.glb",
+        "bytes": 117248,
+        "blobSha": "682be031c6927071e0804d8e1f05ad219452caec",
+        "sha256": "44f71c5c65854d31ab89373c10988fe0e75db690c233d7ce0bf7a2f6211c54da"
+      },
+      "derivative": {
+        "bytes": 128584,
+        "sha256": "560b64691764f5509a2cf63a5ec64f1dd53996571182ee767bcaa8559b2d14f6",
+        "animation": "HOME Idle",
+        "duration": 2.3333333,
+        "removedGuardKeys": 6
+      },
+      "structure": {
+        "meshes": 2,
+        "images": 2,
+        "textures": 2,
+        "skins": 2,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 196,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/196.glb",
+        "bytes": 170344,
+        "blobSha": "733339d665ec8471f1193d22273718ce474bcdb2",
+        "sha256": "e37d56158d5408d5615f8ef25785e85742c32c3e79c6ab6770ccc2ed74f6b984"
+      },
+      "derivative": {
+        "bytes": 185644,
+        "sha256": "2d5ed0dc205307ca54b4636aa148a9ede481639708cbbf0154117b6c0ae1980e",
+        "animation": "HOME Idle",
+        "duration": 2,
+        "removedGuardKeys": 6
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 3,
+        "textures": 3,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 197,
+      "status": "source-screened-only",
+      "admitted": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/home/197.glb",
+        "bytes": 138432,
+        "blobSha": "1b5da322bfe545b1ea4417eb900e8c577993e096",
+        "sha256": "7dbf5123c89821ecdecc63ff7e551658febf0b38f9123131e7a16b360c7adeca"
+      },
+      "derivative": {
+        "bytes": 148264,
+        "sha256": "228831f454fb66703e20a827b951ad713f3d56099540a8cb01b3feacc00c7e4b",
+        "animation": "HOME Idle",
+        "duration": 1.5,
+        "removedGuardKeys": 6
+      },
+      "structure": {
+        "meshes": 1,
+        "images": 5,
+        "textures": 5,
+        "skins": 1,
+        "requiredExtensions": [
+          "EXT_texture_webp",
+          "KHR_draco_mesh_compression"
+        ]
+      },
+      "holdReasons": [],
+      "pending": [
+        "decoded geometry and texture budgets",
+        "three-pose motion and appearance render",
+        "camera clearance sweep",
+        "browser native-playback verification",
+        "protected-preview authorization gate"
+      ],
+      "rightsStatus": "unresolved"
+    }
+  ]
+}
