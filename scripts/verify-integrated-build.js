@@ -1,0 +1,62 @@
+// Verify the exact normal-feed build inventory after npm run build. This is a
+// selection/identity check, not a capable-browser visual acceptance claim.
+import { readFile, readdir, access } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { isIntegratedModelRelease } from './public-model-release.js';
+import { isProtectedFullReviewPreview } from './preview-model-context.js';
+
+if (!isIntegratedModelRelease()) throw Error('Integrated build audit requires the exact release flag');
+const root = new URL('../', import.meta.url);
+const read = async path => JSON.parse(await readFile(new URL(path, root)));
+const [release, selected, historical, ordinary] = await Promise.all([
+  read('dist/release.json'), read('.generated/integrated-models.json'),
+  read('.generated/preview-models.json'), read('content/models/admitted.json'),
+]);
+if (release.integratedModelRelease !== '2026-10-02-1025' || release.admittedModels !== 1025 ||
+    release.nativeIdleModels !== 1025 || release.staticModels !== 0 ||
+    release.integratedNativeIdleCandidates !== 478 || release.offlineVisualHolds !== 35 ||
+    release.offlineVisualUncertain !== 12 || release.capableBrowserVerification !== 'pending-user-check' ||
+    historical.length !== 511 || selected.length !== 478) throw Error('Integrated release inventory mismatch');
+const effective = new Map([...ordinary, ...historical, ...selected].filter(item => item.admitted).map(item => [item.id, item]));
+if (effective.size !== 1025 || [...effective.values()].some(item => !item.animation) ||
+    new Set(selected.map(item => item.id)).size !== 478 ||
+    selected.filter(item => item.visualStatus === 'hold').length !== 35 ||
+    selected.filter(item => item.visualStatus === 'uncertain').length !== 12 ||
+    selected.filter(item => item.sourceAuthoredStationaryWait).map(item => item.id).join(',') !== '597' ||
+    selected.filter(item => item.sourceAuthoredLoopSeam).map(item => item.id).join(',') !== '868,1008') {
+  throw Error('Integrated species or native motion inventory changed');
+}
+const digest = bytes => createHash('sha256').update(bytes).digest('hex');
+let hosted = 0, remote = 0;
+for (const asset of [...historical, ...selected]) {
+  if (!asset.url.startsWith('/models/')) { remote++; continue; }
+  const bytes = await readFile(new URL(`dist${asset.url}`, root));
+  if (bytes.length !== asset.bytes || digest(bytes) !== asset.sha256) throw Error(`Built model identity changed: ${asset.id}`);
+  hosted++;
+}
+if (hosted !== 520 || remote !== 469 || selected.filter(asset => asset.url.startsWith('/models/')).length !== 9) {
+  throw Error('Integrated hosted/remote asset inventory changed');
+}
+const distFiles = await readdir(new URL('dist/', root));
+const models = await readdir(new URL('dist/models/', root));
+const protectedReview = isProtectedFullReviewPreview();
+if (models.filter(name => /^review-repaired-\d+\.glb$/.test(name)).length !== 4) throw Error('Native transfer repair inventory changed');
+if (protectedReview) {
+  const catalog = await read('dist/models/review-catalog.json');
+  if (!distFiles.includes('review.html') || catalog.species.length !== 1025 || catalog.candidates.length !== 478 ||
+      models.filter(name => /^review-original-\d+\.glb$/.test(name)).length !== 40 ||
+      release.protectedResearchPreview !== true || release.wholeCatalogReviewCandidates !== 478) {
+    throw Error('Protected review workbench inventory changed');
+  }
+} else if (distFiles.includes('review.html') || models.includes('review-catalog.json') ||
+    models.filter(name => /^review-original-\d+\.glb$/.test(name)).length !== 5 ||
+    release.protectedResearchPreview !== false || release.wholeCatalogReviewCandidates !== 0) {
+  throw Error('Protected review assets leaked into normal build');
+}
+for (const name of ['draco_decoder.js', 'draco_wasm_wrapper.js', 'draco_decoder.wasm']) {
+  await access(new URL(`dist/model-runtime/draco/${name}`, root));
+}
+console.log(JSON.stringify({ species: effective.size, nativeIdles: 1025, newNativeSelections: selected.length,
+  hostedModels: hosted, remotePinnedNewModels: remote, offlineVisualHolds: 35,
+  offlineVisualUncertain: 12, stationaryNativeWaitIds: [597], authoredLoopSeamIds: [868, 1008],
+  gpuVerified: false, protectedReviewWorkbench: protectedReview }, null, 2));

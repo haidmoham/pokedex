@@ -1,0 +1,34 @@
+{
+  "scope": "Pinned upstream extracted-source metadata pointers only; underlying Pokemon model, texture, motion and shader rights remain unresolved. Fetch only for authorized research or protected-preview preparation; this repository does not redistribute these upstream data files or extracted asset binaries.",
+  "atlasRepository": "rrih/rrih.github.io",
+  "atlasRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+  "atlasTreeSha": "b12f97af180a0fe50541dac019bb267e457bf08d",
+  "files": [
+    {
+      "path": "atlas/scripts/data/home-sources.json",
+      "bytes": 6152639,
+      "blobSha": "8f9b77f92fca8eefafe8208eae3f06ad1984cff8",
+      "sha256": "0b52b67120625b21d8e0f17c632897118b39adad02b175837fb90a95ae7f5983",
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/data/home-sources.json"
+    },
+    {
+      "path": "atlas/scripts/data/home-texture-audit.json",
+      "bytes": 190131,
+      "blobSha": "38c7dc384e6f5f7082548dfa6bb86c04e9c34af3",
+      "sha256": "c36309321e7ed954a07b0c72daf93e28f013e09a9055f3a712b4e8465ea29bfe",
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/data/home-texture-audit.json"
+    },
+    {
+      "path": "atlas/scripts/data/home-animation-audit.json",
+      "bytes": 161911,
+      "blobSha": "537fcaeab2d08e8de87bd29df5d153a95b966630",
+      "sha256": "485eaebe52824e15c3ba86cd57f3364cc41ae700cc8e3f6b6f7e6a66bc273748",
+      "url": "https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/scripts/data/home-animation-audit.json"
+    }
+  ],
+  "geometryRepository": "Lilothestitch16/Pokemon-HOME-GLB-Models",
+  "geometryRevision": "27703273836f38f0e185976d955b1fbfb15448af",
+  "materialMotionRepository": "Lilothestitch16/Pokemon-HOME-Unity-Models",
+  "materialMotionRevision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+  "materialMotionTreeSha": "d8df2b3ea3d70fa8e6c0984fc3c29d5e1856e902"
+}

@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import type { ModelViewerElement } from '@google/model-viewer';
-import { fetchModel, validateModelTextures, ModelAsset } from './model-policy';
+import { fetchModel, validateModelTextures, priorReleasedModel, ModelAsset } from './model-policy';
 import { artwork } from './feed-model';
 import { prepareIdle, idleMayPlay, sampleIdlePose, IDLE_POSE_PHASES } from './model-motion';
+import { HomeModelView } from './home-model-view';
 
 // Probe an independent canvas once per page, before loading the shared renderer.
 // model-viewer can emit load after WebGL construction failed; load is not render proof.
@@ -22,7 +23,7 @@ function hasModelRenderer() {
 }
 
 // Only the active admitted view mounts this component. No adjacent GLB fetches.
-export function ModelView({ asset, name, suspended = false, controlsTarget, onFallback, onFailure, onInspect }: { asset: ModelAsset; name: string; suspended?: boolean; controlsTarget: HTMLDivElement | null; onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void }) {
+function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFallback, onFailure, onInspect, onUseNativeIdle }: { asset: ModelAsset; name: string; suspended?: boolean; controlsTarget: HTMLDivElement | null; onFallback: () => void; onFailure: (reason?: 'unsupported') => void; onInspect: (active: boolean) => void; onUseNativeIdle?: () => void }) {
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<ModelViewerElement | null>(null);
   const inspectButton = useRef<HTMLButtonElement>(null);
@@ -151,7 +152,18 @@ export function ModelView({ asset, name, suspended = false, controlsTarget, onFa
         aria-label={`Show idle pose ${pose === null ? 1 : (pose + 1) % IDLE_POSE_PHASES.length + 1} of ${IDLE_POSE_PHASES.length}`}>
         {pose === null ? 'Still poses' : `Pose ${pose + 1}/${IDLE_POSE_PHASES.length}`}
       </button>}
+      {onUseNativeIdle && <button onClick={onUseNativeIdle}>Try native idle</button>}
       <button onClick={() => fallback.current()}>Use official art</button>
     </div>, controlsTarget)}
   </div>;
+}
+export function ModelView(props: Parameters<typeof LegacyModelView>[0]) {
+  const [usePrior, setUsePrior] = useState(false);
+  const prior = props.asset.integratedNativeIdle ? priorReleasedModel(props.asset.id) : undefined;
+  if (props.asset.runtime === 'home-canvas' && !usePrior) {
+    return <HomeModelView {...props} onUsePriorModel={prior ? () => setUsePrior(true) : undefined}
+      onFailure={reason => { if (prior && reason !== 'unsupported') setUsePrior(true); else props.onFailure(reason); }} />;
+  }
+  return <LegacyModelView {...props} asset={usePrior && prior ? prior : props.asset}
+    onUseNativeIdle={usePrior ? () => setUsePrior(false) : undefined} />;
 }

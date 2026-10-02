@@ -1,7 +1,7 @@
 import {readFile,writeFile,mkdir,readdir,unlink} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {isProtectedModelPreview} from './preview-model-context.js';
-import {isPublicModelRelease,verifyPublicModelManifest,publicModelAsset} from './public-model-release.js';
+import {isProtectedModelPreview,isProtectedIdleExpansionPreview,isProtectedFullReviewPreview} from './preview-model-context.js';
+import {isPublicModelRelease,verifyPublicModelManifest,publicModelAsset,PUBLIC_MODEL_MANIFEST_SHA256} from './public-model-release.js';
 import {trimHomeIdle} from './trim-home-idle.js';
 import {compressHomeAnimation} from './compress-home-animation.js';
 import {selectCatalogIdle,reviewedCatalogSource} from './select-catalog-idle.js';
@@ -11,12 +11,20 @@ await mkdir(directory,{recursive:true});await mkdir(generated,{recursive:true});
 // Only remove this build step's generated assets, including after a preview build.
 for(const name of await readdir(directory))if(/^home-preview-\d+\.glb$/.test(name))await unlink(new URL(name,directory));
 let assets=[];
+const idleExpansionPreview=isProtectedIdleExpansionPreview();
 const publicRelease=isPublicModelRelease()&&!isProtectedModelPreview();
 if(isProtectedModelPreview()||publicRelease){
  const manifestBytes=await readFile(new URL('../content/models/protected-preview.json',import.meta.url));
- if(publicRelease)verifyPublicModelManifest(manifestBytes);
+ // The released base is immutable in production and every protected preview.
+ verifyPublicModelManifest(manifestBytes);
  const manifest=JSON.parse(manifestBytes);
- assets=manifest.assets;
+ const publicBaseCount=manifest.assets.length;
+ assets=[...manifest.assets];
+ if(idleExpansionPreview){
+  const expansion=JSON.parse(await readFile(new URL('../content/models/idle-expansion-preview-2026-10-02.json',import.meta.url)));
+  if(expansion.baseManifestSha256!==PUBLIC_MODEL_MANIFEST_SHA256||!Array.isArray(expansion.assets)||expansion.assets.length!==3)throw Error('Unreviewed idle expansion inventory');
+  assets.push(...expansion.assets);
+ }
  if(!Array.isArray(assets)||assets.length>1025)throw Error('Invalid preview inventory');
  const normalModels=JSON.parse(await readFile(new URL('../content/models/admitted.json',import.meta.url)));
  const ids=new Set();
@@ -50,7 +58,7 @@ if(isProtectedModelPreview()||publicRelease){
   if(asset.url!==`/models/home-preview-${asset.id}.glb`)throw Error('Invalid preview destination');
   await writeFile(new URL(`home-preview-${asset.id}.glb`,directory),result.bytes);
  }}));
+ if(publicRelease||idleExpansionPreview||isProtectedFullReviewPreview())assets=assets.map((asset,index)=>index<publicBaseCount?publicModelAsset(asset):asset);
 }
-if(publicRelease)assets=assets.map(publicModelAsset);
 await writeFile(new URL('preview-models.json',generated),JSON.stringify(assets)+'\n');
 console.log(`${assets.length} extracted models prepared for ${publicRelease ? 'approved public release' : 'protected preview'}`);

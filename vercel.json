@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "POKEDEX_MODEL_RELEASE=2026-10-01-998 npm run build",
+  "buildCommand": "POKEDEX_MODEL_RELEASE=2026-10-02-1025 npm run build && POKEDEX_MODEL_RELEASE=2026-10-02-1025 npm run audit:integrated",
   "outputDirectory": "dist",
   "functions": {
     "api/index.js": {
@@ -11,6 +11,10 @@
     {
       "source": "/api/:path*",
       "destination": "/api/index"
+    },
+    {
+      "source": "/review",
+      "destination": "/review.html"
     },
     {
       "source": "/((?!api/).*)",

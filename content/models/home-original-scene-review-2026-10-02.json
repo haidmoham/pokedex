@@ -1,0 +1,1408 @@
+{
+  "checkedAt": "2026-10-02",
+  "scope": "40 local original-HOME primitive/material restoration candidates; binaries and full upstream material map remain uncommitted. Source native curves and geometry compare exactly; emission mask strength follows pinned source values. Shader approximation, GPU appearance and admission remain unverified.",
+  "rightsStatus": "unresolved",
+  "sourceMetadataPointer": "content/models/home-upstream-metadata-pointers-2026-10-02.json",
+  "counts": {
+    "candidates": 40,
+    "standardTransfer": 31,
+    "exactPreviewTransferExceptions": 9,
+    "sourceLayerEquationHolds": 17,
+    "metadataPreflightPass": 23,
+    "specialAtlasCompatibilitySpecies": 7
+  },
+  "rows": [
+    {
+      "id": 88,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 1)/pm0088_00_00.glb",
+        "blobSha": "cf0d77f96cb0fafc6eabc9fc5bc3cfdfef7c29d2",
+        "bytes": 405772,
+        "sha256": "80df0ff5f6e2519cbb97379e1ebaf269687eeb2b8ac1602b3dc4d1b863b5c9e1"
+      },
+      "atlasSourceSha256": "2237f9ee5c980cfa1ec389d61bc8c7be5c64d3075375b6959af7e356a756ec0f",
+      "nativeWait": {
+        "path": "Mitake01rg/Assets/sandbox/models/01rg/pm0088_00_00/fbx/ac/pm0088_00_00_ba10_waitA01.anim",
+        "blobSha": "88cea1f4ed11171cc0cd679c59eb257fc95cf792",
+        "bytes": 493996,
+        "sha256": "7de319d8af6619ccfad796ad466a2a1bf3b44478ce28fabcc7ab6a20763cc53b"
+      },
+      "derivative": {
+        "bytes": 730552,
+        "sha256": "dd94604894afa21eac5bf83a86de2c143bbc8457508920273fe2744fda85e162",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4718592,
+        "declaredGeometryBytes": 1079484,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 89,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 1)/pm0089_00_00.glb",
+        "blobSha": "247e8233b00d125968c777ed5b1c5261ca042d45",
+        "bytes": 452592,
+        "sha256": "49cfc8ea44b0c745251704a4220d8422a62f786b666754259067a3c234edacaf"
+      },
+      "atlasSourceSha256": "06bd45dbd75763ff6c179e542f8e65bdd950974c242be57b8f2b7c8592091875",
+      "nativeWait": {
+        "path": "Mitake01rg/Assets/sandbox/models/01rg/pm0089_00_00/fbx/ac/pm0089_00_00_ba10_waitA01.anim",
+        "blobSha": "d75dbd75b510b2fb35f8b906a78f8085d94dcb47",
+        "bytes": 520965,
+        "sha256": "a5b15bd067c81a9f93cc168c3d0588ef2c5243663900056500206cb62cdc4b3f"
+      },
+      "derivative": {
+        "bytes": 697220,
+        "sha256": "23f8d2d3d02c97b1e56b5fe1eb6734046860b2f663c43405c602a88407c51fb4",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4543830,
+        "declaredGeometryBytes": 1140275,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 126,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 1)/pm0126_00_00.glb",
+        "blobSha": "318dcffb7ace8b541f08f3fbc3e5069c41e0d1aa",
+        "bytes": 323164,
+        "sha256": "0a311e245b9f345c5cd01300d0b86a4e132b377da7fff051704b9e7edb4edd40"
+      },
+      "atlasSourceSha256": "f519cb6914c465829370719cb6d5f391f08e821d13b54579cc8d70c8f0613bdf",
+      "nativeWait": {
+        "path": "Mitake01rg/Assets/sandbox/models/01rg/pm0126_00_00/fbx/ac/pm0126_00_00_ba10_waitA01.anim",
+        "blobSha": "0be1a86c2bde0c4fc68ec25f0b21c75a159c0683",
+        "bytes": 738715,
+        "sha256": "322298fa47875a75b3e0e8eccb6fd493d13c019f38dd6f26d92db01059ae65e4"
+      },
+      "derivative": {
+        "bytes": 557668,
+        "sha256": "585c570e411cb9b77bcfee7a30d1cdd622aacbd8f58ec66001bb2117c5db8137",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 7340032,
+        "declaredGeometryBytes": 910311,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": [
+        {
+          "name": "pm0126_00_00-FireCore",
+          "mode": "core"
+        },
+        {
+          "name": "pm0126_00_00-FireMask",
+          "mode": "mask"
+        }
+      ]
+    },
+    {
+      "id": 219,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 2)/pm0219_00_00.glb",
+        "blobSha": "9c95f8fa66a00dce96d71b1cf3e9e30c1cee2e42",
+        "bytes": 641164,
+        "sha256": "3a3efbe8107b01b46bf152abe0562caa91067575fa1a6c0186035f5d508e1ad4"
+      },
+      "atlasSourceSha256": "7102a74efdf994648101ac786a23977d0efff3df4c5b4f465a786edc96abd602",
+      "nativeWait": {
+        "path": "Mitake02gs/Assets/sandbox/models/02gs/pm0219_00_00/fbx/ac/pm0219_00_00_ba10_waitA01.anim",
+        "blobSha": "35789478acd95f34fb6da01a60eebcc03b7f02cb",
+        "bytes": 518434,
+        "sha256": "df4fe60510a3e2e9c6e772ddc033db67a1d1901d5c6f71e19e6e0649a582704c"
+      },
+      "derivative": {
+        "bytes": 1127540,
+        "sha256": "9250ef7489c7e0ac37f303b268d1b2b51c5bcb8c488479e3a518ea35557224f1",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 9792171,
+        "declaredGeometryBytes": 1696385,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0219_00_00-BodyB",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": [
+        {
+          "name": "pm0219_00_00-FireCore",
+          "mode": "core"
+        },
+        {
+          "name": "pm0219_00_00-FireMask",
+          "mode": "mask"
+        }
+      ]
+    },
+    {
+      "id": 467,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 4)/pm0467_00_00.glb",
+        "blobSha": "b1220ac36ddafd35d60f457d6c751d6f084f430c",
+        "bytes": 410808,
+        "sha256": "ec9f520289817454cb7ea82a083eb639b9f7b488eef51d6ae319031509bb40d9"
+      },
+      "atlasSourceSha256": "793a679d582c3352d492cb32a26143e8481fd13658dc9e44564de3684a34bae9",
+      "nativeWait": {
+        "path": "Mitake04dp/Assets/sandbox/models/04dp/pm0467_00_00/fbx/ac/pm0467_00_00_ba10_waitA01.anim",
+        "blobSha": "f6569ae0de04257e552564a9fb25ae8ef55cb46c",
+        "bytes": 1087026,
+        "sha256": "89f6786825af9e5843781be8fde477647ee6e13aa62f33e3a55202fc8ddaaff0"
+      },
+      "derivative": {
+        "bytes": 662948,
+        "sha256": "a3676fe2d76574a379a7cf24a7190d117d2a41ffd0cc2b9ec4bbe8e83a75d582",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4543830,
+        "declaredGeometryBytes": 1112851,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 477,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 4)/pm0477_00_00.glb",
+        "blobSha": "5e55bbff63fa1de6c8e485fad9a4bf420d24a8eb",
+        "bytes": 372224,
+        "sha256": "5bc59a4c57ef0c9dbd5f1dd8f167f5341e5ebb58d48afff8f840acd1b5d6e7b8"
+      },
+      "atlasSourceSha256": "c87c3c5f2b28617c1febb5a2e9968c93f0cd51a9d24247eeab104e28d8813d79",
+      "nativeWait": {
+        "path": "Mitake04dp/Assets/sandbox/models/04dp/pm0477_00_00/fbx/ac/pm0477_00_00_ba10_waitA01.anim",
+        "blobSha": "052c3f37f510229d668e5f771dc5f21fdefc02e5",
+        "bytes": 746436,
+        "sha256": "9d186bb123e0cd04575bb46670bceb4bffc2aca8096316fa4e64e4d31a51bfb8"
+      },
+      "derivative": {
+        "bytes": 564600,
+        "sha256": "48093df2e4b48e621d512ae77bb5910331a00d6aacd298f0290859b96850baee",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5084502,
+        "declaredGeometryBytes": 1133338,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0477_00_00-BodyA04",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0477_00_00-BodyA00",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0477_00_00-BodyA02",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0477_00_00-BodyCIncNon01",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0477_00_00-BodyCIncNon",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 500,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 5)/pm0500_00_00.glb",
+        "blobSha": "cd2e9e4c47c45a1c5b9c7df00b1de733c68d382d",
+        "bytes": 335956,
+        "sha256": "a581f5f7884d8705f8a4672d4a601d128e892c7fecd10bbac7939520a493cc5f"
+      },
+      "atlasSourceSha256": "cd4d742a741dbe7fb00f113d0df0cc44c242c4be5fef56513897dea2495fe7d0",
+      "nativeWait": {
+        "path": "Mitake05bw/Assets/sandbox/models/05bw/pm0500_00_00/fbx/ac/pm0500_00_00_ba10_waitA01.anim",
+        "blobSha": "9b359364d12290752009ba8bf144671212351e20",
+        "bytes": 428687,
+        "sha256": "0cca89cb49281cb93cbb118d4fb4839599deb5e976596c3b7fcc5e6ecd482608"
+      },
+      "derivative": {
+        "bytes": 439600,
+        "sha256": "5c9b932a82fc1c6f2f19c754893c6ec917ebc0904cfa5ad2c6c41656e6c48f28",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4025003,
+        "declaredGeometryBytes": 754570,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 555,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 5)/pm0555_11_00.glb",
+        "blobSha": "b3c60a1c22e965b70a59b94462c387a634e0d7a1",
+        "bytes": 266804,
+        "sha256": "588796a3aae66634deddb2784dc69c5c82a31aa34bae7e7e7b323ff313cb9af0"
+      },
+      "atlasSourceSha256": "cdaf3263de89f8185c857153b2342eeab22d275e05f86ba2746070fa73033fce",
+      "nativeWait": {
+        "path": "Mitake05bw/Assets/sandbox/models/05bw/pm0555_11_00/fbx/ac/pm0555_11_00_ba10_waitA01.anim",
+        "blobSha": "23f8a1fe5037e91b720a12a440aea6b74ad254bb",
+        "bytes": 511190,
+        "sha256": "f277469f3518dfd0a0eb37ce16664b6a133198bf3075613c1ee95f2ca735b75c"
+      },
+      "derivative": {
+        "bytes": 403400,
+        "sha256": "9310702b50618d51a23068651272a8884f525593c28bc9fe9f61852697628ef0",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3495254,
+        "declaredGeometryBytes": 693599,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 698,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 6)/pm0698_00_00.glb",
+        "blobSha": "9f38647e88bf1ea2f16e79e0cd2d085b5efc5d91",
+        "bytes": 314772,
+        "sha256": "f445db6a8e0d48bfd134c0f925ab4dd7162885202f4f77e8fe08e896dc704558"
+      },
+      "atlasSourceSha256": "bf56ff21944348543482d1dc6f7bf8a1bbe1a50fa17f93bc6c090ee4e50f2761",
+      "nativeWait": {
+        "path": "Mitake07xy/Assets/sandbox/models/07xy/pm0698_00_00/fbx/ac/pm0698_00_00_ba10_waitA01.anim",
+        "blobSha": "3338e214643c95eaedf9fd860d0861d42166db09",
+        "bytes": 191208,
+        "sha256": "fce4d90d31f50655947278e0a8d786c76a989178bbcef334dfed68015bfb0866"
+      },
+      "derivative": {
+        "bytes": 390900,
+        "sha256": "c98fdf41d93371166e09f47cfb8a8fb15975a809c200a36bf8603ccd1134bf2b",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3063808,
+        "declaredGeometryBytes": 680873,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0698_00_00-BodyB",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 699,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 6)/pm0699_00_00.glb",
+        "blobSha": "61aa8027c7ee4297175de16e81903cd240e775b8",
+        "bytes": 340492,
+        "sha256": "49e5501ba43746137e8c2e7904494217151b1758b77b0981d0a0193078c83881"
+      },
+      "atlasSourceSha256": "1060b71a4cfb51f93c1fd44f3357d3f1c46e21f5f9419520f024e877400d611d",
+      "nativeWait": {
+        "path": "Mitake07xy/Assets/sandbox/models/07xy/pm0699_00_00/fbx/ac/pm0699_00_00_ba10_waitA01.anim",
+        "blobSha": "d2db704979197c6ea3072c410724bc07b086961e",
+        "bytes": 511824,
+        "sha256": "8fa82f5a7d783d370c069f01b8961cfe9491cc1b854871115e19e4f1e5532ded"
+      },
+      "derivative": {
+        "bytes": 669956,
+        "sha256": "b3d644d624dcfa79d728c03f8d15c0f19a7f35d9f7d72635e327870076c298c1",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 6990507,
+        "declaredGeometryBytes": 1062091,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0699_00_00-BodyBInc",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 716,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 6)/pm0716_00_00.glb",
+        "blobSha": "0958ca748696421eee0c3d63d9b96b904ece45d8",
+        "bytes": 517316,
+        "sha256": "b672057b6d3810d7db3c5d764f8d42f713af99c39b42e28e87a6be3e752d8cc7"
+      },
+      "atlasSourceSha256": "7b9022571ce8ad14cb5613c763018a59fdb3c4a6be0d6fd2247a87cc992e429e",
+      "nativeWait": {
+        "path": "Mitake07xy/Assets/sandbox/models/07xy/pm0716_00_00/fbx/ac/pm0716_00_00_ba10_waitA01.anim",
+        "blobSha": "38cf0ae42983861edf4e9b9a07cdd99874c3dfb8",
+        "bytes": 332364,
+        "sha256": "72b3fe544e2d45385af1a3141ce2f879d361447c4bb4033be92d763dcaf45f3e"
+      },
+      "derivative": {
+        "bytes": 603100,
+        "sha256": "d5a417996c7f08798451285a2ad040b61daf65bdfa737896741d523f77849cfc",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 7176192,
+        "declaredGeometryBytes": 1048659,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0716_00_00-BodyAInc00",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0716_00_00-BodyCInc",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0716_00_00-BodyBInc00",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0716_00_00-BodyAInc01",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0716_00_00-BodyBInc01",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 718,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 6)/pm0718_00_00.glb",
+        "blobSha": "91cbcb4d94327f53c9d04f422b12afad2a14ff65",
+        "bytes": 408448,
+        "sha256": "8581107352688803122aacb15de37b18a284bfab9580a56b7ca580c24384d1e9"
+      },
+      "atlasSourceSha256": "7232e7e0377191948656389bb3e68bb9896d6e3c88328c1293c0a95da001a8f8",
+      "nativeWait": {
+        "path": "Mitake07xy/Assets/sandbox/models/07xy/pm0718_00_00/fbx/ac/pm0718_00_00_ba10_waitA01.anim",
+        "blobSha": "7e21945a18ee41aebc35b7ef4080eb64f6ac8834",
+        "bytes": 282929,
+        "sha256": "f34c241ca55d15e52af6f582d57cbd999946048998716a1b97db61c9ee18cab6"
+      },
+      "derivative": {
+        "bytes": 986128,
+        "sha256": "ec619160954d7b6eb9507141137fee26c53c2ca5d3c5e06f3f02b1dde3cb015f",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5778091,
+        "declaredGeometryBytes": 1390220,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0718_00_00-BodyAVco",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0718_00_00-BodyBVco",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0718_00_00-EffBInc00",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0718_00_00-EffBInc01",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 726,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 7)/pm0726_00_00.glb",
+        "blobSha": "ecad2e9e49d844a02170a252e35121572a925586",
+        "bytes": 419644,
+        "sha256": "8ff134865108916e0a07b4a6f761578b0744c3537c365bf26bea6427ce961a4c"
+      },
+      "atlasSourceSha256": "0bf8de09fc31112d0a64f511c589e083190976195ebf482db8c194c1fbddf1e8",
+      "nativeWait": {
+        "path": "Mitake09sm/Assets/sandbox/models/09sm/pm0726_00_00/fbx/ac/pm0726_00_00_ba10_waitA01.anim",
+        "blobSha": "101810ba957d6ae5c3f28aba3c003107841dbf15",
+        "bytes": 352007,
+        "sha256": "729d09d6a561924f13f2123bb6711b0e1d7ea1aa67e6ee698fba8b017cb308e5"
+      },
+      "derivative": {
+        "bytes": 565412,
+        "sha256": "ce4e6e72734ec6829f4ba2a76bddeaf77f6cab035d4cb7f63957ee4429b34ed5",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4287147,
+        "declaredGeometryBytes": 909724,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 727,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 7)/pm0727_00_00.glb",
+        "blobSha": "e8e2d6721c5250ae611aeab074f2ae81467affcc",
+        "bytes": 581736,
+        "sha256": "10c507aac52e0835524e15112f996f1fb660ca6d847633bff3031b86b43f5200"
+      },
+      "atlasSourceSha256": "14dc4c6d64f4e1f5ca43ee224b28ae8a41f2b1395a53566c7f9d1f8005db943f",
+      "nativeWait": {
+        "path": "Mitake09sm/Assets/sandbox/models/09sm/pm0727_00_00/fbx/ac/pm0727_00_00_ba10_waitA01.anim",
+        "blobSha": "9eb224a24090facb21ae57f59def1ae77052c800",
+        "bytes": 592317,
+        "sha256": "348015679e1bee60dd50f0f9bdf1514a540dc267c44ca5c4001418a0b07821b8"
+      },
+      "derivative": {
+        "bytes": 659188,
+        "sha256": "3bd113b5b96f04130c5875e97074160cfb180f9288a9cba1277a4750196d3ea8",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 2539520,
+        "declaredGeometryBytes": 1179160,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 751,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 7)/pm0751_00_00.glb",
+        "blobSha": "fd8ddb224c6836bc5a4e965a94816dd17e956f86",
+        "bytes": 447036,
+        "sha256": "a8627b10e5d5cfeb6070d55cb440be9bceaf9302db673393dd62c640568ca16d"
+      },
+      "atlasSourceSha256": "581a7599af28db6f9be1629d7b995c0f5ffde13e435bbb25b042e0e786370c30",
+      "nativeWait": {
+        "path": "Mitake09sm/Assets/sandbox/models/09sm/pm0751_00_00/fbx/ac/pm0751_00_00_ba10_waitA01.anim",
+        "blobSha": "8bac7ba48f413a049ac8222fb36cc12f11b8daa8",
+        "bytes": 243473,
+        "sha256": "2cfeddd073190de9f6b0420f7d203294c0f9d47efdecdd43399f2c51ec221362"
+      },
+      "derivative": {
+        "bytes": 539716,
+        "sha256": "c0a0f5949b907e0bcc39e1c33ccd3c061c8dd8b70647eb77a6735fca55f8b710",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 6378838,
+        "declaredGeometryBytes": 955240,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 794,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 7)/pm0794_00_00.glb",
+        "blobSha": "a0df7b8fe323be397e79a77d604b2181354374a5",
+        "bytes": 567736,
+        "sha256": "aa163c0ba2a74da6b4a6936e8e88b1394f81cb7231d24e44e9f20765e6784340"
+      },
+      "atlasSourceSha256": "62a6289c79174338724cf3e3f0bafd767df41964d7525e8482915cb3dbf880ff",
+      "nativeWait": {
+        "path": "Mitake09sm/Assets/sandbox/models/09sm/pm0794_00_00/fbx/ac/pm0794_00_00_ba10_waitA01.anim",
+        "blobSha": "fe307a8f714943671eb9249245778fd77cc1a357",
+        "bytes": 386380,
+        "sha256": "428ed080a2760facbf4ceee4852b3a833eb5963a1c3e888732ce9ea97724e989"
+      },
+      "derivative": {
+        "bytes": 538060,
+        "sha256": "dae7f5ea2293db3b5e1b647409ebefadad478f058ce7f23b03e625e854be7e3a",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3156651,
+        "declaredGeometryBytes": 1016514,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 802,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 7)/pm0802_00_00.glb",
+        "blobSha": "e2590cb99a7c4ef46549f40e1af82a1801c0a1b1",
+        "bytes": 509732,
+        "sha256": "340a55fcff9b7011699f1621a12e75fd4480f5899164e702f983ee2bb29dba2d"
+      },
+      "atlasSourceSha256": "eaed9e30c94aeccd9defb5dcf45cd1cdc1989758ea6d5ad906e0e43bb5bc4f05",
+      "nativeWait": {
+        "path": "Mitake09sm/Assets/sandbox/models/09sm/pm0802_00_00/fbx/ac/pm0802_00_00_ba10_waitA01.anim",
+        "blobSha": "fe7dc8faea640f6ee89f47e2801e406293c10555",
+        "bytes": 555597,
+        "sha256": "835f93c37315e3010418dd96004bee40a09ac1ca0ab78b0086dcfd017d215d8f"
+      },
+      "derivative": {
+        "bytes": 595300,
+        "sha256": "ef5dbf86941f3712d5b562606d126242bf82c8d0bd0c932d78bd7e430f2b37c3",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 8394070,
+        "declaredGeometryBytes": 1044011,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0802_00_00-BodyA",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0802_00_00-BodyBVco01",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0802_00_00-Eye",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 826,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 8)/pm0826_00_00.glb",
+        "blobSha": "52ce6952362033f4b3a69dd362be567241862c6b",
+        "bytes": 743956,
+        "sha256": "da4f57e6d393122eba0c375825d27c75d8fe8d7b09d03ef511175656cf432e02"
+      },
+      "atlasSourceSha256": "dc25d07f5b4ec1f28a3867c11ace22e8dde24f6def0523b866e58a7d3b7948fe",
+      "nativeWait": {
+        "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0826_00_00/fbx/ac/pm0826_00_00_ba10_waitA01.anim",
+        "blobSha": "08e94a9f9c1f835d0b693ffeb24c78ebd13a1314",
+        "bytes": 198361,
+        "sha256": "6ac6ef0101bd907986db5ae0b1c3ff4863e7036c3a9c1aee559604f9e0131a66"
+      },
+      "derivative": {
+        "bytes": 494460,
+        "sha256": "37f0b5b5d4acbe0b04034f565865059ecaaee20a7097479db1b8561a5c30c397",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3713707,
+        "declaredGeometryBytes": 1196360,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0826_00_00-BodyAIncVco",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0826_00_00-BodyBVco",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0826_00_00-BodyBIncVco",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 839,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 8)/pm0839_00_00.glb",
+        "blobSha": "656f7e5377517cf2414e36a62c444c7d39e0f45e",
+        "bytes": 714620,
+        "sha256": "8994f9e3b91051516cb216ef2f06daae5c036d547a3514373c5ad475d7c9037f"
+      },
+      "atlasSourceSha256": "be5d19209ba8988977b3a58ed6a9b9bdc0a49b83927eff735fff36c6620adb97",
+      "nativeWait": {
+        "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0839_00_00/fbx/ac/pm0839_00_00_ba10_waitA01.anim",
+        "blobSha": "702076b2919247818e18f954cb1e82ceb2c1c9e7",
+        "bytes": 940519,
+        "sha256": "e0ec7b855c8adda6904307330098a9bee2b5094e5c3cb489b4ff98d8da878a68"
+      },
+      "derivative": {
+        "bytes": 735720,
+        "sha256": "a2189ea9149006a40a3331029fbedd81385e24b0c8d69166681de9c8e643d79c",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 9349803,
+        "declaredGeometryBytes": 1380984,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0839_00_00-BodyCIncVcoEnv",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0839_00_00-BodyCInc",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0839_00_00-Eye",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0839_00_00-BodyBInc",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 864,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 8)/pm0864_00_31.glb",
+        "blobSha": "10ea66066633a38dbf5634cd286aeb9f9ed3f900",
+        "bytes": 1392008,
+        "sha256": "b7a978c959317064a3375709830aa5eded7fc70a22eba54132bd06754684a84c"
+      },
+      "atlasSourceSha256": "cc7511ceaf0133e5f0dc840049ef33d8e0e89db671a663b4bdfd5b50b08ba708",
+      "nativeWait": {
+        "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0864_00_31/fbx/ac/pm0864_00_31_ba10_waitA01.anim",
+        "blobSha": "d680a7e0b50b49afc6c3cd07a2b93c665f250f98",
+        "bytes": 898911,
+        "sha256": "ef51b8ae4c41f7ce52c22ad7e2118e0e37b93117d353c92338a19ae57c07272f"
+      },
+      "derivative": {
+        "bytes": 1170036,
+        "sha256": "5baeeaed53c8f21e528392b11d880e474c9c08646599ffad8f46f6eef7901255",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3680939,
+        "declaredGeometryBytes": 2349489,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 869,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 8)/pm0869_11_00.glb",
+        "blobSha": "ea2a1c83e2fc0a51e32b7f9739787d8d533663a8",
+        "bytes": 449232,
+        "sha256": "68826e484efb3c0057328dcdc7cdb7d5ad99ba71235cdf35d240e57995f7e0b7"
+      },
+      "atlasSourceSha256": "c588528f22498fd7c8a863f34ac4eb75d2f8f059c1929c63461fda3814a76771",
+      "nativeWait": {
+        "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0869_11_00/fbx/ac/pm0869_11_00_ba10_waitA01.anim",
+        "blobSha": "ff24254c1ad01f5400cf8b79453d939e696dc583",
+        "bytes": 220258,
+        "sha256": "bc330c081523c02f7f3d278d2c9ccd0d7a94c6587bec5251d4453d2058ddea71"
+      },
+      "derivative": {
+        "bytes": 407016,
+        "sha256": "4238675318c66db6e8ef103dfbee4bcebcbd830669b4bd2845f1f8744d98181d",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5625174,
+        "declaredGeometryBytes": 803595,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0869_11_00-Eye",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0869_11_00-BMouth",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0869_11_00-AMouth",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 887,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 8)/pm0887_00_00.glb",
+        "blobSha": "0e9f549e1b9413f4a50bfa0269c5bcd1392372da",
+        "bytes": 731776,
+        "sha256": "bd54149ebf4426c7588ce166b1230c09c38cae3fdb030573e15cd14f14abb84b"
+      },
+      "atlasSourceSha256": "741fa8b2dff3ecec55c45050dccf35a770e1dfb4f7724c0e01810263294e7346",
+      "nativeWait": {
+        "path": "Mitake12orion/Assets/sandbox/models/12orion/pm0887_00_00/fbx/ac/pm0887_00_00_ba10_waitA01.anim",
+        "blobSha": "8acfb0c4c419908c338bc3c37f423ebb9c95955a",
+        "bytes": 635176,
+        "sha256": "a7a22ec4848f9a4758c161b1e33228890ca491e4c06d53954adb0422c38c451a"
+      },
+      "derivative": {
+        "bytes": 717056,
+        "sha256": "1c075d746a6dd8186138cb3f81f58ce02d1e379daa2765a82a8baac0b64dff6e",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3495254,
+        "declaredGeometryBytes": 1420089,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 935,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0935_00_00.glb",
+        "blobSha": "61dec29f93ebf274f929e5e0df23cbacc89a90e6",
+        "bytes": 279832,
+        "sha256": "60c1713c76891b4376feb357e8f15361b8a81eaf2871844658263c6c0dc0a035"
+      },
+      "atlasSourceSha256": "44f7d8a05fe66a20e6d6125afe38dd06a07c8a273a117ba7e9a5149bfef308d4",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0935_00_00/fbx/ac/pm0935_00_00_ba10_waitA01.anim",
+        "blobSha": "2cf4a0c04de7ede066d843c1e53a7ae3e3ef8a15",
+        "bytes": 545536,
+        "sha256": "4b3bd6e3e8cc0bec6f809123be5df645bae777f0db5c44036c77802b3a3f446a"
+      },
+      "derivative": {
+        "bytes": 370780,
+        "sha256": "7aef7e88adb19af6b483d85f63e0e7f4dd2c337511cd82cccdf381b112dede93",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4281686,
+        "declaredGeometryBytes": 592690,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0935_00_00-Body00",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0935_00_00-Body02",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0935_00_00-Body01",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 936,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0936_00_00.glb",
+        "blobSha": "5dca41c710aacd42339f32f4277126d80ec8eac0",
+        "bytes": 462024,
+        "sha256": "2878bb8a8df5bfb30a5cafe3c87716d85d2652b2e72af41343d0af38755a1df3"
+      },
+      "atlasSourceSha256": "5bde32027527c38c9174c37c62544279ede60c27291335fc9b83693a4154a2b3",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0936_00_00/fbx/ac/pm0936_00_00_ba10_waitA01.anim",
+        "blobSha": "89ca9b079386a458a3626ddcc84d088085c221cd",
+        "bytes": 284778,
+        "sha256": "8d47d4c3d54f7bf9c847f030f2a1764cd1f83ad6d1f32826b2b132c05f5f84f5"
+      },
+      "derivative": {
+        "bytes": 438408,
+        "sha256": "6530f84d4a5184858d9876a2594b44eacf065a36843724f6ab787a299f334a2f",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3582635,
+        "declaredGeometryBytes": 828852,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 937,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0937_00_00.glb",
+        "blobSha": "f5fdf7c79a16044493fb1e2c63cb134779dd9ebc",
+        "bytes": 456596,
+        "sha256": "7e1f0ad76a9ea673bcc1fd0109e0e169185046836d95ebf1e3223382ff6a7b8a"
+      },
+      "atlasSourceSha256": "fd780c943f898a8acfb03e7ec907e3b89633660129b2577bb912c6c6ffea6f13",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0937_00_00/fbx/ac/pm0937_00_00_ba10_waitA01.anim",
+        "blobSha": "717021776c9dc450a8fc0d4455f0d378b35ef74d",
+        "bytes": 514845,
+        "sha256": "23c1c8785816de978343de62ee7674f72aebb264e441b6ddec2fac749ab9ff57"
+      },
+      "derivative": {
+        "bytes": 508896,
+        "sha256": "1d0925efe955ec6b92ee17d65fa8297fdbca8d250099ab9783657a17dc576bbb",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3582635,
+        "declaredGeometryBytes": 907190,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 949,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0949_00_00.glb",
+        "blobSha": "96927f1dfeeea61f6e7b0a6528105895c198b379",
+        "bytes": 551204,
+        "sha256": "2831dab2ec83701e93aa6b3999bae8ce53bd9414a1347378541c614a158568bc"
+      },
+      "atlasSourceSha256": "a2afbd20b32a196170eee23defc10f14ad2e92fe5a4b8e55c66ef2711f28de22",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0949_00_00/fbx/ac/pm0949_00_00_ba10_waitA01.anim",
+        "blobSha": "9971324251c9e3e0cea4f16bdcc2736eda2c830a",
+        "bytes": 1218451,
+        "sha256": "1e58443c961b98573d2d577d5ec538a82851591a63a75709e75ccc967a750523"
+      },
+      "derivative": {
+        "bytes": 539364,
+        "sha256": "edc843459ce1b551a2e0fd2ad5a86c28d2ebaf310f79b92d63ebdcfb7a42e6ff",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 2184534,
+        "declaredGeometryBytes": 1140736,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 954,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0954_00_00.glb",
+        "blobSha": "4bbd8f91e98977aaa06cae2898208746f9568d4f",
+        "bytes": 909824,
+        "sha256": "b71c3efad091cd2341bc1340e2236f7e367e0bc9dacb272ebb4f14d5b70dafed"
+      },
+      "atlasSourceSha256": "a8d43297dea9b3ba7aec64e1497601c6128898a34417d01fc5208f02dff43bd3",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0954_00_00/fbx/ac/pm0954_00_00_ba10_waitA01.anim",
+        "blobSha": "deaa59395bb3a73b55e91be4b41dffa68e669bab",
+        "bytes": 395927,
+        "sha256": "a84924b87e5365b622849816f7feda85f6bad517af01eb48d9235537b1a7ec13"
+      },
+      "derivative": {
+        "bytes": 684084,
+        "sha256": "07cbe636e7faf7812622d2112dda991fd4d6d4244ba827d29488f77635ad2fcb",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4194304,
+        "declaredGeometryBytes": 1644976,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0954_00_00-BodyB",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0954_00_00-BodyBTra00",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0954_00_00-BodyBTra01",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 990,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0990_00_00.glb",
+        "blobSha": "711e2a23d8210b2652c1384e6a94d02d71e0e8c5",
+        "bytes": 436848,
+        "sha256": "f7e64a128bc11a91afe0e6b406ca76878738f027b22f4e47dbb0e1ae635a53f4"
+      },
+      "atlasSourceSha256": "008007dfdc857d4c8b4bbc04553da32d4aeb5fac27532568aed60bf9072768fe",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0990_00_00/fbx/ac/pm0990_00_00_ba10_waitA01.anim",
+        "blobSha": "61fd3cd01b719690648dad8a8d8d03e54fb6c1d9",
+        "bytes": 613228,
+        "sha256": "e4559046d92b4e0b955512bb6b06a27d971bf521f8f05fbe17180076819a9020"
+      },
+      "derivative": {
+        "bytes": 418908,
+        "sha256": "b46288c5223f488f4d08a8b5b9c28ccd9c1694c7f2872d3129fd60280f5107c3",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4991659,
+        "declaredGeometryBytes": 774582,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0990_00_00-LEye",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0990_00_00-REye",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": [
+        {
+          "name": "pm0990_00_00-BodyATra",
+          "mode": "constant-additive"
+        }
+      ]
+    },
+    {
+      "id": 991,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0991_00_00.glb",
+        "blobSha": "7f02b2fb59b75ce74d78a8ffe93e781a82405a8f",
+        "bytes": 850188,
+        "sha256": "d04f30b4a6c691ae94a01fd71b254c1964f0229b7a44c069a18ab19cfe4d0318"
+      },
+      "atlasSourceSha256": "8a36b84bee5990b0d36e8e981b73af15c85ff4d9306866c15a27b9e7ca6617a2",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0991_00_00/fbx/ac/pm0991_00_00_ba10_waitA01.anim",
+        "blobSha": "b92feedb089039ade54e08a7b90f374dbdb3030b",
+        "bytes": 963693,
+        "sha256": "5de711fa5742951749d92c737f8c927563ab1d631a595ff9cc1a1bf2e7a8d33c"
+      },
+      "derivative": {
+        "bytes": 682156,
+        "sha256": "0863e3d3fcea10b9823fb40fa0ac2db46afb131cc384b992e595a714e5b1def0",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4986198,
+        "declaredGeometryBytes": 1467210,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm0991_00_00-LEye",
+          "reason": "unsupported-original-layer-flags"
+        },
+        {
+          "name": "pm0991_00_00-REye",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": [
+        {
+          "name": "pm0991_00_00-BodyBTra",
+          "mode": "constant-additive"
+        }
+      ]
+    },
+    {
+      "id": 992,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0992_00_00.glb",
+        "blobSha": "1d2c9d0346a61133696017f011a9a9f02f669246",
+        "bytes": 1136532,
+        "sha256": "1a10444017e4a3bf2aefb9788deae57e7f24c42370b1f83baa12091f204ae08e"
+      },
+      "atlasSourceSha256": "d3c656162021ef1686b7b7deae21eb491e4241732079a2c80180718be909323b",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0992_00_00/fbx/ac/pm0992_00_00_ba10_waitA01.anim",
+        "blobSha": "17fb9301f8a852ab3ca0f50578847a160ad2e9b3",
+        "bytes": 473814,
+        "sha256": "a17cb75b66f368bc12ad7cf1604f4ca0fd00e006b8535c247b057e98f9b4a3c8"
+      },
+      "derivative": {
+        "bytes": 731240,
+        "sha256": "83fd29bd90b9d16620c7b7aec83b2347fc5761dc4b4c41f1698afd20e1091b8b",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3506176,
+        "declaredGeometryBytes": 1820462,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": [
+        {
+          "name": "pm0992_00_00-BodyATra",
+          "mode": "constant-additive"
+        }
+      ]
+    },
+    {
+      "id": 993,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0993_00_00.glb",
+        "blobSha": "86198ddf9d6505da3504040669bd43e6fca46b8c",
+        "bytes": 1247316,
+        "sha256": "b111dbe6885f53be71d56a420a1413d5a407b89cf5457d8be9fafd2a96dd2d83"
+      },
+      "atlasSourceSha256": "12d205fa1e7243a542950a2b2281396858ba298228083af0d65425eb8142c7f0",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0993_00_00/fbx/ac/pm0993_00_00_ba10_waitA01.anim",
+        "blobSha": "09b2ff386ae73a0ad10cc9302d4d583b91ab91af",
+        "bytes": 1315948,
+        "sha256": "63e538c911f509a73e3966ae93c2d2a685e333f5dd6ff2312f8773866ab019c5"
+      },
+      "derivative": {
+        "bytes": 1760088,
+        "sha256": "008525896a2b58eca313154ffdfc8fb1f40494f3676af2b3d0562e3fca06bcff",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 9087659,
+        "declaredGeometryBytes": 3016517,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": [
+        {
+          "name": "pm0993_00_00-BodyBTra",
+          "mode": "constant-additive"
+        }
+      ]
+    },
+    {
+      "id": 994,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0994_00_00.glb",
+        "blobSha": "19abfc781b46c631ebd6887ccf1d25f5a083bf8b",
+        "bytes": 843196,
+        "sha256": "267cc4df0c4a8e8c0565cec8e903d5be1f3a5a8108552088d165fc4073150d69"
+      },
+      "atlasSourceSha256": "ecb19d775e2b4abf51482d555e79fe0c58cb59c8b27bf7f27b8886e4fb4ae00a",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0994_00_00/fbx/ac/pm0994_00_00_ba10_waitA01.anim",
+        "blobSha": "b63ec8e199cdfa5445f7ca8aa370818c7e9f1569",
+        "bytes": 1003999,
+        "sha256": "8910d51117be17e8c3b2e80a32e97b65b89b06468e50bbf82a940f7c1e81a253"
+      },
+      "derivative": {
+        "bytes": 580168,
+        "sha256": "cdd255697f079308173a2cfb88cbf8678360d0c6ab2f10f9d40c75c804dd1967",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 4893355,
+        "declaredGeometryBytes": 1383436,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": [
+        {
+          "name": "pm0994_00_00-BodyATra",
+          "mode": "constant-additive"
+        }
+      ]
+    },
+    {
+      "id": 995,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm0995_00_00.glb",
+        "blobSha": "6f6851c79c58ed4d61ae8043f1f2c3d9a739176e",
+        "bytes": 720424,
+        "sha256": "ef7eb4fc330b1819e7ac3e1f3739a874f5773fac297144ea4bae643e80919986"
+      },
+      "atlasSourceSha256": "98a4ac61fa7051c1bfaf4b966a61c38626714b14afc1e666567a6e062ce2f066",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm0995_00_00/fbx/ac/pm0995_00_00_ba10_waitA01.anim",
+        "blobSha": "e3ddd788bb4dd4a1e7fb576317f563240521a8ad",
+        "bytes": 589032,
+        "sha256": "0733fed8b80810b5badb375305814699614e13b582fecad7487e8a11ba1493a7"
+      },
+      "derivative": {
+        "bytes": 602328,
+        "sha256": "47719a9aa3d0216a6afbb1d5486fff5e8268cae97e051a10f5369562c713b61f",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5592406,
+        "declaredGeometryBytes": 1261306,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 1006,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm1006_00_00.glb",
+        "blobSha": "fd8bd1b0d9c53ca0dbd5186d79e9c7c0ba825080",
+        "bytes": 1086264,
+        "sha256": "b75a381cc3676013e9af850eb5bab11a58a28e9ca70f569200c31276cb69512d"
+      },
+      "atlasSourceSha256": "25809c645e48245edd6b4810b9d08d1f3a62a8234fc71d12814575125cd56396",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm1006_00_00/fbx/ac/pm1006_00_00_ba10_waitA01.anim",
+        "blobSha": "f1ac5cba59a1de97a5e466303d6e91527087ad2b",
+        "bytes": 1130820,
+        "sha256": "cfd6df3502f2318217a9a6ce6800ce5c22e772df3a639e4eaf2ecc5eadd69d6f"
+      },
+      "derivative": {
+        "bytes": 744148,
+        "sha256": "44ab709e313528d88ea3558e700545cd51610a74fdb03dccd3b020c0be6c4058",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": false,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5592406,
+        "declaredGeometryBytes": 1740317,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 1008,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm1008_11_00.glb",
+        "blobSha": "555ac06346f17a5b724cc3e2fc46a4dd020446a1",
+        "bytes": 975340,
+        "sha256": "a9920d20bb9db744ef46a0823810aa5b4ae0ee6a10087eb0b0c90acb5474210c"
+      },
+      "atlasSourceSha256": "a188484dfca066ae8c12ba6886d02e3b666eab0fabec503b5f9de8b76b1c06f0",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/15sv/pm1008_11_00/fbx/ac/pm1008_11_00_ba10_waitA01.anim",
+        "blobSha": "b662353812825219974df39455b2a41165f3896d",
+        "bytes": 8490201,
+        "sha256": "60ad74987197dba44e4646ff36161b1d4fbd4d36c156049c8c4f7fee79f687cb"
+      },
+      "derivative": {
+        "bytes": 1579996,
+        "sha256": "6252ab73a765efda4ff2d55818ec6303186161cb981ba38c777ad7b697df530a",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5947392,
+        "declaredGeometryBytes": 2959958,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 1010,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm1010_00_00.glb",
+        "blobSha": "251603d0e0b16e689e429387b90b0b81d2e413d7",
+        "bytes": 1283472,
+        "sha256": "70081da30f548fa04b37c2a803ff83f8518d7350ffb9c99d818cb691d16d9966"
+      },
+      "atlasSourceSha256": "0f1e5fbe3d37c40aabbc7a8e11d4ce4d8e68652805a49162ee3f436b6f0ea9b3",
+      "nativeWait": {
+        "path": "Mitake15sv/Assets/sandbox/models/16svex/pm1010_00_00/fbx/ac/pm1010_00_00_ba10_waitA01.anim",
+        "blobSha": "75a6e5cd9357fa9f85d64be32ca4f3cd45d409ff",
+        "bytes": 537685,
+        "sha256": "de80408e39cdec28efc764a279301d7ada5ab35ae10240e8f3c149eb8d915e5c"
+      },
+      "derivative": {
+        "bytes": 928824,
+        "sha256": "7eece65ce3e78edc34342094ece92b7fa520b628930295aadfde297a62b4d25c",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5592406,
+        "declaredGeometryBytes": 2180572,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 1012,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm1012_11_00.glb",
+        "blobSha": "b43ecf0881ca9c5ca15409251e7df33771390a80",
+        "bytes": 623016,
+        "sha256": "da7cb1c9a7cf0eb3b97a6838f59f32df7e11435f21fee5951693c6974271173e"
+      },
+      "atlasSourceSha256": "fb7c3914f3171439dd785735d150226fcbf727c5916f34c0b12950537c6618b9",
+      "nativeWait": {
+        "path": "Mitake16svex/Assets/sandbox/models/16svex/pm1012_11_00/fbx/ac/pm1012_11_00_ba10_waitA01.anim",
+        "blobSha": "49f78fca5cffa868a7bac30f9f9c047e8710f5ae",
+        "bytes": 647703,
+        "sha256": "66e8f9b5141d180e4e883a067d5c0b2c8d48bf62661ab4017256fa270cfe69a2"
+      },
+      "derivative": {
+        "bytes": 1276592,
+        "sha256": "1b4df170e53c6c3895c0d6012b451701547f41cb90e2e3cf48ac3eefb818c833",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 6990507,
+        "declaredGeometryBytes": 1869264,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "metadata-preflight-pass",
+      "heldMaterials": [],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 1022,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm1022_00_00.glb",
+        "blobSha": "049a94c8d5a81c85b8190dc56476fccfbfdf72ed",
+        "bytes": 1507416,
+        "sha256": "9c17ebc6b902b83428825ef8c7fcd668ed8fcc137dc5aef1f51d67063c066e40"
+      },
+      "atlasSourceSha256": "5124c78812f9a46fcaf0c09ce47410d9611eaa2525110968421090b673b6f3e5",
+      "nativeWait": {
+        "path": "Mitake16svex/Assets/sandbox/models/16svex/pm1022_00_00/fbx/ac/pm1022_00_00_ba10_waitA01.anim",
+        "blobSha": "554c1c4dd816416e10f2937082818fc6ca464f1f",
+        "bytes": 611546,
+        "sha256": "ea4bb4c501e77fa52d03b41bb1a80d56d2fd1bbcf4ece4cbd1d1c9e66272be32"
+      },
+      "derivative": {
+        "bytes": 1025596,
+        "sha256": "3f0e57475fe0c636cf940e479363f89993d6782102e8534eefc304f596cdc357",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5592406,
+        "declaredGeometryBytes": 2462508,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm1022_00_00-Eye",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 1023,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm1023_00_00.glb",
+        "blobSha": "f26b4a1701654e51af92c4b9ffb57960afd37d96",
+        "bytes": 2113816,
+        "sha256": "19822818a441c0f8588a0e81f1b58236626af9bd89cb2e71e214de21ad6b0862"
+      },
+      "atlasSourceSha256": "768e7c51c4c4cbccc6d9fc44bced8d3e9f4b3f434620655cfba87c344966fddf",
+      "nativeWait": {
+        "path": "Mitake16svex/Assets/sandbox/models/16svex/pm1023_00_00/fbx/ac/pm1023_00_00_ba10_waitA01.anim",
+        "blobSha": "031df9c221151cafabe9ce1ff4c003b0cf1c9ad5",
+        "bytes": 626958,
+        "sha256": "8a2457b348d3277925ac769cb88bcc0ef50e8f24d95cf453350907cd190f3db7"
+      },
+      "derivative": {
+        "bytes": 1359036,
+        "sha256": "1d12d6d193aa10963a22d39dd71118cab25bb61810fabd86025505b48af55f5e",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 5592406,
+        "declaredGeometryBytes": 3416161,
+        "transferPolicy": "exact-protected-review-exception-2mb-mobile-performance-pending"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm1023_00_00-Eye",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    },
+    {
+      "id": 1024,
+      "sourceGeometry": {
+        "path": "Pokemon (Generation 9)/pm1024_11_00.glb",
+        "blobSha": "9d1368b4230c69fed2d7e0107d59ce5539a7e87c",
+        "bytes": 185508,
+        "sha256": "87bd79bc5d2433ee18f6c8b180678655edd0968db325f2ef9ff2458a4dfba032"
+      },
+      "atlasSourceSha256": "280025952acf09ed15772579128de8959468fbd1eda0b775044153924916d44e",
+      "nativeWait": {
+        "path": "Mitake16svex/Assets/sandbox/models/16svex/pm1024_11_00/fbx/ac/pm1024_11_00_ba10_waitA01.anim",
+        "blobSha": "0beedb20a5ff7203a2dad8d821a52268150d5262",
+        "bytes": 260702,
+        "sha256": "38bf352ed84f0895fdb2e01c3a3024b03e970b4b138063b2f4a2ea5c797f993e"
+      },
+      "derivative": {
+        "bytes": 275700,
+        "sha256": "b83b24040d81213d6be7a6a6a382b1e4d2cb8fd9c68e25d01f2ea5739ca2c12c",
+        "method": "original-primitive-scene-plus-native-idle-lossless-meshopt",
+        "originalPngBytesPreserved": true,
+        "originalPngPixelsPreserved": true,
+        "decodedTextureBytes": 3145728,
+        "declaredGeometryBytes": 420400,
+        "transferPolicy": "standard-750kb"
+      },
+      "materialCorrectionStatus": "held-unverified-original-layer-equation",
+      "heldMaterials": [
+        {
+          "name": "pm1024_11_00-BodyInc",
+          "reason": "unsupported-original-layer-flags"
+        }
+      ],
+      "specialAtlasCompatibilityMaterials": []
+    }
+  ]
+}

@@ -10,13 +10,16 @@
     "test": "node --test --test-concurrency=1 server/index.test.js tests/*.test.js",
     "audit:cards": "node scripts/audit-cards.js",
     "audit:models": "node scripts/audit-models.js",
-    "prebuild": "node scripts/prepare-model-runtime.js && node scripts/prepare-preview-models.js && node scripts/prepare-release.js"
+    "coverage:release": "node scripts/report-current-model-coverage.js",
+    "audit:integrated": "node scripts/verify-integrated-build.js",
+    "prebuild": "node scripts/prepare-model-runtime.js && node scripts/prepare-preview-models.js && node scripts/prepare-original-home-review.js && node scripts/prepare-full-review-catalog.js && node scripts/prepare-integrated-native-idles.js && node scripts/prepare-release.js"
   },
   "dependencies": {
     "@google/model-viewer": "^4.3.1",
     "express": "^5.1.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "three": "0.183.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",

@@ -1,9 +1,17 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number };
+export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; reviewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number; integratedNativeIdle?: boolean; runtime?: 'home-canvas'; selection?: string; visualStatus?: 'pass' | 'uncertain' | 'hold'; visualFinding?: string; sourceAuthoredStationaryWait?: boolean; sourceAuthoredLoopSeam?: boolean; allowDisclosedLayerApproximation?: boolean; sourceSha256?: string; nativeWaitSha256?: string; rightsStatus?: string };
 
 export function previewModelAttribution(asset: ModelAsset) {
+  if (asset.integratedNativeIdle) return {
+    description: `Native HOME idle from a pinned source. Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK; HOME extraction by Lilothestitch16 and web reconstruction by rrih. Redistribution rights remain unresolved. Offline appearance status: ${asset.visualStatus ?? 'unreviewed'}. ${asset.visualFinding ?? ''} ${asset.sourceAuthoredStationaryWait ? 'The source-authored wait is stationary on the visible mesh.' : ''} ${asset.sourceAuthoredLoopSeam ? 'The native source has an authored loop seam, preserved without invented smoothing.' : ''} ${asset.allowDisclosedLayerApproximation ? 'Layer colors use a disclosed Atlas-style approximation; original shader equivalence is unverified.' : ''} Browser WebGL and device appearance are pending user verification.`,
+    links: [
+      { url: asset.source, label: 'Pinned HOME reconstruction ↗' },
+      { url: 'https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models', label: 'Original motion and textures ↗' },
+      { url: '/models/attribution.json', label: 'Source identities and rights ↗' },
+    ],
+  };
   const catalog = asset.preparation === 'catalog-native-idle';
   const homePreparation = asset.textureRepair === 'prune-yveltal-zero-alpha'
     ? 'This derivative trims the native idle guard frame and removes texture maps used only by two source effects whose opacity is already zero. Visible texture values, geometry and native motion remain unchanged.'
@@ -25,9 +33,11 @@ export function previewModelAttribution(asset: ModelAsset) {
 }
 
 declare const __POKEDEX_PREVIEW_ASSETS__: ModelAsset[];
+declare const __POKEDEX_INTEGRATED_ASSETS__: ModelAsset[];
 const previewAdmission: ModelAsset[] = typeof __POKEDEX_PREVIEW_ASSETS__ === 'undefined' ? [] : __POKEDEX_PREVIEW_ASSETS__;
+const integratedAdmission: ModelAsset[] = typeof __POKEDEX_INTEGRATED_ASSETS__ === 'undefined' ? [] : __POKEDEX_INTEGRATED_ASSETS__;
 export const modelPreviewEnabled = previewAdmission.some(asset => asset.previewOnly);
-export const modelPublicReleaseEnabled = previewAdmission.some(asset => asset.publicRelease);
+export const modelPublicReleaseEnabled = previewAdmission.some(asset => asset.publicRelease) || integratedAdmission.length === 478;
 // Exact source identities observed in the supplied screenshot and browser rendering.
 // Static models are allowed; absence of animation alone is not a pose failure.
 export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): string | undefined {
@@ -55,12 +65,36 @@ export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): str
 
 export const MODEL_TRANSFER_LIMIT = 750_000;
 export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
-export function admittedModel(id: number, entries: ModelAsset[] = [...previewAdmission, ...admission]): ModelAsset | undefined {
+// Nine lossless original-scene reconstructions require narrow protected,
+// on-demand review exceptions. Their decoded resource caps remain unchanged.
+// Neither is admitted or publicly released; mobile performance is pending.
+const REVIEW_TRANSFER_EXCEPTIONS = {
+  219: { bytes: 1_127_540, sha256: '9250ef7489c7e0ac37f303b268d1b2b51c5bcb8c488479e3a518ea35557224f1' },
+  718: { bytes: 986_128, sha256: 'ec619160954d7b6eb9507141137fee26c53c2ca5d3c5e06f3f02b1dde3cb015f' },
+  864: { bytes: 1_170_036, sha256: '5baeeaed53c8f21e528392b11d880e474c9c08646599ffad8f46f6eef7901255' },
+  993: { bytes: 1_760_088, sha256: '008525896a2b58eca313154ffdfc8fb1f40494f3676af2b3d0562e3fca06bcff' },
+  1008: { bytes: 1_579_996, sha256: '6252ab73a765efda4ff2d55818ec6303186161cb981ba38c777ad7b697df530a' },
+  1010: { bytes: 928_824, sha256: '7eece65ce3e78edc34342094ece92b7fa520b628930295aadfde297a62b4d25c' },
+  1012: { bytes: 1_276_592, sha256: '1b4df170e53c6c3895c0d6012b451701547f41cb90e2e3cf48ac3eefb818c833' },
+  1022: { bytes: 1_025_596, sha256: '3f0e57475fe0c636cf940e479363f89993d6782102e8534eefc304f596cdc357' },
+  1023: { bytes: 1_359_036, sha256: '1d12d6d193aa10963a22d39dd71118cab25bb61810fabd86025505b48af55f5e' },
+} as const;
+export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'bytes' | 'sha256' | 'url' | 'reviewOnly' | 'admitted' | 'integratedNativeIdle'>): number {
+  const expected = REVIEW_TRANSFER_EXCEPTIONS[asset.id as keyof typeof REVIEW_TRANSFER_EXCEPTIONS];
+  return ((asset.reviewOnly === true && asset.admitted === false) || (asset.integratedNativeIdle === true && asset.admitted === true)) && expected && asset.bytes === expected.bytes &&
+    asset.sha256 === expected.sha256 && asset.url === `/models/review-original-${asset.id}.glb` ? 2_000_000 : MODEL_TRANSFER_LIMIT;
+}
+export function admittedModel(id: number, entries: ModelAsset[] = [...integratedAdmission, ...previewAdmission, ...admission]): ModelAsset | undefined {
   // Source-level stray props/black geometry were verified for Gholdengo.
   return entries.find(asset => asset.id === id && asset.admitted &&
-    (id !== 1000 || ((asset.previewOnly || asset.publicRelease) && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
-    (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) || /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
+    (id !== 1000 || ((asset.previewOnly || asset.publicRelease) && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= modelTransferLimit(asset) &&
+    (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) ||
+      (asset.integratedNativeIdle && /^https:\/\/raw\.githubusercontent\.com\/rrih\/rrih\.github\.io\/ef25889c60f099aa864bed11042f4054827a78c4\/atlas\/public\/models\/home\/\d+\.glb$/.test(asset.url)) ||
+      /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
     (asset.sha256 ? /^[a-f0-9]{64}$/.test(asset.sha256) : /^[a-f0-9]{40}$/.test(asset.blobSha)));
+}
+export function priorReleasedModel(id: number): ModelAsset | undefined {
+  return admittedModel(id, [...previewAdmission, ...admission]);
 }
 export function modelEdition(species: Pokemon): CardEdition | undefined {
   const model = admittedModel(species.id);
@@ -96,7 +130,20 @@ export function validateModelStructure(bytes: ArrayBuffer) {
     decodedMeshoptBytes += compression.count * compression.byteStride;
     if (!Number.isSafeInteger(decodedMeshoptBytes) || decodedMeshoptBytes > MODEL_GEOMETRY_LIMIT) throw new Error('decoded geometry exceeds budget');
   }
-  if ((gltf.images ?? []).length > 8 || (gltf.textures ?? []).length > 8 || (gltf.meshes ?? []).length > 32 || (gltf.animations ?? []).length > 12 ||
+  // Count alone is not a GPU-memory estimate: one protected HOME source uses
+  // ten distinct images but decodes to only 13.3 MiB. validateModelTextures
+  // checks every decoded image against the separate 32 MiB active budget.
+  // Keep a broad metadata sanity ceiling and cap simultaneous samplers on each
+  // material below WebGL2's minimum fragment-texture-unit guarantee (16).
+  const materialTextureSlots = (value: unknown): number => {
+    if (!value || typeof value !== 'object') return 0;
+    return Object.entries(value).reduce((count, [key, item]) =>
+      count + (key.endsWith('Texture') && item && typeof item === 'object' && Number.isInteger((item as { index?: number }).index)
+        ? 1 : materialTextureSlots(item)), 0);
+  };
+  if ((gltf.images ?? []).length > 64 || (gltf.textures ?? []).length > 64 ||
+    (gltf.materials ?? []).some((material: unknown) => materialTextureSlots(material) > 8) ||
+    (gltf.meshes ?? []).length > 32 || (gltf.animations ?? []).length > 12 ||
     (gltf.accessors ?? []).some((accessor: { count: number }) => !Number.isSafeInteger(accessor.count) || accessor.count < 0) ||
     (gltf.accessors ?? []).reduce((total: number, accessor: { count: number }) => total + accessor.count, 0) > 500_000) throw new Error('decoded model complexity exceeds budget');
   return gltf;
@@ -115,7 +162,7 @@ export async function fetchModel(asset: ModelAsset, signal: AbortSignal, fetcher
       const { value, done } = await reader.read();
       if (done) break;
       size += value.byteLength;
-      if (size > Math.min(asset.bytes, MODEL_TRANSFER_LIMIT)) throw new Error('model exceeds admission budget');
+      if (size > Math.min(asset.bytes, modelTransferLimit(asset))) throw new Error('model exceeds admission budget');
       chunks.push(new Uint8Array(value));
     }
   } finally { await reader.cancel(); }

@@ -7,7 +7,7 @@ const source = (await readFile(new URL('../src/model-policy.ts', import.meta.url
   .replace("import admission from '../content/models/admitted.json';", 'const admission = [];')
   .replace("import { officialEdition, Pokemon, CardEdition } from './feed-model';", '');
 const compiled = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
-const { admittedModel, fetchModel, validateModelStructure, rejectedModelPose, previewModelAttribution } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const { admittedModel, fetchModel, validateModelStructure, rejectedModelPose, previewModelAttribution, modelTransferLimit } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 const asset = { id: 1, bytes: 500, url: 'https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1.glb', blobSha: 'a'.repeat(40), admitted: true };
 test('observed broken poses are rejected by exact identity while other static or replacement models remain usable', async () => {
   const rejected = JSON.parse(await readFile(new URL('../content/models/pose-rejections.json', import.meta.url)));
@@ -39,6 +39,35 @@ test('model admission is explicit, size-bounded and source-host scoped', () => {
   assert.equal(admittedModel(1025, [asset]), undefined);
   assert.equal(admittedModel(1000, [{ ...asset, id: 1000 }]), undefined);
 });
+test('nine exact original-scene protected reviews may transfer under 2 MB without widening admission', async () => {
+  const review = JSON.parse(await readFile(new URL('../content/models/home-original-scene-review-2026-10-02.json', import.meta.url)));
+  const cases = review.rows.filter(item => item.derivative.bytes > 750000).map(item => ({ id: item.id,
+    bytes: item.derivative.bytes, sha256: item.derivative.sha256 }));
+  assert.equal(cases.length, 9);
+  for (const item of cases) {
+    const review = { ...asset, ...item, url: `/models/review-original-${item.id}.glb`, reviewOnly: true, admitted: false };
+    assert.equal(modelTransferLimit(review), 2_000_000);
+    assert.equal(admittedModel(item.id, [review]), undefined);
+    for (const change of [{ sha256: '0'.repeat(64) }, { url: '/models/other.glb' }, { reviewOnly: false },
+      { admitted: true }, { bytes: item.bytes + 1 }]) assert.equal(modelTransferLimit({ ...review, ...change }), 750000);
+  }
+});
+test('the integrated HOME runtime accepts only pinned sources and exact size exceptions', async () => {
+  const catalog = JSON.parse(await readFile(new URL('../content/models/full-idle-candidates-2026-10-02.json', import.meta.url)));
+  const original = JSON.parse(await readFile(new URL('../content/models/home-original-scene-review-2026-10-02.json', import.meta.url)));
+  const base = catalog.candidates.find(item => item.id === 4);
+  const native = { ...asset, id: 4, url: base.source.url, bytes: base.source.bytes,
+    sha256: base.source.sha256, integratedNativeIdle: true, runtime: 'home-canvas', animation: 'HOME Idle' };
+  assert.equal(admittedModel(4, [native]), native);
+  assert.equal(admittedModel(4, [{ ...native, url: native.url.replace('ef25889c60f099aa864bed11042f4054827a78c4', 'main') }]), undefined);
+  const repaired = original.rows.find(item => item.id === 993);
+  const exception = { ...native, id: 993, url: '/models/review-original-993.glb', bytes: repaired.derivative.bytes,
+    sha256: repaired.derivative.sha256 };
+  assert.equal(modelTransferLimit(exception), 2_000_000);
+  assert.equal(admittedModel(993, [exception]), exception);
+  assert.equal(admittedModel(993, [{ ...exception, sha256: '0'.repeat(64) }]), undefined);
+  assert.equal(admittedModel(993, [{ ...exception, bytes: exception.bytes + 1 }]), undefined);
+});
 test('changed source identity, oversized streams and malformed GLBs are rejected before viewer allocation', async () => {
   const bytes = glb();
   const checked = { ...asset, bytes: bytes.length, blobSha: createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex') };
@@ -50,10 +79,22 @@ test('changed source identity, oversized streams and malformed GLBs are rejected
   assert.throws(() => validateModelStructure(new ArrayBuffer(3)), /invalid model/);
 });
 test('compact transfers cannot hide unbounded animation, geometry or external dependencies', () => {
-  for (const extra of [{ animations: Array(13).fill({}) }, { textures: Array(9).fill({}) }, { accessors: [{ count: 500001 }] }, { buffers: [{ uri: 'https://elsewhere.test/huge.bin' }] }, { images: [{ uri: 'data:image/png;base64,unbounded' }] }]) {
+  for (const extra of [{ animations: Array(13).fill({}) }, { textures: Array(65).fill({}) }, { accessors: [{ count: 500001 }] }, { buffers: [{ uri: 'https://elsewhere.test/huge.bin' }] }, { images: [{ uri: 'data:image/png;base64,unbounded' }] }]) {
     const bytes = glb({ asset: { version: '2.0' }, ...extra });
     assert.throws(() => validateModelStructure(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength)), /budget|dependencies/);
   }
+});
+
+test('image count is bounded by decoded memory and per-material sampler use', () => {
+  const manyImages = { asset: { version: '2.0' }, images: Array.from({ length: 10 }, () => ({})),
+    textures: Array.from({ length: 11 }, () => ({})),
+    materials: [{ pbrMetallicRoughness: { baseColorTexture: { index: 0 } }, emissiveTexture: { index: 1 } }] };
+  const accepted = glb(manyImages);
+  assert.doesNotThrow(() => validateModelStructure(accepted.buffer.slice(accepted.byteOffset, accepted.byteOffset + accepted.length)));
+  const tooManyOnOneMaterial = { ...manyImages, materials: [{ extensions: { TEST_many_maps:
+    Object.fromEntries(Array.from({ length: 9 }, (_, index) => [`slot${index}Texture`, { index }])) } }] };
+  const rejected = glb(tooManyOnOneMaterial);
+  assert.throws(() => validateModelStructure(rejected.buffer.slice(rejected.byteOffset, rejected.byteOffset + rejected.length)), /complexity exceeds budget/);
 });
 
 test('texture inspection closes every bitmap and rejects oversized decoded memory', async () => {
