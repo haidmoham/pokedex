@@ -31,15 +31,17 @@ export type FormCandidate = {
 };
 
 declare const __POKEDEX_FORM_ASSETS__: FormCandidate[];
+declare const __POKEDEX_FORM_PUBLIC_RELEASE__: boolean;
 const candidates = typeof __POKEDEX_FORM_ASSETS__ === 'undefined' ? [] : __POKEDEX_FORM_ASSETS__;
-export const formPreviewEnabled = candidates.length === 120;
+const publicRelease = typeof __POKEDEX_FORM_PUBLIC_RELEASE__ !== 'undefined' && __POKEDEX_FORM_PUBLIC_RELEASE__ === true;
+export const formCollectionEnabled = candidates.length === 120;
 
 export function formsForSpecies(speciesId: number): FormCandidate[] {
-  return formPreviewEnabled ? candidates.filter(form => form.speciesId === speciesId) : [];
+  return formCollectionEnabled ? candidates.filter(form => form.speciesId === speciesId) : [];
 }
 
 export function formModelAsset(form: FormCandidate): ModelAsset | undefined {
-  if (!formPreviewEnabled || !candidates.includes(form) ||
+  if (!formCollectionEnabled || !candidates.includes(form) ||
     !/^[a-z0-9-]+$/.test(form.id) ||
     form.model.url !== `https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/forms/${form.id}.glb` ||
     !Number.isInteger(form.model.bytes) || form.model.bytes <= 0 || form.model.bytes > 2_000_000 ||
@@ -47,19 +49,20 @@ export function formModelAsset(form: FormCandidate): ModelAsset | undefined {
     !Number.isInteger(form.model.channels) || form.model.channels <= 0 ||
     !Number.isFinite(form.model.duration) || form.model.duration <= 0 ||
     form.model.movingSamplers <= 0 || form.review.decodedResources !== 'cpu-pass' ||
-    form.review.sourceIdentity !== 'verified' || form.review.publicRelease !== false) return undefined;
+    form.review.sourceIdentity !== 'verified' || form.review.publicRelease !== true) return undefined;
   const external = form.provenance.family === 'Pokemon-3D-api';
   const credit = external && typeof form.provenance.credit === 'object'
     ? `${form.provenance.credit.author}; original Pokémon rights reserved`
     : 'Pokémon / Nintendo / Creatures / GAME FREAK; HOME extraction by Lilothestitch16; web reconstruction by rrih';
   return {
     id: form.speciesId, formId: form.id, bytes: form.model.bytes, url: form.model.url,
-    blobSha: form.model.blobSha, sha256: form.model.sha256, admitted: false,
-    previewOnly: true, reviewOnly: true, animation: form.model.animation,
+    blobSha: form.model.blobSha, sha256: form.model.sha256, admitted: publicRelease,
+    previewOnly: !publicRelease, reviewOnly: !publicRelease,
+    publicRelease: publicRelease ? '2026-10-02-120' : undefined, animation: form.model.animation,
     runtime: external ? undefined : 'home-canvas', credit,
-    license: 'Source-authored form idle; browser appearance and extracted-asset rights unresolved',
+    license: `Source-authored form ${external ? 'battle wait' : 'idle'}; browser appearance and extracted-asset rights unresolved`,
     source: external && typeof form.provenance.credit === 'object'
       ? form.provenance.credit.source : form.model.url,
-    rightsStatus: 'unresolved',
+    rightsStatus: 'unresolved', visualStatus: 'uncertain',
   };
 }

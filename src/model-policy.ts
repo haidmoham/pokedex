@@ -84,9 +84,11 @@ const FORM_REVIEW_TRANSFER_EXCEPTIONS = {
   'darkrai-mega': { bytes: 819_852, sha256: 'd33388c348dcde07a076230365122935d2fc9d49c2d30da3be6354cc926bf98e' },
   'zoroark-hisui': { bytes: 865_528, sha256: 'c85711fe03c7461d727a437642fe327c6f53dd68abc02d86e392ca7800f19a83' },
 } as const;
-export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'formId' | 'bytes' | 'sha256' | 'url' | 'previewOnly' | 'reviewOnly' | 'admitted' | 'integratedNativeIdle'>): number {
+export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'formId' | 'bytes' | 'sha256' | 'url' | 'previewOnly' | 'reviewOnly' | 'publicRelease' | 'admitted' | 'integratedNativeIdle'>): number {
   const form = asset.formId && FORM_REVIEW_TRANSFER_EXCEPTIONS[asset.formId as keyof typeof FORM_REVIEW_TRANSFER_EXCEPTIONS];
-  if (form && asset.previewOnly === true && asset.reviewOnly === true && asset.admitted === false &&
+  const allowedFormContext = (asset.previewOnly === true && asset.reviewOnly === true && asset.admitted === false) ||
+    (asset.publicRelease === '2026-10-02-120' && asset.admitted === true && asset.previewOnly === false && asset.reviewOnly === false);
+  if (form && allowedFormContext &&
     asset.bytes === form.bytes && asset.sha256 === form.sha256 &&
     asset.url === `https://raw.githubusercontent.com/rrih/rrih.github.io/ef25889c60f099aa864bed11042f4054827a78c4/atlas/public/models/forms/${asset.formId}.glb`) return 2_000_000;
   const expected = REVIEW_TRANSFER_EXCEPTIONS[asset.id as keyof typeof REVIEW_TRANSFER_EXCEPTIONS];
