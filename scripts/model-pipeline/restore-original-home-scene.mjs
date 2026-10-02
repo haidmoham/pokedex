@@ -20,6 +20,16 @@ const SPECIAL_MATERIALS = Object.freeze({
   993: { 'pm0993_00_00-BodyBTra': 'constant-additive' },
   994: { 'pm0994_00_00-BodyATra': 'constant-additive' },
 });
+// Only families present in the SHA256-pinned upstream material map are
+// eligible for this scalar transfer. Standard1st's recovered mask branch uses
+// _EmissionMaskVal, not the often-black or absent _EmissionColor. Pinned Atlas
+// prepare-home-textures.py lines 235-255 uses the same scalar and glTF >1
+// extension. This is still an additive-PBR visual approximation of the Unity
+// shader, especially where the newer shader subprograms are unavailable.
+const EMISSION_SOURCE_FAMILIES = new Set([
+  'Mitake01rg', 'Mitake02gs', 'Mitake04dp', 'Mitake05bw',
+  'Mitake07xy', 'Mitake09sm', 'Mitake12orion', 'Mitake15sv', 'Mitake16svex',
+]);
 
 // Independently audited original Unity mesh streams omit TEXCOORD_1. Unity's
 // documented missing-vertex-input default is (0,0); the source GLB reflects V,
@@ -212,8 +222,22 @@ function sourceMaterial(rawMaterial, atlasMaterial, source, addTexture, review) 
   }
   if (emission) {
     descriptor.emissionMask = { ...emission, texture: addTexture(emission).index };
-    const c = source.colors?._EmissionColor;
-    if (c) out.emissiveFactor = [c.r, c.g, c.b];
+    const family = source.map.path.split('/')[0];
+    const strength = f._EmissionMaskVal;
+    if (!EMISSION_SOURCE_FAMILIES.has(family) || source.emissiveMap.path.split('/')[0] !== family ||
+      !Number.isFinite(strength) || strength < 0 || strength > 1.5) {
+      fail(`Unverified source emission strength: ${rawMaterial.name}`);
+    }
+    // glTF bounds emissiveFactor to [0,1]. Carry source strengths above one
+    // through the standard extension rather than silently clipping them.
+    const factor = Math.min(strength, 1);
+    out.emissiveFactor = [factor, factor, factor];
+    if (strength > 1) {
+      out.extensions = { ...out.extensions,
+        KHR_materials_emissive_strength: { emissiveStrength: strength } };
+    }
+    review.push({ material: out.name, reason: 'source-emission-additive-pbr-approximation',
+      sourceFamily: family, strength });
   }
   out.extras = { ...out.extras, homeSourceTextures: descriptor };
   return out;
@@ -337,6 +361,9 @@ export function restoreOriginalHomeScene({ id, rawBytes, atlasBytes, sourceMater
     return source.map ? sourceMaterial(material, atlasMaterial, source, addTexture, review) :
       specialMaterial(material, atlasMaterial, source);
   });
+  if (raw.json.materials.some(material => material.extensions?.KHR_materials_emissive_strength)) {
+    raw.json.extensionsUsed = [...new Set([...(raw.json.extensionsUsed ?? []), 'KHR_materials_emissive_strength'])];
+  }
   // The missing-input default is only legal for five independently audited
   // source mesh assets across four species; every other absence is a failure.
   for (const mesh of raw.json.meshes) for (const primitive of mesh.primitives) {

@@ -83,6 +83,33 @@ test('rejects absent original source texture rather than replacing it with Atlas
   /Missing pinned PNG/);
 });
 
+test('source emission mask strength controls zero, legacy fallback, and above-one factor', () => {
+  const family = 'Mitake04dp/Assets/sandbox/models/04dp/test/fbx/textures/';
+  const base = `${family}Body_col.png`, mask = `${family}Body_emi.png`;
+  const active = value => ({ map: { path: base, wrap: [0, 0], repeat: [1, 1], offset: [0, 0] },
+    emissiveMap: { path: mask, wrap: [0, 0], repeat: [1, 1], offset: [0, 0] },
+    floats: { _EmissionMaskUse: 1, _EmissionMaskVal: value, _BlendMode: 0, _CullMode: 2 },
+    colors: { _EmissionColor: { r: 0, g: 0, b: 0, a: 0 } } });
+  const sourceMaterials = { BodyA: active(0), BodyB: active(0.5) };
+  delete sourceMaterials.BodyB.colors._EmissionColor; // absent on later legacy materials
+  const input = { id: 467, ...fixtures(), sourceMaterials,
+    textureBytesByPath: { [base]: png, [mask]: png } };
+  let result = readGlb(restoreOriginalHomeScene(input).bytes).json;
+  assert.deepEqual(result.materials.map(material => material.emissiveFactor), [[0, 0, 0], [0.5, 0.5, 0.5]]);
+  assert.ok(result.materials.every(material => material.extras.homeSourceTextures.emissionMask));
+  sourceMaterials.BodyB.floats._EmissionMaskVal = 1.5;
+  result = readGlb(restoreOriginalHomeScene(input).bytes).json;
+  assert.deepEqual(result.materials[1].emissiveFactor, [1, 1, 1]);
+  assert.deepEqual(result.materials[1].extensions.KHR_materials_emissive_strength, { emissiveStrength: 1.5 });
+  assert.ok(result.extensionsUsed.includes('KHR_materials_emissive_strength'));
+  delete sourceMaterials.BodyB.floats._EmissionMaskVal;
+  assert.throws(() => restoreOriginalHomeScene(input), /Unverified source emission strength/);
+  sourceMaterials.BodyB.floats._EmissionMaskVal = 0.5;
+  sourceMaterials.BodyB.map.path = 'UnknownFamily/Body_col.png';
+  input.textureBytesByPath['UnknownFamily/Body_col.png'] = png;
+  assert.throws(() => restoreOriginalHomeScene(input), /Unverified source emission strength/);
+});
+
 test('accepts only the source-defined exact-name black additive special material', () => {
   const initial = fixtures(), raw = readGlb(initial.rawBytes), atlas = readGlb(initial.atlasBytes);
   const name = 'pm0990_00_00-BodyATra';

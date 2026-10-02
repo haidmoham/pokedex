@@ -59,15 +59,15 @@ export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
 // on-demand review exceptions. Their decoded resource caps remain unchanged.
 // Neither is admitted or publicly released; mobile performance is pending.
 const REVIEW_TRANSFER_EXCEPTIONS = {
-  219: { bytes: 1_127_528, sha256: 'd10bfaae062fe8f304c49486de42e4430faf599ffb1bb25fb9e163fc7b73d9ec' },
-  718: { bytes: 986_128, sha256: 'd545f4be159b0429ad8ba0c304087d143e344292823a781c7c8bf577bc1ee837' },
-  864: { bytes: 1_170_036, sha256: '75416c27457cc856496cfdcfe53e6f819a7e36c9d9f3e10f9dc0d7a0a5916b69' },
-  993: { bytes: 1_760_040, sha256: '97d91943a9286c401e3bd265041cfe60e9ea2f4642d46712525908a06e7ef3aa' },
-  1008: { bytes: 1_580_016, sha256: '7b09d57a8e3f0b06da9267911b66cf81f59a7b675b21bae2a11b3a589d5c91f4' },
-  1010: { bytes: 928_824, sha256: '1f54f2374ea7ae50af866c404b4208476cba279c79c9326ff58302f7c53c1046' },
-  1012: { bytes: 1_276_616, sha256: '3d14948eb1c299a71dc2b65ff98dc8f3d6bd0c952c1ea414112c6ecdc58d4678' },
-  1022: { bytes: 1_025_488, sha256: '5239e2a281292bd9763a235c03c7176d6aa149c8143dd4307c69c5a8884ce57a' },
-  1023: { bytes: 1_358_928, sha256: '77ff4cbf686afccb1040162448f0a2a5c766e741e8e197379eee87fdd04c7baf' },
+  219: { bytes: 1_127_540, sha256: '9250ef7489c7e0ac37f303b268d1b2b51c5bcb8c488479e3a518ea35557224f1' },
+  718: { bytes: 986_128, sha256: 'ec619160954d7b6eb9507141137fee26c53c2ca5d3c5e06f3f02b1dde3cb015f' },
+  864: { bytes: 1_170_036, sha256: '5baeeaed53c8f21e528392b11d880e474c9c08646599ffad8f46f6eef7901255' },
+  993: { bytes: 1_760_088, sha256: '008525896a2b58eca313154ffdfc8fb1f40494f3676af2b3d0562e3fca06bcff' },
+  1008: { bytes: 1_579_996, sha256: '6252ab73a765efda4ff2d55818ec6303186161cb981ba38c777ad7b697df530a' },
+  1010: { bytes: 928_824, sha256: '7eece65ce3e78edc34342094ece92b7fa520b628930295aadfde297a62b4d25c' },
+  1012: { bytes: 1_276_592, sha256: '1b4df170e53c6c3895c0d6012b451701547f41cb90e2e3cf48ac3eefb818c833' },
+  1022: { bytes: 1_025_596, sha256: '3f0e57475fe0c636cf940e479363f89993d6782102e8534eefc304f596cdc357' },
+  1023: { bytes: 1_359_036, sha256: '1d12d6d193aa10963a22d39dd71118cab25bb61810fabd86025505b48af55f5e' },
 } as const;
 export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'bytes' | 'sha256' | 'url' | 'reviewOnly' | 'admitted'>): number {
   const expected = REVIEW_TRANSFER_EXCEPTIONS[asset.id as keyof typeof REVIEW_TRANSFER_EXCEPTIONS];
