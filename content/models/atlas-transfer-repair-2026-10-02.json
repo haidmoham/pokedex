@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-02",
+  "scope": "Transfer-cap repair identities only. No new model admission or wider extracted-asset public release.",
+  "transferCapBytes": 750000,
+  "exceptions": 6,
+  "underCapAfterRepair": 6,
+  "results": [
+    {
+      "id": 78,
+      "sourceSha256": "30834d35adeb3901ab3e3cedcaf308d6ca4ce9371993cdef2ba36adb2552c47e",
+      "sourceBytes": 937828,
+      "trimmedBytes": 968100,
+      "prepared": {
+        "bytes": 691528,
+        "sha256": "fbf155141d23a438699179cf4e0561d223203005eaec4d8a93893c2ec10a4463",
+        "method": "lossless-animation-meshopt",
+        "status": "source-technical-candidate; appearance/effects and preview gate pending"
+      },
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 717,
+      "sourceSha256": "a7f4ac2287612d736cea251df2bfd8b5e8a971c0ee07b857881bc7beedc42038",
+      "sourceBytes": 971244,
+      "trimmedBytes": 1004804,
+      "prepared": {
+        "bytes": 377148,
+        "sha256": "582afeba058cc3a63079458cab29b0584c83e5e11f982d4ee5a3ac47e6991821",
+        "method": "prune-yveltal-zero-alpha",
+        "status": "approved-existing-public-release"
+      },
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 851,
+      "sourceSha256": "df7d6283d5ab38fef7fe0a0966b3b2a680bf9a542766a6fa71e5175f2453b9e6",
+      "sourceBytes": 1086864,
+      "trimmedBytes": 1128500,
+      "prepared": {
+        "bytes": 716192,
+        "sha256": "3349f170f37c16c628efa836c3cbb4d03432b64a960ea56c14e47da5d8c655df",
+        "method": "lossless-animation-meshopt+exact-duplicate-accessor-compaction",
+        "status": "source-technical-candidate; appearance/effects and preview gate pending"
+      },
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 894,
+      "sourceSha256": "876dd6c2d41e19d74f1e6767a3060ff6d8c6cbc950aa0d9a9a26a5ea8607ece7",
+      "sourceBytes": 794984,
+      "trimmedBytes": 857004,
+      "prepared": {
+        "bytes": 468484,
+        "sha256": "612a91dd2a1ce686407b24c338112cccd8a1213e24e48080ae79b13bd6402520",
+        "method": "lossless-animation-meshopt",
+        "status": "source-technical-candidate; appearance/effects and preview gate pending"
+      },
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 914,
+      "sourceSha256": "57846b1ae89e1b68b849d1e1acc96bf68c9a1e97523636f26e433a4b40d50eea",
+      "sourceBytes": 895484,
+      "trimmedBytes": 939408,
+      "prepared": {
+        "bytes": 666572,
+        "sha256": "b8a084a079fb6df209aac804c0a7cd5980bc47fc8fd02e236f7892d5ac61aa1b",
+        "method": "lossless-animation-meshopt",
+        "status": "approved-existing-public-release"
+      },
+      "rightsStatus": "unresolved"
+    },
+    {
+      "id": 1008,
+      "sourceSha256": "a188484dfca066ae8c12ba6886d02e3b666eab0fabec503b5f9de8b76b1c06f0",
+      "sourceBytes": 938252,
+      "trimmedBytes": 1012788,
+      "prepared": {
+        "bytes": 527672,
+        "sha256": "b27360de5f1173adcdc2e2629e5a2af234b94d84fd0fa0576dcfbd344fa241dd",
+        "method": "lossless-animation-meshopt",
+        "status": "source-technical-candidate; appearance/effects and preview gate pending"
+      },
+      "rightsStatus": "unresolved"
+    }
+  ]
+}

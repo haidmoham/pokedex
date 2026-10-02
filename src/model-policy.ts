@@ -96,7 +96,20 @@ export function validateModelStructure(bytes: ArrayBuffer) {
     decodedMeshoptBytes += compression.count * compression.byteStride;
     if (!Number.isSafeInteger(decodedMeshoptBytes) || decodedMeshoptBytes > MODEL_GEOMETRY_LIMIT) throw new Error('decoded geometry exceeds budget');
   }
-  if ((gltf.images ?? []).length > 8 || (gltf.textures ?? []).length > 8 || (gltf.meshes ?? []).length > 32 || (gltf.animations ?? []).length > 12 ||
+  // Count alone is not a GPU-memory estimate: one protected HOME source uses
+  // ten distinct images but decodes to only 13.3 MiB. validateModelTextures
+  // checks every decoded image against the separate 32 MiB active budget.
+  // Keep a broad metadata sanity ceiling and cap simultaneous samplers on each
+  // material below WebGL2's minimum fragment-texture-unit guarantee (16).
+  const materialTextureSlots = (value: unknown): number => {
+    if (!value || typeof value !== 'object') return 0;
+    return Object.entries(value).reduce((count, [key, item]) =>
+      count + (key.endsWith('Texture') && item && typeof item === 'object' && Number.isInteger((item as { index?: number }).index)
+        ? 1 : materialTextureSlots(item)), 0);
+  };
+  if ((gltf.images ?? []).length > 64 || (gltf.textures ?? []).length > 64 ||
+    (gltf.materials ?? []).some((material: unknown) => materialTextureSlots(material) > 8) ||
+    (gltf.meshes ?? []).length > 32 || (gltf.animations ?? []).length > 12 ||
     (gltf.accessors ?? []).some((accessor: { count: number }) => !Number.isSafeInteger(accessor.count) || accessor.count < 0) ||
     (gltf.accessors ?? []).reduce((total: number, accessor: { count: number }) => total + accessor.count, 0) > 500_000) throw new Error('decoded model complexity exceeds budget');
   return gltf;

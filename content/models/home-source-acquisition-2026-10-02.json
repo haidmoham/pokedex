@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-02",
+  "sourceStatus": "acquired-and-verified-in-ignored-local-checkouts",
+  "originalGeometry": {
+    "revision": "27703273836f38f0e185976d955b1fbfb15448af",
+    "species": 1025,
+    "bytes": 349645048
+  },
+  "originalCompanions": {
+    "revision": "7b18d1a3e22df48329220ea99c4d2a6617d72345",
+    "files": 16991,
+    "bytes": 3992352815,
+    "materials": 7504,
+    "textures": 5610,
+    "animations": 3877
+  },
+  "chosenOriginalNativeWaits": 1025,
+  "notice": "No extracted source binaries are committed or publicly released by this receipt. Underlying Pokemon redistribution rights remain unresolved."
+}

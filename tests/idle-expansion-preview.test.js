@@ -1,17 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { isProtectedIdleExpansionPreview, isProtectedModelPreview, IDLE_EXPANSION_REF,
-  VERIFIED_IDLE_EXPANSION_BRANCH_URL } from '../scripts/preview-model-context.js';
+import { isProtectedIdleExpansionPreview, isProtectedFullReviewPreview, isProtectedModelPreview, IDLE_EXPANSION_REF,
+  VERIFIED_IDLE_EXPANSION_BRANCH_URL, VERIFIED_FULL_REVIEW_BRANCH_URL } from '../scripts/preview-model-context.js';
 import { PUBLIC_MODEL_MANIFEST_SHA256, verifyPublicModelManifest, publicModelAsset } from '../scripts/public-model-release.js';
 
-test('new extracted idle preview stays closed until its exact SSO-protected branch URL is verified', () => {
+test('three-model admission gate remains closed while the distinct whole-catalog review gate is exact and SSO-bound', () => {
   assert.equal(VERIFIED_IDLE_EXPANSION_BRANCH_URL, null);
   const newBranch = { VERCEL_ENV: 'preview', VERCEL_GIT_COMMIT_REF: IDLE_EXPANSION_REF,
     VERCEL_BRANCH_URL: 'pokedex-review-git-codex-pokedex-full-coverage-20261002-zarnab.vercel.app' };
   assert.equal(isProtectedIdleExpansionPreview(newBranch), false);
-  assert.equal(isProtectedModelPreview(newBranch), false);
+  assert.equal(isProtectedFullReviewPreview(newBranch), true);
+  assert.equal(isProtectedModelPreview(newBranch), true);
+  assert.equal(VERIFIED_FULL_REVIEW_BRANCH_URL, newBranch.VERCEL_BRANCH_URL);
   assert.equal(isProtectedIdleExpansionPreview({ ...newBranch, VERCEL_ENV: 'production' }), false);
+  for (const wrong of [{ ...newBranch, VERCEL_ENV: 'production' }, { ...newBranch, VERCEL_GIT_COMMIT_REF: 'main' },
+    { ...newBranch, VERCEL_BRANCH_URL: 'unrelated.vercel.app' }]) assert.equal(isProtectedFullReviewPreview(wrong), false);
 });
 
 test('candidate replacements are exact, separate from the 998-model public release, and native', async () => {

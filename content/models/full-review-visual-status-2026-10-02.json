@@ -1,0 +1,4793 @@
+{
+  "checkedAt": "2026-10-02",
+  "ledgerSha256": "2c80e6808f257b945c8326ba59b64551dd4d5e678bf26309ccabdc8cf689598d",
+  "scope": "Offline Blender source-mesh CPU visual screen against pinned PokeAPI official artwork; corrected GPU runtime not reviewed",
+  "sourceRevision": "ef25889c60f099aa864bed11042f4054827a78c4",
+  "counts": {
+    "pass": 431,
+    "uncertain": 12,
+    "hold": 35
+  },
+  "entries": [
+    {
+      "id": 4,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 5,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 6,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged frontal CPU detail confirms complete head, belly, tail flame and both wing membranes across a broad native flap; pose 2 looks narrow because wing membranes turn nearly edge-on. No offline clipping observed."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 46,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 77,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 78,
+      "visualStatus": "uncertain",
+      "findingCategory": "effect_approximation",
+      "reasons": [
+        "Rapidash's orange flame sheets are much broader and more solid than the broken-up fire in official art; judge corrected material transparency."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 88,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 89,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 92,
+      "visualStatus": "hold",
+      "findingCategory": "missing_anatomy_or_effect",
+      "reasons": [
+        "Gastly renders as a featureless purple sphere in all three poses; eyes, mouth and dark central face are absent."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 109,
+      "visualStatus": "hold",
+      "findingCategory": "missing_anatomy_or_effect",
+      "reasons": [
+        "Koffing renders as a mottled sphere in all three poses; face, skull insignia, protrusions and gas clouds are absent."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 110,
+      "visualStatus": "hold",
+      "findingCategory": "missing_anatomy_or_effect",
+      "reasons": [
+        "Weezing renders as a single mottled sphere; second head, faces, insignia and gas clouds are absent."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 126,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 146,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 162,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 163,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 164,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 165,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 166,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 168,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 169,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 170,
+      "visualStatus": "hold",
+      "findingCategory": "material_effect",
+      "reasons": [
+        "Both Chinchou antenna bulbs are opaque black; official art shows glowing yellow bulbs."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 173,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 174,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 175,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 176,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 178,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 179,
+      "visualStatus": "hold",
+      "findingCategory": "material_effect",
+      "reasons": [
+        "Mareep's tail bulb is opaque black; official art shows an orange bulb."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 185,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 187,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 188,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 190,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 191,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 192,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 194,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 195,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 196,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 197,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 198,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 199,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 200,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 201,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 202,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 204,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 205,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 206,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 207,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 208,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Steelix renders near-white across all three poses versus dark gray official art; material/light parity needs correction."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 209,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 211,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 212,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 216,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 217,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 218,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 219,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 220,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 221,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 222,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 223,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 224,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 226,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged frontal CPU detail confirms intact eyes, face and full wing silhouette across the native flap. Low original frame height reflects naturally wide proportions."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 227,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Skarmory renders nearly pure white, losing reference metallic gray body and darker wing contrast."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 228,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 230,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 234,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 237,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 238,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 240,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 242,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 244,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 245,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 250,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 252,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 261,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 265,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 266,
+      "visualStatus": "hold",
+      "findingCategory": "missing_anatomy_or_effect",
+      "reasons": [
+        "Silcoon appears as a smooth white sphere with red eye; the many prominent radial spines in official art are not visible."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 267,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 268,
+      "visualStatus": "hold",
+      "findingCategory": "missing_anatomy_or_effect",
+      "reasons": [
+        "Cascoon appears as a smooth pale sphere with red eye; the many prominent radial spines in official art are not visible."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 269,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 270,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 276,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 278,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 279,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 283,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 284,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 285,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 286,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 290,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 291,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 292,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 293,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 294,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 298,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 299,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 300,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 301,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 302,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 304,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 305,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 307,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 309,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 310,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 313,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 314,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 315,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 316,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 317,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 318,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 319,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 322,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 324,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 325,
+      "visualStatus": "uncertain",
+      "findingCategory": "runtime_framing",
+      "reasons": [
+        "The original 360×420 fixed-camera Blender poses crop Spoink at bounce apex, but enlarged union-framed CPU detail shows intact body/spring throughout. Verify integrated pose-aware camera before admission."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 326,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 327,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 331,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 333,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 339,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 340,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 342,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 343,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 344,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 345,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 346,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 347,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 348,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 349,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 350,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 352,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 353,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 354,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 355,
+      "visualStatus": "hold",
+      "findingCategory": "material_effect",
+      "reasons": [
+        "Duskull's skull has empty black sockets in all three poses; the characteristic red eye from official art is not visible."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 356,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 357,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged frontal CPU detail confirms Tropius head, fruit, leaf wings and feet are present across all three poses."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 363,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 366,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 367,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 368,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 369,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Relicanth's body is washed nearly white versus the official brown-gray fish; markings and shape remain visible."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 370,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 371,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 372,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 373,
+      "visualStatus": "uncertain",
+      "findingCategory": "material_color",
+      "reasons": [
+        "Salamence wings look bright pink versus the official darker red/maroon; check corrected material/light path."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 374,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 375,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 377,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Regirock front face/torso is bleached white versus brown stone in official art; likely material or review-light mismatch."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 378,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 382,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 387,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 388,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 389,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 390,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 391,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 392,
+      "visualStatus": "uncertain",
+      "findingCategory": "effect_approximation",
+      "reasons": [
+        "Infernape head flame appears as a large solid orange/yellow sheet above the head; official art shows thinner broken flame. Check transparency/material in corrected renderer."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 393,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 394,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 395,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 396,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 397,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 398,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 399,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 400,
+      "visualStatus": "uncertain",
+      "findingCategory": "material_color",
+      "reasons": [
+        "Bibarel tail appears pale gray/beige rather than the darker brown beaver tail in official art; check source orientation/material."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 403,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 404,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 405,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 406,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 408,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 410,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 411,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 412,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 413,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 414,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 415,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 416,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 420,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 421,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 422,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 423,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 424,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 425,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 426,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 429,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 430,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 431,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 432,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 433,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 434,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 435,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 436,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 437,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 438,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 439,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 440,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 441,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 442,
+      "visualStatus": "hold",
+      "findingCategory": "texture_stencil_material",
+      "reasons": [
+        "Spiritomb appears as a noisy fragmented pink-gray mass; the official green facial discs and mouth are not recognizable in any pose."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 446,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 449,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 450,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 451,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 452,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 453,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 454,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 455,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 457,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 458,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 459,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 460,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 461,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 462,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Magnezone central steel shell renders almost white instead of the official dark blue/gray metal; needs corrected-path material review."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 463,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 464,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 466,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 468,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 470,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 471,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 472,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 473,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 474,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 476,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 477,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 478,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 479,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 480,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 481,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 482,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 485,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 486,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 488,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Cresselia crescent and loop surfaces blow out to white in all poses, losing official pink/yellow color separation."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 489,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 490,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 494,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 498,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 499,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 500,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 504,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 505,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 509,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 510,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 511,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 513,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 514,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 516,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 517,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Munna renders almost pure white in all poses versus the official pink body; only faint lavender markings remain."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 518,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 519,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 520,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 522,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 523,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 524,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 525,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 526,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 528,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 532,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 533,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 534,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 535,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged side CPU detail confirms complete cyan tadpole tail behind the head; original frontal pose occluded it."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 536,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 537,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 538,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 539,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 540,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 541,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 542,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 543,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 544,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 545,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 546,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 547,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 548,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 551,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 552,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 555,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 556,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 557,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 558,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 559,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 562,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 563,
+      "visualStatus": "hold",
+      "findingCategory": "texture_stencil_material",
+      "reasons": [
+        "Cofagrigus is a plain gray coffin with detached gray hands; gold/blue ornamentation and central face from official art are absent."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 568,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 569,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 570,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 572,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 573,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 574,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 575,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 576,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 577,
+      "visualStatus": "hold",
+      "findingCategory": "transparency_material",
+      "reasons": [
+        "Solosis is a murky green sphere; its distinct cream inner face and open mouth in official art are barely visible or missing."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 578,
+      "visualStatus": "hold",
+      "findingCategory": "transparency_material",
+      "reasons": [
+        "Duosion is an opaque green mass; inner face and body are not visible through the intended translucent shell."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 579,
+      "visualStatus": "hold",
+      "findingCategory": "transparency_material",
+      "reasons": [
+        "Reuniclus has faint outer limbs but the cream face and pink hand details in official art are not legible through the murky green body."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 580,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 581,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 582,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 584,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 585,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 586,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 588,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 590,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 592,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 593,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 594,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged CPU detail shows the complete heart-shaped Alomomola body, face and both fins from a side angle; initial narrow view was orientation."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 595,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 596,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 597,
+      "visualStatus": "hold",
+      "findingCategory": "source_authored_stationary_idle",
+      "reasons": [
+        "Authentic source-native Unity waitA01 is stationary on correctly bound weighted joints; Blender poses are identical and Three.js CPU mesh audit confirms zero vertex displacement. Separate source-authentic-native-idle status from the visible-motion goal. No rig failure or invented motion is implied."
+      ],
+      "visibleMotionGate": "hold_stationary_source",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 598,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 599,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 600,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 601,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 602,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 603,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 604,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 605,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 607,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 608,
+      "visualStatus": "uncertain",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Lampent lamp cap and arms appear medium gray rather than black in official art; verify corrected material/light and contrast."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 609,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 610,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 611,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 612,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 613,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 614,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 615,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 616,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 617,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 624,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 626,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged side CPU detail confirms mane, horns, torso, legs and muzzle are present; original frontal mane occlusion is natural."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 628,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 630,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 632,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 633,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 634,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 637,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 644,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 674,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 690,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 722,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 723,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 724,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 728,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 729,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 730,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 731,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 732,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 733,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 734,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 735,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 736,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 737,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 738,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 739,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 741,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 743,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 744,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 745,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged frontal CPU detail resolves fur, eyes and pale tan Midday-form color consistent with official art."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 747,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 752,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 753,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 754,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 757,
+      "visualStatus": "uncertain",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Salandit charcoal body is lifted to medium gray versus nearly black official art; assess material/color in corrected path."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 758,
+      "visualStatus": "uncertain",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Salazzle charcoal body is lifted to gray versus dark official art; assess material/color in corrected path."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 762,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 763,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 764,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 765,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 767,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 768,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 769,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Sandygast is nearly pure white in all three poses versus tan/beige official sand body; likely material or review-light washout."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 771,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 772,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 773,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 774,
+      "visualStatus": "uncertain",
+      "findingCategory": "form_material",
+      "reasons": [
+        "Minior outer shell renders pink where the official meteor shell is dark brown/gray; verify selected form and source/material mapping."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 775,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 776,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 777,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 778,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 779,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 780,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 781,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 782,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 783,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 784,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 785,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 786,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 788,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 789,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 790,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 791,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 792,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 793,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 795,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 799,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 802,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Marshadow upper head and flame render white in all three poses versus charcoal-gray official art; face remains visible."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 803,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 804,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 806,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 808,
+      "visualStatus": "uncertain",
+      "findingCategory": "material_color",
+      "reasons": [
+        "Meltan liquid-metal body renders nearly black rather than silver/gray official art; check metallic material and review lighting."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 810,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 812,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 813,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 815,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 816,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 818,
+      "visualStatus": "uncertain",
+      "findingCategory": "material_color",
+      "reasons": [
+        "Inteleon body appears cyan/light blue versus dark blue official art; check corrected material/color and source form."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 824,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 825,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 826,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 827,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 830,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 831,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 832,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 833,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 835,
+      "visualStatus": "hold",
+      "findingCategory": "lighting_or_material",
+      "reasons": [
+        "Yamper body is washed almost white, losing official tan/yellow coat color and facial contrast."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 836,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 837,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 840,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 847,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 849,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 851,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 857,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 858,
+      "visualStatus": "hold",
+      "findingCategory": "missing_anatomy_or_effect",
+      "reasons": [
+        "Hatterene lacks the wide teal mantle/arms seen in official art; all three poses show a narrow pink body under a pale conical hat."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 865,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 867,
+      "visualStatus": "hold",
+      "findingCategory": "texture_stencil_material",
+      "reasons": [
+        "Runerigus is plain gray fragmented slabs; the red rune/glyph patterns and color blocks of official art are absent."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 868,
+      "visualStatus": "hold",
+      "findingCategory": "native_loop_seam",
+      "reasons": [
+        "Milcery poses are visually plausible, but independent Three.js CPU mesh audit shows 7.08% body-extent discontinuity at the nominal idle loop seam; retime/repair and recheck."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "review_discontinuity"
+    },
+    {
+      "id": 869,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 872,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 874,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 876,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 877,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 880,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 881,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 884,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 885,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 886,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 887,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 888,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 889,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 890,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 892,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 893,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 894,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 895,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 899,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 900,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 901,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 902,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 903,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 904,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 905,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 906,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 907,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 908,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 912,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 913,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 917,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 924,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 926,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 927,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 928,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 930,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 958,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 959,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 960,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 967,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 969,
+      "visualStatus": "hold",
+      "findingCategory": "face_material",
+      "reasons": [
+        "Glimmet central hexagonal face is blank gray/dark with no yellow eyes across enlarged 0°, 90° and 180° CPU angles; official art shows two bright yellow eyes."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 970,
+      "visualStatus": "hold",
+      "findingCategory": "face_material",
+      "reasons": [
+        "Glimmora has no visible yellow eyes on the face-bearing lobe across enlarged 0°, 90° and 180° CPU angles; official art shows two conspicuous yellow eyes."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 978,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 980,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 985,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 990,
+      "visualStatus": "hold",
+      "findingCategory": "material_effect",
+      "reasons": [
+        "Iron Treads wheel lacks the prominent glowing red bands of official art and appears uniformly gray; baseline material/effect failure."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 991,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 992,
+      "visualStatus": "hold",
+      "findingCategory": "material_color",
+      "reasons": [
+        "Iron Hands hands/body render gray-white with no bright yellow palm panels shown in official art; strong material/color mismatch."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 993,
+      "visualStatus": "hold",
+      "findingCategory": "material_color",
+      "reasons": [
+        "Iron Jugulis renders almost monochrome gray-blue and lacks the saturated pink face/spike panels in official art."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1005,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "Enlarged side CPU detail resolves complete head, legs, long tail, red wing surfaces and black underside feathers; low original frame height reflects horizontal flight."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1006,
+      "visualStatus": "hold",
+      "findingCategory": "missing_anatomy_or_effect",
+      "reasons": [
+        "Iron Valiant does not show the large pink twin blades visible in official art in any of three baseline poses; material/mesh visibility requires repair."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1007,
+      "visualStatus": "uncertain",
+      "findingCategory": "source_form",
+      "reasons": [
+        "Koraidon source renders in a crouched/ride-like posture while the official reference is upright battle posture; confirm intended canonical form and idle selection."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1008,
+      "visualStatus": "hold",
+      "findingCategory": "material_color_and_loop",
+      "reasons": [
+        "Miraidon body is mostly black/gray instead of saturated purple reference colors; Three.js CPU audit also shows a 1.16% body-extent idle loop seam."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "review_discontinuity"
+    },
+    {
+      "id": 1009,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1010,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1017,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1019,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1021,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1022,
+      "visualStatus": "hold",
+      "findingCategory": "material_color",
+      "reasons": [
+        "Iron Boulder is mostly gray/white and lacks prominent black/orange plating and orange feet in official art; material/form parity needs correction."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    },
+    {
+      "id": 1025,
+      "visualStatus": "pass",
+      "findingCategory": null,
+      "reasons": [
+        "No obvious identity, gross anatomy, eye, material, deformation or pose-framing defect at cropped-sheet inspection scale."
+      ],
+      "visibleMotionGate": "cpu_geometry_changes",
+      "nativeLoopGate": "cpu_seam_under_one_percent"
+    }
+  ]
+}

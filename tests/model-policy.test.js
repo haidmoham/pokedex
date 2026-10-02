@@ -50,10 +50,22 @@ test('changed source identity, oversized streams and malformed GLBs are rejected
   assert.throws(() => validateModelStructure(new ArrayBuffer(3)), /invalid model/);
 });
 test('compact transfers cannot hide unbounded animation, geometry or external dependencies', () => {
-  for (const extra of [{ animations: Array(13).fill({}) }, { textures: Array(9).fill({}) }, { accessors: [{ count: 500001 }] }, { buffers: [{ uri: 'https://elsewhere.test/huge.bin' }] }, { images: [{ uri: 'data:image/png;base64,unbounded' }] }]) {
+  for (const extra of [{ animations: Array(13).fill({}) }, { textures: Array(65).fill({}) }, { accessors: [{ count: 500001 }] }, { buffers: [{ uri: 'https://elsewhere.test/huge.bin' }] }, { images: [{ uri: 'data:image/png;base64,unbounded' }] }]) {
     const bytes = glb({ asset: { version: '2.0' }, ...extra });
     assert.throws(() => validateModelStructure(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength)), /budget|dependencies/);
   }
+});
+
+test('image count is bounded by decoded memory and per-material sampler use', () => {
+  const manyImages = { asset: { version: '2.0' }, images: Array.from({ length: 10 }, () => ({})),
+    textures: Array.from({ length: 11 }, () => ({})),
+    materials: [{ pbrMetallicRoughness: { baseColorTexture: { index: 0 } }, emissiveTexture: { index: 1 } }] };
+  const accepted = glb(manyImages);
+  assert.doesNotThrow(() => validateModelStructure(accepted.buffer.slice(accepted.byteOffset, accepted.byteOffset + accepted.length)));
+  const tooManyOnOneMaterial = { ...manyImages, materials: [{ extensions: { TEST_many_maps:
+    Object.fromEntries(Array.from({ length: 9 }, (_, index) => [`slot${index}Texture`, { index }])) } }] };
+  const rejected = glb(tooManyOnOneMaterial);
+  assert.throws(() => validateModelStructure(rejected.buffer.slice(rejected.byteOffset, rejected.byteOffset + rejected.length)), /complexity exceeds budget/);
 });
 
 test('texture inspection closes every bitmap and rejects oversized decoded memory', async () => {

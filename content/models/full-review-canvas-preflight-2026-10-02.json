@@ -1,0 +1,3833 @@
+{
+  "checkedAt": "2026-10-02",
+  "scope": "Three GLTFLoader plus HOME effect/rig CPU preflight only; texture pixels, GPU shaders and playback checked separately",
+  "candidates": 478,
+  "pass": 478,
+  "hold": 0,
+  "results": [
+    {
+      "id": 4,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1666666,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 5,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 6,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 46,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 77,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 78,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 88,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 4,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 89,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 1,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 92,
+      "status": "cpu-preflight-pass",
+      "duration": 2.1333334,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 109,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 110,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 126,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 146,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 162,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 163,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 164,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 165,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 166,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 168,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 169,
+      "status": "cpu-preflight-pass",
+      "duration": 0.93333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 170,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 173,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 174,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 175,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 176,
+      "status": "cpu-preflight-pass",
+      "duration": 0.8666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 178,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 179,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 185,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 187,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 188,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 190,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 191,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 192,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 194,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 195,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 196,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 197,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 198,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 199,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 200,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 201,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 202,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 204,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 205,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 206,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 207,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 208,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 209,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 211,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 212,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 216,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 217,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 218,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 4,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 219,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 1,
+      "visibilityNodes": 6,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 220,
+      "status": "cpu-preflight-pass",
+      "duration": 3.6333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 221,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 222,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 223,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 224,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 226,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 227,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 228,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 230,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 234,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 237,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 238,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 240,
+      "status": "cpu-preflight-pass",
+      "duration": 1.0666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 242,
+      "status": "cpu-preflight-pass",
+      "duration": 1.7333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 244,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 245,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 250,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 252,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 261,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 265,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 266,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 267,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 268,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 269,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 270,
+      "status": "cpu-preflight-pass",
+      "duration": 0.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 276,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 278,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 279,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 283,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 284,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 285,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 286,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 290,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 291,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 292,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 293,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 294,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 298,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 299,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 300,
+      "status": "cpu-preflight-pass",
+      "duration": 1.2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 301,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 302,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 304,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 305,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 307,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 309,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 310,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 313,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 314,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 315,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 316,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 317,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 318,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 319,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 322,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 324,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 325,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 326,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 327,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 331,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 333,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 339,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 340,
+      "status": "cpu-preflight-pass",
+      "duration": 1.9666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 342,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 343,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 344,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 345,
+      "status": "cpu-preflight-pass",
+      "duration": 3.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 346,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 347,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 348,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 349,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 350,
+      "status": "cpu-preflight-pass",
+      "duration": 2.1333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 352,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 353,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 354,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 355,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 356,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 357,
+      "status": "cpu-preflight-pass",
+      "duration": 4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 363,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 366,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 367,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 368,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 369,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 370,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 371,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 372,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 373,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 374,
+      "status": "cpu-preflight-pass",
+      "duration": 1.9666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 375,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 377,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 378,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 382,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 387,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 388,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 389,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 390,
+      "status": "cpu-preflight-pass",
+      "duration": 0.93333334,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 391,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 392,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 393,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 394,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 395,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 396,
+      "status": "cpu-preflight-pass",
+      "duration": 0.8,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 397,
+      "status": "cpu-preflight-pass",
+      "duration": 0.53333336,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 398,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 399,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 400,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 403,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 404,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 405,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 406,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 408,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 410,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 411,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 412,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 413,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 414,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 415,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 416,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 420,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 421,
+      "status": "cpu-preflight-pass",
+      "duration": 3.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 422,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 423,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 424,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 425,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 426,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 429,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 430,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 431,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 432,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 433,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 434,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 435,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 436,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 437,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 438,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 439,
+      "status": "cpu-preflight-pass",
+      "duration": 1.0666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 440,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 441,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 442,
+      "status": "cpu-preflight-pass",
+      "duration": 4.1666665,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 446,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 449,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 450,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 451,
+      "status": "cpu-preflight-pass",
+      "duration": 1.7333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 452,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 453,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 454,
+      "status": "cpu-preflight-pass",
+      "duration": 0.53333336,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 455,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 457,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 458,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 459,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 460,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 461,
+      "status": "cpu-preflight-pass",
+      "duration": 1.0333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 462,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 463,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 464,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 466,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 468,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 470,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 471,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 472,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 473,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 474,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 476,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 477,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 478,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 479,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 480,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 481,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 482,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 485,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 486,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 488,
+      "status": "cpu-preflight-pass",
+      "duration": 4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 489,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 490,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 494,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 498,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 499,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 500,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 504,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 505,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 509,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 510,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 511,
+      "status": "cpu-preflight-pass",
+      "duration": 1.2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 513,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 514,
+      "status": "cpu-preflight-pass",
+      "duration": 2.2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 516,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 517,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 518,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 519,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 520,
+      "status": "cpu-preflight-pass",
+      "duration": 0.73333335,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 522,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 523,
+      "status": "cpu-preflight-pass",
+      "duration": 2.1333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 524,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 525,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 526,
+      "status": "cpu-preflight-pass",
+      "duration": 2.1333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 528,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 532,
+      "status": "cpu-preflight-pass",
+      "duration": 1.2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 533,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 534,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 535,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 536,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 537,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 538,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 539,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 540,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 541,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 542,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 543,
+      "status": "cpu-preflight-pass",
+      "duration": 1.0666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 544,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 545,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 546,
+      "status": "cpu-preflight-pass",
+      "duration": 4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 547,
+      "status": "cpu-preflight-pass",
+      "duration": 2.7333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 548,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 551,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 552,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 555,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 556,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 557,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 558,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 559,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 562,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 563,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 568,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 569,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 570,
+      "status": "cpu-preflight-pass",
+      "duration": 0.8666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 572,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 573,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 574,
+      "status": "cpu-preflight-pass",
+      "duration": 1.2666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 575,
+      "status": "cpu-preflight-pass",
+      "duration": 1.0666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 576,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 577,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 578,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 579,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 580,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 581,
+      "status": "cpu-preflight-pass",
+      "duration": 0.8,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 582,
+      "status": "cpu-preflight-pass",
+      "duration": 1.7333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 584,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 585,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 586,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 588,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 590,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 592,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 593,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 594,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 595,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 596,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 597,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 598,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 599,
+      "status": "cpu-preflight-pass",
+      "duration": 2.8,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 600,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 601,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 602,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 603,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 604,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 605,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 607,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 608,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 609,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 610,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 611,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 612,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 613,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 614,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 615,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 616,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 617,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 624,
+      "status": "cpu-preflight-pass",
+      "duration": 0.8,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 626,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 628,
+      "status": "cpu-preflight-pass",
+      "duration": 0.73333335,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 630,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 632,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 633,
+      "status": "cpu-preflight-pass",
+      "duration": 2.2666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 634,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 637,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 644,
+      "status": "cpu-preflight-pass",
+      "duration": 2.2666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 674,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 690,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 722,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 723,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 724,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 728,
+      "status": "cpu-preflight-pass",
+      "duration": 1.0666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 729,
+      "status": "cpu-preflight-pass",
+      "duration": 1.4666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 730,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 731,
+      "status": "cpu-preflight-pass",
+      "duration": 0.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 732,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 733,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 734,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 735,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 736,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 737,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 738,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 739,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 741,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 743,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 744,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 745,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 747,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 752,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 753,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 754,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 757,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 758,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 762,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 763,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 764,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 765,
+      "status": "cpu-preflight-pass",
+      "duration": 1.8,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 767,
+      "status": "cpu-preflight-pass",
+      "duration": 0.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 768,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 769,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 771,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 772,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 773,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 774,
+      "status": "cpu-preflight-pass",
+      "duration": 5.3333335,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 775,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 776,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 777,
+      "status": "cpu-preflight-pass",
+      "duration": 0.7,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 778,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 779,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 780,
+      "status": "cpu-preflight-pass",
+      "duration": 3.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 781,
+      "status": "cpu-preflight-pass",
+      "duration": 2.9333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 782,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 783,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 784,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 785,
+      "status": "cpu-preflight-pass",
+      "duration": 0.93333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 786,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 788,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 789,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 2,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 790,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 791,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 792,
+      "status": "cpu-preflight-pass",
+      "duration": 4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 793,
+      "status": "cpu-preflight-pass",
+      "duration": 4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 795,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 799,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 802,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 803,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 804,
+      "status": "cpu-preflight-pass",
+      "duration": 2.2666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 806,
+      "status": "cpu-preflight-pass",
+      "duration": 3.2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 808,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 810,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 812,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 813,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 815,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 816,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 818,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 824,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 825,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 826,
+      "status": "cpu-preflight-pass",
+      "duration": 2.1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 827,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 830,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 831,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 832,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 833,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 835,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 836,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 837,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 840,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 847,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 849,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 851,
+      "status": "cpu-preflight-pass",
+      "duration": 2.7333333,
+      "stencilRefs": 1,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 857,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 858,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 865,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 867,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 868,
+      "status": "cpu-preflight-pass",
+      "duration": 4,
+      "stencilRefs": 0,
+      "visibilityNodes": 5,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 869,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 872,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 874,
+      "status": "cpu-preflight-pass",
+      "duration": 3.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 876,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 877,
+      "status": "cpu-preflight-pass",
+      "duration": 0.96666664,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 880,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 881,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 884,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 885,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 886,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 887,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 888,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 889,
+      "status": "cpu-preflight-pass",
+      "duration": 2.4,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 890,
+      "status": "cpu-preflight-pass",
+      "duration": 3.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 892,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 893,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 894,
+      "status": "cpu-preflight-pass",
+      "duration": 2.1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 895,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 899,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 900,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 901,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 902,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 903,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 904,
+      "status": "cpu-preflight-pass",
+      "duration": 2.1666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 905,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 906,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 907,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 908,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 912,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 913,
+      "status": "cpu-preflight-pass",
+      "duration": 1.1666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 917,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 924,
+      "status": "cpu-preflight-pass",
+      "duration": 1,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 926,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 927,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 928,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 930,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 958,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 959,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 960,
+      "status": "cpu-preflight-pass",
+      "duration": 1.9666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 967,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 969,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 970,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 978,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 980,
+      "status": "cpu-preflight-pass",
+      "duration": 2.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 985,
+      "status": "cpu-preflight-pass",
+      "duration": 2,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 990,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 991,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 992,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 993,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1005,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1006,
+      "status": "cpu-preflight-pass",
+      "duration": 3.3333333,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1007,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1008,
+      "status": "cpu-preflight-pass",
+      "duration": 3.1666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1009,
+      "status": "cpu-preflight-pass",
+      "duration": 1.3333334,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1010,
+      "status": "cpu-preflight-pass",
+      "duration": 2.6666667,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1017,
+      "status": "cpu-preflight-pass",
+      "duration": 1.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1019,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1021,
+      "status": "cpu-preflight-pass",
+      "duration": 3,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1022,
+      "status": "cpu-preflight-pass",
+      "duration": 2.5,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    },
+    {
+      "id": 1025,
+      "status": "cpu-preflight-pass",
+      "duration": 1.6666666,
+      "stencilRefs": 0,
+      "visibilityNodes": 0,
+      "layeredMaterials": 0
+    }
+  ]
+}

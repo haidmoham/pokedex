@@ -1,6 +1,6 @@
 import {readFile,writeFile,mkdir,readdir,unlink} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {isProtectedModelPreview,isProtectedIdleExpansionPreview} from './preview-model-context.js';
+import {isProtectedModelPreview,isProtectedIdleExpansionPreview,isProtectedFullReviewPreview} from './preview-model-context.js';
 import {isPublicModelRelease,verifyPublicModelManifest,publicModelAsset,PUBLIC_MODEL_MANIFEST_SHA256} from './public-model-release.js';
 import {trimHomeIdle} from './trim-home-idle.js';
 import {compressHomeAnimation} from './compress-home-animation.js';
@@ -58,7 +58,7 @@ if(isProtectedModelPreview()||publicRelease){
   if(asset.url!==`/models/home-preview-${asset.id}.glb`)throw Error('Invalid preview destination');
   await writeFile(new URL(`home-preview-${asset.id}.glb`,directory),result.bytes);
  }}));
- if(publicRelease||idleExpansionPreview)assets=assets.map((asset,index)=>index<publicBaseCount?publicModelAsset(asset):asset);
+ if(publicRelease||idleExpansionPreview||isProtectedFullReviewPreview())assets=assets.map((asset,index)=>index<publicBaseCount?publicModelAsset(asset):asset);
 }
 await writeFile(new URL('preview-models.json',generated),JSON.stringify(assets)+'\n');
 console.log(`${assets.length} extracted models prepared for ${publicRelease ? 'approved public release' : 'protected preview'}`);

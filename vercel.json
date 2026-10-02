@@ -13,6 +13,10 @@
       "destination": "/api/index"
     },
     {
+      "source": "/review",
+      "destination": "/review.html"
+    },
+    {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
     }

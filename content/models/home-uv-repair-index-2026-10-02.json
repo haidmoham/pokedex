@@ -1,0 +1,778 @@
+{
+  "checkedAt": "2026-10-02",
+  "scope": "Compact UV/material repair index only; original Unity shader settings and texture paths remain at exact pinned upstream source pointers, with unresolved asset rights. No shader equivalence, material appearance or admission is claimed.",
+  "historicalSpecies": 46,
+  "historicalMaterials": 81,
+  "liveOptimizedSpecies": 40,
+  "liveOptimizedMaterials": 50,
+  "rows": [
+    {
+      "id": 88,
+      "atlasBlobSha": "8e22a4219faf0ac03481f538e169c81ec3c047e5",
+      "rawGeometryBlobSha": "cf0d77f96cb0fafc6eabc9fc5bc3cfdfef7c29d2",
+      "originalMaterialNames": [
+        "pm0088_00_00-BodyA",
+        "pm0088_00_00-BodyB",
+        "pm0088_00_00-BodyC01"
+      ],
+      "liveMaterialNames": [
+        "pm0088_00_00-BodyA",
+        "pm0088_00_00-BodyB",
+        "pm0088_00_00-BodyC01"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 89,
+      "atlasBlobSha": "b533db0f1cc7e71748ae90775de655a853e0e7e0",
+      "rawGeometryBlobSha": "247e8233b00d125968c777ed5b1c5261ca042d45",
+      "originalMaterialNames": [
+        "pm0089_00_00-BodyC00",
+        "pm0089_00_00-BodyC01"
+      ],
+      "liveMaterialNames": [
+        "pm0089_00_00-BodyC00",
+        "pm0089_00_00-BodyC01"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 126,
+      "atlasBlobSha": "666bcae9d355a6db98d037a9d166b58dd929bc97",
+      "rawGeometryBlobSha": "318dcffb7ace8b541f08f3fbc3e5069c41e0d1aa",
+      "originalMaterialNames": [
+        "pm0126_00_00-BodyA00"
+      ],
+      "liveMaterialNames": [
+        "pm0126_00_00-BodyA00"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 219,
+      "atlasBlobSha": "26eb427f4bf4bd8b8d05d7a1a31e29fa65b41f8d",
+      "rawGeometryBlobSha": "9c95f8fa66a00dce96d71b1cf3e9e30c1cee2e42",
+      "originalMaterialNames": [
+        "pm0219_00_00-BodyAInc"
+      ],
+      "liveMaterialNames": [
+        "pm0219_00_00-BodyAInc"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 467,
+      "atlasBlobSha": "380819831a2eae86edf882e6598d5603f43897ee",
+      "rawGeometryBlobSha": "b1220ac36ddafd35d60f457d6c751d6f084f430c",
+      "originalMaterialNames": [
+        "pm0467_00_00-BodyCInc00",
+        "pm0467_00_00-BodyCInc01"
+      ],
+      "liveMaterialNames": [
+        "pm0467_00_00-BodyCInc00"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 477,
+      "atlasBlobSha": "b03b9badf47c39d1e8f81cded02d5f1604201ab5",
+      "rawGeometryBlobSha": "5e55bbff63fa1de6c8e485fad9a4bf420d24a8eb",
+      "originalMaterialNames": [
+        "pm0477_00_00-BodyA00",
+        "pm0477_00_00-BodyA02",
+        "pm0477_00_00-BodyA04"
+      ],
+      "liveMaterialNames": [
+        "pm0477_00_00-BodyA04"
+      ],
+      "reasons": [
+        "sourceEmissionUvSwitch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 494,
+      "atlasBlobSha": "28282e98d3abf7de1770d8e9aedb43bbaa72bd62",
+      "rawGeometryBlobSha": "183b947654a270ab363982d28a046589c33cb324",
+      "originalMaterialNames": [
+        "pm0494_00_00-AuraEf1"
+      ],
+      "liveMaterialNames": [],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 500,
+      "atlasBlobSha": "81da57b42f068f27444975a14f81d7e24386faf1",
+      "rawGeometryBlobSha": "cd2e9e4c47c45a1c5b9c7df00b1de733c68d382d",
+      "originalMaterialNames": [
+        "pm0500_00_00-BodyCHinoarashi_Fire"
+      ],
+      "liveMaterialNames": [
+        "pm0500_00_00-BodyCHinoarashi_Fire"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 555,
+      "atlasBlobSha": "2730053abbabdada3a8b085ea57136c4f5e6b2f0",
+      "rawGeometryBlobSha": "b3c60a1c22e965b70a59b94462c387a634e0d7a1",
+      "originalMaterialNames": [
+        "pm0555_11_00-BodyB"
+      ],
+      "liveMaterialNames": [
+        "pm0555_11_00-BodyB"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 677,
+      "atlasBlobSha": "ab865517b8b947f4cbee719790621beab0802183",
+      "rawGeometryBlobSha": "b8a31d291bb1e96ab6f73d807135ec572d0af3d6",
+      "originalMaterialNames": [
+        "pm0677_00_00-LEye"
+      ],
+      "liveMaterialNames": [],
+      "reasons": [
+        "sourceEmissionUvSwitch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 698,
+      "atlasBlobSha": "1bc975be2255c73ff7ce45605f6e4eec087dc7e4",
+      "rawGeometryBlobSha": "9f38647e88bf1ea2f16e79e0cd2d085b5efc5d91",
+      "originalMaterialNames": [
+        "pm0698_00_00-BodyB"
+      ],
+      "liveMaterialNames": [
+        "pm0698_00_00-BodyB"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 699,
+      "atlasBlobSha": "075d79f552cf846a2a76163ce8229d8d11415387",
+      "rawGeometryBlobSha": "61aa8027c7ee4297175de16e81903cd240e775b8",
+      "originalMaterialNames": [
+        "pm0699_00_00-BodyBInc"
+      ],
+      "liveMaterialNames": [
+        "pm0699_00_00-BodyBInc"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 716,
+      "atlasBlobSha": "2c6f0663843674a2a0ac15521e5bb241e5b88e7f",
+      "rawGeometryBlobSha": "0958ca748696421eee0c3d63d9b96b904ece45d8",
+      "originalMaterialNames": [
+        "pm0716_00_00-BodyD"
+      ],
+      "liveMaterialNames": [
+        "pm0716_00_00-BodyD"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 718,
+      "atlasBlobSha": "acb5f3237022c5361ed5dea1bb3cdf0baf06a4b1",
+      "rawGeometryBlobSha": "91cbcb4d94327f53c9d04f422b12afad2a14ff65",
+      "originalMaterialNames": [
+        "pm0718_00_00-EffAInc"
+      ],
+      "liveMaterialNames": [
+        "pm0718_00_00-EffAInc"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 726,
+      "atlasBlobSha": "6fb28787ab20a3e62e35de00ad10a6fc3a25c42a",
+      "rawGeometryBlobSha": "ecad2e9e49d844a02170a252e35121572a925586",
+      "originalMaterialNames": [
+        "pm0726_00_00-BodyC01Back",
+        "pm0726_00_00-BodyC01Front"
+      ],
+      "liveMaterialNames": [
+        "pm0726_00_00-BodyC01Back"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 727,
+      "atlasBlobSha": "9b335bcbea346adc7d781b9e44facc1695288848",
+      "rawGeometryBlobSha": "e8e2d6721c5250ae611aeab074f2ae81467affcc",
+      "originalMaterialNames": [
+        "pm0727_00_00-BodyC"
+      ],
+      "liveMaterialNames": [
+        "pm0727_00_00-BodyC"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 751,
+      "atlasBlobSha": "3bb43b3e123b66dd4d0a1b95072e1d1ec562f129",
+      "rawGeometryBlobSha": "fd8ddb224c6836bc5a4e965a94816dd17e956f86",
+      "originalMaterialNames": [
+        "pm0751_00_00-BodyReshiramIncVco"
+      ],
+      "liveMaterialNames": [
+        "pm0751_00_00-BodyReshiramIncVco"
+      ],
+      "reasons": [
+        "sourceEmissionUvSwitch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 757,
+      "atlasBlobSha": "720462178c0cb85d66ca9ec5dde3ec07570805ed",
+      "rawGeometryBlobSha": "5900bbc95eb235526af0f19f57a4fbe79e2b9afa",
+      "originalMaterialNames": [
+        "pm0757_00_00-FireMask"
+      ],
+      "liveMaterialNames": [],
+      "reasons": [
+        "sourceMaskUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 758,
+      "atlasBlobSha": "a7dca7652fcbbdc37f350c4c32f58b4a2abf7fc0",
+      "rawGeometryBlobSha": "573b5878dd0bd6f24e5293cd3f3981a77c9eb7e9",
+      "originalMaterialNames": [
+        "pm0758_00_00-FireMaskA00",
+        "pm0758_00_00-FireMaskA01",
+        "pm0758_00_00-FireMaskA02",
+        "pm0758_00_00-FireMaskA03",
+        "pm0758_00_00-FireMaskB00",
+        "pm0758_00_00-FireMaskB01"
+      ],
+      "liveMaterialNames": [],
+      "reasons": [
+        "sourceMaskUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 794,
+      "atlasBlobSha": "b1da1d1c8a8070c10a18e2a2674d844f91078c48",
+      "rawGeometryBlobSha": "a0df7b8fe323be397e79a77d604b2181354374a5",
+      "originalMaterialNames": [
+        "pm0794_00_00-BodyE_Opa",
+        "pm0794_00_00-BodyG_Bubble"
+      ],
+      "liveMaterialNames": [
+        "pm0794_00_00-BodyE_Opa",
+        "pm0794_00_00-BodyG_Bubble"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 802,
+      "atlasBlobSha": "4f5e3cd7efdea1f77a6bf9ec59ffa2027d7f47ee",
+      "rawGeometryBlobSha": "e2590cb99a7c4ef46549f40e1af82a1801c0a1b1",
+      "originalMaterialNames": [
+        "pm0802_00_00-BodyA",
+        "pm0802_00_00-BodyAVco"
+      ],
+      "liveMaterialNames": [
+        "pm0802_00_00-BodyA"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 815,
+      "atlasBlobSha": "f36fc7d424fb74a2b79037745a03bf65b35cd27f",
+      "rawGeometryBlobSha": "11137f6799a1542aea6522bd1e58a58ac5bedf7a",
+      "originalMaterialNames": [
+        "pm0815_00_00-BodyD"
+      ],
+      "liveMaterialNames": [],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 826,
+      "atlasBlobSha": "9869b8219e86578348df7c37ff57981d8ea49f21",
+      "rawGeometryBlobSha": "52ce6952362033f4b3a69dd362be567241862c6b",
+      "originalMaterialNames": [
+        "pm0826_00_00-BodyBIncVco",
+        "pm0826_00_00-Eye"
+      ],
+      "liveMaterialNames": [
+        "pm0826_00_00-Eye"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 839,
+      "atlasBlobSha": "471dfa8037947ae8bf5f624811f9f4e71b1b25ca",
+      "rawGeometryBlobSha": "656f7e5377517cf2414e36a62c444c7d39e0f45e",
+      "originalMaterialNames": [
+        "pm0839_00_00-BodyCInc",
+        "pm0839_00_00-BodyCIncVcoEnv"
+      ],
+      "liveMaterialNames": [
+        "pm0839_00_00-BodyCIncVcoEnv"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch",
+        "sourceEmissionUvSwitch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 850,
+      "atlasBlobSha": "d9accb79593233b318a7308aea0162ff489e254b",
+      "rawGeometryBlobSha": "09f009047026edf9bf89187985139ce57d9d656e",
+      "originalMaterialNames": [
+        "pm0850_00_00-BodyBInc"
+      ],
+      "liveMaterialNames": [],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 864,
+      "atlasBlobSha": "356e379bbc43faf45d7d6ee405232bbe37fdeed3",
+      "rawGeometryBlobSha": "10ea66066633a38dbf5634cd286aeb9f9ed3f900",
+      "originalMaterialNames": [
+        "pm0864_00_31-Feeler01",
+        "pm0864_00_31-Feeler02",
+        "pm0864_00_31-Feeler03",
+        "pm0864_00_31-Feeler04",
+        "pm0864_00_31-Missile"
+      ],
+      "liveMaterialNames": [
+        "pm0864_00_31-Feeler01"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 869,
+      "atlasBlobSha": "131faffa100b00ddd70cf2977ef16524660bfd98",
+      "rawGeometryBlobSha": "ea2a1c83e2fc0a51e32b7f9739787d8d533663a8",
+      "originalMaterialNames": [
+        "pm0869_11_00-AMouth",
+        "pm0869_11_00-BMouth",
+        "pm0869_11_00-Eye"
+      ],
+      "liveMaterialNames": [
+        "pm0869_11_00-AMouth",
+        "pm0869_11_00-BMouth",
+        "pm0869_11_00-Eye"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 887,
+      "atlasBlobSha": "94ab86a21f98105c8004679028f1ff058b720652",
+      "rawGeometryBlobSha": "0e9f549e1b9413f4a50bfa0269c5bcd1392372da",
+      "originalMaterialNames": [
+        "pm0887_00_00-BodyA00",
+        "pm0887_00_00-BodyA01"
+      ],
+      "liveMaterialNames": [
+        "pm0887_00_00-BodyA00"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 935,
+      "atlasBlobSha": "c52712ab12d62bc74630b39f360408e083fe1ec8",
+      "rawGeometryBlobSha": "61dec29f93ebf274f929e5e0df23cbacc89a90e6",
+      "originalMaterialNames": [
+        "pm0935_00_00-LEye00",
+        "pm0935_00_00-REye00"
+      ],
+      "liveMaterialNames": [
+        "pm0935_00_00-REye00"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 936,
+      "atlasBlobSha": "5629e9a46906e08b7f7982b7075234f2eb143433",
+      "rawGeometryBlobSha": "5dca41c710aacd42339f32f4277126d80ec8eac0",
+      "originalMaterialNames": [
+        "pm0936_00_00-LEye",
+        "pm0936_00_00-REye"
+      ],
+      "liveMaterialNames": [
+        "pm0936_00_00-LEye"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 937,
+      "atlasBlobSha": "5565b8159c258b1a14cee76a5322ff2732a4976d",
+      "rawGeometryBlobSha": "f5fdf7c79a16044493fb1e2c63cb134779dd9ebc",
+      "originalMaterialNames": [
+        "pm0937_00_00-LEye",
+        "pm0937_00_00-REye"
+      ],
+      "liveMaterialNames": [
+        "pm0937_00_00-LEye"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 949,
+      "atlasBlobSha": "7b8cf66695a0e68ea70876075c1292e1e371ab1e",
+      "rawGeometryBlobSha": "96927f1dfeeea61f6e7b0a6528105895c198b379",
+      "originalMaterialNames": [
+        "pm0949_00_00-BodyTra"
+      ],
+      "liveMaterialNames": [
+        "pm0949_00_00-BodyTra"
+      ],
+      "reasons": [
+        "atlasRequestedUvFallback"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 954,
+      "atlasBlobSha": "780b4d8271e6af436b9e273584b835b89fea5b91",
+      "rawGeometryBlobSha": "4bbd8f91e98977aaa06cae2898208746f9568d4f",
+      "originalMaterialNames": [
+        "pm0954_00_00-BodyA00",
+        "pm0954_00_00-Eye"
+      ],
+      "liveMaterialNames": [
+        "pm0954_00_00-Eye"
+      ],
+      "reasons": [
+        "atlasRequestedUvFallback"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 990,
+      "atlasBlobSha": "4ceb65d6b67322db434ffdc93bdab855ea8d6a45",
+      "rawGeometryBlobSha": "711e2a23d8210b2652c1384e6a94d02d71e0e8c5",
+      "originalMaterialNames": [
+        "pm0990_00_00-BodyBPara"
+      ],
+      "liveMaterialNames": [
+        "pm0990_00_00-BodyBPara"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 991,
+      "atlasBlobSha": "0eeb45bff744f46bf3925adda914da994ccdf12b",
+      "rawGeometryBlobSha": "7f02b2fb59b75ce74d78a8ffe93e781a82405a8f",
+      "originalMaterialNames": [
+        "pm0991_00_00-BodyCPara"
+      ],
+      "liveMaterialNames": [
+        "pm0991_00_00-BodyCPara"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 992,
+      "atlasBlobSha": "514dc6ef6f4937cef85222f0e5a6a09767a45891",
+      "rawGeometryBlobSha": "1d2c9d0346a61133696017f011a9a9f02f669246",
+      "originalMaterialNames": [
+        "pm0992_00_00-BodyBPara"
+      ],
+      "liveMaterialNames": [
+        "pm0992_00_00-BodyBPara"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 993,
+      "atlasBlobSha": "3c38deffcbf150cf8e3eb11496ac79d9b755b779",
+      "rawGeometryBlobSha": "86198ddf9d6505da3504040669bd43e6fca46b8c",
+      "originalMaterialNames": [
+        "pm0993_00_00-BodyBPara",
+        "pm0993_00_00-BodyCInc",
+        "pm0993_00_00-EyeA",
+        "pm0993_00_00-EyeB"
+      ],
+      "liveMaterialNames": [
+        "pm0993_00_00-BodyBPara",
+        "pm0993_00_00-BodyCInc",
+        "pm0993_00_00-EyeA",
+        "pm0993_00_00-EyeB"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch",
+        "sourceEmissionUvSwitch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 994,
+      "atlasBlobSha": "812958cd64f279802fb79e23bdeb5b4a4cf8afbd",
+      "rawGeometryBlobSha": "19abfc781b46c631ebd6887ccf1d25f5a083bf8b",
+      "originalMaterialNames": [
+        "pm0994_00_00-BodyB01Para"
+      ],
+      "liveMaterialNames": [
+        "pm0994_00_00-BodyB01Para"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 995,
+      "atlasBlobSha": "a24756a7ef73d5e8cc137f1227f8589c100d5aff",
+      "rawGeometryBlobSha": "6f6851c79c58ed4d61ae8043f1f2c3d9a739176e",
+      "originalMaterialNames": [
+        "pm1006_00_00-BodyBPara"
+      ],
+      "liveMaterialNames": [
+        "pm1006_00_00-BodyBPara"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 1006,
+      "atlasBlobSha": "2d4e951038f293157c2f6fe1f5443cc981e1f2a8",
+      "rawGeometryBlobSha": "fd8bd1b0d9c53ca0dbd5186d79e9c7c0ba825080",
+      "originalMaterialNames": [
+        "pm0995_00_00-BodyBPara00",
+        "pm0995_00_00-BodyBPara01"
+      ],
+      "liveMaterialNames": [
+        "pm0995_00_00-BodyBPara01"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 1008,
+      "atlasBlobSha": "1a94d139b1f3c51f8ff8c93dcec09e2d8f6dbd30",
+      "rawGeometryBlobSha": "555ac06346f17a5b724cc3e2fc46a4dd020446a1",
+      "originalMaterialNames": [
+        "pm1008_11_00-BodyC00",
+        "pm1008_11_00-BodyC01",
+        "pm1008_11_00-BodyCTra",
+        "pm1008_11_00-LEye",
+        "pm1008_11_00-REye"
+      ],
+      "liveMaterialNames": [
+        "pm1008_11_00-BodyC01",
+        "pm1008_11_00-LEye"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "atlasRequestedUvFallback",
+        "sourceBaseLayerUvMismatch",
+        "sourceEmissionUvSwitch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 1010,
+      "atlasBlobSha": "98c4c2d0f4d54738202c3fe4108e2ba88b35c984",
+      "rawGeometryBlobSha": "251603d0e0b16e689e429387b90b0b81d2e413d7",
+      "originalMaterialNames": [
+        "pm1010_00_00-BodyBPara"
+      ],
+      "liveMaterialNames": [
+        "pm1010_00_00-BodyBPara"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 1012,
+      "atlasBlobSha": "edf8b0fc6d942dd4ac9a08e6b2ee8611ccbf5ff0",
+      "rawGeometryBlobSha": "b43ecf0881ca9c5ca15409251e7df33771390a80",
+      "originalMaterialNames": [
+        "pm1012_11_00-Body01"
+      ],
+      "liveMaterialNames": [
+        "pm1012_11_00-Body01"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch",
+        "sourceEmissionUvSwitch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 1022,
+      "atlasBlobSha": "1ad8001d16f61f64db96c2c58ff84ff46d75d42e",
+      "rawGeometryBlobSha": "049a94c8d5a81c85b8190dc56476fccfbfdf72ed",
+      "originalMaterialNames": [
+        "pm1022_00_00-BodyBPara"
+      ],
+      "liveMaterialNames": [
+        "pm1022_00_00-BodyBPara"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 1023,
+      "atlasBlobSha": "ade20a70ad84a7a415ef2519921b1b893471e1ef",
+      "rawGeometryBlobSha": "f26b4a1701654e51af92c4b9ffb57960afd37d96",
+      "originalMaterialNames": [
+        "pm1023_00_00-BodyBPara"
+      ],
+      "liveMaterialNames": [
+        "pm1023_00_00-BodyBPara"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    },
+    {
+      "id": 1024,
+      "atlasBlobSha": "1df06715f59bd91b9d76377ae6ade31ee3184ea9",
+      "rawGeometryBlobSha": "9d1368b4230c69fed2d7e0107d59ce5539a7e87c",
+      "originalMaterialNames": [
+        "pm1024_11_00-BodyInc"
+      ],
+      "liveMaterialNames": [
+        "pm1024_11_00-BodyInc"
+      ],
+      "reasons": [
+        "atlasLayerUvApproximation",
+        "atlasRequestedUvFallback",
+        "sourceBaseLayerUvMismatch"
+      ],
+      "status": "requires-source-material-and-geometry-review"
+    }
+  ]
+}
