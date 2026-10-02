@@ -167,14 +167,51 @@ test('source layer flag variants require explicit review opt-in and return per-m
     assert.equal(runtime.layerApproximations.length, 1);
     assert.deepEqual(runtime.layerApproximations[0].sourceFlags, flags);
     assert.equal(runtime.layerApproximations[0].sourceSettingsDiffer, true);
-    assert.match(runtime.layerApproximations[0].disclosure, /Review approximation.*not the verified original shader/);
+    assert.equal(runtime.layerApproximations[0].renderEquation, 'source-layer-interpolation-review');
+    assert.match(runtime.layerApproximations[0].disclosure, /Review approximation.*original layered shader equation is unverified/);
     const shader = { vertexShader: THREE.ShaderLib.standard.vertexShader,
       fragmentShader: THREE.ShaderLib.standard.fragmentShader, uniforms: {} };
     gltf.scene.children[0].material.onBeforeCompile(shader);
-    assert.match(shader.fragmentShader, /homeBase\.rgb \* homeBase\.a \+ homeLayer\.rgb/);
+    assert.match(shader.fragmentShader, /mix\(homeBase\.rgb, homeLayer\.rgb, homeLayerWeight\)/);
+    assert.match(shader.fragmentShader, /clamp\(homeLayer\.a \* clamp\(homeLayerOverLerp, 0\.0, 1\.0\)/);
+    assert.equal(shader.uniforms.homeLayerOverLerp.value, flags.layerOverLerpValue);
     runtime.dispose();
     assert.equal(clip.duration, originalDuration);
   }
+});
+
+test('strict path retains its previous composite while opted-in review uses pinned layer colors', () => {
+  // Center texels are from the pinned original base/layer PNGs. Both alpha
+  // channels are 255, so weighting by base alpha hides every layer color.
+  const sourceCenters = [
+    [990, [68, 64, 61, 255], [255, 71, 67, 255]],
+    [992, [79, 74, 74, 255], [251, 210, 20, 255]],
+    [993, [86, 124, 168, 255], [253, 70, 201, 255]],
+    [1006, [241, 239, 239, 255], [255, 61, 135, 255]],
+    [1008, [44, 44, 52, 255], [164, 153, 255, 255]],
+    [1022, [79, 74, 74, 255], [255, 179, 16, 255]],
+  ];
+  for (const [id, basePixel, layerPixel] of sourceCenters) {
+    const weight = Math.min(1, Math.max(0, layerPixel[3] / 255 * 1));
+    const reviewRgb = basePixel.slice(0, 3).map((channel, index) =>
+      Math.round(channel * (1 - weight) + layerPixel[index] * weight));
+    assert.deepEqual(reviewRgb, layerPixel.slice(0, 3), `source layer center color #${id}`);
+    assert.notDeepEqual(reviewRgb, basePixel.slice(0, 3), `source base center color #${id}`);
+  }
+  const { gltf, scene } = sceneFixture({ materials: [
+    { name: 'BodyLayer', extras: { homeLayerUv: { base: 0, layer: 1 } } },
+  ] });
+  const base = new THREE.Texture(), layer = new THREE.Texture();
+  base.channel = 0; layer.channel = 1;
+  const composite = { equation: 'atlas-alpha-over-review', baseUv: 0, layerUv: 1,
+    layerCalcMulti: 0, layerOverLerpValue: 1, layerBlendMode: 0 };
+  const strict = prepareHomeEffects(gltf, THREE, { layeredMaterials: { BodyLayer: { base, layer, composite } } });
+  const shader = { vertexShader: THREE.ShaderLib.standard.vertexShader,
+    fragmentShader: THREE.ShaderLib.standard.fragmentShader, uniforms: {} };
+  scene.children[0].material.onBeforeCompile(shader);
+  assert.match(shader.fragmentShader, /homeBase\.rgb \* homeBase\.a \+ homeLayer\.rgb \* \(1\.0 - homeBase\.a\)/);
+  assert.equal(strict.layerApproximations[0].renderEquation, 'atlas-alpha-over-review');
+  strict.dispose();
 });
 
 test('review opt-in still rejects unknown source equations, flags and metadata', () => {

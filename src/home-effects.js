@@ -43,10 +43,11 @@ export function createHomeRenderer(THREE, parameters) {
   return renderer;
 }
 
-function shaderLayer(material, base, layer, emissionMask) {
-  // The source's base and layer maps must be distinct, pinned textures. This
-  // reproduces Atlas's documented alpha-over review bake with separate UVs;
-  // the original Unity shader equation has not been recovered or validated.
+function shaderLayer(material, base, layer, emissionMask, composite, reviewLayerInterpolation) {
+  // The source's base and layer maps must be distinct, pinned textures.
+  // Strict mode keeps the earlier Atlas alpha-over preview. Protected review
+  // uses the source LERP mode, layer alpha and static over-lerp value as a
+  // bounded visual interpolation. Neither recovers the original Unity shader.
   const previousCompile = material.onBeforeCompile;
   const previousCacheKey = material.customProgramCacheKey.bind(material);
   material.map = base;
@@ -60,6 +61,7 @@ function shaderLayer(material, base, layer, emissionMask) {
       layer.updateMatrix();
       shader.uniforms.homeLayerMap = { value: layer };
       shader.uniforms.homeLayerTransform = { value: layer.matrix };
+      if (reviewLayerInterpolation) shader.uniforms.homeLayerOverLerp = { value: composite.layerOverLerpValue };
     }
     if (emissionMask) {
       emissionMask.updateMatrix();
@@ -83,8 +85,18 @@ function shaderLayer(material, base, layer, emissionMask) {
       .replace(vertexHeader, `${vertexHeader}${needsUv1 ? '\n#ifndef USE_UV1\nattribute vec2 uv1;\n#endif' : ''}${layerHeader}${emissionHeader}`)
       .replace(vertexUv, `${vertexUv}${layerUv}${emissionUv}`);
     if (layer) shader.fragmentShader = shader.fragmentShader
-      .replace(fragmentHeader, `${fragmentHeader}\nuniform sampler2D homeLayerMap;\nvarying vec2 vHomeLayerUv;`)
-      .replace(fragmentMap, `#ifdef USE_MAP
+      .replace(fragmentHeader, `${fragmentHeader}\nuniform sampler2D homeLayerMap;\nvarying vec2 vHomeLayerUv;${reviewLayerInterpolation ? '\nuniform float homeLayerOverLerp;' : ''}`)
+      .replace(fragmentMap, reviewLayerInterpolation ? `#ifdef USE_MAP
+  vec4 homeBase = texture2D(map, vMapUv);
+  vec4 homeLayer = texture2D(homeLayerMap, vHomeLayerUv);
+  // Protected visual review: LERP mode, layer alpha as mask, bounded source weight.
+  float homeLayerWeight = clamp(homeLayer.a * clamp(homeLayerOverLerp, 0.0, 1.0), 0.0, 1.0);
+  vec4 homeComposite = vec4(
+    mix(homeBase.rgb, homeLayer.rgb, homeLayerWeight),
+    homeBase.a + homeLayerWeight * (1.0 - homeBase.a)
+  );
+  diffuseColor *= homeComposite;
+#endif` : `#ifdef USE_MAP
   vec4 homeBase = texture2D(map, vMapUv);
   vec4 homeLayer = texture2D(homeLayerMap, vHomeLayerUv);
   vec4 homeComposite = vec4(
@@ -103,7 +115,7 @@ function shaderLayer(material, base, layer, emissionMask) {
         .replace(chunk, `totalEmissiveRadiance *= homeComposite.rgb * texture2D(homeEmissionMask, vHomeEmissionUv).r;`);
     }
   };
-  material.customProgramCacheKey = () => `${previousCacheKey()}|home-source-material-v3-${base.channel}-${layer?.channel ?? 'none'}-${emissionMask?.channel ?? 'none'}`;
+  material.customProgramCacheKey = () => `${previousCacheKey()}|home-source-material-v4-${base.channel}-${layer?.channel ?? 'none'}-${emissionMask?.channel ?? 'none'}-${reviewLayerInterpolation ? `review-${composite.layerOverLerpValue}` : 'strict'}`;
   material.needsUpdate = true;
 }
 
@@ -210,11 +222,11 @@ export function prepareHomeEffects(gltf, THREE, { layeredMaterials = {}, require
       throw new Error(`Original UV0/UV1 textures unavailable: ${name}`);
     }
     if (expectsLayer) layerApproximations.push({ materialName: name,
-      renderEquation: 'atlas-alpha-over-review', sourceFlags: {
+      renderEquation: allowReviewLayerApproximation ? 'source-layer-interpolation-review' : 'atlas-alpha-over-review', sourceFlags: {
         layerCalcMulti: composite.layerCalcMulti, layerOverLerpValue: composite.layerOverLerpValue,
         layerBlendMode: composite.layerBlendMode }, sourceSettingsDiffer: compositeClass === false,
-      disclosure: compositeClass === false
-        ? `Review approximation for ${name}: source layer settings differ; rendered with Atlas alpha-over, not the verified original shader.`
+      disclosure: allowReviewLayerApproximation
+        ? `Review approximation for ${name}: layer color uses layer alpha and bounded source over-lerp setting${compositeClass === false ? '; source settings differ' : ''}. The original layered shader equation is unverified.`
         : `Review approximation for ${name}: rendered with Atlas alpha-over; the original layered shader equation is unverified.`,
     });
   }
@@ -251,8 +263,8 @@ export function prepareHomeEffects(gltf, THREE, { layeredMaterials = {}, require
       mesh.castShadow = false; mesh.receiveShadow = false;
     }
     if (layerNames.has(material.name) && !patchedMaterials.has(material)) {
-      const { base, layer, emissionMask } = layeredMaterials[material.name];
-      shaderLayer(material, base, layer, emissionMask);
+      const { base, layer, emissionMask, composite } = layeredMaterials[material.name];
+      shaderLayer(material, base, layer, emissionMask, composite, allowReviewLayerApproximation);
       patchedMaterials.add(material);
     }
   }

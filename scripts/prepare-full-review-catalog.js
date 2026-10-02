@@ -41,7 +41,7 @@ const correctionFor = item => item ? {
   derivativeSha256: item.derivative.sha256,
   derivativeBytes: item.derivative.bytes,
   hosted: true,
-  renderEquation: 'Atlas alpha-over visual-review approximation; source shader equivalence unverified',
+  renderEquation: 'Atlas-style source-setting-driven layer interpolation for visual review; source shader equivalence unverified',
   layerApproximationRequired: item.materialCorrectionStatus === 'held-unverified-original-layer-equation',
   transferPolicy: item.derivative.transferPolicy,
   heldMaterials: item.heldMaterials.map(material => material.name),

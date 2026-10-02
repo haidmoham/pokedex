@@ -115,6 +115,9 @@ async function resolveEmbeddedSourceTextures(gltf, THREE, signal, destination) {
     typeof parser.getDependency !== 'function') throw new Error('Embedded HOME texture metadata unavailable');
   const resolvedDescriptors = new Map();
   const wrapMode = [THREE.RepeatWrapping, THREE.ClampToEdgeWrapping, THREE.MirroredRepeatWrapping];
+  // glTF stores WebGL enum values, while THREE.Texture uses Three-specific
+  // constants. The source descriptor stores indices into these parallel maps.
+  const gltfWrapMode = [10497, 33071, 33648];
   function checkSlot(slot) {
     if (!slot || !Number.isInteger(slot.texture) || ![0, 1].includes(slot.uv) ||
       !Array.isArray(slot.wrap) || slot.wrap.length !== 2 || slot.wrap.some(mode => ![0, 1, 2].includes(mode)) ||
@@ -126,11 +129,13 @@ async function resolveEmbeddedSourceTextures(gltf, THREE, signal, destination) {
     const texture = json.textures[slot.texture];
     const imageIndex = texture?.extensions?.EXT_texture_webp?.source ?? texture?.source;
     const image = json.images[imageIndex];
-    const sampler = json.samplers?.[texture?.sampler] ?? {};
+    const samplerIndex = texture?.sampler;
+    const sampler = samplerIndex === undefined ? {} : json.samplers?.[samplerIndex];
     if (!texture || !image || image.uri || !Number.isInteger(image.bufferView) || !json.bufferViews[image.bufferView] ||
       !['image/png', 'image/webp'].includes(image.mimeType) ||
-      (sampler.wrapS ?? THREE.RepeatWrapping) !== wrapMode[slot.wrap[0]] ||
-      (sampler.wrapT ?? THREE.RepeatWrapping) !== wrapMode[slot.wrap[1]]) {
+      !sampler || (samplerIndex !== undefined && !Number.isInteger(samplerIndex)) ||
+      (sampler.wrapS ?? 10497) !== gltfWrapMode[slot.wrap[0]] ||
+      (sampler.wrapT ?? 10497) !== gltfWrapMode[slot.wrap[1]]) {
       throw new Error('Source texture is not the declared embedded image');
     }
     return slot;

@@ -81,10 +81,12 @@ function ReviewCanvas({ asset, name, officialArt, allowReviewLayerApproximation 
 }
 
 function Review() {
+  const initial = new URLSearchParams(window.location.search);
+  const requestedId = Number(initial.get('id'));
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [error, setError] = useState('');
-  const [selected, setSelected] = useState(4);
-  const [variant, setVariant] = useState<'baseline' | 'corrected'>('baseline');
+  const [selected, setSelected] = useState(Number.isInteger(requestedId) && requestedId >= 1 && requestedId <= 1025 ? requestedId : 4);
+  const [variant, setVariant] = useState<'baseline' | 'corrected'>(initial.get('variant') === 'corrected' ? 'corrected' : 'baseline');
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState('all');
   useEffect(() => {
@@ -153,9 +155,9 @@ function Review() {
         {!activeAsset && <div className="review-empty"><p>No new review model for this already released species.</p><a href="/">View the public Pokédex ↗</a></div>}
         {candidate?.sourceAuthoredStationaryWait && <p className="review-warning">This original HOME wait clip is authentically stationary on the visible mesh. No procedural movement has been substituted.</p>}
         {candidate?.features.rawGeometryUVReview && variant === 'baseline' && <p className="review-warning">This optimized Atlas source lost some original secondary UVs. Layered material appearance may be wrong.</p>}
-        {useCorrection && <p className="review-warning">Original HOME primitive/material assignments and native curves are retained. Layer colors use a concrete Atlas-style alpha-over visual-review approximation, not a recovered proprietary shader equation. Browser GPU appearance remains unverified.</p>}
+        {useCorrection && <p className="review-warning">Original HOME primitive/material assignments and native curves are retained. Layer colors use a disclosed Atlas-style interpolation for visual review, not a recovered proprietary shader equation. Browser GPU appearance remains unverified.</p>}
         {correction?.status === 'held-unverified-original-layer-equation' && <p className="review-warning">Source-shader hold for {correction.heldMaterials.join(', ')}. The corrected draft is offered here only after selecting the disclosed approximation; it is not admitted.</p>}
-        {correction?.specialAtlasCompatibilityMaterials.length && <p className="review-warning">Special materials use hash-pinned Atlas compatibility behavior for {correction.specialAtlasCompatibilityMaterials.map(item => item.name).join(', ')}; source shader equivalence is unverified.</p>}
+        {(correction?.specialAtlasCompatibilityMaterials.length ?? 0) > 0 && <p className="review-warning">Special materials use hash-pinned Atlas compatibility behavior for {correction!.specialAtlasCompatibilityMaterials.map(item => item.name).join(', ')}; source shader equivalence is unverified.</p>}
         {correction?.transferPolicy === 'exact-protected-review-exception-2mb-mobile-performance-pending' && <p className="review-warning">The original-scene draft is {correction.derivativeBytes.toLocaleString()} bytes. Its exact hash-bound, on-demand protected-review transfer exception is under 2 MB; mobile performance remains unverified.</p>}
         {candidate && <p className="review-source">Pinned Atlas source: <a href={candidate.sourceUrl} target="_blank" rel="noreferrer">HOME reconstruction ↗</a> · SHA-256 {candidate.sourceSha256}<br />Original geometry: {candidate.originalHome.geometry.path}<br />Original native wait: {candidate.originalHome.nativeWait.path}<br />{candidate.credit}<br />{candidate.license}</p>}
         {!candidate && correction && <p className="review-source">Local original-scene draft SHA-256 {correction.derivativeSha256}. No source binary is committed or added to the public release.</p>}

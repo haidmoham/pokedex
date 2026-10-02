@@ -56,7 +56,7 @@ function addEmbeddedSourceTextures(gltf, { layer = true, emission = true, invali
   gltf.parser.json.textures = [0, 1, 2].map(source => ({ source, sampler: 0 }));
   gltf.parser.json.images = [0, 1, 2].map(bufferView => ({ bufferView, mimeType: 'image/png' }));
   gltf.parser.json.bufferViews = [0, 1, 2].map(() => ({ buffer: 0, byteLength: 8 }));
-  gltf.parser.json.samplers = [{ wrapS: THREE.RepeatWrapping, wrapT: THREE.RepeatWrapping }];
+  gltf.parser.json.samplers = [{ wrapS: 10497, wrapT: 10497 }];
   gltf.parser.getDependency = async (kind, index) => { assert.equal(kind, 'texture'); assert.ok(index < 3); return new THREE.Texture(); };
   return descriptor;
 }
@@ -223,6 +223,46 @@ test('embedded emission mask works without a layer and undeclared texture indice
   assert.equal(next.host.children.length, 0);
 });
 
+test('glTF wrap enums map to real Three texture wrap modes for all source slots', async () => {
+  const gltfModes = [10497, 33071, 33648];
+  const threeModes = [THREE.RepeatWrapping, THREE.ClampToEdgeWrapping, THREE.MirroredRepeatWrapping];
+  for (let mode = 0; mode < 3; mode++) {
+    const gltf = fakeGLTF(), descriptor = addEmbeddedSourceTextures(gltf);
+    descriptor.base.wrap = [mode, mode];
+    descriptor.layer.wrap = [mode, mode];
+    descriptor.emissionMask.wrap = [mode, mode];
+    gltf.parser.json.samplers[0] = { wrapS: gltfModes[mode], wrapT: gltfModes[mode] };
+    const browser = fakeBrowser();
+    const runtime = await mountHomeCanvas({ host: browser.host, bytes: new ArrayBuffer(32),
+      signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/' }, fakeModules(gltf).overrides);
+    const shader = { vertexShader: THREE.ShaderLib.standard.vertexShader,
+      fragmentShader: THREE.ShaderLib.standard.fragmentShader, uniforms: {} };
+    gltf.material.onBeforeCompile(shader);
+    const layer = shader.uniforms.homeLayerMap.value, mask = shader.uniforms.homeEmissionMask.value;
+    assert.ok(layer instanceof THREE.Texture);
+    assert.equal(layer.wrapS, threeModes[mode]); assert.equal(layer.wrapT, threeModes[mode]);
+    assert.equal(mask.wrapS, threeModes[mode]); assert.equal(mask.wrapT, threeModes[mode]);
+    runtime.dispose();
+  }
+});
+
+test('mismatched, invalid and missing glTF sampler references still fail closed', async () => {
+  for (const badSampler of [
+    { wrapS: 1000, wrapT: 10497 }, { wrapS: 33071, wrapT: 10497 },
+    { wrapS: 10497, wrapT: 99999 }, null,
+  ]) {
+    const gltf = fakeGLTF();
+    addEmbeddedSourceTextures(gltf);
+    if (badSampler === null) gltf.parser.json.textures[1].sampler = 99;
+    else gltf.parser.json.samplers[0] = badSampler;
+    const browser = fakeBrowser();
+    await assert.rejects(mountHomeCanvas({ host: browser.host, bytes: new ArrayBuffer(32),
+      signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/' },
+    fakeModules(gltf).overrides), /declared embedded image/);
+    assert.equal(browser.host.children.length, 0);
+  }
+});
+
 test('canvas opt-in exposes source-flag review disclosures and strict mount fails cleanly', async () => {
   const gltf = fakeGLTF();
   const descriptor = addEmbeddedSourceTextures(gltf);
@@ -241,6 +281,11 @@ test('canvas opt-in exposes source-flag review disclosures and strict mount fail
   assert.equal(runtime.layerApproximations[0].materialName, 'body-layer');
   assert.equal(runtime.layerApproximations[0].sourceFlags.layerOverLerpValue, 0);
   assert.equal(runtime.layerApproximations[0].sourceSettingsDiffer, true);
+  const shader = { vertexShader: THREE.ShaderLib.standard.vertexShader,
+    fragmentShader: THREE.ShaderLib.standard.fragmentShader, uniforms: {} };
+  gltf.material.onBeforeCompile(shader);
+  assert.match(shader.fragmentShader, /mix\(homeBase\.rgb, homeLayer\.rgb, homeLayerWeight\)/);
+  assert.equal(shader.uniforms.homeLayerOverLerp.value, 0);
   assert.ok(state.renders > 0);
   runtime.dispose();
   assert.equal(state.rendererDisposed, true);

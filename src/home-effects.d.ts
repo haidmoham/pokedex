@@ -4,7 +4,7 @@ export interface HomeLayerTextures {
   layer?: { isTexture: true; channel: number; updateMatrix(): void; matrix: unknown };
   /** Original packed red-channel emission mask when the derived material emits. */
   emissionMask?: { isTexture: true; channel: number; updateMatrix(): void; matrix: unknown };
-  /** Explicit Atlas-style visual-review approximation; original shader equation is unverified. */
+  /** Original source flags with a legacy review-equation marker; source shader equation is unverified. */
   composite?: { equation: 'atlas-alpha-over-review'; baseUv: 0 | 1; layerUv: 0 | 1;
     layerCalcMulti: number; layerOverLerpValue: number; layerBlendMode: number };
 }
@@ -14,13 +14,13 @@ export interface HomeEffectsOptions {
   requiredLayerMaterials?: string[];
   /** Original source textures, preloaded and configured from pinned metadata. */
   layeredMaterials?: Record<string, HomeLayerTextures>;
-  /** Protected visual review only. Allows known source flag variants to use Atlas alpha-over. Defaults to false. */
+  /** Protected visual review only. Enables layer-alpha/source-over-lerp interpolation. Defaults to false. */
   allowReviewLayerApproximation?: boolean;
 }
 
 export interface HomeLayerApproximationDisclosure {
   materialName: string;
-  renderEquation: 'atlas-alpha-over-review';
+  renderEquation: 'atlas-alpha-over-review' | 'source-layer-interpolation-review';
   sourceFlags: { layerCalcMulti: number; layerOverLerpValue: number; layerBlendMode: number };
   sourceSettingsDiffer: boolean;
   disclosure: string;
