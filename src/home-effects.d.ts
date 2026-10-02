@@ -1,11 +1,11 @@
 /** Three-specific compatibility for pinned HOME reconstruction GLBs. */
 export interface HomeLayerTextures {
   base: { isTexture: true; channel: number; updateMatrix(): void; matrix: unknown };
-  layer: { isTexture: true; channel: number; updateMatrix(): void; matrix: unknown };
+  layer?: { isTexture: true; channel: number; updateMatrix(): void; matrix: unknown };
   /** Original packed red-channel emission mask when the derived material emits. */
   emissionMask?: { isTexture: true; channel: number; updateMatrix(): void; matrix: unknown };
   /** Explicit Atlas-style visual-review approximation; original shader equation is unverified. */
-  composite: { equation: 'atlas-alpha-over-review'; baseUv: 0 | 1; layerUv: 0 | 1;
+  composite?: { equation: 'atlas-alpha-over-review'; baseUv: 0 | 1; layerUv: 0 | 1;
     layerCalcMulti: number; layerOverLerpValue: number; layerBlendMode: number };
 }
 
@@ -14,6 +14,16 @@ export interface HomeEffectsOptions {
   requiredLayerMaterials?: string[];
   /** Original source textures, preloaded and configured from pinned metadata. */
   layeredMaterials?: Record<string, HomeLayerTextures>;
+  /** Protected visual review only. Allows known source flag variants to use Atlas alpha-over. Defaults to false. */
+  allowReviewLayerApproximation?: boolean;
+}
+
+export interface HomeLayerApproximationDisclosure {
+  materialName: string;
+  renderEquation: 'atlas-alpha-over-review';
+  sourceFlags: { layerCalcMulti: number; layerOverLerpValue: number; layerBlendMode: number };
+  sourceSettingsDiffer: boolean;
+  disclosure: string;
 }
 
 export interface HomeEffectsRuntime {
@@ -24,6 +34,8 @@ export interface HomeEffectsRuntime {
   stencilRefs: number[];
   visibilityNodes: string[];
   layeredMaterialNames: string[];
+  /** Show these per-material warnings in protected review; none prove source-shader equivalence. */
+  layerApproximations: HomeLayerApproximationDisclosure[];
   /** Stop and uncache animation; caller also disposes scene resources and renderer. */
   dispose(): void;
 }

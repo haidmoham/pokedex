@@ -11,7 +11,7 @@
     "audit:cards": "node scripts/audit-cards.js",
     "audit:models": "node scripts/audit-models.js",
     "coverage:release": "node scripts/report-current-model-coverage.js",
-    "prebuild": "node scripts/prepare-model-runtime.js && node scripts/prepare-preview-models.js && node scripts/prepare-full-review-catalog.js && node scripts/prepare-release.js"
+    "prebuild": "node scripts/prepare-model-runtime.js && node scripts/prepare-preview-models.js && node scripts/prepare-original-home-review.js && node scripts/prepare-full-review-catalog.js && node scripts/prepare-release.js"
   },
   "dependencies": {
     "@google/model-viewer": "^4.3.1",

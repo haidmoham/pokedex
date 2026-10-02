@@ -1,7 +1,7 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number };
+export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; reviewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number };
 
 export function previewModelAttribution(asset: ModelAsset) {
   const catalog = asset.preparation === 'catalog-native-idle';
@@ -55,6 +55,25 @@ export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): str
 
 export const MODEL_TRANSFER_LIMIT = 750_000;
 export const MODEL_GEOMETRY_LIMIT = 32 * 1024 * 1024;
+// Nine lossless original-scene reconstructions require narrow protected,
+// on-demand review exceptions. Their decoded resource caps remain unchanged.
+// Neither is admitted or publicly released; mobile performance is pending.
+const REVIEW_TRANSFER_EXCEPTIONS = {
+  219: { bytes: 1_127_528, sha256: 'd10bfaae062fe8f304c49486de42e4430faf599ffb1bb25fb9e163fc7b73d9ec' },
+  718: { bytes: 986_128, sha256: 'd545f4be159b0429ad8ba0c304087d143e344292823a781c7c8bf577bc1ee837' },
+  864: { bytes: 1_170_036, sha256: '75416c27457cc856496cfdcfe53e6f819a7e36c9d9f3e10f9dc0d7a0a5916b69' },
+  993: { bytes: 1_760_040, sha256: '97d91943a9286c401e3bd265041cfe60e9ea2f4642d46712525908a06e7ef3aa' },
+  1008: { bytes: 1_580_016, sha256: '7b09d57a8e3f0b06da9267911b66cf81f59a7b675b21bae2a11b3a589d5c91f4' },
+  1010: { bytes: 928_824, sha256: '1f54f2374ea7ae50af866c404b4208476cba279c79c9326ff58302f7c53c1046' },
+  1012: { bytes: 1_276_616, sha256: '3d14948eb1c299a71dc2b65ff98dc8f3d6bd0c952c1ea414112c6ecdc58d4678' },
+  1022: { bytes: 1_025_488, sha256: '5239e2a281292bd9763a235c03c7176d6aa149c8143dd4307c69c5a8884ce57a' },
+  1023: { bytes: 1_358_928, sha256: '77ff4cbf686afccb1040162448f0a2a5c766e741e8e197379eee87fdd04c7baf' },
+} as const;
+export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'bytes' | 'sha256' | 'url' | 'reviewOnly' | 'admitted'>): number {
+  const expected = REVIEW_TRANSFER_EXCEPTIONS[asset.id as keyof typeof REVIEW_TRANSFER_EXCEPTIONS];
+  return asset.reviewOnly === true && asset.admitted === false && expected && asset.bytes === expected.bytes &&
+    asset.sha256 === expected.sha256 && asset.url === `/models/review-original-${asset.id}.glb` ? 2_000_000 : MODEL_TRANSFER_LIMIT;
+}
 export function admittedModel(id: number, entries: ModelAsset[] = [...previewAdmission, ...admission]): ModelAsset | undefined {
   // Source-level stray props/black geometry were verified for Gholdengo.
   return entries.find(asset => asset.id === id && asset.admitted &&
@@ -128,7 +147,7 @@ export async function fetchModel(asset: ModelAsset, signal: AbortSignal, fetcher
       const { value, done } = await reader.read();
       if (done) break;
       size += value.byteLength;
-      if (size > Math.min(asset.bytes, MODEL_TRANSFER_LIMIT)) throw new Error('model exceeds admission budget');
+      if (size > Math.min(asset.bytes, modelTransferLimit(asset))) throw new Error('model exceeds admission budget');
       chunks.push(new Uint8Array(value));
     }
   } finally { await reader.cancel(); }

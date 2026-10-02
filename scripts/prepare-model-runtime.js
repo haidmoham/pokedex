@@ -1,4 +1,5 @@
-import { readFile, mkdir, writeFile, copyFile } from 'node:fs/promises';
+import { readFile, mkdir, writeFile, copyFile, rm } from 'node:fs/promises';
+import { isProtectedFullReviewPreview } from './preview-model-context.js';
 // model-viewer loads Meshopt as a classic script. Preserve the official decoder,
 // adapting only its ESM export to the documented global decoder interface.
 const source = await readFile(new URL('../node_modules/three/examples/jsm/libs/meshopt_decoder.module.js', import.meta.url), 'utf8');
@@ -10,7 +11,11 @@ await writeFile(new URL('../public/model-runtime/THREE-LICENSE', import.meta.url
 // effects. Keep its Draco decoder local and tied to this locked Three version.
 const dracoSource = new URL('../node_modules/three/examples/jsm/libs/draco/gltf/', import.meta.url);
 const dracoDestination = new URL('../public/model-runtime/draco/', import.meta.url);
-await mkdir(dracoDestination, { recursive: true });
-for (const name of ['draco_decoder.js', 'draco_wasm_wrapper.js', 'draco_decoder.wasm']) {
-  await copyFile(new URL(name, dracoSource), new URL(name, dracoDestination));
+if (isProtectedFullReviewPreview()) {
+  await mkdir(dracoDestination, { recursive: true });
+  for (const name of ['draco_decoder.js', 'draco_wasm_wrapper.js', 'draco_decoder.wasm']) {
+    await copyFile(new URL(name, dracoSource), new URL(name, dracoDestination));
+  }
+} else {
+  await rm(dracoDestination, { recursive: true, force: true });
 }

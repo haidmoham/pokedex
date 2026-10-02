@@ -16,7 +16,9 @@ export function inspectHomeEffects(json, requiredLayerMaterials = []) {
   const nodes = json?.nodes ?? [];
   const layeredMaterialNames = [...new Set([
     ...requiredLayerMaterials,
-    ...materials.filter(material => material.extras?.homeLayerUv).map(material => material.name),
+    ...materials.filter(material => material.extras?.homeLayerUv ||
+      material.extras?.homeSourceTextures?.layer || material.extras?.homeSourceTextures?.emissionMask)
+      .map(material => material.name),
   ])];
   const effects = {
     stencil: materials.some(material => material.extras?.homeStencil !== undefined),
@@ -54,9 +56,11 @@ function shaderLayer(material, base, layer, emissionMask) {
   material.onBeforeCompile = function (shader, renderer) {
     previousCompile.call(this, shader, renderer);
     base.updateMatrix();
-    layer.updateMatrix();
-    shader.uniforms.homeLayerMap = { value: layer };
-    shader.uniforms.homeLayerTransform = { value: layer.matrix };
+    if (layer) {
+      layer.updateMatrix();
+      shader.uniforms.homeLayerMap = { value: layer };
+      shader.uniforms.homeLayerTransform = { value: layer.matrix };
+    }
     if (emissionMask) {
       emissionMask.updateMatrix();
       shader.uniforms.homeEmissionMask = { value: emissionMask };
@@ -70,12 +74,15 @@ function shaderLayer(material, base, layer, emissionMask) {
       ![fragmentHeader, fragmentMap].every(part => shader.fragmentShader.includes(part))) {
       throw new Error('Unsupported Three shader version for HOME layered UV');
     }
+    const layerHeader = layer ? '\nuniform mat3 homeLayerTransform;\nvarying vec2 vHomeLayerUv;' : '';
+    const layerUv = layer ? `\nvHomeLayerUv = (homeLayerTransform * vec3(${layer.channel === 1 ? 'uv1' : 'uv'}, 1.0)).xy;` : '';
     const emissionHeader = emissionMask ? '\nuniform mat3 homeEmissionTransform;\nvarying vec2 vHomeEmissionUv;' : '';
     const emissionUv = emissionMask ? `\nvHomeEmissionUv = (homeEmissionTransform * vec3(${emissionMask.channel === 1 ? 'uv1' : 'uv'}, 1.0)).xy;` : '';
+    const needsUv1 = base.channel === 1 || layer?.channel === 1 || emissionMask?.channel === 1;
     shader.vertexShader = shader.vertexShader
-      .replace(vertexHeader, `${vertexHeader}\n#ifndef USE_UV1\nattribute vec2 uv1;\n#endif\nuniform mat3 homeLayerTransform;\nvarying vec2 vHomeLayerUv;${emissionHeader}`)
-      .replace(vertexUv, `${vertexUv}\nvHomeLayerUv = (homeLayerTransform * vec3(${layer.channel === 1 ? 'uv1' : 'uv'}, 1.0)).xy;${emissionUv}`);
-    shader.fragmentShader = shader.fragmentShader
+      .replace(vertexHeader, `${vertexHeader}${needsUv1 ? '\n#ifndef USE_UV1\nattribute vec2 uv1;\n#endif' : ''}${layerHeader}${emissionHeader}`)
+      .replace(vertexUv, `${vertexUv}${layerUv}${emissionUv}`);
+    if (layer) shader.fragmentShader = shader.fragmentShader
       .replace(fragmentHeader, `${fragmentHeader}\nuniform sampler2D homeLayerMap;\nvarying vec2 vHomeLayerUv;`)
       .replace(fragmentMap, `#ifdef USE_MAP
   vec4 homeBase = texture2D(map, vMapUv);
@@ -86,6 +93,8 @@ function shaderLayer(material, base, layer, emissionMask) {
   );
   diffuseColor *= homeComposite;
 #endif`);
+    else if (emissionMask) shader.fragmentShader = shader.fragmentShader.replace(fragmentMap,
+      `${fragmentMap}\nvec4 homeComposite = texture2D(map, vMapUv);`);
     if (emissionMask) {
       const chunk = '#include <emissivemap_fragment>';
       if (!shader.fragmentShader.includes(chunk)) throw new Error('Unsupported Three emissive shader version for HOME layered UV');
@@ -94,8 +103,20 @@ function shaderLayer(material, base, layer, emissionMask) {
         .replace(chunk, `totalEmissiveRadiance *= homeComposite.rgb * texture2D(homeEmissionMask, vHomeEmissionUv).r;`);
     }
   };
-  material.customProgramCacheKey = () => `${previousCacheKey()}|home-layer-uv1-v2-${emissionMask?.channel ?? 'none'}`;
+  material.customProgramCacheKey = () => `${previousCacheKey()}|home-source-material-v3-${base.channel}-${layer?.channel ?? 'none'}-${emissionMask?.channel ?? 'none'}`;
   material.needsUpdate = true;
+}
+
+const REVIEW_COMPOSITE_KEYS = ['baseUv', 'equation', 'layerBlendMode', 'layerCalcMulti',
+  'layerOverLerpValue', 'layerUv'];
+
+function classifyReviewComposite(composite) {
+  if (!composite || Object.keys(composite).sort().join('|') !== REVIEW_COMPOSITE_KEYS.join('|') ||
+    composite.equation !== 'atlas-alpha-over-review' ||
+    ![0, 1].includes(composite.baseUv) || ![0, 1].includes(composite.layerUv) ||
+    ![0, 1].includes(composite.layerCalcMulti) ||
+    ![0, 1, 1.5].includes(composite.layerOverLerpValue) || composite.layerBlendMode !== 0) return null;
+  return composite.layerCalcMulti === 0 && composite.layerOverLerpValue === 1;
 }
 
 /**
@@ -113,7 +134,9 @@ function shaderLayer(material, base, layer, emissionMask) {
  * The caller owns GLTFLoader, renderer, camera, playback and disposal. Return
  * the selected native clip and mixer for the caller's playback controls.
  */
-export function prepareHomeEffects(gltf, THREE, { layeredMaterials = {}, requiredLayerMaterials = [] } = {}) {
+export function prepareHomeEffects(gltf, THREE, { layeredMaterials = {}, requiredLayerMaterials = [],
+  allowReviewLayerApproximation = false } = {}) {
+  if (typeof allowReviewLayerApproximation !== 'boolean') throw new Error('Invalid HOME review option');
   if (!gltf?.scene?.traverse || !Array.isArray(gltf.animations) || !THREE?.BooleanKeyframeTrack || !THREE?.AnimationMixer) {
     throw new Error('Decoded Three GLTF and runtime required');
   }
@@ -156,30 +179,44 @@ export function prepareHomeEffects(gltf, THREE, { layeredMaterials = {}, require
       }
       layerNames.add(material.name);
     }
-    if (layerNames.has(material.name) && !mesh.geometry?.getAttribute?.('uv1')) {
-      throw new Error(`Missing UV1 geometry for HOME layer: ${material.name}`);
-    }
+    if (material.userData?.homeSourceTextures?.layer || material.userData?.homeSourceTextures?.emissionMask) layerNames.add(material.name);
   }
+  if (layerNames.size > 64) throw new Error('HOME source material review budget exceeded');
   for (const [ref, roles] of stencilRoles) if (roles.has('core') && !roles.has('mask')) {
     throw new Error(`Unpaired HOME stencil core ${ref}`);
   }
+  const layerApproximations = [];
   for (const name of layerNames) {
     const target = meshes.filter(({ material }) => material.name === name);
     const textures = layeredMaterials[name];
     const composite = textures?.composite;
-    if (!target.length || !textures?.base?.isTexture || !textures?.layer?.isTexture || textures.base === textures.layer ||
-      ![0, 1].includes(textures.base.channel) || ![0, 1].includes(textures.layer.channel) ||
-      textures.base.channel === textures.layer.channel ||
-      composite?.equation !== 'atlas-alpha-over-review' ||
-      composite?.layerCalcMulti !== 0 || composite?.layerOverLerpValue !== 1 || composite?.layerBlendMode !== 0 ||
-      composite?.baseUv !== textures.base.channel || composite?.layerUv !== textures.layer.channel ||
+    const compositeClass = textures?.layer ? classifyReviewComposite(composite) : null;
+    const expectsLayer = target.some(({ material }) => material.userData?.homeLayerUv || material.userData?.homeSourceTextures?.layer) ||
+      requiredLayerMaterials.includes(name);
+    const expectsEmission = target.some(({ material }) => material.emissiveMap || material.userData?.homeSourceTextures?.emissionMask);
+    if (!target.length || !textures?.base?.isTexture || ![0, 1].includes(textures.base.channel) ||
+      (!expectsLayer && composite !== undefined) ||
+      expectsLayer !== Boolean(textures.layer) || expectsEmission !== Boolean(textures.emissionMask) ||
+      (expectsLayer && (!textures.layer?.isTexture || textures.base === textures.layer ||
+        ![0, 1].includes(textures.layer.channel) || compositeClass === null ||
+        (compositeClass === false && !allowReviewLayerApproximation) ||
+        composite?.baseUv !== textures.base.channel || composite?.layerUv !== textures.layer.channel)) ||
       target.some(({ material }) => material.userData?.homeLayerUv &&
-        (material.userData.homeLayerUv.base !== composite.baseUv || material.userData.homeLayerUv.layer !== composite.layerUv)) ||
-      target.some(({ material }) => Boolean(material.emissiveMap) !== Boolean(textures.emissionMask)) ||
+        (material.userData.homeLayerUv.base !== composite?.baseUv || material.userData.homeLayerUv.layer !== composite?.layerUv)) ||
+      target.some(({ mesh }) => (textures.base.channel === 1 || textures.layer?.channel === 1 || textures.emissionMask?.channel === 1) &&
+        !mesh.geometry?.getAttribute?.('uv1')) ||
       (textures.emissionMask && (!textures.emissionMask.isTexture || ![0, 1].includes(textures.emissionMask.channel))) ||
       target.some(({ material }) => !material.isMeshStandardMaterial || material.userData?.homeStencil)) {
       throw new Error(`Original UV0/UV1 textures unavailable: ${name}`);
     }
+    if (expectsLayer) layerApproximations.push({ materialName: name,
+      renderEquation: 'atlas-alpha-over-review', sourceFlags: {
+        layerCalcMulti: composite.layerCalcMulti, layerOverLerpValue: composite.layerOverLerpValue,
+        layerBlendMode: composite.layerBlendMode }, sourceSettingsDiffer: compositeClass === false,
+      disclosure: compositeClass === false
+        ? `Review approximation for ${name}: source layer settings differ; rendered with Atlas alpha-over, not the verified original shader.`
+        : `Review approximation for ${name}: rendered with Atlas alpha-over; the original layered shader equation is unverified.`,
+    });
   }
 
   // All validation precedes mutation so a missing source texture cannot leave
@@ -225,6 +262,7 @@ export function prepareHomeEffects(gltf, THREE, { layeredMaterials = {}, require
   let disposed = false;
   return { scene: gltf.scene, clip, mixer, duration, stencilRefs: [...stencilRoles.keys()],
     visibilityNodes: visibility.map(object => object.name), layeredMaterialNames: [...layerNames],
+    layerApproximations,
     dispose() {
       if (disposed) return;
       disposed = true;

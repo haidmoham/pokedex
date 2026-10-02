@@ -7,7 +7,7 @@ const source = (await readFile(new URL('../src/model-policy.ts', import.meta.url
   .replace("import admission from '../content/models/admitted.json';", 'const admission = [];')
   .replace("import { officialEdition, Pokemon, CardEdition } from './feed-model';", '');
 const compiled = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
-const { admittedModel, fetchModel, validateModelStructure, rejectedModelPose, previewModelAttribution } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const { admittedModel, fetchModel, validateModelStructure, rejectedModelPose, previewModelAttribution, modelTransferLimit } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 const asset = { id: 1, bytes: 500, url: 'https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular/1.glb', blobSha: 'a'.repeat(40), admitted: true };
 test('observed broken poses are rejected by exact identity while other static or replacement models remain usable', async () => {
   const rejected = JSON.parse(await readFile(new URL('../content/models/pose-rejections.json', import.meta.url)));
@@ -38,6 +38,19 @@ test('model admission is explicit, size-bounded and source-host scoped', () => {
   for (const change of [{ admitted: false }, { bytes: 750001 }, { bytes: 0 }, { url: 'https://elsewhere.test/1.glb' }, { blobSha: 'unknown' }]) assert.equal(admittedModel(1, [{ ...asset, ...change }]), undefined);
   assert.equal(admittedModel(1025, [asset]), undefined);
   assert.equal(admittedModel(1000, [{ ...asset, id: 1000 }]), undefined);
+});
+test('nine exact original-scene protected reviews may transfer under 2 MB without widening admission', async () => {
+  const review = JSON.parse(await readFile(new URL('../content/models/home-original-scene-review-2026-10-02.json', import.meta.url)));
+  const cases = review.rows.filter(item => item.derivative.bytes > 750000).map(item => ({ id: item.id,
+    bytes: item.derivative.bytes, sha256: item.derivative.sha256 }));
+  assert.equal(cases.length, 9);
+  for (const item of cases) {
+    const review = { ...asset, ...item, url: `/models/review-original-${item.id}.glb`, reviewOnly: true, admitted: false };
+    assert.equal(modelTransferLimit(review), 2_000_000);
+    assert.equal(admittedModel(item.id, [review]), undefined);
+    for (const change of [{ sha256: '0'.repeat(64) }, { url: '/models/other.glb' }, { reviewOnly: false },
+      { admitted: true }, { bytes: item.bytes + 1 }]) assert.equal(modelTransferLimit({ ...review, ...change }), 750000);
+  }
 });
 test('changed source identity, oversized streams and malformed GLBs are rejected before viewer allocation', async () => {
   const bytes = glb();

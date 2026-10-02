@@ -99,6 +99,86 @@ function reviewLighting(THREE, scene, center, radius) {
   };
 }
 
+async function resolveEmbeddedSourceTextures(gltf, THREE, signal, destination) {
+  const json = gltf.parser?.json;
+  const parser = gltf.parser;
+  const materials = new Set();
+  gltf.scene.traverse(object => {
+    if (!object.isMesh) return;
+    for (const material of Array.isArray(object.material) ? object.material : [object.material]) {
+      if (material?.userData?.homeSourceTextures) materials.add(material);
+    }
+  });
+  if (!materials.size) return;
+  if (!Array.isArray(json?.materials) || !Array.isArray(json?.textures) || !Array.isArray(json?.images) ||
+    !Array.isArray(json?.bufferViews) ||
+    typeof parser.getDependency !== 'function') throw new Error('Embedded HOME texture metadata unavailable');
+  const resolvedDescriptors = new Map();
+  const wrapMode = [THREE.RepeatWrapping, THREE.ClampToEdgeWrapping, THREE.MirroredRepeatWrapping];
+  function checkSlot(slot) {
+    if (!slot || !Number.isInteger(slot.texture) || ![0, 1].includes(slot.uv) ||
+      !Array.isArray(slot.wrap) || slot.wrap.length !== 2 || slot.wrap.some(mode => ![0, 1, 2].includes(mode)) ||
+      !Array.isArray(slot.offset) || slot.offset.length !== 2 ||
+      !Array.isArray(slot.scale) || slot.scale.length !== 2 ||
+      [...slot.offset, ...slot.scale].some(value => !Number.isFinite(value))) {
+      throw new Error('Invalid embedded HOME texture descriptor');
+    }
+    const texture = json.textures[slot.texture];
+    const imageIndex = texture?.extensions?.EXT_texture_webp?.source ?? texture?.source;
+    const image = json.images[imageIndex];
+    const sampler = json.samplers?.[texture?.sampler] ?? {};
+    if (!texture || !image || image.uri || !Number.isInteger(image.bufferView) || !json.bufferViews[image.bufferView] ||
+      !['image/png', 'image/webp'].includes(image.mimeType) ||
+      (sampler.wrapS ?? THREE.RepeatWrapping) !== wrapMode[slot.wrap[0]] ||
+      (sampler.wrapT ?? THREE.RepeatWrapping) !== wrapMode[slot.wrap[1]]) {
+      throw new Error('Source texture is not the declared embedded image');
+    }
+    return slot;
+  }
+  async function loadSlot(slot, colorSpace) {
+    checkSlot(slot);
+    const dependency = await parser.getDependency('texture', slot.texture);
+    if (signal.aborted) throw abortError();
+    if (!dependency?.isTexture) throw new Error('Embedded HOME texture failed to decode');
+    const texture = dependency.clone();
+    texture.channel = slot.uv;
+    texture.wrapS = wrapMode[slot.wrap[0]];
+    texture.wrapT = wrapMode[slot.wrap[1]];
+    texture.offset.fromArray(slot.offset);
+    texture.repeat.fromArray(slot.scale);
+    texture.flipY = false;
+    texture.colorSpace = colorSpace;
+    texture.needsUpdate = true;
+    return texture;
+  }
+  for (const material of materials) {
+    if (signal.aborted) throw abortError();
+    const descriptor = material.userData.homeSourceTextures;
+    const matching = json.materials.filter(source => source.name === material.name &&
+      JSON.stringify(source.extras?.homeSourceTextures) === JSON.stringify(descriptor));
+    if (matching.length !== 1 || !descriptor.base || !material.map?.isTexture) {
+      throw new Error(`Unbound HOME source material: ${material.name}`);
+    }
+    checkSlot(descriptor.base);
+    if (material.map.channel !== descriptor.base.uv ||
+      matching[0].pbrMetallicRoughness?.baseColorTexture?.index !== descriptor.base.texture) {
+      throw new Error(`HOME base texture binding changed: ${material.name}`);
+    }
+    if (!descriptor.layer && !descriptor.emissionMask) continue;
+    if (destination[material.name]) {
+      if (resolvedDescriptors.get(material.name) !== JSON.stringify(descriptor)) {
+        throw new Error(`Duplicate HOME source material: ${material.name}`);
+      }
+      continue;
+    }
+    const entry = { base: material.map, composite: descriptor.composite };
+    destination[material.name] = entry;
+    resolvedDescriptors.set(material.name, JSON.stringify(descriptor));
+    if (descriptor.layer) entry.layer = await loadSlot(descriptor.layer, THREE.SRGBColorSpace);
+    if (descriptor.emissionMask) entry.emissionMask = await loadSlot(descriptor.emissionMask, THREE.NoColorSpace);
+  }
+}
+
 /**
  * Mount one already hash-checked HOME GLB into an otherwise empty host.
  * The caller owns admission, source fetch, model selection and user-facing UI.
@@ -107,7 +187,7 @@ function reviewLighting(THREE, scene, center, radius) {
  */
 export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
   requiredLayerMaterials = [], layeredMaterials = {}, cameraOrbitPercent = 110,
-  onFailure = () => {} }, overrides = {}) {
+  allowReviewLayerApproximation = false, onFailure = () => {} }, overrides = {}) {
   if (!host?.append || !host.ownerDocument) throw new Error('HOME host required');
   if (host.children?.length) throw new Error('HOME host must be empty');
   if (!signal || typeof signal.addEventListener !== 'function') throw new Error('HOME abort signal required');
@@ -117,6 +197,7 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
   if (!Number.isFinite(cameraOrbitPercent) || cameraOrbitPercent < 100 || cameraOrbitPercent > 320) {
     throw new Error('Invalid HOME camera orbit');
   }
+  if (typeof allowReviewLayerApproximation !== 'boolean') throw new Error('Invalid HOME review option');
   const source = boundedBytes(bytes);
   if (signal.aborted) throw abortError();
   const { THREE, GLTFLoader, DRACOLoader, OrbitControls, MeshoptDecoder } = await modules(overrides);
@@ -128,7 +209,8 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
   let frame = 0, previousTime = null, disposed = false, mounted = false, playing = true, suspended = false;
   let inspecting = false, angle = -12, elevation = 85, orbitPercent = cameraOrbitPercent;
   let center, radius, baseDistance, failureReported = false;
-  const geometryResources = () => disposeScene(gltf?.scene, layeredMaterials);
+  const activeLayeredMaterials = { ...layeredMaterials };
+  const geometryResources = () => disposeScene(gltf?.scene, activeLayeredMaterials);
   const render = () => { if (!disposed) renderer.render(gltf.scene, camera); };
   const permitted = () => playing && !suspended && !document.hidden && !(media?.matches ?? false);
   const cancelFrame = () => { if (frame) win.cancelAnimationFrame(frame); frame = 0; previousTime = null; };
@@ -197,7 +279,10 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
       disposeScene(gltf?.scene);
       throw abortError();
     }
-    effects = prepareHomeEffects(gltf, THREE, { requiredLayerMaterials, layeredMaterials });
+    await resolveEmbeddedSourceTextures(gltf, THREE, signal, activeLayeredMaterials);
+    if (signal.aborted) throw abortError();
+    effects = prepareHomeEffects(gltf, THREE, { requiredLayerMaterials, layeredMaterials: activeLayeredMaterials,
+      allowReviewLayerApproximation });
     ({ center, radius } = motionBounds(THREE, gltf.scene, effects.mixer, effects.duration));
     effects.mixer.setTime(Math.min(0.35, effects.duration / 2));
     disposeLighting = reviewLighting(THREE, gltf.scene, center, radius);
@@ -255,6 +340,7 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
     if (signal.aborted) throw abortError();
     return {
       scene: gltf.scene, clip: effects.clip, duration: effects.duration, canvas,
+      layerApproximations: effects.layerApproximations,
       play() { if (!disposed) { playing = true; synchronize(); } },
       pause() { if (!disposed) { playing = false; synchronize(); render(); } },
       setSuspended(value) { if (!disposed) { suspended = Boolean(value); synchronize(); } },

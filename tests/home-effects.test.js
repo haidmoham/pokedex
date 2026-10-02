@@ -149,6 +149,52 @@ test('reversed source channels sample UV1 base and UV0 layer without guessing bl
   } }), /textures unavailable/);
 });
 
+test('source layer flag variants require explicit review opt-in and return per-material disclosures', () => {
+  for (const flags of [
+    { layerCalcMulti: 0, layerOverLerpValue: 0, layerBlendMode: 0 },
+    { layerCalcMulti: 0, layerOverLerpValue: 1.5, layerBlendMode: 0 },
+    { layerCalcMulti: 1, layerOverLerpValue: 1, layerBlendMode: 0 },
+  ]) {
+    const { gltf, clip } = sceneFixture({ materials: [{ name: 'BodyLayer', extras: { homeLayerUv: { base: 0, layer: 1 } } }] });
+    const base = new THREE.Texture(), layer = new THREE.Texture();
+    base.channel = 0; layer.channel = 1;
+    const composite = { equation: 'atlas-alpha-over-review', baseUv: 0, layerUv: 1, ...flags };
+    const options = { layeredMaterials: { BodyLayer: { base, layer, composite } } };
+    const originalDuration = clip.duration;
+    assert.throws(() => prepareHomeEffects(gltf, THREE, options), /textures unavailable/);
+    assert.equal(clip.duration, originalDuration);
+    const runtime = prepareHomeEffects(gltf, THREE, { ...options, allowReviewLayerApproximation: true });
+    assert.equal(runtime.layerApproximations.length, 1);
+    assert.deepEqual(runtime.layerApproximations[0].sourceFlags, flags);
+    assert.equal(runtime.layerApproximations[0].sourceSettingsDiffer, true);
+    assert.match(runtime.layerApproximations[0].disclosure, /Review approximation.*not the verified original shader/);
+    const shader = { vertexShader: THREE.ShaderLib.standard.vertexShader,
+      fragmentShader: THREE.ShaderLib.standard.fragmentShader, uniforms: {} };
+    gltf.scene.children[0].material.onBeforeCompile(shader);
+    assert.match(shader.fragmentShader, /homeBase\.rgb \* homeBase\.a \+ homeLayer\.rgb/);
+    runtime.dispose();
+    assert.equal(clip.duration, originalDuration);
+  }
+});
+
+test('review opt-in still rejects unknown source equations, flags and metadata', () => {
+  const base = new THREE.Texture(), layer = new THREE.Texture();
+  base.channel = 0; layer.channel = 1;
+  const valid = { equation: 'atlas-alpha-over-review', baseUv: 0, layerUv: 1,
+    layerCalcMulti: 0, layerOverLerpValue: 1, layerBlendMode: 0 };
+  for (const composite of [
+    { ...valid, equation: 'source-exact' }, { ...valid, layerBlendMode: 2 },
+    { ...valid, layerCalcMulti: 2 }, { ...valid, layerOverLerpValue: 0.7 },
+    { ...valid, unknownFlag: 1 }, { ...valid, layerOverLerpValue: Number.NaN },
+  ]) {
+    const { gltf } = sceneFixture({ materials: [{ name: 'BodyLayer', extras: { homeLayerUv: { base: 0, layer: 1 } } }] });
+    assert.throws(() => prepareHomeEffects(gltf, THREE, { allowReviewLayerApproximation: true,
+      layeredMaterials: { BodyLayer: { base, layer, composite } } }), /textures unavailable/);
+  }
+  const { gltf } = sceneFixture();
+  assert.throws(() => prepareHomeEffects(gltf, THREE, { allowReviewLayerApproximation: 'yes' }), /Invalid HOME review option/);
+});
+
 test('missing source layers, bad visibility and unmatched stencil fail before scene mutation', () => {
   for (const fixture of [
     sceneFixture({ materials: [{ name: 'BodyBPara', extras: { homeLayerUv: { base: 0, layer: 1 } } }] }),

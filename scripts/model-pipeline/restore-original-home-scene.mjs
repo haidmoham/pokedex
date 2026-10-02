@@ -11,6 +11,15 @@ const fail = message => { throw new Error(message); };
 const clone = value => structuredClone(value);
 const equal = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 const align4 = n => (n + 3) & ~3;
+const SPECIAL_MATERIALS = Object.freeze({
+  126: { 'pm0126_00_00-FireCore': 'core', 'pm0126_00_00-FireMask': 'mask' },
+  219: { 'pm0219_00_00-FireCore': 'core', 'pm0219_00_00-FireMask': 'mask' },
+  990: { 'pm0990_00_00-BodyATra': 'constant-additive' },
+  991: { 'pm0991_00_00-BodyBTra': 'constant-additive' },
+  992: { 'pm0992_00_00-BodyATra': 'constant-additive' },
+  993: { 'pm0993_00_00-BodyBTra': 'constant-additive' },
+  994: { 'pm0994_00_00-BodyATra': 'constant-additive' },
+});
 
 // Independently audited original Unity mesh streams omit TEXCOORD_1. Unity's
 // documented missing-vertex-input default is (0,0); the source GLB reflects V,
@@ -180,7 +189,7 @@ function sourceMaterial(rawMaterial, atlasMaterial, source, addTexture, review) 
   const layer = source.layer && f._Layer1Enable ? normalizeTexture(source.layer, layerUv, [f._Layer1BaseU ?? 0, f._Layer1BaseV ?? 0]) : null;
   const emission = source.emissiveMap && f._EmissionMaskUse ? normalizeTexture(source.emissiveMap,
     f._SwitchEmissionMaskTexUV ?? baseUv, [f._ColorBaseU ?? 0, f._ColorBaseV ?? 0]) : null;
-  if (!base) fail(`Missing original base map: ${rawMaterial.name}`);
+  if (!base) fail(`Missing original base map outside guarded special-material path: ${rawMaterial.name}`);
   const out = clone(rawMaterial);
   const atlasPbr = atlasMaterial?.pbrMetallicRoughness ?? {};
   out.pbrMetallicRoughness = { roughnessFactor: atlasPbr.roughnessFactor ?? 0.55,
@@ -224,7 +233,76 @@ export function restoreOriginalHomeScene({ id, rawBytes, atlasBytes, sourceMater
   const rawHash = sha256(rawBytes), defaultEvidence = OMITTED_UV1[id], defaulted = [];
   const atlasMaterials = new Map(atlas.json.materials?.map(material => [material.name, material]) ?? []);
   const imageCache = new Map(), samplerCache = new Map(), textureCache = new Map(), review = [];
+  const atlasTextureCache = new Map();
   raw.json.images = []; raw.json.samplers = []; raw.json.textures = [];
+  function addAtlasTexture(index) {
+    if (atlasTextureCache.has(index)) return atlasTextureCache.get(index);
+    const texture = atlas.json.textures?.[index];
+    const imageIndex = texture?.extensions?.EXT_texture_webp?.source ?? texture?.source;
+    const image = atlas.json.images?.[imageIndex], view = atlas.json.bufferViews?.[image?.bufferView];
+    if (!texture || !image || image.mimeType !== 'image/webp' || image.uri || !view || view.buffer !== 0 || view.extensions ||
+      (view.byteOffset ?? 0) + view.byteLength > atlas.binary.length) fail('Pinned Atlas special texture unavailable');
+    const bytes = atlas.binary.subarray(view.byteOffset ?? 0, (view.byteOffset ?? 0) + view.byteLength);
+    if (bytes.toString('ascii', 0, 4) !== 'RIFF' || bytes.toString('ascii', 8, 12) !== 'WEBP') fail('Pinned Atlas special image is not WebP');
+    const newView = raw.json.bufferViews.push({ buffer: 0, byteOffset: appendBytes(state, bytes), byteLength: bytes.length }) - 1;
+    const newImage = raw.json.images.push({ ...clone(image), bufferView: newView }) - 1;
+    const out = clone(texture);
+    if (out.source !== undefined) out.source = newImage;
+    if (out.extensions?.EXT_texture_webp) {
+      out.extensions.EXT_texture_webp.source = newImage;
+      raw.json.extensionsUsed = [...new Set([...(raw.json.extensionsUsed ?? []), 'EXT_texture_webp'])];
+      raw.json.extensionsRequired = [...new Set([...(raw.json.extensionsRequired ?? []), 'EXT_texture_webp'])];
+    }
+    if (out.sampler !== undefined) {
+      const sourceSampler = atlas.json.samplers?.[out.sampler];
+      if (!sourceSampler) fail('Pinned Atlas special sampler unavailable');
+      out.sampler = raw.json.samplers.push(clone(sourceSampler)) - 1;
+    }
+    const newTexture = raw.json.textures.push(out) - 1;
+    atlasTextureCache.set(index, newTexture);
+    return newTexture;
+  }
+  function specialMaterial(rawMaterial, atlasMaterial, source) {
+    const mode = SPECIAL_MATERIALS[id]?.[rawMaterial.name], f = source?.floats ?? {};
+    if (!mode || !atlasMaterial || source?.map || source?.layer || source?.emissiveMap) fail(`Unapproved untextured source material: ${rawMaterial.name}`);
+    const pbr = atlasMaterial.pbrMetallicRoughness ?? {}, stencil = atlasMaterial.extras?.homeStencil;
+    if (mode === 'core') {
+      if (!source.blend0 || !source.blend1 || !source.lerp || source.mask0 || source.mask1 ||
+        f._SrcBlend !== 1 || f._DstBlend !== 0 || !equal(pbr.baseColorFactor, [0, 0, 0, 1]) ||
+        !equal(stencil, { role: 'core', ref: 1 }) || atlasMaterial.emissiveTexture?.index === undefined) {
+        fail(`Unverified source fire core: ${rawMaterial.name}`);
+      }
+    } else if (mode === 'mask') {
+      if (!source.mask0 || !source.mask1 || source.blend0 || source.blend1 || source.lerp ||
+        f._SrcBlend !== 1 || f._DstBlend !== 0 || f.MASK_FIRST_UV !== 0 || f.MASK_SECOND_UV !== 0 ||
+        !equal(stencil, { role: 'mask', ref: 1 }) || atlasMaterial.alphaMode !== 'MASK' ||
+        atlasMaterial.pbrMetallicRoughness?.baseColorTexture?.index === undefined) {
+        fail(`Unverified source fire mask: ${rawMaterial.name}`);
+      }
+    } else if (mode === 'constant-additive') {
+      if (source.blend0 || source.blend1 || source.lerp || source.mask0 || source.mask1 ||
+        f._BlendMode !== 2 || f._SrcBlend !== 5 || f._DstBlend !== 1 ||
+        !equal(pbr.baseColorFactor, [0, 0, 0, 0]) || atlasMaterial.extras?.homeBlend !== 'additive' ||
+        atlasMaterial.alphaMode !== 'BLEND' || source.colors?._ConstantColor0?.r !== 0 ||
+        source.colors?._ConstantColor0?.g !== 0 || source.colors?._ConstantColor0?.b !== 0 ||
+        pbr.baseColorTexture || atlasMaterial.emissiveTexture) fail(`Unverified source constant additive: ${rawMaterial.name}`);
+    }
+    const out = clone(atlasMaterial);
+    for (const field of ['baseColorTexture', 'metallicRoughnessTexture']) {
+      if (out.pbrMetallicRoughness?.[field]) out.pbrMetallicRoughness[field].index = addAtlasTexture(out.pbrMetallicRoughness[field].index);
+    }
+    for (const field of ['normalTexture', 'occlusionTexture', 'emissiveTexture']) {
+      if (out[field]) out[field].index = addAtlasTexture(out[field].index);
+    }
+    for (const extension of Object.keys(out.extensions ?? {})) {
+      if (extension !== 'KHR_materials_specular') fail(`Unsupported pinned Atlas special extension: ${extension}`);
+      raw.json.extensionsUsed = [...new Set([...(raw.json.extensionsUsed ?? []), extension])];
+    }
+    out.extras = { ...out.extras, homeSpecialMaterial: { source: 'exact-name-pinned-atlas-compatibility',
+      mode, originalShaderEquation: 'unverified' } };
+    review.push({ material: out.name, reason: 'pinned-atlas-special-material-approximation', mode });
+    return out;
+  }
   function addTexture(spec) {
     const bytes = textureBytesByPath?.[spec.path];
     if (!bytes || bytes.length < 8 || !Buffer.from(bytes).subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))) fail(`Missing pinned PNG: ${spec.path}`);
@@ -253,12 +331,17 @@ export function restoreOriginalHomeScene({ id, rawBytes, atlasBytes, sourceMater
     }
     return info;
   }
-  raw.json.materials = raw.json.materials.map(material => sourceMaterial(material, atlasMaterials.get(material.name),
-    sourceMaterials[material.name], addTexture, review));
+  raw.json.materials = raw.json.materials.map(material => {
+    const source = sourceMaterials[material.name], atlasMaterial = atlasMaterials.get(material.name);
+    if (!source) fail(`Unmapped original material: ${material.name}`);
+    return source.map ? sourceMaterial(material, atlasMaterial, source, addTexture, review) :
+      specialMaterial(material, atlasMaterial, source);
+  });
   // The missing-input default is only legal for five independently audited
   // source mesh assets across four species; every other absence is a failure.
   for (const mesh of raw.json.meshes) for (const primitive of mesh.primitives) {
-    const material = raw.json.materials[primitive.material], descriptor = material.extras.homeSourceTextures;
+    const material = raw.json.materials[primitive.material], descriptor = material.extras?.homeSourceTextures;
+    if (!descriptor) continue;
     const needsUv1 = [descriptor.base, descriptor.layer, descriptor.emissionMask].filter(Boolean).some(item => item.uv === 1);
     if (!needsUv1 || primitive.attributes.TEXCOORD_1 !== undefined) continue;
     if (!defaultEvidence || rawHash !== defaultEvidence.rawSha256 || !defaultEvidence.meshes[mesh.name]) {
@@ -335,7 +418,7 @@ async function cli() {
   for (const material of geometry.json.materials) {
     const mapped = mapping.materials[material.name];
     if (!mapped) fail(`Unmapped original material: ${material.name}`);
-    for (const kind of ['map', 'layer', 'emissiveMap']) {
+    for (const kind of ['map', 'layer', 'emissiveMap', 'blend0', 'blend1', 'lerp', 'mask0', 'mask1']) {
       const path = mapped[kind]?.path;
       if (!path || textureBytesByPath[path]) continue;
       const identity = fileIdentities.get(path);

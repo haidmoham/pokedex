@@ -125,10 +125,13 @@ export async function reencodeOriginalPngLossless(bytes) {
   const json = clone(original), imageViews = new Set((json.images ?? []).map(image => image.bufferView));
   const replacements = new Map();
   for (const index of imageViews) {
+    const image = original.images.find(item => item.bufferView === index);
+    if (image.mimeType === 'image/webp') continue; // Exact pinned Atlas special-effect image.
+    if (image.mimeType !== 'image/png') fail('Unsupported embedded image type');
     const view = original.bufferViews[index];
     const source = binary.subarray(view.byteOffset ?? 0, (view.byteOffset ?? 0) + view.byteLength);
     const input = sharp(source), inputMeta = await input.metadata();
-    if (inputMeta.format !== 'png' || inputMeta.hasProfile || inputMeta.depth !== 'uchar') fail('Unsupported original PNG metadata');
+    if (inputMeta.format !== 'png' || inputMeta.hasProfile || inputMeta.depth !== 'uchar') continue;
     const candidate = await sharp(source).png({ compressionLevel: 9, effort: 10, palette: false }).toBuffer();
     if (candidate.length >= source.length) continue;
     const outputMeta = await sharp(candidate).metadata();

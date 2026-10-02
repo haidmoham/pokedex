@@ -16,3 +16,4 @@ public/models/attribution.json
 public/models/home-preview-*.glb
 public/models/review-catalog.json
 public/models/review-repaired-*.glb
+public/models/review-original-*.glb

@@ -1,4 +1,4 @@
-import type { HomeLayerTextures } from './home-effects.js';
+import type { HomeLayerTextures, HomeLayerApproximationDisclosure } from './home-effects.js';
 
 export interface HomeCanvasOptions {
   host: HTMLElement;
@@ -11,6 +11,8 @@ export interface HomeCanvasOptions {
   requiredLayerMaterials?: string[];
   /** Fresh, source-verified textures whose ownership transfers to the mount. */
   layeredMaterials?: Record<string, HomeLayerTextures>;
+  /** Opt-in for protected visual review only. Defaults to false. */
+  allowReviewLayerApproximation?: boolean;
   cameraOrbitPercent?: number;
   /** Reports post-mount render failures; initial mount rejects its Promise. */
   onFailure?: (error: unknown) => void;
@@ -20,6 +22,8 @@ export interface HomeCanvasController {
   scene: unknown;
   clip: unknown;
   duration: number;
+  /** Display these per-material review approximations; no source-shader equivalence is claimed. */
+  layerApproximations: HomeLayerApproximationDisclosure[];
   canvas: HTMLCanvasElement;
   play(): void;
   pause(): void;

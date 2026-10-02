@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
 import { test } from 'node:test';
 import { readGlb, restoreOriginalHomeScene, writeGlb } from '../scripts/model-pipeline/restore-original-home-scene.mjs';
 
+const sharp = createRequire(new URL('../scripts/model-pipeline/package.json', import.meta.url))('sharp');
 const png = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 0]);
 const source = (layerUv = 1) => ({
   map: { path: 'base.png', wrap: [0, 1], repeat: [2, 1], offset: [0, 0] },
@@ -79,4 +81,66 @@ test('rejects absent original source texture rather than replacing it with Atlas
   assert.throws(() => restoreOriginalHomeScene({ id: 467, ...fixtures(),
     sourceMaterials: { BodyA: source(), BodyB: source() }, textureBytesByPath: { 'base.png': png } }),
   /Missing pinned PNG/);
+});
+
+test('accepts only the source-defined exact-name black additive special material', () => {
+  const initial = fixtures(), raw = readGlb(initial.rawBytes), atlas = readGlb(initial.atlasBytes);
+  const name = 'pm0990_00_00-BodyATra';
+  raw.json.materials = [{ name }];
+  raw.json.meshes[0].primitives.forEach(primitive => { primitive.material = 0; });
+  atlas.json.materials = [{ name, extras: { homeBlend: 'additive' }, alphaMode: 'BLEND',
+    pbrMetallicRoughness: { baseColorFactor: [0, 0, 0, 0], metallicFactor: 0 } }];
+  const sourceMaterials = { [name]: { floats: { _BlendMode: 2, _SrcBlend: 5, _DstBlend: 1 },
+    colors: { _ConstantColor0: { r: 0, g: 0, b: 0, a: 1 } } } };
+  const input = { id: 990, rawBytes: writeGlb(raw.json, raw.binary), atlasBytes: writeGlb(atlas.json, atlas.binary),
+    sourceMaterials, textureBytesByPath: {} };
+  const output = readGlb(restoreOriginalHomeScene(input).bytes).json;
+  assert.deepEqual(output.materials[0].pbrMetallicRoughness.baseColorFactor, [0, 0, 0, 0]);
+  assert.equal(output.materials[0].extras.homeBlend, 'additive');
+  assert.equal(output.materials[0].extras.homeSpecialMaterial.mode, 'constant-additive');
+  assert.equal(output.materials[0].pbrMetallicRoughness.baseColorTexture, undefined);
+  sourceMaterials[name].floats._DstBlend = 10;
+  assert.throws(() => restoreOriginalHomeScene(input), /Unverified source constant additive/);
+  sourceMaterials[name].floats._DstBlend = 1;
+  raw.json.materials[0].name = 'another-material';
+  assert.throws(() => restoreOriginalHomeScene({ ...input, rawBytes: writeGlb(raw.json, raw.binary),
+    sourceMaterials: { 'another-material': sourceMaterials[name] } }), /Unapproved untextured source material/);
+});
+
+test('copies exact pinned Atlas fire core/mask textures under source stencil guards', async () => {
+  const initial = fixtures(), raw = readGlb(initial.rawBytes), atlas = readGlb(initial.atlasBytes);
+  const core = 'pm0126_00_00-FireCore', mask = 'pm0126_00_00-FireMask';
+  raw.json.materials = [{ name: core }, { name: mask }];
+  const webp = await sharp({ create: { width: 2, height: 2, channels: 4,
+    background: { r: 255, g: 120, b: 0, alpha: 1 } } }).webp().toBuffer();
+  const binary = Buffer.concat([atlas.binary, webp]);
+  atlas.json.buffers[0].byteLength = binary.length;
+  atlas.json.bufferViews.push({ buffer: 0, byteOffset: atlas.binary.length, byteLength: webp.length });
+  atlas.json.images = [{ bufferView: atlas.json.bufferViews.length - 1, mimeType: 'image/webp' }];
+  atlas.json.samplers = [{ wrapS: 10497, wrapT: 10497 }];
+  atlas.json.textures = [{ sampler: 0, extensions: { EXT_texture_webp: { source: 0 } } }];
+  atlas.json.materials = [
+    { name: core, extras: { homeStencil: { role: 'core', ref: 1 } },
+      pbrMetallicRoughness: { baseColorFactor: [0, 0, 0, 1] }, emissiveTexture: { index: 0 } },
+    { name: mask, extras: { homeStencil: { role: 'mask', ref: 1 } }, alphaMode: 'MASK',
+      pbrMetallicRoughness: { baseColorTexture: { index: 0 } } },
+  ];
+  const slot = { path: 'pinned-mask.png' };
+  const sourceMaterials = {
+    [core]: { blend0: slot, blend1: slot, lerp: slot, floats: { _SrcBlend: 1, _DstBlend: 0 } },
+    [mask]: { mask0: slot, mask1: slot, floats: { _SrcBlend: 1, _DstBlend: 0,
+      MASK_FIRST_UV: 0, MASK_SECOND_UV: 0 } },
+  };
+  const input = { id: 126, rawBytes: writeGlb(raw.json, raw.binary), atlasBytes: writeGlb(atlas.json, binary),
+    sourceMaterials, textureBytesByPath: {} };
+  const output = readGlb(restoreOriginalHomeScene(input).bytes);
+  assert.equal(output.json.materials[0].extras.homeSpecialMaterial.mode, 'core');
+  assert.equal(output.json.materials[1].extras.homeSpecialMaterial.mode, 'mask');
+  assert.equal(output.json.materials[0].emissiveTexture.index, 0);
+  assert.equal(output.json.materials[1].pbrMetallicRoughness.baseColorTexture.index, 0);
+  assert.deepEqual(output.json.extensionsRequired, ['EXT_texture_webp']);
+  const imageView = output.json.bufferViews[output.json.images[0].bufferView];
+  assert.deepEqual(output.binary.subarray(imageView.byteOffset, imageView.byteOffset + imageView.byteLength), webp);
+  delete sourceMaterials[core].blend1;
+  assert.throws(() => restoreOriginalHomeScene(input), /Unverified source fire core/);
 });

@@ -27,6 +27,7 @@ function fakeGLTF() {
   const scene = new THREE.Group();
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute('position', new THREE.Float32BufferAttribute([-1, -1, 0, 1, -1, 0, 0, 1, 0], 3));
+  geometry.setAttribute('uv', new THREE.Float32BufferAttribute([0, 0, 1, 0, 0.5, 1], 2));
   const material = new THREE.MeshStandardMaterial();
   const texture = new THREE.Texture(); material.map = texture;
   const mesh = new THREE.Mesh(geometry, material); scene.add(mesh);
@@ -36,6 +37,28 @@ function fakeGLTF() {
   return { scene, animations: [clip], parser: { json: { animations: [
     { name: 'HOME Idle', extras: { homeDuration: 2 } },
   ] } }, geometry, material, texture };
+}
+
+function addEmbeddedSourceTextures(gltf, { layer = true, emission = true, invalidIndex = false } = {}) {
+  const material = gltf.material;
+  material.name = 'body-layer';
+  const slot = (texture, path) => ({ path, texture, uv: 0, wrap: [0, 0], offset: [0, 0], scale: [1, 1] });
+  const descriptor = { base: slot(0, 'base.png') };
+  if (layer) {
+    descriptor.layer = slot(invalidIndex ? 99 : 1, 'layer.png');
+    descriptor.composite = { equation: 'atlas-alpha-over-review', baseUv: 0, layerUv: 0,
+      layerCalcMulti: 0, layerOverLerpValue: 1, layerBlendMode: 0 };
+  }
+  if (emission) { descriptor.emissionMask = slot(2, 'mask.png'); material.emissive.setHex(0xffffff); }
+  material.userData.homeSourceTextures = descriptor;
+  gltf.parser.json.materials = [{ name: material.name, extras: { homeSourceTextures: descriptor },
+    pbrMetallicRoughness: { baseColorTexture: { index: 0 } } }];
+  gltf.parser.json.textures = [0, 1, 2].map(source => ({ source, sampler: 0 }));
+  gltf.parser.json.images = [0, 1, 2].map(bufferView => ({ bufferView, mimeType: 'image/png' }));
+  gltf.parser.json.bufferViews = [0, 1, 2].map(() => ({ buffer: 0, byteLength: 8 }));
+  gltf.parser.json.samplers = [{ wrapS: THREE.RepeatWrapping, wrapT: THREE.RepeatWrapping }];
+  gltf.parser.getDependency = async (kind, index) => { assert.equal(kind, 'texture'); assert.ok(index < 3); return new THREE.Texture(); };
+  return descriptor;
 }
 
 function fakeModules(gltf, { parsePromise } = {}) {
@@ -161,4 +184,66 @@ test('invalid source path or stale selection fail before mounting a canvas', asy
   await assert.rejects(mountHomeCanvas({ host: browser.host, bytes: new ArrayBuffer(32),
     signal: controller.signal, dracoDecoderPath: '/model-runtime/draco/' }), { name: 'AbortError' });
   assert.equal(browser.host.children.length, 0);
+});
+
+test('embedded same-UV layer and emission mask resolve from exact GLB texture indices', async () => {
+  const browser = fakeBrowser(), gltf = fakeGLTF();
+  addEmbeddedSourceTextures(gltf);
+  const { overrides } = fakeModules(gltf);
+  const runtime = await mountHomeCanvas({ host: browser.host, bytes: new ArrayBuffer(32),
+    signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/' }, overrides);
+  const shader = { vertexShader: THREE.ShaderLib.standard.vertexShader,
+    fragmentShader: THREE.ShaderLib.standard.fragmentShader, uniforms: {} };
+  gltf.material.onBeforeCompile(shader);
+  assert.match(shader.vertexShader, /vHomeLayerUv = \(homeLayerTransform \* vec3\(uv, 1\.0\)\)/);
+  assert.equal(shader.uniforms.homeLayerMap.value.channel, 0);
+  assert.equal(shader.uniforms.homeLayerMap.value.colorSpace, THREE.SRGBColorSpace);
+  assert.equal(shader.uniforms.homeEmissionMask.value.colorSpace, THREE.NoColorSpace);
+  assert.match(shader.fragmentShader, /homeComposite.rgb \* texture2D\(homeEmissionMask/);
+  runtime.dispose();
+});
+
+test('embedded emission mask works without a layer and undeclared texture indices fail closed', async () => {
+  const browser = fakeBrowser(), gltf = fakeGLTF();
+  addEmbeddedSourceTextures(gltf, { layer: false });
+  const { overrides } = fakeModules(gltf);
+  const runtime = await mountHomeCanvas({ host: browser.host, bytes: new ArrayBuffer(32),
+    signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/' }, overrides);
+  const shader = { vertexShader: THREE.ShaderLib.standard.vertexShader,
+    fragmentShader: THREE.ShaderLib.standard.fragmentShader, uniforms: {} };
+  gltf.material.onBeforeCompile(shader);
+  assert.match(shader.fragmentShader, /vec4 homeComposite = texture2D\(map, vMapUv\)/);
+  runtime.dispose();
+  const invalid = fakeGLTF();
+  addEmbeddedSourceTextures(invalid, { invalidIndex: true });
+  const next = fakeBrowser();
+  await assert.rejects(mountHomeCanvas({ host: next.host, bytes: new ArrayBuffer(32),
+    signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/' }, fakeModules(invalid).overrides),
+  /declared embedded image/);
+  assert.equal(next.host.children.length, 0);
+});
+
+test('canvas opt-in exposes source-flag review disclosures and strict mount fails cleanly', async () => {
+  const gltf = fakeGLTF();
+  const descriptor = addEmbeddedSourceTextures(gltf);
+  descriptor.composite.layerOverLerpValue = 0;
+  const strictBrowser = fakeBrowser();
+  await assert.rejects(mountHomeCanvas({ host: strictBrowser.host, bytes: new ArrayBuffer(32),
+    signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/' },
+  fakeModules(gltf).overrides), /textures unavailable/);
+  assert.equal(strictBrowser.host.children.length, 0);
+  const reviewBrowser = fakeBrowser();
+  const { state, overrides } = fakeModules(gltf);
+  const runtime = await mountHomeCanvas({ host: reviewBrowser.host, bytes: new ArrayBuffer(32),
+    signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/',
+    allowReviewLayerApproximation: true }, overrides);
+  assert.equal(runtime.layerApproximations.length, 1);
+  assert.equal(runtime.layerApproximations[0].materialName, 'body-layer');
+  assert.equal(runtime.layerApproximations[0].sourceFlags.layerOverLerpValue, 0);
+  assert.equal(runtime.layerApproximations[0].sourceSettingsDiffer, true);
+  assert.ok(state.renders > 0);
+  runtime.dispose();
+  assert.equal(state.rendererDisposed, true);
+  assert.equal(state.contextLost, true);
+  assert.equal(reviewBrowser.host.children.length, 0);
 });
