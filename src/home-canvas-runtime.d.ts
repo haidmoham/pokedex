@@ -11,7 +11,7 @@ export interface HomeCanvasOptions {
   requiredLayerMaterials?: string[];
   /** Fresh, source-verified textures whose ownership transfers to the mount. */
   layeredMaterials?: Record<string, HomeLayerTextures>;
-  /** Opt-in for protected visual review only. Defaults to false. */
+  /** Explicitly disclosed Atlas-style layer approximation. Defaults to fail-closed. */
   allowReviewLayerApproximation?: boolean;
   cameraOrbitPercent?: number;
   /** Reports post-mount render failures; initial mount rejects its Promise. */

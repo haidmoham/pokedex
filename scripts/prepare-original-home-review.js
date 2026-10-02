@@ -5,11 +5,12 @@ import { createHash } from 'node:crypto';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { isProtectedFullReviewPreview } from './preview-model-context.js';
+import { isIntegratedModelRelease } from './public-model-release.js';
 import { restoreOriginalHomeScene } from './model-pipeline/restore-original-home-scene.mjs';
 
 const output = new URL('../public/models/', import.meta.url);
 await mkdir(output, { recursive: true });
-if (!isProtectedFullReviewPreview()) {
+if (!isProtectedFullReviewPreview() && !isIntegratedModelRelease()) {
   for (const name of await readdir(output)) if (/^review-original-\d+\.glb$/.test(name)) {
     await rm(new URL(name, output), { force: true });
   }
@@ -33,14 +34,17 @@ if (inputs.geometryRepository !== 'Lilothestitch16/Pokemon-HOME-GLB-Models' ||
 }
 const byId = new Map(derivatives.rows.map(item => [item.id, item]));
 if (byId.size !== 40) throw Error('Duplicate original HOME derivative');
+// The normal feed selects five independently screened material recoveries.
+// Retain the whole 40-scene workbench only on its SSO-protected review URL.
+const selected = isProtectedFullReviewPreview() ? new Set(byId.keys()) : new Set([990, 992, 993, 1006, 1022]);
 for (const name of await readdir(output)) {
   const match = name.match(/^review-original-(\d+)\.glb$/);
-  if (match && !byId.has(Number(match[1]))) await rm(new URL(name, output), { force: true });
+  if (match && !selected.has(Number(match[1]))) await rm(new URL(name, output), { force: true });
 }
 const hash = (bytes, algorithm) => createHash(algorithm).update(bytes).digest('hex');
 const gitBlob = bytes => createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
 const cached = new Set();
-for (const item of inputs.rows) {
+for (const item of inputs.rows.filter(item => selected.has(item.id))) {
   const expected = byId.get(item.id);
   if (!expected) throw Error(`Missing original HOME review identity: ${item.id}`);
   try {
@@ -48,8 +52,8 @@ for (const item of inputs.rows) {
     if (bytes.length === expected.derivative.bytes && hash(bytes, 'sha256') === expected.derivative.sha256) cached.add(item.id);
   } catch { /* A missing derivative is reconstructed from pinned input. */ }
 }
-if (cached.size === 40) {
-  console.log('Protected original HOME review: reused 40 exact hash-verified derivatives');
+if (cached.size === selected.size) {
+  console.log(`Original HOME review: reused ${selected.size} exact hash-verified derivatives`);
   process.exit(0);
 }
 const encodePath = path => {
@@ -106,7 +110,7 @@ async function texture(identity) {
   return textureCache.get(identity.path).result;
 }
 let hosted = 0, held = 0;
-for (const item of inputs.rows) {
+for (const item of inputs.rows.filter(item => selected.has(item.id))) {
   const expected = byId.get(item.id);
   if (!expected || expected.sourceGeometry.sha256 !== item.geometry.sha256 ||
       expected.atlasSourceSha256 !== item.atlas.sha256) throw Error(`Original HOME mapping changed: ${item.id}`);
@@ -131,5 +135,5 @@ for (const item of inputs.rows) {
   await writeFile(new URL(`review-original-${item.id}.glb`, output), derivative.bytes);
   hosted++;
 }
-if (hosted !== 40 || held !== derivatives.counts.sourceLayerEquationHolds) throw Error('HOME review material hold count changed');
-console.log(`Protected original HOME review: ${hosted} review-only derivatives prepared; ${held} require explicit shader-approximation review`);
+if (hosted !== selected.size || held !== [...selected].filter(id => byId.get(id).materialCorrectionStatus === 'held-unverified-original-layer-equation').length) throw Error('HOME review material hold count changed');
+console.log(`Original HOME review: ${hosted} hash-pinned derivatives prepared; ${held} require disclosed shader approximation`);

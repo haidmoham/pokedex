@@ -52,6 +52,22 @@ test('nine exact original-scene protected reviews may transfer under 2 MB withou
       { admitted: true }, { bytes: item.bytes + 1 }]) assert.equal(modelTransferLimit({ ...review, ...change }), 750000);
   }
 });
+test('the integrated HOME runtime accepts only pinned sources and exact size exceptions', async () => {
+  const catalog = JSON.parse(await readFile(new URL('../content/models/full-idle-candidates-2026-10-02.json', import.meta.url)));
+  const original = JSON.parse(await readFile(new URL('../content/models/home-original-scene-review-2026-10-02.json', import.meta.url)));
+  const base = catalog.candidates.find(item => item.id === 4);
+  const native = { ...asset, id: 4, url: base.source.url, bytes: base.source.bytes,
+    sha256: base.source.sha256, integratedNativeIdle: true, runtime: 'home-canvas', animation: 'HOME Idle' };
+  assert.equal(admittedModel(4, [native]), native);
+  assert.equal(admittedModel(4, [{ ...native, url: native.url.replace('ef25889c60f099aa864bed11042f4054827a78c4', 'main') }]), undefined);
+  const repaired = original.rows.find(item => item.id === 993);
+  const exception = { ...native, id: 993, url: '/models/review-original-993.glb', bytes: repaired.derivative.bytes,
+    sha256: repaired.derivative.sha256 };
+  assert.equal(modelTransferLimit(exception), 2_000_000);
+  assert.equal(admittedModel(993, [exception]), exception);
+  assert.equal(admittedModel(993, [{ ...exception, sha256: '0'.repeat(64) }]), undefined);
+  assert.equal(admittedModel(993, [{ ...exception, bytes: exception.bytes + 1 }]), undefined);
+});
 test('changed source identity, oversized streams and malformed GLBs are rejected before viewer allocation', async () => {
   const bytes = glb();
   const checked = { ...asset, bytes: bytes.length, blobSha: createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex') };

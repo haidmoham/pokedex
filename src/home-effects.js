@@ -232,7 +232,7 @@ export function prepareHomeEffects(gltf, THREE, { layeredMaterials = {}, require
   }
 
   // All validation precedes mutation so a missing source texture cannot leave
-  // a half-patched scene that accidentally enters the protected preview.
+  // a half-patched scene that accidentally enters the integrated renderer.
   preparedScenes.add(gltf.scene);
   const originalDuration = clip.duration, originalTrackCount = clip.tracks.length;
   clip.duration = duration;

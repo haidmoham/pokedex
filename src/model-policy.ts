@@ -1,9 +1,17 @@
 import admission from '../content/models/admitted.json';
 import { officialEdition, Pokemon, CardEdition } from './feed-model';
 
-export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; reviewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number };
+export type ModelAsset = { id: number; bytes: number; url: string; blobSha: string; sha256?: string; admitted: boolean; credit: string; license: string; source: string; animation?: string | null; previewOnly?: boolean; publicRelease?: string; reviewOnly?: boolean; provider?: string; preparation?: 'catalog-native-idle'; textureRepair?: 'prune-yveltal-zero-alpha'; cameraOrbitPercent?: number; integratedNativeIdle?: boolean; runtime?: 'home-canvas'; selection?: string; visualStatus?: 'pass' | 'uncertain' | 'hold'; visualFinding?: string; sourceAuthoredStationaryWait?: boolean; sourceAuthoredLoopSeam?: boolean; allowDisclosedLayerApproximation?: boolean; sourceSha256?: string; nativeWaitSha256?: string; rightsStatus?: string };
 
 export function previewModelAttribution(asset: ModelAsset) {
+  if (asset.integratedNativeIdle) return {
+    description: `Native HOME idle from a pinned source. Pokémon character models, textures and motion belong to Pokémon / Nintendo / Creatures / GAME FREAK; HOME extraction by Lilothestitch16 and web reconstruction by rrih. Redistribution rights remain unresolved. Offline appearance status: ${asset.visualStatus ?? 'unreviewed'}. ${asset.visualFinding ?? ''} ${asset.sourceAuthoredStationaryWait ? 'The source-authored wait is stationary on the visible mesh.' : ''} ${asset.sourceAuthoredLoopSeam ? 'The native source has an authored loop seam, preserved without invented smoothing.' : ''} ${asset.allowDisclosedLayerApproximation ? 'Layer colors use a disclosed Atlas-style approximation; original shader equivalence is unverified.' : ''} Browser WebGL and device appearance are pending user verification.`,
+    links: [
+      { url: asset.source, label: 'Pinned HOME reconstruction ↗' },
+      { url: 'https://github.com/Lilothestitch16/Pokemon-HOME-Unity-Models', label: 'Original motion and textures ↗' },
+      { url: '/models/attribution.json', label: 'Source identities and rights ↗' },
+    ],
+  };
   const catalog = asset.preparation === 'catalog-native-idle';
   const homePreparation = asset.textureRepair === 'prune-yveltal-zero-alpha'
     ? 'This derivative trims the native idle guard frame and removes texture maps used only by two source effects whose opacity is already zero. Visible texture values, geometry and native motion remain unchanged.'
@@ -25,9 +33,11 @@ export function previewModelAttribution(asset: ModelAsset) {
 }
 
 declare const __POKEDEX_PREVIEW_ASSETS__: ModelAsset[];
+declare const __POKEDEX_INTEGRATED_ASSETS__: ModelAsset[];
 const previewAdmission: ModelAsset[] = typeof __POKEDEX_PREVIEW_ASSETS__ === 'undefined' ? [] : __POKEDEX_PREVIEW_ASSETS__;
+const integratedAdmission: ModelAsset[] = typeof __POKEDEX_INTEGRATED_ASSETS__ === 'undefined' ? [] : __POKEDEX_INTEGRATED_ASSETS__;
 export const modelPreviewEnabled = previewAdmission.some(asset => asset.previewOnly);
-export const modelPublicReleaseEnabled = previewAdmission.some(asset => asset.publicRelease);
+export const modelPublicReleaseEnabled = previewAdmission.some(asset => asset.publicRelease) || integratedAdmission.length === 478;
 // Exact source identities observed in the supplied screenshot and browser rendering.
 // Static models are allowed; absence of animation alone is not a pose failure.
 export function rejectedModelPose(asset: Pick<ModelAsset, 'id' | 'sha256'>): string | undefined {
@@ -69,17 +79,22 @@ const REVIEW_TRANSFER_EXCEPTIONS = {
   1022: { bytes: 1_025_596, sha256: '3f0e57475fe0c636cf940e479363f89993d6782102e8534eefc304f596cdc357' },
   1023: { bytes: 1_359_036, sha256: '1d12d6d193aa10963a22d39dd71118cab25bb61810fabd86025505b48af55f5e' },
 } as const;
-export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'bytes' | 'sha256' | 'url' | 'reviewOnly' | 'admitted'>): number {
+export function modelTransferLimit(asset: Pick<ModelAsset, 'id' | 'bytes' | 'sha256' | 'url' | 'reviewOnly' | 'admitted' | 'integratedNativeIdle'>): number {
   const expected = REVIEW_TRANSFER_EXCEPTIONS[asset.id as keyof typeof REVIEW_TRANSFER_EXCEPTIONS];
-  return asset.reviewOnly === true && asset.admitted === false && expected && asset.bytes === expected.bytes &&
+  return ((asset.reviewOnly === true && asset.admitted === false) || (asset.integratedNativeIdle === true && asset.admitted === true)) && expected && asset.bytes === expected.bytes &&
     asset.sha256 === expected.sha256 && asset.url === `/models/review-original-${asset.id}.glb` ? 2_000_000 : MODEL_TRANSFER_LIMIT;
 }
-export function admittedModel(id: number, entries: ModelAsset[] = [...previewAdmission, ...admission]): ModelAsset | undefined {
+export function admittedModel(id: number, entries: ModelAsset[] = [...integratedAdmission, ...previewAdmission, ...admission]): ModelAsset | undefined {
   // Source-level stray props/black geometry were verified for Gholdengo.
   return entries.find(asset => asset.id === id && asset.admitted &&
-    (id !== 1000 || ((asset.previewOnly || asset.publicRelease) && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= MODEL_TRANSFER_LIMIT &&
-    (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) || /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
+    (id !== 1000 || ((asset.previewOnly || asset.publicRelease) && previewAdmission.some(reviewed => reviewed.id === id && reviewed.sha256 === asset.sha256))) && !rejectedModelPose(asset) && asset.bytes > 0 && asset.bytes <= modelTransferLimit(asset) &&
+    (/^https:\/\/raw\.githubusercontent\.com\/Pokemon-3D-api\/assets\/.*\.glb$/.test(asset.url) ||
+      (asset.integratedNativeIdle && /^https:\/\/raw\.githubusercontent\.com\/rrih\/rrih\.github\.io\/ef25889c60f099aa864bed11042f4054827a78c4\/atlas\/public\/models\/home\/\d+\.glb$/.test(asset.url)) ||
+      /^\/models\/[a-z0-9-]+\.glb$/.test(asset.url)) &&
     (asset.sha256 ? /^[a-f0-9]{64}$/.test(asset.sha256) : /^[a-f0-9]{40}$/.test(asset.blobSha)));
+}
+export function priorReleasedModel(id: number): ModelAsset | undefined {
+  return admittedModel(id, [...previewAdmission, ...admission]);
 }
 export function modelEdition(species: Pokemon): CardEdition | undefined {
   const model = admittedModel(species.id);
