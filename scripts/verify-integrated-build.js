@@ -3,6 +3,7 @@
 import { readFile, readdir, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { isIntegratedModelRelease } from './public-model-release.js';
+import { isProtectedFullReviewPreview } from './preview-model-context.js';
 
 if (!isIntegratedModelRelease()) throw Error('Integrated build audit requires the exact release flag');
 const root = new URL('../', import.meta.url);
@@ -38,9 +39,18 @@ if (hosted !== 520 || remote !== 469 || selected.filter(asset => asset.url.start
 }
 const distFiles = await readdir(new URL('dist/', root));
 const models = await readdir(new URL('dist/models/', root));
-if (distFiles.includes('review.html') || models.includes('review-catalog.json') ||
+const protectedReview = isProtectedFullReviewPreview();
+if (models.filter(name => /^review-repaired-\d+\.glb$/.test(name)).length !== 4) throw Error('Native transfer repair inventory changed');
+if (protectedReview) {
+  const catalog = await read('dist/models/review-catalog.json');
+  if (!distFiles.includes('review.html') || catalog.species.length !== 1025 || catalog.candidates.length !== 478 ||
+      models.filter(name => /^review-original-\d+\.glb$/.test(name)).length !== 40 ||
+      release.protectedResearchPreview !== true || release.wholeCatalogReviewCandidates !== 478) {
+    throw Error('Protected review workbench inventory changed');
+  }
+} else if (distFiles.includes('review.html') || models.includes('review-catalog.json') ||
     models.filter(name => /^review-original-\d+\.glb$/.test(name)).length !== 5 ||
-    models.filter(name => /^review-repaired-\d+\.glb$/.test(name)).length !== 4) {
+    release.protectedResearchPreview !== false || release.wholeCatalogReviewCandidates !== 0) {
   throw Error('Protected review assets leaked into normal build');
 }
 for (const name of ['draco_decoder.js', 'draco_wasm_wrapper.js', 'draco_decoder.wasm']) {
@@ -49,4 +59,4 @@ for (const name of ['draco_decoder.js', 'draco_wasm_wrapper.js', 'draco_decoder.
 console.log(JSON.stringify({ species: effective.size, nativeIdles: 1025, newNativeSelections: selected.length,
   hostedModels: hosted, remotePinnedNewModels: remote, offlineVisualHolds: 35,
   offlineVisualUncertain: 12, stationaryNativeWaitIds: [597], authoredLoopSeamIds: [868, 1008],
-  gpuVerified: false }, null, 2));
+  gpuVerified: false, protectedReviewWorkbench: protectedReview }, null, 2));
