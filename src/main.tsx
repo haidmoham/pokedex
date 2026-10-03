@@ -153,6 +153,7 @@ function App() {
     } });
   const feedRef = speciesScroll.scroller;
   const overlayRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const [modelControlsTarget, setModelControlsTarget] = useState<HTMLDivElement | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const drawerScrollRef = useRef<HTMLDivElement>(null);
@@ -202,10 +203,16 @@ function App() {
     const overlay = overlayRef.current;
     const feed = feedRef.current;
     if (!overlay || !feed) return;
-    const reserveCaption = () => feed.style.setProperty('--art-bottom', `${overlay.getBoundingClientRect().height + 12}px`);
-    reserveCaption();
-    const resize = new ResizeObserver(reserveCaption);
-    resize.observe(overlay);
+    const header = headerRef.current;
+    const dexNavigation = header?.querySelector<HTMLElement>('.dex-navigation');
+    const reserveSpace = () => {
+      feed.style.setProperty('--art-bottom', `${overlay.getBoundingClientRect().height + 12}px`);
+      const bottom = Math.max(header?.getBoundingClientRect().bottom ?? 0, dexNavigation?.getBoundingClientRect().bottom ?? 0);
+      feed.parentElement?.style.setProperty('--art-top', `${bottom - feed.getBoundingClientRect().top + 12}px`);
+    };
+    reserveSpace();
+    const resize = new ResizeObserver(reserveSpace);
+    for (const element of [overlay, header, dexNavigation]) if (element) resize.observe(element);
     return () => resize.disconnect();
   }, []);
 
@@ -633,7 +640,7 @@ function App() {
   }
 
   return <main className={`app-shell type-${activePokemon.types[0]} ${branch ? 'has-branch' : ''}`} onKeyDown={onFeedKey}>
-    <header className="topbar">
+    <header ref={headerRef} className="topbar">
       <button className="brand" onClick={() => jumpTo(0)} aria-label="Pokédex, back to Bulbasaur"><span className="brand-ball" aria-hidden="true" /><span className="brand-name">pokédex<span className="brand-dot">.</span></span></button>
       <div className="dex-navigation">
         <button className="dex-position dex-jump" onClick={event => { setQuery(''); openDrawer('search', undefined, event.currentTarget); }} aria-label={`Jump to Pokédex number. Current ${activePokemon.id} of ${pokemon.length}`}>{dexNumber(activePokemon.id)} <span>/ {pokemon.length.toLocaleString('en-US')}</span></button>

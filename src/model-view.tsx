@@ -4,8 +4,24 @@ import type { ModelViewerElement } from '@google/model-viewer';
 import { fetchModel, validateModelTextures, priorReleasedModel, ModelAsset } from './model-policy';
 import { artwork } from './feed-model';
 import { prepareIdle, idleMayPlay, sampleIdlePose, IDLE_POSE_PHASES } from './model-motion';
+import { loadModelBounds, type ModelBounds } from './model-bounds.js';
 import { framingDistance, inspectionDistance } from './model-framing.js';
 import { HomeModelView } from './home-model-view';
+
+async function frameLegacyCamera(element: ModelViewerElement, { size, center }: ModelBounds, inspecting = false, angle = -12) {
+  await element.updateComplete;
+  if (element.clientWidth <= 0 || element.clientHeight <= 0) return;
+  const aspect = element.clientWidth / element.clientHeight;
+  // model-viewer adapts FOV to its viewport; fit using its actual FOV.
+  const fov = element.getFieldOfView();
+  const distance = inspecting ? inspectionDistance(size, aspect, fov) : framingDistance(size, aspect, -12, 85, fov);
+  element.setAttribute('camera-target', `${center.x}m ${center.y}m ${center.z}m`);
+  element.setAttribute('min-camera-orbit', `auto 35deg ${distance}m`);
+  element.setAttribute('max-camera-orbit', `auto 145deg ${distance * 3.2}m`);
+  element.setAttribute('camera-orbit', `${inspecting ? angle : -12}deg 85deg ${distance}m`);
+  await element.updateComplete;
+  element.jumpCameraToGoal();
+}
 
 // Probe an independent canvas once per page, before loading the shared renderer.
 // model-viewer can emit load after WebGL construction failed; load is not render proof.
@@ -28,6 +44,7 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<ModelViewerElement | null>(null);
   const inspectButton = useRef<HTMLButtonElement>(null);
+  const bounds = useRef<ModelBounds | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [prepared, setPrepared] = useState(false);
   const [inspecting, setInspecting] = useState(false);
@@ -62,8 +79,13 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
       failure.current('unsupported');
       return () => controller.abort();
     }
-    Promise.all([import('@google/model-viewer'), fetchModel(asset, controller.signal).then(async blob => { await validateModelTextures(blob, controller.signal); return blob; })]).then(([runtime, blob]) => {
+    Promise.all([import('@google/model-viewer'), fetchModel(asset, controller.signal).then(async blob => {
+      await validateModelTextures(blob, controller.signal);
+      const envelope = await loadModelBounds(blob, asset.animation, controller.signal);
+      return { blob, envelope };
+    })]).then(([runtime, { blob, envelope }]) => {
       if (controller.signal.aborted || !host.current) return;
+      bounds.current = envelope;
       runtime.ModelViewerElement.modelCacheSize = 0;
       runtime.ModelViewerElement.meshoptDecoderLocation = '/model-runtime/meshopt-decoder.js';
       source = URL.createObjectURL(blob);
@@ -86,6 +108,8 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
         try {
           if (asset.animation && !await prepareIdle(element!, asset.animation, controller.signal)) return;
           if (controller.signal.aborted) return;
+          await frameLegacyCamera(element!, envelope);
+          if (controller.signal.aborted) return;
           window.clearTimeout(timeout);
           setPrepared(true);
         } catch { fail(); }
@@ -96,7 +120,7 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
       controller.abort();
       window.clearTimeout(timeout);
       if (element) { element.pause(); element.src = null; element.remove(); }
-      viewer.current = null;
+      viewer.current = null; bounds.current = null;
       if (source) URL.revokeObjectURL(source);
     };
   }, [asset, name]);
@@ -110,19 +134,8 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
     const frameCamera = async () => {
       await element.updateComplete;
       if (!active) return;
-      if (element.clientWidth <= 0 || element.clientHeight <= 0) return;
-      const size = element.getDimensions();
-      const center = element.getBoundingBoxCenter();
-      const aspect = element.clientWidth / Math.max(1, element.clientHeight);
-      // model-viewer adapts FOV to its viewport; fit using its actual FOV.
-      const fov = element.getFieldOfView();
-      const distance = inspecting ? inspectionDistance(size, aspect, fov) : framingDistance(size, aspect, -12, 85, fov);
-      element.setAttribute('camera-target', `${center.x}m ${center.y}m ${center.z}m`);
-      element.setAttribute('min-camera-orbit', `auto 35deg ${distance}m`);
-      element.setAttribute('max-camera-orbit', `auto 145deg ${distance * 3.2}m`);
-      element.setAttribute('camera-orbit', `${inspecting ? angle : -12}deg 85deg ${distance}m`);
-      await element.updateComplete;
-      if (active) element.jumpCameraToGoal();
+      if (!bounds.current) return;
+      await frameLegacyCamera(element, bounds.current, inspecting, angle);
     };
     const frame = () => { void frameCamera().catch(() => { if (active) failure.current(); }); };
     const resize = new ResizeObserver(frame);

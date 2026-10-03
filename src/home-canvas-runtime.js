@@ -1,3 +1,4 @@
+import { sampleModelBounds } from './model-bounds.js';
 import { framingDistance, inspectionDistance } from './model-framing.js';
 import { createHomeRenderer, prepareHomeEffects } from './home-effects.js';
 
@@ -43,36 +44,6 @@ function disposeScene(scene, extraTextures = {}) {
   for (const geometry of geometries) geometry.dispose();
   for (const material of materials) material.dispose();
   for (const texture of textures) texture.dispose();
-}
-
-function motionBounds(THREE, scene, mixer, duration) {
-  const bounds = new THREE.Box3();
-  const times = new Set([0, duration]);
-  for (let sample = 0; sample <= 32; sample++) times.add(duration * sample / 32);
-  scene.traverse(object => {
-    const visibility = object.userData?.homeVisibility;
-    for (const time of visibility?.times ?? []) {
-      times.add(Math.max(0, time - 1e-4));
-      times.add(Math.min(duration, time + 1e-4));
-    }
-  });
-  for (const time of [...times].sort((a, b) => a - b)) {
-    mixer.setTime(time);
-    scene.updateMatrixWorld(true);
-    scene.traverse(object => {
-      if (!object.isMesh) return;
-      for (let ancestor = object; ancestor; ancestor = ancestor.parent) if (!ancestor.visible) return;
-      const surfaces = Array.isArray(object.material) ? object.material : [object.material];
-      if (surfaces.every(material => !material || material.colorWrite === false || material.opacity === 0)) return;
-      bounds.expandByObject(object, true);
-    });
-  }
-  if (bounds.isEmpty()) throw new Error('HOME model has no visible geometry');
-  const size = bounds.getSize(new THREE.Vector3());
-  if (![size.x, size.y, size.z].every(Number.isFinite) || Math.max(size.x, size.y, size.z) <= 0) {
-    throw new Error('Invalid HOME animated bounds');
-  }
-  return { size, center: bounds.getCenter(new THREE.Vector3()), radius: Math.max(size.length() / 2, 1e-4) };
 }
 
 function reviewLighting(THREE, scene, center, radius) {
@@ -289,7 +260,7 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
     if (signal.aborted) throw abortError();
     effects = prepareHomeEffects(gltf, THREE, { requiredLayerMaterials, layeredMaterials: activeLayeredMaterials,
       allowReviewLayerApproximation });
-    ({ center, radius, size } = motionBounds(THREE, gltf.scene, effects.mixer, effects.duration));
+    ({ center, radius, size } = await sampleModelBounds(THREE, gltf.scene, effects.mixer, effects.duration, effects.clip, signal));
     effects.mixer.setTime(Math.min(0.35, effects.duration / 2));
     disposeLighting = reviewLighting(THREE, gltf.scene, center, radius);
     canvas = document.createElement('canvas');
