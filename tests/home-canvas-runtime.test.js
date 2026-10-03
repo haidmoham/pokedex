@@ -84,7 +84,7 @@ function fakeModules(gltf, { parsePromise } = {}) {
     constructor() { state.renderer = this; }
     setPixelRatio(value) { state.pixelRatio = value; }
     setSize(width, height) { state.size = [width, height]; }
-    render() { state.renders++; if (state.failRender) throw new Error('GPU lost'); }
+    render(scene, camera) { state.camera = camera; state.renders++; if (state.failRender) throw new Error('GPU lost'); }
     dispose() { state.rendererDisposed = true; }
     forceContextLoss() { state.contextLost = true; }
   }
@@ -94,6 +94,22 @@ function fakeModules(gltf, { parsePromise } = {}) {
       return new FakeRenderer();
     } } };
 }
+
+test('HOME inspection and viewport changes return to a stable fitted presentation', async () => {
+  const browser = fakeBrowser(), { state, overrides } = fakeModules(fakeGLTF());
+  const runtime = await mountHomeCanvas({ host: browser.host, bytes: new ArrayBuffer(32),
+    signal: new AbortController().signal, dracoDecoderPath: '/model-runtime/draco/' }, overrides);
+  const original = state.camera.position.clone();
+  runtime.setInspect(true); runtime.setAngle(90); runtime.setOrbitPercent(200);
+  assert.ok(state.camera.position.distanceTo(original) > 1);
+  runtime.setInspect(false);
+  assert.ok(state.camera.position.distanceTo(original) < 1e-8, 'Done restores angle, elevation and fitted distance');
+  browser.host.clientWidth = 740; browser.host.clientHeight = 258; runtime.resize();
+  assert.equal(state.camera.aspect, 740 / 258);
+  browser.host.clientWidth = 320; browser.host.clientHeight = 390; runtime.resize();
+  assert.ok(state.camera.position.distanceTo(original) < 1e-8, 'resize does not accumulate camera drift');
+  runtime.dispose();
+});
 
 test('custom canvas mounts one verified source and owns camera, idle controls and complete teardown', async () => {
   const browser = fakeBrowser(), gltf = fakeGLTF(), { state, overrides } = fakeModules(gltf);

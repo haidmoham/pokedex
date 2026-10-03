@@ -4,6 +4,7 @@ import type { ModelViewerElement } from '@google/model-viewer';
 import { fetchModel, validateModelTextures, priorReleasedModel, ModelAsset } from './model-policy';
 import { artwork } from './feed-model';
 import { prepareIdle, idleMayPlay, sampleIdlePose, IDLE_POSE_PHASES } from './model-motion';
+import { framingDistance, inspectionDistance } from './model-framing.js';
 import { HomeModelView } from './home-model-view';
 
 // Probe an independent canvas once per page, before loading the shared renderer.
@@ -33,9 +34,6 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
   const [angle, setAngle] = useState(-12);
   const [playing, setPlaying] = useState(true);
   const [pose, setPose] = useState<number | null>(null);
-  const cameraOrbitPercent = (asset.previewOnly || asset.publicRelease) && Number.isInteger(asset.cameraOrbitPercent) &&
-    asset.cameraOrbitPercent! >= 110 && asset.cameraOrbitPercent! <= 240 ? asset.cameraOrbitPercent! : 110;
-  const inspectOrbitPercent = Math.max(160, cameraOrbitPercent);
   const fallback = useRef(onFallback);
   fallback.current = onFallback;
   const failure = useRef(onFailure);
@@ -107,17 +105,32 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
     if (!element) return;
     element.toggleAttribute('camera-controls', inspecting);
     element.style.pointerEvents = inspecting ? 'auto' : 'none';
-    // Side-on tail extent needs more orbit clearance than the front view.
-    element.setAttribute('camera-orbit', `${angle}deg 85deg ${inspecting ? inspectOrbitPercent : cameraOrbitPercent}%`);
-    if (inspecting) {
-      element.setAttribute('min-camera-orbit', `auto 35deg ${inspectOrbitPercent}%`);
-      element.setAttribute('max-camera-orbit', `auto 145deg ${Math.max(240, inspectOrbitPercent + 80)}%`);
-    } else {
-      element.removeAttribute('min-camera-orbit');
-      element.removeAttribute('max-camera-orbit');
-    }
+    if (!loaded) return;
+    let active = true;
+    const frameCamera = async () => {
+      await element.updateComplete;
+      if (!active) return;
+      if (element.clientWidth <= 0 || element.clientHeight <= 0) return;
+      const size = element.getDimensions();
+      const center = element.getBoundingBoxCenter();
+      const aspect = element.clientWidth / Math.max(1, element.clientHeight);
+      // model-viewer adapts FOV to its viewport; fit using its actual FOV.
+      const fov = element.getFieldOfView();
+      const distance = inspecting ? inspectionDistance(size, aspect, fov) : framingDistance(size, aspect, -12, 85, fov);
+      element.setAttribute('camera-target', `${center.x}m ${center.y}m ${center.z}m`);
+      element.setAttribute('min-camera-orbit', `auto 35deg ${distance}m`);
+      element.setAttribute('max-camera-orbit', `auto 145deg ${distance * 3.2}m`);
+      element.setAttribute('camera-orbit', `${inspecting ? angle : -12}deg 85deg ${distance}m`);
+      await element.updateComplete;
+      if (active) element.jumpCameraToGoal();
+    };
+    const frame = () => { void frameCamera().catch(() => { if (active) failure.current(); }); };
+    const resize = new ResizeObserver(frame);
+    resize.observe(element);
+    frame();
     element.tabIndex = inspecting ? 0 : -1;
-  }, [loaded, inspecting, angle, cameraOrbitPercent, inspectOrbitPercent]);
+    return () => { active = false; resize.disconnect(); };
+  }, [loaded, inspecting, angle]);
   useEffect(() => {
     const element = viewer.current;
     if (!element || !loaded) return;
@@ -137,13 +150,13 @@ function LegacyModelView({ asset, name, suspended = false, controlsTarget, onFal
       setPose(next);
     } catch { failure.current(); }
   };
-  const exit = () => setInspecting(false);
+  const exit = () => { setAngle(-12); setInspecting(false); };
   return <div className={`model-stage ${inspecting ? 'is-inspecting' : ''}`} data-inspecting={inspecting || undefined}
     onPointerDown={event => { if (inspecting) event.stopPropagation(); }} onPointerUp={event => { if (inspecting) event.stopPropagation(); }}
     onWheel={event => { if (inspecting) event.stopPropagation(); }} onKeyDown={event => { if (!inspecting) return; event.stopPropagation(); if (event.key === 'Escape') exit(); }}>
     {!loaded && <img className="model-poster" src={artwork(asset.id)} alt={`${name}, official artwork while 3D loads`} />}
     <div className="model-host" ref={host} aria-hidden={!loaded} style={{ visibility: loaded ? 'visible' : 'hidden' }} />
-    {controlsTarget && createPortal(<div className="model-actions">
+    {controlsTarget && createPortal(<div className="model-actions" onKeyDown={event => { if (inspecting && event.key === 'Escape') { event.stopPropagation(); exit(); } }}>
       {inspecting && <button onClick={() => setAngle(value => value - 30)} aria-label="Rotate model left">↶</button>}
       {loaded ? <button ref={inspectButton} onClick={() => inspecting ? exit() : setInspecting(true)}>{inspecting ? 'Done inspecting' : 'Inspect 3D'}</button> : <span role="status">Preparing 3D…</span>}
       {inspecting && <button onClick={() => setAngle(value => value + 30)} aria-label="Rotate model right">↷</button>}

@@ -86,7 +86,7 @@ export function HomeModelView({ asset, name, suspended = false, controlsTarget, 
     try { mounted.current.samplePose(next); setPlaying(false); setPose(next); }
     catch { failure.current(); }
   };
-  const exit = () => setInspecting(false);
+  const exit = () => { setAngle(-12); setInspecting(false); };
   const reviewNote = [asset.visualStatus !== 'pass' ? `Native idle · offline appearance ${asset.visualStatus === 'hold' ? 'needs repair' : 'uncertain'} · browser check pending` : '',
     disclosures.length > 0 ? 'Layer colors approximate the original shader; details in credits' : ''].filter(Boolean).join(' · ');
   return <div className={`model-stage ${inspecting ? 'is-inspecting' : ''}`} data-inspecting={inspecting || undefined}
@@ -97,7 +97,7 @@ export function HomeModelView({ asset, name, suspended = false, controlsTarget, 
     {!loaded && <img className="model-poster" src={artwork(asset.id)} alt={`${name}, official artwork while 3D loads`} />}
     <div className="model-host" ref={host} aria-hidden={!loaded} style={{ visibility: loaded ? 'visible' : 'hidden' }} />
     {loaded && reviewNote && <p className="model-review-note" title={disclosures.map(item => item.disclosure).join('\n')}>{reviewNote}</p>}
-    {controlsTarget && createPortal(<div className="model-actions">
+    {controlsTarget && createPortal(<div className="model-actions" onKeyDown={event => { if (inspecting && event.key === 'Escape') { event.stopPropagation(); exit(); } }}>
       {inspecting && <button onClick={() => setAngle(value => value - 30)} aria-label="Rotate model left">↶</button>}
       {loaded ? <button ref={inspectButton} onClick={() => inspecting ? exit() : setInspecting(true)}>{inspecting ? 'Done inspecting' : 'Inspect 3D'}</button> : <span role="status">Preparing 3D…</span>}
       {inspecting && <button onClick={() => setAngle(value => value + 30)} aria-label="Rotate model right">↷</button>}

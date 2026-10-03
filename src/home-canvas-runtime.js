@@ -1,3 +1,4 @@
+import { framingDistance, inspectionDistance } from './model-framing.js';
 import { createHomeRenderer, prepareHomeEffects } from './home-effects.js';
 
 const POSE_PHASES = [0.125, 0.375, 0.625];
@@ -71,7 +72,7 @@ function motionBounds(THREE, scene, mixer, duration) {
   if (![size.x, size.y, size.z].every(Number.isFinite) || Math.max(size.x, size.y, size.z) <= 0) {
     throw new Error('Invalid HOME animated bounds');
   }
-  return { center: bounds.getCenter(new THREE.Vector3()), radius: Math.max(size.length() / 2, 1e-4) };
+  return { size, center: bounds.getCenter(new THREE.Vector3()), radius: Math.max(size.length() / 2, 1e-4) };
 }
 
 function reviewLighting(THREE, scene, center, radius) {
@@ -191,7 +192,7 @@ async function resolveEmbeddedSourceTextures(gltf, THREE, signal, destination) {
  * textures must be freshly created for this mount; ownership transfers here.
  */
 export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
-  requiredLayerMaterials = [], layeredMaterials = {}, cameraOrbitPercent = 110,
+  requiredLayerMaterials = [], layeredMaterials = {}, cameraOrbitPercent = 100,
   allowReviewLayerApproximation = false, onFailure = () => {} }, overrides = {}) {
   if (!host?.append || !host.ownerDocument) throw new Error('HOME host required');
   if (host.children?.length) throw new Error('HOME host must be empty');
@@ -213,7 +214,7 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
   let parsePending = false;
   let frame = 0, previousTime = null, disposed = false, mounted = false, playing = true, suspended = false;
   let inspecting = false, angle = -12, elevation = 85, orbitPercent = cameraOrbitPercent;
-  let center, radius, baseDistance, failureReported = false;
+  let center, radius, size, baseDistance, failureReported = false;
   const activeLayeredMaterials = { ...layeredMaterials };
   const geometryResources = () => disposeScene(gltf?.scene, activeLayeredMaterials);
   const render = () => { if (!disposed) renderer.render(gltf.scene, camera); };
@@ -288,7 +289,7 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
     if (signal.aborted) throw abortError();
     effects = prepareHomeEffects(gltf, THREE, { requiredLayerMaterials, layeredMaterials: activeLayeredMaterials,
       allowReviewLayerApproximation });
-    ({ center, radius } = motionBounds(THREE, gltf.scene, effects.mixer, effects.duration));
+    ({ center, radius, size } = motionBounds(THREE, gltf.scene, effects.mixer, effects.duration));
     effects.mixer.setTime(Math.min(0.35, effects.duration / 2));
     disposeLighting = reviewLighting(THREE, gltf.scene, center, radius);
     canvas = document.createElement('canvas');
@@ -315,7 +316,7 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
         center.y + distance * Math.cos(phi),
         center.z + distance * Math.sin(phi) * Math.cos(theta));
       camera.lookAt(center);
-      controls.minDistance = baseDistance * 0.8;
+      controls.minDistance = inspecting ? inspectionDistance(size, camera.aspect) : baseDistance;
       controls.maxDistance = baseDistance * 3.2;
       controls.update();
     };
@@ -325,9 +326,7 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
       const height = Math.max(1, Math.round(host.clientHeight || 1));
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      const halfVertical = camera.fov * RAD / 2;
-      const halfHorizontal = Math.atan(Math.tan(halfVertical) * camera.aspect);
-      baseDistance = radius / Math.sin(Math.min(halfVertical, halfHorizontal)) * 1.25;
+      baseDistance = inspecting ? inspectionDistance(size, camera.aspect) : framingDistance(size, camera.aspect, angle, elevation);
       positionCamera();
       renderer.setSize(width, height, false);
       mounted = true;
@@ -353,6 +352,9 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
         if (disposed) return;
         inspecting = Boolean(value);
         controls.enabled = inspecting;
+        // Inspect has rotation-safe clearance; Done always returns to the shared presentation.
+        angle = -12; elevation = 85; orbitPercent = 100;
+        resize();
         canvas.style.pointerEvents = inspecting ? 'auto' : 'none';
         canvas.tabIndex = inspecting ? 0 : -1;
         render();
@@ -360,7 +362,9 @@ export async function mountHomeCanvas({ host, bytes, signal, dracoDecoderPath,
       setAngle(degrees) {
         if (disposed) return;
         if (!Number.isFinite(degrees)) throw new Error('Invalid HOME orbit angle');
-        angle = degrees; positionCamera(); render();
+        angle = degrees;
+        if (!inspecting) baseDistance = framingDistance(size, camera.aspect, angle, elevation);
+        positionCamera(); render();
       },
       setOrbitPercent(percent) {
         if (disposed) return;
