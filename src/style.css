@@ -38,11 +38,11 @@ svg { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
 .species-feed::-webkit-scrollbar { display: none; }
 .species-slide { flex: 0 0 100%; position: relative; height: 100%; width: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; }
 .ghost-number { position: absolute; top: 13%; left: 50%; transform: translateX(-50%); font-weight: 800; font-size: clamp(140px, 38vw, 460px); letter-spacing: -.07em; line-height: 1; color: rgb(var(--tint) / .12); user-select: none; pointer-events: none; }
-.art-stage { position: absolute; inset: calc(85px + env(safe-area-inset-top)) 16px var(--art-bottom, calc(184px + env(safe-area-inset-bottom))); display: flex; align-items: center; justify-content: center; pointer-events: none; }
-.has-branch .art-stage { top: calc(188px + env(safe-area-inset-top)); }
+.art-stage { position: absolute; inset: max(var(--art-top, 126px), calc(85px + env(safe-area-inset-top))) 16px var(--art-bottom, calc(184px + env(safe-area-inset-bottom))); display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.has-branch .art-stage { top: calc(max(var(--art-top, 126px), calc(136px + env(safe-area-inset-top))) + 52px); }
 .hero-art { display: block; width: 100%; height: 100%; object-fit: contain; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; }
 .is-card .hero-art { width: auto; max-width: min(86vw, 560px); max-height: 100%; border-radius: 12px; filter: drop-shadow(0 20px 32px #0008); }
-.is-official { inset: calc(62px + env(safe-area-inset-top)) 0 var(--art-bottom, calc(155px + env(safe-area-inset-bottom))); }
+.is-official { inset: max(var(--art-top, 126px), calc(62px + env(safe-area-inset-top))) 0 var(--art-bottom, calc(155px + env(safe-area-inset-bottom))); }
 .is-official .hero-art { max-width: 760px; padding: 0 4%; filter: drop-shadow(0 24px 26px #0005); }
 .image-unavailable { display: grid; justify-items: center; gap: 16px; color: #fff9; font-size: 14px; }
 .image-unavailable svg { width: 40px; height: 40px; opacity: .5; }
@@ -78,7 +78,7 @@ h1 { font-size: clamp(36px, 7.8vw, 64px); line-height: 1.04; margin: 7px 0 10px;
 .edition-count .edition-word { font-family: 'DM Sans', sans-serif; margin-left: 3px; }
 .species-controls { display: flex; align-items: center; gap: 4px; }
 .next-species { display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 8px 0 8px 8px; font-size: 12px; color: #ffffffa8; }
-.branch-back { position: fixed; top: calc(136px + env(safe-area-inset-top)); left: var(--edge); display: flex; align-items: center; gap: 8px; min-height: 44px; max-width: calc(100vw - 2 * var(--edge)); padding: 8px 12px; border-radius: 22px; background: #14221dca; font-size: 12px; z-index: 4; }
+.branch-back { position: fixed; top: max(var(--art-top, 126px), calc(136px + env(safe-area-inset-top))); left: var(--edge); display: flex; align-items: center; gap: 8px; min-height: 44px; max-width: calc(100vw - 2 * var(--edge)); padding: 8px 12px; border-radius: 22px; background: #14221dca; font-size: 12px; z-index: 4; }
 .branch-back svg { width: 16px; height: 16px; }
 .save-pokemon { display: flex; align-items: center; gap: 9px; min-height: 44px; padding: 8px 12px; border: 1px solid #ffffff30; border-radius: 22px; font-size: 12px; }
 .save-pokemon svg { width: 16px; height: 16px; }
@@ -160,8 +160,8 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 @keyframes drawer-in { from { opacity: .6; transform: translateY(30px); } to { opacity: 1; transform: none; } }
 @media (min-width: 800px) {
   .topbar { padding-top: 28px; }
-  .art-stage { inset: 96px 100px var(--art-bottom, 140px); }
-  .is-official { inset: 50px 100px var(--art-bottom, 100px); }
+  .art-stage { inset: max(var(--art-top, 126px), 96px) 100px var(--art-bottom, 140px); }
+  .is-official { inset: max(var(--art-top, 126px), 50px) 100px var(--art-bottom, 100px); }
   .feed-caption { margin-bottom: 30px; max-width: 45%; }
   .feed-overlay { padding-bottom: 28px; }
   .side-actions { bottom: 95px; }
@@ -192,8 +192,8 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 }
 @media (max-height: 600px) {
   .topbar { padding-top: calc(10px + env(safe-area-inset-top)); }
-  .art-stage { inset: calc(65px + env(safe-area-inset-top)) 16px var(--art-bottom, calc(150px + env(safe-area-inset-bottom))); }
-  .is-official { inset: calc(45px + env(safe-area-inset-top)) 0 var(--art-bottom, calc(122px + env(safe-area-inset-bottom))); }
+  .art-stage { inset: max(var(--art-top, 126px), calc(65px + env(safe-area-inset-top))) 16px var(--art-bottom, calc(150px + env(safe-area-inset-bottom))); }
+  .is-official { inset: max(var(--art-top, 126px), calc(45px + env(safe-area-inset-top))) 0 var(--art-bottom, calc(122px + env(safe-area-inset-bottom))); }
   .feed-caption { margin-bottom: 15px; }
   h1 { font-size: 32px; margin: 4px 0 6px; }
   .feed-overlay { padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
@@ -230,7 +230,7 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .model-actions button, .model-actions span { min-height: 44px; padding: 10px 14px; border-radius: 24px; border: 1px solid var(--line); background: #141a25; color: #fff; font: inherit; font-size: 12px; }
 .model-stage.is-inspecting { touch-action: none; overscroll-behavior: contain; }
 .model-review-note { position: absolute; z-index: 2; bottom: 10px; left: 12px; right: 12px; margin: 0; padding: 5px 8px; border-radius: 8px; background: #101722dc; color: #fff; font-size: 10px; line-height: 1.35; text-align: center; pointer-events: none; }
-.mega-activation { position: absolute; z-index: 5; inset: calc(85px + env(safe-area-inset-top)) 16px var(--art-bottom, calc(184px + env(safe-area-inset-bottom))); display: grid; place-items: center; border-radius: 24px; background: radial-gradient(circle at center, #5fcad375, #20263bdc 52%, #111824e9); }
+.mega-activation { position: absolute; z-index: 5; inset: max(var(--art-top, 126px), calc(85px + env(safe-area-inset-top))) 16px var(--art-bottom, calc(184px + env(safe-area-inset-bottom))); display: grid; place-items: center; border-radius: 24px; background: radial-gradient(circle at center, #5fcad375, #20263bdc 52%, #111824e9); }
 .mega-activation-content { display: grid; justify-items: center; gap: 7px; text-align: center; }
 .mega-activation img { width: clamp(78px, 20vw, 126px); height: auto; filter: drop-shadow(0 0 20px #55d6d7); animation: mega-stone-pulse 1.3s ease-in-out both; }
 .mega-activation strong { font-size: clamp(19px, 4vw, 30px); letter-spacing: -.03em; }
@@ -258,6 +258,18 @@ h3 { font-weight: 600; font-size: 15px; margin: 0; }
 .species-preview-name { position: absolute; z-index: 2; top: calc(86px + env(safe-area-inset-top)); left: var(--edge); font-size: 18px; font-weight: 700; pointer-events: none; }
 .gallery-preview-credit { position: absolute; left: var(--edge); right: var(--edge); bottom: calc(var(--art-bottom, 184px) - 68px); font-size: 16px; font-weight: 600; line-height: 1.35; max-height: 64px; overflow: hidden; pointer-events: none; }
 .gallery-preview-credit span { display: block; font-size: 11px; color: #ffffffa0; margin-top: 4px; font-weight: 400; }
+/* A stacked caption can consume all of a short landscape viewport. Give art
+   its own column; long credits and Inspect controls scroll independently. */
+@media (min-width: 600px) and (max-height: 480px) {
+  .app-shell .art-stage, .app-shell .is-official { inset: var(--art-top, 126px) 52% 16px 16px; }
+  .feed-overlay { left: 50%; top: var(--art-top, 126px); padding: 0 18px 12px; overflow-y: auto; overscroll-behavior-y: contain; touch-action: pan-y pinch-zoom; pointer-events: auto; }
+  .feed-caption { max-width: none; margin-bottom: 8px; }
+  .feed-caption h1 { font-size: 32px; }
+  .branch-back { position: static; margin-bottom: 8px; }
+  .model-controls-row:not(:empty) { margin-bottom: 8px; }
+  .feed-bottom { flex-wrap: wrap; gap: 4px; }
+  .gallery-preview-credit { right: 52%; bottom: 16px; }
+}
 .caption-in-motion { opacity: 0; pointer-events: none; }
 .dex-jump { min-height: 52px; min-width: 112px; padding: 8px 16px; border-radius: 22px; color: #28162d; background: linear-gradient(165deg, #fff8ff 0%, #ffcce9 44%, #f398cb 100%); border: 1px solid #ffe8f7; box-shadow: inset 0 2px 2px #fff, inset 0 -3px 5px #b7468870, 0 5px 0 #8d4273, 0 8px 18px #0004; font-weight: 800; font-size: 20px; letter-spacing: .02em; cursor: pointer; transition: transform .12s, box-shadow .12s; }
 .dex-jump span { color: #683850; font-size: 11px; font-weight: 600; }
